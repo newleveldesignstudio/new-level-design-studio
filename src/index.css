@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #F7F7F3;
+    --bg-soft: #ECEDEE;
+    --surface: #FFFFFF;
+    --silver-grey: #D9D9D8;
+    --mist-grey: #C7CCD1;
+    --platinum-grey: #B8BDC4;
+    --charcoal: #1E1F20;
+    --muted-text: #676C70;
+    --button-dark: #303235;
+    --border-color: #E2E4E7;
+    --white: #FFFFFF;
+    --cinder: #24292E;
+    --chimney: #4A5156;
+    --sea-lion: #808A92;
+    --blue-dolphin: #BDC7CE;
+    --black-metal: #000000;
+
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  img {
+    filter: saturate(0.15) sepia(0.08) contrast(1.05);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted-text);
+  }
+
+  .btn-primary {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background-color: var(--button-dark);
+    color: var(--white);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--charcoal);
+  }
+
+  .btn-secondary {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--charcoal);
+    padding: 14px 32px;
+    border: 1px solid var(--charcoal);
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--charcoal);
+    color: var(--white);
+  }
+
+  .text-link {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+  }
+
+  .text-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--charcoal);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .text-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .container-nlds {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .container-nlds {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-nlds {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+}
