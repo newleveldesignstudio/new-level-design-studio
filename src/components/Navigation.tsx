@@ -51,44 +51,50 @@ export default function Navigation() {
           <Link
             to="/"
             onClick={handleNavClick}
-            className="font-sans text-sm font-semibold uppercase no-underline"
-            style={{ letterSpacing: '0.2em', color: 'var(--charcoal)' }}
+            className="font-sans uppercase no-underline flex items-center"
+            style={{ color: 'var(--charcoal)' }}
           >
-            NEW LEVEL
+            <span style={{ fontSize: '15px', fontWeight: 700, letterSpacing: '0.16em' }}>
+              NEW LEVEL
+            </span>
+            <span style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.2em', color: '#676C70', marginLeft: '10px' }}>
+              DESIGN STUDIO
+            </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center" style={{ gap: 40 }}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={handleNavClick}
-                className="font-sans text-sm uppercase no-underline transition-colors duration-200"
-                style={{
-                  letterSpacing: '0.15em',
-                  color: location.pathname === link.path ? 'var(--charcoal)' : 'var(--muted-text)',
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
-                onMouseLeave={(e) => {
-                  if (location.pathname !== link.path) {
-                    e.currentTarget.style.color = 'var(--muted-text)';
-                  }
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+          {/* Desktop Nav + CTA */}
+          <div className="hidden lg:flex items-center" style={{ gap: 48 }}>
+            <div className="flex items-center" style={{ gap: 40 }}>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={handleNavClick}
+                  className="font-sans text-sm uppercase no-underline transition-colors duration-200"
+                  style={{
+                    letterSpacing: '0.15em',
+                    color: location.pathname === link.path ? 'var(--charcoal)' : 'var(--muted-text)',
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                  onMouseLeave={(e) => {
+                    if (location.pathname !== link.path) {
+                      e.currentTarget.style.color = 'var(--muted-text)';
+                    }
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              to="/contact"
+              onClick={handleNavClick}
+              className="btn-primary"
+            >
+              Start a Project
+            </Link>
           </div>
-
-          {/* Desktop CTA */}
-          <Link
-            to="/contact"
-            onClick={handleNavClick}
-            className="hidden lg:inline-block btn-primary"
-          >
-            Start a Project
-          </Link>
 
           {/* Mobile Hamburger */}
           <button
