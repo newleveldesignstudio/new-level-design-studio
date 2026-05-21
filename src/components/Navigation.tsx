@@ -55,9 +55,13 @@ export default function Navigation() {
             style={{ color: 'var(--charcoal)', gap: '10px' }}
           >
             <span
+              aria-hidden="true"
+              style={{ width: '36px', height: '36px', flexShrink: 0 }}
+            />
+            <span
               className="font-serif"
               style={{
-                fontSize: '20px',
+                fontSize: '16px',
                 fontWeight: 500,
                 letterSpacing: '0.08em',
                 lineHeight: 1,
@@ -83,8 +87,8 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Nav + CTA */}
-          <div className="hidden lg:flex items-center shrink-0" style={{ gap: 52 }}>
-            <div className="flex items-center" style={{ gap: 28 }}>
+          <div className="hidden xl:flex items-center shrink-0" style={{ gap: 32 }}>
+            <div className="flex items-center" style={{ gap: 20 }}>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -118,7 +122,7 @@ export default function Navigation() {
 
           {/* Mobile Hamburger */}
           <button
-            className="lg:hidden flex flex-col justify-center items-center"
+            className="xl:hidden flex flex-col justify-center items-center"
             style={{ width: 32, height: 32, gap: 6 }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"

@@ -142,12 +142,19 @@ export default function Home() {
                 borderRadius: 4,
               }}
             >
-              <img
-                src="/images/hero-media.jpg"
-                alt="Premium creative studio space"
+              <video
                 className="w-full object-cover"
                 style={{ aspectRatio: '16/9', display: 'block' }}
-              />
+                src="/videos/hero-video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="New Level Design Studio hero video"
+              >
+                Your browser does not support the video tag.
+              </video>
               {/* Diagonal line + tagline on right edge */}
               <div
                 className="absolute right-0 top-0 bottom-0 flex items-center justify-center"
