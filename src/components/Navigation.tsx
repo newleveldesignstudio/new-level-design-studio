@@ -51,28 +51,48 @@ export default function Navigation() {
           <Link
             to="/"
             onClick={handleNavClick}
-            className="font-sans uppercase no-underline flex items-center"
-            style={{ color: 'var(--charcoal)' }}
+            className="uppercase no-underline flex items-center shrink-0"
+            style={{ color: 'var(--charcoal)', gap: '10px' }}
           >
-            <span style={{ fontSize: '15px', fontWeight: 700, letterSpacing: '0.16em' }}>
+            <span
+              className="font-serif"
+              style={{
+                fontSize: '20px',
+                fontWeight: 500,
+                letterSpacing: '0.08em',
+                lineHeight: 1,
+                whiteSpace: 'nowrap',
+                color: '#1E1F20',
+              }}
+            >
               NEW LEVEL
             </span>
-            <span style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.2em', color: '#676C70', marginLeft: '10px' }}>
+            <span
+              className="font-sans"
+              style={{
+                fontSize: '9px',
+                fontWeight: 600,
+                letterSpacing: '0.2em',
+                lineHeight: 1.1,
+                whiteSpace: 'nowrap',
+                color: '#676C70',
+              }}
+            >
               DESIGN STUDIO
             </span>
           </Link>
 
           {/* Desktop Nav + CTA */}
-          <div className="hidden lg:flex items-center" style={{ gap: 48 }}>
-            <div className="flex items-center" style={{ gap: 40 }}>
+          <div className="hidden lg:flex items-center shrink-0" style={{ gap: 52 }}>
+            <div className="flex items-center" style={{ gap: 28 }}>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={handleNavClick}
-                  className="font-sans text-sm uppercase no-underline transition-colors duration-200"
+                  className="font-sans text-sm uppercase no-underline transition-colors duration-200 whitespace-nowrap"
                   style={{
-                    letterSpacing: '0.15em',
+                    letterSpacing: '0.12em',
                     color: location.pathname === link.path ? 'var(--charcoal)' : 'var(--muted-text)',
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
@@ -90,7 +110,7 @@ export default function Navigation() {
             <Link
               to="/contact"
               onClick={handleNavClick}
-              className="btn-primary"
+              className="btn-primary shrink-0"
             >
               Start a Project
             </Link>
