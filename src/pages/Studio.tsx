@@ -1,25 +1,125 @@
 import FinalCTA from '@/components/FinalCTA';
-import SectionDivider from '@/components/SectionDivider';
 import FramedImage from '@/components/FramedImage';
+import EditorialImageReveal from '@/components/EditorialImageReveal';
 import DiagonalLine from '@/components/DiagonalLine';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SEO from '@/components/SEO';
+import { motion, useReducedMotion } from 'framer-motion';
+import { staggerContainer, fadeUp } from '@/lib/motion';
+import { getArticlesSortedByDate } from '@/data/articles';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Original principles — restored
 const principles = [
   { number: '01', title: 'Clarity Over Noise', description: 'We strip away the unnecessary so your message comes through clean and strong.' },
-  { number: '02', title: 'Design With Purpose', description: 'Every element serves a function. Nothing is decorative for decoration\'s sake.' },
+  { number: '02', title: 'Design With Purpose', description: "Every element serves a function. Nothing is decorative for decoration's sake." },
   { number: '03', title: 'Built for Real People', description: 'We design for your customers — not for design awards. Usability always comes first.' },
 ];
 
+const foundationPoints = [
+  {
+    title: 'Your Website Is Your First Impression',
+    desc: 'Customers decide in seconds whether your business looks credible. A clean, well-structured site makes that moment work in your favor.',
+  },
+  {
+    title: 'Visuals That Work Across Every Platform',
+    desc: 'Your website, Google Business Profile, and social content need to feel connected. We build the visual system that holds it all together.',
+  },
+  {
+    title: 'Content That Keeps Working',
+    desc: 'Strong branding and clear visual direction make every future campaign, promotion, and piece of content easier and more effective.',
+  },
+];
+
+
+const processSteps = [
+  { number: '01', title: 'Discover', description: 'You share your goals, your customer, and where you need to show up.' },
+  { number: '02', title: 'Build', description: 'We design your website, visuals, or content around a clear creative direction.' },
+  { number: '03', title: 'Launch', description: 'You receive polished, ready-to-use files and a presence built to earn trust.' },
+];
+
+function JournalSection() {
+  const recentArticles = getArticlesSortedByDate().slice(0, 6);
+
+  return (
+    <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+      <div className="container-nlds">
+        <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
+          <div>
+            <p className="eyebrow">The Journal</p>
+            <h2
+              className="font-serif mt-4"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+            >
+              Ideas on Design, Marketing,<br />and Local Business.
+            </h2>
+          </div>
+          <Link to="/journal" className="btn-secondary" style={{ whiteSpace: 'nowrap' }}>
+            All Articles
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px" style={{ border: '1px solid var(--border-color)', backgroundColor: 'var(--border-color)' }}>
+          {recentArticles.map((article) => (
+            <Link
+              key={article.id}
+              to={`/journal/${article.slug}`}
+              style={{
+                backgroundColor: 'var(--bg-soft)',
+                padding: '40px 36px',
+                textDecoration: 'none',
+                display: 'block',
+                transition: 'background-color 0.2s ease',
+              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--bg-main)'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--bg-soft)'; }}
+            >
+              <p
+                className="font-sans"
+                style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--muted-text)' }}
+              >
+                {article.category}
+              </p>
+              <h3
+                className="font-serif mt-3"
+                style={{ fontSize: 'clamp(1.125rem, 2vw, 1.375rem)', color: 'var(--charcoal)', lineHeight: 1.2 }}
+              >
+                {article.title}
+              </h3>
+              <p
+                className="font-sans mt-3"
+                style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+              >
+                {article.excerpt}
+              </p>
+              <p
+                className="font-sans mt-6"
+                style={{ fontSize: '0.75rem', color: 'var(--silver-grey)', letterSpacing: '0.05em' }}
+              >
+                {article.date}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Studio() {
+  // Original scroll reveals — restored
   const aboutRef = useScrollReveal<HTMLDivElement>({ y: 30, duration: 0.7, stagger: 0.2, start: 'top 75%' });
   const principlesRef = useScrollReveal<HTMLDivElement>({ y: 40, duration: 0.7, stagger: 0.15, start: 'top 80%', childSelector: '.principle-card' });
 
+  const foundationRef = useScrollReveal<HTMLDivElement>({ y: 30, duration: 0.7, stagger: 0.15, start: 'top 80%', childSelector: '.foundation-point' });
+  const processRef = useScrollReveal<HTMLDivElement>({ y: 40, duration: 0.7, stagger: 0.15, start: 'top 80%', childSelector: '.process-step' });
+
+  // Original split parallax — restored
   const splitRef = useRef<HTMLDivElement>(null);
   const splitImageRef = useRef<HTMLImageElement>(null);
 
@@ -35,36 +135,64 @@ export default function Studio() {
       gsap.fromTo(
         image,
         { y: '-3%' },
-        {
-          y: '3%',
-          ease: 'none',
-          scrollTrigger: { trigger: container, start: 'top bottom', end: 'bottom top', scrub: true },
-        }
+        { y: '3%', ease: 'none', scrollTrigger: { trigger: container, start: 'top bottom', end: 'bottom top', scrub: true } }
       );
     }, container);
 
     return () => ctx.revert();
   }, []);
 
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div>
-      {/* Hero */}
-      <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
-        <div className="container-nlds">
-          <p className="eyebrow">THE STUDIO</p>
-          <h1
+      <SEO
+        title="About the Studio | New Level Design Studio"
+        description="Learn how New Level Design Studio helps local businesses build credible websites, visuals, and content systems."
+        canonical="https://newlvlstudio.com/studio"
+      />
+
+      {/* 1. Hero — original centered layout */}
+      <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 80 }}>
+        <motion.div
+          className="container-nlds"
+          variants={shouldReduceMotion ? undefined : staggerContainer}
+          initial={shouldReduceMotion ? undefined : 'hidden'}
+          whileInView={shouldReduceMotion ? undefined : 'visible'}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.p className="eyebrow" variants={shouldReduceMotion ? undefined : fadeUp}>THE STUDIO</motion.p>
+          <motion.h1
             className="font-serif mt-4"
-            style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--charcoal)' }}
+            style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--charcoal)', maxWidth: 720 }}
+            variants={shouldReduceMotion ? undefined : fadeUp}
           >
             A Cleaner Standard for How Local Businesses Show Up Online.
-          </h1>
-          <div className="mt-20">
-            <SectionDivider />
+          </motion.h1>
+          <motion.p
+            className="font-sans mt-6"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 560 }}
+            variants={shouldReduceMotion ? undefined : fadeUp}
+          >
+            New Level Design Studio is based in Port Orange, Florida. We build websites, brand
+            systems, marketing visuals, and short-form content for local businesses across Volusia
+            County and Central Florida.
+          </motion.p>
+        </motion.div>
+
+        <div className="container-nlds">
+          <div style={{ maxWidth: 1000, marginLeft: 'auto', marginRight: 'auto' }}>
+            <EditorialImageReveal
+              src="/nlds/images/new-level-design-studio-website-strategy-workspace-hero.png"
+              alt="New Level Design Studio workspace with website strategy notes, brand system cards, local SEO checklist, and laptop showing a local business website mockup."
+              className="mt-8"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
 
-      {/* About */}
+      {/* 2. About — original layout restored */}
       <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
         <div className="container-nlds">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -79,55 +207,29 @@ export default function Studio() {
                 className="font-sans mt-6"
                 style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6 }}
               >
-                New Level Design Studio was built to help local businesses in Port Orange, Daytona Beach, and across Volusia County look as professional online as they are in person. We combine clean design, sharp content, and strategic thinking to create websites and visuals that earn trust from the first impression.
+                New Level Design Studio was built to help local businesses in Port Orange, Daytona
+                Beach, and across Volusia County look as professional online as they are in person.
+                We combine clean design, sharp content, and strategic thinking to create websites
+                and visuals that earn trust from the first impression.
               </p>
+              <Link to="/works" className="btn-secondary mt-8 inline-block self-start">
+                See our work
+              </Link>
             </div>
             <div className="relative">
-              <FramedImage src="/images/about-studio.jpg" alt="Creative workspace" aspectRatio="4/3" />
+              <FramedImage
+                src="/files/nlds/images/new-level-design-studio-website-brand-content-system-port-orange-fl.png"
+                alt="New Level Design Studio website brand content system for Port Orange local businesses"
+                objectFit="contain"
+                parallax={false}
+              />
               <DiagonalLine direction="tl-br" className="absolute inset-0" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
-        <div className="container-nlds">
-          <h2
-            className="font-serif text-center"
-            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
-          >
-            What We Stand For
-          </h2>
-          <div ref={principlesRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
-            {principles.map((principle, i) => (
-              <div key={i} className="principle-card text-center">
-                <span
-                  className="font-serif"
-                  style={{ fontSize: '2rem', color: 'var(--silver-grey)', opacity: 0.5 }}
-                >
-                  {principle.number}
-                </span>
-                <div className="mt-4 mx-auto" style={{ width: 40, height: 1, backgroundColor: 'var(--silver-grey)' }} />
-                <h3
-                  className="font-sans font-semibold mt-4"
-                  style={{ fontSize: '1rem', color: 'var(--charcoal)' }}
-                >
-                  {principle.title}
-                </h3>
-                <p
-                  className="font-sans mt-2"
-                  style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}
-                >
-                  {principle.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Split Editorial */}
+      {/* 3. We Build the Foundation — original split + proof points */}
       <section ref={splitRef} className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div
@@ -144,30 +246,191 @@ export default function Studio() {
               className="font-sans mt-6"
               style={{ fontSize: '1rem', color: 'var(--platinum-grey)', lineHeight: 1.6, maxWidth: 440 }}
             >
-              A strong website and clear visual system don't just look good — they make every marketing effort, every customer interaction, and every piece of content work harder for your business.
+              A strong website and clear visual system don't just look good — they make every
+              marketing effort, every customer interaction, and every piece of content work harder
+              for your business.
             </p>
+            <div ref={foundationRef} className="mt-10 flex flex-col gap-8">
+              {foundationPoints.map((pt, i) => (
+                <div key={i} className="foundation-point">
+                  <h3
+                    className="font-sans font-semibold"
+                    style={{ fontSize: '0.875rem', color: 'var(--white)', letterSpacing: '0.02em' }}
+                  >
+                    {pt.title}
+                  </h3>
+                  <p
+                    className="font-sans mt-2"
+                    style={{ fontSize: '0.875rem', color: 'var(--platinum-grey)', lineHeight: 1.6 }}
+                  >
+                    {pt.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
             <Link
-              to="/contact"
+              to="/services"
               className="btn-secondary mt-10 inline-block self-start"
               style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
             >
-              Start a Project
+              View website and content services
             </Link>
           </div>
-          <div className="relative overflow-hidden min-h-[280px] md:min-h-[400px] lg:min-h-[60vh]">
+          <div
+            className="relative overflow-hidden min-h-[280px] md:min-h-[400px] lg:min-h-[60vh]"
+            style={{ backgroundColor: 'var(--bg-soft)' }}
+          >
             <img
               ref={splitImageRef}
-              src="/images/split-editorial.jpg"
-              alt="Urban landscape"
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ transform: 'scale(1.06)' }}
+              src="/nlds/images/new-level-design-studio-foundation-system-studio-page.png"
+              alt="New Level Design Studio foundation system showing website structure, brand system, content planning, sitemap, and launch checklist"
+              className="img-muted absolute inset-0 w-full h-full object-contain"
+              style={{ objectPosition: 'center center' }}
+              loading="lazy"
             />
             <DiagonalLine direction="bl-tr" className="absolute inset-0" />
           </div>
         </div>
       </section>
 
-      <FinalCTA />
+      {/* 4. Philosophy / What We Stand For — restored exactly */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <h2
+            className="font-serif text-center"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+          >
+            What We Stand For
+          </h2>
+          <div ref={principlesRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+            {principles.map((principle, i) => (
+              <div key={i} className="principle-card text-center">
+                <span className="font-serif" style={{ fontSize: '2rem', color: 'var(--silver-grey)', opacity: 0.5 }}>
+                  {principle.number}
+                </span>
+                <div className="mt-4 mx-auto" style={{ width: 40, height: 1, backgroundColor: 'var(--silver-grey)' }} />
+                <h3 className="font-sans font-semibold mt-4" style={{ fontSize: '1rem', color: 'var(--charcoal)' }}>
+                  {principle.title}
+                </h3>
+                <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                  {principle.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. The Online Presence System */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <h2
+              className="font-serif"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+            >
+              The Online Presence System
+            </h2>
+            <p
+              className="font-sans"
+              style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.7 }}
+            >
+              A website is one part of how customers find and evaluate a business. We build
+              the full picture — website, brand visuals, marketing content, and short-form
+              video — so every platform your customers check reflects the same level of quality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. What We Handle */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <h2
+              className="font-serif"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+            >
+              What We Handle
+            </h2>
+            <div>
+              <p
+                className="font-sans"
+                style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.7 }}
+              >
+                Websites, branding, marketing visuals, and short-form content — the four things
+                that shape how a business looks online. We handle all of it, so your design,
+                content, and presence work together instead of pulling in different directions.
+              </p>
+              <Link to="/services" className="btn-secondary mt-8 inline-block">
+                View website and content services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Why It Matters Locally */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <h2
+              className="font-serif"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+            >
+              Built for Businesses in Port Orange, Daytona Beach, and Volusia County
+            </h2>
+            <p
+              className="font-sans"
+              style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.7 }}
+            >
+              The Volusia County market is competitive across nearly every service category.
+              Businesses that look the most professional online earn a disproportionate share
+              of first-time customers — before a single conversation happens. That's what
+              we build for.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. From First Impression to Finished Launch — Process */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <h2
+            className="font-serif text-center"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+          >
+            From First Impression to Finished Launch
+          </h2>
+          <div ref={processRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+            {processSteps.map((step, i) => (
+              <div key={i} className="process-step text-center">
+                <span className="font-serif" style={{ fontSize: '2rem', color: 'var(--silver-grey)', opacity: 0.5 }}>
+                  {step.number}
+                </span>
+                <div className="mt-4 mx-auto" style={{ width: 40, height: 1, backgroundColor: 'var(--silver-grey)' }} />
+                <h3 className="font-sans font-semibold mt-4" style={{ fontSize: '1rem', color: 'var(--charcoal)' }}>
+                  {step.title}
+                </h3>
+                <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Journal */}
+      <JournalSection />
+
+      {/* 10. Final CTA */}
+      <FinalCTA
+        heading="Ready to Build a Stronger Online Presence?"
+        body="We work with local businesses across Port Orange, Daytona Beach, and Volusia County. Tell us what you are building and we will show you what is possible."
+        buttonText="Start a Project"
+        buttonTo="/contact"
+      />
     </div>
   );
 }

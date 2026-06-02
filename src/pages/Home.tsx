@@ -1,100 +1,143 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ServiceCard from '@/components/ServiceCard';
 import ProjectCard from '@/components/ProjectCard';
+import ValueCard from '@/components/ValueCard';
 import FramedImage from '@/components/FramedImage';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
-import ProcessSection from '@/components/ProcessSection';
 import DiagonalLine from '@/components/DiagonalLine';
 import { MonitorIcon, FramesIcon, PlayIcon } from '@/components/icons';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const processSteps = [
-  { number: '01', title: 'Discover', description: 'We learn about your business, your audience, and what makes you different.' },
-  { number: '02', title: 'Design', description: 'We craft a visual system and website structure that fits your brand.' },
-  { number: '03', title: 'Build', description: 'We bring it to life with clean code, sharp content, and fast performance.' },
-  { number: '04', title: 'Launch', description: 'We go live and make sure everything works the way it should.' },
-];
-
 const projects = [
-  { image: '/images/project-1.jpg', category: 'Branding', title: 'Brand Refresh', description: 'A polished visual system for a local business ready to stand out.' },
-  { image: '/images/project-2.jpg', category: 'Website', title: 'Website Launch', description: 'A clean, fast website designed to convert visitors into customers.' },
-  { image: '/images/project-3.jpg', category: 'Content', title: 'Content System', description: 'Short-form content strategy and production for social growth.' },
+  {
+    image: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png',
+    alt: 'DH Luxury Roofing premium roofing website concept by New Level Design Studio',
+    category: 'Roofing Contractor — Concept Build',
+    title: 'DH Luxury Roofing',
+    description: 'Most roofing sites look dated and aggressive. This one shows the alternative — video-led hero, inspection CTA, and mobile-first lead capture.',
+    link: { text: 'View Case Study', to: '/works/dh-luxury-roofing' },
+  },
+  {
+    image: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
+    alt: 'Love Handles BBQ catering and food truck website concept by New Level Design Studio',
+    category: 'BBQ Catering & Food Truck — Concept Build',
+    title: 'Love Handles BBQ',
+    description: 'Booking was buried and mobile flow was weak. Rebuilt around catering inquiries, a food truck events page, and direct contact paths.',
+    link: { text: 'View Case Study', to: '/works/love-handles-bbq' },
+  },
+  {
+    image: '/nlds/images/ember-oak-coffee-website-concept-nlds.png',
+    alt: 'Ember & Oak Coffee Co. premium coffee shop website concept by New Level Design Studio',
+    category: 'Coffee Shop & Roaster — Concept Build',
+    title: 'Ember & Oak Coffee Co.',
+    description: 'Most coffee shop sites stop at a menu. This one covers the full experience — origin story, product sections, café visit, and wholesale positioning.',
+    link: { text: 'View Case Study', to: '/works/ember-oak-coffee' },
+  },
 ];
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const heroMediaRef = useRef<HTMLDivElement>(null);
   const heroTitleRef = useRef<HTMLHeadingElement>(null);
   const heroSubtitleRef = useRef<HTMLParagraphElement>(null);
   const heroCtaRef = useRef<HTMLDivElement>(null);
-  const heroLineRef = useRef<SVGPathElement>(null);
-  const heroTaglineRef = useRef<HTMLSpanElement>(null);
+  const heroEyebrowRef = useRef<HTMLParagraphElement>(null);
+  const heroLocalRef = useRef<HTMLParagraphElement>(null);
+  const heroImageRef = useRef<HTMLDivElement>(null);
+  const scrollCueRef = useRef<HTMLDivElement>(null);
+  const impressionRef = useRef<HTMLElement>(null);
+  const impressionTextRef = useRef<HTMLDivElement>(null);
+  const impressionPanelsRef = useRef<HTMLDivElement>(null);
+  const [reducedMotion, setReducedMotion] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
+
+  // Subscribe to reduced motion preference changes
+  useEffect(() => {
+    const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mql.addEventListener('change', handler);
+    return () => mql.removeEventListener('change', handler);
+  }, []);
 
   // Hero entrance animation
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
+    const allRefs = [heroEyebrowRef, heroTitleRef, heroSubtitleRef, heroCtaRef, heroLocalRef, scrollCueRef, heroImageRef];
 
-    const tl = gsap.timeline({ delay: 0.3 });
+    if (reducedMotion) {
+      allRefs.forEach(r => { if (r.current) r.current.style.opacity = '1'; });
+      return;
+    }
 
-    // Media frame
-    tl.fromTo(
-      heroMediaRef.current,
-      { opacity: 0, scale: 0.96 },
-      { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' }
-    );
+    const tl = gsap.timeline({ delay: 0.15 });
+    const isMobile = window.innerWidth < 768;
 
-    // Diagonal line
-    if (heroLineRef.current) {
-      const length = heroLineRef.current.getTotalLength();
-      tl.fromTo(
-        heroLineRef.current,
-        { strokeDasharray: length, strokeDashoffset: length },
-        { strokeDashoffset: 0, duration: 1.5, ease: 'power2.inOut' },
-        0.3
+    if (isMobile) {
+      // Mobile: image is in document flow below text — fade in
+      gsap.set(heroImageRef.current, { opacity: 0 });
+      tl.to(heroImageRef.current,
+        { opacity: 1, duration: 0.8, ease: 'power3.out' },
+        0.6
+      );
+    } else {
+      // Desktop/tablet: image slides up from below viewport
+      tl.fromTo(heroImageRef.current,
+        { y: window.innerHeight },
+        { y: 0, duration: 1.4, ease: 'power3.out' },
+        0
       );
     }
 
-    // Tagline text
-    tl.fromTo(
-      heroTaglineRef.current,
-      { opacity: 0, letterSpacing: '0.5em' },
-      { opacity: 1, letterSpacing: '0.15em', duration: 1, ease: 'power2.out' },
+    // Eyebrow fades in as image settles
+    tl.fromTo(heroEyebrowRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.6, ease: 'power3.out' },
       0.8
     );
 
-    // Title
-    tl.fromTo(
-      heroTitleRef.current,
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
-      0.5
+    // Headline
+    tl.fromTo(heroTitleRef.current,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' },
+      1.1
     );
 
-    // Subtitle
-    tl.fromTo(
-      heroSubtitleRef.current,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' },
-      '-=0.3'
+    // Sub
+    tl.fromTo(heroSubtitleRef.current,
+      { opacity: 0, y: 14 },
+      { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+      '-=0.5'
     );
 
     // CTAs
-    tl.fromTo(
-      heroCtaRef.current,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    tl.fromTo(heroCtaRef.current,
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' },
+      '-=0.4'
+    );
+
+    // Location strip
+    tl.fromTo(heroLocalRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, ease: 'power3.out' },
       '-=0.2'
     );
 
+    // Scroll cue
+    tl.fromTo(scrollCueRef.current,
+      { opacity: 0 },
+      { opacity: 0.75, duration: 0.5, ease: 'power3.out' },
+      '+=0.1'
+    );
+
     return () => { tl.kill(); };
-  }, []);
+  }, [reducedMotion]);
 
   // Scroll reveals
   const servicesRef = useScrollReveal<HTMLDivElement>({ y: 40, duration: 0.7, stagger: 0.15, start: 'top 80%', childSelector: '.service-card' });
@@ -103,6 +146,8 @@ export default function Home() {
   // Split editorial parallax
   const splitRef = useRef<HTMLDivElement>(null);
   const splitImageRef = useRef<HTMLImageElement>(null);
+  const whyTextRef = useRef<HTMLDivElement>(null);
+  const workHeadingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = splitRef.current;
@@ -127,105 +172,498 @@ export default function Home() {
     return () => ctx.revert();
   }, []);
 
+
+  // Why It Matters reveal
+  useEffect(() => {
+    const el = whyTextRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el.children,
+        { y: 28, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Selected Work heading reveal
+  useEffect(() => {
+    const el = workHeadingRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el.children,
+        { y: 24, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            once: true,
+          },
+        }
+      );
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
+  // "A Better First Impression" simple fade-up reveal
+  useEffect(() => {
+    const section = impressionRef.current;
+    const textBlock = impressionTextRef.current;
+    const panelsBlock = impressionPanelsRef.current;
+    if (!section || !textBlock || !panelsBlock) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      gsap.set(textBlock.children, { opacity: 0, y: 24 });
+      gsap.set(panelsBlock.children, { opacity: 0, y: 32 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          once: true,
+        },
+      });
+
+      tl.to(textBlock.children, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.14,
+        ease: 'power3.out',
+      }).to(
+        panelsBlock.children,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.16,
+          ease: 'power3.out',
+        },
+        '-=0.5'
+      );
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div>
-      {/* Hero */}
-      <section ref={heroRef} style={{ backgroundColor: 'var(--bg-main)', minHeight: '100vh', paddingTop: 120, paddingBottom: 80 }}>
-        <div className="container-nlds flex flex-col items-center">
-          {/* Hero Media Frame */}
-          <div ref={heroMediaRef} className="relative w-full" style={{ maxWidth: 1000, opacity: 0 }}>
-            <div
-              className="relative overflow-hidden"
-              style={{
-                padding: 8,
-                backgroundColor: 'var(--silver-grey)',
-                borderRadius: 4,
-              }}
+      <SEO
+        title="New Level Design Studio — Premium Websites for Local Businesses | Port Orange, FL"
+        description="Premium websites, visuals, and content systems for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
+        canonical="https://newlvlstudio.com/"
+        jsonLd={[localBusinessSchema(), websiteSchema()]}
+      />
+      {/* Hero — full-stage sticky scroll-over */}
+      <div className="hero-pin-wrapper">
+        <section
+          ref={heroRef}
+          className="hero-section"
+          aria-label="Homepage hero"
+        >
+          {/* Full-bleed background image — slides up from below on load */}
+          <div ref={heroImageRef} className="hero__media" aria-hidden="true">
+            <picture>
+              {/* Desktop ≥1200px: wide 16:9 */}
+              <source
+                media="(min-width: 1200px)"
+                srcSet="/nlds/images/new-level-design-studio-premium-website-hero-background.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcSet="/nlds/images/new-level-design-studio-premium-website-hero-background.jpg"
+              />
+              {/* Tablet 768–1199px: 3:4 */}
+              <source
+                media="(min-width: 768px)"
+                srcSet="/nlds/images/new-level-design-studio-tablet-hero-background.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcSet="/nlds/images/new-level-design-studio-tablet-hero-background.jpg"
+              />
+              {/* Mobile <768px: 9:16 */}
+              <img
+                src="/nlds/images/new-level-design-studio-premium-website-hero-intro.jpg"
+                alt=""
+                loading="eager"
+                fetchPriority="high"
+                width="1080"
+                height="1920"
+                className="img-muted"
+              />
+            </picture>
+          </div>
+
+          {/* Gradient scrim */}
+          <div className="hero__scrim" aria-hidden="true" />
+
+          {/* Text overlay — positioned over empty left wall area */}
+          <div className="hero__content">
+            <p
+              ref={heroEyebrowRef}
+              className="eyebrow"
+              style={{ opacity: 0 }}
             >
-              <video
-                className="w-full object-cover"
-                style={{ aspectRatio: '16/9', display: 'block' }}
-                src="/videos/hero-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-label="New Level Design Studio hero video"
+              Port Orange, Florida
+            </p>
+
+            <h1
+              ref={heroTitleRef}
+              className="font-serif hero-headline"
+              style={{ opacity: 0 }}
+            >
+              Websites and Brand Visuals Built for Credibility, Visibility, and Conversion.
+            </h1>
+
+            <p
+              ref={heroSubtitleRef}
+              className="font-sans hero-subcopy"
+              style={{ opacity: 0 }}
+            >
+              Premium websites, visuals, and content systems for local businesses ready to look credible, get found, and turn attention into real customer inquiries.
+            </p>
+
+            <div
+              ref={heroCtaRef}
+              className="flex flex-col sm:flex-row items-start hero-cta-row"
+              style={{ opacity: 0 }}
+            >
+              <Link to="/contact" className="btn-primary">Start a Project</Link>
+              <Link to="/works" className="btn-secondary">View the Work</Link>
+            </div>
+
+            <p
+              ref={heroLocalRef}
+              className="font-sans hero-local-line"
+              style={{ opacity: 0 }}
+            >
+              Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; Volusia County
+            </p>
+
+            <div ref={scrollCueRef} className="hero-scroll-cue" style={{ opacity: 0, marginTop: 'auto' }}>
+              <span className="font-sans">Scroll to see how</span>
+              <span className="hero-scroll-arrow" aria-hidden="true" />
+            </div>
+          </div>
+        </section>
+
+      {/* A Better First Impression — slides over sticky hero on scroll */}
+      <section
+        ref={impressionRef}
+        className="hero-next-section"
+        style={{ backgroundColor: 'var(--bg-main)' }}
+      >
+        <div className="container-nlds">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            {/* Left: editorial text */}
+            <div ref={impressionTextRef} className="flex flex-col justify-center">
+              <p
+                className="font-sans uppercase"
+                style={{
+                  fontSize: '0.75rem',
+                  letterSpacing: '0.25em',
+                  color: 'var(--muted-text)',
+                }}
               >
-                Your browser does not support the video tag.
-              </video>
-              {/* Diagonal line + tagline on right edge */}
+                First Impressions
+              </p>
+              <h2
+                className="font-serif mt-5"
+                style={{
+                  fontSize: 'clamp(2rem, 4vw, 3.25rem)',
+                  color: 'var(--charcoal)',
+                  lineHeight: 1.08,
+                  maxWidth: 460,
+                }}
+              >
+                Your first impression is already happening.
+              </h2>
+              <p
+                className="font-sans mt-6"
+                style={{
+                  fontSize: '1.05rem',
+                  lineHeight: 1.65,
+                  color: 'var(--body-text)',
+                  maxWidth: 420,
+                }}
+              >
+                Most people form an opinion in seconds. We help businesses own that moment — with a website that feels considered, a brand that feels confident, and visuals that feel like someone who cares made them.
+              </p>
+            </div>
+
+            {/* Right: 3 clean stacked panels */}
+            <div ref={impressionPanelsRef} className="flex flex-col" style={{ gap: 0 }}>
+              {/* Panel 01 */}
               <div
-                className="absolute right-0 top-0 bottom-0 flex items-center justify-center"
-                style={{ width: 40, marginRight: 8 }}
+                style={{
+                  borderBottom: '1px solid var(--silver-grey)',
+                  padding: '36px 0',
+                }}
               >
-                <svg
-                  viewBox="0 0 30 1000"
-                  preserveAspectRatio="none"
-                  className="absolute inset-0 w-full h-full"
-                  style={{ opacity: 0.1 }}
-                >
-                  <path
-                    ref={heroLineRef}
-                    d="M15,0 L15,1000"
-                    stroke="var(--blue-dolphin)"
-                    strokeWidth="1"
-                    fill="none"
-                  />
-                </svg>
-                <span
-                  ref={heroTaglineRef}
-                  className="font-serif italic relative whitespace-nowrap"
-                  style={{
-                    writingMode: 'vertical-rl',
-                    textOrientation: 'mixed',
-                    transform: 'rotate(180deg)',
-                    fontSize: '1.25rem',
-                    letterSpacing: '0.15em',
-                    color: 'var(--charcoal)',
-                    opacity: 0,
-                  }}
-                >
-                  Raise the Standard.
-                </span>
+                <div className="flex items-baseline gap-5">
+                  <span
+                    className="font-sans shrink-0"
+                    style={{
+                      fontSize: '0.7rem',
+                      letterSpacing: '0.15em',
+                      color: 'var(--muted-text)',
+                      minWidth: 22,
+                    }}
+                  >
+                    01
+                  </span>
+                  <div>
+                    <h3
+                      className="font-serif"
+                      style={{
+                        fontSize: '1.35rem',
+                        color: 'var(--charcoal)',
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      Website Design
+                    </h3>
+                    <p
+                      className="font-sans mt-2"
+                      style={{
+                        fontSize: '0.9rem',
+                        lineHeight: 1.6,
+                        color: 'var(--body-text)',
+                        maxWidth: 320,
+                      }}
+                    >
+                      Most visitors decide whether to call or scroll past within seconds. A professionally structured website is the clearest signal your business is worth contacting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Panel 02 */}
+              <div
+                style={{
+                  borderBottom: '1px solid var(--silver-grey)',
+                  padding: '36px 0',
+                }}
+              >
+                <div className="flex items-baseline gap-5">
+                  <span
+                    className="font-sans shrink-0"
+                    style={{
+                      fontSize: '0.7rem',
+                      letterSpacing: '0.15em',
+                      color: 'var(--muted-text)',
+                      minWidth: 22,
+                    }}
+                  >
+                    02
+                  </span>
+                  <div>
+                    <h3
+                      className="font-serif"
+                      style={{
+                        fontSize: '1.35rem',
+                        color: 'var(--charcoal)',
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      Brand Visuals
+                    </h3>
+                    <p
+                      className="font-sans mt-2"
+                      style={{
+                        fontSize: '0.9rem',
+                        lineHeight: 1.6,
+                        color: 'var(--body-text)',
+                        maxWidth: 320,
+                      }}
+                    >
+                      Scattered graphics and mismatched imagery quietly signal that no one is in charge. A unified visual system makes every touchpoint feel intentional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Panel 03 */}
+              <div style={{ padding: '36px 0 0' }}>
+                <div className="flex items-baseline gap-5">
+                  <span
+                    className="font-sans shrink-0"
+                    style={{
+                      fontSize: '0.7rem',
+                      letterSpacing: '0.15em',
+                      color: 'var(--muted-text)',
+                      minWidth: 22,
+                    }}
+                  >
+                    03
+                  </span>
+                  <div>
+                    <h3
+                      className="font-serif"
+                      style={{
+                        fontSize: '1.35rem',
+                        color: 'var(--charcoal)',
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      Short-Form Video
+                    </h3>
+                    <p
+                      className="font-sans mt-2"
+                      style={{
+                        fontSize: '0.9rem',
+                        lineHeight: 1.6,
+                        color: 'var(--body-text)',
+                        maxWidth: 320,
+                      }}
+                    >
+                      Short-form video does what static pages cannot — it shows who you are and what your work looks like in motion, before a customer decides to call.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      </div>{/* end hero-pin-wrapper */}
 
-          {/* Hero Title Block */}
-          <div className="text-center mt-12" style={{ maxWidth: 800 }}>
-            <h1
-              ref={heroTitleRef}
-              className="font-serif"
-              style={{
-                fontSize: 'clamp(2rem, 5vw, 4rem)',
-                lineHeight: 1.05,
-                letterSpacing: '-0.02em',
-                color: 'var(--charcoal)',
-                opacity: 0,
-              }}
-            >
-              Your Website Is the Front Door to Your Business
-            </h1>
-            <p
-              ref={heroSubtitleRef}
-              className="font-sans mx-auto mt-6"
-              style={{
-                fontSize: '1rem',
-                lineHeight: 1.6,
-                color: 'var(--muted-text)',
-                maxWidth: 560,
-                opacity: 0,
-              }}
-            >
-              We build premium websites, visuals, and short-form content for local businesses ready to look bigger, sharper, and easier to trust online.
-            </p>
-            <div ref={heroCtaRef} className="flex flex-col sm:flex-row items-center justify-center mt-10" style={{ gap: 16, opacity: 0 }}>
-              <Link to="/contact" className="btn-primary">Start a Project</Link>
-              <Link to="/works" className="btn-secondary">View Our Work</Link>
-            </div>
+      {/* Online Presence Image */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(40px, 6vw, 80px) 0' }}>
+        <div className="container-nlds">
+          <img
+            src="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.png"
+            alt="New Level Design Studio online presence system showing a website, mobile layout, brand visuals, and short-form video content for a local business"
+            loading="lazy"
+            className="img-muted"
+            style={{
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+              objectFit: 'contain',
+            }}
+          />
+        </div>
+      </section>
+
+      {/* A Website Should Do More Than Exist */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">WHAT A WEBSITE SHOULD DO</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', maxWidth: 640, lineHeight: 1.15 }}
+          >
+            A Website Should Do More Than Exist
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 560 }}
+          >
+            A strong website should clarify what you do, build trust quickly, guide visitors toward action, and stay sharp after launch.
+          </p>
+          <div className="mt-12">
+            <SectionDivider />
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            <ValueCard
+              title="Clear Message"
+              description="Explain what you do in seconds. Visitors should know who you are, what you offer, and why it matters — without hunting for answers."
+            />
+            <ValueCard
+              title="Premium Presentation"
+              description="Make the business feel established before visitors compare. Clean design, sharp visuals, and consistent branding signal professionalism."
+            />
+            <ValueCard
+              title="Local Visibility"
+              description="Build the foundation for people in your market to find you. A structured, fast, and properly built site is the starting point for local search."
+            />
+            <ValueCard
+              title="Ongoing Support"
+              description="Keep the site updated, checked, and professionally maintained. A website that never changes starts to feel forgotten."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* What We Help Fix */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">WHAT WE HELP FIX</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 580 }}
+          >
+            Common Problems We Solve
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 560 }}
+          >
+            Most local businesses do not lose leads because they are bad at what they do. They lose trust when their online presence does not match the quality of their work.
+          </p>
+          <div className="mt-12 flex flex-col" style={{ gap: 0 }}>
+            {[
+              'Outdated websites that make the business look smaller than it is',
+              'Weak first impressions before customers call',
+              'Inconsistent branding across website, Google, Facebook, and social posts',
+              'No clear path from visitor to quote, booking, or contact',
+              'Local competitors looking more credible online',
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-5"
+                style={{ borderBottom: '1px solid var(--silver-grey)', padding: '20px 0' }}
+              >
+                <span
+                  className="font-sans shrink-0"
+                  style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', minWidth: 24 }}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <p className="font-sans" style={{ fontSize: '1rem', color: 'var(--charcoal)', lineHeight: 1.55 }}>
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+          <Link to="/contact" className="btn-primary mt-10 inline-block">
+            Start a Project
+          </Link>
         </div>
       </section>
 
@@ -237,7 +675,7 @@ export default function Home() {
             className="font-sans text-center mt-6 uppercase"
             style={{ fontSize: '0.75rem', letterSpacing: '0.25em', color: 'var(--muted-text)' }}
           >
-            Serving Port Orange, Daytona Beach, Volusia County &amp; Central Florida
+            Serving Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, Volusia County &amp; Central Florida
           </p>
         </div>
       </section>
@@ -260,24 +698,24 @@ export default function Home() {
               <ServiceCard
                 icon={<MonitorIcon />}
                 title="Website Design"
-                description="Clean, mobile-friendly websites built to help local businesses look established and easy to contact."
-                link={{ text: 'Learn More', to: '/services' }}
+                description="Custom-coded sites structured for your services, your local area, and how your customers actually search — built to turn visitors into direct inquiries."
+                link={{ text: 'See Services', to: '/services' }}
               />
             </div>
             <div className="service-card">
               <ServiceCard
                 icon={<FramesIcon />}
                 title="Brand Visuals"
-                description="Polished image systems, graphics, and visuals that keep your business consistent across web and social."
-                link={{ text: 'Learn More', to: '/services' }}
+                description="Logo systems, branded graphics, and web imagery designed to stay consistent across your website, Google Business Profile, and social platforms."
+                link={{ text: 'See Services', to: '/services' }}
               />
             </div>
             <div className="service-card">
               <ServiceCard
                 icon={<PlayIcon />}
                 title="Short-Form Video"
-                description="Vertical content for Reels, TikTok, Facebook, websites, and campaigns that need motion and attention."
-                link={{ text: 'Learn More', to: '/services' }}
+                description="Vertical video for Reels, Facebook, and website hero sections — produced to match your brand and drive real engagement in your local market."
+                link={{ text: 'See Services', to: '/services' }}
               />
             </div>
           </div>
@@ -288,7 +726,7 @@ export default function Home() {
       <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
         <div className="container-nlds">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="flex flex-col justify-center">
+            <div ref={whyTextRef} className="flex flex-col justify-center">
               <p className="eyebrow">WHY IT MATTERS</p>
               <h2
                 className="font-serif mt-4"
@@ -307,15 +745,111 @@ export default function Home() {
               </Link>
             </div>
             <div className="relative">
-              <FramedImage src="/images/why-it-matters.jpg" alt="Architectural precision" aspectRatio="4/3" />
+              <FramedImage src="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.png" alt="Premium local business storefront representing a stronger first impression and trust for New Level Design Studio clients" aspectRatio="4/3" />
               <DiagonalLine direction="tl-br" className="absolute inset-0" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process */}
-      <ProcessSection steps={processSteps} />
+      {/* Founder-Led Trust Block */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '80px 0' }}>
+        <div className="container-nlds">
+          <div
+            style={{
+              borderTop: '1px solid var(--silver-grey)',
+              borderBottom: '1px solid var(--silver-grey)',
+              padding: '48px 0',
+            }}
+          >
+            <p className="eyebrow">FOUNDER-LED STUDIO</p>
+            <h2
+              className="font-serif mt-4"
+              style={{
+                fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
+                color: 'var(--charcoal)',
+                lineHeight: 1.15,
+                maxWidth: 580,
+              }}
+            >
+              Founder-led design for local businesses.
+            </h2>
+            <p
+              className="font-sans mt-5"
+              style={{
+                fontSize: '1rem',
+                color: 'var(--muted-text)',
+                lineHeight: 1.65,
+                maxWidth: 560,
+              }}
+            >
+              Work directly with Michael Vail, founder of New Level Design Studio in Port Orange, Florida. No bloated agency handoff. No generic template process. Just a clear website, brand visuals, and content system built to help your business look credible before customers call.
+            </p>
+            <Link to="/contact" className="btn-primary mt-8 inline-block">
+              Start a Project
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* The NLDS Method */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow text-center">THE NLDS METHOD</p>
+          <h2
+            className="font-serif text-center mt-4"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+          >
+            A Clear Process for Building a Sharper Online Presence
+          </h2>
+
+          <div className="mt-16 flex flex-col" style={{ gap: 0 }}>
+            {[
+              { number: '01', title: 'Audit the Current Presence', description: 'We review what you have, what is working, and where the gaps are.' },
+              { number: '02', title: 'Clarify the Offer', description: 'We define what you do, who you serve, and what makes your business the right choice.' },
+              { number: '03', title: 'Structure the Website', description: 'We map pages, navigation, and content so visitors can find what they need without confusion.' },
+              { number: '04', title: 'Design the Visual System', description: 'We build a clean, consistent look that feels sharp across every page and platform.' },
+              { number: '05', title: 'Build and Launch', description: 'We code, test, refine, and launch a site that performs well and loads fast.' },
+              { number: '06', title: 'Maintain and Improve', description: 'We keep the site updated, monitored, and ready to grow with your business.' },
+            ].map((step, i) => (
+              <div
+                key={i}
+                className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8"
+                style={{
+                  borderTop: '1px solid var(--silver-grey)',
+                  padding: '32px 0',
+                }}
+              >
+                <span
+                  className="font-serif shrink-0"
+                  style={{
+                    fontSize: '2rem',
+                    color: 'var(--silver-grey)',
+                    lineHeight: 1,
+                    minWidth: 48,
+                  }}
+                >
+                  {step.number}
+                </span>
+                <div className="flex-1">
+                  <h3
+                    className="font-sans font-semibold"
+                    style={{ fontSize: '1.0625rem', color: 'var(--charcoal)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p
+                    className="font-sans mt-2"
+                    style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 520 }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Split Editorial */}
       <section ref={splitRef} className="w-full">
@@ -329,7 +863,7 @@ export default function Home() {
               className="font-serif"
               style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--white)', lineHeight: 1.15 }}
             >
-              Built for Local Businesses Ready to Look Bigger.
+              Built for Local Businesses Ready to Look Established.
             </h2>
             <p
               className="font-sans mt-6"
@@ -350,32 +884,302 @@ export default function Home() {
           <div className="relative overflow-hidden min-h-[280px] md:min-h-[400px] lg:min-h-[60vh]">
             <img
               ref={splitImageRef}
-              src="/images/split-editorial.jpg"
-              alt="Urban cityscape"
-              className="absolute inset-0 w-full h-full object-cover"
+              src="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.png"
+              alt="Row of polished local business storefronts representing established online presence for New Level Design Studio clients"
+              className="img-muted absolute inset-0 w-full h-full object-cover"
               style={{ transform: 'scale(1.06)' }}
+              loading="lazy"
             />
             <DiagonalLine direction="bl-tr" className="absolute inset-0" />
           </div>
         </div>
       </section>
 
+      {/* Capabilities Proof Strip */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '72px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">WHAT WE BUILD</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            {[
+              {
+                label: 'Mobile-First Websites',
+                desc: 'Structured for how local customers actually search and browse — fast, clean, and built around a clear inquiry path.',
+              },
+              {
+                label: 'Local SEO Structure',
+                desc: 'On-page foundations, location pages, and schema markup that give your local market a real chance to find you.',
+              },
+              {
+                label: 'Clear Inquiry Paths',
+                desc: 'Quote requests, contact flows, and booking CTAs designed to reduce friction and generate real calls and messages.',
+              },
+              {
+                label: 'Branded Visual Systems',
+                desc: 'Logos, graphics, and imagery that stay consistent across your website, Google Business Profile, and social platforms.',
+              },
+            ].map((item, i) => (
+              <div key={i} style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 20 }}>
+                <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                  {item.label}
+                </h3>
+                <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55 }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p
+            className="font-sans mt-10 uppercase"
+            style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)', lineHeight: 1.7 }}
+          >
+            Built for contractors, restaurants, coffee shops, salons, real estate, fitness, and local service providers
+          </p>
+          <p
+            className="font-sans mt-2 uppercase"
+            style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)', lineHeight: 1.7 }}
+          >
+            Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; New Smyrna Beach &nbsp;·&nbsp; Volusia County
+          </p>
+        </div>
+      </section>
+
       {/* Selected Work Preview */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
         <div className="container-nlds">
-          <p className="eyebrow">SELECTED WORK</p>
-          <h2
-            className="font-serif mt-4"
-            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
-          >
-            A Few Projects Built to Raise the Standard
-          </h2>
+          <div ref={workHeadingRef}>
+            <p className="eyebrow">SELECTED WORK</p>
+            <h2
+              className="font-serif mt-4"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+            >
+              A Few Projects Built to Raise the Standard
+            </h2>
+            <p
+              className="font-sans mt-4"
+              style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 520 }}
+            >
+              Concept builds and live demos for local businesses across Port Orange, Daytona Beach, and Volusia County — built to show what a stronger online presence looks like in practice.
+            </p>
+          </div>
           <div ref={worksRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {projects.map((project, i) => (
               <div key={i} className="work-card">
                 <ProjectCard {...project} />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Your Website Needs to Work */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">WEBSITE SUCCESS CHECKLIST</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+          >
+            What Your Website Needs to Work
+          </h2>
+          <div className="mt-12">
+            <SectionDivider />
+          </div>
+
+          {/* 4 key pillars — always visible */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 mt-12">
+            {[
+              { num: '01', title: 'Clear First Impression', desc: 'Visitors should understand who you are and why you matter within seconds of landing.' },
+              { num: '04', title: 'Mobile-First Layout', desc: 'Built for the screen most of your customers are actually using to find you.' },
+              { num: '06', title: 'Trust Signals', desc: 'Proof that builds confidence before the first conversation — portfolio, credentials, and social presence.' },
+              { num: '09', title: 'Local SEO Foundation', desc: 'A properly structured site gives your local market a real chance to find you.' },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-5"
+                style={{
+                  borderBottom: '1px solid var(--silver-grey)',
+                  padding: '24px 0',
+                }}
+              >
+                <span
+                  className="font-sans shrink-0"
+                  style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', minWidth: 24 }}
+                >
+                  {item.num}
+                </span>
+                <div>
+                  <h3 className="font-sans font-semibold" style={{ fontSize: '1rem', color: 'var(--charcoal)' }}>
+                    {item.title}
+                  </h3>
+                  <p className="font-sans mt-1" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Full checklist — collapsed by default, preserved for SEO */}
+          <details className="mt-6">
+            <summary
+              className="font-sans uppercase"
+              style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', cursor: 'pointer', userSelect: 'none', listStyle: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
+            >
+              <span>See full checklist</span>
+              <span style={{ fontSize: '0.625rem' }}>▼</span>
+            </summary>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 mt-4">
+              {[
+                { num: '02', title: 'Strong Headline', desc: 'Simple. Specific. Direct.' },
+                { num: '03', title: 'Premium Brand Presentation', desc: 'Look established before people compare.' },
+                { num: '05', title: 'Clear Service Structure', desc: 'Make the offer easy to understand.' },
+                { num: '07', title: 'Clear Call to Action', desc: 'Give visitors one clear next step.' },
+                { num: '08', title: 'Fast Load Speed', desc: 'Performance shapes perception.' },
+                { num: '10', title: 'Ongoing Maintenance', desc: 'Keep the site sharp after launch.' },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-5"
+                  style={{ borderBottom: '1px solid var(--silver-grey)', padding: '24px 0' }}
+                >
+                  <span
+                    className="font-sans shrink-0"
+                    style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', minWidth: 24 }}
+                  >
+                    {item.num}
+                  </span>
+                  <div>
+                    <h3 className="font-sans font-semibold" style={{ fontSize: '1rem', color: 'var(--charcoal)' }}>
+                      {item.title}
+                    </h3>
+                    <p className="font-sans mt-1" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
+        </div>
+      </section>
+
+      {/* Launch Is Not the Finish Line */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="eyebrow">AFTER LAUNCH</p>
+              <h2
+                className="font-serif mt-4"
+                style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+              >
+                Launch Is Not the Finish Line
+              </h2>
+              <p
+                className="font-sans mt-5"
+                style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 480 }}
+              >
+                After your website goes live, it still needs small updates, checks, refinements, and support to stay sharp. Our Website Care plan helps local businesses keep their site maintained without needing a full redesign every time something changes.
+              </p>
+              <Link to="/contact" className="btn-primary mt-8 inline-block">
+                Ask About Website Care
+              </Link>
+            </div>
+
+            <div
+              style={{
+                backgroundColor: 'var(--surface)',
+                border: '1px solid var(--border-color)',
+                padding: 'clamp(32px, 4vw, 48px)',
+              }}
+            >
+              <div className="flex items-baseline justify-between">
+                <h3
+                  className="font-serif"
+                  style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }}
+                >
+                  Website Care
+                </h3>
+                <span
+                  className="font-sans"
+                  style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
+                >
+                  Starting at $99/mo
+                </span>
+              </div>
+              <div className="mt-4" style={{ width: '100%', height: 1, backgroundColor: 'var(--silver-grey)' }} />
+              <ul className="mt-6 flex flex-col" style={{ gap: 12 }}>
+                {[
+                  'Monthly website check',
+                  'Small content updates',
+                  'Link and form checks',
+                  'Basic performance review',
+                  'Priority support',
+                  'Ongoing site polish',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span
+                      className="font-sans shrink-0"
+                      style={{
+                        fontSize: '0.75rem',
+                        color: 'var(--silver-grey)',
+                        marginTop: 2,
+                      }}
+                    >
+                      —
+                    </span>
+                    <span
+                      className="font-sans"
+                      style={{ fontSize: '0.9375rem', color: 'var(--body-text)' }}
+                    >
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Website Review CTA */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '80px 0' }}>
+        <div className="container-nlds">
+          <div
+            style={{
+              borderTop: '1px solid var(--silver-grey)',
+              borderBottom: '1px solid var(--silver-grey)',
+              padding: '48px 0',
+            }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <p className="eyebrow">FREE WEBSITE REVIEW</p>
+                <h2
+                  className="font-serif mt-4"
+                  style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 440 }}
+                >
+                  Not sure what your site needs?
+                </h2>
+                <p
+                  className="font-sans mt-4"
+                  style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 440 }}
+                >
+                  Send your current website and I'll review the first impression, mobile layout, CTA path, and local SEO foundation — and let you know what I'd change.
+                </p>
+              </div>
+              <div className="flex flex-col items-start lg:items-end">
+                <Link to="/contact" className="btn-primary">
+                  Get a Website Review
+                </Link>
+                <p
+                  className="font-sans mt-3"
+                  style={{ fontSize: '0.75rem', color: 'var(--muted-text)', letterSpacing: '0.05em' }}
+                >
+                  No commitment. Just a direct, honest look.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

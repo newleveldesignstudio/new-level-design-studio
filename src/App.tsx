@@ -11,6 +11,22 @@ import StarterPack from '@/pages/StarterPack';
 import Contact from '@/pages/Contact';
 import Terms from '@/pages/Terms';
 import Privacy from '@/pages/Privacy';
+import ArticleDetail from '@/pages/ArticleDetail';
+import Journal from '@/pages/Journal';
+import WorkElTaller from '@/pages/WorkElTaller';
+import WorkLaTequila from '@/pages/WorkLaTequila';
+import WorkTheBestLandscape from '@/pages/WorkTheBestLandscape';
+import WorkTheGrassGuys from '@/pages/WorkTheGrassGuys';
+import WorkDhLuxuryRoofing from '@/pages/WorkDhLuxuryRoofing';
+import WorkVolusiaLegalGroup from '@/pages/WorkVolusiaLegalGroup';
+import WorkEmberOakCoffee from '@/pages/WorkEmberOakCoffee';
+import WorkLoveHandlesBbq from '@/pages/WorkLoveHandlesBbq';
+import WorkCoastalStandardRealty from '@/pages/WorkCoastalStandardRealty';
+import PortOrangeWebDesign from '@/pages/PortOrangeWebDesign';
+import DaytonaBeachWebDesign from '@/pages/DaytonaBeachWebDesign';
+import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
+import CentralFloridaWebDesign from '@/pages/CentralFloridaWebDesign';
+import NotFound from '@/pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -37,6 +53,22 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/journal" element={<Journal />} />
+          <Route path="/journal/:slug" element={<ArticleDetail />} />
+          <Route path="/works/el-taller-2026" element={<WorkElTaller />} />
+          <Route path="/works/la-tequila-2026" element={<WorkLaTequila />} />
+          <Route path="/works/the-best-landscape-2026" element={<WorkTheBestLandscape />} />
+          <Route path="/works/the-grass-guys" element={<WorkTheGrassGuys />} />
+          <Route path="/works/dh-luxury-roofing" element={<WorkDhLuxuryRoofing />} />
+          <Route path="/works/volusia-legal-group" element={<WorkVolusiaLegalGroup />} />
+          <Route path="/works/ember-oak-coffee" element={<WorkEmberOakCoffee />} />
+          <Route path="/works/love-handles-bbq" element={<WorkLoveHandlesBbq />} />
+          <Route path="/works/coastal-standard-realty" element={<WorkCoastalStandardRealty />} />
+          <Route path="/port-orange-website-design" element={<PortOrangeWebDesign />} />
+          <Route path="/daytona-beach-website-design" element={<DaytonaBeachWebDesign />} />
+          <Route path="/volusia-county-website-design" element={<VolusiaCountyWebDesign />} />
+          <Route path="/central-florida-website-design" element={<CentralFloridaWebDesign />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

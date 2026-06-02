@@ -89,7 +89,7 @@ export default function DiagonalTextReveal({
         />
       </svg>
       <Tag
-        ref={textRef as any}
+        ref={textRef as unknown as React.Ref<HTMLHeadingElement>}
         className="font-serif relative"
         style={{
           ...style,

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import SEO from '@/components/SEO';
 import './StarterPack.css';
 
 const benefits = [
@@ -24,7 +25,7 @@ const benefits = [
 const includedItems = [
   '1 Facebook cover image',
   '1 Google Business Profile post image',
-  '1 campaign flyer / digital sell sheet',
+  '1 campaign flyer ad / digital sell sheet',
   '1 square social media post',
   '1 controlled revision round',
   'Delivered ready to post',
@@ -174,6 +175,7 @@ export default function StarterPack() {
     return () => clearTimeout(timer);
   }, []);
 
+
   // Fade-in observer for sections without useScrollReveal
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -201,6 +203,11 @@ export default function StarterPack() {
 
   return (
     <div ref={pageRef} className="starter-pack-page">
+      <SEO
+        title="$129 Starter Pack — Brand Visuals for Local Businesses | New Level Design Studio"
+        description="A focused starter offer for local businesses that need essential brand visuals and online presence assets."
+        canonical="https://newlvlstudio.com/starter-pack"
+      />
       {/* 1. Hero */}
       <section className="starter-hero">
         <div className="starter-hero-inner">
@@ -235,36 +242,14 @@ export default function StarterPack() {
             </div>
           </div>
 
-          {/* Visual Pack Preview */}
-          <div className="starter-preview">
-            <div className="preview-card preview-wide">
-              <div className="preview-frame">
-                <div className="preview-line preview-line-top" />
-                <div className="preview-line preview-line-bottom" />
-                <span className="preview-label">Facebook Cover — Wide Header</span>
-              </div>
-            </div>
-            <div className="preview-card preview-square">
-              <div className="preview-frame">
-                <div className="preview-line preview-line-top" />
-                <div className="preview-line preview-line-bottom" />
-                <span className="preview-label">Google Business Post — Square / Feed</span>
-              </div>
-            </div>
-            <div className="preview-card preview-tall">
-              <div className="preview-frame">
-                <div className="preview-line preview-line-top" />
-                <div className="preview-line preview-line-bottom" />
-                <span className="preview-label">Campaign Flyer — Vertical Promo</span>
-              </div>
-            </div>
-            <div className="preview-card preview-small">
-              <div className="preview-frame">
-                <div className="preview-line preview-line-top" />
-                <div className="preview-line preview-line-bottom" />
-                <span className="preview-label">Square Social Post — Square Feed</span>
-              </div>
-            </div>
+          {/* Hero image */}
+          <div className="starter-hero-visual">
+            <img
+              src="/nlds/images/starter-pack-branded-marketing-assets-local-business-new-level-design-studio.png"
+              alt="Four branded Starter Pack assets including a Facebook cover, Google Business Profile post, campaign flyer, and square social media post"
+              className="img-muted starter-hero-image"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -296,26 +281,25 @@ export default function StarterPack() {
       {/* 3. Included / Pricing */}
       <section id="included" className="starter-section starter-section-soft">
         <div className="container-nlds">
-          <div className="fade-in">
-            <h2 className="starter-section-title">What you get for $129</h2>
-            <p className="starter-section-body" style={{ maxWidth: 560 }}>
-              A simple starter pack built to improve your business&apos;s online first
-              impression.
-            </p>
-          </div>
-
           <div className="starter-included-wrap">
-            <div ref={includedRef} className="starter-included-list">
-              {includedItems.map((item, i) => (
-                <div key={i} className="included-item">
-                  <span className="included-check" />
-                  <span className="included-text">{item}</span>
-                </div>
-              ))}
+            <div className="starter-value-card fade-in">
+              <h2 className="starter-section-title">What You Get For $129</h2>
+              <p className="starter-section-body" style={{ maxWidth: 480 }}>
+                A simple starter pack built to improve your business&apos;s online first
+                impression.
+              </p>
+              <div ref={includedRef} className="starter-included-list">
+                {includedItems.map((item, i) => (
+                  <div key={i} className="included-item">
+                    <span className="included-check" />
+                    <span className="included-text">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="starter-price-panel fade-in">
-              <p className="price-label">Business Starter Visual Pack</p>
+              <p className="price-label">Business Starter Pack</p>
               <p className="price-amount">$129</p>
               <p className="price-note">One-time offer. No subscription required.</p>
               <Link to="/contact" className="btn-primary">

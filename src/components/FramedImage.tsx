@@ -9,16 +9,17 @@ interface FramedImageProps {
   alt: string;
   aspectRatio?: string;
   parallax?: boolean;
+  objectFit?: 'cover' | 'contain';
 }
 
-export default function FramedImage({ src, alt, aspectRatio = '4/3', parallax = true }: FramedImageProps) {
+export default function FramedImage({ src, alt, aspectRatio = '4/3', parallax = true, objectFit = 'cover' }: FramedImageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
     const image = imageRef.current;
-    if (!container || !image || !parallax) return;
+    if (!container || !image || !parallax || objectFit !== 'cover') return;
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
@@ -41,7 +42,7 @@ export default function FramedImage({ src, alt, aspectRatio = '4/3', parallax = 
     }, container);
 
     return () => ctx.revert();
-  }, [parallax]);
+  }, [parallax, objectFit]);
 
   return (
     <div
@@ -57,11 +58,12 @@ export default function FramedImage({ src, alt, aspectRatio = '4/3', parallax = 
         ref={imageRef}
         src={src}
         alt={alt}
-        className="w-full object-cover"
+        className={`img-muted w-full ${objectFit === 'cover' ? 'object-cover' : 'object-contain'}`}
         style={{
-          aspectRatio,
+          ...(objectFit === 'cover' && aspectRatio ? { aspectRatio } : {}),
+          ...(objectFit === 'contain' ? { height: 'auto' } : {}),
           display: 'block',
-          transform: parallax ? 'scale(1.06)' : 'none',
+          transform: parallax && objectFit === 'cover' ? 'scale(1.06)' : 'none',
         }}
       />
     </div>

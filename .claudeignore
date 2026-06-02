@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.next
+.netlify
+coverage
+.turbo
+*.log
+logs
+qa-screenshots
+public/assets/*.mp4
+public/assets/*.mov

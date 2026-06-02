@@ -1,5 +1,8 @@
 import SectionDivider from '@/components/SectionDivider';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import SEO from '@/components/SEO';
+import { motion, useReducedMotion } from 'framer-motion';
+import { staggerContainer, fadeUp } from '@/lib/motion';
 
 const sections = [
   {
@@ -28,32 +31,47 @@ const sections = [
   },
   {
     title: 'Contact',
-    body: 'For privacy-related questions or to exercise your rights, contact us at hello@newlvlstudio.com.',
+    body: 'For privacy-related questions or to exercise your rights, contact us at michael@newlvlstudio.com.',
   },
 ];
 
 export default function Privacy() {
   const contentRef = useScrollReveal<HTMLDivElement>({ y: 30, duration: 0.6, stagger: 0.1, start: 'top 85%', childSelector: '.privacy-section' });
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <div>
+      <SEO
+        title="Privacy Policy | New Level Design Studio"
+        description="Privacy policy for New Level Design Studio. Learn how we collect, use, and protect your information."
+        canonical="https://newlvlstudio.com/privacy"
+      />
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 100 }}>
         <div className="container-nlds" style={{ maxWidth: 800 }}>
-          <h1
-            className="font-serif"
-            style={{ fontSize: '3rem', color: 'var(--charcoal)', lineHeight: 1.1 }}
+          <motion.div
+            variants={shouldReduceMotion ? undefined : staggerContainer}
+            initial={shouldReduceMotion ? undefined : 'hidden'}
+            whileInView={shouldReduceMotion ? undefined : 'visible'}
+            viewport={{ once: true, amount: 0.3 }}
           >
-            Privacy Policy
-          </h1>
-          <p
-            className="font-sans mt-4"
-            style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
-          >
-            Last updated: May 20, 2026
-          </p>
-          <div className="mt-12">
-            <SectionDivider />
-          </div>
+            <motion.h1
+              className="font-serif"
+              style={{ fontSize: '3rem', color: 'var(--charcoal)', lineHeight: 1.1 }}
+              variants={shouldReduceMotion ? undefined : fadeUp}
+            >
+              Privacy Policy
+            </motion.h1>
+            <motion.p
+              className="font-sans mt-4"
+              style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
+              variants={shouldReduceMotion ? undefined : fadeUp}
+            >
+              Last updated: May 20, 2026
+            </motion.p>
+            <motion.div className="mt-12" variants={shouldReduceMotion ? undefined : fadeUp}>
+              <SectionDivider />
+            </motion.div>
+          </motion.div>
 
           <div ref={contentRef} className="mt-12 flex flex-col" style={{ gap: 48 }}>
             {sections.map((section, i) => (
@@ -75,7 +93,6 @@ export default function Privacy() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Form Definitions</title></head>
+<body>
+<!-- Netlify Forms detection stub for the contact form.
+     This file exists so Netlify's build scanner registers the form.
+     It is not linked from the SPA and is never shown to users.
+     v2 -->
+<form name="contact" method="POST" netlify data-netlify="true" data-netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="name" />
+  <input type="text" name="business-name" />
+  <input type="email" name="email" />
+  <input type="tel" name="phone" />
+  <input type="url" name="website" />
+  <select name="service">
+    <option value="">Select a service</option>
+    <option value="starter-website">Starter Website</option>
+    <option value="business-website">Business Website</option>
+    <option value="website-redesign">Website Redesign</option>
+    <option value="visual-starter-pack">Visual Starter Pack</option>
+    <option value="website-maintenance">Website Maintenance</option>
+    <option value="local-seo">Local SEO / Website Structure</option>
+    <option value="branding">Branding / Visual Direction</option>
+    <option value="short-form-content">Short-Form Content</option>
+    <option value="not-sure">Not Sure Yet</option>
+  </select>
+  <textarea name="message"></textarea>
+  <input type="text" name="bot-field" />
+  <button type="submit">Send</button>
+</form>
+</body>
+</html>

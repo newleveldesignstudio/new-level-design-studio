@@ -1,5 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 import { Link } from 'react-router-dom';
+import FramedImage from '@/components/FramedImage';
+import SEO from '@/components/SEO';
 import './Packages.css';
 
 const tabs = [
@@ -30,6 +36,14 @@ const faqs = [
     q: 'Are prices final?',
     a: 'Listed prices are starting points. Final pricing may vary based on scope, page count, content needs, revisions, and timeline.',
   },
+  {
+    q: 'What does "SEO" mean in each package?',
+    a: 'Website packages include on-page SEO work at different levels. Starter ($499) includes basic SEO structure — page titles, meta descriptions, and header tags. Core ($899) adds local SEO-friendly structure — location-targeted pages and service area copy. Pro ($1,499) includes full SEO-ready structure — schema markup, optimized page hierarchy, and content built to rank locally. None of these are SEO management services — they are one-time structural setups included at launch.',
+  },
+  {
+    q: 'Do you guarantee search engine rankings?',
+    a: 'No. No website package can guarantee rankings. Search engines determine results based on many factors outside any studio\'s control. What we can do is build your site correctly — fast, structured, and locally optimized — so it has the best technical foundation for local search.',
+  },
 ];
 
 export default function Packages() {
@@ -38,6 +52,7 @@ export default function Packages() {
   const trackRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const pageRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
 
   // Word animation
   useEffect(() => {
@@ -100,6 +115,65 @@ export default function Packages() {
     return () => window.removeEventListener('resize', handleResize);
   }, [activeTab, movePill]);
 
+  // FAQ reveal
+  useEffect(() => {
+    const el = faqRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el.querySelectorAll('.faq-item'),
+        { y: 24, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Package card reveal on tab change
+  useEffect(() => {
+    const panel = document.getElementById(activeTab);
+    if (!panel) return;
+
+    const cards = panel.querySelectorAll('.tc');
+    if (cards.length === 0) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cards,
+        { y: 28, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          delay: 0.15,
+        }
+      );
+    }, panel);
+
+    return () => ctx.revert();
+  }, [activeTab]);
+
   const handleTabClick = (index: number) => {
     setActiveTab(tabs[index].id);
   };
@@ -130,6 +204,20 @@ export default function Packages() {
 
   return (
     <div className="packages-page" ref={pageRef}>
+      <SEO
+        title="Website, Visual & Video Packages | New Level Design Studio"
+        description="Website, visual, video, branding, and care packages for local businesses ready to improve their online presence."
+        canonical="https://newlvlstudio.com/packages"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        }}
+      />
       {/* Hero */}
       <section className="hero">
         <div className="hero-inner">
@@ -147,7 +235,7 @@ export default function Packages() {
               <span className="word-animate" data-delay="500">local businesses</span>
             </em>
             <br />
-            <span className="word-animate" data-delay="650">ready to look bigger online.</span>
+            <span className="word-animate" data-delay="650">ready to look established online.</span>
           </h1>
 
           <p className="hero-sub">
@@ -165,6 +253,17 @@ export default function Packages() {
               View Packages
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Support Image */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '40px 0 90px' }}>
+        <div className="container-nlds">
+          <FramedImage
+            src="/images/packages-support.jpg"
+            alt="Packages built for local businesses"
+            aspectRatio="16/9"
+          />
         </div>
       </section>
 
@@ -231,11 +330,11 @@ export default function Packages() {
 
         <p className="sl">Per-Project Packages</p>
 
-        <div className="tg fade-in">
+        <div className="tg">
           <div className="tc">
             <div className="ti">01</div>
             <div className="tn">Starter Website</div>
-            <p className="tbf">Best for new businesses or a simple online presence.</p>
+            <p className="tbf">Best for new businesses, solo service providers, or simple local offers that need a credible first impression fast.</p>
             <div className="pb">
               <div className="pd">
                 <span className="psy">$</span>499
@@ -272,7 +371,7 @@ export default function Packages() {
             <div className="cbd">Most Popular</div>
             <div className="ti">02</div>
             <div className="tn">Core Website</div>
-            <p className="tbf">Best for local businesses that need a stronger online presence.</p>
+            <p className="tbf">Best for established local businesses that need stronger service pages, local SEO structure, and a clearer path from visitor to inquiry.</p>
             <div className="pb">
               <div className="pd">
                 <span className="psy">$</span>899
@@ -308,7 +407,7 @@ export default function Packages() {
           <div className="tc">
             <div className="ti">03</div>
             <div className="tn">Pro Website</div>
-            <p className="tbf">Best for businesses ready for a complete premium web presence.</p>
+            <p className="tbf">Best for businesses wanting a complete web presence — full service pages, local SEO structure, conversion architecture, and launch-ready polish.</p>
             <div className="pb">
               <div className="pd" style={{ fontSize: 'clamp(48px,6vw,72px)' }}>
                 <span className="psy">$</span>1,499
@@ -442,7 +541,7 @@ export default function Packages() {
 
         <p className="sl">Per-Project Packages</p>
 
-        <div className="tg fade-in">
+        <div className="tg">
           <div className="tc">
             <div className="ti">01</div>
             <div className="tn">Starter Visual</div>
@@ -588,7 +687,7 @@ export default function Packages() {
 
         <p className="sl">Main Packages</p>
 
-        <div className="tg fade-in">
+        <div className="tg">
           <div className="tc">
             <div className="ti">01</div>
             <div className="tn">Starter Video</div>
@@ -704,7 +803,7 @@ export default function Packages() {
 
         <p className="sl">Campaign Packages</p>
 
-        <div className="tg fade-in" style={{ gridTemplateColumns: '1fr 1.25fr', maxWidth: 760 }}>
+        <div className="tg" style={{ gridTemplateColumns: '1fr 1.25fr', maxWidth: 760 }}>
           <div className="tc">
             <div className="ti">01</div>
             <div className="tn">Campaign</div>
@@ -775,7 +874,7 @@ export default function Packages() {
 
         <p className="sl">Per-Project Packages</p>
 
-        <div className="tg fade-in">
+        <div className="tg">
           <div className="tc">
             <div className="ti">01</div>
             <div className="tn">Brand Identity</div>
@@ -982,11 +1081,11 @@ export default function Packages() {
       </section>
 
       {/* FAQ */}
-      <section className="faq-band">
+      <section className="faq-band" ref={faqRef}>
         <h2 className="faq-heading">Questions before choosing a package?</h2>
 
         {faqs.map((faq, i) => (
-          <div className={`faq-item fade-in ${openFaq === i ? 'open' : ''}`} key={i}>
+          <div className={`faq-item ${openFaq === i ? 'open' : ''}`} key={i}>
             <button
               className="faq-question"
               onClick={() => handleFaqClick(i)}

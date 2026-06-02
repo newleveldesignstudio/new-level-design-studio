@@ -1,52 +1,47 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { motion, useReducedMotion } from 'framer-motion';
+import { fadeUp } from '@/lib/motion';
+import { EXTERNAL_LINKS } from '@/lib/links';
 
 const footerColumns = [
   {
-    label: 'FLORIDA',
-    links: ['Port Orange, FL 32127', 'Volusia County'],
-    isText: true,
-  },
-  {
-    label: 'CONTACT',
-    links: [
-      { text: 'hello@newlvlstudio.com', href: 'mailto:hello@newlvlstudio.com' },
-      { text: '(386) 846-5754', href: 'tel:+13868465754' },
-      { text: 'newlvlstudio.com', href: '/' },
-    ],
-    isMixed: true,
-  },
-  {
-    label: 'COMPANY',
+    label: 'Studio',
     links: [
       { text: 'Home', href: '/' },
-      { text: 'About Us', href: '/studio' },
       { text: 'Works', href: '/works' },
       { text: 'Services', href: '/services' },
-      { text: 'The Studio', href: '/studio' },
       { text: 'Packages', href: '/packages' },
+      { text: 'Studio', href: '/studio' },
+      { text: 'Journal', href: '/journal' },
+      { text: 'Contact', href: '/contact' },
+    ],
+  },
+  {
+    label: 'Services',
+    links: [
+      { text: 'Website Design', href: '/services' },
+      { text: 'Website Maintenance', href: '/services' },
+      { text: 'Brand Visuals', href: '/services' },
+      { text: 'Content Systems', href: '/services' },
       { text: 'Starter Pack', href: '/starter-pack' },
     ],
-    isNav: true,
   },
   {
-    label: 'CONTACT',
+    label: 'Local',
     links: [
-      { text: 'Contact', href: '/contact' },
-      { text: 'Terms', href: '/terms' },
-      { text: 'Privacy', href: '/privacy' },
+      { text: 'Port Orange Website Design', href: '/port-orange-website-design' },
+      { text: 'Daytona Beach Website Design', href: '/daytona-beach-website-design' },
+      { text: 'Volusia County Web Design', href: '/volusia-county-website-design' },
+      { text: 'Central Florida Local Business Websites', href: '/central-florida-website-design' },
     ],
-    isNav: true,
   },
   {
-    label: 'SERVICES',
-    links: ['Website Design', 'Brand Visuals', 'Short-Form Video', 'Ongoing Support'],
-    isText: true,
-  },
-  {
-    label: 'SERVICE AREA',
-    links: ['Port Orange', 'Daytona Beach', 'Volusia County', 'Central Florida'],
-    isText: true,
+    label: 'Legal',
+    links: [
+      { text: 'Privacy Policy', href: '/privacy' },
+      { text: 'Terms & Conditions', href: '/terms' },
+    ],
   },
 ];
 
@@ -66,16 +61,18 @@ export default function Footer() {
     start: 'top 90%',
   });
 
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <footer style={{ backgroundColor: 'var(--bg-main)', paddingTop: 64 }}>
+    <footer style={{ backgroundColor: 'var(--bg-main)', paddingTop: 80 }}>
       <div className="container-nlds">
         {/* Top row - link grid */}
         <div
           ref={columnsRef}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-0"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12"
         >
           {/* Brand block */}
-          <div className="footer-col col-span-2 md:col-span-3 lg:col-span-1 lg:pr-6 lg:[border-right:1px_solid_var(--silver-grey)]">
+          <div className="footer-col col-span-2 md:col-span-4 lg:col-span-1 lg:pr-8">
             <p
               className="font-sans uppercase"
               style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--charcoal)' }}
@@ -84,54 +81,71 @@ export default function Footer() {
             </p>
             <p
               className="font-sans mt-4"
-              style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'var(--muted-text)' }}
+              style={{ fontSize: '0.875rem', lineHeight: 1.6, color: 'var(--muted-text)', maxWidth: 280 }}
             >
-              We craft premium websites, visuals, and short-form content for local businesses ready to look bigger online.
+              Premium websites, visuals, and content systems for local businesses ready to look established online.
             </p>
+            <div className="mt-5 flex flex-col" style={{ gap: 16 }}>
+              <a
+                href="mailto:michael@newlvlstudio.com"
+                className="font-sans no-underline transition-colors duration-200"
+                style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+              >
+                michael@newlvlstudio.com
+              </a>
+              <a
+                href="tel:+13868465754"
+                className="font-sans no-underline transition-colors duration-200"
+                style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+              >
+                (386) 846-5754
+              </a>
+              <a
+                href={EXTERNAL_LINKS.googleBusinessProfile}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans no-underline transition-colors duration-200"
+                style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+              >
+                Google Business Profile
+              </a>
+            </div>
           </div>
 
-
           {footerColumns.map((col, i) => (
-            <div key={i} className="footer-col lg:px-6">
+            <div key={i} className="footer-col">
               <p
                 className="font-sans uppercase"
                 style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--charcoal)' }}
               >
                 {col.label}
               </p>
-              <div className="mt-3" style={{ lineHeight: 2.0 }}>
-                {col.isText &&
-                  col.links.map((link, j) => (
-                    <p key={j} className="font-sans" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
-                      {link}
-                    </p>
-                  ))}
-                {(col.isMixed || col.isNav) &&
-                  col.links.map((link: any, j) =>
-                    link.href ? (
-                      <Link
-                        key={j}
-                        to={link.href}
-                        className="block font-sans transition-colors duration-200 no-underline"
-                        style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
-                        onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
-                      >
-                        {link.text}
-                      </Link>
-                    ) : (
-                      <p key={j} className="font-sans" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
-                        {link}
-                      </p>
-                    )
-                  )}
+              <div className="mt-3 flex flex-col" style={{ gap: 8 }}>
+                {col.links.map((link, j) => (
+                  <Link
+                    key={j}
+                    to={link.href}
+                    className="font-sans transition-colors duration-200 no-underline"
+                    style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}
+                    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+                  >
+                    {link.text}
+                  </Link>
+                ))}
               </div>
             </div>
           ))}
         </div>
 
         {/* Giant Wordmark */}
-        <div ref={wordmarkRef} className="mt-16 relative">
+        <div ref={wordmarkRef} className="mt-20 relative">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between">
             <h2
               className="font-serif"
@@ -173,43 +187,41 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div
+        <motion.div
           className="flex flex-col sm:flex-row items-center justify-between py-8 mt-8"
           style={{ borderTop: '1px solid var(--silver-grey)' }}
+          variants={shouldReduceMotion ? undefined : fadeUp}
+          initial={shouldReduceMotion ? undefined : 'hidden'}
+          whileInView={shouldReduceMotion ? undefined : 'visible'}
+          viewport={{ once: true, amount: 0.5 }}
         >
-          <p
-            className="font-sans"
-            style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted-text)' }}
-          >
-            &copy; 2026 New Level Design Studio
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p
+              className="font-sans"
+              style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted-text)' }}
+            >
+              New Level Design Studio
+            </p>
+            <span
+              className="hidden sm:inline font-sans"
+              style={{ fontSize: '0.75rem', color: 'var(--silver-grey)' }}
+            >
+              |
+            </span>
+            <p
+              className="font-sans"
+              style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted-text)' }}
+            >
+              Raise the Standard.
+            </p>
+          </div>
           <p
             className="font-sans mt-2 sm:mt-0"
             style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted-text)' }}
           >
-            newlvlstudio.com
+            Port Orange &bull; Daytona Beach &bull; Volusia County
           </p>
-          <div className="flex items-center mt-2 sm:mt-0" style={{ gap: 24 }}>
-            <Link
-              to="/terms"
-              className="font-sans no-underline transition-colors duration-200"
-              style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted-text)' }}
-              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
-            >
-              Terms
-            </Link>
-            <Link
-              to="/privacy"
-              className="font-sans no-underline transition-colors duration-200"
-              style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted-text)' }}
-              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
-            >
-              Privacy
-            </Link>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

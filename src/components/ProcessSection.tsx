@@ -57,7 +57,7 @@ export default function ProcessSection({ steps }: ProcessSectionProps) {
           className="font-serif text-center mt-4"
           style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
         >
-          A Smarter Way to Look Bigger Online
+          A Smarter Way to Look Established Online
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">

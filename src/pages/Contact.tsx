@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import SectionDivider from '@/components/SectionDivider';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import SEO from '@/components/SEO';
+import { motion, useReducedMotion } from 'framer-motion';
+import { staggerContainer, fadeUp } from '@/lib/motion';
+import { EXTERNAL_LINKS } from '@/lib/links';
+
+type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,16 +14,47 @@ export default function Contact() {
     businessName: '',
     email: '',
     phone: '',
+    website: '',
     service: '',
     message: '',
   });
+  const [status, setStatus] = useState<FormStatus>('idle');
+  const shouldReduceMotion = useReducedMotion();
 
   const formRef = useScrollReveal<HTMLDivElement>({ y: 30, duration: 0.6, stagger: 0.08, start: 'top 80%', childSelector: '.form-field' });
   const infoRef = useScrollReveal<HTMLDivElement>({ y: 30, duration: 0.7, stagger: 0, start: 'top 80%' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Thank you for reaching out! We will get back to you within 1-2 business days.');
+    setStatus('submitting');
+
+    try {
+      const response = await fetch('/netlify-forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          name: formData.name,
+          'business-name': formData.businessName,
+          email: formData.email,
+          phone: formData.phone,
+          website: formData.website,
+          service: formData.service,
+          message: formData.message,
+        }).toString(),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', businessName: '', email: '', phone: '', website: '', service: '', message: '' });
+      } else {
+        console.error(`Netlify Forms submission failed: HTTP ${response.status}`, await response.text().catch(() => ''));
+        setStatus('error');
+      }
+    } catch (err) {
+      console.error('Netlify Forms submission error:', err);
+      setStatus('error');
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -46,120 +83,245 @@ export default function Contact() {
 
   return (
     <div>
+      <SEO
+        title="Start a Project | New Level Design Studio, Port Orange FL"
+        description="Contact New Level Design Studio to start a website, visual, content, branding, or website care project."
+        canonical="https://newlvlstudio.com/contact"
+      />
       {/* Hero */}
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
-        <div className="container-nlds">
-          <p className="eyebrow">CONTACT</p>
-          <h1
+        <motion.div
+          className="container-nlds"
+          variants={shouldReduceMotion ? undefined : staggerContainer}
+          initial={shouldReduceMotion ? undefined : 'hidden'}
+          whileInView={shouldReduceMotion ? undefined : 'visible'}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.p className="eyebrow" variants={shouldReduceMotion ? undefined : fadeUp}>CONTACT</motion.p>
+          <motion.h1
             className="font-serif mt-4"
             style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--charcoal)' }}
+            variants={shouldReduceMotion ? undefined : fadeUp}
           >
             Start a Project.
-          </h1>
-          <p
+          </motion.h1>
+          <motion.p
             className="font-sans mt-6"
             style={{ fontSize: '1rem', color: 'var(--muted-text)', maxWidth: 560, lineHeight: 1.6 }}
+            variants={shouldReduceMotion ? undefined : fadeUp}
           >
             Tell us about your business and what you're looking to build. We'll get back to you within 1-2 business days.
-          </p>
-          <div className="mt-20">
+          </motion.p>
+          <motion.div className="mt-20" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Contact Form + Info */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
         <div className="container-nlds">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            {/* Form */}
+            {/* Form / Success / Error */}
             <div ref={formRef} className="lg:col-span-2">
-              <form onSubmit={handleSubmit} className="flex flex-col" style={{ gap: 24 }}>
-                <div className="form-field grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label style={labelStyle}>Name</label>
-                    <input
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      style={inputStyle}
-                      placeholder="Your name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label style={labelStyle}>Business Name</label>
-                    <input
-                      type="text"
-                      value={formData.businessName}
-                      onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                      style={inputStyle}
-                      placeholder="Your business"
-                    />
-                  </div>
-                </div>
 
-                <div className="form-field grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label style={labelStyle}>Email</label>
-                    <input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      style={inputStyle}
-                      placeholder="you@business.com"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label style={labelStyle}>Phone</label>
-                    <input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      style={inputStyle}
-                      placeholder="(386) 555-0123"
-                    />
-                  </div>
-                </div>
-
-                <div className="form-field">
-                  <label style={labelStyle}>What do you need help with?</label>
-                  <select
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    style={{ ...inputStyle, appearance: 'auto', cursor: 'pointer' }}
+              {status === 'success' ? (
+                <div style={{ padding: '48px 0' }}>
+                  <p
+                    className="font-sans uppercase"
+                    style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)' }}
                   >
-                    <option value="">Select a service</option>
-                    <option value="website">Website Design</option>
-                    <option value="brand">Brand Visuals</option>
-                    <option value="video">Short-Form Video</option>
-                    <option value="support">Ongoing Support</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div className="form-field">
-                  <label style={labelStyle}>Tell us about your project</label>
-                  <textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    style={{ ...inputStyle, minHeight: 150, resize: 'vertical' }}
-                    placeholder="Describe what you're looking for..."
-                    rows={6}
-                    required
-                  />
-                </div>
-
-                <div className="form-field">
-                  <button type="submit" className="btn-primary w-full sm:w-auto">
-                    Send Message
+                    Message Sent
+                  </p>
+                  <h2
+                    className="font-serif mt-4"
+                    style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+                  >
+                    Thank you for reaching out.
+                  </h2>
+                  <p
+                    className="font-sans mt-4"
+                    style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 480 }}
+                  >
+                    We'll review your message and get back to you within 1–2 business days at the email address you provided.
+                  </p>
+                  <button
+                    onClick={() => setStatus('idle')}
+                    className="btn-secondary mt-8 inline-block"
+                    style={{ background: 'none', cursor: 'pointer' }}
+                  >
+                    Send Another Message
                   </button>
                 </div>
-              </form>
+              ) : (
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="flex flex-col"
+                  style={{ gap: 24 }}
+                >
+                  {/* Required hidden fields for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+
+                  {/* Honeypot — visually hidden, bots fill it, humans don't */}
+                  <div style={{ display: 'none' }} aria-hidden="true">
+                    <label>
+                      Don't fill this out if you're human:
+                      <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                    </label>
+                  </div>
+
+                  <div className="form-field grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label style={labelStyle} htmlFor="contact-name">Name</label>
+                      <input
+                        id="contact-name"
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        style={inputStyle}
+                        placeholder="Your name"
+                        autoComplete="name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label style={labelStyle} htmlFor="contact-business">Business Name</label>
+                      <input
+                        id="contact-business"
+                        type="text"
+                        name="business-name"
+                        value={formData.businessName}
+                        onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
+                        style={inputStyle}
+                        placeholder="Your business"
+                        autoComplete="organization"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-field grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label style={labelStyle} htmlFor="contact-email">Email</label>
+                      <input
+                        id="contact-email"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        style={inputStyle}
+                        placeholder="you@business.com"
+                        autoComplete="email"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label style={labelStyle} htmlFor="contact-phone">Phone</label>
+                      <input
+                        id="contact-phone"
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        style={inputStyle}
+                        placeholder="(386) 555-0123"
+                        autoComplete="tel"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-field">
+                    <label style={labelStyle} htmlFor="contact-website">Current Website <span style={{ textTransform: 'none', letterSpacing: 0, fontSize: '0.7rem' }}>(optional)</span></label>
+                    <input
+                      id="contact-website"
+                      type="url"
+                      name="website"
+                      value={formData.website}
+                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                      style={inputStyle}
+                      placeholder="https://yourbusiness.com"
+                      autoComplete="url"
+                    />
+                  </div>
+
+                  <div className="form-field">
+                    <label style={labelStyle} htmlFor="contact-service">What do you need help with?</label>
+                    <select
+                      id="contact-service"
+                      name="service"
+                      value={formData.service}
+                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      style={{ ...inputStyle, appearance: 'auto', cursor: 'pointer' }}
+                    >
+                      <option value="">Select a service</option>
+                      <option value="website-review">Website Review</option>
+                      <option value="starter-website">Starter Website</option>
+                      <option value="business-website">Business Website</option>
+                      <option value="website-redesign">Website Redesign</option>
+                      <option value="visual-starter-pack">Visual Starter Pack</option>
+                      <option value="website-maintenance">Website Maintenance</option>
+                      <option value="local-seo">Local SEO / Website Structure</option>
+                      <option value="branding">Branding / Visual Direction</option>
+                      <option value="short-form-content">Short-Form Content</option>
+                      <option value="not-sure">Not Sure Yet</option>
+                    </select>
+                    {formData.service === 'website-review' && (
+                      <p
+                        className="font-sans mt-2"
+                        style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.55 }}
+                      >
+                        In the message below, include your current website URL, what feels weak or unclear, and your main goal — calls, quote requests, bookings, credibility, or local SEO.
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="form-field">
+                    <label style={labelStyle} htmlFor="contact-message">Tell us about your project</label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      style={{ ...inputStyle, minHeight: 150, resize: 'vertical' }}
+                      placeholder="Describe what you're looking for..."
+                      rows={6}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-field flex flex-col" style={{ gap: 12 }}>
+                    <button
+                      type="submit"
+                      className="btn-primary w-full sm:w-auto"
+                      disabled={status === 'submitting'}
+                      style={status === 'submitting' ? { opacity: 0.6, cursor: 'not-allowed' } : undefined}
+                    >
+                      {status === 'submitting' ? 'Sending…' : 'Send Message'}
+                    </button>
+
+                    {status === 'error' && (
+                      <p
+                        className="font-sans"
+                        style={{ fontSize: '0.875rem', color: '#b00020', lineHeight: 1.5 }}
+                        role="alert"
+                      >
+                        Something went wrong. Please try again or email us directly at{' '}
+                        <a href="mailto:michael@newlvlstudio.com" style={{ color: 'inherit' }}>
+                          michael@newlvlstudio.com
+                        </a>
+                        .
+                      </p>
+                    )}
+                  </div>
+                </form>
+              )}
             </div>
 
-            {/* Contact Info */}
+            {/* Contact Info — unchanged */}
             <div ref={infoRef} className="flex flex-col" style={{ gap: 32 }}>
               <div>
                 <p className="eyebrow">PHONE</p>
@@ -175,11 +337,11 @@ export default function Contact() {
               <div>
                 <p className="eyebrow">EMAIL</p>
                 <a
-                  href="mailto:hello@newlvlstudio.com"
+                  href="mailto:michael@newlvlstudio.com"
                   className="font-sans mt-3 block no-underline transition-colors duration-200"
                   style={{ fontSize: '1rem', color: 'var(--charcoal)' }}
                 >
-                  hello@newlvlstudio.com
+                  michael@newlvlstudio.com
                 </a>
               </div>
 
@@ -191,12 +353,23 @@ export default function Contact() {
                 <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
                   Daytona Beach, Volusia County &amp; Central Florida
                 </p>
+                <a
+                  href={EXTERNAL_LINKS.googleBusinessProfile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans mt-3 block no-underline transition-colors duration-200"
+                  style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+                >
+                  View New Level Design Studio on Google
+                </a>
               </div>
 
               <div className="mt-4" style={{ padding: 24, backgroundColor: 'var(--bg-soft)', border: '1px solid var(--border-color)' }}>
                 <p className="eyebrow">SERVICE AREA</p>
                 <div className="mt-3 flex flex-wrap" style={{ gap: 8 }}>
-                  {['Port Orange', 'Daytona Beach', 'Volusia County', 'Central Florida'].map((area) => (
+                  {['Port Orange', 'Daytona Beach', 'Ormond Beach', 'New Smyrna Beach', 'Volusia County', 'Central Florida'].map((area) => (
                     <span
                       key={area}
                       className="font-sans"
@@ -212,6 +385,19 @@ export default function Contact() {
                     </span>
                   ))}
                 </div>
+              </div>
+
+              <div>
+                <p className="eyebrow">STUDIO</p>
+                <p className="font-sans mt-3" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}>
+                  New Level Design Studio
+                </p>
+                <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                  Websites, brand visuals, local SEO structure, and website care for local businesses across Volusia County.
+                </p>
+                <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
+                  I'll get back to you as soon as possible.
+                </p>
               </div>
             </div>
           </div>

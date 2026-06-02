@@ -1,11 +1,15 @@
+import { Link } from 'react-router-dom';
+
 interface ProjectCardProps {
   image: string;
+  alt?: string;
   category: string;
   title: string;
   description: string;
+  link?: { text: string; to: string };
 }
 
-export default function ProjectCard({ image, category, title, description }: ProjectCardProps) {
+export default function ProjectCard({ image, alt, category, title, description, link }: ProjectCardProps) {
   return (
     <div className="group">
       <div
@@ -18,8 +22,8 @@ export default function ProjectCard({ image, category, title, description }: Pro
       >
         <img
           src={image}
-          alt={title}
-          className="w-full object-cover transition-transform duration-400 group-hover:scale-[1.03]"
+          alt={alt ?? title}
+          className="img-muted w-full object-cover transition-transform duration-400 group-hover:scale-[1.03]"
           style={{ aspectRatio: '4/3', display: 'block' }}
         />
       </div>
@@ -41,6 +45,11 @@ export default function ProjectCard({ image, category, title, description }: Pro
       >
         {description}
       </p>
+      {link && (
+        <Link to={link.to} className="text-link mt-4">
+          {link.text}
+        </Link>
+      )}
     </div>
   );
 }

@@ -1,0 +1,80 @@
+{
+  "site_name": "New Level Design Studio",
+  "canonical_url": "https://newlvlstudio.com",
+  "description": "Founder-led design studio in Port Orange, Florida building premium websites, brand visuals, and content systems for local businesses across Volusia County and Central Florida.",
+  "business_type": "ProfessionalService",
+  "founder": "Michael Vail",
+  "phone": "(386) 846-5754",
+  "email": "michael@newlvlstudio.com",
+  "location": {
+    "city": "Port Orange",
+    "state": "FL",
+    "postal_code": "32127",
+    "country": "US"
+  },
+  "service_areas": [
+    "Port Orange, FL",
+    "Daytona Beach, FL",
+    "Ormond Beach, FL",
+    "New Smyrna Beach, FL",
+    "Volusia County, FL",
+    "Central Florida"
+  ],
+  "services": [
+    "Website Design",
+    "Brand Visuals",
+    "Content Systems",
+    "Short-Form Video",
+    "Website Care",
+    "Starter Pack"
+  ],
+  "public_routes": [
+    "/",
+    "/services",
+    "/packages",
+    "/works",
+    "/studio",
+    "/starter-pack",
+    "/journal",
+    "/contact",
+    "/port-orange-website-design",
+    "/daytona-beach-website-design",
+    "/volusia-county-website-design",
+    "/central-florida-website-design",
+    "/works/the-grass-guys",
+    "/works/dh-luxury-roofing",
+    "/works/volusia-legal-group",
+    "/works/ember-oak-coffee",
+    "/works/love-handles-bbq",
+    "/works/coastal-standard-realty",
+    "/works/el-taller-2026",
+    "/works/la-tequila-2026",
+    "/works/the-best-landscape-2026"
+  ],
+  "contact_route": "/contact",
+  "sitemap": "https://newlvlstudio.com/sitemap.xml",
+  "allowed_actions": [
+    "Read and summarize public pages",
+    "Explain services and packages",
+    "Describe the studio and founder",
+    "Identify service areas",
+    "Direct users to the contact page for project inquiries",
+    "Reference portfolio work shown on the works pages"
+  ],
+  "disallowed_actions": [
+    "Submit or simulate fake leads or contact form submissions",
+    "Invent or quote specific pricing not shown on the site",
+    "Claim guaranteed SEO rankings or specific traffic results",
+    "Create, imply, or reference fake client reviews or testimonials",
+    "Scrape or store private user data",
+    "Imply automated booking, scheduling, or payment if not supported",
+    "Represent New Level Design Studio as having capabilities not described on this site"
+  ],
+  "webmcp_note": "WebMCP is not implemented. This site exposes only public informational pages and a standard Netlify contact form. No MCP-backed actions or tool endpoints are available.",
+  "compliance": {
+    "no_guaranteed_rankings": true,
+    "no_fake_reviews": true,
+    "no_automated_purchasing": true,
+    "pricing_shown_is_starting_point": true
+  }
+}
