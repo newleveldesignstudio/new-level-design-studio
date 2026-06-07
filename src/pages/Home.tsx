@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,30 +12,31 @@ import DiagonalLine from '@/components/DiagonalLine';
 import { MonitorIcon, FramesIcon, PlayIcon } from '@/components/icons';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
+import ScrollTriggerSequence from '@/components/ScrollTriggerSequence';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
     image: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png',
-    alt: 'DH Luxury Roofing premium roofing website concept by New Level Design Studio',
-    category: 'Roofing Contractor — Concept Build',
+    alt: 'DH Luxury Roofing website concept',
+    category: 'Roofing Contractor — Industry Demo',
     title: 'DH Luxury Roofing',
     description: 'Most roofing sites look dated and aggressive. This one shows the alternative — video-led hero, inspection CTA, and mobile-first lead capture.',
     link: { text: 'View Case Study', to: '/works/dh-luxury-roofing' },
   },
   {
     image: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
-    alt: 'Love Handles BBQ catering and food truck website concept by New Level Design Studio',
-    category: 'BBQ Catering & Food Truck — Concept Build',
+    alt: 'Love Handles BBQ website concept',
+    category: 'BBQ Catering & Food Truck — Industry Demo',
     title: 'Love Handles BBQ',
     description: 'Booking was buried and mobile flow was weak. Rebuilt around catering inquiries, a food truck events page, and direct contact paths.',
     link: { text: 'View Case Study', to: '/works/love-handles-bbq' },
   },
   {
     image: '/nlds/images/ember-oak-coffee-website-concept-nlds.png',
-    alt: 'Ember & Oak Coffee Co. premium coffee shop website concept by New Level Design Studio',
-    category: 'Coffee Shop & Roaster — Concept Build',
+    alt: 'Ember & Oak Coffee Co. website concept',
+    category: 'Coffee Shop & Roaster — Industry Demo',
     title: 'Ember & Oak Coffee Co.',
     description: 'Most coffee shop sites stop at a menu. This one covers the full experience — origin story, product sections, café visit, and wholesale positioning.',
     link: { text: 'View Case Study', to: '/works/ember-oak-coffee' },
@@ -43,102 +44,9 @@ const projects = [
 ];
 
 export default function Home() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const heroTitleRef = useRef<HTMLHeadingElement>(null);
-  const heroSubtitleRef = useRef<HTMLParagraphElement>(null);
-  const heroCtaRef = useRef<HTMLDivElement>(null);
-  const heroEyebrowRef = useRef<HTMLParagraphElement>(null);
-  const heroLocalRef = useRef<HTMLParagraphElement>(null);
-  const heroImageRef = useRef<HTMLDivElement>(null);
-  const scrollCueRef = useRef<HTMLDivElement>(null);
   const impressionRef = useRef<HTMLElement>(null);
   const impressionTextRef = useRef<HTMLDivElement>(null);
   const impressionPanelsRef = useRef<HTMLDivElement>(null);
-  const [reducedMotion, setReducedMotion] = useState(
-    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  );
-
-  // Subscribe to reduced motion preference changes
-  useEffect(() => {
-    const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
-    mql.addEventListener('change', handler);
-    return () => mql.removeEventListener('change', handler);
-  }, []);
-
-  // Hero entrance animation
-  useEffect(() => {
-    const allRefs = [heroEyebrowRef, heroTitleRef, heroSubtitleRef, heroCtaRef, heroLocalRef, scrollCueRef, heroImageRef];
-
-    if (reducedMotion) {
-      allRefs.forEach(r => { if (r.current) r.current.style.opacity = '1'; });
-      return;
-    }
-
-    const tl = gsap.timeline({ delay: 0.15 });
-    const isMobile = window.innerWidth < 768;
-
-    if (isMobile) {
-      // Mobile: image is in document flow below text — fade in
-      gsap.set(heroImageRef.current, { opacity: 0 });
-      tl.to(heroImageRef.current,
-        { opacity: 1, duration: 0.8, ease: 'power3.out' },
-        0.6
-      );
-    } else {
-      // Desktop/tablet: image slides up from below viewport
-      tl.fromTo(heroImageRef.current,
-        { y: window.innerHeight },
-        { y: 0, duration: 1.4, ease: 'power3.out' },
-        0
-      );
-    }
-
-    // Eyebrow fades in as image settles
-    tl.fromTo(heroEyebrowRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 0.6, ease: 'power3.out' },
-      0.8
-    );
-
-    // Headline
-    tl.fromTo(heroTitleRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' },
-      1.1
-    );
-
-    // Sub
-    tl.fromTo(heroSubtitleRef.current,
-      { opacity: 0, y: 14 },
-      { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
-      '-=0.5'
-    );
-
-    // CTAs
-    tl.fromTo(heroCtaRef.current,
-      { opacity: 0, y: 10 },
-      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' },
-      '-=0.4'
-    );
-
-    // Location strip
-    tl.fromTo(heroLocalRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 0.5, ease: 'power3.out' },
-      '-=0.2'
-    );
-
-    // Scroll cue
-    tl.fromTo(scrollCueRef.current,
-      { opacity: 0 },
-      { opacity: 0.75, duration: 0.5, ease: 'power3.out' },
-      '+=0.1'
-    );
-
-    return () => { tl.kill(); };
-  }, [reducedMotion]);
-
   // Scroll reveals
   const servicesRef = useScrollReveal<HTMLDivElement>({ y: 40, duration: 0.7, stagger: 0.15, start: 'top 80%', childSelector: '.service-card' });
   const worksRef = useScrollReveal<HTMLDivElement>({ y: 40, duration: 0.7, stagger: 0.15, start: 'top 80%', childSelector: '.work-card' });
@@ -280,108 +188,84 @@ export default function Home() {
   return (
     <div>
       <SEO
-        title="New Level Design Studio — Premium Websites for Local Businesses | Port Orange, FL"
+        title="Premium Websites for Local Businesses | New Level Design Studio"
         description="Premium websites, visuals, and content systems for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/"
         jsonLd={[localBusinessSchema(), websiteSchema()]}
       />
-      {/* Hero — full-stage sticky scroll-over */}
-      <div className="hero-pin-wrapper">
-        <section
-          ref={heroRef}
-          className="hero-section"
-          aria-label="Homepage hero"
-        >
-          {/* Full-bleed background image — slides up from below on load */}
-          <div ref={heroImageRef} className="hero__media" aria-hidden="true">
-            <picture>
-              {/* Desktop ≥1200px: wide 16:9 */}
-              <source
-                media="(min-width: 1200px)"
-                srcSet="/nlds/images/new-level-design-studio-premium-website-hero-background.webp"
-                type="image/webp"
-              />
-              <source
-                media="(min-width: 1200px)"
-                srcSet="/nlds/images/new-level-design-studio-premium-website-hero-background.jpg"
-              />
-              {/* Tablet 768–1199px: 3:4 */}
-              <source
-                media="(min-width: 768px)"
-                srcSet="/nlds/images/new-level-design-studio-tablet-hero-background.webp"
-                type="image/webp"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcSet="/nlds/images/new-level-design-studio-tablet-hero-background.jpg"
-              />
-              {/* Mobile <768px: 9:16 */}
-              <img
-                src="/nlds/images/new-level-design-studio-premium-website-hero-intro.jpg"
-                alt=""
-                loading="eager"
-                fetchPriority="high"
-                width="1080"
-                height="1920"
-                className="img-muted"
-              />
-            </picture>
-          </div>
-
-          {/* Gradient scrim */}
-          <div className="hero__scrim" aria-hidden="true" />
-
-          {/* Text overlay — positioned over empty left wall area */}
-          <div className="hero__content">
-            <p
-              ref={heroEyebrowRef}
-              className="eyebrow"
-              style={{ opacity: 0 }}
-            >
-              Port Orange, Florida
-            </p>
-
-            <h1
-              ref={heroTitleRef}
-              className="font-serif hero-headline"
-              style={{ opacity: 0 }}
-            >
-              Websites and Brand Visuals Built for Credibility, Visibility, and Conversion.
-            </h1>
-
-            <p
-              ref={heroSubtitleRef}
-              className="font-sans hero-subcopy"
-              style={{ opacity: 0 }}
-            >
-              Premium websites, visuals, and content systems for local businesses ready to look credible, get found, and turn attention into real customer inquiries.
-            </p>
-
-            <div
-              ref={heroCtaRef}
-              className="flex flex-col sm:flex-row items-start hero-cta-row"
-              style={{ opacity: 0 }}
-            >
-              <Link to="/contact" className="btn-primary">Start a Project</Link>
-              <Link to="/works" className="btn-secondary">View the Work</Link>
-            </div>
-
-            <p
-              ref={heroLocalRef}
-              className="font-sans hero-local-line"
-              style={{ opacity: 0 }}
-            >
-              Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; Volusia County
-            </p>
-
-            <div ref={scrollCueRef} className="hero-scroll-cue" style={{ opacity: 0, marginTop: 'auto' }}>
-              <span className="font-sans">Scroll to see how</span>
-              <span className="hero-scroll-arrow" aria-hidden="true" />
+      {/* ScrollTrigger visual hero — with desktop CTA overlay */}
+      <ScrollTriggerSequence
+        overlay={
+          <div className="st-cta-panel">
+            <p className="st-cta-kicker">Port Orange, Florida</p>
+            <h2 className="st-cta-headline">Websites built to earn trust before the first call.</h2>
+            <div className="st-cta-row">
+              <Link to="/contact" className="btn-primary st-cta-btn">
+                Get a Free Website Review
+              </Link>
+              <Link to="/works" className="btn-secondary st-cta-btn">
+                View the Work
+              </Link>
             </div>
           </div>
-        </section>
+        }
+      />
 
-      {/* A Better First Impression — slides over sticky hero on scroll */}
+      {/* Hero copy + CTA — full section below ST visual on all breakpoints */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(96px, 10vw, 120px) 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow" style={{ fontSize: '0.8125rem' }}>Port Orange, Florida</p>
+          <h1
+            className="font-serif"
+            style={{
+              fontSize: 'clamp(2.75rem, 6.5vw, 5rem)',
+              color: 'var(--charcoal)',
+              lineHeight: 1.05,
+              marginTop: 20,
+              maxWidth: 900,
+            }}
+          >
+            Local Business Websites Built to Earn Trust Before the First Call.
+          </h1>
+          <p
+            className="font-sans"
+            style={{
+              fontSize: 'clamp(1.0625rem, 1.4vw, 1.375rem)',
+              lineHeight: 1.65,
+              color: 'var(--body-text)',
+              maxWidth: 760,
+              marginTop: 28,
+            }}
+          >
+            New Level Design Studio builds premium websites, brand visuals, and content systems for local businesses that need to look credible, get found, and turn visitors into real inquiries.
+          </p>
+          <div
+            className="hero-cta-buttons flex flex-col sm:flex-row items-start sm:items-center"
+            style={{ gap: 16, marginTop: 40 }}
+          >
+            <Link to="/contact" className="btn-primary w-full sm:w-auto">
+              Get a Free Website Review
+            </Link>
+            <Link to="/works" className="btn-secondary w-full sm:w-auto">
+              View the Work
+            </Link>
+          </div>
+          <p
+            className="font-sans"
+            style={{
+              fontSize: '0.8125rem',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: 'var(--muted-text)',
+              marginTop: 36,
+            }}
+          >
+            Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; Volusia County
+          </p>
+        </div>
+      </section>
+
+      {/* A Better First Impression */}
       <section
         ref={impressionRef}
         className="hero-next-section"
@@ -560,14 +444,54 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </div>{/* end hero-pin-wrapper */}
+      {/* Why Local Businesses Work With NLDS */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">WHY LOCAL BUSINESSES WORK WITH NLDS</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', maxWidth: 600, lineHeight: 1.15 }}
+          >
+            A clearer website, a sharper presence, and one direct path to more inquiries.
+          </h2>
+          <div className="mt-12">
+            <SectionDivider />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Founder-Led Studio
+              </h3>
+              <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                Work directly with Michael Vail — no bloated agency handoff, no generic template process.
+              </p>
+            </div>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Built for Local Search
+              </h3>
+              <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                Structured around services, locations, calls, quote requests, and the way customers actually browse.
+              </p>
+            </div>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Website-First System
+              </h3>
+              <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                Strategy, copy, layout, visuals, launch support, and ongoing care handled as one connected presence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Online Presence Image */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container-nlds">
           <img
             src="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.png"
-            alt="New Level Design Studio online presence system showing a website, mobile layout, brand visuals, and short-form video content for a local business"
+            alt="Website and brand visuals mockup"
             loading="lazy"
             className="img-muted"
             style={{
@@ -588,7 +512,7 @@ export default function Home() {
             className="font-serif mt-4"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', maxWidth: 640, lineHeight: 1.15 }}
           >
-            A Website Should Do More Than Exist
+            A website that works turns visitors into inquiries.
           </h2>
           <p
             className="font-sans mt-5"
@@ -662,7 +586,7 @@ export default function Home() {
             ))}
           </div>
           <Link to="/contact" className="btn-primary mt-10 inline-block">
-            Start a Project
+            Get a Free Website Review
           </Link>
         </div>
       </section>
@@ -688,7 +612,7 @@ export default function Home() {
             className="font-serif mt-4"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', maxWidth: 600, lineHeight: 1.15 }}
           >
-            Clean design, sharp content, and a better first impression.
+            Clean design, sharp content, and a direct path to more inquiries.
           </h2>
           <div className="mt-12">
             <SectionDivider />
@@ -732,7 +656,7 @@ export default function Home() {
                 className="font-serif mt-4"
                 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
               >
-                A Better First Impression Builds Trust Before the First Call.
+                Credible design earns trust before the first call.
               </h2>
               <p
                 className="font-sans mt-6"
@@ -741,11 +665,11 @@ export default function Home() {
                 Most people decide how they feel about a business within seconds of landing on its website or seeing its content. We help local businesses earn that trust faster with clean design, clear messaging, and a visual system that feels sharp from the start.
               </p>
               <Link to="/contact" className="btn-primary mt-8 inline-block self-start">
-                Start a Project
+                Discuss Your Website
               </Link>
             </div>
             <div className="relative">
-              <FramedImage src="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.png" alt="Premium local business storefront representing a stronger first impression and trust for New Level Design Studio clients" aspectRatio="4/3" />
+              <FramedImage src="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.png" alt="Modern local business storefront" aspectRatio="4/3" />
               <DiagonalLine direction="tl-br" className="absolute inset-0" />
             </div>
           </div>
@@ -786,7 +710,7 @@ export default function Home() {
               Work directly with Michael Vail, founder of New Level Design Studio in Port Orange, Florida. No bloated agency handoff. No generic template process. Just a clear website, brand visuals, and content system built to help your business look credible before customers call.
             </p>
             <Link to="/contact" className="btn-primary mt-8 inline-block">
-              Start a Project
+              Discuss Your Website
             </Link>
           </div>
         </div>
@@ -863,7 +787,7 @@ export default function Home() {
               className="font-serif"
               style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--white)', lineHeight: 1.15 }}
             >
-              Built for Local Businesses Ready to Look Established.
+              Built for Local Businesses Competing for Stronger Online Presence.
             </h2>
             <p
               className="font-sans mt-6"
@@ -876,7 +800,7 @@ export default function Home() {
               className="btn-secondary mt-10 inline-block self-start"
               style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
             >
-              Start a Project
+              Discuss Your Website
             </Link>
           </div>
 
@@ -885,7 +809,7 @@ export default function Home() {
             <img
               ref={splitImageRef}
               src="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.png"
-              alt="Row of polished local business storefronts representing established online presence for New Level Design Studio clients"
+              alt="Row of local business storefronts"
               className="img-muted absolute inset-0 w-full h-full object-cover"
               style={{ transform: 'scale(1.06)' }}
               loading="lazy"
@@ -958,7 +882,7 @@ export default function Home() {
               className="font-sans mt-4"
               style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 520 }}
             >
-              Concept builds and live demos for local businesses across Port Orange, Daytona Beach, and Volusia County — built to show what a stronger online presence looks like in practice.
+              Website concepts, local business demos, and selected builds showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, real estate, wellness, and local brands.
             </p>
           </div>
           <div ref={worksRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -1073,16 +997,16 @@ export default function Home() {
                 className="font-serif mt-4"
                 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
               >
-                Launch Is Not the Finish Line
+                Websites Need Attention After Launch.
               </h2>
               <p
                 className="font-sans mt-5"
                 style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 480 }}
               >
-                After your website goes live, it still needs small updates, checks, refinements, and support to stay sharp. Our Website Care plan helps local businesses keep their site maintained without needing a full redesign every time something changes.
+                After your website goes live, it still needs small updates, checks, refinements, and support to stay sharp. Our Ongoing Website Support plan helps local businesses keep their site maintained without needing a full redesign every time something changes.
               </p>
               <Link to="/contact" className="btn-primary mt-8 inline-block">
-                Ask About Website Care
+                Ask About Ongoing Website Support
               </Link>
             </div>
 
@@ -1098,7 +1022,7 @@ export default function Home() {
                   className="font-serif"
                   style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }}
                 >
-                  Website Care
+                  Ongoing Website Support
                 </h3>
                 <span
                   className="font-sans"
@@ -1170,7 +1094,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-start lg:items-end">
                 <Link to="/contact" className="btn-primary">
-                  Get a Website Review
+                  Get a Free Website Review
                 </Link>
                 <p
                   className="font-sans mt-3"
@@ -1185,7 +1109,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <FinalCTA />
+      <FinalCTA buttonText="Get a Free Website Review" />
 
     </div>
   );

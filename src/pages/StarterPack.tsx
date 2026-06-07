@@ -438,7 +438,7 @@ export default function StarterPack() {
               Ready to make your business look more professional?
             </h2>
             <p className="starter-section-body">
-              Start with the $129 Business Starter Visual Pack and get clean, branded
+              Start with the $129 Business Starter Pack and get clean, branded
               content your business can actually use.
             </p>
             <Link to="/contact" className="btn-primary mt-8 inline-block">

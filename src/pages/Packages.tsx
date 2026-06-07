@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: 'What does "SEO" mean in each package?',
-    a: 'Website packages include on-page SEO work at different levels. Starter ($499) includes basic SEO structure — page titles, meta descriptions, and header tags. Core ($899) adds local SEO-friendly structure — location-targeted pages and service area copy. Pro ($1,499) includes full SEO-ready structure — schema markup, optimized page hierarchy, and content built to rank locally. None of these are SEO management services — they are one-time structural setups included at launch.',
+    a: 'Website packages include on-page SEO work at different levels. Starter ($499) includes basic SEO structure — page titles, meta descriptions, and header tags. Growth ($899) adds local SEO-friendly structure — location-targeted pages and service area copy. Premium ($1,499) includes full SEO-ready structure — schema markup, optimized page hierarchy, and content built to rank locally. None of these are SEO management services — they are one-time structural setups included at launch.',
   },
   {
     q: 'Do you guarantee search engine rankings?',
@@ -247,7 +247,7 @@ export default function Packages() {
 
           <div className="hero-ctas">
             <Link to="/contact" className="hero-cta-primary">
-              Start a Project
+              Get a Free Website Review
             </Link>
             <button onClick={scrollToTabs} className="hero-cta-secondary">
               View Packages
@@ -300,13 +300,13 @@ export default function Packages() {
         <div className="gg">
           {[
             { gn: 'Need a professional website fast', ga: '→ Starter Website' },
-            { gn: 'Need a stronger site that builds trust', ga: '→ Core Website' },
-            { gn: 'Need a premium conversion-focused presence', ga: '→ Pro Website' },
-            { gn: 'Need better branded visuals', ga: '→ Starter Visual or Core Visual' },
+            { gn: 'Need a stronger site that builds trust', ga: '→ Growth Website' },
+            { gn: 'Need a premium conversion-focused presence', ga: '→ Premium Presence' },
+            { gn: 'Need better branded visuals', ga: '→ Business Starter Pack or Core Visual' },
             { gn: 'Need launch or promotion assets', ga: '→ Pro Campaign' },
             { gn: 'Need short-form content', ga: '→ Starter Video or Professional Video' },
             { gn: 'Need a full brand foundation', ga: '→ Brand Identity or Brand Launch' },
-            { gn: 'Need ongoing support', ga: '→ Website Care or Monthly Content' },
+            { gn: 'Need ongoing support', ga: '→ Ongoing Website Support or Monthly Content' },
           ].map((item, i) => (
             <div className="gc" key={i}>
               <div>
@@ -370,7 +370,7 @@ export default function Packages() {
           <div className="tc featured">
             <div className="cbd">Most Popular</div>
             <div className="ti">02</div>
-            <div className="tn">Core Website</div>
+            <div className="tn">Growth Website</div>
             <p className="tbf">Best for established local businesses that need stronger service pages, local SEO structure, and a clearer path from visitor to inquiry.</p>
             <div className="pb">
               <div className="pd">
@@ -400,13 +400,13 @@ export default function Packages() {
               </li>
             </ul>
             <Link to="/contact" className="cc primary">
-              Build a Core Site
+              Build a Growth Site
             </Link>
           </div>
 
           <div className="tc">
             <div className="ti">03</div>
-            <div className="tn">Pro Website</div>
+            <div className="tn">Premium Presence</div>
             <p className="tbf">Best for businesses wanting a complete web presence — full service pages, local SEO structure, conversion architecture, and launch-ready polish.</p>
             <div className="pb">
               <div className="pd" style={{ fontSize: 'clamp(48px,6vw,72px)' }}>
@@ -436,24 +436,24 @@ export default function Packages() {
               </li>
             </ul>
             <Link to="/contact" className="cc outline">
-              Go Pro
+              Go Premium
             </Link>
           </div>
         </div>
 
         <div className="sales-line fade-in">
-          <strong>Starter</strong> gets you online. <strong>Core</strong> strengthens credibility.{" "}
-          <strong>Pro</strong> gives your business a sharper web presence built around trust, clarity,
+          <strong>Starter</strong> gets you online. <strong>Growth</strong> strengthens credibility.{" "}
+          <strong>Premium</strong> gives your business a sharper web presence built around trust, clarity,
           and action.
         </div>
 
         <p className="sl" style={{ marginTop: 48 }}>
-          Website Care
+          Ongoing Website Support
         </p>
 
         <div className="rc fade-in">
           <div>
-            <p className="re">Ongoing Support</p>
+            <p className="re">Ongoing Website Support</p>
             <h3 className="rt">Website Maintenance</h3>
             <p className="rd">
               Ongoing support for small updates, checks, and basic site care after launch.
@@ -478,7 +478,7 @@ export default function Packages() {
             </div>
 
             <Link to="/contact" className="rct">
-              Add Website Care
+              Add Ongoing Website Support
             </Link>
           </div>
 
@@ -544,7 +544,7 @@ export default function Packages() {
         <div className="tg">
           <div className="tc">
             <div className="ti">01</div>
-            <div className="tn">Starter Visual</div>
+            <div className="tn">Business Starter Pack</div>
             <p className="tbf">A clean starter set for businesses that need stronger visuals fast.</p>
             <div className="pb">
               <div className="pd">
@@ -1151,7 +1151,7 @@ export default function Packages() {
 
           <div style={{ marginTop: 48 }}>
             <Link to="/contact" className="bottom-cta-link">
-              Start a Project
+              Discuss Your Website
             </Link>
           </div>
         </div>

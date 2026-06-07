@@ -70,7 +70,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
             {config.intro}
           </p>
           <div className="flex flex-wrap items-center gap-4 mt-8">
-            <Link to="/contact" className="btn-primary">Start a Project</Link>
+            <Link to="/contact" className="btn-primary">Get a Free Website Review</Link>
             <Link to="/works" className="btn-secondary">View Our Work</Link>
           </div>
           <p className="font-sans mt-5" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
@@ -232,7 +232,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
                 {config.trustBody}
               </p>
               <Link to="/contact" className="btn-primary mt-8 inline-block">
-                Start a Project
+                Get a Free Website Review
               </Link>
             </div>
 
@@ -305,7 +305,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
               ))}
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/contact" className="btn-primary">Start a Project</Link>
+              <Link to="/contact" className="btn-primary">Get a Free Website Review</Link>
               <Link to="/packages" className="btn-secondary">View Packages</Link>
             </div>
           </div>
@@ -315,7 +315,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
       <FinalCTA
         heading={config.ctaHeading}
         body={config.ctaBody}
-        buttonText="Start a Project"
+        buttonText="Get a Free Website Review"
         buttonTo="/contact"
       />
     </div>

@@ -222,6 +222,7 @@ export default function Navigation() {
   return (
     <>
       <nav
+        aria-label="Primary navigation"
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
           height: 80,
@@ -243,7 +244,7 @@ export default function Navigation() {
                 src="/images/new-level-design-studio-logo-transparent-header.png"
                 alt="New Level Design Studio NL monogram"
                 className="block"
-                style={{ height: 48, width: 'auto' }}
+                style={{ height: 40, width: 'auto' }}
               />
               <div className="flex flex-col items-start" style={{ gap: 3 }}>
                 <span
@@ -267,7 +268,7 @@ export default function Navigation() {
                 <span
                   className="font-sans uppercase"
                   style={{
-                    fontSize: '7.5px',
+                    fontSize: '9.5px',
                     letterSpacing: '0.22em',
                     lineHeight: 1,
                     color: 'var(--muted-text)',
@@ -283,7 +284,7 @@ export default function Navigation() {
               className="sm:hidden block"
               src="/images/new-level-design-studio-logo-transparent-header.png"
               alt="New Level Design Studio NL monogram"
-              style={{ height: 48, width: 'auto' }}
+              style={{ height: 40, width: 'auto' }}
             />
           </Link>
 

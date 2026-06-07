@@ -71,10 +71,10 @@ export default function WorkVolusiaLegalGroup() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Concept Build
+                View Industry Demo
               </a>
               <Link to="/contact" className="btn-secondary">
-                Start a Project
+                Discuss Your Website
               </Link>
             </div>
           </div>
@@ -88,17 +88,28 @@ export default function WorkVolusiaLegalGroup() {
       {/* Thumbnail */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0 0' }}>
         <div className="container-nlds">
-          <img
-            src="/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png"
-            alt="Volusia Legal Group law firm website concept preview by New Level Design Studio"
-            loading="lazy"
+          <div
+            className="case-thumbnail"
             style={{
               width: '100%',
-              height: 'auto',
-              display: 'block',
+              aspectRatio: '16 / 10',
+              overflow: 'hidden',
               border: '1px solid var(--border-color)',
             }}
-          />
+          >
+            <img
+              src="/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png"
+              alt="Volusia Legal Group law firm website concept"
+              loading="lazy"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'block',
+                objectFit: 'cover',
+                objectPosition: 'top center',
+              }}
+            />
+          </div>
         </div>
       </section>
 
@@ -170,7 +181,7 @@ export default function WorkVolusiaLegalGroup() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    View Concept Build
+                    View Industry Demo
                   </a>
                 </div>
               </div>
@@ -300,7 +311,7 @@ export default function WorkVolusiaLegalGroup() {
                     paddingBottom: 2,
                   }}
                 >
-                  View Concept Build at volusia-legal-group-nlds.netlify.app →
+                  View Industry Demo at volusia-legal-group-nlds.netlify.app →
                 </a>
               </div>
             </div>
@@ -311,7 +322,7 @@ export default function WorkVolusiaLegalGroup() {
       <FinalCTA
         heading="Want This for Your Business?"
         body="New Level Design Studio builds websites for local professional-services businesses across Port Orange, Daytona Beach, and Volusia County. Tell us what you need."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

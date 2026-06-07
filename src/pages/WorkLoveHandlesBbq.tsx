@@ -73,7 +73,7 @@ export default function WorkLoveHandlesBbq() {
                 View Live Demo
               </a>
               <Link to="/contact" className="btn-secondary">
-                Start a Project
+                Discuss Your Website
               </Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function WorkLoveHandlesBbq() {
         <div className="container-nlds">
           <img
             src="/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png"
-            alt="Love Handles BBQ catering website concept preview by New Level Design Studio"
+            alt="Love Handles BBQ catering website concept"
             loading="lazy"
             style={{
               width: '100%',
@@ -336,7 +336,7 @@ export default function WorkLoveHandlesBbq() {
       <FinalCTA
         heading="Want This for Your Business?"
         body="New Level Design Studio builds websites for local food, catering, and service businesses across Volusia County. Tell us what you need."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

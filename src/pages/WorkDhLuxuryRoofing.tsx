@@ -74,7 +74,7 @@ export default function WorkDhLuxuryRoofing() {
                 View Live Concept
               </a>
               <Link to="/contact" className="btn-secondary">
-                Start a Project
+                Discuss Your Website
               </Link>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function WorkDhLuxuryRoofing() {
         <div className="container-nlds">
           <img
             src="/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png"
-            alt="DH Luxury Roofing premium roofing website concept preview by New Level Design Studio"
+            alt="DH Luxury Roofing website concept"
             loading="lazy"
             style={{
               width: '100%',
@@ -326,7 +326,7 @@ export default function WorkDhLuxuryRoofing() {
       <FinalCTA
         heading="Want This for Your Business?"
         body="New Level Design Studio builds websites for local service businesses across Port Orange, Daytona Beach, and Volusia County. Tell us what you need."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

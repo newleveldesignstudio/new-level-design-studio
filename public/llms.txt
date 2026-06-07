@@ -27,8 +27,18 @@ New Level Design Studio (NLDS) is a founder-led design studio based in Port Oran
 - Website Design: Custom-coded, mobile-first websites structured for local businesses — clear offer, fast load, direct inquiry paths.
 - Brand Visuals: Logo systems, branded graphics, and web imagery for consistent presence across website, Google Business Profile, and social platforms.
 - Content Systems: Short-form video, social content, and launch assets that support local visibility.
-- Website Care: Ongoing maintenance — content updates, link checks, image swaps, monthly review. Starting at $99/month.
-- Starter Pack: Entry-level visual asset package ($129) — logo, Google Business Profile cover, social graphics, and business card template.
+- Ongoing Website Support: Ongoing maintenance — content updates, link checks, image swaps, monthly review. Starting at $99/month.
+- Business Starter Pack: Entry-level visual asset package ($129) — logo, Google Business Profile cover, social graphics, and business card template.
+
+## Pricing (starting points — final pricing depends on scope)
+
+- Starter Website: from $499
+- Growth Website: from $899 (local SEO-friendly structure included)
+- Premium Presence: from $1,499 (full SEO-ready structure, schema markup)
+- Business Starter Pack: from $129
+- Core Visual Pack: from $249
+- Ongoing Website Support: from $99/month
+- Add-ons available: extra pages, landing pages, SEO setup, copywriting upgrades, video packages
 
 ## Key Pages
 

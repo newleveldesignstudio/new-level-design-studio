@@ -73,7 +73,7 @@ export default function WorkLaTequila() {
                 View Live Concept
               </a>
               <Link to="/contact" className="btn-secondary">
-                Start a Project
+                Discuss Your Website
               </Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function WorkLaTequila() {
         <div className="container-nlds">
           <img
             src="/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.png"
-            alt="La Tequila 2026 restaurant website concept preview by New Level Design Studio"
+            alt="La Tequila restaurant website concept"
             loading="lazy"
             style={{
               width: '100%',
@@ -290,7 +290,7 @@ export default function WorkLaTequila() {
       <FinalCTA
         heading="Want This for Your Restaurant?"
         body="New Level Design Studio builds websites for local restaurants across Port Orange, Daytona Beach, and Volusia County. Tell us what you need."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

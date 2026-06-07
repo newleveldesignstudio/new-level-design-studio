@@ -100,7 +100,7 @@ export default function Services() {
                   Built to help visitors understand your business fast, trust what they see, and take the next step without confusion.
                 </p>
                 <Link to="/contact" className="btn-primary mt-8 inline-block">
-                  Start a Website Project
+                  Get a Free Website Review
                 </Link>
               </div>
               <div
@@ -150,7 +150,7 @@ export default function Services() {
                   Keeps your site from feeling abandoned after launch — small updates, link checks, content swaps, and polish handled for you every month.
                 </p>
                 <Link to="/contact" className="btn-primary mt-8 inline-block">
-                  Ask About Website Care
+                  Ask About Ongoing Website Support
                 </Link>
               </div>
               <div
@@ -407,8 +407,8 @@ export default function Services() {
       {/* Packages link */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '60px 0' }}>
         <div className="container-nlds flex flex-wrap items-center gap-4">
-          <Link to="/packages" className="btn-primary">View Packages &amp; Pricing</Link>
-          <Link to="/contact" className="btn-secondary">Start a Conversation</Link>
+          <Link to="/packages" className="btn-primary">View Packages</Link>
+          <Link to="/contact" className="btn-secondary">Discuss Your Website</Link>
         </div>
       </section>
 
@@ -416,7 +416,7 @@ export default function Services() {
       <FinalCTA
         heading="Not Sure What You Need?"
         body="Tell us about your business and we will point you toward the right place to start."
-        buttonText="Start a Conversation"
+        buttonText="Discuss Your Website"
       />
     </div>
   );

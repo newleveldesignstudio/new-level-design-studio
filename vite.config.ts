@@ -35,12 +35,24 @@ export default defineConfig({
         '/works/el-taller-2026',
         '/works/la-tequila-2026',
         '/works/the-best-landscape-2026',
+        '/works/aureline-estates',
       ],
       exclude: ['/netlify-forms'],
       generateRobotsTxt: false,
       outDir: 'dist',
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom', 'react-router', 'react-helmet-async'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-gsap': ['gsap', 'lenis'],
+        },
+      },
+    },
+  },
   server: {
     port: 3000,
   },

@@ -12,6 +12,7 @@ export interface WorkProject {
   result: string;
   isSample?: boolean;
   slug?: string;
+  ctaLabel?: string;
   demoUrl?: string;
   demoLabel?: string;
 }
@@ -37,7 +38,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
   };
 
   return (
-    <div className="group">
+    <article className="group">
       {/* Image */}
       <div
         className="overflow-hidden"
@@ -97,7 +98,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
                 padding: '2px 8px',
               }}
             >
-              Concept Build
+              Industry Demo
             </span>
           )}
         </div>
@@ -257,11 +258,11 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
                 (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--silver-grey)';
               }}
             >
-              Case Study →
+              {project.ctaLabel ?? 'Case Study →'}
             </Link>
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 }

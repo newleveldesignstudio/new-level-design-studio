@@ -1,0 +1,8 @@
+/*
+  Link: </llms.txt>; rel="alternate"; type="text/markdown", </llms-full.txt>; rel="describedby"; type="text/markdown", </.well-known/agent-skills/index.json>; rel="service-doc"; type="application/json"
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/.well-known/*
+  Cache-Control: public, max-age=3600

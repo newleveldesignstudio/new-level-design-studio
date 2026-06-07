@@ -22,6 +22,7 @@ import WorkVolusiaLegalGroup from '@/pages/WorkVolusiaLegalGroup';
 import WorkEmberOakCoffee from '@/pages/WorkEmberOakCoffee';
 import WorkLoveHandlesBbq from '@/pages/WorkLoveHandlesBbq';
 import WorkCoastalStandardRealty from '@/pages/WorkCoastalStandardRealty';
+import WorkAurelineEstates from '@/pages/WorkAurelineEstates';
 import PortOrangeWebDesign from '@/pages/PortOrangeWebDesign';
 import DaytonaBeachWebDesign from '@/pages/DaytonaBeachWebDesign';
 import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
@@ -64,6 +65,7 @@ export default function App() {
           <Route path="/works/ember-oak-coffee" element={<WorkEmberOakCoffee />} />
           <Route path="/works/love-handles-bbq" element={<WorkLoveHandlesBbq />} />
           <Route path="/works/coastal-standard-realty" element={<WorkCoastalStandardRealty />} />
+          <Route path="/works/aureline-estates" element={<WorkAurelineEstates />} />
           <Route path="/port-orange-website-design" element={<PortOrangeWebDesign />} />
           <Route path="/daytona-beach-website-design" element={<DaytonaBeachWebDesign />} />
           <Route path="/volusia-county-website-design" element={<VolusiaCountyWebDesign />} />

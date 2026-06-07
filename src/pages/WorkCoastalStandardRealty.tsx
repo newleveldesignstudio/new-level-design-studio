@@ -62,11 +62,11 @@ export default function WorkCoastalStandardRealty() {
               Florida's Atlantic coast.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mt-8">
-              <Link to="/contact" className="btn-primary">
-                Start a Project
+            <div className="flex flex-wrap items-center gap-4 mt-8" style={{ minWidth: 0 }}>
+              <Link to="/contact" className="btn-primary" style={{ minWidth: 0 }}>
+                Discuss Your Website
               </Link>
-              <Link to="/works" className="btn-secondary">
+              <Link to="/works" className="btn-secondary" style={{ minWidth: 0 }}>
                 View All Work
               </Link>
             </div>
@@ -83,7 +83,7 @@ export default function WorkCoastalStandardRealty() {
         <div className="container-nlds">
           <img
             src="/nlds/images/coastal-standard-realty-luxury-coastal-real-estate-website-demo-nlds.jpg"
-            alt="Coastal Standard Realty luxury coastal real estate website demo by New Level Design Studio"
+            alt="Coastal Standard Realty real estate website concept"
             loading="lazy"
             style={{
               width: '100%',
@@ -163,9 +163,9 @@ export default function WorkCoastalStandardRealty() {
                   <Link
                     to="/contact"
                     className="btn-primary"
-                    style={{ display: 'inline-block' }}
+                    style={{ display: 'block', width: '100%', textAlign: 'center' }}
                   >
-                    Start a Project
+                    Discuss Your Website
                   </Link>
                 </div>
               </div>
@@ -356,7 +356,7 @@ export default function WorkCoastalStandardRealty() {
       <FinalCTA
         heading="Need a Website That Feels More Established?"
         body="New Level Design Studio builds premium websites for real estate groups, professional services, and local businesses across Volusia County and the Florida coast."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

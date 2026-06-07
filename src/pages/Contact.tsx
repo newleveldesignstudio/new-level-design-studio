@@ -5,6 +5,7 @@ import SEO from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 import { EXTERNAL_LINKS } from '@/lib/links';
+import { SOCIAL_LINKS } from '@/lib/socialLinks';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -398,6 +399,50 @@ export default function Contact() {
                 <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
                   I'll get back to you as soon as possible.
                 </p>
+              </div>
+
+              {/* Follow on social */}
+              <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
+                <p
+                  className="font-sans"
+                  style={{ fontSize: '0.875rem', color: 'var(--charcoal)', lineHeight: 1.5 }}
+                >
+                  Prefer to connect first?
+                </p>
+                <p
+                  className="font-sans mt-2"
+                  style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6 }}
+                >
+                  Follow New Level Design Studio for website launches, design breakdowns, and local business updates.
+                </p>
+                <nav aria-label="Follow NLDS on social media" className="mt-3">
+                  <div className="flex flex-wrap">
+                    {SOCIAL_LINKS.map((social, i) => (
+                      <span key={social.platform}>
+                        <a
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={social.ariaLabel}
+                          className="font-sans no-underline transition-colors duration-200"
+                          style={{ fontSize: '0.8125rem', color: 'var(--muted-text)' }}
+                          onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                          onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+                        >
+                          {social.platform}
+                        </a>
+                        {i < SOCIAL_LINKS.length - 1 && (
+                          <span
+                            aria-hidden="true"
+                            style={{ margin: '0 6px', color: 'var(--silver-grey)', fontSize: '0.8125rem' }}
+                          >
+                            ·
+                          </span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
+                </nav>
               </div>
             </div>
           </div>

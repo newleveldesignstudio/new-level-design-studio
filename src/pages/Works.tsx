@@ -52,7 +52,7 @@ const projects: WorkProject[] = [
     isSample: true,
     slug: 'el-taller-2026',
     demoUrl: 'https://el-taller-2026.netlify.app/',
-    demoLabel: 'View Concept Build',
+    demoLabel: 'View Industry Demo',
   },
   {
     imageSrc: '/nlds/images/ember-oak-coffee-website-concept-nlds.png',
@@ -93,7 +93,7 @@ const projects: WorkProject[] = [
     isSample: true,
     slug: 'la-tequila-2026',
     demoUrl: 'https://la-tequila-2026.netlify.app/',
-    demoLabel: 'View Concept',
+    demoLabel: 'View Industry Demo',
   },
   {
     imageSrc: '/nlds/images/the-grass-guys-lawn-care-website-concept-nlds.jpg',
@@ -108,7 +108,7 @@ const projects: WorkProject[] = [
     isSample: true,
     slug: 'the-grass-guys',
     demoUrl: 'https://flourishing-taiyaki-d7a1ea.netlify.app/',
-    demoLabel: 'View Concept',
+    demoLabel: 'View Industry Demo',
   },
   {
     imageSrc: '/nlds/images/the-best-landscape-2026-landscaping-website-concept-nlds.jpg',
@@ -123,7 +123,7 @@ const projects: WorkProject[] = [
     isSample: true,
     slug: 'the-best-landscape-2026',
     demoUrl: 'https://the-best-landscape-2026.netlify.app/',
-    demoLabel: 'View Concept',
+    demoLabel: 'View Industry Demo',
   },
   {
     imageSrc: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png',
@@ -138,7 +138,7 @@ const projects: WorkProject[] = [
     isSample: true,
     slug: 'dh-luxury-roofing',
     demoUrl: 'https://dh-luxury-roofing-nlds.netlify.app/',
-    demoLabel: 'View Concept',
+    demoLabel: 'View Industry Demo',
   },
   {
     imageSrc: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png',
@@ -153,7 +153,7 @@ const projects: WorkProject[] = [
     isSample: true,
     slug: 'volusia-legal-group',
     demoUrl: 'https://volusia-legal-group-nlds.netlify.app/',
-    demoLabel: 'View Concept Build',
+    demoLabel: 'View Industry Demo',
   },
   {
     imageSrc: null,
@@ -178,6 +178,20 @@ const projects: WorkProject[] = [
     isSample: true,
   },
   {
+    imageSrc: '/nlds/images/aureline-estates-luxury-real-estate-website-concept-nlds.png',
+    imageAlt: 'Aureline Estates luxury coastal real estate website concept by New Level Design Studio',
+    imageTitle: 'Aureline Estates — Luxury Coastal Real Estate Website Concept by New Level Design Studio',
+    industry: 'Real Estate',
+    title: 'Aureline Estates',
+    problem: 'Luxury real estate buyers and sellers along Florida\'s Atlantic coast expect a digital experience that matches the caliber of the homes they are considering — not a generic listing template that looks like every other agency in the market.',
+    solution: 'A full multi-page luxury real estate website concept with a 4K video hero, curated property collection with filter and detail pages, buyer and seller advisory pathways, six-market area structure, principal profiles, and a Calendly-powered private consultation flow.',
+    deliverables: ['4K video hero with scroll parallax', 'Property collection and detail pages', 'Buyer and seller advisory pages', 'Six coastal market structure', 'Principal profile pages', 'Private consultation flow', 'Mobile-first responsive build'],
+    result: 'Luxury Real Estate Website Concept',
+    isSample: true,
+    slug: 'aureline-estates',
+    ctaLabel: 'View Industry Demo →',
+  },
+  {
     imageSrc: '/nlds/images/coastal-standard-realty-luxury-coastal-real-estate-website-demo-nlds.jpg',
     imageAlt: 'Coastal Standard Realty luxury coastal real estate website demo by New Level Design Studio',
     imageTitle: 'Coastal Standard Realty — Luxury Real Estate Website Demo by New Level Design Studio',
@@ -190,7 +204,7 @@ const projects: WorkProject[] = [
     isSample: true,
     slug: 'coastal-standard-realty',
     demoUrl: 'https://coastal-standard-realty-nlds.netlify.app',
-    demoLabel: 'View Concept',
+    demoLabel: 'View Industry Demo',
   },
   {
     imageSrc: '/nlds/images/harbor-homes-group-coastal-real-estate-listing-website-design-nlds.png',
@@ -293,7 +307,7 @@ export default function Works() {
             style={{ fontSize: '0.875rem', color: 'var(--muted-text)', maxWidth: 520, lineHeight: 1.65 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Our current portfolio includes concept builds and brand direction samples created to show how local businesses can look more polished online. Client work will be labeled separately as it is added.
+            Website concepts, local business demos, and selected builds showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, real estate, wellness, and local brands. Client work is labeled separately.
           </motion.p>
           <motion.div className="mt-14" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />
@@ -361,7 +375,7 @@ export default function Works() {
       <FinalCTA
         heading="Have a Project in Mind?"
         body="We work with local businesses across Volusia County. Tell us what you are building and we will see how we can help."
-        buttonText="Start a Conversation"
+        buttonText="Discuss Your Website"
       />
     </div>
   );

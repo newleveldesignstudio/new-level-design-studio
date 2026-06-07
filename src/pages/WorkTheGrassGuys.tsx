@@ -73,7 +73,7 @@ export default function WorkTheGrassGuys() {
                 View Live Concept
               </a>
               <Link to="/contact" className="btn-secondary">
-                Start a Project
+                Discuss Your Website
               </Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function WorkTheGrassGuys() {
         <div className="container-nlds">
           <img
             src="/nlds/images/the-grass-guys-lawn-care-website-concept-nlds.jpg"
-            alt="The Grass Guys lawn care website concept preview by New Level Design Studio"
+            alt="The Grass Guys lawn care website concept"
             loading="lazy"
             style={{
               width: '100%',
@@ -292,7 +292,7 @@ export default function WorkTheGrassGuys() {
       <FinalCTA
         heading="Want This for Your Business?"
         body="New Level Design Studio builds websites for local service businesses across Port Orange, Daytona Beach, and Volusia County. Tell us what you need."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

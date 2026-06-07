@@ -70,10 +70,10 @@ export default function WorkElTaller() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Concept Build
+                View Industry Demo
               </a>
               <Link to="/contact" className="btn-secondary">
-                Start a Project
+                Discuss Your Website
               </Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function WorkElTaller() {
         <div className="container-nlds">
           <img
             src="/nlds/images/el-taller-2026-restaurant-website-concept-nlds.jpg"
-            alt="El Taller 2026 restaurant website concept preview by New Level Design Studio"
+            alt="El Taller restaurant website concept"
             loading="lazy"
             style={{
               width: '100%',
@@ -155,7 +155,7 @@ export default function WorkElTaller() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    View Concept Build
+                    View Industry Demo
                   </a>
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function WorkElTaller() {
                     paddingBottom: 2,
                   }}
                 >
-                  View Concept Build at el-taller-2026.netlify.app →
+                  View Industry Demo at el-taller-2026.netlify.app →
                 </a>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function WorkElTaller() {
       <FinalCTA
         heading="Want This for Your Restaurant?"
         body="New Level Design Studio builds websites for local restaurants across Port Orange, Daytona Beach, and Volusia County. Tell us what you need."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

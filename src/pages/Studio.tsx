@@ -1,4 +1,5 @@
 import FinalCTA from '@/components/FinalCTA';
+import { SOCIAL_LINKS } from '@/lib/socialLinks';
 import FramedImage from '@/components/FramedImage';
 import EditorialImageReveal from '@/components/EditorialImageReveal';
 import DiagonalLine from '@/components/DiagonalLine';
@@ -184,7 +185,7 @@ export default function Studio() {
           <div style={{ maxWidth: 1000, marginLeft: 'auto', marginRight: 'auto' }}>
             <EditorialImageReveal
               src="/nlds/images/new-level-design-studio-website-strategy-workspace-hero.png"
-              alt="New Level Design Studio workspace with website strategy notes, brand system cards, local SEO checklist, and laptop showing a local business website mockup."
+              alt="Website strategy workspace"
               className="mt-8"
               loading="eager"
             />
@@ -219,7 +220,7 @@ export default function Studio() {
             <div className="relative">
               <FramedImage
                 src="/files/nlds/images/new-level-design-studio-website-brand-content-system-port-orange-fl.png"
-                alt="New Level Design Studio website brand content system for Port Orange local businesses"
+                alt="Website and brand content system"
                 objectFit="contain"
                 parallax={false}
               />
@@ -283,7 +284,7 @@ export default function Studio() {
             <img
               ref={splitImageRef}
               src="/nlds/images/new-level-design-studio-foundation-system-studio-page.png"
-              alt="New Level Design Studio foundation system showing website structure, brand system, content planning, sitemap, and launch checklist"
+              alt="Foundation system overview"
               className="img-muted absolute inset-0 w-full h-full object-contain"
               style={{ objectPosition: 'center center' }}
               loading="lazy"
@@ -423,6 +424,61 @@ export default function Studio() {
 
       {/* 9. Journal */}
       <JournalSection />
+
+      {/* Follow NLDS */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '60px 0' }}>
+        <div className="container-nlds">
+          <div
+            style={{
+              borderTop: '1px solid var(--silver-grey)',
+              borderBottom: '1px solid var(--silver-grey)',
+              padding: '32px 0',
+            }}
+          >
+            <p className="eyebrow">FOLLOW THE STUDIO</p>
+            <p
+              className="font-serif mt-4"
+              style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)', color: 'var(--charcoal)', lineHeight: 1.2 }}
+            >
+              See the work in progress.
+            </p>
+            <p
+              className="font-sans mt-3"
+              style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 520 }}
+            >
+              Follow along for website launches, design notes, and local business updates from New Level Design Studio.
+            </p>
+            <nav aria-label="Follow NLDS on social media" className="mt-5">
+              <div className="flex flex-wrap">
+                {SOCIAL_LINKS.map((social, i) => (
+                  <span key={social.platform}>
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.ariaLabel}
+                      className="font-sans no-underline transition-colors duration-200"
+                      style={{ fontSize: '0.9375rem', color: 'var(--muted-text)' }}
+                      onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+                    >
+                      {social.platform}
+                    </a>
+                    {i < SOCIAL_LINKS.length - 1 && (
+                      <span
+                        aria-hidden="true"
+                        style={{ margin: '0 8px', color: 'var(--silver-grey)', fontSize: '0.9375rem' }}
+                      >
+                        ·
+                      </span>
+                    )}
+                  </span>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
 
       {/* 10. Final CTA */}
       <FinalCTA

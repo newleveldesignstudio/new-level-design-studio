@@ -25,3 +25,8 @@ build
 *.njsproj
 *.sln
 *.sw?
+
+# QA / temp
+screenshots/
+tmp/
+.scroll-trigger-src/

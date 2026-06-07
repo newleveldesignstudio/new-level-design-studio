@@ -35,7 +35,7 @@ export default function WorkBlendHouseSmoothieBar() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">Smoothie Shop Website Concept — Concept Build</p>
+            <p className="eyebrow">Smoothie Shop Website Concept — Industry Demo</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -64,7 +64,7 @@ export default function WorkBlendHouseSmoothieBar() {
 
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <Link to="/contact" className="btn-primary">
-                Start a Project
+                Discuss Your Website
               </Link>
               <Link to="/works" className="btn-secondary">
                 View All Work
@@ -94,7 +94,7 @@ export default function WorkBlendHouseSmoothieBar() {
           >
             <img
               src="/nlds/images/blend-house-smoothie-bar-website-concept-nlds.jpg"
-              alt="Blend House Smoothie Bar mobile-first website concept by New Level Design Studio"
+              alt="Blend House Smoothie Bar website concept"
               loading="lazy"
               style={{
                 width: '100%',
@@ -199,7 +199,7 @@ export default function WorkBlendHouseSmoothieBar() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    Start a Project
+                    Discuss Your Website
                   </Link>
                 </div>
               </div>
@@ -354,7 +354,7 @@ export default function WorkBlendHouseSmoothieBar() {
       <FinalCTA
         heading="Own a Food or Wellness Business?"
         body="New Level Design Studio builds mobile-first websites for local restaurants, cafés, smoothie bars, and wellness businesses across Volusia County. Let us show what your business can look like online."
-        buttonText="Start a Project"
+        buttonText="Discuss Your Website"
         buttonTo="/contact"
       />
     </div>

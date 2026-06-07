@@ -31,11 +31,24 @@ const ROUTES = [
   '/works/el-taller-2026',
   '/works/la-tequila-2026',
   '/works/the-best-landscape-2026',
+  '/works/aureline-estates',
 ];
 const PORT = 4174;
 const BASE_URL = `http://localhost:${PORT}`;
 const DIST_DIR = path.join(ROOT, 'dist');
 const TIMEOUT = 60000;
+const MAX_RETRIES = 2;
+
+// Routes that MUST succeed — build fails loudly if any of these are missing.
+const REQUIRED_ROUTES = new Set([
+  '/',
+  '/services',
+  '/works',
+  '/studio',
+  '/journal',
+  '/contact',
+  '/packages',
+]);
 
 const BASE_TITLE = 'New Level Design Studio — Premium Websites for Local Businesses | Port Orange, FL';
 const BASE_DESC = 'Premium websites, visuals, and short-form content for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida. Built for credibility, visibility, and conversion.';
@@ -78,21 +91,34 @@ function startPreviewServer() {
  * Remove duplicate SEO tags injected by react-helmet-async on top of the
  * static index.html tags. Ensures exactly one title, description, canonical,
  * and deduplicated OG/Twitter/JSON-LD per page.
+ *
+ * @param {string} html - Raw HTML from page.content()
+ * @param {string} [liveTitle] - Authoritative title from page.title() (React Helmet live value)
  */
-function cleanHead(html) {
+function cleanHead(html, liveTitle) {
   const headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
   if (!headMatch) return html;
 
   let inner = headMatch[1];
 
-  // 1. Titles: keep first non-base title; fallback to first if all match base
+  // 1. Titles: use liveTitle from page.title() when available (most reliable —
+  //    captures the React Helmet value even if the DOM serialisation lags).
+  //    Fall back to DOM extraction for safety.
   const titles = [];
   inner = inner.replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, (m) => { titles.push(m); return ''; });
-  const nonBaseTitles = titles.filter((t) => {
-    const text = t.replace(/<[^>]+>/g, '').trim();
-    return text !== BASE_TITLE;
-  });
-  const titleKeep = nonBaseTitles.length > 0 ? nonBaseTitles[nonBaseTitles.length - 1] : titles[0] || '';
+
+  let titleKeep;
+  if (liveTitle && liveTitle.trim() !== '') {
+    // Escape any stray < or > in the title text just in case
+    const safeTitle = liveTitle.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    titleKeep = `<title>${safeTitle}</title>`;
+  } else {
+    const nonBaseTitles = titles.filter((t) => {
+      const text = t.replace(/<[^>]+>/g, '').trim();
+      return text !== BASE_TITLE;
+    });
+    titleKeep = nonBaseTitles.length > 0 ? nonBaseTitles[nonBaseTitles.length - 1] : titles[0] || '';
+  }
 
   // 2. Meta descriptions: keep first non-base; fallback to first
   const descs = [];
@@ -160,37 +186,66 @@ async function prerender() {
     const url = `${BASE_URL}${route}`;
     process.stdout.write(`  Rendering ${route}...`);
 
-    // Fresh page per route — avoids interrupted-navigation cascade on timeout
-    const page = await browser.newPage();
-    await page.setViewportSize({ width: 1280, height: 800 });
-    // Skip animations so GSAP/Framer don't delay rendering
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    // Abort image requests — crawlers only need HTML/text, not images
-    await page.route('**/*.{png,jpg,jpeg,gif,webp,svg}', (route) => route.abort());
+    let ok = false;
+    let lastError = '';
 
-    try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: TIMEOUT });
-      await wait(2500); // let React render + Helmet flush
-
-      let html = await page.content();
-      html = cleanHead(html);
-
-      if (route === '/') {
-        writeFileSync(path.join(DIST_DIR, 'index.html'), html, 'utf8');
-        process.stdout.write(` ✓\n`);
-        results.push({ route, ok: true, file: 'dist/index.html' });
-      } else {
-        const dir = path.join(DIST_DIR, route);
-        mkdirSync(dir, { recursive: true });
-        writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
-        process.stdout.write(` ✓\n`);
-        results.push({ route, ok: true, file: `dist${route}/index.html` });
+    for (let attempt = 1; attempt <= MAX_RETRIES && !ok; attempt++) {
+      if (attempt > 1) {
+        process.stdout.write(`  Retry ${attempt - 1} ${route}...`);
       }
-    } catch (err) {
-      process.stdout.write(` ✗ ${err.message.split('\n')[0]}\n`);
-      results.push({ route, ok: false, error: err.message });
-    } finally {
-      await page.close();
+
+      const page = await browser.newPage();
+      await page.setViewportSize({ width: 1280, height: 800 });
+      await page.emulateMedia({ reducedMotion: 'reduce' });
+      // Abort images AND external font CDN — both block waitUntil:'load'
+      // and are unnecessary for HTML/title extraction.
+      await page.route('**', (r) => {
+        const u = r.request().url();
+        if (
+          u.includes('fonts.googleapis.com') ||
+          u.includes('fonts.gstatic.com') ||
+          /\.(png|jpg|jpeg|gif|webp|svg)(\?.*)?$/i.test(u)
+        ) {
+          r.abort();
+        } else {
+          r.continue();
+        }
+      });
+
+      try {
+        await page.goto(url, { waitUntil: 'load', timeout: TIMEOUT });
+        await wait(3000); // let React render + Helmet flush
+
+        // Capture live document.title (set by React Helmet) alongside the full DOM.
+        // page.title() reads document.title directly from the browser context,
+        // which is more reliable than extracting from the serialised HTML.
+        const [html, liveTitle] = await Promise.all([
+          page.content(),
+          page.title(),
+        ]);
+        const cleanedHtml = cleanHead(html, liveTitle);
+
+        if (route === '/') {
+          writeFileSync(path.join(DIST_DIR, 'index.html'), cleanedHtml, 'utf8');
+        } else {
+          const dir = path.join(DIST_DIR, route);
+          mkdirSync(dir, { recursive: true });
+          writeFileSync(path.join(dir, 'index.html'), cleanedHtml, 'utf8');
+        }
+
+        process.stdout.write(` ✓\n`);
+        results.push({ route, ok: true, file: route === '/' ? 'dist/index.html' : `dist${route}/index.html` });
+        ok = true;
+      } catch (err) {
+        lastError = err.message.split('\n')[0];
+        process.stdout.write(` ✗ ${lastError}\n`);
+      } finally {
+        await page.close();
+      }
+    }
+
+    if (!ok) {
+      results.push({ route, ok: false, error: lastError });
     }
   }
 
@@ -199,9 +254,19 @@ async function prerender() {
 
   const failed = results.filter(r => !r.ok);
   const succeeded = results.filter(r => r.ok);
+
   if (failed.length > 0) {
-    console.warn(`\n⚠️  ${failed.length} route(s) failed prerender (non-fatal):`);
+    console.warn(`\n⚠️  ${failed.length} route(s) failed prerender:`);
     failed.forEach(r => console.warn(`   ${r.route}: ${r.error}`));
+  }
+
+  const failedRequired = failed.filter(r => REQUIRED_ROUTES.has(r.route));
+  if (failedRequired.length > 0) {
+    console.error(`\n✗ BUILD FAILED — ${failedRequired.length} required route(s) did not prerender:`);
+    failedRequired.forEach(r => console.error(`   ${r.route}: ${r.error}`));
+    console.error('');
+    server.kill('SIGTERM');
+    process.exit(1);
   }
 
   console.log(`\n✅ Prerender complete — ${succeeded.length}/${results.length} routes.\n`);
