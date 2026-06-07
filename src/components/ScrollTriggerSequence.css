@@ -50,9 +50,9 @@
   /* left-edge gradient so text stays legible against the light hallway */
   background: linear-gradient(
     to right,
-    rgba(247, 247, 243, 0.88) 0%,
-    rgba(247, 247, 243, 0.62) 32%,
-    rgba(247, 247, 243, 0.0) 58%
+    rgba(247, 247, 243, 0.72) 0%,
+    rgba(247, 247, 243, 0.42) 26%,
+    rgba(247, 247, 243, 0.0) 48%
   );
   pointer-events: none;
 }
@@ -124,6 +124,29 @@
   .st-cta-btn.btn-secondary {
     padding: 12px 20px;
     font-size: 0.75rem;
+  }
+}
+
+/* Tablet portrait 768px–1023px */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .st-overlay {
+    display: flex;
+    padding: 24px 32px;
+  }
+
+  .st-cta-panel {
+    max-width: 340px;
+  }
+
+  .st-cta-headline {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+  }
+
+  .st-cta-btn.btn-primary,
+  .st-cta-btn.btn-secondary {
+    padding: 10px 18px;
+    font-size: 0.7rem;
   }
 }
 

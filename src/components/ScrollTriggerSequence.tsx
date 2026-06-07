@@ -52,8 +52,17 @@ function drawFrame(
     const sh = img.naturalHeight * scale;
     const sy = (ch - sh) / 2;
     ctx.drawImage(img, 0, sy, sw, sh);
+  } else if (breakpoint === 'tablet') {
+    // Object-cover: fills the canvas, shifted right to preserve right-side content
+    const scale = Math.max(cw / img.naturalWidth, ch / img.naturalHeight);
+    const sw = img.naturalWidth * scale;
+    const sh = img.naturalHeight * scale;
+    const sx = (cw - sw) * 0.75;
+    const sy = (ch - sh) / 2;
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.drawImage(img, sx, sy, sw, sh);
   } else {
-    // Object-cover: fills the canvas, crops symmetrically
+    // Desktop: object-cover, center-cropped
     const scale = Math.max(cw / img.naturalWidth, ch / img.naturalHeight);
     const sw = img.naturalWidth * scale;
     const sh = img.naturalHeight * scale;
