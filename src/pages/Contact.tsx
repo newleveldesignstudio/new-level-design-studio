@@ -85,8 +85,8 @@ export default function Contact() {
   return (
     <div>
       <SEO
-        title="Start a Project | New Level Design Studio, Port Orange FL"
-        description="Contact New Level Design Studio to start a website, visual, content, branding, or website care project."
+        title="Free Website Review | New Level Design Studio, Port Orange FL"
+        description="Request a free website review from New Level Design Studio. We'll tell you what your site is communicating to new visitors — and what it would take to strengthen it."
         canonical="https://newlvlstudio.com/contact"
       />
       {/* Hero */}
@@ -104,14 +104,14 @@ export default function Contact() {
             style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--charcoal)' }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Start a Project.
+            Get Your Free Website Review.
           </motion.h1>
           <motion.p
             className="font-sans mt-6"
             style={{ fontSize: '1rem', color: 'var(--muted-text)', maxWidth: 560, lineHeight: 1.6 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Tell us about your business and what you're looking to build. We'll get back to you within 1-2 business days.
+            Tell us about your business and your current website. We'll review it and tell you what it's communicating to new visitors — and what it would take to strengthen it. No commitment required.
           </motion.p>
           <motion.div className="mt-20" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />
@@ -132,26 +132,26 @@ export default function Contact() {
                     className="font-sans uppercase"
                     style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)' }}
                   >
-                    Message Sent
+                    Review Requested
                   </p>
                   <h2
                     className="font-serif mt-4"
                     style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
                   >
-                    Thank you for reaching out.
+                    Your review request is in.
                   </h2>
                   <p
                     className="font-sans mt-4"
                     style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 480 }}
                   >
-                    We'll review your message and get back to you within 1–2 business days at the email address you provided.
+                    We'll review your website and follow up within 1–2 business days at the email address you provided.
                   </p>
                   <button
                     onClick={() => setStatus('idle')}
                     className="btn-secondary mt-8 inline-block"
                     style={{ background: 'none', cursor: 'pointer' }}
                   >
-                    Send Another Message
+                    Submit Another Request
                   </button>
                 </div>
               ) : (
@@ -301,7 +301,7 @@ export default function Contact() {
                       disabled={status === 'submitting'}
                       style={status === 'submitting' ? { opacity: 0.6, cursor: 'not-allowed' } : undefined}
                     >
-                      {status === 'submitting' ? 'Sending…' : 'Send Message'}
+                      {status === 'submitting' ? 'Submitting…' : 'Request Free Review'}
                     </button>
 
                     {status === 'error' && (

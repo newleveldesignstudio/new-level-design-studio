@@ -344,6 +344,26 @@ export default function Works() {
         </div>
       </section>
 
+      {/* Concept demo note */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '24px 0 0' }}>
+        <div className="container-nlds">
+          <p
+            className="font-sans"
+            style={{
+              fontSize: '0.8125rem',
+              color: 'var(--muted-text)',
+              lineHeight: 1.6,
+              padding: '14px 18px',
+              border: '1px solid var(--border-color)',
+              backgroundColor: 'var(--bg-soft)',
+              maxWidth: 680,
+            }}
+          >
+            Concept demos show the design direction and conversion structure NLDS can build for local businesses. Client work is labeled separately.
+          </p>
+        </div>
+      </section>
+
       {/* Project Grid */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '60px 0 100px' }}>
         <div className="container-nlds">

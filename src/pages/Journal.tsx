@@ -14,6 +14,10 @@ const SLUG_TO_CATEGORY: Record<string, string> = {
   'content-systems': 'Content Systems',
   'brand-presence': 'Brand Presence',
   'seo': 'SEO',
+  'first-impressions': 'First Impressions',
+  'lead-generation': 'Lead Generation',
+  'website-audits': 'Website Audits',
+  'local-seo': 'Local SEO',
 };
 
 const CATEGORY_TO_SLUG: Record<string, string> = {
@@ -23,6 +27,10 @@ const CATEGORY_TO_SLUG: Record<string, string> = {
   'Content Systems': 'content-systems',
   'Brand Presence': 'brand-presence',
   'SEO': 'seo',
+  'First Impressions': 'first-impressions',
+  'Lead Generation': 'lead-generation',
+  'Website Audits': 'website-audits',
+  'Local SEO': 'local-seo',
 };
 
 function ArticleCard({ article }: { article: Article }) {

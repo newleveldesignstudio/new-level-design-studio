@@ -265,6 +265,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust band */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)', padding: '40px 0' }}>
+        <div className="container-nlds">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '32px 40px' }}>
+            <div>
+              <p
+                className="font-sans uppercase"
+                style={{ fontSize: '0.625rem', letterSpacing: '0.22em', color: 'var(--muted-text)', marginBottom: 8 }}
+              >
+                Studio Location
+              </p>
+              <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
+                Port Orange, FL
+              </p>
+              <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
+                Serving Volusia County &amp; Central Florida
+              </p>
+            </div>
+            <div>
+              <p
+                className="font-sans uppercase"
+                style={{ fontSize: '0.625rem', letterSpacing: '0.22em', color: 'var(--muted-text)', marginBottom: 8 }}
+              >
+                What We Build
+              </p>
+              <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
+                Websites That Convert
+              </p>
+              <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
+                First impressions, local SEO structure, and clear conversion paths
+              </p>
+            </div>
+            <div>
+              <p
+                className="font-sans uppercase"
+                style={{ fontSize: '0.625rem', letterSpacing: '0.22em', color: 'var(--muted-text)', marginBottom: 8 }}
+              >
+                Industry Demos
+              </p>
+              <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
+                10+ Concept Builds
+              </p>
+              <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
+                Restaurants, contractors, law firms, real estate, and more
+              </p>
+            </div>
+            <div>
+              <p
+                className="font-sans uppercase"
+                style={{ fontSize: '0.625rem', letterSpacing: '0.22em', color: 'var(--muted-text)', marginBottom: 8 }}
+              >
+                Free Website Review
+              </p>
+              <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
+                No Commitment
+              </p>
+              <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
+                We'll review your site and tell you exactly what's working and what isn't
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* A Better First Impression */}
       <section
         ref={impressionRef}
