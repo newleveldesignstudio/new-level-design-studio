@@ -19,7 +19,7 @@ interface BreakpointConfig {
 const CONFIG: Record<string, BreakpointConfig> = {
   desktop: { count: 96, path: '/images/scroll-trigger/desktop/', end: '+=1800' },
   tablet:  { count: 80, path: '/images/scroll-trigger/tablet/',  end: '+=1400' },
-  mobile:  { count: 64, path: '/images/scroll-trigger/mobile/',  end: '+=1000' },
+  mobile:  { count: 64, path: '/images/scroll-trigger/mobile/',  end: '+=500' },
 };
 
 function getBreakpoint(): string {
@@ -167,7 +167,7 @@ export default function ScrollTriggerSequence({ overlay }: Props) {
     const bp = getBreakpoint();
     const cfg = CONFIG[bp];
     const endNum = parseInt(cfg.end.replace('+=', ''), 10);
-    const stickyH = bp === 'mobile' ? '76svh' : '100svh';
+    const stickyH = bp === 'mobile' ? '60svh' : '100svh';
     if (pinRef.current) {
       pinRef.current.style.height = `calc(${stickyH} + ${endNum}px)`;
     }

@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { useLenis } from '@/hooks/useLenis';
 import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
@@ -29,6 +29,8 @@ import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
 import CentralFloridaWebDesign from '@/pages/CentralFloridaWebDesign';
 import NotFound from '@/pages/NotFound';
 
+const OpsDashboard = lazy(() => import('@/pages/OpsDashboard'));
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -44,6 +46,8 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
+        {/* Private internal route — no Layout wrapper, no nav/footer */}
+        <Route path="/ops" element={<Suspense fallback={null}><OpsDashboard /></Suspense>} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

@@ -212,7 +212,7 @@ export default function Home() {
       />
 
       {/* Hero copy + CTA — full section below ST visual on all breakpoints */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(96px, 10vw, 120px) 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(64px, 10vw, 120px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow" style={{ fontSize: '0.8125rem' }}>Port Orange, Florida</p>
           <h1
