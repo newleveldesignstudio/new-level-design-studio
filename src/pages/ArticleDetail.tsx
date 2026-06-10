@@ -56,7 +56,7 @@ export default function ArticleDetail() {
   return (
     <div>
       <SEO
-        title={`${article.title} | New Level Design Studio`}
+        title={article.metaTitle ?? `${article.title} | New Level Design Studio`}
         description={article.metaDescription ?? article.excerpt}
         canonical={`https://newlvlstudio.com/journal/${article.slug}`}
         ogType="article"

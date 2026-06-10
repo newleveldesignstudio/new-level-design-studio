@@ -9,7 +9,7 @@ export default function WorkElTaller() {
   return (
     <div>
       <SEO
-        title="El Taller 2026 | Restaurant Website Concept by New Level Design Studio"
+        title="El Taller 2026 — Restaurant Website Concept | NLDS"
         description="A premium restaurant website concept designed for stronger first impressions, clearer menus, and better local customer trust."
         canonical="https://newlvlstudio.com/works/el-taller-2026"
         ogImage="https://newlvlstudio.com/nlds/images/el-taller-2026-restaurant-website-concept-nlds.jpg"

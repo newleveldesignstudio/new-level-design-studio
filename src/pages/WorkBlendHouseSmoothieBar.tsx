@@ -7,7 +7,7 @@ export default function WorkBlendHouseSmoothieBar() {
   return (
     <div>
       <SEO
-        title="Blend House Smoothie Bar | Smoothie Shop Website Concept by New Level Design Studio"
+        title="Blend House Smoothie Bar — Website Concept | NLDS"
         description="A mobile-first smoothie shop website concept by New Level Design Studio — clear menu sections, featured products, local SEO structure, trust signals, and direct order CTAs for a local juice bar."
         canonical="https://newlvlstudio.com/works/blend-house-smoothie-bar"
         ogImage="https://newlvlstudio.com/nlds/images/blend-house-smoothie-bar-website-concept-nlds.jpg"

@@ -275,7 +275,7 @@ export default function Works() {
   return (
     <div>
       <SEO
-        title="Selected Work — Website & Brand Projects | New Level Design Studio"
+        title="Selected Work — Websites & Brand Projects | NLDS"
         description="Explore concept builds, website systems, brand visuals, and local business design work from New Level Design Studio."
         canonical="https://newlvlstudio.com/works"
       />

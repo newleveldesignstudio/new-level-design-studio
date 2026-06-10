@@ -9,7 +9,7 @@ export default function WorkDhLuxuryRoofing() {
   return (
     <div>
       <SEO
-        title="DH Luxury Roofing | Roofing Website Concept by New Level Design Studio"
+        title="DH Luxury Roofing — Roofing Website Concept | NLDS"
         description="A premium roofing landing page concept built around trust, inspections, and clear lead generation — with a video-led hero, slate and charcoal visual system, and mobile-first lead capture."
         canonical="https://newlvlstudio.com/works/dh-luxury-roofing"
         ogImage="https://newlvlstudio.com/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png"

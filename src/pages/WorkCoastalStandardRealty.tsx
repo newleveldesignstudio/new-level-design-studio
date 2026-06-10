@@ -7,7 +7,7 @@ export default function WorkCoastalStandardRealty() {
   return (
     <div>
       <SEO
-        title="Coastal Standard Realty Website Demo | New Level Design Studio"
+        title="Coastal Standard Realty — Website Demo | NLDS"
         description="A luxury coastal real estate website demo by New Level Design Studio, built with editorial design, property presentation, buyer and seller pathways, and local market-area structure."
         canonical="https://newlvlstudio.com/works/coastal-standard-realty"
         ogImage="https://newlvlstudio.com/nlds/images/coastal-standard-realty-luxury-coastal-real-estate-website-demo-nlds.jpg"

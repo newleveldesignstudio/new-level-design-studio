@@ -9,7 +9,7 @@ export default function WorkLaTequila() {
   return (
     <div>
       <SEO
-        title="La Tequila 2026 | Restaurant Website Concept by New Level Design Studio"
+        title="La Tequila 2026 — Restaurant Website Concept | NLDS"
         description="A premium restaurant website concept designed to improve first impressions, menu clarity, mobile trust, and local customer conversion."
         canonical="https://newlvlstudio.com/works/la-tequila-2026"
         ogImage="https://newlvlstudio.com/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.png"

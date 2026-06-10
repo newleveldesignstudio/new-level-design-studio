@@ -9,7 +9,7 @@ export default function WorkVolusiaLegalGroup() {
   return (
     <div>
       <SEO
-        title="Volusia Legal Group | Law Firm Website Demo by New Level Design Studio"
+        title="Volusia Legal Group — Law Firm Website Demo | NLDS"
         description="A professional-services website concept for a local law firm, built around clear practice-area messaging, trust, and consultation requests for clients in Port Orange and Volusia County."
         canonical="https://newlvlstudio.com/works/volusia-legal-group"
         ogImage="https://newlvlstudio.com/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png"

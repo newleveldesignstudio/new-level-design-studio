@@ -204,7 +204,7 @@ export default function StarterPack() {
   return (
     <div ref={pageRef} className="starter-pack-page">
       <SEO
-        title="$129 Starter Pack — Brand Visuals for Local Businesses | New Level Design Studio"
+        title="$129 Starter Pack for Local Businesses | NLDS"
         description="A focused starter offer for local businesses that need essential brand visuals and online presence assets."
         canonical="https://newlvlstudio.com/starter-pack"
       />

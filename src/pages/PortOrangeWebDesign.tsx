@@ -2,7 +2,7 @@ import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
-  seoTitle: 'Port Orange Website Design — Premium Local Web Design | New Level Design Studio',
+  seoTitle: 'Port Orange Website Design for Local Businesses | NLDS',
   seoDescription: 'Premium website design for local businesses in Port Orange, Florida. Clean, mobile-first websites, brand visuals, and content systems that build trust and drive inquiries.',
   canonical: 'https://newlvlstudio.com/port-orange-website-design',
   eyebrow: 'Port Orange, Florida',

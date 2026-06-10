@@ -2,7 +2,7 @@ import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
-  seoTitle: 'Central Florida Website Design for Local Businesses | New Level Design Studio',
+  seoTitle: 'Central Florida Website Design | NLDS',
   seoDescription: 'Premium website design for growing local businesses across Central Florida. Clean websites, brand visuals, and content systems built for credibility, visibility, and conversion.',
   canonical: 'https://newlvlstudio.com/central-florida-website-design',
   eyebrow: 'Central Florida',

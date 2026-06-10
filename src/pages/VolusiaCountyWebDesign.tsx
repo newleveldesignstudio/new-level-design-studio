@@ -2,7 +2,7 @@ import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
-  seoTitle: 'Volusia County Web Design — Websites for Local Businesses | New Level Design Studio',
+  seoTitle: 'Volusia County Web Design for Local Businesses | NLDS',
   seoDescription: 'Premium website design for local businesses across Volusia County, Florida — Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, DeLand, and surrounding areas.',
   canonical: 'https://newlvlstudio.com/volusia-county-website-design',
   eyebrow: 'Volusia County, Florida',

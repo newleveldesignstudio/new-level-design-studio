@@ -188,7 +188,7 @@ export default function Home() {
   return (
     <div>
       <SEO
-        title="Premium Websites for Local Businesses | New Level Design Studio"
+        title="Premium Websites for Local Businesses | NLDS"
         description="Premium websites, visuals, and content systems for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/"
         jsonLd={[localBusinessSchema(), websiteSchema()]}

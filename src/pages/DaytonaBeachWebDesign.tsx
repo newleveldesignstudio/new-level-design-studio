@@ -2,7 +2,7 @@ import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
-  seoTitle: 'Daytona Beach Website Design for Local Businesses | New Level Design Studio',
+  seoTitle: 'Daytona Beach Website Design | NLDS',
   seoDescription: 'Premium website design for local businesses in Daytona Beach, Florida. Stand out in a competitive market with clean, mobile-first websites and brand visuals built to convert.',
   canonical: 'https://newlvlstudio.com/daytona-beach-website-design',
   eyebrow: 'Daytona Beach, Florida',

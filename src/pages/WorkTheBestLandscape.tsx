@@ -9,7 +9,7 @@ export default function WorkTheBestLandscape() {
   return (
     <div>
       <SEO
-        title="The Best Landscape 2026 | Landscaping Website Concept by New Level Design Studio"
+        title="The Best Landscape — Landscaping Website Concept | NLDS"
         description="A premium landscaping website concept designed to improve first impressions, service clarity, local trust, and customer inquiries."
         canonical="https://newlvlstudio.com/works/the-best-landscape-2026"
         ogImage="https://newlvlstudio.com/nlds/images/the-best-landscape-2026-landscaping-website-concept-nlds.jpg"

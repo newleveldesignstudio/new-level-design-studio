@@ -85,7 +85,7 @@ export default function Contact() {
   return (
     <div>
       <SEO
-        title="Free Website Review | New Level Design Studio, Port Orange FL"
+        title="Free Website Review — Port Orange FL | NLDS"
         description="Request a free website review from New Level Design Studio. We'll tell you what your site is communicating to new visitors — and what it would take to strengthen it."
         canonical="https://newlvlstudio.com/contact"
       />

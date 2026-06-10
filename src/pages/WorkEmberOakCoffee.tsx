@@ -9,7 +9,7 @@ export default function WorkEmberOakCoffee() {
   return (
     <div>
       <SEO
-        title="Ember & Oak Coffee Co. | Coffee Shop Website Concept by New Level Design Studio"
+        title="Ember & Oak Coffee Co. — Website Concept | NLDS"
         description="A premium coffee shop and small-batch roaster website concept — editorial homepage, product sections, café visit details, wholesale inquiry, journal layout, and mobile-first design."
         canonical="https://newlvlstudio.com/works/ember-oak-coffee"
         ogImage="https://newlvlstudio.com/nlds/images/ember-oak-coffee-website-concept-nlds.png"

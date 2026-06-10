@@ -9,7 +9,7 @@ export default function WorkTheGrassGuys() {
   return (
     <div>
       <SEO
-        title="The Grass Guys | Lawn Care Website Concept by New Level Design Studio"
+        title="The Grass Guys — Lawn Care Website Concept | NLDS"
         description="A clean, quote-focused lawn care website concept designed to make the brand feel reliable, approachable, and ready for homeowners looking for dependable lawn care."
         canonical="https://newlvlstudio.com/works/the-grass-guys"
         ogImage="https://newlvlstudio.com/nlds/images/the-grass-guys-lawn-care-website-concept-nlds.jpg"
