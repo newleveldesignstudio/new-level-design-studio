@@ -25,6 +25,21 @@ const filterCategories = [
 
 const projects: WorkProject[] = [
   {
+    imageSrc: '/nlds/images/stone-timber-remodeling-construction-remodeling-website-concept-nlds.jpg',
+    imageAlt: 'Stone & Timber Remodeling construction remodeling website concept by New Level Design Studio',
+    imageTitle: 'Stone & Timber Remodeling — Construction Remodeling Website Concept by New Level Design Studio',
+    industry: 'Contractors',
+    title: 'Stone & Timber Remodeling',
+    problem: 'Most local remodeling contractor websites look like plain templates — weak imagery, no project proof, and no clear path from "I need a kitchen remodel" to a booked estimate.',
+    solution: 'A premium construction remodeling website concept built to show how a local contractor can present services, project proof, service-area SEO, and estimate requests with a stronger first impression — image-led hero, before/after slider, editorial service sections, and a mobile estimate bar.',
+    deliverables: ['Local SEO landing structure', 'Image-led hero', 'Before/after comparison slider', 'Editorial service sections', 'Service-area structure', 'Estimate request flow', 'Scroll motion system'],
+    result: 'Case Study',
+    isSample: true,
+    slug: 'stone-timber-remodeling',
+    demoUrl: 'https://stone-timber-remodeling.netlify.app',
+    demoLabel: 'View Industry Demo',
+  },
+  {
     imageSrc: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
     imageAlt: 'Love Handles BBQ catering and food truck website concept by New Level Design Studio',
     imageTitle: 'Love Handles BBQ — BBQ Catering Website Concept by New Level Design Studio',

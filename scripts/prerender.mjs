@@ -32,6 +32,7 @@ const ROUTES = [
   '/works/la-tequila-2026',
   '/works/the-best-landscape-2026',
   '/works/aureline-estates',
+  '/works/stone-timber-remodeling',
   // Journal articles
   '/journal/website-visuals-costing-customers',
   '/journal/volusia-county-contractors-visual-content',
