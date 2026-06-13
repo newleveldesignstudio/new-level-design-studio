@@ -98,6 +98,19 @@ const navItems: NavItem[] = [
       ],
     },
   },
+  {
+    label: 'Resources',
+    path: '/journal',
+    activePrefixes: ['/journal', '/free-seo-tools'],
+    dropdown: {
+      title: 'RESOURCES',
+      description: 'Free tools and articles on websites, local SEO, and business visibility.',
+      links: [
+        { label: 'Journal', path: '/journal', description: 'Practical articles on websites, visuals, and local business growth.' },
+        { label: 'Free SEO Tools', path: '/free-seo-tools', description: 'Check website speed, indexing, structured data, and local visibility.' },
+      ],
+    },
+  },
   { label: 'Packages', path: '/packages' },
   { label: 'Starter Pack', path: '/starter-pack' },
 ];

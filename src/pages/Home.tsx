@@ -265,6 +265,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Resource callout — secondary editorial strip */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', borderTop: '1px solid var(--silver-grey)', borderBottom: '1px solid var(--silver-grey)', padding: 'clamp(40px, 5vw, 56px) 0' }}>
+        <div className="container-nlds">
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2"
+            style={{ gap: 'clamp(24px, 4vw, 48px)', alignItems: 'center' }}
+          >
+            <div>
+              <p className="eyebrow" style={{ fontSize: '0.6875rem' }}>FREE WEBSITE + SEO RESOURCES</p>
+              <h2
+                className="font-serif mt-4"
+                style={{
+                  fontSize: 'clamp(1.5rem, 2.75vw, 2.125rem)',
+                  lineHeight: 1.1,
+                  color: 'var(--charcoal)',
+                }}
+              >
+                Check Your Website and Local Visibility
+              </h2>
+              <p
+                className="font-sans mt-4"
+                style={{
+                  fontSize: '0.9375rem',
+                  lineHeight: 1.65,
+                  color: 'var(--muted-text)',
+                  maxWidth: 480,
+                }}
+              >
+                Use 12 free tools to check website speed, Google indexing, structured data, local search presence, visitor behavior, and technical performance.
+              </p>
+            </div>
+            <div className="flex flex-col items-start lg:items-end" style={{ gap: 10 }}>
+              <Link to="/free-seo-tools" className="btn-primary">
+                Check Your Website
+              </Link>
+              <p
+                className="font-sans"
+                style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.5 }}
+              >
+                No paid software required. Account-based tools are labeled clearly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust band */}
       <section style={{ backgroundColor: 'var(--bg-soft)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)', padding: '40px 0' }}>
         <div className="container-nlds">

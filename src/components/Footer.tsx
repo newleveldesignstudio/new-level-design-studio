@@ -14,6 +14,7 @@ const studioLinks = [
   { text: 'Studio', href: '/studio' },
   { text: 'Journal', href: '/journal' },
   { text: 'Contact', href: '/contact' },
+  { text: 'Free SEO Tools', href: '/free-seo-tools' },
 ];
 
 const serviceLinks = [

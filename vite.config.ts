@@ -67,6 +67,7 @@ export default defineConfig({
         '/journal/five-signs-website-costing-leads',
         '/journal/what-is-website-first-impression-audit',
         '/journal/local-seo-port-orange-businesses',
+        '/free-seo-tools',
       ],
       exclude: ['/netlify-forms'],
       generateRobotsTxt: false,

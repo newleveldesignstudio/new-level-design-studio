@@ -28,6 +28,7 @@ import PortOrangeWebDesign from '@/pages/PortOrangeWebDesign';
 import DaytonaBeachWebDesign from '@/pages/DaytonaBeachWebDesign';
 import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
 import CentralFloridaWebDesign from '@/pages/CentralFloridaWebDesign';
+import FreeSeoTools from '@/pages/FreeSeoTools';
 import NotFound from '@/pages/NotFound';
 
 const OpsDashboard = lazy(() => import('@/pages/OpsDashboard'));
@@ -76,6 +77,7 @@ export default function App() {
           <Route path="/daytona-beach-website-design" element={<DaytonaBeachWebDesign />} />
           <Route path="/volusia-county-website-design" element={<VolusiaCountyWebDesign />} />
           <Route path="/central-florida-website-design" element={<CentralFloridaWebDesign />} />
+          <Route path="/free-seo-tools" element={<FreeSeoTools />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

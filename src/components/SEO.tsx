@@ -63,7 +63,8 @@ export default function SEO({
 export function localBusinessSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': 'LocalBusiness',
+    '@id': 'https://newlvlstudio.com/#business',
     name: 'New Level Design Studio',
     alternateName: 'NLDS',
     url: 'https://newlvlstudio.com',
@@ -80,12 +81,6 @@ export function localBusinessSchema(): Record<string, unknown> {
       'Volusia County',
       'Central Florida',
     ],
-    serviceType: [
-      'Website Design',
-      'Brand Visuals',
-      'Content Systems',
-      'Website Care',
-    ],
     knowsAbout: [
       'Website Design',
       'Brand Visuals',
@@ -94,6 +89,44 @@ export function localBusinessSchema(): Record<string, unknown> {
       'Local Business Marketing',
       'Local SEO',
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Web Design & Marketing Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Website Design',
+            serviceType: 'Website Design',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Brand Visuals',
+            serviceType: 'Brand Visuals',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Content Systems',
+            serviceType: 'Content Systems',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Website Care',
+            serviceType: 'Website Maintenance',
+          },
+        },
+      ],
+    },
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Port Orange',

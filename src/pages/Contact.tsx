@@ -167,12 +167,15 @@ export default function Contact() {
                   {/* Required hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
 
-                  {/* Honeypot — visually hidden, bots fill it, humans don't */}
-                  <div style={{ display: 'none' }} aria-hidden="true">
-                    <label>
-                      Don't fill this out if you're human:
-                      <input name="bot-field" tabIndex={-1} autoComplete="off" />
-                    </label>
+                  {/* Honeypot — hidden at HTML level, not just CSS */}
+                  <div hidden aria-hidden="true" style={{ display: 'none' }}>
+                    <label htmlFor="bot-field">Don't fill this out if you're human:</label>
+                    <input
+                      id="bot-field"
+                      name="bot-field"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
                   </div>
 
                   <div className="form-field grid grid-cols-1 sm:grid-cols-2 gap-6">

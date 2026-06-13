@@ -64,6 +64,7 @@ const ROUTES = [
   '/journal/five-signs-website-costing-leads',
   '/journal/what-is-website-first-impression-audit',
   '/journal/local-seo-port-orange-businesses',
+  '/free-seo-tools',
 ];
 const PORT = 4174;
 const BASE_URL = `http://localhost:${PORT}`;
