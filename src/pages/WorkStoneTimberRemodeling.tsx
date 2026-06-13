@@ -293,7 +293,7 @@ export default function WorkStoneTimberRemodeling() {
                     'Service-area section with future city-page routes',
                     'Local FAQ targeting cost, permits, and timeline queries',
                     'Google Business Profile review placeholder system',
-                    'Config-driven content for fast rebranding to a real client',
+                    'Config-driven content for a flexible industry-demo foundation that can be adapted to a real remodeling company\'s brand, services, locations, and project photography.',
                   ].map((item) => (
                     <li key={item}>— {item}</li>
                   ))}
