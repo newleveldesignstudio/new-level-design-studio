@@ -539,6 +539,7 @@ function ToolCardComponent({ card }: { card: ToolCard }) {
         padding: 'clamp(24px, 3vw, 36px)',
         display: 'flex',
         flexDirection: 'column',
+        height: '100%',
         gap: 0,
       }}
     >
