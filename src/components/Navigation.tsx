@@ -101,13 +101,14 @@ const navItems: NavItem[] = [
   {
     label: 'Resources',
     path: '/journal',
-    activePrefixes: ['/journal', '/free-seo-tools'],
+    activePrefixes: ['/journal', '/free-seo-tools', '/local-visibility-insights'],
     dropdown: {
       title: 'RESOURCES',
       description: 'Free tools and articles on websites, local SEO, and business visibility.',
       links: [
         { label: 'Journal', path: '/journal', description: 'Practical articles on websites, visuals, and local business growth.' },
         { label: 'Free SEO Tools', path: '/free-seo-tools', description: 'Check website speed, indexing, structured data, and local visibility.' },
+        { label: 'Local Visibility Insights', path: '/local-visibility-insights', description: 'Practical guidance on how customers find, evaluate, and contact local businesses.' },
       ],
     },
   },

@@ -65,6 +65,13 @@ const ROUTES = [
   '/journal/what-is-website-first-impression-audit',
   '/journal/local-seo-port-orange-businesses',
   '/free-seo-tools',
+  '/local-visibility-insights',
+  '/local-visibility-insights/website-trust',
+  '/local-visibility-insights/customer-decision-path',
+  '/local-visibility-insights/google-profile-completeness',
+  '/local-visibility-insights/contact-information',
+  '/local-visibility-insights/review-recency',
+  '/local-visibility-insights/mobile-readiness',
 ];
 const PORT = 4174;
 const BASE_URL = `http://localhost:${PORT}`;

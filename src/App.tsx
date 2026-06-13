@@ -29,6 +29,13 @@ import DaytonaBeachWebDesign from '@/pages/DaytonaBeachWebDesign';
 import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
 import CentralFloridaWebDesign from '@/pages/CentralFloridaWebDesign';
 import FreeSeoTools from '@/pages/FreeSeoTools';
+import LocalVisibilityInsights from '@/pages/LocalVisibilityInsights';
+import LocalVisibilityWebsiteTrust from '@/pages/LocalVisibilityWebsiteTrust';
+import LocalVisibilityCustomerDecisionPath from '@/pages/LocalVisibilityCustomerDecisionPath';
+import LocalVisibilityGoogleProfileCompleteness from '@/pages/LocalVisibilityGoogleProfileCompleteness';
+import LocalVisibilityContactInformation from '@/pages/LocalVisibilityContactInformation';
+import LocalVisibilityReviewRecency from '@/pages/LocalVisibilityReviewRecency';
+import LocalVisibilityMobileReadiness from '@/pages/LocalVisibilityMobileReadiness';
 import NotFound from '@/pages/NotFound';
 
 const OpsDashboard = lazy(() => import('@/pages/OpsDashboard'));
@@ -78,6 +85,13 @@ export default function App() {
           <Route path="/volusia-county-website-design" element={<VolusiaCountyWebDesign />} />
           <Route path="/central-florida-website-design" element={<CentralFloridaWebDesign />} />
           <Route path="/free-seo-tools" element={<FreeSeoTools />} />
+          <Route path="/local-visibility-insights" element={<LocalVisibilityInsights />} />
+          <Route path="/local-visibility-insights/website-trust" element={<LocalVisibilityWebsiteTrust />} />
+          <Route path="/local-visibility-insights/customer-decision-path" element={<LocalVisibilityCustomerDecisionPath />} />
+          <Route path="/local-visibility-insights/google-profile-completeness" element={<LocalVisibilityGoogleProfileCompleteness />} />
+          <Route path="/local-visibility-insights/contact-information" element={<LocalVisibilityContactInformation />} />
+          <Route path="/local-visibility-insights/review-recency" element={<LocalVisibilityReviewRecency />} />
+          <Route path="/local-visibility-insights/mobile-readiness" element={<LocalVisibilityMobileReadiness />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
