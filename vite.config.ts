@@ -31,6 +31,7 @@ export default defineConfig({
         '/works/volusia-legal-group',
         '/works/ember-oak-coffee',
         '/works/love-handles-bbq',
+        '/works/crescent-harbor',
         '/works/coastal-standard-realty',
         '/works/el-taller-2026',
         '/works/la-tequila-2026',

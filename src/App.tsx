@@ -21,6 +21,7 @@ import WorkDhLuxuryRoofing from '@/pages/WorkDhLuxuryRoofing';
 import WorkVolusiaLegalGroup from '@/pages/WorkVolusiaLegalGroup';
 import WorkEmberOakCoffee from '@/pages/WorkEmberOakCoffee';
 import WorkLoveHandlesBbq from '@/pages/WorkLoveHandlesBbq';
+import WorkCrescentHarbor from '@/pages/WorkCrescentHarbor';
 import WorkCoastalStandardRealty from '@/pages/WorkCoastalStandardRealty';
 import WorkAurelineEstates from '@/pages/WorkAurelineEstates';
 import WorkStoneTimberRemodeling from '@/pages/WorkStoneTimberRemodeling';
@@ -77,6 +78,7 @@ export default function App() {
           <Route path="/works/volusia-legal-group" element={<WorkVolusiaLegalGroup />} />
           <Route path="/works/ember-oak-coffee" element={<WorkEmberOakCoffee />} />
           <Route path="/works/love-handles-bbq" element={<WorkLoveHandlesBbq />} />
+          <Route path="/works/crescent-harbor" element={<WorkCrescentHarbor />} />
           <Route path="/works/coastal-standard-realty" element={<WorkCoastalStandardRealty />} />
           <Route path="/works/aureline-estates" element={<WorkAurelineEstates />} />
           <Route path="/works/stone-timber-remodeling" element={<WorkStoneTimberRemodeling />} />
