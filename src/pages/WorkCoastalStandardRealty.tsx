@@ -3,6 +3,8 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 
+const DEMO_URL = 'https://coastal-standard-realty-nlds.netlify.app';
+
 export default function WorkCoastalStandardRealty() {
   return (
     <div>
@@ -63,11 +65,17 @@ export default function WorkCoastalStandardRealty() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mt-8" style={{ minWidth: 0 }}>
-              <Link to="/contact" className="btn-primary" style={{ minWidth: 0 }}>
+              <a
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+                style={{ minWidth: 0 }}
+              >
+                View Industry Demo →
+              </a>
+              <Link to="/contact" className="btn-secondary" style={{ minWidth: 0 }}>
                 Discuss Your Website
-              </Link>
-              <Link to="/works" className="btn-secondary" style={{ minWidth: 0 }}>
-                View All Work
               </Link>
             </div>
           </div>
@@ -159,10 +167,19 @@ export default function WorkCoastalStandardRealty() {
                   </ul>
                 </div>
 
-                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24 }}>
+                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                  <a
+                    href={DEMO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                    style={{ display: 'block', width: '100%', textAlign: 'center' }}
+                  >
+                    View Industry Demo →
+                  </a>
                   <Link
                     to="/contact"
-                    className="btn-primary"
+                    className="btn-secondary"
                     style={{ display: 'block', width: '100%', textAlign: 'center' }}
                   >
                     Discuss Your Website
@@ -331,9 +348,11 @@ export default function WorkCoastalStandardRealty() {
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32 }}>
-                <Link
-                  to="/contact"
+              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <a
+                  href={DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-sans"
                   style={{
                     fontSize: '0.8125rem',
@@ -343,6 +362,23 @@ export default function WorkCoastalStandardRealty() {
                     textDecoration: 'none',
                     borderBottom: '1px solid var(--charcoal)',
                     paddingBottom: 2,
+                    display: 'inline-block',
+                  }}
+                >
+                  View Industry Demo →
+                </a>
+                <Link
+                  to="/contact"
+                  className="font-sans"
+                  style={{
+                    fontSize: '0.8125rem',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    color: 'var(--muted-text)',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid var(--muted-text)',
+                    paddingBottom: 2,
+                    display: 'inline-block',
                   }}
                 >
                   Need a website that feels more established? Start a project →
