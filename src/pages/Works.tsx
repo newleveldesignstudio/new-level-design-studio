@@ -25,19 +25,19 @@ const filterCategories = [
 
 const projects: WorkProject[] = [
   {
-    imageSrc: '/nlds/images/stone-timber-remodeling-construction-remodeling-website-concept-nlds.jpg',
-    imageAlt: 'Stone & Timber Remodeling construction remodeling website concept by New Level Design Studio',
-    imageTitle: 'Stone & Timber Remodeling — Construction Remodeling Website Concept by New Level Design Studio',
+    imageSrc: '/nlds/images/stone-timber-remodeling-cinematic-contractor-website-concept-nlds.jpg',
+    imageAlt: 'Stone & Timber Remodeling cinematic contractor website concept by New Level Design Studio',
+    imageTitle: 'Stone & Timber Remodeling — Cinematic Contractor Website Concept by New Level Design Studio',
     industry: 'Contractors',
     title: 'Stone & Timber Remodeling',
-    problem: 'Most local remodeling contractor websites look like plain templates — weak imagery, no project proof, and no clear path from "I need a kitchen remodel" to a booked estimate.',
-    solution: 'A premium construction remodeling website concept built to show how a local contractor can present services, project proof, service-area SEO, and estimate requests with a stronger first impression — image-led hero, before/after slider, editorial service sections, and a mobile estimate bar.',
-    deliverables: ['Local SEO landing structure', 'Image-led hero', 'Before/after comparison slider', 'Editorial service sections', 'Service-area structure', 'Estimate request flow', 'Scroll motion system'],
-    result: 'Case Study',
+    problem: 'Most contractor websites rely on predictable templates — stock imagery, service card grids, and a generic call-to-action. No sense of craftsmanship, no project confidence, no reason to choose one firm over another.',
+    solution: 'A cinematic contractor website concept built around full-screen construction video, scroll-driven storytelling, a pinned three-scene narrative, and a premium multi-step consultation flow.',
+    deliverables: ['Cinematic full-screen video hero', 'Pinned scroll narrative (Plan · Build · Deliver)', 'Metrics animation', 'Editorial featured project', 'Multi-step consultation form', 'Responsive WebM/MP4 media', 'GSAP + Lenis motion system'],
+    result: 'Concept Build',
     isSample: true,
     slug: 'stone-timber-remodeling',
-    demoUrl: 'https://stone-timber-remodeling.netlify.app',
-    demoLabel: 'View Industry Demo',
+    demoUrl: 'https://stone-timber-remodeling-14f1e213.netlify.app',
+    demoLabel: 'View Live Concept',
   },
   {
     imageSrc: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
