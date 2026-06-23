@@ -30,3 +30,6 @@ build
 screenshots/
 tmp/
 .scroll-trigger-src/
+
+# Local Netlify folder
+.netlify
