@@ -142,6 +142,7 @@ export function localBusinessSchema(): Record<string, unknown> {
       availableLanguage: 'English',
     },
     sameAs: ['https://www.facebook.com/Newlvlstudio/'],
+    founder: { '@id': 'https://newlvlstudio.com/#michael-vail' },
   };
 }
 
@@ -149,15 +150,8 @@ export function websiteSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': 'https://newlvlstudio.com/#website',
     name: 'New Level Design Studio',
     url: 'https://newlvlstudio.com',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://newlvlstudio.com/?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 }

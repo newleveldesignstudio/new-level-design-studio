@@ -41,13 +41,10 @@ export default function ArticleDetail() {
     headline: article.title,
     description: article.excerpt,
     author: {
-      '@type': 'Person',
-      name: article.author,
+      '@id': 'https://newlvlstudio.com/#michael-vail',
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'New Level Design Studio',
-      url: 'https://newlvlstudio.com',
+      '@id': 'https://newlvlstudio.com/#business',
     },
     datePublished: article.date,
     url: `https://newlvlstudio.com/journal/${article.slug}`,
