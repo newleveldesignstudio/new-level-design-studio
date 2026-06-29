@@ -12,6 +12,7 @@ const studioLinks = [
   { text: 'Packages', href: '/packages' },
   { text: 'Starter Pack', href: '/starter-pack' },
   { text: 'Studio', href: '/studio' },
+  { text: 'About the Founder', href: '/michael-vail' },
   { text: 'Journal', href: '/journal' },
   { text: 'Contact', href: '/contact' },
   { text: 'Free SEO Tools', href: '/free-seo-tools' },

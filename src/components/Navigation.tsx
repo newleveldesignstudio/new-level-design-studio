@@ -83,12 +83,13 @@ const navItems: NavItem[] = [
   {
     label: 'The Studio',
     path: '/studio',
-    activePrefixes: ['/studio', '/journal'],
+    activePrefixes: ['/studio', '/journal', '/michael-vail'],
     dropdown: {
       title: 'THE STUDIO',
       description: 'Articles, notes, and practical guidance on websites, visuals, branding, and local business growth.',
       links: [
         { label: 'Studio Overview', path: '/studio' },
+        { label: 'About the Founder', path: '/michael-vail' },
         { label: 'All Articles', path: '/journal' },
         { label: 'Website Strategy', path: '/journal?category=website-strategy' },
         { label: 'Local Business Growth', path: '/journal?category=local-business-growth' },

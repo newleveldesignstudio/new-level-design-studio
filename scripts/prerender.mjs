@@ -12,6 +12,7 @@ const ROUTES = [
   '/services',
   '/works',
   '/studio',
+  '/michael-vail',
   '/journal',
   '/contact',
   '/starter-pack',

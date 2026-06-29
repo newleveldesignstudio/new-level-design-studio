@@ -793,35 +793,60 @@ export default function Home() {
             style={{
               borderTop: '1px solid var(--silver-grey)',
               borderBottom: '1px solid var(--silver-grey)',
-              padding: '48px 0',
+              padding: 'clamp(40px, 5vw, 56px) 0',
             }}
           >
-            <p className="eyebrow">FOUNDER-LED STUDIO</p>
-            <h2
-              className="font-serif mt-4"
-              style={{
-                fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
-                color: 'var(--charcoal)',
-                lineHeight: 1.15,
-                maxWidth: 580,
-              }}
-            >
-              Founder-led design for local businesses.
-            </h2>
-            <p
-              className="font-sans mt-5"
-              style={{
-                fontSize: '1rem',
-                color: 'var(--muted-text)',
-                lineHeight: 1.65,
-                maxWidth: 560,
-              }}
-            >
-              Work directly with Michael Vail, founder of New Level Design Studio in Port Orange, Florida. No bloated agency handoff. No generic template process. Just a clear website, brand visuals, and content system built to help your business look credible before customers call.
-            </p>
-            <Link to="/contact" className="btn-primary mt-8 inline-block">
-              Discuss Your Website
-            </Link>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+              <div className="lg:col-span-7">
+                <p className="eyebrow">FOUNDER-LED STUDIO</p>
+                <h2
+                  className="font-serif mt-4"
+                  style={{
+                    fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
+                    color: 'var(--charcoal)',
+                    lineHeight: 1.15,
+                    maxWidth: 580,
+                  }}
+                >
+                  Work directly with the person responsible for the strategy, design, and final
+                  result.
+                </h2>
+                <p
+                  className="font-sans mt-5"
+                  style={{
+                    fontSize: '1rem',
+                    color: 'var(--muted-text)',
+                    lineHeight: 1.65,
+                    maxWidth: 560,
+                  }}
+                >
+                  New Level Design Studio is led by Michael Vail in Port Orange, Florida. Every
+                  project receives direct attention, clear communication, and a website-first
+                  strategy built around stronger trust and better local visibility.
+                </p>
+                <Link to="/michael-vail" className="btn-primary mt-8 inline-block">
+                  Meet Michael
+                </Link>
+              </div>
+              <div className="lg:col-span-5 flex justify-start lg:justify-end">
+                <img
+                  src="/images/founder/michael-vail-founder-portrait-new-level-design-studio.webp"
+                  alt="Michael Vail, founder and creative director of New Level Design Studio"
+                  width={1024}
+                  height={1536}
+                  loading="lazy"
+                  decoding="async"
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    height: 'auto',
+                    maxWidth: 280,
+                    maxHeight: 380,
+                    objectFit: 'contain',
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

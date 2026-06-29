@@ -16,6 +16,7 @@ export default defineConfig({
         '/services',
         '/works',
         '/studio',
+        '/michael-vail',
         '/journal',
         '/packages',
         '/starter-pack',

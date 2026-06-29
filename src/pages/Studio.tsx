@@ -213,9 +213,20 @@ export default function Studio() {
                 We combine clean design, sharp content, and strategic thinking to create websites
                 and visuals that earn trust from the first impression.
               </p>
-              <Link to="/works" className="btn-secondary mt-8 inline-block self-start">
-                See our work
-              </Link>
+              <div className="flex flex-wrap items-center mt-8" style={{ gap: '12px 24px' }}>
+                <Link to="/works" className="btn-secondary inline-block">
+                  See our work
+                </Link>
+                <Link
+                  to="/michael-vail"
+                  className="font-sans no-underline transition-colors duration-200"
+                  style={{ fontSize: '0.875rem', color: 'var(--muted-text)', letterSpacing: '0.02em' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--muted-text)'; }}
+                >
+                  Meet Michael Vail →
+                </Link>
+              </div>
             </div>
             <div className="relative">
               <FramedImage

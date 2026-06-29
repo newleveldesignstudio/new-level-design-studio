@@ -6,6 +6,8 @@ interface SEOProps {
   description: string;
   canonical: string;
   ogImage?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
   ogType?: string;
   twitterCard?: 'summary' | 'summary_large_image';
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
@@ -19,6 +21,8 @@ export default function SEO({
   description,
   canonical,
   ogImage = DEFAULT_OG_IMAGE,
+  ogImageWidth,
+  ogImageHeight,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   jsonLd,
@@ -43,6 +47,8 @@ export default function SEO({
       <meta property="og:url" content={normalizedCanonical} />
       <meta property="og:site_name" content={SITE_NAME} />
       {ogImage && <meta property="og:image" content={ogImage} />}
+      {ogImage && ogImageWidth && <meta property="og:image:width" content={String(ogImageWidth)} />}
+      {ogImage && ogImageHeight && <meta property="og:image:height" content={String(ogImageHeight)} />}
 
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
@@ -143,6 +149,21 @@ export function localBusinessSchema(): Record<string, unknown> {
     },
     sameAs: ['https://www.facebook.com/Newlvlstudio/'],
     founder: { '@id': 'https://newlvlstudio.com/#michael-vail' },
+  };
+}
+
+export function personSchema(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://newlvlstudio.com/#michael-vail',
+    name: 'Michael Vail',
+    jobTitle: 'Founder & Creative Director',
+    url: 'https://newlvlstudio.com/michael-vail/',
+    image: 'https://newlvlstudio.com/images/founder/michael-vail-founder-portrait-new-level-design-studio.webp',
+    worksFor: {
+      '@id': 'https://newlvlstudio.com/#business',
+    },
   };
 }
 

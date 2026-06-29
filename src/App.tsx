@@ -6,6 +6,7 @@ import Home from '@/pages/Home';
 import Services from '@/pages/Services';
 import Works from '@/pages/Works';
 import Studio from '@/pages/Studio';
+import MichaelVail from '@/pages/MichaelVail';
 import Packages from '@/pages/Packages';
 import StarterPack from '@/pages/StarterPack';
 import Contact from '@/pages/Contact';
@@ -63,6 +64,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/works" element={<Works />} />
           <Route path="/studio" element={<Studio />} />
+          <Route path="/michael-vail" element={<MichaelVail />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/starter-pack" element={<StarterPack />} />
           <Route path="/contact" element={<Contact />} />
