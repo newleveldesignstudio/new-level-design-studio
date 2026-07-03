@@ -151,7 +151,7 @@ export default function Packages() {
     <div className="packages-page" ref={pageRef}>
       <SEO
         title="Website Packages for Local Businesses | New Level Design Studio"
-        description="Website design packages for local businesses in Port Orange, Daytona Beach, and Volusia County. Starter, Core, and Pro builds starting at $499."
+        description="Starter, Core, and Pro website packages for local businesses in Port Orange, Daytona Beach, and Volusia County, starting at $499 — with clear scope and Website Care support after launch."
         canonical="https://newlvlstudio.com/packages"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -193,7 +193,7 @@ export default function Packages() {
 
           <div className="hero-ctas">
             <Link to="/contact" className="hero-cta-primary">
-              Get a Free Website Review
+              Start With a Free Website Review
             </Link>
             <button onClick={scrollToPackages} className="hero-cta-secondary">
               View Packages
@@ -228,9 +228,9 @@ export default function Packages() {
             { gn: 'Need stronger service pages and local SEO structure', ga: '→ Core Website ($899)' },
             { gn: 'Need a full, conversion-focused web presence', ga: '→ Pro Website ($1,499)' },
             { gn: 'Need ongoing support after launch', ga: '→ Website Care ($99/mo)' },
-            { gn: 'Need an extra service or location page', ga: '→ Additional Service/Location Page' },
-            { gn: 'Need Google Business Profile setup', ga: '→ GBP Optimization add-on' },
-            { gn: 'Need help writing your website copy', ga: '→ Full Website Copywriting add-on' },
+            { gn: 'Need an extra page or section', ga: '→ Extra Page or Section add-on' },
+            { gn: 'Need Google Business Profile setup', ga: '→ GBP Alignment add-on' },
+            { gn: 'Need help writing your website copy', ga: '→ Website Copy Support add-on' },
             { gn: 'Need booking systems, portals, or custom features', ga: '→ Advanced Functionality (custom quote)' },
           ].map((item, i) => (
             <div className="gc" key={i}>
@@ -259,7 +259,7 @@ export default function Packages() {
           <div className="tc">
             <div className="ti">01</div>
             <div className="tn">Starter Website</div>
-            <p className="tbf">Best for new businesses, solo service providers, or simple local offers that need a credible first impression fast.</p>
+            <p className="tbf">A focused one-page website for a small local business that needs a stronger online presence without overbuilding. Best for new businesses, solo operators, and small service providers replacing a weak DIY page.</p>
             <div className="pb">
               <div className="pd">
                 <span className="psy">$</span>499
@@ -268,15 +268,18 @@ export default function Packages() {
             </div>
             <div className="crl" />
             <ul className="fl">
-              <li><span className="ck" />1-page premium website</li>
+              <li><span className="ck" />One-page website</li>
+              <li><span className="ck" />Essential homepage sections</li>
               <li><span className="ck" />Mobile-responsive layout</li>
-              <li><span className="ck" />Brand-aligned design</li>
-              <li><span className="ck" />Essential service sections</li>
-              <li><span className="ck" />Contact section</li>
-              <li><span className="ck" />Basic SEO structure</li>
+              <li><span className="ck" />Contact form or direct inquiry CTA</li>
+              <li><span className="ck" />Basic on-page SEO setup</li>
+              <li><span className="ck" />Basic local-business trust structure</li>
+              <li><span className="ck" />Launch support</li>
+              <li><span className="ck" />First 90 Days foundation check-ins</li>
             </ul>
+            <p className="tcx">Not for large multi-page sites, or advanced booking, portals, memberships, and complex functionality. Copy and imagery may require your input.</p>
             <Link to="/contact" className="cc outline">
-              Start with Starter
+              Start With Starter
             </Link>
           </div>
 
@@ -284,7 +287,7 @@ export default function Packages() {
             <div className="cbd">Most Popular</div>
             <div className="ti">02</div>
             <div className="tn">Core Website</div>
-            <p className="tbf">Best for established local businesses that need stronger service pages, local SEO structure, and a clearer path from visitor to inquiry.</p>
+            <p className="tbf">The best fit for most local businesses that need a more complete website with clearer service structure and stronger trust. Best for established businesses, contractors, restaurants, and service businesses that need more than a basic one-page site.</p>
             <div className="pb">
               <div className="pd">
                 <span className="psy">$</span>899
@@ -293,13 +296,16 @@ export default function Packages() {
             </div>
             <div className="crl" />
             <ul className="fl">
-              <li><span className="ck" />Multi-section website</li>
+              <li><span className="ck" />Multi-section or small multi-page structure</li>
               <li><span className="ck" />Homepage plus key service/content sections</li>
-              <li><span className="ck" />Refined visual direction</li>
-              <li><span className="ck" />Mobile-responsive design</li>
-              <li><span className="ck" />Local SEO-friendly structure</li>
-              <li><span className="ck" />Contact-focused conversion flow</li>
+              <li><span className="ck" />Stronger local SEO structure</li>
+              <li><span className="ck" />Refined brand-aligned design</li>
+              <li><span className="ck" />Contact and inquiry flow</li>
+              <li><span className="ck" />Service clarity and trust-building sections</li>
+              <li><span className="ck" />Launch support</li>
+              <li><span className="ck" />First 90 Days visibility and quality review</li>
             </ul>
+            <p className="tcx">Our default recommendation for most local businesses. Complex integrations, large content libraries, and custom systems require a custom quote.</p>
             <Link to="/contact" className="cc primary">
               Build a Core Site
             </Link>
@@ -308,7 +314,7 @@ export default function Packages() {
           <div className="tc">
             <div className="ti">03</div>
             <div className="tn">Pro Website</div>
-            <p className="tbf">Best for businesses wanting a complete web presence — full service pages, local SEO structure, conversion architecture, and launch-ready polish.</p>
+            <p className="tbf">A stronger custom website system for businesses that need more depth, more trust, and a more premium presentation. Best for businesses with multiple services, higher-ticket offers, or an outdated site preparing for more serious marketing.</p>
             <div className="pb">
               <div className="pd" style={{ fontSize: 'clamp(48px,6vw,72px)' }}>
                 <span className="psy">$</span>1,499
@@ -317,15 +323,18 @@ export default function Packages() {
             </div>
             <div className="crl" />
             <ul className="fl">
-              <li><span className="ck" />Larger multi-page website structure</li>
-              <li><span className="ck" />Premium editorial layout system</li>
+              <li><span className="ck" />Larger multi-page structure</li>
+              <li><span className="ck" />Expanded service/content architecture</li>
               <li><span className="ck" />Stronger conversion strategy</li>
-              <li><span className="ck" />Service area positioning</li>
-              <li><span className="ck" />SEO-ready page structure</li>
-              <li><span className="ck" />Launch-ready polish</li>
+              <li><span className="ck" />More advanced visual direction</li>
+              <li><span className="ck" />Case-study, proof, or portfolio-style sections where appropriate</li>
+              <li><span className="ck" />Stronger local SEO structure</li>
+              <li><span className="ck" />Launch support</li>
+              <li><span className="ck" />First 90 Days conversion and quality review</li>
             </ul>
+            <p className="tcx">Advanced functionality, ecommerce, portals, dashboards, paid ads, or complex automation require a custom quote.</p>
             <Link to="/contact" className="cc outline">
-              Go Pro
+              Build a Pro Site
             </Link>
           </div>
         </div>
@@ -336,6 +345,70 @@ export default function Packages() {
           and action.
         </div>
       </div>
+
+      {/* Which Package Fits — Decision Guide */}
+      <section className="decision-section">
+        <div className="decision-inner">
+          <p className="sl">Decision guide</p>
+          <h2 className="decision-heading">Which package fits your business?</h2>
+          <p className="decision-sub">
+            The right choice depends on how much your website needs to explain, prove, and support
+            before someone reaches out.
+          </p>
+
+          <div className="decision-grid fade-in">
+            {[
+              {
+                name: 'Starter Website',
+                eyebrow: 'Choose Starter if',
+                copy: 'You need a clean one-page website that makes your business look credible and gives people a simple way to contact you.',
+                bestFor: 'New businesses, solo operators, simple service businesses, or replacing a weak DIY page.',
+                note: 'Best when the goal is a stronger basic presence, not a large website system.',
+                common: false,
+              },
+              {
+                name: 'Core Website',
+                eyebrow: 'Choose Core if',
+                copy: 'You need more structure, clearer services, stronger trust, and a website that feels complete.',
+                bestFor: 'Most local businesses, contractors, restaurants, and service providers.',
+                note: 'Best when customers need to understand what you offer before they reach out.',
+                common: true,
+              },
+              {
+                name: 'Pro Website',
+                eyebrow: 'Choose Pro if',
+                copy: 'Your business needs deeper credibility, more pages, more proof, and a stronger path from visitor to inquiry.',
+                bestFor: 'Higher-ticket services, multi-service businesses, serious redesigns, and businesses preparing for stronger marketing.',
+                note: 'Best when the website needs to do more trust-building before the first call.',
+                common: false,
+              },
+            ].map((pkg) => (
+              <div className={`decision-card${pkg.common ? ' common' : ''}`} key={pkg.name}>
+                {pkg.common && <div className="decision-tag">Most common fit</div>}
+                <p className="decision-eyebrow">{pkg.eyebrow}</p>
+                <h3 className="decision-name">{pkg.name}</h3>
+                <p className="decision-copy">{pkg.copy}</p>
+                <div className="decision-divider" />
+                <p className="decision-bestfor"><span>Best for</span>{pkg.bestFor}</p>
+                <p className="decision-note">{pkg.note}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="decision-guidance fade-in">
+            <div>
+              <h3 className="decision-guidance-heading">Still unsure?</h3>
+              <p className="decision-guidance-copy">
+                Start with a free website review and I'll recommend the package that actually
+                fits — even if that means starting smaller.
+              </p>
+            </div>
+            <Link to="/contact" className="decision-guidance-cta">
+              Start With a Free Website Review
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* What Every NLDS Website Includes */}
       <section className="includes-section">
@@ -373,54 +446,72 @@ export default function Packages() {
       <section className="ninety-section">
         <div className="ninety-inner">
           <p className="sl">Post-launch support</p>
-          <h2 className="ninety-heading">The First 90 Days</h2>
+          <h2 className="ninety-heading">First 90 Days After Launch</h2>
           <p className="ninety-sub">
-            Every NLDS website includes structured post-launch support. The level scales with your package
-            so you're not left on your own after launch day.
+            The launch is not the finish line. Every NLDS website includes structured post-launch
+            checks so your site gets reviewed for visibility, functionality, and trust after it goes live.
           </p>
-          <div className="ninety-grid">
-            <div className="tc fade-in">
-              <div className="ti">01</div>
-              <div className="tn">Starter Website</div>
-              <div className="ninety-duration">Essential 90-Day Support</div>
-              <div className="crl" />
-              <ul className="fl">
-                <li><span className="ck" />Google Search Console verification</li>
-                <li><span className="ck" />Bing Webmaster Tools verification</li>
-                <li><span className="ck" />Sitemap monitoring</li>
-                <li><span className="ck" />Contact form testing</li>
-                <li><span className="ck" />Mobile quality assurance</li>
-              </ul>
-            </div>
-
-            <div className="tc featured fade-in">
-              <div className="ti">02</div>
-              <div className="tn">Core Website</div>
-              <div className="ninety-duration" style={{ color: 'var(--blue-dolphin)' }}>Expanded 90-Day Support</div>
-              <div className="crl" />
-              <ul className="fl">
-                <li><span className="ck" />Everything in Starter, plus:</li>
-                <li><span className="ck" />Analytics review</li>
-                <li><span className="ck" />Google Business Profile alignment</li>
-                <li><span className="ck" />Content recommendations</li>
-                <li><span className="ck" />Conversion-path review</li>
-              </ul>
-            </div>
-
-            <div className="tc fade-in">
-              <div className="ti">03</div>
-              <div className="tn">Pro Website</div>
-              <div className="ninety-duration">Complete 90-Day Support</div>
-              <div className="crl" />
-              <ul className="fl">
-                <li><span className="ck" />Everything in Core, plus:</li>
-                <li><span className="ck" />Review strategy</li>
-                <li><span className="ck" />Deeper conversion review</li>
-                <li><span className="ck" />Service-page recommendations</li>
-                <li><span className="ck" />Post-launch visibility review</li>
-              </ul>
-            </div>
+          <div className="phase-grid">
+            {[
+              {
+                num: '01',
+                title: 'Launch setup',
+                items: [
+                  'Search Console verification',
+                  'Bing Webmaster Tools verification',
+                  'Sitemap submission and check',
+                  'Form testing',
+                  'Basic analytics review, if analytics are connected',
+                ],
+              },
+              {
+                num: '02',
+                title: '30-day check',
+                items: [
+                  'Form and CTA check',
+                  'Mobile usability review',
+                  'Basic visibility review',
+                  'Quick content or trust recommendations',
+                ],
+              },
+              {
+                num: '03',
+                title: '60-day check',
+                items: [
+                  'Search appearance review',
+                  'Google Business Profile alignment check',
+                  'Local SEO structure review',
+                  'Review strategy recommendations',
+                ],
+              },
+              {
+                num: '04',
+                title: '90-day check',
+                items: [
+                  'Conversion path review',
+                  'Content recommendations',
+                  'Trust/proof recommendations',
+                  'Next-step plan',
+                ],
+              },
+            ].map((phase) => (
+              <div className="phase-card fade-in" key={phase.num}>
+                <div className="ti">{phase.num}</div>
+                <div className="phase-title">{phase.title}</div>
+                <div className="crl" />
+                <ul className="fl">
+                  {phase.items.map((item) => (
+                    <li key={item}><span className="ck" />{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
+          <p className="scope-note fade-in">
+            First 90 Days support includes review, recommendations, and minor quality checks. It does
+            not include unlimited redesigns, new pages, ongoing SEO campaigns, paid ads, or major
+            strategy pivots unless separately quoted.
+          </p>
         </div>
       </section>
 
@@ -442,17 +533,22 @@ export default function Packages() {
               </p>
 
               <div className="rf">
-                <span className="rft"><span className="ck-s" />Monthly content updates and text edits</span>
-                <span className="rft"><span className="ck-s" />Image swaps and media updates</span>
-                <span className="rft"><span className="ck-s" />Broken link checks and fixes</span>
-                <span className="rft"><span className="ck-s" />Monthly performance review</span>
-                <span className="rft"><span className="ck-s" />Google Business Profile update assistance</span>
-                <span className="rft"><span className="ck-s" />Priority email support</span>
-                <span className="rft"><span className="ck-s" />Peace-of-mind site upkeep</span>
+                <span className="rft"><span className="ck-s" />Website quality checks</span>
+                <span className="rft"><span className="ck-s" />Basic content updates</span>
+                <span className="rft"><span className="ck-s" />Form and functionality checks</span>
+                <span className="rft"><span className="ck-s" />Mobile review</span>
+                <span className="rft"><span className="ck-s" />Sitemap and search visibility checks</span>
+                <span className="rft"><span className="ck-s" />Review and trust recommendations</span>
+                <span className="rft"><span className="ck-s" />Small improvements over time</span>
               </div>
 
+              <p className="scope-note scope-note-dark">
+                Website Care is not unlimited redesign work, full SEO management, paid advertising, custom
+                development, or emergency support unless separately quoted.
+              </p>
+
               <Link to="/contact" className="rct">
-                Add Website Care
+                Ask About Website Care
               </Link>
             </div>
 
@@ -475,11 +571,13 @@ export default function Packages() {
             Bolt-on enhancements available with any website package.
           </p>
           <div className="addons-row fade-in">
-            <div className="bar-grid cols-4">
+            <div className="bar-grid cols-3">
               {[
-                { label: 'Additional Service or Location Page', detail: 'Extra page targeting a specific service or location', price: 'Custom Quote' },
-                { label: 'Google Business Profile Optimization', detail: 'GBP setup, optimization, and alignment with your website', price: 'Custom Quote' },
-                { label: 'Full Website Copywriting', detail: 'Professional copy written for every page on your site', price: 'Custom Quote' },
+                { label: 'Extra Page or Section', detail: 'An additional page or section for a specific service or location', price: 'Custom Quote' },
+                { label: 'Website Copy Support', detail: 'Professional copywriting support for your website pages', price: 'Custom Quote' },
+                { label: 'Brand Direction for a Website Project', detail: 'Visual direction and brand-aligned styling for your site', price: 'Custom Quote' },
+                { label: 'Local SEO Structure Upgrade', detail: 'Deeper local SEO structure beyond what your package includes', price: 'Custom Quote' },
+                { label: 'Google Business Profile Alignment', detail: 'GBP setup, optimization, and alignment with your website', price: 'Custom Quote' },
                 { label: 'Advanced Functionality', detail: 'Booking systems, portals, calculators, custom integrations', price: 'Custom Quote' },
               ].map((item, i) => (
                 <div className="bar-item" key={i}>
@@ -491,6 +589,54 @@ export default function Packages() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What You'll Need to Provide */}
+      <section className="provide-section">
+        <div className="provide-inner">
+          <p className="sl">Getting started</p>
+          <h2 className="provide-heading">What You'll Need to Provide</h2>
+          <ul className="tl provide-list fade-in">
+            <li><span className="ck" />Business name and contact details</li>
+            <li><span className="ck" />Services or offers</li>
+            <li><span className="ck" />Service area</li>
+            <li><span className="ck" />Existing logo or brand assets, if available</li>
+            <li><span className="ck" />Photos, examples, or references, if available</li>
+            <li><span className="ck" />Website login or domain access, if this is a redesign</li>
+            <li><span className="ck" />Any must-have content or legal requirements</li>
+          </ul>
+          <p className="provide-reassurance">
+            If you don't have everything ready, NLDS can help organize the essentials before the build starts.
+          </p>
+        </div>
+      </section>
+
+      {/* What Requires a Custom Quote */}
+      <section className="quote-section">
+        <div className="quote-inner">
+          <p className="sl">Scope boundary</p>
+          <h2 className="quote-heading">What Requires a Custom Quote</h2>
+          <p className="quote-sub">
+            Starter, Core, and Pro cover complete, professional websites — not unlimited scope. These are quoted separately:
+          </p>
+          <div className="quote-grid fade-in">
+            {[
+              'Ecommerce',
+              'Booking systems',
+              'Membership portals',
+              'Client dashboards',
+              'Large content libraries',
+              'Advanced animation systems',
+              'Custom calculators or tools',
+              'Paid ads setup',
+              'Full SEO campaigns',
+              'Ongoing content production',
+              'Complex automation',
+            ].map((item) => (
+              <div className="quote-item" key={item}>{item}</div>
+            ))}
           </div>
         </div>
       </section>
@@ -612,7 +758,7 @@ export default function Packages() {
 
           <div style={{ marginTop: 48 }}>
             <Link to="/contact" className="bottom-cta-link">
-              Get a Free Website Review
+              Start With a Free Website Review
             </Link>
           </div>
         </div>
