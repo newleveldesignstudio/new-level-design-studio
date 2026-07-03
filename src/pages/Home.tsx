@@ -9,7 +9,7 @@ import FramedImage from '@/components/FramedImage';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import DiagonalLine from '@/components/DiagonalLine';
-import { MonitorIcon, FramesIcon, PlayIcon } from '@/components/icons';
+import { MonitorIcon, FramesIcon, SupportIcon, PageIcon } from '@/components/icons';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
 import ScrollTriggerSequence from '@/components/ScrollTriggerSequence';
@@ -20,26 +20,26 @@ const projects = [
   {
     image: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png',
     alt: 'DH Luxury Roofing website concept',
-    category: 'Roofing Contractor — Industry Demo',
+    category: 'Roofing Contractor — Concept Build',
     title: 'DH Luxury Roofing',
-    description: 'Most roofing sites look dated and aggressive. This one shows the alternative — video-led hero, inspection CTA, and mobile-first lead capture.',
-    link: { text: 'View Case Study', to: '/works/dh-luxury-roofing' },
+    description: 'Most roofing sites look dated and aggressive. This concept shows the alternative — video-led hero, inspection CTA, and mobile-first lead capture.',
+    link: { text: 'View Concept', to: '/works/dh-luxury-roofing' },
+  },
+  {
+    image: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png',
+    alt: 'Volusia Legal Group website concept',
+    category: 'Law Firm — Concept Build',
+    title: 'Volusia Legal Group',
+    description: 'A professional-services concept built around clear practice-area messaging, trust signals, and an easy consultation request path for local clients.',
+    link: { text: 'View Concept', to: '/works/volusia-legal-group' },
   },
   {
     image: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
     alt: 'Love Handles BBQ website concept',
-    category: 'BBQ Catering & Food Truck — Industry Demo',
+    category: 'BBQ Catering & Food Truck — Concept Build',
     title: 'Love Handles BBQ',
     description: 'Booking was buried and mobile flow was weak. Rebuilt around catering inquiries, a food truck events page, and direct contact paths.',
-    link: { text: 'View Case Study', to: '/works/love-handles-bbq' },
-  },
-  {
-    image: '/nlds/images/ember-oak-coffee-website-concept-nlds.png',
-    alt: 'Ember & Oak Coffee Co. website concept',
-    category: 'Coffee Shop & Roaster — Industry Demo',
-    title: 'Ember & Oak Coffee Co.',
-    description: 'Most coffee shop sites stop at a menu. This one covers the full experience — origin story, product sections, café visit, and wholesale positioning.',
-    link: { text: 'View Case Study', to: '/works/ember-oak-coffee' },
+    link: { text: 'View Concept', to: '/works/love-handles-bbq' },
   },
 ];
 
@@ -189,7 +189,7 @@ export default function Home() {
     <div>
       <SEO
         title="Premium Websites for Local Businesses | NLDS"
-        description="Premium websites, visuals, and content systems for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
+        description="Premium websites, Website Care, Brand Direction, and Brand & Content Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/"
         jsonLd={[localBusinessSchema(), websiteSchema()]}
       />
@@ -225,7 +225,7 @@ export default function Home() {
               maxWidth: 900,
             }}
           >
-            Local Business Websites Built to Earn Trust Before the First Call.
+            Premium Websites for Local Businesses in Port Orange, Daytona Beach, and Volusia County.
           </h1>
           <p
             className="font-sans"
@@ -237,7 +237,7 @@ export default function Home() {
               marginTop: 28,
             }}
           >
-            New Level Design Studio builds premium websites, brand visuals, and content systems for local businesses that need to look credible, get found, and turn visitors into real inquiries.
+            New Level Design Studio builds premium websites for local businesses that need to look credible, get found, and turn visitors into real inquiries.
           </p>
           <div
             className="hero-cta-buttons flex flex-col sm:flex-row items-start sm:items-center"
@@ -260,7 +260,7 @@ export default function Home() {
               marginTop: 36,
             }}
           >
-            Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; Volusia County
+            Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; New Smyrna Beach &nbsp;·&nbsp; Volusia County
           </p>
         </div>
       </section>
@@ -337,10 +337,10 @@ export default function Home() {
                 What We Build
               </p>
               <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
-                Websites That Convert
+                Websites That Earn Trust
               </p>
               <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                First impressions, local SEO structure, and clear conversion paths
+                First impressions, local structure, and clear inquiry paths
               </p>
             </div>
             <div>
@@ -348,13 +348,13 @@ export default function Home() {
                 className="font-sans uppercase"
                 style={{ fontSize: '0.625rem', letterSpacing: '0.22em', color: 'var(--muted-text)', marginBottom: 8 }}
               >
-                Industry Demos
+                Concept Builds
               </p>
               <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
-                10+ Concept Builds
+                10+ Portfolio Concepts
               </p>
               <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                Restaurants, contractors, law firms, real estate, and more
+                Portfolio concepts showing how local businesses could look online — not paying client work.
               </p>
             </div>
             <div>
@@ -494,7 +494,7 @@ export default function Home() {
                         lineHeight: 1.2,
                       }}
                     >
-                      Brand Visuals
+                      Brand Direction
                     </h3>
                     <p
                       className="font-sans mt-2"
@@ -534,7 +534,7 @@ export default function Home() {
                         lineHeight: 1.2,
                       }}
                     >
-                      Short-Form Video
+                      Brand & Content Support
                     </h3>
                     <p
                       className="font-sans mt-2"
@@ -545,7 +545,7 @@ export default function Home() {
                         maxWidth: 320,
                       }}
                     >
-                      Short-form video does what static pages cannot — it shows who you are and what your work looks like in motion, before a customer decides to call.
+                      Branded graphics, launch assets, and supporting content keep the website and the rest of the business looking consistent wherever customers encounter it.
                     </p>
                   </div>
                 </div>
@@ -636,11 +636,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <ValueCard
               title="Clear Message"
-              description="Explain what you do in seconds. Visitors should know who you are, what you offer, and why it matters — without hunting for answers."
+              description="Explain what you do in seconds. Visitors should know who you are, what you offer, and why it matters."
             />
             <ValueCard
               title="Premium Presentation"
-              description="Make the business feel established before visitors compare. Clean design, sharp visuals, and consistent branding signal professionalism."
+              description="Look established before people compare. Clean design, sharp visuals, and consistent branding signal professionalism."
             />
             <ValueCard
               title="Local Visibility"
@@ -648,7 +648,7 @@ export default function Home() {
             />
             <ValueCard
               title="Ongoing Support"
-              description="Keep the site updated, checked, and professionally maintained. A website that never changes starts to feel forgotten."
+              description="Keep the site sharp after launch. A website that never changes starts to feel forgotten."
             />
           </div>
         </div>
@@ -727,28 +727,36 @@ export default function Home() {
           <div className="mt-12">
             <SectionDivider />
           </div>
-          <div ref={servicesRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div ref={servicesRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             <div className="service-card">
               <ServiceCard
                 icon={<MonitorIcon />}
                 title="Website Design"
-                description="Custom-coded sites structured for your services, your local area, and how your customers actually search — built to turn visitors into direct inquiries."
+                description="Custom-coded sites structured for your services, local area, and how customers search — built to turn visitors into direct inquiries."
+                link={{ text: 'See Services', to: '/services' }}
+              />
+            </div>
+            <div className="service-card">
+              <ServiceCard
+                icon={<SupportIcon />}
+                title="Website Care"
+                description="Monthly updates, checks, and small fixes so the site stays credible after launch."
                 link={{ text: 'See Services', to: '/services' }}
               />
             </div>
             <div className="service-card">
               <ServiceCard
                 icon={<FramesIcon />}
-                title="Brand Visuals"
-                description="Logo systems, branded graphics, and web imagery designed to stay consistent across your website, Google Business Profile, and social platforms."
+                title="Brand Direction"
+                description="Visual identity, graphics, and web imagery that keep the business looking consistent and credible across platforms."
                 link={{ text: 'See Services', to: '/services' }}
               />
             </div>
             <div className="service-card">
               <ServiceCard
-                icon={<PlayIcon />}
-                title="Short-Form Video"
-                description="Vertical video for Reels, Facebook, and website hero sections — produced to match your brand and drive real engagement in your local market."
+                icon={<PageIcon />}
+                title="Brand & Content Support"
+                description="Branded graphics, launch assets, and supporting content that keep the website and the rest of the business looking consistent."
                 link={{ text: 'See Services', to: '/services' }}
               />
             </div>
@@ -775,7 +783,7 @@ export default function Home() {
                 Most people decide how they feel about a business within seconds of landing on its website or seeing its content. We help local businesses earn that trust faster with clean design, clear messaging, and a visual system that feels sharp from the start.
               </p>
               <Link to="/contact" className="btn-primary mt-8 inline-block self-start">
-                Discuss Your Website
+                Get a Free Website Review
               </Link>
             </div>
             <div className="relative">
@@ -932,10 +940,9 @@ export default function Home() {
             </p>
             <Link
               to="/contact"
-              className="btn-secondary mt-10 inline-block self-start"
-              style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
+              className="btn-primary mt-10 inline-block self-start"
             >
-              Discuss Your Website
+              Get a Free Website Review
             </Link>
           </div>
 
@@ -1017,7 +1024,7 @@ export default function Home() {
               className="font-sans mt-4"
               style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 520 }}
             >
-              Website concepts, local business demos, and selected builds showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, real estate, wellness, and local brands.
+              Concept builds and portfolio demos showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, law firms, real estate, wellness, and local brands.
             </p>
           </div>
           <div ref={worksRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -1026,6 +1033,15 @@ export default function Home() {
                 <ProjectCard {...project} />
               </div>
             ))}
+          </div>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link to="/works" className="btn-primary">View All Work</Link>
+            <p
+              className="font-sans"
+              style={{ fontSize: '0.8125rem', color: 'var(--muted-text)' }}
+            >
+              Restaurants, contractors, law firms, real estate, fitness, and more.
+            </p>
           </div>
         </div>
       </section>
@@ -1138,10 +1154,10 @@ export default function Home() {
                 className="font-sans mt-5"
                 style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 480 }}
               >
-                After your website goes live, it still needs small updates, checks, refinements, and support to stay sharp. Our Ongoing Website Support plan helps local businesses keep their site maintained without needing a full redesign every time something changes.
+                After your website goes live, it still needs small updates, checks, refinements, and support to stay sharp. Our Website Care plan helps local businesses keep their site maintained without needing a full redesign every time something changes.
               </p>
               <Link to="/contact" className="btn-primary mt-8 inline-block">
-                Ask About Ongoing Website Support
+                Ask About Website Care
               </Link>
             </div>
 
@@ -1157,7 +1173,7 @@ export default function Home() {
                   className="font-serif"
                   style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }}
                 >
-                  Ongoing Website Support
+                  Website Care
                 </h3>
                 <span
                   className="font-sans"

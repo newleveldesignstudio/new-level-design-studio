@@ -134,3 +134,16 @@ export const StrategyIcon: React.FC<IconProps> = ({ className = '', size = 40 })
     <line x1="30" y1="2" x2="30" y2="4" />
   </svg>
 );
+
+export const ContentSupportIcon: React.FC<IconProps> = ({ className = '', size = 48 }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1" className={className}>
+    <rect x="8" y="10" width="28" height="20" rx="1" />
+    <rect x="12" y="14" width="28" height="20" rx="1" />
+    <rect x="16" y="18" width="28" height="20" rx="1" />
+    <line x1="12" y1="18" x2="32" y2="18" />
+    <line x1="16" y1="22" x2="36" y2="22" />
+    <line x1="16" y1="26" x2="32" y2="26" />
+    <line x1="20" y1="30" x2="36" y2="30" />
+    <line x1="20" y1="34" x2="32" y2="34" />
+  </svg>
+);

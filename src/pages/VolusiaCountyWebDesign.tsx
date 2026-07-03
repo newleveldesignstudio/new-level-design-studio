@@ -23,7 +23,7 @@ const config: LocalPageConfig = {
     },
     {
       title: 'No Clear Direction After Launch',
-      desc: 'Most businesses launch a website and then let it sit. We offer maintenance and ongoing support so your site stays sharp, accurate, and working long after the initial build.',
+      desc: 'Most businesses launch a website and then let it sit. Our Website Care plan keeps your site current, polished, and working — so it continues to build trust and support your business long after launch.',
     },
   ],
   trustHeading: 'Regional Coverage, Local Focus',
@@ -41,7 +41,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. Our Website Care plan keeps your site current with content updates, link checks, image swaps, and a monthly review starting at $99/month.',
+      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, link checks, image swaps, and a monthly review.',
     },
     {
       q: 'Can you create visuals for Google Business Profile and social media?',

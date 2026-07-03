@@ -39,7 +39,7 @@ export default function EditorialImageReveal({
         aria-hidden="true"
         style={{
           position: 'absolute',
-          inset: -40,
+          inset: 'clamp(-40px, -3.5vw, 0px)',
           background:
             'radial-gradient(ellipse at 35% 20%, rgba(255,255,255,0.72) 0%, rgba(247,247,243,0.36) 42%, rgba(236,237,238,0.12) 65%, transparent 80%)',
           zIndex: 0,

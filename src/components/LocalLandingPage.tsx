@@ -101,7 +101,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
               maxWidth: 560,
             }}
           >
-            Premium websites, visuals, and content systems for local businesses.
+            Premium websites and brand systems built for local businesses.
           </h2>
           <div className="mt-12 flex flex-col" style={{ gap: 0 }}>
             {[
@@ -112,18 +112,18 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
               },
               {
                 num: '02',
-                title: 'Brand Visuals',
-                desc: 'Polished graphics, image systems, and visual direction that keep your business looking consistent and credible across web and social.',
+                title: 'Brand Direction',
+                desc: 'Clear visual direction and consistent brand presentation — ensuring your website, marketing assets, and public-facing materials all reflect the same standard and communicate the same business.',
               },
               {
                 num: '03',
-                title: 'Content Systems',
-                desc: 'Short-form video, social content, and campaign assets that support local visibility and move customers from attention to inquiry.',
+                title: 'Brand & Content Support',
+                desc: 'Supporting website copy, brand-aligned visuals, launch assets, and project-specific content scoped around the website and business goals.',
               },
               {
                 num: '04',
                 title: 'Website Care',
-                desc: 'Monthly maintenance, content updates, link checks, and priority support so your site stays sharp long after launch.',
+                desc: 'Ongoing website quality, visibility, and trust management — so your site stays current, polished, and working for you long after launch.',
               },
             ].map((item) => (
               <div
@@ -251,7 +251,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
                   'Clear service structure and calls to action',
                   'Local SEO foundation baked in',
                   'Brand visuals that stay consistent',
-                  'Ongoing maintenance if you need it',
+                  'Ongoing Website Care if you need it',
                 ].map((item, i) => (
                   <div
                     key={i}

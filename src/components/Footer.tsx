@@ -21,9 +21,9 @@ const studioLinks = [
 
 const serviceLinks = [
   { text: 'Website Design', href: '/services' },
-  { text: 'Website Maintenance', href: '/services' },
-  { text: 'Brand Visuals', href: '/services' },
-  { text: 'Content Systems', href: '/services' },
+  { text: 'Website Care', href: '/services' },
+  { text: 'Brand Direction', href: '/services' },
+  { text: 'Brand & Content Support', href: '/services' },
 ];
 
 const localLinks = [
@@ -175,7 +175,7 @@ export default function Footer() {
                 margin: '0 0 12px',
               }}
             >
-              WEBSITES · BRAND VISUALS · CONTENT SYSTEMS
+              WEBSITES · BRAND DIRECTION · WEBSITE CARE
             </p>
 
             {/* Thin horizontal rule */}
@@ -217,7 +217,7 @@ export default function Footer() {
               className="font-sans"
               style={{ fontSize: '0.875rem', lineHeight: 1.65, color: 'var(--muted-text)', marginBottom: 18, maxWidth: 300 }}
             >
-              Premium websites, visuals, and content systems for local businesses ready to look established online.
+              Premium websites, clear brand direction, and ongoing website care for local businesses ready to look more established online.
             </p>
 
             <div className="flex flex-col" style={{ gap: 10, marginBottom: 20 }}>

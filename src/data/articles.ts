@@ -78,13 +78,13 @@ That means a compelling hero image that represents your service or business in i
 
 Professional imagery is purpose-built for this use case. It produces custom, commercial-grade images designed for a specific business and a specific use — which is exactly what a website visual refresh requires.
 
-New Level Design Studio produces professional image packages for business websites starting at $129. The turnaround is fast, the images are delivered in the correct dimensions for web use, and the result is a website that looks like a business worth contacting — not one that looks like it was built in a weekend and forgotten.
+New Level Design Studio's Visual Starter Pack ($129) is purpose-built for business websites — a custom image set delivered in the correct dimensions for web use. The result is a website that looks like a business worth contacting — not one that looks like it was built in a weekend and forgotten.
 
 For businesses in Port Orange, Daytona Beach, and across Volusia County and Central Florida, a website that converts better is one of the highest-return marketing investments available. The potential customer who lands on your site and calls you instead of going back to Google is revenue that was already on its way to you — it just needed your website to close the deal.
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -123,7 +123,7 @@ None of it requires stopping a job to take photos. None of it requires a camera 
 
 **Service Promotion Content.** Launching a new service? Running a seasonal promotion? Short-form video content lets you create a 15-to-30 second promotional ad for any offer — in days, not weeks. A Port Orange HVAC company can run a spring AC tune-up promotion with a polished video ad on Facebook targeting local homeowners without booking a video crew. A roofing contractor can promote post-storm inspection services on social media within 48 hours of the storm passing.
 
-**Brand Identity and Logo Design.** Many contractors operate under a name and phone number, without a coherent visual brand. New Level Design Studio's brand identity package — starting at $299 — delivers a complete visual system: logo, color palette, typography, and usage guidelines. It's the foundation everything else is built on. Once your brand is locked, every piece of content you create reinforces it rather than diluting it.
+**Brand Identity and Logo Design.** Many contractors operate under a name and phone number, without a coherent visual brand. Brand direction and supporting visual work are quoted based on the needs and scope of the project — covering logo, color palette, typography, and usage guidelines. It's the foundation everything else is built on. Once your brand is locked, every piece of content you create reinforces it rather than diluting it.
 
 **Google Business Profile Content.** Google Business Profile is the most important marketing channel most local contractors aren't actively managing. Profiles with multiple high-quality photos tend to receive more clicks than profiles with one or two images. Professional imagery gives you a complete profile library — trade-specific, on-brand, and ready to upload — that makes your GBP the strongest result on the local map.
 
@@ -135,7 +135,7 @@ Contractors who invest in their online presence aren't just getting more leads. 
 
 ### What It Costs
 
-Image packages start at $129 for a custom visual set. Brand identity starts at $299 for a complete visual system. Most contractor clients start with an image package to build out their Google Business Profile and social presence, then add video for seasonal promotions.
+The Visual Starter Pack ($129) is a great starting point for a custom visual set. Brand direction and visual identity work is quoted based on the scope of the project. Most contractor clients start with a visual starter pack to build out their Google Business Profile and social presence, then add brand work or custom visual projects for seasonal promotions.
 
 Every package is delivered with no shoot fees, no equipment costs, and no multi-week production timelines. You brief us, we build it, you have it in days.
 
@@ -182,7 +182,7 @@ Working with New Level Design Studio looks nothing like hiring a traditional age
 
 ### What It Costs
 
-Image packages start at $129. Video packages start at $199. Our content is built for Instagram, Facebook ads, Google Business profiles, and websites. It's designed to convert, not just look pretty.
+The Visual Starter Pack ($129) is available for focused campaigns and website imagery. Custom visual work is quoted based on the project scope and the assets required. Short-form video is available selectively as a custom-scoped project or website enhancement. Our content is built for Instagram, Facebook ads, Google Business profiles, and websites. It's designed to convert, not just look pretty.
 
 ### Who Is This For?
 
@@ -275,7 +275,7 @@ Consistency on social media, your website, and your ads signals professionalism.
 
 A typical professional photo shoot for a small business runs anywhere from $400 to $1,500 once you factor in the photographer's rate, editing, and any location or prop costs. You get a fixed number of images from a single session, and if you need something different next month, you're paying again.
 
-Image packages from New Level Design Studio start at $129 for a custom image set. That covers a complete visual package for a campaign, a seasonal promotion, or a service launch. You're not paying for setup, travel, or editing time — you're paying for the finished images you actually need.
+New Level Design Studio's Visual Starter Pack ($129) covers a complete visual package for a campaign, a seasonal promotion, or a service launch. You're not paying for setup, travel, or editing time — you're paying for the finished images you actually need.
 
 For a business that needs fresh visuals every month, the savings compound quickly. A restaurant spending $400 per month on photography is paying $4,800 per year. The same business using professional imagery consistently could get better volume and variety for a fraction of that.
 
@@ -289,7 +289,7 @@ The images are delivered ready to use — formatted for social media, ads, your 
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -350,7 +350,7 @@ A complete, professional online presence for a contractor includes consistent im
 
 Professional imagery makes maintaining all of that achievable without a photography budget or a marketing department. A single image package can supply enough imagery to update your Google profile, refresh your website, and run a local ad campaign — all at once.
 
-New Level Design Studio produces professional content for home service businesses across Volusia County and Central Florida, as well as nationally. Projects turn around in days, and image packages start at $129. The return on that investment — a single additional job from an online lead who chose you over a competitor because your profile looked more professional — typically pays for the content many times over.
+New Level Design Studio produces professional content for home service businesses across Volusia County and Central Florida, as well as nationally. Projects turn around in days, and the Visual Starter Pack ($129) covers a focused set of campaign-ready images. The return on that investment — a single additional job from an online lead who chose you over a competitor because your profile looked more professional — typically pays for the content many times over.
 
 ### The First Impression Is the Job
 
@@ -360,7 +360,7 @@ Better visuals don't replace great work, fair pricing, or strong reviews. But th
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -570,11 +570,11 @@ Working with New Level Design Studio on an image or video project is straightfor
 
 You don't need to understand how the production workflow works technically. You need to be able to describe what your business is and what you want people to feel when they see the content. That's the same conversation you'd have with any photographer or videographer — it just doesn't require a shoot day at the end of it.
 
-Image packages start at $129. Video projects start at $199. New Level Design Studio works with businesses across a wide range of local business categories from its base in Port Orange, Florida.
+The Visual Starter Pack ($129) is available for focused campaigns and website imagery. Custom visual work is quoted based on the project scope and the assets required. Short-form video is available selectively as a custom-scoped project or website enhancement. New Level Design Studio works with businesses across a wide range of local business categories from its base in Port Orange, Florida.
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -652,7 +652,7 @@ For a small business trying to maintain a consistent social media presence, here
 - Traditional photography: $400–$800 per session, 20–40 images, once a quarter = $1,600–$3,200/year
 - Hiring a social media manager: $1,500–$3,000/month = $18,000–$36,000/year
 - Generic stock photos: Low cost but no brand differentiation
-- Image packages from New Level Design Studio: Starting at $129 per project, custom to your brand, delivered in days
+- Visual Starter Pack from New Level Design Studio: $129 per project, custom to your brand, delivered in days
 
 A quarterly cadence of image projects — four packages per year — gives you a consistent supply of fresh, on-brand visual content for $500 to $600 a year. That's less than a single traditional photography session.
 
@@ -660,7 +660,7 @@ New Level Design Studio works with local businesses across a wide range of categ
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -713,9 +713,7 @@ We serve restaurants across the Volusia County area, including Port Orange, Dayt
 
 ### What It Costs
 
-Professional video content from New Level Design Studio starts at $199 for a single short-form video, with multi-video campaign packages available for restaurants that need content across multiple promotions or platforms.
-
-Compare that to a traditional video shoot at $2,000 to $5,000 and the math is clear. You get more content, more flexibility, and a faster turnaround for a fraction of the cost.
+Short-form video is available selectively as a custom-scoped project or website enhancement. Contact us to discuss your specific restaurant video needs and we will scope the right approach for your goals.
 
 ### Ready to Make Your Restaurant Look as Good as It Tastes?
 
@@ -776,7 +774,7 @@ Professional imagery serves both audiences well because it can be tailored to th
 
 One of the biggest misconceptions about professional visual content is that it requires a substantial ongoing marketing budget. It doesn't — not anymore.
 
-New Level Design Studio is based in Port Orange and works with businesses throughout Volusia County, Central Florida, and beyond. Image packages start at $129 and are delivered in days. A business that invests in a quality image set once a quarter has enough fresh content to stay active on every relevant platform, run local ad campaigns, and maintain a professional website presence — for a total annual investment that would barely cover one traditional photography session.
+New Level Design Studio is based in Port Orange and works with businesses throughout Volusia County, Central Florida, and beyond. The Visual Starter Pack ($129) is delivered in days. A business that invests in a quality image set once a quarter has enough fresh content to stay active on every relevant platform, run local ad campaigns, and maintain a professional website presence — for a total annual investment that would barely cover one traditional photography session.
 
 The competitive advantage isn't about spending more than your competitors. It's about using the available tools more intelligently. A local business that commits to consistent, professional visual content across all digital channels is competing at a level that most of its local competitors aren't — and a level that customers notice.
 
@@ -786,7 +784,7 @@ The window where this kind of upgrade represents a genuine competitive edge is o
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -825,25 +823,11 @@ Video pricing varies based on length, complexity, and who's producing it. Here's
 
 ### New Level Design Studio Pricing
 
-At New Level Design Studio, video packages are straightforward:
-
-**Video Starter — $199**
-One video up to 10 seconds, delivered within 48 hours. Ideal for a single ad, a social post, or testing a new creative direction.
-
-**Video Professional — $349**
-Three videos plus supporting image assets and a hook script. Covers a full campaign push — launch, promo, or brand awareness.
-
-**Video Retainer — $399/month**
-Four videos per month with unlimited revisions. Built for businesses that need consistent content without managing production themselves.
+Short-form video is available selectively as a custom-scoped project or website enhancement. Pricing is scoped based on the project requirements — contact us to discuss your specific needs.
 
 ### What About Images?
 
-If you're not ready for video yet, image packages are a great starting point:
-
-- Starter — $129 — Core image set for one campaign or product line
-- Core — $249 — Expanded set, most popular for businesses running ads
-- Pro — $449 — Full campaign package across multiple use cases
-- Retainer — $399/month — Ongoing image content, unlimited revisions
+The Visual Starter Pack ($129) is a focused, campaign-ready image set custom to your brand and delivered in days. It's the right starting point for businesses that need professional imagery for a website, a Google Business Profile, or a specific campaign. Custom visual work beyond the starter scope is quoted based on the project scope and the assets required.
 
 ### What's Included
 
@@ -855,33 +839,22 @@ Revisions are built in. You own everything we deliver.
 
 For most local businesses, yes — especially compared to traditional production. Here's the math:
 
-A $199 video starter versus a $2,000 traditional shoot. If one ad drives three new customers and your average ticket is $150, you've covered the cost of a full month of content retainer from a single campaign.
-
 The businesses winning on social right now aren't the ones with the biggest budgets. They're the ones publishing consistently, testing creative, and showing up in front of their audience every week. Professional content makes that possible at any budget.
 
 ### Frequently Asked Questions
 
-**Is there a setup fee?**
-No. All packages are flat-rate with no hidden fees.
+**Do you offer custom quotes?**
+Yes. All visual and video work is scoped based on your project requirements — contact us for a custom quote.
 
 **Can I start with images and add video later?**
-Yes. Many clients start with an image package to establish their visual brand, then add video once they're ready to scale.
-
-**Do you offer custom quotes?**
-Yes. If your project doesn't fit a standard package — multi-product campaigns, large verticals, or ongoing retainer needs — contact us for a custom quote.
-
-**How do I pay?**
-All packages are billed upfront. We accept all major credit cards.
-
-**What if I need more than what's in the package?**
-We'll scope it out and quote accordingly. No surprises.
+Yes. Many clients start with a Visual Starter Pack to establish their visual brand, then add video as a custom project when they're ready.
 
 **Where are you located?**
 New Level Design Studio is based in Port Orange, Florida. We serve businesses nationwide.
 
 ### Ready to Get Started?
 
-Starting at $129 for images and $199 for video, there's a package for every stage of business. [See our full pricing →](/packages)
+The Visual Starter Pack ($129) is the right starting point for businesses that need professional imagery for a website, campaign, or Google Business Profile. Short-form video and custom visual projects are scoped individually. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -940,13 +913,13 @@ That's five posts a week, all looking professional and consistent. It's the diff
 
 ### Making the Numbers Work
 
-New Level Design Studio's image packages start at $129 for a custom image set. A single package can support weeks of social content — the cost per post, when you actually do the math, is dramatically lower than any alternative.
+New Level Design Studio's Visual Starter Pack ($129) provides a custom image set that can support weeks of social content — the cost per post, when you actually do the math, is dramatically lower than any alternative.
 
 For Florida restaurants competing in the tourism market and the local dining market simultaneously, that's a genuine competitive advantage. The chain restaurant down the street has a national marketing department. The polished independent restaurant that shows up consistently with great content is the one that wins the local customer who's deciding where to eat on a Thursday night.
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -1064,7 +1037,7 @@ Modern video production works differently. A creative brief outlines what the vi
 
 The result is a video that looks intentionally produced and platform-ready. It's delivered in the correct aspect ratio for wherever you need it — vertical for Instagram Reels and TikTok, horizontal for YouTube, or square for Facebook.
 
-New Level Design Studio produces video content for local businesses across a wide range of categories, starting at $199 per project. That's a fraction of what a traditional production company would charge for a single video.
+Short-form video is available selectively as a custom-scoped project or website enhancement. New Level Design Studio works with businesses across a wide range of local business categories to scope video projects that make sense for their goals and budget.
 
 ### The Consistency Advantage
 
@@ -1082,7 +1055,7 @@ From there, the creative team handles the direction, production, and delivery. Y
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -1204,7 +1177,7 @@ That buyer profile is educated, digital-first, and doing extensive online resear
 
 ### What It Costs
 
-Image packages from New Level Design Studio start at $129 for a core custom image set — enough for a listing launch or a targeted social campaign. The Core package at $249 includes an expanded set and works well for agents who want consistent weekly content. The Pro package at $449 delivers a full campaign set, ideal for agents running paid social alongside organic content.
+The Visual Starter Pack ($129) provides a core custom image set — enough for a listing launch or a targeted social campaign. Custom visual work beyond the starter scope is quoted based on the project scope and the assets required.
 
 Compare that to a full creative retainer with a designer and photographer — typically $500 to $2,000 per month — and the value is clear. You get original, on-brand content at a fraction of the cost, on a turnaround that keeps up with your marketing calendar.
 
@@ -1343,7 +1316,7 @@ The cheapest providers typically deliver template-quality work that doesn't diff
 
 ### What New Level Design Studio Charges
 
-New Level Design Studio publishes pricing openly on the [Packages page](/packages). Packages cover image packages, video packages, short-form ads, ad campaigns, brand identity, and monthly retainers.
+New Level Design Studio publishes pricing openly on the [Packages page](/packages). Packages cover website builds, Website Care plans, the Visual Starter Pack, and brand direction — with custom scoping for larger visual and video projects.
 
 Every package shows exactly what's included, no hidden fees, no quote-only pricing.
 
@@ -1495,11 +1468,11 @@ Florida's wellness and aesthetics market is growing. New med spas and aesthetics
 
 An independent med spa that maintains a consistent, professional visual presence — updated content every week, cohesive brand aesthetic across every platform, professional imagery for every service and campaign — is far more competitive than one with a strong practitioner reputation but a patchy online presence.
 
-New Level Design Studio works with wellness businesses across Florida and nationwide, producing image and video content that matches the visual standard the industry demands. Packages start at $129 for a custom image set, with fast turnaround so your content calendar stays full.
+New Level Design Studio works with wellness businesses across Florida and nationwide, producing image and video content that matches the visual standard the industry demands. The Visual Starter Pack ($129) is the right starting point for a custom image set, with fast turnaround so your content calendar stays full. Custom visual work and video projects are scoped individually.
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {
@@ -1552,7 +1525,7 @@ A well-executed image campaign for a Florida real estate agent typically covers 
 
 ### How Much Does This Cost?
 
-Image packages from New Level Design Studio start at $129. A full personal brand image library or a complete campaign creative set is well within the range that makes sense for an active agent's marketing budget — and it's a one-time cost rather than a recurring shoot fee every time you need new content.
+The Visual Starter Pack ($129) from New Level Design Studio is a great starting point. A focused, campaign-ready image set is well within the range that makes sense for an active agent's marketing budget — and it's a one-time cost rather than a recurring shoot fee every time you need new content. Custom visual work beyond the starter scope is quoted based on the project scope and the assets required.
 
 For agents in Port Orange, Daytona Beach, Ormond Beach, or anywhere else in Volusia County and Central Florida, the turnaround is fast: most projects are delivered within days, so you can execute on a campaign idea without waiting weeks for a photography schedule to open up.
 
@@ -1564,7 +1537,7 @@ Professional marketing imagery is one of those tools. It levels the playing fiel
 
 ### Ready to Get Started?
 
-New Level Design Studio creates professional marketing visuals for local businesses starting at $129. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
     `.trim(),
   },
   {

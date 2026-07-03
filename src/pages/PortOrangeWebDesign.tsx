@@ -3,7 +3,7 @@ import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
   seoTitle: 'Port Orange Website Design for Local Businesses | NLDS',
-  seoDescription: 'Premium website design for local businesses in Port Orange, Florida. Clean, mobile-first websites, brand visuals, and content systems that build trust and drive inquiries.',
+  seoDescription: 'Premium website design for local businesses in Port Orange, Florida. Clean, mobile-first websites with clear brand direction and ongoing care — built to earn trust and drive real inquiries.',
   canonical: 'https://newlvlstudio.com/port-orange-website-design',
   eyebrow: 'Port Orange, Florida',
   h1: 'Website Design for Port Orange Businesses',
@@ -41,7 +41,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. Our Website Care plan covers small content updates, image swaps, link and form checks, and a monthly review starting at $99/month.',
+      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, image swaps, link and form checks, and a monthly review.',
     },
     {
       q: 'Can you create visuals for Google Business Profile and Facebook?',

@@ -330,7 +330,7 @@ export default function Works() {
             }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Selected Work — Websites, Brands, and Content Systems
+            Selected Work — Websites, Brand Direction, and Content Support
           </motion.h1>
           <motion.p
             className="font-sans mt-6"

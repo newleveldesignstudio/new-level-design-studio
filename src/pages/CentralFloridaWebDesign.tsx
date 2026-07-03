@@ -3,11 +3,11 @@ import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
   seoTitle: 'Central Florida Website Design | NLDS',
-  seoDescription: 'Premium website design for growing local businesses across Central Florida. Clean websites, brand visuals, and content systems built for credibility, visibility, and conversion.',
+  seoDescription: 'Premium website design for growing local businesses across Central Florida. Clean, well-crafted websites with clear brand direction and ongoing care — built for credibility, local visibility, and real inquiries.',
   canonical: 'https://newlvlstudio.com/central-florida-website-design',
   eyebrow: 'Central Florida',
   h1: 'Website Design for Central Florida Local Businesses',
-  intro: 'Central Florida is home to thousands of growing local businesses — from service providers and contractors to restaurants, wellness studios, and specialty shops. We build premium websites, brand visuals, and content systems that help these businesses look more credible, get found online, and generate real customer inquiries.',
+  intro: 'Central Florida is home to thousands of growing local businesses — from service providers and contractors to restaurants, wellness studios, and specialty shops. We build premium websites and brand systems that help these businesses look more credible, get found online, and generate real customer inquiries.',
   helpFix: [
     {
       title: 'Websites That Don\'t Match the Quality of the Business',
@@ -23,7 +23,7 @@ const config: LocalPageConfig = {
     },
     {
       title: 'No Ongoing Support or Maintenance',
-      desc: 'A launched website without maintenance quickly looks stale. We offer ongoing care plans and content support for growing Central Florida businesses that want to stay current.',
+      desc: 'A launched website without attention quickly looks stale. Our Website Care plan keeps your site current, polished, and working — so it continues to support your business long after launch.',
     },
   ],
   trustHeading: 'Built for Growing Local Businesses Across Central Florida',
@@ -41,7 +41,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer ongoing website maintenance?',
-      a: 'Yes. Our Website Care plan handles content updates, link and form checks, image swaps, and a monthly review starting at $99/month.',
+      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, link and form checks, image swaps, and a monthly review.',
     },
     {
       q: 'Can you create visuals for Google Business Profile and Facebook?',

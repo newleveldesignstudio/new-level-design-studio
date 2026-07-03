@@ -41,7 +41,6 @@ type NavItem = {
   dropdown link paths below:
     Website Build  → '/services/website-build'
     Website Care   → '/services/website-care'
-    Visual Content → '/services/visual-content'
     Brand Direction→ '/services/brand-direction'
 */
 
@@ -54,10 +53,10 @@ const navItems: NavItem[] = [
       title: 'Services',
       description: 'Core ways we help local businesses improve their online presence.',
       links: [
-        { label: 'Website Build', path: '/services', description: 'Professional websites built for clarity, trust, and action.' },
-        { label: 'Website Care', path: '/services', description: 'Monthly support, edits, checks, and maintenance after launch.' },
-        { label: 'Visual Content', path: '/services', description: 'Branded graphics, launch visuals, and short-form content systems.' },
+        { label: 'Website Design', path: '/services', description: 'Professional websites built for clarity, trust, and action.' },
+        { label: 'Website Care', path: '/services', description: 'Ongoing website quality, visibility, and trust management.' },
         { label: 'Brand Direction', path: '/services', description: 'Visual identity support for businesses that need a sharper presentation.' },
+        { label: 'Brand & Content Support', path: '/services', description: 'Branded graphics, launch assets, and supporting content that keep your business consistent.' },
       ],
     },
   },
@@ -130,6 +129,8 @@ export default function Navigation() {
   const [openMobileAccordion, setOpenMobileAccordion] = useState<string | null>(null);
   const dropdownTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dropdownRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
   useNavScroll(100);
   const location = useLocation();
   const shouldReduceMotion = useReducedMotion();
@@ -161,6 +162,34 @@ export default function Navigation() {
       if (dropdownTimer.current) clearTimeout(dropdownTimer.current);
     };
   }, []);
+
+  /* Trap Tab focus within the mobile menu overlay so it can't leak into
+     hidden page content behind it (the overlay covers the page visually
+     but does not remove it from tab order on its own) */
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleTrap = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      const toggle = menuToggleRef.current;
+      const panel = mobileMenuRef.current;
+      if (!toggle || !panel) return;
+      const panelFocusable = Array.from(
+        panel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')
+      ).filter((el) => el.offsetParent !== null);
+      const focusable = [toggle, ...panelFocusable];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', handleTrap);
+    return () => document.removeEventListener('keydown', handleTrap);
+  }, [menuOpen]);
 
   /* Escape key closes dropdowns and mobile menu */
   useEffect(() => {
@@ -442,6 +471,7 @@ export default function Navigation() {
 
           {/* Mobile Hamburger */}
           <button
+            ref={menuToggleRef}
             className="xl:hidden flex flex-col justify-center items-center focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
             style={{ width: 32, height: 32, gap: 6 }}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -483,6 +513,7 @@ export default function Navigation() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            ref={mobileMenuRef}
             className="fixed inset-0 z-40 overflow-auto"
             style={{ backgroundColor: 'var(--bg-main)' }}
             variants={shouldReduceMotion ? undefined : menuOverlay}

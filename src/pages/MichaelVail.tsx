@@ -312,8 +312,7 @@ export default function MichaelVail() {
                   className="font-sans"
                   style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', color: 'var(--muted-text)', lineHeight: 1.75 }}
                 >
-                  I knew I could help. So I built New Level Design Studio to deliver premium websites,
-                  visuals, and content systems with strategy and personal attention behind every detail.
+                  I knew I could help. So I built New Level Design Studio to deliver premium websites, clearer brand direction, and the ongoing care that keeps it all working — with strategy and personal attention behind every detail.
                 </p>
               </div>
             </div>
@@ -491,8 +490,7 @@ export default function MichaelVail() {
                 className="font-sans mt-5"
                 style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65 }}
               >
-                A focused process for creating premium websites, visuals, and content systems that help
-                local businesses grow and stand out.
+                A focused process for building premium websites and brand systems that help local businesses grow, get found, and stand out.
               </p>
             </div>
 
@@ -588,8 +586,8 @@ export default function MichaelVail() {
             <Link to="/contact" className="btn-primary w-full sm:w-auto text-center">
               Get a Free Website Review
             </Link>
-            <Link to="/contact" className="btn-secondary w-full sm:w-auto text-center">
-              Discuss Your Project
+            <Link to="/works" className="btn-secondary w-full sm:w-auto text-center">
+              View Our Work
             </Link>
           </div>
         </div>

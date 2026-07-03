@@ -267,10 +267,10 @@ export default function Contact() {
                       <option value="business-website">Business Website</option>
                       <option value="website-redesign">Website Redesign</option>
                       <option value="visual-starter-pack">Visual Starter Pack</option>
-                      <option value="website-maintenance">Website Maintenance</option>
+                      <option value="website-maintenance">Website Care</option>
                       <option value="local-seo">Local SEO / Website Structure</option>
                       <option value="branding">Branding / Visual Direction</option>
-                      <option value="short-form-content">Short-Form Content</option>
+                      <option value="short-form-content">Short-Form Video — Custom Project</option>
                       <option value="not-sure">Not Sure Yet</option>
                     </select>
                     {formData.service === 'website-review' && (
@@ -397,7 +397,7 @@ export default function Contact() {
                   New Level Design Studio
                 </p>
                 <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                  Websites, brand visuals, local SEO structure, and website care for local businesses across Volusia County.
+                  Websites, brand direction, local SEO structure, and website care for local businesses across Volusia County.
                 </p>
                 <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
                   I'll get back to you as soon as possible.

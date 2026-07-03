@@ -1,24 +1,16 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 import { Link } from 'react-router-dom';
-import FramedImage from '@/components/FramedImage';
 import SEO from '@/components/SEO';
 import './Packages.css';
 
-const tabs = [
-  { id: 'panel-website', label: 'Website', num: '01' },
-  { id: 'panel-images', label: 'Visuals', num: '02' },
-  { id: 'panel-video', label: 'Video', num: '03' },
-  { id: 'panel-branding', label: 'Branding', num: '04' },
-];
-
 const faqs = [
   {
-    q: 'Which package should I start with?',
-    a: 'If your business needs a stronger first impression online, start with a website package. If your website is already solid, visuals, video, or brand identity packages can help strengthen your content and promotion.',
+    q: 'Which website package should I start with?',
+    a: 'If your business needs a fast, credible first impression, start with Starter Website ($499). If you need stronger service pages, local SEO structure, and a clearer path from visitor to inquiry, Core Website ($899) is the right fit. Pro Website ($1,499) is for businesses that want a complete, conversion-focused web presence with full service pages, stronger SEO structure, and launch-ready polish.',
   },
   {
     q: 'Can packages be customized?',
@@ -38,21 +30,19 @@ const faqs = [
   },
   {
     q: 'What does "SEO" mean in each package?',
-    a: 'Website packages include on-page SEO work at different levels. Starter ($499) includes basic SEO structure — page titles, meta descriptions, and header tags. Growth ($899) adds local SEO-friendly structure — location-targeted pages and service area copy. Premium ($1,499) includes full SEO-ready structure — schema markup, optimized page hierarchy, and content built to rank locally. None of these are SEO management services — they are one-time structural setups included at launch.',
+    a: 'Website packages include on-page SEO work at different levels. Starter Website ($499) includes basic SEO structure — page titles, meta descriptions, and header tags. Core Website ($899) adds local SEO-friendly structure — location-targeted pages and service area copy. Pro Website ($1,499) includes full SEO-ready structure — schema markup, optimized page hierarchy, and content built to rank locally. None of these are SEO management services — they are one-time structural setups included at launch.',
   },
   {
     q: 'Do you guarantee search engine rankings?',
-    a: 'No. No website package can guarantee rankings. Search engines determine results based on many factors outside any studio\'s control. What we can do is build your site correctly — fast, structured, and locally optimized — so it has the best technical foundation for local search.',
+    a: "No. No website package can guarantee rankings. Search engines determine results based on many factors outside any studio's control. What we can do is build your site correctly — fast, structured, and locally optimized — so it has the best technical foundation for local search.",
   },
 ];
 
 export default function Packages() {
-  const [activeTab, setActiveTab] = useState('panel-website');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const pageRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
+  const packagesRef = useRef<HTMLDivElement>(null);
 
   // Word animation
   useEffect(() => {
@@ -66,24 +56,6 @@ export default function Packages() {
     }, 100);
     return () => clearTimeout(timer);
   }, []);
-
-  // Pill positioning
-  const movePill = useCallback((index: number) => {
-    const track = trackRef.current;
-    const btn = tabRefs.current[index];
-    if (!track || !btn) return;
-    const trackRect = track.getBoundingClientRect();
-    const btnRect = btn.getBoundingClientRect();
-    const x = btnRect.left - trackRect.left;
-    const w = btnRect.width;
-    track.style.setProperty('--pill-x', `${x + 4}px`);
-    track.style.setProperty('--pill-w', `${w - 8}px`);
-  }, []);
-
-  useEffect(() => {
-    const activeIndex = tabs.findIndex((t) => t.id === activeTab);
-    requestAnimationFrame(() => movePill(activeIndex));
-  }, [activeTab, movePill]);
 
   // Fade-in observer
   useEffect(() => {
@@ -100,20 +72,9 @@ export default function Packages() {
       },
       { threshold: 0.08 }
     );
-
     pageRef.current?.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [activeTab]);
-
-  // Resize handler for pill
-  useEffect(() => {
-    const handleResize = () => {
-      const activeIndex = tabs.findIndex((t) => t.id === activeTab);
-      movePill(activeIndex);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [activeTab, movePill]);
+  }, []);
 
   // FAQ reveal
   useEffect(() => {
@@ -145,9 +106,9 @@ export default function Packages() {
     return () => ctx.revert();
   }, []);
 
-  // Package card reveal on tab change
+  // Package card reveal on scroll
   useEffect(() => {
-    const panel = document.getElementById(activeTab);
+    const panel = document.getElementById('panel-website');
     if (!panel) return;
 
     const cards = panel.querySelectorAll('.tc');
@@ -166,47 +127,31 @@ export default function Packages() {
           duration: 0.8,
           stagger: 0.1,
           ease: 'power3.out',
-          delay: 0.15,
+          scrollTrigger: {
+            trigger: panel,
+            start: 'top 80%',
+            once: true,
+          },
         }
       );
     }, panel);
 
     return () => ctx.revert();
-  }, [activeTab]);
-
-  const handleTabClick = (index: number) => {
-    setActiveTab(tabs[index].id);
-  };
-
-  const handleTabKeyDown = (e: React.KeyboardEvent, index: number) => {
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      const next = (index + 1) % tabs.length;
-      setActiveTab(tabs[next].id);
-      tabRefs.current[next]?.focus();
-    } else if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      const prev = (index - 1 + tabs.length) % tabs.length;
-      setActiveTab(tabs[prev].id);
-      tabRefs.current[prev]?.focus();
-    }
-  };
+  }, []);
 
   const handleFaqClick = (index: number) => {
     setOpenFaq((prev) => (prev === index ? null : index));
   };
 
-  const scrollToTabs = () => {
-    setActiveTab('panel-website');
-    const el = document.getElementById('panel-website');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const scrollToPackages = () => {
+    packagesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
     <div className="packages-page" ref={pageRef}>
       <SEO
-        title="Website, Visual & Video Packages | New Level Design Studio"
-        description="Website, visual, video, branding, and care packages for local businesses ready to improve their online presence."
+        title="Website Packages for Local Businesses | New Level Design Studio"
+        description="Website design packages for local businesses in Port Orange, Daytona Beach, and Volusia County. Starter, Core, and Pro builds starting at $499."
         canonical="https://newlvlstudio.com/packages"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -218,6 +163,7 @@ export default function Packages() {
           })),
         }}
       />
+
       {/* Hero */}
       <section className="hero">
         <div className="hero-inner">
@@ -229,7 +175,7 @@ export default function Packages() {
           </p>
 
           <h1 className="hero-heading">
-            <span className="word-animate" data-delay="300">Packages built for</span>
+            <span className="word-animate" data-delay="300">Websites built for</span>
             <br />
             <em>
               <span className="word-animate" data-delay="500">local businesses</span>
@@ -239,8 +185,8 @@ export default function Packages() {
           </h1>
 
           <p className="hero-sub">
-            Premium websites, branding, visuals, and short-form content for businesses in Port Orange,
-            Daytona Beach, Volusia County, and Central Florida.
+            Premium websites for businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida
+            — built to convert visitors into real customer inquiries.
           </p>
 
           <p className="hero-local">Port Orange • Daytona Beach • Volusia County • Central Florida</p>
@@ -249,64 +195,43 @@ export default function Packages() {
             <Link to="/contact" className="hero-cta-primary">
               Get a Free Website Review
             </Link>
-            <button onClick={scrollToTabs} className="hero-cta-secondary">
+            <button onClick={scrollToPackages} className="hero-cta-secondary">
               View Packages
             </button>
           </div>
         </div>
       </section>
 
-      {/* Support Image */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '40px 0 90px' }}>
-        <div className="container-nlds">
-          <FramedImage
-            src="/images/packages-support.jpg"
-            alt="Packages built for local businesses"
-            aspectRatio="16/9"
-          />
+      {/* Package Overview */}
+      <section className="pkg-overview">
+        <div className="pkg-overview-inner fade-in">
+          <h2 className="pkg-overview-heading">
+            Packages built for businesses ready to make a stronger first impression online.
+          </h2>
+          <p className="pkg-overview-sub">
+            Websites, brand-aligned design, and launch support — built for local businesses in Port Orange, Daytona Beach, and Volusia County.
+          </p>
         </div>
       </section>
 
-      {/* Tab Nav */}
-      <nav className="tab-nav">
-        <div className="tab-nav-inner">
-          <div className="tab-pill-track" ref={trackRef}>
-            {tabs.map((tab, i) => (
-              <button
-                key={tab.id}
-                ref={(el) => { tabRefs.current[i] = el; }}
-                className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
-                onClick={() => handleTabClick(i)}
-                onKeyDown={(e) => handleTabKeyDown(e, i)}
-                aria-selected={activeTab === tab.id}
-                role="tab"
-              >
-                <span className="tab-num">{tab.num}</span>
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
-
-      {/* Guide */}
+      {/* Package Overview / Guide */}
       <section className="bg fade-in">
-        <h2 className="bg-heading">Which package should you choose?</h2>
+        <h2 className="bg-heading">Which website package is right for your business?</h2>
         <p className="bg-intro">
-          Not every business needs the same creative level. Use this guide to find the right starting
-          point.
+          Every NLDS website is custom-built and mobile-first. Choose the level that fits where your
+          business is now — and where it needs to go.
         </p>
 
         <div className="gg">
           {[
-            { gn: 'Need a professional website fast', ga: '→ Starter Website' },
-            { gn: 'Need a stronger site that builds trust', ga: '→ Growth Website' },
-            { gn: 'Need a premium conversion-focused presence', ga: '→ Premium Presence' },
-            { gn: 'Need better branded visuals', ga: '→ Business Starter Pack or Core Visual' },
-            { gn: 'Need launch or promotion assets', ga: '→ Pro Campaign' },
-            { gn: 'Need short-form content', ga: '→ Starter Video or Professional Video' },
-            { gn: 'Need a full brand foundation', ga: '→ Brand Identity or Brand Launch' },
-            { gn: 'Need ongoing support', ga: '→ Ongoing Website Support or Monthly Content' },
+            { gn: 'Need a professional website fast', ga: '→ Starter Website ($499)' },
+            { gn: 'Need stronger service pages and local SEO structure', ga: '→ Core Website ($899)' },
+            { gn: 'Need a full, conversion-focused web presence', ga: '→ Pro Website ($1,499)' },
+            { gn: 'Need ongoing support after launch', ga: '→ Website Care ($99/mo)' },
+            { gn: 'Need an extra service or location page', ga: '→ Additional Service/Location Page' },
+            { gn: 'Need Google Business Profile setup', ga: '→ GBP Optimization add-on' },
+            { gn: 'Need help writing your website copy', ga: '→ Full Website Copywriting add-on' },
+            { gn: 'Need booking systems, portals, or custom features', ga: '→ Advanced Functionality (custom quote)' },
           ].map((item, i) => (
             <div className="gc" key={i}>
               <div>
@@ -318,8 +243,8 @@ export default function Packages() {
         </div>
       </section>
 
-      {/* Panel: Website */}
-      <div className={`pnl ${activeTab === 'panel-website' ? 'active' : ''}`} id="panel-website">
+      {/* Package Cards */}
+      <div ref={packagesRef} id="panel-website" className="pnl active">
         <div className="si">
           <h2>Website Packages</h2>
           <p>
@@ -343,24 +268,12 @@ export default function Packages() {
             </div>
             <div className="crl" />
             <ul className="fl">
-              <li>
-                <span className="ck" />1-page premium website
-              </li>
-              <li>
-                <span className="ck" />Mobile-responsive layout
-              </li>
-              <li>
-                <span className="ck" />Brand-aligned design
-              </li>
-              <li>
-                <span className="ck" />Essential service sections
-              </li>
-              <li>
-                <span className="ck" />Contact section
-              </li>
-              <li>
-                <span className="ck" />Basic SEO structure
-              </li>
+              <li><span className="ck" />1-page premium website</li>
+              <li><span className="ck" />Mobile-responsive layout</li>
+              <li><span className="ck" />Brand-aligned design</li>
+              <li><span className="ck" />Essential service sections</li>
+              <li><span className="ck" />Contact section</li>
+              <li><span className="ck" />Basic SEO structure</li>
             </ul>
             <Link to="/contact" className="cc outline">
               Start with Starter
@@ -370,7 +283,7 @@ export default function Packages() {
           <div className="tc featured">
             <div className="cbd">Most Popular</div>
             <div className="ti">02</div>
-            <div className="tn">Growth Website</div>
+            <div className="tn">Core Website</div>
             <p className="tbf">Best for established local businesses that need stronger service pages, local SEO structure, and a clearer path from visitor to inquiry.</p>
             <div className="pb">
               <div className="pd">
@@ -380,33 +293,21 @@ export default function Packages() {
             </div>
             <div className="crl" />
             <ul className="fl">
-              <li>
-                <span className="ck" />Multi-section website
-              </li>
-              <li>
-                <span className="ck" />Homepage plus key service/content sections
-              </li>
-              <li>
-                <span className="ck" />Refined visual direction
-              </li>
-              <li>
-                <span className="ck" />Mobile-responsive design
-              </li>
-              <li>
-                <span className="ck" />Local SEO-friendly structure
-              </li>
-              <li>
-                <span className="ck" />Contact-focused conversion flow
-              </li>
+              <li><span className="ck" />Multi-section website</li>
+              <li><span className="ck" />Homepage plus key service/content sections</li>
+              <li><span className="ck" />Refined visual direction</li>
+              <li><span className="ck" />Mobile-responsive design</li>
+              <li><span className="ck" />Local SEO-friendly structure</li>
+              <li><span className="ck" />Contact-focused conversion flow</li>
             </ul>
             <Link to="/contact" className="cc primary">
-              Build a Growth Site
+              Build a Core Site
             </Link>
           </div>
 
           <div className="tc">
             <div className="ti">03</div>
-            <div className="tn">Premium Presence</div>
+            <div className="tn">Pro Website</div>
             <p className="tbf">Best for businesses wanting a complete web presence — full service pages, local SEO structure, conversion architecture, and launch-ready polish.</p>
             <div className="pb">
               <div className="pd" style={{ fontSize: 'clamp(48px,6vw,72px)' }}>
@@ -416,621 +317,183 @@ export default function Packages() {
             </div>
             <div className="crl" />
             <ul className="fl">
-              <li>
-                <span className="ck" />Larger multi-page website structure
-              </li>
-              <li>
-                <span className="ck" />Premium editorial layout system
-              </li>
-              <li>
-                <span className="ck" />Stronger conversion strategy
-              </li>
-              <li>
-                <span className="ck" />Service area positioning
-              </li>
-              <li>
-                <span className="ck" />SEO-ready page structure
-              </li>
-              <li>
-                <span className="ck" />Launch-ready polish
-              </li>
+              <li><span className="ck" />Larger multi-page website structure</li>
+              <li><span className="ck" />Premium editorial layout system</li>
+              <li><span className="ck" />Stronger conversion strategy</li>
+              <li><span className="ck" />Service area positioning</li>
+              <li><span className="ck" />SEO-ready page structure</li>
+              <li><span className="ck" />Launch-ready polish</li>
             </ul>
             <Link to="/contact" className="cc outline">
-              Go Premium
+              Go Pro
             </Link>
           </div>
         </div>
 
         <div className="sales-line fade-in">
-          <strong>Starter</strong> gets you online. <strong>Growth</strong> strengthens credibility.{" "}
-          <strong>Premium</strong> gives your business a sharper web presence built around trust, clarity,
+          <strong>Starter</strong> gets you online. <strong>Core</strong> strengthens credibility.{' '}
+          <strong>Pro</strong> gives your business a sharper web presence built around trust, clarity,
           and action.
         </div>
+      </div>
 
-        <p className="sl" style={{ marginTop: 48 }}>
-          Ongoing Website Support
-        </p>
-
-        <div className="rc fade-in">
-          <div>
-            <p className="re">Ongoing Website Support</p>
-            <h3 className="rt">Website Maintenance</h3>
-            <p className="rd">
-              Ongoing support for small updates, checks, and basic site care after launch.
-            </p>
-
-            <div className="rf">
-              <span className="rft">
-                <span className="ck-s" />Small monthly content edits
-              </span>
-              <span className="rft">
-                <span className="ck-s" />Link and layout checks
-              </span>
-              <span className="rft">
-                <span className="ck-s" />Basic performance review
-              </span>
-              <span className="rft">
-                <span className="ck-s" />Priority support
-              </span>
-              <span className="rft">
-                <span className="ck-s" />Peace-of-mind upkeep
-              </span>
-            </div>
-
-            <Link to="/contact" className="rct">
-              Add Ongoing Website Support
-            </Link>
-          </div>
-
-          <div className="retainer-pb">
-            <div className="rpr">
-              <span className="retainer-psy">$</span>99
-            </div>
-            <p className="rpd">per month</p>
-          </div>
-        </div>
-
-        <p className="sl">Website Add-ons</p>
-
-        <div className="addons-row fade-in">
-          <div className="bar-grid cols-4" style={{ marginBottom: 24 }}>
+      {/* What Every NLDS Website Includes */}
+      <section className="includes-section">
+        <div className="includes-inner">
+          <p className="sl">Standard on every build</p>
+          <h2 className="includes-heading">What Every NLDS Website Includes</h2>
+          <p className="includes-sub">
+            Regardless of which package you choose, every website we build is held to the same quality standard.
+          </p>
+          <div className="includes-grid fade-in">
             {[
-              { label: 'Extra Page', detail: 'Additional website page', price: '$150–$250' },
-              { label: 'Landing Page', detail: 'Standalone conversion page', price: '$299–$499' },
-              { label: 'Basic SEO Setup', detail: 'Metadata and page structure', price: '$199+' },
-              { label: 'Google Business Profile Cleanup', detail: 'Profile polish and updates', price: '$149+' },
+              { label: 'Custom, brand-aligned design', desc: 'Every page built around your brand — not a template with your name swapped in.' },
+              { label: 'Mobile-responsive layout', desc: 'Structured to look and work correctly on every screen size from phone to desktop.' },
+              { label: 'Clear service and navigation structure', desc: 'Visitors know what you offer and how to contact you within seconds of arriving.' },
+              { label: 'Contact forms and tap-to-call paths', desc: 'Working inquiry forms and phone links so customers can reach you on any device.' },
+              { label: 'Basic metadata and on-page SEO', desc: 'Page titles, meta descriptions, and header tags set correctly for every page at launch.' },
+              { label: 'Sitemap configuration', desc: 'XML sitemap generated and configured so search engines can crawl and index your pages.' },
+              { label: 'Search Console and Bing verification', desc: 'Google Search Console and Bing Webmaster Tools connected and verified at launch.' },
+              { label: 'Mobile and desktop quality assurance', desc: 'Full QA pass across multiple devices and browsers before your site goes live.' },
+              { label: 'Launch support', desc: 'We stay with you through go-live to make sure everything deploys cleanly and works correctly.' },
             ].map((item, i) => (
-              <div className="bar-item" key={i}>
+              <div className="includes-item" key={i}>
+                <span className="ck" style={{ marginTop: 3 }} />
                 <div>
-                  <div className="bar-label">{item.label}</div>
-                  <div className="bar-detail">{item.detail}</div>
+                  <div className="includes-label">{item.label}</div>
+                  <div className="includes-desc">{item.desc}</div>
                 </div>
-                <div className="bar-price-sm">{item.price}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bar-grid cols-4">
-            {[
-              { label: 'Copywriting Upgrade', detail: 'Sharper headlines and page copy', price: '$250+' },
-              { label: 'Image Package', detail: 'Custom branded visuals', price: 'from $249' },
-              { label: 'Video Package', detail: 'Short-form content support', price: 'from $349' },
-              { label: 'Monthly Content', detail: 'Ongoing content support', price: 'Custom' },
-            ].map((item, i) => (
-              <div className="bar-item" key={i}>
-                <div>
-                  <div className="bar-label">{item.label}</div>
-                  <div className="bar-detail">{item.detail}</div>
-                </div>
-                <div className="bar-price-sm">{item.price}</div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Panel: Visuals */}
-      <div className={`pnl ${activeTab === 'panel-images' ? 'active' : ''}`} id="panel-images">
-        <div className="si">
-          <h2>Visual Packages</h2>
-          <p>
-            For businesses that need stronger social media visuals, service graphics, launch content,
-            or branded promotional assets.
+      {/* The First 90 Days */}
+      <section className="ninety-section">
+        <div className="ninety-inner">
+          <p className="sl">Post-launch support</p>
+          <h2 className="ninety-heading">The First 90 Days</h2>
+          <p className="ninety-sub">
+            Every NLDS website includes structured post-launch support. The level scales with your package
+            so you're not left on your own after launch day.
           </p>
-        </div>
-
-        <p className="sl">Per-Project Packages</p>
-
-        <div className="tg">
-          <div className="tc">
-            <div className="ti">01</div>
-            <div className="tn">Business Starter Pack</div>
-            <p className="tbf">A clean starter set for businesses that need stronger visuals fast.</p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>129
-              </div>
-              <div className="pnt">Starting at · per project</div>
+          <div className="ninety-grid">
+            <div className="tc fade-in">
+              <div className="ti">01</div>
+              <div className="tn">Starter Website</div>
+              <div className="ninety-duration">Essential 90-Day Support</div>
+              <div className="crl" />
+              <ul className="fl">
+                <li><span className="ck" />Google Search Console verification</li>
+                <li><span className="ck" />Bing Webmaster Tools verification</li>
+                <li><span className="ck" />Sitemap monitoring</li>
+                <li><span className="ck" />Contact form testing</li>
+                <li><span className="ck" />Mobile quality assurance</li>
+              </ul>
             </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Starter visual asset set
-              </li>
-              <li>
-                <span className="ck" />Branded graphics
-              </li>
-              <li>
-                <span className="ck" />Social-ready sizing
-              </li>
-              <li>
-                <span className="ck" />Clean NLDS-aligned polish
-              </li>
-            </ul>
-            <Link to="/contact" className="cc outline">
-              Start Visuals
-            </Link>
-          </div>
 
-          <div className="tc featured">
-            <div className="cbd">Most Popular</div>
-            <div className="ti">02</div>
-            <div className="tn">Core Visual</div>
-            <p className="tbf">A stronger visual set for businesses that need more variety and polish.</p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>249
-              </div>
-              <div className="pnt">Starting at · per project</div>
+            <div className="tc featured fade-in">
+              <div className="ti">02</div>
+              <div className="tn">Core Website</div>
+              <div className="ninety-duration" style={{ color: 'var(--blue-dolphin)' }}>Expanded 90-Day Support</div>
+              <div className="crl" />
+              <ul className="fl">
+                <li><span className="ck" />Everything in Starter, plus:</li>
+                <li><span className="ck" />Analytics review</li>
+                <li><span className="ck" />Google Business Profile alignment</li>
+                <li><span className="ck" />Content recommendations</li>
+                <li><span className="ck" />Conversion-path review</li>
+              </ul>
             </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Expanded visual asset set
-              </li>
-              <li>
-                <span className="ck" />Multiple content placements
-              </li>
-              <li>
-                <span className="ck" />Stronger layout variation
-              </li>
-              <li>
-                <span className="ck" />Campaign-ready styling
-              </li>
-            </ul>
-            <Link to="/contact" className="cc primary">
-              Choose Core Visual
-            </Link>
-          </div>
 
-          <div className="tc">
-            <div className="ti">03</div>
-            <div className="tn">Pro Campaign</div>
-            <p className="tbf">
-              For launches, offers, promotions, and businesses that need a complete campaign look.
-            </p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>449
-              </div>
-              <div className="pnt">Starting at · per project</div>
+            <div className="tc fade-in">
+              <div className="ti">03</div>
+              <div className="tn">Pro Website</div>
+              <div className="ninety-duration">Complete 90-Day Support</div>
+              <div className="crl" />
+              <ul className="fl">
+                <li><span className="ck" />Everything in Core, plus:</li>
+                <li><span className="ck" />Review strategy</li>
+                <li><span className="ck" />Deeper conversion review</li>
+                <li><span className="ck" />Service-page recommendations</li>
+                <li><span className="ck" />Post-launch visibility review</li>
+              </ul>
             </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Full promotional visual package
-              </li>
-              <li>
-                <span className="ck" />Multiple platform-ready assets
-              </li>
-              <li>
-                <span className="ck" />Stronger campaign direction
-              </li>
-              <li>
-                <span className="ck" />Premium launch presentation
-              </li>
-            </ul>
-            <Link to="/contact" className="cc outline">
-              Build a Campaign
-            </Link>
           </div>
         </div>
+      </section>
 
-        <p className="sl">Monthly Content Retainer</p>
+      {/* Website Care */}
+      <section className="website-care-section">
+        <div className="website-care-inner">
+          <p className="sl">Website Care</p>
+          <h2 className="care-primary-heading">
+            ONGOING WEBSITE QUALITY,<br />VISIBILITY, AND TRUST MANAGEMENT
+          </h2>
+          <div className="rc fade-in" style={{ marginTop: 40 }}>
+            <div>
+              <p className="re">Website Care</p>
+              <h3 className="rt">Keep your website sharp after launch.</h3>
+              <p className="rd">
+                Most websites start strong and quietly fall behind — outdated content, broken links, slow load times,
+                and a presence that no longer reflects the business. Website Care keeps yours current, polished,
+                and working for you every month.
+              </p>
 
-        <div className="rc fade-in">
-          <div>
-            <p className="re">Content Partner</p>
-            <h3 className="rt">Monthly Content Retainer</h3>
-            <p className="rd">
-              For businesses that want consistent branded visuals and content support each month.
-            </p>
+              <div className="rf">
+                <span className="rft"><span className="ck-s" />Monthly content updates and text edits</span>
+                <span className="rft"><span className="ck-s" />Image swaps and media updates</span>
+                <span className="rft"><span className="ck-s" />Broken link checks and fixes</span>
+                <span className="rft"><span className="ck-s" />Monthly performance review</span>
+                <span className="rft"><span className="ck-s" />Google Business Profile update assistance</span>
+                <span className="rft"><span className="ck-s" />Priority email support</span>
+                <span className="rft"><span className="ck-s" />Peace-of-mind site upkeep</span>
+              </div>
 
-            <div className="rf">
-              <span className="rft">
-                <span className="ck-s" />Monthly content planning
-              </span>
-              <span className="rft">
-                <span className="ck-s" />Branded visual assets
-              </span>
-              <span className="rft">
-                <span className="ck-s" />Social media-ready creative
-              </span>
-              <span className="rft">
-                <span className="ck-s" />Priority creative support
-              </span>
+              <Link to="/contact" className="rct">
+                Add Website Care
+              </Link>
             </div>
 
-            <Link to="/contact" className="rct">
-              Ask About Monthly Content
-            </Link>
-          </div>
-
-          <div className="retainer-pb">
-            <div className="rpr">
-              <span className="retainer-psy">$</span>399
+            <div className="retainer-pb">
+              <div className="rpr">
+                <span className="retainer-psy">$</span>99
+              </div>
+              <p className="rpd">per month</p>
             </div>
-            <p className="rpd">per month</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Panel: Video */}
-      <div className={`pnl ${activeTab === 'panel-video' ? 'active' : ''}`} id="panel-video">
-        <div className="si">
-          <h2>Short-Form Video Packages</h2>
-          <p>
-            Video packages for businesses that need polished vertical content for social media,
-            websites, and ads.
+      {/* Website Add-ons */}
+      <section className="addons-section">
+        <div className="addons-section-inner">
+          <p className="sl">Expand your website</p>
+          <h2 className="addons-section-heading">Website Add-ons</h2>
+          <p className="addons-section-sub">
+            Bolt-on enhancements available with any website package.
           </p>
-        </div>
-
-        <p className="sl">Main Packages</p>
-
-        <div className="tg">
-          <div className="tc">
-            <div className="ti">01</div>
-            <div className="tn">Starter Video</div>
-            <p className="tbf">
-              A focused short-form video for one service, offer, product, or brand moment.
-            </p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>199
-              </div>
-              <div className="pnt">Per project</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Short-form video concept
-              </li>
-              <li>
-                <span className="ck" />Edited vertical video
-              </li>
-              <li>
-                <span className="ck" />Social-ready format
-              </li>
-            </ul>
-            <Link to="/contact" className="cc outline">
-              Start Video Package
-            </Link>
-          </div>
-
-          <div className="tc featured">
-            <div className="cbd">Best Value</div>
-            <div className="ti">02</div>
-            <div className="tn">Professional Video</div>
-            <p className="tbf">
-              A more polished video package with stronger pacing and concept direction.
-            </p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>349
-              </div>
-              <div className="pnt">Per project</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Stronger concept direction
-              </li>
-              <li>
-                <span className="ck" />More polished edit
-              </li>
-              <li>
-                <span className="ck" />Better hook and pacing
-              </li>
-              <li>
-                <span className="ck" />Platform-ready delivery
-              </li>
-            </ul>
-            <Link to="/contact" className="cc primary">
-              Choose Professional Video
-            </Link>
-          </div>
-
-          <div className="tc">
-            <div className="ti">03</div>
-            <div className="tn">Monthly Video</div>
-            <p className="tbf">
-              Ongoing short-form support for businesses that want consistent motion content.
-            </p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>399<span className="price-mo">/mo</span>
-              </div>
-              <div className="pnt">Ongoing content</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Ongoing short-form video support
-              </li>
-              <li>
-                <span className="ck" />Monthly video content
-              </li>
-              <li>
-                <span className="ck" />Consistent creative direction
-              </li>
-            </ul>
-            <Link to="/contact" className="cc outline">
-              Ask About Monthly Video
-            </Link>
-          </div>
-        </div>
-
-        <p className="sl">Short-Form Ad Videos</p>
-
-        <div className="addons-row fade-in">
-          <div className="bar-grid cols-2" style={{ marginBottom: 48 }}>
-            <div className="bar-item">
-              <div>
-                <div className="bar-label">Standard Ad</div>
-                <div className="bar-detail">Short promotional ad video with clear offer structure</div>
-              </div>
-              <div className="bar-price-sm">$179</div>
-            </div>
-            <div className="bar-item">
-              <div>
-                <div className="bar-label">Premium Ad</div>
-                <div className="bar-detail">Higher polish, stronger direction, refined pacing</div>
-              </div>
-              <div className="bar-price-sm">$299</div>
-            </div>
-          </div>
-        </div>
-
-        <p className="sl">Campaign Packages</p>
-
-        <div className="tg" style={{ gridTemplateColumns: '1fr 1.25fr', maxWidth: 760 }}>
-          <div className="tc">
-            <div className="ti">01</div>
-            <div className="tn">Campaign</div>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>249
-              </div>
-              <div className="pnt">Per campaign</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Branded campaign concept
-              </li>
-              <li>
-                <span className="ck" />Promotional creative assets
-              </li>
-              <li>
-                <span className="ck" />Social-ready delivery
-              </li>
-            </ul>
-            <Link to="/contact" className="cc outline">
-              Start Campaign
-            </Link>
-          </div>
-
-          <div className="tc featured">
-            <div className="cbd">Full Campaign</div>
-            <div className="ti">02</div>
-            <div className="tn">Campaign Pro</div>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>449
-              </div>
-              <div className="pnt">Per campaign</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Expanded campaign system
-              </li>
-              <li>
-                <span className="ck" />Multiple asset variations
-              </li>
-              <li>
-                <span className="ck" />Stronger launch presentation
-              </li>
-              <li>
-                <span className="ck" />Premium campaign polish
-              </li>
-            </ul>
-            <Link to="/contact" className="cc primary">
-              Build Campaign Pro
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Panel: Branding */}
-      <div className={`pnl ${activeTab === 'panel-branding' ? 'active' : ''}`} id="panel-branding">
-        <div className="si">
-          <h2>Brand Identity Packages</h2>
-          <p>
-            Brand identity packages for businesses that need a cleaner, sharper visual foundation
-            before building or upgrading their website.
-          </p>
-        </div>
-
-        <p className="sl">Per-Project Packages</p>
-
-        <div className="tg">
-          <div className="tc">
-            <div className="ti">01</div>
-            <div className="tn">Brand Identity</div>
-            <p className="tbf">
-              For businesses that need a clean visual direction and stronger brand foundation.
-            </p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>299
-              </div>
-              <div className="pnt">Per project</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Logo or brand direction refinement
-              </li>
-              <li>
-                <span className="ck" />Core visual style direction
-              </li>
-              <li>
-                <span className="ck" />Basic brand presentation
-              </li>
-            </ul>
-            <Link to="/contact" className="cc outline">
-              Start Brand Identity
-            </Link>
-          </div>
-
-          <div className="tc featured">
-            <div className="cbd">Most Popular</div>
-            <div className="ti">02</div>
-            <div className="tn">Brand Launch</div>
-            <p className="tbf">
-              For businesses preparing to launch, refresh, or present themselves more professionally.
-            </p>
-            <div className="pb">
-              <div className="pd">
-                <span className="psy">$</span>599
-              </div>
-              <div className="pnt">Per project</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Expanded brand direction
-              </li>
-              <li>
-                <span className="ck" />Launch-ready visual system
-              </li>
-              <li>
-                <span className="ck" />Social and website-ready styling
-              </li>
-            </ul>
-            <Link to="/contact" className="cc primary">
-              Build Brand Launch
-            </Link>
-          </div>
-
-          <div className="tc">
-            <div className="ti">03</div>
-            <div className="tn">Full Brand System</div>
-            <p className="tbf">
-              For full rebrands, new launches, or businesses ready for a more complete brand
-              foundation.
-            </p>
-            <div className="pb">
-              <div className="pd" style={{ fontSize: 'clamp(44px,5.5vw,62px)' }}>
-                <span className="psy">$</span>1,299
-              </div>
-              <div className="pnt">Per project</div>
-            </div>
-            <div className="crl" />
-            <ul className="fl">
-              <li>
-                <span className="ck" />Complete visual identity system
-              </li>
-              <li>
-                <span className="ck" />Brand presentation assets
-              </li>
-              <li>
-                <span className="ck" />Web and content direction
-              </li>
-              <li>
-                <span className="ck" />Premium launch-ready polish
-              </li>
-            </ul>
-            <Link to="/contact" className="cc outline">
-              Build Full Brand System
-            </Link>
-          </div>
-        </div>
-
-        <p className="sl">Branding Add-ons</p>
-
-        <div className="addons-row fade-in">
-          <div className="bar-grid cols-4" style={{ marginBottom: 24 }}>
-            {[
-              { label: 'Brand Reveal Video', detail: 'Short reveal asset', price: '$499' },
-              { label: 'Extra Hero Shots', detail: 'Additional brand visuals', price: '$199' },
-              { label: 'Tagline and Copy', detail: 'Messaging support', price: '$129' },
-              { label: 'Extra Mockups', detail: 'Additional presentation assets', price: '$129' },
-            ].map((item, i) => (
-              <div className="bar-item" key={i}>
-                <div>
-                  <div className="bar-label">{item.label}</div>
-                  <div className="bar-detail">{item.detail}</div>
+          <div className="addons-row fade-in">
+            <div className="bar-grid cols-4">
+              {[
+                { label: 'Additional Service or Location Page', detail: 'Extra page targeting a specific service or location', price: 'Custom Quote' },
+                { label: 'Google Business Profile Optimization', detail: 'GBP setup, optimization, and alignment with your website', price: 'Custom Quote' },
+                { label: 'Full Website Copywriting', detail: 'Professional copy written for every page on your site', price: 'Custom Quote' },
+                { label: 'Advanced Functionality', detail: 'Booking systems, portals, calculators, custom integrations', price: 'Custom Quote' },
+              ].map((item, i) => (
+                <div className="bar-item" key={i}>
+                  <div>
+                    <div className="bar-label">{item.label}</div>
+                    <div className="bar-detail">{item.detail}</div>
+                  </div>
+                  <div className="bar-price-sm">{item.price}</div>
                 </div>
-                <div className="bar-price-sm">{item.price}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="dual-bar fade-in">
-          <div>
-            <p className="sl">Rush and Revisions</p>
-            <div className="bar-grid" style={{ gridTemplateColumns: '1fr', gap: 8 }}>
-              <div className="bar-item">
-                <div>
-                  <div className="bar-label">Rush Delivery</div>
-                  <div className="bar-detail">Faster turnaround where available</div>
-                </div>
-                <div className="bar-price-sm">+25%</div>
-              </div>
-              <div className="bar-item">
-                <div>
-                  <div className="bar-label">Extra Revision Round</div>
-                  <div className="bar-detail">Beyond included rounds</div>
-                </div>
-                <div className="bar-price-sm">$75</div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <p className="sl">Ongoing Brand Care</p>
-            <div className="bar-grid" style={{ gridTemplateColumns: '1fr', gap: 8 }}>
-              <div className="bar-item">
-                <div>
-                  <div className="bar-label">Brand Asset Updates</div>
-                  <div className="bar-detail">Small brand asset adjustments</div>
-                </div>
-                <div className="bar-price-sm">$29/mo</div>
-              </div>
-              <div className="bar-item">
-                <div>
-                  <div className="bar-label">Full Rebrand</div>
-                  <div className="bar-detail">Complete identity refresh</div>
-                </div>
-                <div className="bar-price-sm">Custom</div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Built for real business use */}
       <section className="pbnd fade-in">
@@ -1042,9 +505,9 @@ export default function Packages() {
               business use.
             </h2>
             <p className="pc">
-              Every package is designed to help your business look more credible, communicate clearly,
-              and create a better first impression online. The goal is not just to make something look
-              good — it is to make your business easier to trust, understand, and contact.
+              Every website is designed to help your business look more credible, communicate clearly, and
+              create a better first impression online. The goal is not just to make something look good — it
+              is to make your business easier to trust, understand, and contact.
             </p>
           </div>
 
@@ -1053,7 +516,7 @@ export default function Packages() {
             <ul className="tl">
               <li>
                 <span className="ck" />
-                Professional websites, visuals, and content without overcomplicating the process
+                Professional websites built without overcomplicating the process
               </li>
               <li>
                 <span className="ck" />
@@ -1062,7 +525,7 @@ export default function Packages() {
               </li>
               <li>
                 <span className="ck" />
-                Platform-ready assets for websites, social media, Google Business Profile, and ads
+                Mobile-first design, fast performance, and clean local SEO structure
               </li>
               <li>
                 <span className="ck" />
@@ -1101,18 +564,16 @@ export default function Packages() {
         ))}
       </section>
 
-      {/* Care Band */}
+      {/* Final CTA */}
       <section className="care-band">
         <div className="care-band-inner">
           <div className="care-header">
             <h2 className="care-heading">
-              Built to grow
-              <br />
-              with your business.
+              Ready to raise<br />your standard?
             </h2>
             <p className="care-sub">
-              After launch, New Level Design Studio can help with updates, maintenance, new visuals,
-              campaign assets, content refreshes, and future upgrades as your business grows.
+              Tell us about your business and we'll point you toward the right package to start with —
+              no commitment required.
             </p>
           </div>
 
@@ -1120,23 +581,23 @@ export default function Packages() {
             {[
               {
                 num: '01',
-                title: 'Website Updates',
-                desc: 'Small page edits, content updates, image swaps, and routine refinements after launch.',
+                title: 'Free Website Review',
+                desc: "We review your current site and tell you what it's communicating — and what it would take to strengthen it.",
               },
               {
                 num: '02',
-                title: 'Content Refreshes',
-                desc: 'New visuals, promotional assets, and campaign materials as your business changes.',
+                title: 'Package Match',
+                desc: 'We help you identify the right starting point based on your business, goals, and budget.',
               },
               {
                 num: '03',
-                title: 'Brand Support',
-                desc: 'Ongoing brand asset updates, layout adjustments, and presentation polish.',
+                title: 'Clear Scope',
+                desc: 'No surprises. You get an exact scope of work and investment before anything begins.',
               },
               {
                 num: '04',
-                title: 'Future Growth',
-                desc: 'Upgrade your website, expand your content system, or refresh your visuals when your business is ready.',
+                title: 'Launch-Ready',
+                desc: 'We build it, test it, and hand you a website your business can actually be proud of.',
               },
             ].map((item, i) => (
               <div className="care-item fade-in" key={i}>
@@ -1151,7 +612,7 @@ export default function Packages() {
 
           <div style={{ marginTop: 48 }}>
             <Link to="/contact" className="bottom-cta-link">
-              Discuss Your Website
+              Get a Free Website Review
             </Link>
           </div>
         </div>

@@ -18,12 +18,8 @@ export function useLenis() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
 
-    // Temporary debug: add ?nolenis=1 to URL to test ScrollTrigger without Lenis
     const skipLenis = window.location.search.includes('nolenis');
-    if (skipLenis) {
-      console.log('[Lenis] Skipped for debugging — native scroll active');
-      return;
-    }
+    if (skipLenis) return;
 
     const lenis = new Lenis({
       lerp: 0.1,

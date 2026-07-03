@@ -149,7 +149,7 @@ export default function Studio() {
     <div>
       <SEO
         title="About the Studio | New Level Design Studio"
-        description="Learn how New Level Design Studio helps local businesses build credible websites, visuals, and content systems."
+        description="Learn how New Level Design Studio helps local businesses build credible websites, clear brand direction, and ongoing website care."
         canonical="https://newlvlstudio.com/studio"
       />
 
@@ -175,8 +175,8 @@ export default function Studio() {
             style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 560 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            New Level Design Studio is based in Port Orange, Florida. We build websites, brand
-            systems, marketing visuals, and short-form content for local businesses across Volusia
+            New Level Design Studio is based in Port Orange, Florida. We build premium websites,
+            clear brand direction, and supporting content for local businesses across Volusia
             County and Central Florida.
           </motion.p>
         </motion.div>
@@ -348,8 +348,8 @@ export default function Studio() {
               style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.7 }}
             >
               A website is one part of how customers find and evaluate a business. We build
-              the full picture — website, brand visuals, marketing content, and short-form
-              video — so every platform your customers check reflects the same level of quality.
+              the full picture — website, brand direction, supporting content, and ongoing
+              website care — so every platform your customers check reflects the same level of quality.
             </p>
           </div>
         </div>
@@ -370,9 +370,9 @@ export default function Studio() {
                 className="font-sans"
                 style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.7 }}
               >
-                Websites, branding, marketing visuals, and short-form content — the four things
-                that shape how a business looks online. We handle all of it, so your design,
-                content, and presence work together instead of pulling in different directions.
+                Websites, brand direction, and supporting content — what shapes how a business
+                looks online. We handle all of it, so your design, content, and presence work
+                together instead of pulling in different directions.
               </p>
               <Link to="/services" className="btn-secondary mt-8 inline-block">
                 View website and content services

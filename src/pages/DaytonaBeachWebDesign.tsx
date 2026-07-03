@@ -3,7 +3,7 @@ import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
   seoTitle: 'Daytona Beach Website Design | NLDS',
-  seoDescription: 'Premium website design for local businesses in Daytona Beach, Florida. Stand out in a competitive market with clean, mobile-first websites and brand visuals built to convert.',
+  seoDescription: 'Premium website design for local businesses in Daytona Beach, Florida. Clean, mobile-first websites with clear brand direction and ongoing care — built to earn trust and drive real inquiries.',
   canonical: 'https://newlvlstudio.com/daytona-beach-website-design',
   eyebrow: 'Daytona Beach, Florida',
   h1: 'Website Design for Daytona Beach Local Businesses',
@@ -41,7 +41,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. Our Website Care plan covers content updates, image swaps, link checks, and a monthly site review starting at $99/month.',
+      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, image swaps, link checks, and a monthly review.',
     },
     {
       q: 'Can you create visuals for my Google Business Profile and social pages?',

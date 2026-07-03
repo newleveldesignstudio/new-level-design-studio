@@ -27,7 +27,6 @@ const visualContentInclusions = [
   'Branded graphics for web and social',
   'Website visuals and hero imagery',
   'Launch assets and announcement kits',
-  'Short-form video content',
   'Consistent visual direction',
 ];
 
@@ -52,8 +51,8 @@ export default function Services() {
   return (
     <div>
       <SEO
-        title="Website Design, Visuals & Content Services | New Level Design Studio"
-        description="Website design, brand visuals, short-form content, and website care for local businesses that need stronger credibility, visibility, and conversion."
+        title="Website Design & Brand Support Services | NLDS"
+        description="Website Design, Website Care, Brand Direction, and Brand & Content Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/services"
       />
       {/* Hero */}
@@ -71,7 +70,7 @@ export default function Services() {
             style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--charcoal)' }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Websites, Visuals, and Content Built to Raise the Standard.
+            Website Design, Care, and Brand Support Built to Raise the Standard.
           </motion.h1>
           <motion.div className="mt-20" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />
@@ -150,7 +149,7 @@ export default function Services() {
                   Keeps your site from feeling abandoned after launch — small updates, link checks, content swaps, and polish handled for you every month.
                 </p>
                 <Link to="/contact" className="btn-primary mt-8 inline-block">
-                  Ask About Ongoing Website Support
+                  Ask About Website Care
                 </Link>
               </div>
               <div
@@ -194,7 +193,7 @@ export default function Services() {
             {/* Visual Content */}
             <div className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <p className="eyebrow">VISUAL CONTENT</p>
+                <p className="eyebrow">BRAND & CONTENT SUPPORT</p>
                 <h2
                   className="font-serif mt-4"
                   style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
@@ -205,10 +204,10 @@ export default function Services() {
                   className="font-sans mt-5"
                   style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 480 }}
                 >
-                  Professional visuals that make your business look consistent across your website, Facebook, Google profile, and marketing posts — plus short-form content built to stay visible and explain what you do.
+                  Professional visuals that make your business look consistent across your website, Google profile, and marketing posts — brand-aligned graphics, launch assets, and visual direction built to work alongside your website.
                 </p>
                 <Link to="/contact" className="btn-primary mt-8 inline-block">
-                  Plan Your Visual Content
+                  Discuss Brand & Content Support
                 </Link>
               </div>
               <div

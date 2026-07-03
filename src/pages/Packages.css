@@ -278,6 +278,43 @@
   }
 }
 
+.packages-page .pkg-overview {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 48px;
+}
+
+.packages-page .pkg-overview-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.packages-page .pkg-overview-heading {
+  font-family: var(--f-display);
+  font-size: clamp(32px, 4.8vw, 64px);
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--charcoal);
+  line-height: 1.1;
+  max-width: 860px;
+  margin-bottom: 20px;
+}
+
+.packages-page .pkg-overview-sub {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--muted-text);
+  max-width: 540px;
+  line-height: 1.75;
+}
+
+@media(max-width:600px) {
+  .packages-page .pkg-overview {
+    padding: 56px 20px;
+  }
+}
+
 .packages-page .bg {
   padding: 72px 48px 0;
   max-width: 1200px;
@@ -343,6 +380,19 @@
 @media(max-width:600px) {
   .packages-page .bg {
     padding: 48px 20px 0;
+  }
+
+  .packages-page .gg {
+    grid-template-columns: 1fr;
+  }
+
+  .packages-page .gc {
+    padding: 18px 20px;
+  }
+
+  .packages-page .gn,
+  .packages-page .ga {
+    font-size: 14px;
   }
 }
 
@@ -740,11 +790,37 @@
   }
 }
 
+@media(max-width:600px) {
+  .packages-page .bar-grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media(max-width:540px) {
-  .packages-page .bar-grid.cols-4,
   .packages-page .bar-grid.cols-3,
   .packages-page .bar-grid.cols-2 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:600px) {
+  .packages-page .bar-item {
+    padding: 20px 22px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .packages-page .bar-label {
+    font-size: 14px;
+  }
+
+  .packages-page .bar-detail {
+    font-size: 12px;
+  }
+
+  .packages-page .bar-price-sm {
+    font-size: 13px;
   }
 }
 
@@ -1109,4 +1185,237 @@
 .packages-page .sales-line strong {
   color: var(--charcoal);
   font-weight: 700;
+}
+
+/* ── What Every NLDS Website Includes ── */
+.packages-page .includes-section {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 48px 80px;
+}
+
+.packages-page .includes-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.packages-page .includes-heading {
+  font-family: var(--f-display);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--charcoal);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.packages-page .includes-sub {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--muted-text);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+.packages-page .includes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.packages-page .includes-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.packages-page .includes-item:nth-child(odd) {
+  padding-right: 48px;
+  border-right: 1px solid var(--border);
+}
+
+.packages-page .includes-item:nth-child(even) {
+  padding-left: 48px;
+}
+
+.packages-page .includes-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  border-right: 0;
+  padding-right: 0;
+  max-width: 600px;
+}
+
+.packages-page .includes-label {
+  font-family: var(--f-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 3px;
+}
+
+.packages-page .includes-desc {
+  font-family: var(--f-body);
+  font-size: 12px;
+  color: var(--muted-text);
+  line-height: 1.6;
+}
+
+@media(max-width:768px) {
+  .packages-page .includes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .packages-page .includes-item:nth-child(odd) {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .packages-page .includes-item:nth-child(even) {
+    padding-left: 0;
+  }
+}
+
+@media(max-width:600px) {
+  .packages-page .includes-section {
+    padding: 48px 20px 56px;
+  }
+}
+
+/* ── The First 90 Days ── */
+.packages-page .ninety-section {
+  background: var(--bg-main);
+  padding: 72px 48px 80px;
+}
+
+.packages-page .ninety-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.packages-page .ninety-heading {
+  font-family: var(--f-display);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--charcoal);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.packages-page .ninety-sub {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--muted-text);
+  max-width: 580px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+.packages-page .ninety-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.packages-page .ninety-duration {
+  font-family: var(--f-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted-text);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+@media(max-width:900px) {
+  .packages-page .ninety-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+
+@media(max-width:600px) {
+  .packages-page .ninety-section {
+    padding: 48px 20px 56px;
+  }
+}
+
+/* ── Website Care (repositioned) ── */
+.packages-page .website-care-section {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  padding: 72px 48px 80px;
+}
+
+.packages-page .website-care-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.packages-page .care-primary-heading {
+  font-family: var(--f-body);
+  font-size: clamp(20px, 2.6vw, 34px);
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--charcoal);
+  line-height: 1.35;
+  text-transform: uppercase;
+  max-width: 700px;
+  margin-bottom: 8px;
+}
+
+@media(max-width:600px) {
+  .packages-page .care-primary-heading {
+    font-size: clamp(16px, 5vw, 22px);
+    letter-spacing: .07em;
+  }
+}
+
+@media(max-width:600px) {
+  .packages-page .website-care-section {
+    padding: 48px 20px 56px;
+  }
+}
+
+/* ── Website Add-ons (section wrapper) ── */
+.packages-page .addons-section {
+  background: var(--bg-main);
+  border-top: 1px solid var(--border);
+  padding: 72px 48px 80px;
+}
+
+.packages-page .addons-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.packages-page .addons-section-heading {
+  font-family: var(--f-display);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--charcoal);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.packages-page .addons-section-sub {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--muted-text);
+  max-width: 480px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+@media(max-width:600px) {
+  .packages-page .addons-section {
+    padding: 48px 20px 56px;
+  }
 }
