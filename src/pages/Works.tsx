@@ -20,7 +20,6 @@ const filterCategories = [
   'Medical / Wellness',
   'Local Services',
   'Law Firms',
-  'Starter Packs',
 ];
 
 const projects: WorkProject[] = [
@@ -33,11 +32,10 @@ const projects: WorkProject[] = [
     problem: 'Most contractor websites rely on predictable templates — stock imagery, service card grids, and a generic call-to-action. No sense of craftsmanship, no project confidence, no reason to choose one firm over another.',
     solution: 'A cinematic contractor website concept built around full-screen construction video, scroll-driven storytelling, a pinned three-scene narrative, and a premium multi-step consultation flow.',
     deliverables: ['Cinematic full-screen video hero', 'Pinned scroll narrative (Plan · Build · Deliver)', 'Metrics animation', 'Editorial featured project', 'Multi-step consultation form', 'Responsive WebM/MP4 media', 'GSAP + Lenis motion system'],
-    result: 'Concept Build',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'stone-timber-remodeling',
     demoUrl: 'https://stone-timber-remodeling-14f1e213.netlify.app',
-    demoLabel: 'View Live Concept',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
@@ -48,11 +46,10 @@ const projects: WorkProject[] = [
     problem: 'Local BBQ catering and food truck business with an existing online presence that made booking harder than it needed to be — weak catering flow, unclear menu, and no strong mobile conversion path.',
     solution: 'Rebuilt as a local lead-generation website focused on catering inquiries, everyday truck menu visibility, food truck events, mobile usability, local SEO, social proof, and direct contact paths.',
     deliverables: ['Homepage direction', 'Truck menu page', 'Catering inquiry flow', 'Food truck events page', 'Mobile-first layout', 'Local SEO structure'],
-    result: 'BBQ Catering Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'love-handles-bbq',
     demoUrl: 'https://love-handles-bbq-nlds.netlify.app',
-    demoLabel: 'View Live Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/el-taller-2026-restaurant-website-concept-nlds.jpg',
@@ -63,11 +60,10 @@ const projects: WorkProject[] = [
     problem: 'Many local restaurant websites feel outdated, cluttered, or hard to use on mobile. Customers want to quickly understand the food, atmosphere, location, hours, and how to take action.',
     solution: 'Designed a cleaner restaurant website experience with stronger visual hierarchy, clearer menu presentation, premium atmosphere, and direct customer paths for viewing, contacting, or visiting.',
     deliverables: ['Restaurant landing page', 'Mobile-responsive layout', 'Menu presentation', 'Local business positioning'],
-    result: 'Restaurant Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'el-taller-2026',
     demoUrl: 'https://el-taller-2026.netlify.app/',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/ember-oak-coffee-website-concept-nlds.png',
@@ -78,11 +74,10 @@ const projects: WorkProject[] = [
     problem: 'Most local coffee shop websites feel generic, outdated, or limited to a simple menu page. A specialty roaster needs to communicate craft, origin sourcing, café experience, wholesale capability, and ecommerce — all in one polished home.',
     solution: 'A premium coffee shop website concept with a full editorial homepage: hero, product sections, coffee finder, seasonal features, café visit details, wholesale inquiry positioning, journal cards, newsletter, and mobile-first design.',
     deliverables: ['Homepage design', 'Product section structure', 'Café visit section', 'Wholesale inquiry section', 'Journal layout', 'Mobile-responsive build'],
-    result: 'Coffee Shop Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'ember-oak-coffee',
     demoUrl: 'https://ember-oak-coffee-nlds.netlify.app/',
-    demoLabel: 'View Live Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/coastal-roofing-quote-ready-landing-page-case-study-new-level-design-studio.png',
@@ -92,8 +87,8 @@ const projects: WorkProject[] = [
     problem: 'Website was outdated, hard to navigate on mobile, and missing clear paths for visitors to request a quote.',
     solution: 'Built a direct landing page with service breakdown, social proof, and a simple quote request form.',
     deliverables: ['Landing page design', 'Quote form', 'Mobile layout', 'Local SEO structure'],
+    classification: 'Concept Build',
     result: 'Quote-ready layout',
-    isSample: true,
   },
   {
     imageSrc: '/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.png',
@@ -104,11 +99,10 @@ const projects: WorkProject[] = [
     problem: 'Many restaurant websites feel outdated, cluttered, or hard to use on mobile. Customers want to understand the food, vibe, location, and hours without friction.',
     solution: 'A premium restaurant website concept with a polished editorial layout, mobile-first structure, clear menu presentation, and direct paths to customer action.',
     deliverables: ['Restaurant landing page', 'Mobile-responsive layout', 'Menu and location clarity', 'Local business positioning'],
-    result: 'Restaurant Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'la-tequila-2026',
     demoUrl: 'https://la-tequila-2026.netlify.app/',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/the-grass-guys-lawn-care-website-concept-nlds.jpg',
@@ -119,11 +113,10 @@ const projects: WorkProject[] = [
     problem: 'Many local lawn care websites feel generic, outdated, or unclear about what services are offered and how to request a quote. Homeowners want to quickly understand the work, see professionalism, and take action without confusion.',
     solution: 'A clean, quote-focused website with a video-led hero section, clear service breakdowns, and direct calls to action. Built to make the brand feel reliable, approachable, and ready for homeowners looking for dependable lawn care.',
     deliverables: ['Local service landing page', 'Hero video integration', 'Quote-focused CTAs', 'Mobile-responsive layout'],
-    result: 'Lawn Care Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'the-grass-guys',
     demoUrl: 'https://flourishing-taiyaki-d7a1ea.netlify.app/',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/the-best-landscape-2026-landscaping-website-concept-nlds.jpg',
@@ -134,11 +127,10 @@ const projects: WorkProject[] = [
     problem: 'Many landscaping websites feel generic, outdated, or unclear. Potential customers want to understand services, service areas, project quality, and contact options before reaching out.',
     solution: 'A clean local-service layout with strong visual hierarchy, clear service framing, and mobile-first conversion paths built around trust and inquiry generation.',
     deliverables: ['Landscaping landing page', 'Mobile-responsive layout', 'Service presentation', 'Local business positioning'],
-    result: 'Landscaping Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'the-best-landscape-2026',
     demoUrl: 'https://the-best-landscape-2026.netlify.app/',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png',
@@ -149,11 +141,10 @@ const projects: WorkProject[] = [
     problem: 'Many roofing websites feel dated, aggressive, or hard to trust. Homeowners need to quickly understand inspection options, repair and replacement services, storm damage support, financing, and how to request help without pressure.',
     solution: 'A premium roofing landing page concept with a video-led hero, clear inspection CTA, slate and charcoal visual system, service cards, financing and insurance support, local service-area positioning, and mobile-first lead capture.',
     deliverables: ['Roofing landing page', 'Hero video integration', 'Lead form', 'Service-area section', 'Mobile-responsive layout'],
-    result: 'Roofing Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'dh-luxury-roofing',
     demoUrl: 'https://dh-luxury-roofing-nlds.netlify.app/',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png',
@@ -164,11 +155,10 @@ const projects: WorkProject[] = [
     problem: 'Many local law firm websites feel either overly corporate or visually neglected. Potential clients need to quickly understand practice areas, feel confident in the firm\'s credibility, and find a clear, low-friction way to start a conversation.',
     solution: 'A professional-services website concept with clear practice-area messaging, attorney introduction, trust signals, client process overview, and a simple consultation CTA — built for Port Orange and Volusia County.',
     deliverables: ['Law firm landing page', 'Practice area section', 'Attorney introduction', 'Client process overview', 'Mobile-responsive layout'],
-    result: 'Law Firm Website Demo',
-    isSample: true,
+    classification: 'Industry Demo',
     slug: 'volusia-legal-group',
     demoUrl: 'https://volusia-legal-group-nlds.netlify.app/',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: null,
@@ -177,8 +167,8 @@ const projects: WorkProject[] = [
     problem: 'Needed to compete with larger competitors but had no unified brand or booking-focused web presence.',
     solution: 'Created a full website and brand system with soft clinical elegance, clear service pages, and booking-focused structure.',
     deliverables: ['Website design', 'Brand system', 'Service pages', 'Booking flow'],
+    classification: 'Concept Build',
     result: 'Stronger mobile experience',
-    isSample: true,
   },
   {
     imageSrc: '/nlds/images/new-level-design-studio-strand-salon-works-case-study-port-orange-web-design.png',
@@ -189,8 +179,8 @@ const projects: WorkProject[] = [
     problem: 'No website at all. Booking happened through social DMs, which made it hard to manage and easy to miss.',
     solution: 'Built a clean, one-page website with service list, pricing, hours, and a direct booking link.',
     deliverables: ['One-page website', 'Service list', 'Booking link integration', 'Mobile layout'],
+    classification: 'Concept Build',
     result: 'Better service structure',
-    isSample: true,
   },
   {
     imageSrc: '/nlds/images/aureline-estates-luxury-real-estate-website-concept-nlds.png',
@@ -201,10 +191,9 @@ const projects: WorkProject[] = [
     problem: 'Luxury real estate buyers and sellers along Florida\'s Atlantic coast expect a digital experience that matches the caliber of the homes they are considering — not a generic listing template that looks like every other agency in the market.',
     solution: 'A full multi-page luxury real estate website concept with a 4K video hero, curated property collection with filter and detail pages, buyer and seller advisory pathways, six-market area structure, principal profiles, and a Calendly-powered private consultation flow.',
     deliverables: ['4K video hero with scroll parallax', 'Property collection and detail pages', 'Buyer and seller advisory pages', 'Six coastal market structure', 'Principal profile pages', 'Private consultation flow', 'Mobile-first responsive build'],
-    result: 'Luxury Real Estate Website Concept',
-    isSample: true,
+    classification: 'Concept Build',
     slug: 'aureline-estates',
-    ctaLabel: 'View Industry Demo →',
+    ctaLabel: 'View Case Study →',
   },
   {
     imageSrc: '/nlds/images/crescent-harbor-realty-coastal-real-estate-website-demo-nlds.jpg',
@@ -215,11 +204,10 @@ const projects: WorkProject[] = [
     problem: 'Most coastal real estate websites feel like repainted MLS portals — no editorial hierarchy, no scroll motion, no sense of who the agency is or what makes them worth a conversation.',
     solution: 'A single-page boutique real estate experience with a GSAP-animated split-screen hero, horizontally pinned featured property scroll, neighborhood editorial grid, sell/buy tab advisory section, and a five-step consultation methodology.',
     deliverables: ['Editorial split-screen hero', 'GSAP scroll animation system', 'Featured property horizontal scroll', 'Neighborhood editorial grid', 'Sell & Buy tab advisory section', 'Our Method trust section', 'Brand token design system', 'Mobile-first responsive layout'],
-    result: 'Boutique Real Estate Website Demo',
-    isSample: true,
+    classification: 'Industry Demo',
     slug: 'crescent-harbor',
     demoUrl: 'https://crescent-harbor-realty-nlds.netlify.app',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/coastal-standard-realty-luxury-coastal-real-estate-website-demo-nlds.jpg',
@@ -230,11 +218,10 @@ const projects: WorkProject[] = [
     problem: 'Luxury real estate clients do not respond to generic property websites. They need an experience that feels curated, calm, and aligned with the value of the homes being represented — not a standard listing template.',
     solution: 'A premium editorial real estate website with refined typography, image-led property presentation, clear buyer and seller pathways, market-area structure, and a private consultation flow designed to build trust before the first conversation.',
     deliverables: ['Luxury real estate website concept', 'Homepage system', 'Featured property layout', 'Buyer and seller pathways', 'Market-area structure', 'Private consultation flow', 'Mobile-first responsive build'],
-    result: 'Luxury Real Estate Website Demo',
-    isSample: true,
+    classification: 'Industry Demo',
     slug: 'coastal-standard-realty',
     demoUrl: 'https://coastal-standard-realty-nlds.netlify.app',
-    demoLabel: 'View Industry Demo',
+    demoLabel: 'View Concept Website',
   },
   {
     imageSrc: '/nlds/images/harbor-homes-group-coastal-real-estate-listing-website-design-nlds.png',
@@ -245,8 +232,8 @@ const projects: WorkProject[] = [
     problem: 'Property listings were buried in generic templates. Buyers could not quickly see what was available or how to reach the agent.',
     solution: 'A premium coastal real estate listing website concept with featured listings, property search, agent contact paths, and showing request flow.',
     deliverables: ['Listing page design', 'Agent profile section', 'Contact form', 'Mobile layout'],
+    classification: 'Concept Build',
     result: 'Clearer first impression',
-    isSample: true,
   },
   {
     imageSrc: '/files/nlds/images/iron-house-gym-class-schedule-membership-landing-page-case-study-nlds.png',
@@ -257,8 +244,8 @@ const projects: WorkProject[] = [
     problem: 'Social media presence was strong but there was no website to direct traffic toward. Potential members had nowhere to learn about classes or pricing.',
     solution: 'Built a sharp, minimal website with class schedule, pricing tiers, and a clear membership call to action.',
     deliverables: ['Website design', 'Class schedule', 'Pricing page', 'CTA structure'],
+    classification: 'Concept Build',
     result: 'Better service structure',
-    isSample: true,
   },
 ];
 
@@ -305,7 +292,7 @@ export default function Works() {
   return (
     <div>
       <SEO
-        title="Selected Work — Websites & Brand Projects | NLDS"
+        title="Selected Website Work | NLDS"
         description="Explore concept builds, website systems, brand visuals, and local business design work from New Level Design Studio."
         canonical="https://newlvlstudio.com/works"
       />
@@ -330,7 +317,7 @@ export default function Works() {
             }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Selected Work — Websites, Brand Direction, and Content Support
+            Selected Website Work
           </motion.h1>
           <motion.p
             className="font-sans mt-6"
@@ -389,7 +376,7 @@ export default function Works() {
               maxWidth: 680,
             }}
           >
-            Concept demos show the design direction and conversion structure NLDS can build for local businesses. Client work is labeled separately.
+            Concept builds are independent demonstrations created by New Level Design Studio to show website strategy, design direction, and conversion structure. They were not commissioned by, affiliated with, or endorsed by the businesses named unless a project is explicitly labeled Client Work.
           </p>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 const DEMO_URL = 'https://volusia-legal-group-nlds.netlify.app/';
 
@@ -37,7 +38,7 @@ export default function WorkVolusiaLegalGroup() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">Law Firm Website Demo</p>
+            <p className="eyebrow">Law Firm Website · Industry Demo</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -64,6 +65,8 @@ export default function WorkVolusiaLegalGroup() {
               clients to request a consultation.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
                 href={DEMO_URL}
@@ -71,7 +74,7 @@ export default function WorkVolusiaLegalGroup() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Industry Demo
+                View Concept Website
               </a>
               <Link to="/contact" className="btn-secondary">
                 Discuss Your Website
@@ -129,7 +132,7 @@ export default function WorkVolusiaLegalGroup() {
                     className="font-sans"
                     style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}
                   >
-                    Law Firm Website Demo
+                    Law Firm Website
                   </p>
                 </div>
 
@@ -181,7 +184,7 @@ export default function WorkVolusiaLegalGroup() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    View Industry Demo
+                    View Concept Website
                   </a>
                 </div>
               </div>
@@ -311,7 +314,7 @@ export default function WorkVolusiaLegalGroup() {
                     paddingBottom: 2,
                   }}
                 >
-                  View Industry Demo at volusia-legal-group-nlds.netlify.app →
+                  View Concept Website at volusia-legal-group-nlds.netlify.app →
                 </a>
               </div>
             </div>

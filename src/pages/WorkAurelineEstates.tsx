@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 export default function WorkAurelineEstates() {
   return (
@@ -35,7 +36,7 @@ export default function WorkAurelineEstates() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">Luxury Real Estate Website Concept</p>
+            <p className="eyebrow">Luxury Real Estate Website · Concept Build</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -62,6 +63,8 @@ export default function WorkAurelineEstates() {
               consultation flow, and full multi-page architecture across six coastal markets.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
                 href="https://harmonious-sorbet-38230a.netlify.app"
@@ -69,10 +72,10 @@ export default function WorkAurelineEstates() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Industry Demo →
+                View Concept Website →
               </a>
               <a href="#case-study" className="btn-secondary">
-                Case Study →
+                View Case Study →
               </a>
             </div>
           </div>
@@ -162,7 +165,7 @@ export default function WorkAurelineEstates() {
                 </div>
 
                 <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24, marginBottom: 32 }}>
-                  <p className="eyebrow" style={{ marginBottom: 8 }}>Live Concept</p>
+                  <p className="eyebrow" style={{ marginBottom: 8 }}>Concept Website</p>
                   <a
                     href="https://harmonious-sorbet-38230a.netlify.app"
                     target="_blank"

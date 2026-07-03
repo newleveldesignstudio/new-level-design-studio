@@ -46,13 +46,17 @@ Inclusions across website packages:
 - Contact forms and quote requests
 - On-page SEO structure (varies by package tier)
 
-### Brand Visuals
+### Website Redesign
+
+A structured rebuild for an existing website that no longer represents the business — same inclusions as Website Design, scoped to a redesign of an existing site.
+
+### Brand Direction
 
 Logo systems, branded graphics, and web imagery that give businesses a consistent presence across their website, Google Business Profile, and social platforms.
 
-### Content Systems
+### Website Copy & Visual Support
 
-Short-form video, social content, and launch assets that support local visibility. Intended for businesses that need ongoing content or a launch kit.
+Branded graphics, launch assets, and supporting website copy that keep a business looking consistent online. Intended for businesses that need supporting content or a launch kit alongside a website project.
 
 ### Ongoing Website Support
 
@@ -66,10 +70,6 @@ Ongoing monthly maintenance for existing websites:
 
 Starting at $99/month.
 
-### Business Starter Pack
-
-An entry-level visual asset package for businesses that need branded materials quickly. Includes logo, Google Business Profile cover, social graphics, and business card template. One-time offer, no subscription required.
-
 ---
 
 ## Packages and Pricing
@@ -81,8 +81,8 @@ All prices are starting points. Final pricing depends on project scope, page cou
 | Package | Starting Price | Notes |
 |---------|---------------|-------|
 | Starter Website | $499 | Basic SEO structure — titles, meta descriptions, header tags |
-| Growth Website | $899 | Local SEO-friendly — location-targeted pages, service area copy |
-| Premium Presence | $1,499 | Full SEO-ready — schema markup, optimized page hierarchy, local content |
+| Core Website | $899 | Local SEO-friendly — location-targeted pages, service area copy |
+| Pro Website | $1,499 | Full SEO-ready — schema markup, optimized page hierarchy, local content |
 
 Website add-ons:
 - Extra page: $150–$250
@@ -94,19 +94,11 @@ Website add-ons:
 - Video package: from $349
 - Monthly content support: custom
 
-### Visual Packages
+### Visual Starter Pack (direct link only — not part of the core service hierarchy)
 
 | Package | Starting Price |
 |---------|---------------|
-| Business Starter Pack | $129 |
-| Core Visual | $249 |
-
-### Short-Form Video Packages
-
-| Package | Starting Price |
-|---------|---------------|
-| Starter Video | $199 |
-| Professional Video | $399/mo |
+| Visual Starter Pack | $129 |
 
 ### Ongoing Support
 
@@ -123,17 +115,19 @@ Website packages include one-time on-page SEO setup only. This is not an ongoing
 
 ## Portfolio (Works)
 
-NLDS has completed projects for local businesses across multiple industries including:
-- The Grass Guys — landscaping
-- DH Luxury Roofing — roofing
-- Volusia Legal Group — legal services
-- Ember Oak Coffee — food & beverage
-- Love Handles BBQ — restaurant
-- Coastal Standard Realty — real estate
-- El Taller (2026) — automotive/specialty
-- La Tequila (2026) — restaurant
-- The Best Landscape (2026) — landscaping
-- Aureline Estates — luxury real estate
+NLDS's portfolio consists of independent concept builds and industry demonstrations — not commissioned or paid client work — showing website strategy and design direction across multiple industries, including:
+- The Grass Guys — landscaping (concept build)
+- DH Luxury Roofing — roofing (concept build)
+- Volusia Legal Group — legal services (concept build)
+- Ember Oak Coffee — food & beverage (concept build)
+- Love Handles BBQ — restaurant (concept build)
+- Coastal Standard Realty — real estate (concept build)
+- El Taller (2026) — restaurant (concept build)
+- La Tequila (2026) — restaurant (concept build)
+- The Best Landscape (2026) — landscaping (concept build)
+- Aureline Estates — luxury real estate (concept build)
+
+These projects were not commissioned by, affiliated with, or endorsed by the businesses named, unless a project is explicitly labeled Client Work on its page. As of this writing, no project on the site is labeled Client Work.
 
 Portfolio: https://newlvlstudio.com/works
 
@@ -177,8 +171,8 @@ Studio page: https://newlvlstudio.com/studio
 | / | Homepage — overview, positioning, services intro |
 | /services | Full service descriptions |
 | /packages | All packages and pricing |
-| /starter-pack | $129 Business Starter Pack detail page |
-| /works | Portfolio of completed projects |
+| /starter-pack | $129 Visual Starter Pack detail page (direct link only) |
+| /works | Portfolio of concept builds and industry demonstrations |
 | /studio | About the studio and founder |
 | /journal | Articles and content |
 | /contact | Contact form and inquiry |
@@ -195,5 +189,5 @@ Studio page: https://newlvlstudio.com/studio
 - No automated purchasing or booking
 - No fabricated reviews or fake testimonials
 - Pricing shown is a starting point; scope determines final cost
-- All portfolio work shown is real client work
+- Portfolio work shown consists of independent concept builds and industry demonstrations, not commissioned or paid client work, unless a project page is explicitly labeled Client Work
 - This site is a portfolio and inquiry destination, not a transactional platform

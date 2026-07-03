@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 const DEMO_URL = 'https://stone-timber-remodeling-14f1e213.netlify.app';
 
@@ -63,6 +64,8 @@ export default function WorkStoneTimberRemodeling() {
               storytelling, and a structured consultation flow built for Central Florida.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8" style={{ minWidth: 0 }}>
               <a
                 href={DEMO_URL}
@@ -71,7 +74,7 @@ export default function WorkStoneTimberRemodeling() {
                 className="btn-primary"
                 style={{ minWidth: 0 }}
               >
-                View Live Concept →
+                View Concept Website →
               </a>
               <Link to="/contact" className="btn-secondary" style={{ minWidth: 0 }}>
                 Discuss Your Website
@@ -175,7 +178,7 @@ export default function WorkStoneTimberRemodeling() {
                     className="btn-primary"
                     style={{ display: 'block', width: '100%', textAlign: 'center' }}
                   >
-                    View Live Concept →
+                    View Concept Website →
                   </a>
                   <Link
                     to="/contact"
@@ -494,20 +497,6 @@ export default function WorkStoneTimberRemodeling() {
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
-                <p className="eyebrow" style={{ marginBottom: 16 }}>Concept Disclosure</p>
-                <p
-                  className="font-sans"
-                  style={{ fontSize: '0.9375rem', lineHeight: 1.7, color: 'var(--muted-text)' }}
-                >
-                  Stone &amp; Timber Remodeling is a fictional contractor brand created as a
-                  portfolio concept by New Level Design Studio. All project information, metrics,
-                  and service-area details shown in the live demo are illustrative. Media is stock
-                  footage and photography licensed from Pexels. There is no real Stone &amp; Timber
-                  client engagement.
-                </p>
-              </div>
-
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <a
                   href={DEMO_URL}
@@ -525,7 +514,7 @@ export default function WorkStoneTimberRemodeling() {
                     display: 'inline-block',
                   }}
                 >
-                  View Live Concept →
+                  View Concept Website →
                 </a>
                 <Link
                   to="/contact"

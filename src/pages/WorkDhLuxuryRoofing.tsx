@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 const DEMO_URL = 'https://dh-luxury-roofing-nlds.netlify.app/';
 
@@ -37,7 +38,7 @@ export default function WorkDhLuxuryRoofing() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">Roofing Website Concept</p>
+            <p className="eyebrow">Roofing Website · Concept Build</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -64,6 +65,8 @@ export default function WorkDhLuxuryRoofing() {
               approach to convert homeowners into inspection leads.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
                 href={DEMO_URL}
@@ -71,7 +74,7 @@ export default function WorkDhLuxuryRoofing() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Live Concept
+                View Concept Website
               </a>
               <Link to="/contact" className="btn-secondary">
                 Discuss Your Website
@@ -118,7 +121,7 @@ export default function WorkDhLuxuryRoofing() {
                     className="font-sans"
                     style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}
                   >
-                    Roofing Website Concept
+                    Roofing Website
                   </p>
                 </div>
 
@@ -169,7 +172,7 @@ export default function WorkDhLuxuryRoofing() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    View Live Concept
+                    View Concept Website
                   </a>
                 </div>
               </div>
@@ -315,7 +318,7 @@ export default function WorkDhLuxuryRoofing() {
                     paddingBottom: 2,
                   }}
                 >
-                  View Live Concept at dh-luxury-roofing-nlds.netlify.app →
+                  View Concept Website at dh-luxury-roofing-nlds.netlify.app →
                 </a>
               </div>
             </div>

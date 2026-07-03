@@ -189,7 +189,7 @@ export default function Home() {
     <div>
       <SEO
         title="Premium Websites for Local Businesses | NLDS"
-        description="Premium websites, Website Care, Brand Direction, and Brand & Content Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
+        description="Premium websites, Website Redesign, Website Care, Brand Direction, and Website Copy & Visual Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/"
         jsonLd={[localBusinessSchema(), websiteSchema()]}
       />
@@ -198,7 +198,7 @@ export default function Home() {
         overlay={
           <div className="st-cta-panel">
             <p className="st-cta-kicker">Port Orange, Florida</p>
-            <h2 className="st-cta-headline">Websites built to earn trust before the first call.</h2>
+            <p className="st-cta-headline">Websites built to earn trust before the first call.</p>
             <div className="st-cta-row">
               <Link to="/contact" className="btn-primary st-cta-btn">
                 Get a Free Website Review
@@ -534,7 +534,7 @@ export default function Home() {
                         lineHeight: 1.2,
                       }}
                     >
-                      Brand & Content Support
+                      Website Copy & Visual Support
                     </h3>
                     <p
                       className="font-sans mt-2"
@@ -672,7 +672,7 @@ export default function Home() {
           </p>
           <div className="mt-12 flex flex-col" style={{ gap: 0 }}>
             {[
-              'Outdated websites that make the business look smaller than it is',
+              'Outdated websites that weaken trust before the first call',
               'Weak first impressions before customers call',
               'Inconsistent branding across website, Google, Facebook, and social posts',
               'No clear path from visitor to quote, booking, or contact',
@@ -755,7 +755,7 @@ export default function Home() {
             <div className="service-card">
               <ServiceCard
                 icon={<PageIcon />}
-                title="Brand & Content Support"
+                title="Website Copy & Visual Support"
                 description="Branded graphics, launch assets, and supporting content that keep the website and the rest of the business looking consistent."
                 link={{ text: 'See Services', to: '/services' }}
               />

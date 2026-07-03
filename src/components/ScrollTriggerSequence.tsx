@@ -214,7 +214,15 @@ export default function ScrollTriggerSequence({ overlay }: Props) {
       <div ref={pinRef} className="st-pin-wrapper">
         <div ref={stickyRef} className="st-sticky">
           <canvas ref={canvasRef} className="st-canvas" aria-label="Animated sequence" />
-          {overlay && <div className="st-overlay">{overlay}</div>}
+          {/* Decorative teaser only: the same headline and CTAs are the real,
+              focusable hero content in the section immediately below. Hiding
+              this copy from assistive tech and the tab order prevents a
+              duplicate accessible hero on breakpoints where it's visible. */}
+          {overlay && (
+            <div className="st-overlay" aria-hidden="true" inert>
+              {overlay}
+            </div>
+          )}
           <p className="st-label">Scroll to explore</p>
         </div>
       </div>

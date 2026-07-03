@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 export default function WorkBlendHouseSmoothieBar() {
   return (
@@ -61,6 +62,8 @@ export default function WorkBlendHouseSmoothieBar() {
               fictional brand created by New Level Design Studio to demonstrate what a smoothie
               shop website can look and perform like.
             </p>
+
+            <ConceptDisclosure />
 
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <Link to="/contact" className="btn-primary">
@@ -126,7 +129,7 @@ export default function WorkBlendHouseSmoothieBar() {
                     className="font-sans"
                     style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}
                   >
-                    Website · Brand Visuals · Local SEO Structure
+                    Website · Brand Direction · Local SEO Structure
                   </p>
                 </div>
 

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 const DEMO_URL = 'https://flourishing-taiyaki-d7a1ea.netlify.app/';
 
@@ -37,7 +38,7 @@ export default function WorkTheGrassGuys() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">Lawn Care Website Concept</p>
+            <p className="eyebrow">Lawn Care Website · Concept Build</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -63,6 +64,8 @@ export default function WorkTheGrassGuys() {
               make it easy for homeowners to request work.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
                 href={DEMO_URL}
@@ -70,7 +73,7 @@ export default function WorkTheGrassGuys() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Live Concept
+                View Concept Website
               </a>
               <Link to="/contact" className="btn-secondary">
                 Discuss Your Website
@@ -117,7 +120,7 @@ export default function WorkTheGrassGuys() {
                     className="font-sans"
                     style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}
                   >
-                    Lawn Care Website Concept
+                    Lawn Care Website
                   </p>
                 </div>
 
@@ -155,7 +158,7 @@ export default function WorkTheGrassGuys() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    View Live Concept
+                    View Concept Website
                   </a>
                 </div>
               </div>
@@ -281,7 +284,7 @@ export default function WorkTheGrassGuys() {
                     paddingBottom: 2,
                   }}
                 >
-                  View Live Concept at flourishing-taiyaki-d7a1ea.netlify.app →
+                  View Concept Website at flourishing-taiyaki-d7a1ea.netlify.app →
                 </a>
               </div>
             </div>

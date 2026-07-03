@@ -38,7 +38,6 @@ const industries = [
   'Fitness',
   'Medical / Wellness',
   'Local Services',
-  'Starter Packs',
 ];
 
 export default function Services() {
@@ -52,7 +51,7 @@ export default function Services() {
     <div>
       <SEO
         title="Website Design & Brand Support Services | NLDS"
-        description="Website Design, Website Care, Brand Direction, and Brand & Content Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
+        description="Website Design, Website Redesign, Website Care, Brand Direction, and Website Copy & Visual Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/services"
       />
       {/* Hero */}
@@ -82,10 +81,10 @@ export default function Services() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
         <div className="container-nlds">
           <div ref={coreRef} className="flex flex-col" style={{ gap: 64 }}>
-            {/* Website Build */}
+            {/* Website Design */}
             <div className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <p className="eyebrow">WEBSITE BUILD</p>
+                <p className="eyebrow">WEBSITE DESIGN</p>
                 <h2
                   className="font-serif mt-4"
                   style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
@@ -193,7 +192,7 @@ export default function Services() {
             {/* Visual Content */}
             <div className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <p className="eyebrow">BRAND & CONTENT SUPPORT</p>
+                <p className="eyebrow">WEBSITE COPY & VISUAL SUPPORT</p>
                 <h2
                   className="font-serif mt-4"
                   style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
@@ -207,7 +206,7 @@ export default function Services() {
                   Professional visuals that make your business look consistent across your website, Google profile, and marketing posts — brand-aligned graphics, launch assets, and visual direction built to work alongside your website.
                 </p>
                 <Link to="/contact" className="btn-primary mt-8 inline-block">
-                  Discuss Brand & Content Support
+                  Discuss Website Copy & Visual Support
                 </Link>
               </div>
               <div

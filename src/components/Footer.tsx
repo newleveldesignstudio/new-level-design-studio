@@ -4,13 +4,13 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { fadeUp } from '@/lib/motion';
 import { EXTERNAL_LINKS } from '@/lib/links';
 import { SOCIAL_LINKS } from '@/lib/socialLinks';
+import { PRIMARY_SERVICES, SUPPORTING_CAPABILITIES } from '@/data/serviceTerminology';
 
 const studioLinks = [
   { text: 'Home', href: '/' },
   { text: 'Works', href: '/works' },
   { text: 'Services', href: '/services' },
   { text: 'Packages', href: '/packages' },
-  { text: 'Starter Pack', href: '/starter-pack' },
   { text: 'Studio', href: '/studio' },
   { text: 'About the Founder', href: '/michael-vail' },
   { text: 'Journal', href: '/journal' },
@@ -20,10 +20,10 @@ const studioLinks = [
 ];
 
 const serviceLinks = [
-  { text: 'Website Design', href: '/services' },
-  { text: 'Website Care', href: '/services' },
-  { text: 'Brand Direction', href: '/services' },
-  { text: 'Brand & Content Support', href: '/services' },
+  { text: PRIMARY_SERVICES[0], href: '/services' },
+  { text: PRIMARY_SERVICES[1], href: '/services' },
+  { text: PRIMARY_SERVICES[2], href: '/services' },
+  { text: SUPPORTING_CAPABILITIES[2], href: '/services' },
 ];
 
 const localLinks = [
@@ -175,7 +175,7 @@ export default function Footer() {
                 margin: '0 0 12px',
               }}
             >
-              WEBSITES · BRAND DIRECTION · WEBSITE CARE
+              WEBSITE DESIGN · WEBSITE REDESIGN · WEBSITE CARE
             </p>
 
             {/* Thin horizontal rule */}
@@ -217,7 +217,7 @@ export default function Footer() {
               className="font-sans"
               style={{ fontSize: '0.875rem', lineHeight: 1.65, color: 'var(--muted-text)', marginBottom: 18, maxWidth: 300 }}
             >
-              Premium websites, clear brand direction, and ongoing website care for local businesses ready to look more established online.
+              Premium websites, strategic redesigns, and ongoing website care for local businesses that need a stronger first impression and a clearer path to inquiry.
             </p>
 
             <div className="flex flex-col" style={{ gap: 10, marginBottom: 20 }}>

@@ -6,7 +6,7 @@
       "type": "skill-md",
       "description": "Helps agents understand New Level Design Studio services, pricing, contact paths, service area, and project-fit guidance.",
       "url": "/.well-known/agent-skills/nlds-site-summary/SKILL.md",
-      "digest": "sha256:0b04efbd97d079f521bd4e9814f655027e46062642ba3dde03095cc28378f325"
+      "digest": "sha256:85cc4e802ecb9ce92ef1da7105f3b1e7e07d69d9457e91121d88e13282675e71"
     }
   ]
 }

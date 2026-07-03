@@ -6,6 +6,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 import { EXTERNAL_LINKS } from '@/lib/links';
 import { SOCIAL_LINKS } from '@/lib/socialLinks';
+import { CONTACT_SERVICE_OPTIONS } from '@/data/serviceTerminology';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -262,18 +263,11 @@ export default function Contact() {
                       style={{ ...inputStyle, appearance: 'auto', cursor: 'pointer' }}
                     >
                       <option value="">Select a service</option>
-                      <option value="website-review">Website Review</option>
-                      <option value="starter-website">Starter Website</option>
-                      <option value="business-website">Business Website</option>
-                      <option value="website-redesign">Website Redesign</option>
-                      <option value="visual-starter-pack">Visual Starter Pack</option>
-                      <option value="website-maintenance">Website Care</option>
-                      <option value="local-seo">Local SEO / Website Structure</option>
-                      <option value="branding">Branding / Visual Direction</option>
-                      <option value="short-form-content">Short-Form Video — Custom Project</option>
-                      <option value="not-sure">Not Sure Yet</option>
+                      {CONTACT_SERVICE_OPTIONS.map((opt) => (
+                        <option key={opt.value} value={opt.value}>{opt.label}</option>
+                      ))}
                     </select>
-                    {formData.service === 'website-review' && (
+                    {formData.service === 'free-website-review' && (
                       <p
                         className="font-sans mt-2"
                         style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.55 }}
@@ -400,7 +394,7 @@ export default function Contact() {
                   Websites, brand direction, local SEO structure, and website care for local businesses across Volusia County.
                 </p>
                 <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
-                  I'll get back to you as soon as possible.
+                  You'll receive a response within one business day.
                 </p>
               </div>
 

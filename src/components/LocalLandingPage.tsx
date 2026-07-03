@@ -117,7 +117,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
               },
               {
                 num: '03',
-                title: 'Brand & Content Support',
+                title: 'Website Copy & Visual Support',
                 desc: 'Supporting website copy, brand-aligned visuals, launch assets, and project-specific content scoped around the website and business goals.',
               },
               {

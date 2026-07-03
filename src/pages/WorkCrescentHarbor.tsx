@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 const DEMO_URL = 'https://crescent-harbor-realty-nlds.netlify.app';
 
@@ -37,7 +38,7 @@ export default function WorkCrescentHarbor() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">Boutique Real Estate Website Demo</p>
+            <p className="eyebrow">Boutique Real Estate Website · Industry Demo</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -64,6 +65,8 @@ export default function WorkCrescentHarbor() {
               experience can look like when design, motion, and editorial structure work together.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8" style={{ minWidth: 0 }}>
               <a
                 href={DEMO_URL}
@@ -72,7 +75,7 @@ export default function WorkCrescentHarbor() {
                 className="btn-primary"
                 style={{ minWidth: 0 }}
               >
-                View Industry Demo →
+                View Concept Website →
               </a>
               <Link to="/contact" className="btn-secondary" style={{ minWidth: 0 }}>
                 Discuss Your Website
@@ -173,7 +176,7 @@ export default function WorkCrescentHarbor() {
                     className="btn-primary"
                     style={{ display: 'block', width: '100%', textAlign: 'center' }}
                   >
-                    View Industry Demo →
+                    View Concept Website →
                   </a>
                   <Link
                     to="/contact"
@@ -352,7 +355,7 @@ export default function WorkCrescentHarbor() {
                     display: 'inline-block',
                   }}
                 >
-                  View Industry Demo →
+                  View Concept Website →
                 </a>
                 <Link
                   to="/contact"

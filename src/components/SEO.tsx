@@ -78,7 +78,7 @@ export function localBusinessSchema(): Record<string, unknown> {
     email: 'michael@newlvlstudio.com',
     slogan: 'Raise the Standard.',
     description:
-      'Premium websites, Website Care, Brand Direction, and Brand & Content Support for local businesses across Port Orange, Daytona Beach, Volusia County, and Central Florida.',
+      'Premium websites, Website Redesign, Website Care, Brand Direction, and Website Copy & Visual Support for local businesses across Port Orange, Daytona Beach, Volusia County, and Central Florida.',
     areaServed: [
       'Port Orange',
       'Daytona Beach',
@@ -89,8 +89,9 @@ export function localBusinessSchema(): Record<string, unknown> {
     ],
     knowsAbout: [
       'Website Design',
+      'Website Redesign',
       'Brand Direction',
-      'Brand & Content Support',
+      'Website Copy & Visual Support',
       'Website Care',
       'Local Business Marketing',
       'Local SEO',
@@ -119,8 +120,16 @@ export function localBusinessSchema(): Record<string, unknown> {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Brand & Content Support',
-            serviceType: 'Brand & Content Support',
+            name: 'Website Copy & Visual Support',
+            serviceType: 'Website Copy & Visual Support',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Website Redesign',
+            serviceType: 'Website Redesign',
           },
         },
         {

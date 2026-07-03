@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+export type WorkClassification = 'Concept Build' | 'Industry Demo' | 'Client Work';
+
 export interface WorkProject {
   imageSrc: string | null;
   imageAlt?: string;
@@ -9,8 +11,8 @@ export interface WorkProject {
   problem: string;
   solution: string;
   deliverables: string[];
-  result: string;
-  isSample?: boolean;
+  classification: WorkClassification;
+  result?: string;
   slug?: string;
   ctaLabel?: string;
   demoUrl?: string;
@@ -87,20 +89,18 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
           >
             {project.industry}
           </span>
-          {project.isSample && (
-            <span
-              className="font-sans uppercase"
-              style={{
-                fontSize: '0.625rem',
-                letterSpacing: '0.15em',
-                color: 'var(--platinum-grey)',
-                border: '1px solid var(--silver-grey)',
-                padding: '2px 8px',
-              }}
-            >
-              Industry Demo
-            </span>
-          )}
+          <span
+            className="font-sans uppercase"
+            style={{
+              fontSize: '0.625rem',
+              letterSpacing: '0.15em',
+              color: 'var(--platinum-grey)',
+              border: '1px solid var(--silver-grey)',
+              padding: '2px 8px',
+            }}
+          >
+            {project.classification}
+          </span>
         </div>
 
         <h3
@@ -186,23 +186,25 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
         </div>
 
         <div className="mt-5 flex flex-wrap items-center gap-3">
-          <div
-            style={{
-              backgroundColor: 'var(--bg-soft)',
-              border: '1px solid var(--border-color)',
-              padding: '8px 16px',
-            }}
-          >
-            <span
-              className="font-sans"
+          {project.result && (
+            <div
               style={{
-                fontSize: '0.8125rem',
-                color: 'var(--charcoal)',
+                backgroundColor: 'var(--bg-soft)',
+                border: '1px solid var(--border-color)',
+                padding: '8px 16px',
               }}
             >
-              {project.result}
-            </span>
-          </div>
+              <span
+                className="font-sans"
+                style={{
+                  fontSize: '0.8125rem',
+                  color: 'var(--charcoal)',
+                }}
+              >
+                {project.result}
+              </span>
+            </div>
+          )}
 
           {project.demoUrl && (
             <a
@@ -258,7 +260,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
                 (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--silver-grey)';
               }}
             >
-              {project.ctaLabel ?? 'Case Study →'}
+              {project.ctaLabel ?? 'View Case Study →'}
             </Link>
           )}
         </div>

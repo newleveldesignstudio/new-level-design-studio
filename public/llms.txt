@@ -1,6 +1,6 @@
 # New Level Design Studio
 
-New Level Design Studio (NLDS) is a founder-led design studio based in Port Orange, Florida. It builds premium websites, brand visuals, and content systems for local businesses across Volusia County and Central Florida.
+New Level Design Studio (NLDS) is a founder-led design studio based in Port Orange, Florida. It builds premium websites, brand direction, and ongoing website care for local businesses across Volusia County and Central Florida.
 
 ## Business
 
@@ -11,7 +11,7 @@ New Level Design Studio (NLDS) is a founder-led design studio based in Port Oran
 - Phone: (386) 846-5754
 - Email: michael@newlvlstudio.com
 - Website: https://newlvlstudio.com
-- Positioning: Websites, brand visuals, and content systems for local businesses ready to look credible, get found, and turn attention into real customer inquiries.
+- Positioning: Websites, brand direction, and ongoing website care for local businesses ready to look credible, get found, and turn attention into real customer inquiries.
 
 ## Service Area
 
@@ -25,18 +25,17 @@ New Level Design Studio (NLDS) is a founder-led design studio based in Port Oran
 ## Services
 
 - Website Design: Custom-coded, mobile-first websites structured for local businesses — clear offer, fast load, direct inquiry paths.
-- Brand Visuals: Logo systems, branded graphics, and web imagery for consistent presence across website, Google Business Profile, and social platforms.
-- Content Systems: Short-form video, social content, and launch assets that support local visibility.
-- Ongoing Website Support: Ongoing maintenance — content updates, link checks, image swaps, monthly review. Starting at $99/month.
-- Business Starter Pack: Entry-level visual asset package ($129) — logo, Google Business Profile cover, social graphics, and business card template.
+- Website Redesign: A structured rebuild for an existing site that no longer represents the business.
+- Brand Direction: Logo systems, branded graphics, and web imagery for consistent presence across website, Google Business Profile, and social platforms.
+- Website Copy & Visual Support: Branded graphics, launch assets, and supporting content that support local visibility.
+- Website Care: Ongoing maintenance — content updates, link checks, image swaps, monthly review. Starting at $99/month.
 
 ## Pricing (starting points — final pricing depends on scope)
 
 - Starter Website: from $499
-- Growth Website: from $899 (local SEO-friendly structure included)
-- Premium Presence: from $1,499 (full SEO-ready structure, schema markup)
-- Business Starter Pack: from $129
-- Core Visual Pack: from $249
+- Core Website: from $899 (local SEO-friendly structure included)
+- Pro Website: from $1,499 (full SEO-ready structure, schema markup)
+- Visual Starter Pack (direct link only, not part of the core service hierarchy): from $129
 - Ongoing Website Support: from $99/month
 - Add-ons available: extra pages, landing pages, SEO setup, copywriting upgrades, video packages
 

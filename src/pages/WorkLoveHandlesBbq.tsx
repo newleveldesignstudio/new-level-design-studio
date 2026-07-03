@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 const DEMO_URL = 'https://love-handles-bbq-nlds.netlify.app';
 
@@ -37,7 +38,7 @@ export default function WorkLoveHandlesBbq() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">BBQ Catering / Food Truck Website</p>
+            <p className="eyebrow">BBQ Catering / Food Truck Website · Concept Build</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -63,6 +64,8 @@ export default function WorkLoveHandlesBbq() {
               Studio for Love Handles BBQ in Ormond Beach, Florida.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
                 href={DEMO_URL}
@@ -70,7 +73,7 @@ export default function WorkLoveHandlesBbq() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Live Demo
+                View Concept Website
               </a>
               <Link to="/contact" className="btn-secondary">
                 Discuss Your Website
@@ -168,7 +171,7 @@ export default function WorkLoveHandlesBbq() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    View Live Demo
+                    View Concept Website
                   </a>
                 </div>
               </div>
@@ -325,7 +328,7 @@ export default function WorkLoveHandlesBbq() {
                     paddingBottom: 2,
                   }}
                 >
-                  View Live Demo at love-handles-bbq-nlds.netlify.app →
+                  View Concept Website at love-handles-bbq-nlds.netlify.app →
                 </a>
               </div>
             </div>

@@ -5,6 +5,7 @@ import type { Variants } from 'framer-motion';
 import { useNavScroll } from '@/hooks/useNavScroll';
 import { getLenis } from '@/hooks/useLenis';
 import { menuOverlay, staggerContainer, menuItem } from '@/lib/motion';
+import { PRIMARY_SERVICES, SUPPORTING_CAPABILITIES } from '@/data/serviceTerminology';
 
 type DropdownLink = {
   label: string;
@@ -33,15 +34,15 @@ type NavItem = {
     Fitness           → '/works/fitness'
     Medical / Wellness→ '/works/medical-wellness'
     Local Services    → '/works/local-services'
-    Starter Packs     → '/works/starter-packs'
 */
 
 /*
   TODO: When individual service pages are created, update the Services
   dropdown link paths below:
-    Website Build  → '/services/website-build'
-    Website Care   → '/services/website-care'
-    Brand Direction→ '/services/brand-direction'
+    Website Design  → '/services/website-design'
+    Website Redesign→ '/services/website-redesign'
+    Website Care    → '/services/website-care'
+    Brand Direction → '/services/brand-direction'
 */
 
 const navItems: NavItem[] = [
@@ -53,10 +54,12 @@ const navItems: NavItem[] = [
       title: 'Services',
       description: 'Core ways we help local businesses improve their online presence.',
       links: [
-        { label: 'Website Design', path: '/services', description: 'Professional websites built for clarity, trust, and action.' },
-        { label: 'Website Care', path: '/services', description: 'Ongoing website quality, visibility, and trust management.' },
-        { label: 'Brand Direction', path: '/services', description: 'Visual identity support for businesses that need a sharper presentation.' },
-        { label: 'Brand & Content Support', path: '/services', description: 'Branded graphics, launch assets, and supporting content that keep your business consistent.' },
+        { label: PRIMARY_SERVICES[0], path: '/services', description: 'Professional websites built for clarity, trust, and action.' },
+        { label: PRIMARY_SERVICES[1], path: '/services', description: 'A structured rebuild for a site that no longer represents the business.' },
+        { label: PRIMARY_SERVICES[2], path: '/services', description: 'Ongoing website quality, visibility, and trust management.' },
+        { label: SUPPORTING_CAPABILITIES[0], path: '/services', description: 'Visual identity support for businesses that need a sharper presentation.' },
+        { label: SUPPORTING_CAPABILITIES[2], path: '/services', description: 'Location-targeted structure that helps local search understand your service area.' },
+        { label: SUPPORTING_CAPABILITIES[1], path: '/services', description: 'Branded graphics, launch assets, and supporting content that keep your business consistent.' },
       ],
     },
   },
@@ -75,7 +78,6 @@ const navItems: NavItem[] = [
         { label: 'Fitness', path: '/works' },
         { label: 'Medical / Wellness', path: '/works' },
         { label: 'Local Services', path: '/works' },
-        { label: 'Starter Packs', path: '/works' },
       ],
     },
   },
@@ -113,7 +115,6 @@ const navItems: NavItem[] = [
     },
   },
   { label: 'Packages', path: '/packages' },
-  { label: 'Starter Pack', path: '/starter-pack' },
 ];
 
 /* Desktop dropdown animation */

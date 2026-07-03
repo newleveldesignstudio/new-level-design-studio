@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 const DEMO_URL = 'https://ember-oak-coffee-nlds.netlify.app/';
 
@@ -37,7 +38,7 @@ export default function WorkEmberOakCoffee() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">Coffee Shop Website Concept — Demo Build</p>
+            <p className="eyebrow">Coffee Shop Website · Concept Build</p>
             <h1
               className="font-serif mt-4"
               style={{
@@ -64,6 +65,8 @@ export default function WorkEmberOakCoffee() {
               inquiry — in a single, mobile-first build.
             </p>
 
+            <ConceptDisclosure />
+
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
                 href={DEMO_URL}
@@ -71,7 +74,7 @@ export default function WorkEmberOakCoffee() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                View Live Demo
+                View Concept Website
               </a>
               <Link to="/contact" className="btn-secondary">
                 Discuss Your Website
@@ -115,7 +118,7 @@ export default function WorkEmberOakCoffee() {
                 <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24, marginBottom: 32 }}>
                   <p className="eyebrow" style={{ marginBottom: 8 }}>Category</p>
                   <p className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}>
-                    Coffee Shop Website Concept
+                    Coffee Shop Website
                   </p>
                 </div>
 
@@ -123,15 +126,6 @@ export default function WorkEmberOakCoffee() {
                   <p className="eyebrow" style={{ marginBottom: 8 }}>Industry</p>
                   <p className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}>
                     Coffee Shop / Café
-                  </p>
-                </div>
-
-                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24, marginBottom: 32 }}>
-                  <p className="eyebrow" style={{ marginBottom: 8 }}>Note</p>
-                  <p className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                    Ember &amp; Oak Coffee Co. is a fictional brand. This is a demo build created
-                    to demonstrate what a specialty coffee shop website can look like — not a real
-                    client project.
                   </p>
                 </div>
 
@@ -173,7 +167,7 @@ export default function WorkEmberOakCoffee() {
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
-                    View Live Demo
+                    View Concept Website
                   </a>
                 </div>
               </div>
@@ -284,7 +278,7 @@ export default function WorkEmberOakCoffee() {
                   A premium, full-editorial homepage concept that shows how an independent coffee
                   brand can build the complete customer experience online — from first discovery and
                   product browsing to café visits, wholesale inquiry, and repeat engagement through
-                  content. This is a fictional demo, not a real client project.
+                  content.
                 </p>
               </div>
 
@@ -319,7 +313,7 @@ export default function WorkEmberOakCoffee() {
                     paddingBottom: 2,
                   }}
                 >
-                  View Live Demo at ember-oak-coffee-nlds.netlify.app →
+                  View Concept Website at ember-oak-coffee-nlds.netlify.app →
                 </a>
               </div>
             </div>
