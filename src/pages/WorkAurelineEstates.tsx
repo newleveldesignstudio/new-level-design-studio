@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 export default function WorkAurelineEstates() {
   return (
@@ -308,17 +309,13 @@ export default function WorkAurelineEstates() {
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
-                <p className="eyebrow" style={{ marginBottom: 16 }}>Why This Matters</p>
-                <p className="font-sans" style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--muted-text)' }}>
-                  In luxury real estate, the first digital impression determines whether a potential
-                  client reaches out or moves on. A website that feels like a template signals that
-                  the representation will feel like a template. Aureline Estates shows how a local
-                  brokerage along Florida's Atlantic coast can lead with quiet confidence — and
-                  convert high-intent buyers and sellers who expect the same level of care from
-                  their agent as they put into the homes they own.
-                </p>
-              </div>
+              <WorkDemonstrates
+                points={[
+                  'A calmer, more confident first impression for luxury coastal buyers and sellers.',
+                  'How a boutique brokerage can read as established rather than templated.',
+                  'A path built to build trust with high-intent buyers before the first conversation.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32 }}>
                 <Link

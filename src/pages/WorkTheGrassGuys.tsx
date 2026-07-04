@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://flourishing-taiyaki-d7a1ea.netlify.app/';
 
@@ -199,6 +200,14 @@ export default function WorkTheGrassGuys() {
                   understand the work, see professionalism, and take action without confusion.
                 </p>
               </div>
+
+              <WorkDemonstrates
+                points={[
+                  'A stronger first impression built around reliability, not just price.',
+                  'Clear service breakdowns so homeowners know what they are requesting.',
+                  'A quote-focused path built to reduce hesitation before reaching out.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
                 <p className="eyebrow" style={{ marginBottom: 16 }}>The Direction</p>

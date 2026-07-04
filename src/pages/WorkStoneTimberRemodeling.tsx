@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://stone-timber-remodeling-14f1e213.netlify.app';
 
@@ -219,6 +220,14 @@ export default function WorkStoneTimberRemodeling() {
                   visitor read every detail.
                 </p>
               </div>
+
+              <WorkDemonstrates
+                points={[
+                  'A stronger first impression for contractors who want to look established, not templated.',
+                  'Scroll-driven storytelling used in place of a static service-card layout.',
+                  'A structured, multi-step consultation flow that makes requesting an estimate feel considered.',
+                ]}
+              />
 
               {/* Plan scene screenshot */}
               <div style={{ marginBottom: 48 }}>

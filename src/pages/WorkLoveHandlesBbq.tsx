@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://love-handles-bbq-nlds.netlify.app';
 
@@ -297,20 +298,13 @@ export default function WorkLoveHandlesBbq() {
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
-                <p className="eyebrow" style={{ marginBottom: 16 }}>Why This Matters</p>
-                <p
-                  className="font-sans"
-                  style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--muted-text)' }}
-                >
-                  For a catering and food truck business, the website is where booking decisions get
-                  made. If the catering inquiry path is unclear, the menu is buried, or the mobile
-                  experience feels slow and confusing, customers book elsewhere. A focused, clean web
-                  presence turns casual online attention into direct catering inquiries — which is
-                  where the real revenue comes from. Local SEO structure and social proof integration
-                  also help the brand build long-term visibility in the Volusia County market.
-                </p>
-              </div>
+              <WorkDemonstrates
+                points={[
+                  'A clearer catering inquiry path so booking decisions do not stall.',
+                  'A mobile-first experience built for how customers actually browse a menu.',
+                  'Local SEO and social proof structure built for long-term visibility in Volusia County.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32 }}>
                 <a

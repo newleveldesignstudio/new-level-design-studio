@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://ember-oak-coffee-nlds.netlify.app/';
 
@@ -282,20 +283,13 @@ export default function WorkEmberOakCoffee() {
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
-                <p className="eyebrow" style={{ marginBottom: 16 }}>Why This Matters</p>
-                <p
-                  className="font-sans"
-                  style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--muted-text)' }}
-                >
-                  For an independent coffee shop, the difference between a basic menu page and a
-                  real web presence is revenue. A well-built site opens paths — wholesale, online
-                  orders, catering — that a Facebook page or simple site never can. It also builds
-                  the kind of brand recognition that keeps regulars loyal and turns first-time
-                  visitors into returning customers. Content-driven structure also supports long-term
-                  local SEO and helps the brand get found in search.
-                </p>
-              </div>
+              <WorkDemonstrates
+                points={[
+                  'A fuller web presence than a basic menu page or social profile alone.',
+                  'Clear paths for online orders, wholesale inquiries, and café visits in one homepage.',
+                  'Content structure built to support long-term local search visibility.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32 }}>
                 <a

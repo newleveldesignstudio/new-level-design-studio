@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://el-taller-2026.netlify.app/';
 
@@ -197,6 +198,14 @@ export default function WorkElTaller() {
                   to take action. Most existing sites fail at all of these.
                 </p>
               </div>
+
+              <WorkDemonstrates
+                points={[
+                  'A clearer first impression of food, atmosphere, and hours for mobile visitors.',
+                  'A menu presentation built to be read easily, not squinted at.',
+                  'A more direct path from browsing to taking action — call, visit, or order.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
                 <p className="eyebrow" style={{ marginBottom: 16 }}>The Solution</p>

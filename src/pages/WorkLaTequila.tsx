@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://la-tequila-2026.netlify.app/';
 
@@ -199,6 +200,14 @@ export default function WorkLaTequila() {
                   quickly.
                 </p>
               </div>
+
+              <WorkDemonstrates
+                points={[
+                  'A more credible, appetite-first impression than a cluttered template.',
+                  'Menu and location clarity built for visitors deciding where to eat tonight.',
+                  'A clear next step for customers ready to visit or make contact.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
                 <p className="eyebrow" style={{ marginBottom: 16 }}>The Direction</p>

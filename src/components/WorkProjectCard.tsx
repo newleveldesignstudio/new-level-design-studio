@@ -12,6 +12,7 @@ export interface WorkProject {
   solution: string;
   deliverables: string[];
   classification: WorkClassification;
+  demonstrates?: string;
   result?: string;
   slug?: string;
   ctaLabel?: string;
@@ -113,6 +114,20 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
         >
           {project.title}
         </h3>
+
+        {project.demonstrates && (
+          <p
+            className="font-sans mt-2"
+            style={{
+              fontSize: '0.875rem',
+              color: 'var(--charcoal)',
+              lineHeight: 1.5,
+              fontStyle: 'italic',
+            }}
+          >
+            {project.demonstrates}
+          </p>
+        )}
 
         <div className="mt-4 flex flex-col" style={{ gap: 12 }}>
           <div>

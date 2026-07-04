@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://crescent-harbor-realty-nlds.netlify.app';
 
@@ -323,20 +324,13 @@ export default function WorkCrescentHarbor() {
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
-                <p className="eyebrow" style={{ marginBottom: 16 }}>Why This Matters</p>
-                <p
-                  className="font-sans"
-                  style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--muted-text)' }}
-                >
-                  In coastal real estate, first impressions happen online — not at the showing.
-                  A website that reads like a template suggests the representation will feel like a
-                  template. By combining genuine scroll motion, editorial structure, and a
-                  market-specific visual identity, Crescent Harbor demonstrates how a boutique
-                  agency can present itself at the same caliber as the properties it represents —
-                  before a single conversation happens.
-                </p>
-              </div>
+              <WorkDemonstrates
+                points={[
+                  'How a boutique agency can present itself at the same caliber as the properties it represents.',
+                  'Editorial structure and motion that build trust before a single conversation happens.',
+                  'A stronger first impression for coastal buyers and sellers comparing local representation.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <a

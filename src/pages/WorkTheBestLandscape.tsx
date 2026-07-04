@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://the-best-landscape-2026.netlify.app/';
 
@@ -199,6 +200,14 @@ export default function WorkTheBestLandscape() {
                   confidently.
                 </p>
               </div>
+
+              <WorkDemonstrates
+                points={[
+                  'A faster first impression of service quality for homeowners comparing landscapers.',
+                  'Clear service and service-area presentation that reduces guesswork.',
+                  'A more obvious path from browsing to requesting a quote.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
                 <p className="eyebrow" style={{ marginBottom: 16 }}>The Direction</p>

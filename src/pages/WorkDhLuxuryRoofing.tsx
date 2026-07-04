@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://dh-luxury-roofing-nlds.netlify.app/';
 
@@ -286,21 +287,13 @@ export default function WorkDhLuxuryRoofing() {
                 </ul>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
-                <p className="eyebrow" style={{ marginBottom: 16 }}>Why This Matters</p>
-                <p
-                  className="font-sans"
-                  style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--muted-text)' }}
-                >
-                  For a roofing contractor, the website is the first trust signal. Homeowners
-                  research multiple companies before picking up the phone — the business that looks
-                  most credible online earns the call. A premium visual system, a clear inspection
-                  CTA, and a structured service layout can position a roofing company above
-                  competitors without a larger ad budget. Local SEO structure also ensures the site
-                  has a real chance of being found when homeowners search for roofing in Volusia
-                  County.
-                </p>
-              </div>
+              <WorkDemonstrates
+                points={[
+                  'A stronger trust-first impression for homeowners comparing roofing companies online.',
+                  'A clear inspection path that turns interest into a scheduled call.',
+                  'Local SEO structure built to help the business get found in Volusia County searches.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32 }}>
                 <a

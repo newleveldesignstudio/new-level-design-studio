@@ -33,6 +33,7 @@ const projects: WorkProject[] = [
     solution: 'A cinematic contractor website concept built around full-screen construction video, scroll-driven storytelling, a pinned three-scene narrative, and a premium multi-step consultation flow.',
     deliverables: ['Cinematic full-screen video hero', 'Pinned scroll narrative (Plan · Build · Deliver)', 'Metrics animation', 'Editorial featured project', 'Multi-step consultation form', 'Responsive WebM/MP4 media', 'GSAP + Lenis motion system'],
     classification: 'Concept Build',
+    demonstrates: 'Demonstrates a cinematic, trust-first website for a premium remodeling contractor.',
     slug: 'stone-timber-remodeling',
     demoUrl: 'https://stone-timber-remodeling-14f1e213.netlify.app',
     demoLabel: 'View Concept Website',
@@ -47,6 +48,7 @@ const projects: WorkProject[] = [
     solution: 'Rebuilt as a local lead-generation website focused on catering inquiries, everyday truck menu visibility, food truck events, mobile usability, local SEO, social proof, and direct contact paths.',
     deliverables: ['Homepage direction', 'Truck menu page', 'Catering inquiry flow', 'Food truck events page', 'Mobile-first layout', 'Local SEO structure'],
     classification: 'Concept Build',
+    demonstrates: 'Shows how a catering and food truck business can make booking and menu browsing effortless.',
     slug: 'love-handles-bbq',
     demoUrl: 'https://love-handles-bbq-nlds.netlify.app',
     demoLabel: 'View Concept Website',
@@ -61,6 +63,7 @@ const projects: WorkProject[] = [
     solution: 'Designed a cleaner restaurant website experience with stronger visual hierarchy, clearer menu presentation, premium atmosphere, and direct customer paths for viewing, contacting, or visiting.',
     deliverables: ['Restaurant landing page', 'Mobile-responsive layout', 'Menu presentation', 'Local business positioning'],
     classification: 'Concept Build',
+    demonstrates: 'Explores a cleaner, mobile-first website direction for a local restaurant.',
     slug: 'el-taller-2026',
     demoUrl: 'https://el-taller-2026.netlify.app/',
     demoLabel: 'View Concept Website',
@@ -75,6 +78,7 @@ const projects: WorkProject[] = [
     solution: 'A premium coffee shop website concept with a full editorial homepage: hero, product sections, coffee finder, seasonal features, café visit details, wholesale inquiry positioning, journal cards, newsletter, and mobile-first design.',
     deliverables: ['Homepage design', 'Product section structure', 'Café visit section', 'Wholesale inquiry section', 'Journal layout', 'Mobile-responsive build'],
     classification: 'Concept Build',
+    demonstrates: 'Shows how a coffee shop website can cover ordering, wholesale, and café visits in one homepage.',
     slug: 'ember-oak-coffee',
     demoUrl: 'https://ember-oak-coffee-nlds.netlify.app/',
     demoLabel: 'View Concept Website',
@@ -88,6 +92,7 @@ const projects: WorkProject[] = [
     solution: 'Built a direct landing page with service breakdown, social proof, and a simple quote request form.',
     deliverables: ['Landing page design', 'Quote form', 'Mobile layout', 'Local SEO structure'],
     classification: 'Concept Build',
+    demonstrates: 'Demonstrates a direct, quote-ready landing page for a roofing contractor.',
     result: 'Quote-ready layout',
   },
   {
@@ -100,6 +105,7 @@ const projects: WorkProject[] = [
     solution: 'A premium restaurant website concept with a polished editorial layout, mobile-first structure, clear menu presentation, and direct paths to customer action.',
     deliverables: ['Restaurant landing page', 'Mobile-responsive layout', 'Menu and location clarity', 'Local business positioning'],
     classification: 'Concept Build',
+    demonstrates: 'Explores a more premium, appetite-first website direction for a local restaurant.',
     slug: 'la-tequila-2026',
     demoUrl: 'https://la-tequila-2026.netlify.app/',
     demoLabel: 'View Concept Website',
@@ -114,6 +120,7 @@ const projects: WorkProject[] = [
     solution: 'A clean, quote-focused website with a video-led hero section, clear service breakdowns, and direct calls to action. Built to make the brand feel reliable, approachable, and ready for homeowners looking for dependable lawn care.',
     deliverables: ['Local service landing page', 'Hero video integration', 'Quote-focused CTAs', 'Mobile-responsive layout'],
     classification: 'Concept Build',
+    demonstrates: 'Demonstrates a reliable, quote-focused website for a lawn care business.',
     slug: 'the-grass-guys',
     demoUrl: 'https://flourishing-taiyaki-d7a1ea.netlify.app/',
     demoLabel: 'View Concept Website',
@@ -128,6 +135,7 @@ const projects: WorkProject[] = [
     solution: 'A clean local-service layout with strong visual hierarchy, clear service framing, and mobile-first conversion paths built around trust and inquiry generation.',
     deliverables: ['Landscaping landing page', 'Mobile-responsive layout', 'Service presentation', 'Local business positioning'],
     classification: 'Concept Build',
+    demonstrates: 'Shows how a landscaping business can present services and service areas clearly.',
     slug: 'the-best-landscape-2026',
     demoUrl: 'https://the-best-landscape-2026.netlify.app/',
     demoLabel: 'View Concept Website',
@@ -142,6 +150,7 @@ const projects: WorkProject[] = [
     solution: 'A premium roofing landing page concept with a video-led hero, clear inspection CTA, slate and charcoal visual system, service cards, financing and insurance support, local service-area positioning, and mobile-first lead capture.',
     deliverables: ['Roofing landing page', 'Hero video integration', 'Lead form', 'Service-area section', 'Mobile-responsive layout'],
     classification: 'Concept Build',
+    demonstrates: 'Demonstrates a stronger trust-first website for a premium roofing company.',
     slug: 'dh-luxury-roofing',
     demoUrl: 'https://dh-luxury-roofing-nlds.netlify.app/',
     demoLabel: 'View Concept Website',
@@ -156,6 +165,7 @@ const projects: WorkProject[] = [
     solution: 'A professional-services website concept with clear practice-area messaging, attorney introduction, trust signals, client process overview, and a simple consultation CTA — built for Port Orange and Volusia County.',
     deliverables: ['Law firm landing page', 'Practice area section', 'Attorney introduction', 'Client process overview', 'Mobile-responsive layout'],
     classification: 'Industry Demo',
+    demonstrates: 'Shows how a local law firm can build credibility and simplify consultation requests.',
     slug: 'volusia-legal-group',
     demoUrl: 'https://volusia-legal-group-nlds.netlify.app/',
     demoLabel: 'View Concept Website',
@@ -168,6 +178,7 @@ const projects: WorkProject[] = [
     solution: 'Created a full website and brand system with soft clinical elegance, clear service pages, and booking-focused structure.',
     deliverables: ['Website design', 'Brand system', 'Service pages', 'Booking flow'],
     classification: 'Concept Build',
+    demonstrates: 'Explores a booking-focused website and brand system for a med spa.',
     result: 'Stronger mobile experience',
   },
   {
@@ -180,6 +191,7 @@ const projects: WorkProject[] = [
     solution: 'Built a clean, one-page website with service list, pricing, hours, and a direct booking link.',
     deliverables: ['One-page website', 'Service list', 'Booking link integration', 'Mobile layout'],
     classification: 'Concept Build',
+    demonstrates: 'Demonstrates a simple, direct-booking website for a one-location salon.',
     result: 'Better service structure',
   },
   {
@@ -192,6 +204,7 @@ const projects: WorkProject[] = [
     solution: 'A full multi-page luxury real estate website concept with a 4K video hero, curated property collection with filter and detail pages, buyer and seller advisory pathways, six-market area structure, principal profiles, and a Calendly-powered private consultation flow.',
     deliverables: ['4K video hero with scroll parallax', 'Property collection and detail pages', 'Buyer and seller advisory pages', 'Six coastal market structure', 'Principal profile pages', 'Private consultation flow', 'Mobile-first responsive build'],
     classification: 'Concept Build',
+    demonstrates: 'Explores a more premium digital presence for a luxury coastal real estate brand.',
     slug: 'aureline-estates',
     ctaLabel: 'View Case Study →',
   },
@@ -205,6 +218,7 @@ const projects: WorkProject[] = [
     solution: 'A single-page boutique real estate experience with a GSAP-animated split-screen hero, horizontally pinned featured property scroll, neighborhood editorial grid, sell/buy tab advisory section, and a five-step consultation methodology.',
     deliverables: ['Editorial split-screen hero', 'GSAP scroll animation system', 'Featured property horizontal scroll', 'Neighborhood editorial grid', 'Sell & Buy tab advisory section', 'Our Method trust section', 'Brand token design system', 'Mobile-first responsive layout'],
     classification: 'Industry Demo',
+    demonstrates: 'Shows how a boutique real estate agency can present itself with editorial polish.',
     slug: 'crescent-harbor',
     demoUrl: 'https://crescent-harbor-realty-nlds.netlify.app',
     demoLabel: 'View Concept Website',
@@ -219,6 +233,7 @@ const projects: WorkProject[] = [
     solution: 'A premium editorial real estate website with refined typography, image-led property presentation, clear buyer and seller pathways, market-area structure, and a private consultation flow designed to build trust before the first conversation.',
     deliverables: ['Luxury real estate website concept', 'Homepage system', 'Featured property layout', 'Buyer and seller pathways', 'Market-area structure', 'Private consultation flow', 'Mobile-first responsive build'],
     classification: 'Industry Demo',
+    demonstrates: 'Demonstrates a calm, private-feeling website for a luxury real estate brand.',
     slug: 'coastal-standard-realty',
     demoUrl: 'https://coastal-standard-realty-nlds.netlify.app',
     demoLabel: 'View Concept Website',
@@ -233,6 +248,7 @@ const projects: WorkProject[] = [
     solution: 'A premium coastal real estate listing website concept with featured listings, property search, agent contact paths, and showing request flow.',
     deliverables: ['Listing page design', 'Agent profile section', 'Contact form', 'Mobile layout'],
     classification: 'Concept Build',
+    demonstrates: 'Shows how a real estate listing website can make properties easier to browse and inquire about.',
     result: 'Clearer first impression',
   },
   {
@@ -245,6 +261,7 @@ const projects: WorkProject[] = [
     solution: 'Built a sharp, minimal website with class schedule, pricing tiers, and a clear membership call to action.',
     deliverables: ['Website design', 'Class schedule', 'Pricing page', 'CTA structure'],
     classification: 'Concept Build',
+    demonstrates: 'Demonstrates a simple, membership-focused website for a local gym.',
     result: 'Better service structure',
   },
 ];
@@ -293,7 +310,7 @@ export default function Works() {
     <div>
       <SEO
         title="Selected Website Work | NLDS"
-        description="Explore concept builds, website systems, brand visuals, and local business design work from New Level Design Studio."
+        description="Independent concept builds and industry demonstrations showing website strategy, design direction, and conversion structure for local businesses in Port Orange, Daytona Beach, and Volusia County."
         canonical="https://newlvlstudio.com/works"
       />
       {/* Hero */}
@@ -324,7 +341,7 @@ export default function Works() {
             style={{ fontSize: '0.875rem', color: 'var(--muted-text)', maxWidth: 520, lineHeight: 1.65 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Website concepts, local business demos, and selected builds showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, real estate, wellness, and local brands. Client work is labeled separately.
+            These projects show website strategy, design direction, and conversion structure for local-business industries. Concept builds are independent demonstrations, not commissioned client work unless labeled otherwise.
           </motion.p>
           <motion.div className="mt-14" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />
@@ -378,6 +395,39 @@ export default function Works() {
           >
             Concept builds are independent demonstrations created by New Level Design Studio to show website strategy, design direction, and conversion structure. They were not commissioned by, affiliated with, or endorsed by the businesses named unless a project is explicitly labeled Client Work.
           </p>
+        </div>
+      </section>
+
+      {/* How to read the work */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '48px 0 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">How to Read the Work</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6" style={{ maxWidth: 900 }}>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 16 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Strategy
+              </h3>
+              <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                What the website needs to communicate and why.
+              </p>
+            </div>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 16 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Structure
+              </h3>
+              <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                How the page guides visitors from first impression to inquiry.
+              </p>
+            </div>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 16 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Trust
+              </h3>
+              <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                How visuals, copy, proof, and calls-to-action make the business easier to choose.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

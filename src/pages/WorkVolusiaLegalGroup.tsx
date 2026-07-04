@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://volusia-legal-group-nlds.netlify.app/';
 
@@ -227,6 +228,14 @@ export default function WorkVolusiaLegalGroup() {
                   pressure.
                 </p>
               </div>
+
+              <WorkDemonstrates
+                points={[
+                  'A calmer, more credible first impression for people dealing with a stressful legal situation.',
+                  'Practice areas and attorney introduction structured to build confidence quickly.',
+                  'A low-friction path from browsing to requesting a consultation.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
                 <p className="eyebrow" style={{ marginBottom: 16 }}>The Direction</p>

@@ -3,6 +3,7 @@ import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
+import WorkDemonstrates from '@/components/WorkDemonstrates';
 
 const DEMO_URL = 'https://coastal-standard-realty-nlds.netlify.app';
 
@@ -336,20 +337,13 @@ export default function WorkCoastalStandardRealty() {
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, marginBottom: 48 }}>
-                <p className="eyebrow" style={{ marginBottom: 16 }}>Why This Matters</p>
-                <p
-                  className="font-sans"
-                  style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--muted-text)' }}
-                >
-                  In luxury real estate, the first digital impression determines whether a potential
-                  client reaches out or moves on. A website that looks like a template signals that
-                  the representation will feel like a template. By building a system that feels
-                  private, calm, and carefully considered — with clear buyer and seller pathways, a
-                  structured market-area presence, and a consultation-first CTA — the site
-                  communicates competence before a single conversation happens.
-                </p>
-              </div>
+              <WorkDemonstrates
+                points={[
+                  'A private, considered first impression instead of a generic listing template.',
+                  'Clear buyer and seller pathways that guide visitors toward a consultation.',
+                  'A market-area structure that communicates competence before the first call.',
+                ]}
+              />
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32, display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <a
