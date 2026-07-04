@@ -120,9 +120,9 @@ export default function ArticleDetail() {
       </section>
 
       <FinalCTA
-        heading="Ready to Raise Your Visual Standard?"
-        body="New Level Design Studio works with local businesses across Port Orange, Daytona Beach, and Volusia County. Tell us what you are building."
-        buttonText="Start a Project"
+        heading="Start With a Free Website Review"
+        body="We'll help you understand whether your website is clear, credible, and easy to trust before someone reaches out."
+        buttonText="Start With a Free Website Review"
         buttonTo="/contact"
       />
     </div>

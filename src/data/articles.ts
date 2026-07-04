@@ -1316,7 +1316,7 @@ The cheapest providers typically deliver template-quality work that doesn't diff
 
 ### What New Level Design Studio Charges
 
-New Level Design Studio publishes pricing openly on the [Packages page](/packages). Packages cover website builds, Website Care plans, the Visual Starter Pack, and brand direction — with custom scoping for larger visual and video projects.
+New Level Design Studio publishes pricing openly on the [Packages page](/packages). Packages cover Starter, Core, and Pro Website builds and Website Care plans, with support like Brand Direction, Local SEO Structure, and Website Copy & Visual Support scoped individually.
 
 Every package shows exactly what's included, no hidden fees, no quote-only pricing.
 
@@ -1738,7 +1738,7 @@ Before worrying about advanced SEO tactics, most small businesses should focus o
 
 These pieces are not flashy, but they matter. They help customers understand the business quickly, and they help search engines understand where the business fits.
 
-For many small businesses, the biggest SEO opportunity is not complicated. It is simply building a better website around the way customers already search.
+For many small businesses, the biggest SEO opportunity is not complicated. It is simply building a better [website](/services) around the way customers already search.
 
 ### The Bottom Line
 
@@ -1753,6 +1753,8 @@ For small businesses, the real goal is not just ranking higher.
 The goal is to look more credible when customers find you, answer their questions before they call, and make it easier for them to choose your business over the next option.
 
 That is when SEO becomes worth it.
+
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County — a good first step before deciding whether SEO is the right next investment. [Request your free website review →](/contact)
     `.trim(),
   },
   {
@@ -1840,11 +1842,11 @@ Every visitor who lands on your website and leaves without taking action is a lo
 
 That cost is real, and it compounds. A business that converts 3 out of 10 website visitors into inquiries is doing far better than a business that converts 1 out of 10 — not because the first business has better services or better pricing, but because its website does a better job in those first critical seconds.
 
-The businesses in Port Orange, Daytona Beach, and Volusia County that understand this are investing in websites built to earn trust before the first call. That investment pays off in the form of more inquiries, better-quality leads, and customers who already feel good about the business before they pick up the phone.
+The businesses in Port Orange, Daytona Beach, and Volusia County that understand this are investing in websites built to earn trust before the first call. That investment pays off in the form of more inquiries, better-quality leads, and customers who already feel good about the business before they pick up the phone. You can see this approach applied to real local-business industries in our [selected work](/works).
 
 ### Ready to See How Your Website Performs?
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and across Volusia County. We'll tell you what your site is communicating in the first five seconds — and what it would take to strengthen it. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and across Volusia County. We'll tell you what your site is communicating in the first five seconds — and what it would take to strengthen it. If you're ready to move forward, our [website packages](/packages) show exactly what's included. [Request your free website review →](/contact)
     `.trim(),
   },
   {
@@ -1886,7 +1888,7 @@ There's too much competing for attention. Websites that cram the homepage with e
 
 The fix for a weak 5-second test result usually isn't adding more information. It's clarifying and prioritizing what's already there.
 
-**Start with the headline.** Your homepage headline should do one job: tell a potential customer what your business does and who it's for, in language they'd actually use. "Port Orange Website Design for Local Businesses" is clearer than "Helping You Succeed Online." "Daytona Beach Family Dentistry — Same-Day Appointments Available" is clearer than "Your Smile Is Our Priority."
+**Start with the headline.** Your homepage headline should do one job: tell a potential customer what your business does and who it's for, in language they'd actually use. "[Port Orange Website Design](/port-orange-website-design) for Local Businesses" is clearer than "Helping You Succeed Online." "Daytona Beach Family Dentistry — Same-Day Appointments Available" is clearer than "Your Smile Is Our Priority."
 
 Specific beats vague. Location beats generic. Clear beats clever.
 
@@ -1916,7 +1918,7 @@ The businesses in Port Orange, Daytona Beach, and across Volusia County that are
 
 ### Get a Free Website Review
 
-New Level Design Studio offers a free website review for local businesses in the Port Orange and Daytona Beach area. We'll run the 5-second test, look at your conversion structure, and tell you exactly what's working and what isn't. No commitment required. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in the Port Orange and Daytona Beach area. We'll run the 5-second test, look at your conversion structure, and tell you exactly what's working and what isn't. No commitment required. See our [website packages](/packages) or [request your free website review →](/contact)
     `.trim(),
   },
   {
@@ -1952,7 +1954,7 @@ If you're getting consistent search traffic but very few contact form submission
 
 Visibility and conversion are two separate problems. SEO helps people find you. Your website is supposed to turn those visitors into leads. When traffic is decent but inquiries are low, the website is the weak link.
 
-The most common culprits here are a contact form that's too long or hard to find, a CTA (call to action) that's buried below the fold or unclear, no clear signal about what the visitor gets by contacting you ("fill out this form" is less compelling than "request a free estimate"), and a general lack of trust signals — no photos of real work, no reviews visible on the page, no sense of who is behind the business.
+The most common culprits here are a contact form that's too long or hard to find, a CTA (call to action) that's buried below the fold or unclear, no clear signal about what the visitor gets by contacting you ("fill out this form" is less compelling than "request a free estimate"), and a general lack of trust signals — no [examples of real work](/works), no reviews visible on the page, no sense of who is behind the business.
 
 If you're showing up in searches but not getting calls, your website isn't closing the deal.
 
@@ -1984,7 +1986,7 @@ This sounds harsh, but it reflects how first impressions actually work. Visitors
 
 Signs a website looks out of date include overly small text, narrow layouts that don't fill a modern wide screen, generic stock photos, an overall design aesthetic that was common several years ago, outdated copyright dates in the footer, and content about services or products that no longer reflect the current business.
 
-Updating the visual design of a website doesn't have to mean a complete rebuild. Sometimes it means better images, cleaner typography, and a layout that feels current. But it does require attention.
+Updating the visual design of a website doesn't have to mean a complete rebuild. Sometimes it means better images, cleaner typography, and a layout that feels current — the kind of work covered under [website design and care services](/services). But it does require attention.
 
 ### What to Do Next
 
@@ -2028,7 +2030,7 @@ A website first impression audit evaluates your site from the perspective of a n
 
 **Local SEO foundation.** A first impression audit isn't a full SEO audit, but it does check the basic signals that connect your website to local searches: whether the service area is clearly stated, whether page titles and descriptions match what potential customers are searching for, and whether the content gives Google the signals it needs to surface your site for relevant local queries.
 
-**Trust signals.** What on the website helps a potential customer believe this is a legitimate, established business? Reviews, photos of real work, a physical location or service area, specific credentials, and a clear explanation of the process all contribute. An audit identifies what's missing and what's present.
+**Trust signals.** What on the website helps a potential customer believe this is a legitimate, established business? Reviews, [examples of real work](/works), a physical location or service area, specific credentials, and a clear explanation of the process all contribute. An audit identifies what's missing and what's present.
 
 ### What the Audit Process Looks Like
 
@@ -2040,7 +2042,7 @@ Then we go deeper: the service pages, the contact flow, the page titles, the con
 
 At the end, we share what we found: what's working, what's costing you leads, and what specific improvements would have the biggest impact. That feedback is specific to your business and your market — Port Orange, Daytona Beach, Volusia County — not a generic checklist that applies to every website category.
 
-The review is free. There's no sales pitch attached to it, and no obligation to work with us afterward. But if you want to move forward with improvements, we'll show you exactly what that would involve.
+The review is free. There's no sales pitch attached to it, and no obligation to work with us afterward. But if you want to move forward with improvements, our [website packages](/packages) show exactly what that would involve.
 
 ### What Local Businesses Usually Find
 
@@ -2084,7 +2086,7 @@ No commitment, no sales pressure. We'll look at your site, tell you what we see,
     excerpt: 'Local SEO for Port Orange businesses doesn\'t require advanced tactics. It requires a clear website, a complete Google Business Profile, and consistent signals that tell Google exactly what you do and where you do it.',
     metaDescription: 'Local SEO for Port Orange businesses — what actually matters, what you can do today, and how your website supports local search visibility.',
     body: `
-If you run a local business in Port Orange — whether you're a contractor, a restaurant, a salon, a service provider, or a professional practice — local SEO is one of the most practical marketing investments you can make.
+If you run a [local business in Port Orange](/port-orange-website-design) — whether you're a contractor, a restaurant, a salon, a service provider, or a professional practice — local SEO is one of the most practical marketing investments you can make.
 
 That's not a pitch. It's the logical outcome of how people find local businesses. When someone in Port Orange searches "electrician near me" or "best pizza Daytona Beach" or "family dentist 32127," they're already deciding to buy. They just need to find the right business. Local SEO is what puts your business in front of that search.
 
@@ -2136,7 +2138,7 @@ You don't need dozens of reviews. You need a consistent flow of them. Five new r
 
 Consistency matters in local SEO. If your business name, address, and phone number are different across different directories — Google, Yelp, the local Chamber of Commerce website, your Facebook page, your Instagram bio — that inconsistency can work against you.
 
-Take twenty minutes and search for your business name. Check the major places where your information appears. Make sure the name, address, and phone number are exactly consistent everywhere. It's a small thing, but it's one of the basic signals Google uses to verify that a local business is legitimate and established.
+Take twenty minutes and search for your business name. Check the major places where your information appears. Make sure the name, address, and phone number are exactly consistent everywhere. Our [free website and SEO tools](/free-seo-tools) can help you check indexing, structured data, and local search presence yourself. It's a small thing, but it's one of the basic signals Google uses to verify that a local business is legitimate and established.
 
 ### The Local SEO Foundation Starts With the Website
 
@@ -2190,7 +2192,7 @@ If your website is clean, fast, mobile-friendly, and organized around your servi
 
 The first month of SEO is usually about setup and correction.
 
-This is where the foundation gets cleaned up. That may include improving page titles, rewriting unclear copy, adding service keywords naturally, fixing broken links, improving mobile layout, optimizing images, setting up analytics, connecting Search Console, and making sure the website can be properly crawled.
+This is where the foundation gets cleaned up. That may include improving page titles, rewriting unclear copy, adding service keywords naturally, fixing broken links, improving mobile layout, optimizing images, setting up analytics, connecting Search Console, and making sure the website can be properly crawled. Our [free website and SEO tools](/free-seo-tools) can help you check several of these yourself.
 
 For local businesses, this stage may also include reviewing the Google Business Profile, checking business information consistency, clarifying service areas, and identifying which pages need to exist.
 
@@ -2324,6 +2326,8 @@ The businesses that get the most from SEO usually do not treat it as a quick tri
 A better website gives SEO something to work with. Clear service pages help customers understand what you offer. Local signals help search engines understand where you operate. Helpful content answers questions before someone contacts you.
 
 SEO is not instant, but when it is built on the right foundation, it can become one of the most useful long-term marketing assets a small business has.
+
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at whether your site gives SEO the right foundation to work with. [Request your free website review →](/contact)
     `.trim(),
   },
 ];

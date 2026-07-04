@@ -153,7 +153,7 @@ export default function Journal() {
     <div>
       <SEO
         title="Notes on Local Business Web Design | New Level Design Studio"
-        description="Articles on website design, local visibility, branding, content systems, and online presence for local businesses."
+        description="Articles on website strategy, local visibility, first impressions, and website trust for local businesses in Port Orange, Daytona Beach, and Volusia County."
         canonical="https://newlvlstudio.com/journal"
       />
 
@@ -182,9 +182,9 @@ export default function Journal() {
               maxWidth: 540,
             }}
           >
-            Practical articles on websites, branding, marketing visuals, short-form content,
-            and building a stronger online presence — written for local businesses
-            across Port Orange, Daytona Beach, and Volusia County.
+            Practical articles on website strategy, local visibility, first impressions,
+            and website trust — written for local businesses across Port Orange,
+            Daytona Beach, and Volusia County.
           </p>
           <div className="mt-16">
             <SectionDivider />
