@@ -4,6 +4,7 @@ import { getArticlesSortedByDate } from '@/data/articles';
 import type { Article } from '@/data/articles';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
+import { getCategoryDisplayLabel } from '@/lib/categoryDisplayLabels';
 
 const ALL = 'All';
 
@@ -54,7 +55,7 @@ function ArticleCard({ article }: { article: Article }) {
               color: 'var(--muted-text)',
             }}
           >
-            {article.category}
+            {getCategoryDisplayLabel(article.category)}
           </p>
           <p
             className="font-sans mt-2"
@@ -222,7 +223,7 @@ export default function Journal() {
                   transition: 'all 0.18s ease',
                 }}
               >
-                {cat}
+                {getCategoryDisplayLabel(cat)}
               </button>
             ))}
           </div>

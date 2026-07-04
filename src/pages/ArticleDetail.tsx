@@ -2,6 +2,7 @@ import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { getArticleBySlug } from '@/data/articles';
 import { markdownToHtml } from '@/lib/markdownToHtml';
+import { getCategoryDisplayLabel } from '@/lib/categoryDisplayLabels';
 import SEO from '@/components/SEO';
 import FinalCTA from '@/components/FinalCTA';
 import SectionDivider from '@/components/SectionDivider';
@@ -81,7 +82,7 @@ export default function ArticleDetail() {
           </Link>
 
           <div style={{ maxWidth: 760, marginTop: 32 }}>
-            <p className="eyebrow">{article.category}</p>
+            <p className="eyebrow">{getCategoryDisplayLabel(article.category)}</p>
             <h1
               className="font-serif mt-4"
               style={{

@@ -95,7 +95,7 @@ const navItems: NavItem[] = [
         { label: 'Website Strategy', path: '/journal?category=website-strategy' },
         { label: 'Local Business Growth', path: '/journal?category=local-business-growth' },
         { label: 'Visual Direction', path: '/journal?category=visual-direction' },
-        { label: 'Content Systems', path: '/journal?category=content-systems' },
+        { label: 'Website Insights', path: '/journal?category=content-systems' },
         { label: 'Brand Presence', path: '/journal?category=brand-presence' },
       ],
     },
@@ -466,7 +466,7 @@ export default function Navigation() {
               onClick={handleNavClick}
               className="btn-primary shrink-0 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
             >
-              Start a Project
+              Free Website Review
             </Link>
           </div>
 
@@ -641,7 +641,7 @@ export default function Navigation() {
                     onClick={handleNavClick}
                     className="btn-primary focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
                   >
-                    Start a Project
+                    Free Website Review
                   </Link>
                 </motion.div>
               </motion.div>

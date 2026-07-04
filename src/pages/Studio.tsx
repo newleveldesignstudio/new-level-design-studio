@@ -1,5 +1,6 @@
 import FinalCTA from '@/components/FinalCTA';
 import { SOCIAL_LINKS } from '@/lib/socialLinks';
+import { getCategoryDisplayLabel } from '@/lib/categoryDisplayLabels';
 import FramedImage from '@/components/FramedImage';
 import EditorialImageReveal from '@/components/EditorialImageReveal';
 import DiagonalLine from '@/components/DiagonalLine';
@@ -84,7 +85,7 @@ function JournalSection() {
                 className="font-sans"
                 style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--muted-text)' }}
               >
-                {article.category}
+                {getCategoryDisplayLabel(article.category)}
               </p>
               <h3
                 className="font-serif mt-3"
@@ -495,7 +496,7 @@ export default function Studio() {
       <FinalCTA
         heading="Ready to Build a Stronger Online Presence?"
         body="We work with local businesses across Port Orange, Daytona Beach, and Volusia County. Tell us what you are building and we will show you what is possible."
-        buttonText="Start a Project"
+        buttonText="Request a Free Website Review"
         buttonTo="/contact"
       />
     </div>

@@ -9,9 +9,9 @@ interface FinalCTAProps {
 }
 
 export default function FinalCTA({
-  heading = 'Ready to Raise Your Standard?',
-  body = "Let's build a website, visual system, and content strategy that makes your business look as good as it actually is.",
-  buttonText = 'Start a Project',
+  heading = 'Start With a Free Website Review',
+  body = "A clear, credible website makes a stronger first impression — and makes it easier for customers to trust your business and reach out.",
+  buttonText = 'Request a Free Website Review',
   buttonTo = '/contact',
 }: FinalCTAProps) {
   const ref = useScrollReveal<HTMLDivElement>({
