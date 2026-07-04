@@ -76,15 +76,13 @@ A full website visual upgrade doesn't require a redesign or a rebrand. In most c
 
 That means a compelling hero image that represents your service or business in its best light, service section images that are visually consistent and professionally styled, lifestyle imagery that speaks to the experience of working with you or visiting your business, and supporting imagery throughout the site that maintains quality and brand consistency.
 
-Professional imagery is purpose-built for this use case. It produces custom, commercial-grade images designed for a specific business and a specific use — which is exactly what a website visual refresh requires.
-
-New Level Design Studio's Visual Starter Pack ($129) is purpose-built for business websites — a custom image set delivered in the correct dimensions for web use. The result is a website that looks like a business worth contacting — not one that looks like it was built in a weekend and forgotten.
+A stronger visual impression matters most when it's connected to the website itself. The goal isn't just better images — it's a clearer, more credible website that helps customers understand the business and feel comfortable reaching out. New Level Design Studio builds those websites directly — Starter, Core, and Pro Website packages, each built around a stronger first impression and a clearer path to contact. You can see this approach applied to real local-business industries in our [selected work](/works). The result is a website that looks like a business worth contacting — not one that looks like it was built in a weekend and forgotten.
 
 For businesses in Port Orange, Daytona Beach, and across Volusia County and Central Florida, a website that converts better is one of the highest-return marketing investments available. The potential customer who lands on your site and calls you instead of going back to Google is revenue that was already on its way to you — it just needed your website to close the deal.
 
-### Ready to Get Started?
+### Ready to See How Your Website Performs?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at your site the way a new customer would and tell you exactly what's working and what isn't. See our [website packages](/packages) or [request your free website review →](/contact)
     `.trim(),
   },
   {
