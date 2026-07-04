@@ -13,6 +13,7 @@ import { MonitorIcon, FramesIcon, SupportIcon, PageIcon } from '@/components/ico
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
 import ScrollTriggerSequence from '@/components/ScrollTriggerSequence';
+import { EXTERNAL_LINKS } from '@/lib/links';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -201,7 +202,7 @@ export default function Home() {
             <p className="st-cta-headline">Websites built to earn trust before the first call.</p>
             <div className="st-cta-row">
               <Link to="/contact" className="btn-primary st-cta-btn">
-                Get a Free Website Review
+                Start With a Free Website Review
               </Link>
               <Link to="/works" className="btn-secondary st-cta-btn">
                 View the Work
@@ -244,7 +245,7 @@ export default function Home() {
             style={{ gap: 16, marginTop: 40 }}
           >
             <Link to="/contact" className="btn-primary w-full sm:w-auto">
-              Get a Free Website Review
+              Start With a Free Website Review
             </Link>
             <Link to="/works" className="btn-secondary w-full sm:w-auto">
               View the Work
@@ -320,13 +321,13 @@ export default function Home() {
                 className="font-sans uppercase"
                 style={{ fontSize: '0.625rem', letterSpacing: '0.22em', color: 'var(--muted-text)', marginBottom: 8 }}
               >
-                Studio Location
+                Founder-Led Studio
               </p>
               <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
-                Port Orange, FL
+                Port Orange, Florida
               </p>
               <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                Serving Volusia County &amp; Central Florida
+                Direct work with Michael Vail — no agency handoff
               </p>
             </div>
             <div>
@@ -337,10 +338,10 @@ export default function Home() {
                 What We Build
               </p>
               <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
-                Websites That Earn Trust
+                Website-First Structure
               </p>
               <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                First impressions, local structure, and clear inquiry paths
+                Website design, redesign, and care — built for local businesses
               </p>
             </div>
             <div>
@@ -351,10 +352,10 @@ export default function Home() {
                 Concept Builds
               </p>
               <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
-                10+ Portfolio Concepts
+                10+ Independent Concept Builds
               </p>
               <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                Portfolio concepts showing how local businesses could look online — not paying client work.
+                Built to show website strategy and design direction — not paid client work
               </p>
             </div>
             <div>
@@ -362,14 +363,20 @@ export default function Home() {
                 className="font-sans uppercase"
                 style={{ fontSize: '0.625rem', letterSpacing: '0.22em', color: 'var(--muted-text)', marginBottom: 8 }}
               >
-                Free Website Review
+                Google Business Profile
               </p>
               <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
-                No Commitment
+                Verified Local Business
               </p>
-              <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                We'll review your site and tell you exactly what's working and what isn't
-              </p>
+              <a
+                href={EXTERNAL_LINKS.googleBusinessProfile}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans"
+                style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5, display: 'inline-block', textDecoration: 'underline', textUnderlineOffset: 3 }}
+              >
+                View our profile on Google →
+              </a>
             </div>
           </div>
         </div>
@@ -586,10 +593,34 @@ export default function Home() {
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
               <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                Website-First System
+                Website-First, Not Add-Ons
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
                 Strategy, copy, layout, visuals, launch support, and ongoing care handled as one connected presence.
+              </p>
+            </div>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Clear Package Structure
+              </h3>
+              <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                Starter, Core, and Pro Website packages make it clear what you're getting and what it costs.
+              </p>
+            </div>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                First 90 Days Support
+              </h3>
+              <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                Every launch includes 90 days of review and fine-tuning once the site is live.
+              </p>
+            </div>
+            <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                Website Care After Launch
+              </h3>
+              <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
+                Ongoing monthly care keeps the site current after the First 90 Days end.
               </p>
             </div>
           </div>
@@ -696,7 +727,7 @@ export default function Home() {
             ))}
           </div>
           <Link to="/contact" className="btn-primary mt-10 inline-block">
-            Get a Free Website Review
+            Start With a Free Website Review
           </Link>
         </div>
       </section>
@@ -774,16 +805,36 @@ export default function Home() {
                 className="font-serif mt-4"
                 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
               >
-                Credible design earns trust before the first call.
+                Your website has to earn trust before the first call.
               </h2>
               <p
                 className="font-sans mt-6"
                 style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6 }}
               >
-                Most people decide how they feel about a business within seconds of landing on its website or seeing its content. We help local businesses earn that trust faster with clean design, clear messaging, and a visual system that feels sharp from the start.
+                Most people decide how they feel about a business within seconds of landing on its website. A few things make that first impression work in your favor:
               </p>
+              <ul className="mt-5 flex flex-col" style={{ gap: 12 }}>
+                {[
+                  'Clear services reduce hesitation before someone reaches out.',
+                  'Better structure makes it easier to understand what you actually do.',
+                  'Trust signals help people feel safer picking up the phone or sending a message.',
+                  'Mobile clarity matters — most people are checking you out quickly, on their phone.',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span
+                      className="font-sans shrink-0"
+                      style={{ fontSize: '0.75rem', color: 'var(--silver-grey)', marginTop: 2 }}
+                    >
+                      —
+                    </span>
+                    <span className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--body-text)', lineHeight: 1.55 }}>
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
               <Link to="/contact" className="btn-primary mt-8 inline-block self-start">
-                Get a Free Website Review
+                Start With a Free Website Review
               </Link>
             </div>
             <div className="relative">
@@ -828,9 +879,10 @@ export default function Home() {
                     maxWidth: 560,
                   }}
                 >
-                  New Level Design Studio is led by Michael Vail in Port Orange, Florida. Every
-                  project receives direct attention, clear communication, and a website-first
-                  strategy built around stronger trust and better local visibility.
+                  You work directly with Michael Vail, founder of New Level Design Studio in Port
+                  Orange, Florida — not an account manager or a handoff to someone else. The goal
+                  is to make your website clearer, more credible, and easier to trust before
+                  someone reaches out.
                 </p>
                 <Link to="/michael-vail" className="btn-primary mt-8 inline-block">
                   Meet Michael
@@ -942,7 +994,7 @@ export default function Home() {
               to="/contact"
               className="btn-primary mt-10 inline-block self-start"
             >
-              Get a Free Website Review
+              Start With a Free Website Review
             </Link>
           </div>
 
@@ -1024,7 +1076,7 @@ export default function Home() {
               className="font-sans mt-4"
               style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 520 }}
             >
-              Concept builds and portfolio demos showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, law firms, real estate, wellness, and local brands.
+              Independent concept builds showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, law firms, real estate, wellness, and local brands.
             </p>
           </div>
           <div ref={worksRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -1065,7 +1117,7 @@ export default function Home() {
             {[
               { num: '01', title: 'Clear First Impression', desc: 'Visitors should understand who you are and why you matter within seconds of landing.' },
               { num: '04', title: 'Mobile-First Layout', desc: 'Built for the screen most of your customers are actually using to find you.' },
-              { num: '06', title: 'Trust Signals', desc: 'Proof that builds confidence before the first conversation — portfolio, credentials, and social presence.' },
+              { num: '06', title: 'Trust Signals', desc: 'Proof that builds confidence before the first conversation — concept work, credentials, and social presence.' },
               { num: '09', title: 'Local SEO Foundation', desc: 'A properly structured site gives your local market a real chance to find you.' },
             ].map((item, i) => (
               <div
@@ -1245,7 +1297,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-start lg:items-end">
                 <Link to="/contact" className="btn-primary">
-                  Get a Free Website Review
+                  Start With a Free Website Review
                 </Link>
                 <p
                   className="font-sans mt-3"
@@ -1260,7 +1312,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <FinalCTA buttonText="Get a Free Website Review" />
+      <FinalCTA buttonText="Start With a Free Website Review" />
 
     </div>
   );
