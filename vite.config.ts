@@ -39,6 +39,7 @@ export default defineConfig({
         '/works/the-best-landscape-2026',
         '/works/aureline-estates',
         '/works/stone-timber-remodeling',
+        '/works/lotus-beauty-house',
         '/journal/website-visuals-costing-customers',
         '/journal/volusia-county-contractors-visual-content',
         '/journal/port-orange-businesses-professional-visual-content',
