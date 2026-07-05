@@ -29,6 +29,11 @@ export const SOCIAL_LINKS = [
     url: 'https://www.youtube.com/@newlvlstudio',
     ariaLabel: 'Follow New Level Design Studio on YouTube',
   },
+  {
+    platform: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/michael-vail-nlds',
+    ariaLabel: 'Visit Michael Vail on LinkedIn',
+  },
 ] as const;
 
 export type SocialLink = (typeof SOCIAL_LINKS)[number];
