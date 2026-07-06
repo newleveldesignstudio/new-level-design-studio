@@ -116,12 +116,20 @@
 
 ## 6. Remaining website backlog
 
+**Decided (2026-07-06) — geo/hours schema:**
+NLDS is home-based and service-area focused. **Do not publish Michael's home
+street address or exact geo coordinates in schema. Do not add openingHours
+schema unless Michael explicitly approves public business hours for schema
+use.** Use `areaServed`, locality, region, and service-area signals instead
+(all present and verified). GBP hours (9–6) are managed in GBP directly —
+never from this repo. This is a deliberate privacy/business decision, not a
+missing SEO defect. A guard comment sits on `localBusinessSchema()` in
+`src/components/SEO.tsx`.
+
 **Needs Michael's decision:**
 - Aureline demo: rename the Netlify site (currently
   `harmonious-sorbet-38230a.netlify.app`) to a branded subdomain, then
   restore the demo CTA on `WorkAurelineEstates.tsx`.
-- geo coordinates + business hours for LocalBusiness schema — only if Michael
-  wants that data public (never invent).
 - Journal video-era articles (~14 of 30): keep, reframe, or de-emphasize.
 - Tablet hamburger below 1280px — confirm intentional or lower breakpoint.
 - Search Console watch: Home H1 (city names moved to supporting copy) and

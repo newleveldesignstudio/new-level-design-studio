@@ -67,6 +67,13 @@ export default function SEO({
   );
 }
 
+/**
+ * NLDS is home-based and service-area focused. Do NOT add streetAddress,
+ * geo latitude/longitude, or openingHours to this schema unless Michael
+ * explicitly approves exposing that data — it is a privacy/business
+ * decision (2026-07-06), not a missing-SEO defect. Use areaServed,
+ * locality, region, and service-area signals instead.
+ */
 export function localBusinessSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
