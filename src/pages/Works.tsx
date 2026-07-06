@@ -124,7 +124,7 @@ const projects: WorkProject[] = [
     deliverables: ['Landing page design', 'Quote form', 'Mobile layout', 'Local SEO structure'],
     classification: 'Concept Build',
     demonstrates: 'Demonstrates a direct, quote-ready landing page for a roofing contractor.',
-    result: 'Quote-ready layout',
+    result: 'Demo focus: quote-ready layout',
   },
   {
     imageSrc: '/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.webp',
@@ -210,7 +210,7 @@ const projects: WorkProject[] = [
     deliverables: ['Website design', 'Brand system', 'Service pages', 'Booking flow'],
     classification: 'Concept Build',
     demonstrates: 'Explores a booking-focused website and brand system for a med spa.',
-    result: 'Stronger mobile experience',
+    result: 'Demo focus: mobile experience',
   },
   {
     imageSrc: '/nlds/images/new-level-design-studio-strand-salon-works-case-study-port-orange-web-design.webp',
@@ -223,7 +223,7 @@ const projects: WorkProject[] = [
     deliverables: ['One-page website', 'Service list', 'Booking link integration', 'Mobile layout'],
     classification: 'Concept Build',
     demonstrates: 'Demonstrates a simple, direct-booking website for a one-location salon.',
-    result: 'Better service structure',
+    result: 'Demo focus: service structure',
   },
   {
     imageSrc: '/nlds/images/lotus-beauty-house-salon-website-concept-nlds.webp',
@@ -296,7 +296,7 @@ const projects: WorkProject[] = [
     deliverables: ['Listing page design', 'Agent profile section', 'Contact form', 'Mobile layout'],
     classification: 'Concept Build',
     demonstrates: 'Shows how a real estate listing website can make properties easier to browse and inquire about.',
-    result: 'Clearer first impression',
+    result: 'Demo focus: first impression',
   },
   {
     imageSrc: '/files/nlds/images/iron-house-gym-class-schedule-membership-landing-page-case-study-nlds.webp',
@@ -309,7 +309,7 @@ const projects: WorkProject[] = [
     deliverables: ['Website design', 'Class schedule', 'Pricing page', 'CTA structure'],
     classification: 'Concept Build',
     demonstrates: 'Demonstrates a simple, membership-focused website for a local gym.',
-    result: 'Better service structure',
+    result: 'Demo focus: service structure',
   },
 ];
 
