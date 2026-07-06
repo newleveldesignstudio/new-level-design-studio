@@ -7,9 +7,13 @@ const ROOT = path.resolve(__dirname, '..');
 
 const SOURCE_DIR = path.resolve(ROOT, 'tmp/scroll-trigger-source-frames');
 
+// desktop/tablet write to the NON-deployed source dirs (assets-src/) — the
+// deployed runtime frames are generated from them by scripts/optimize-images.mjs
+// into public/images/scroll-trigger/*-optimized/. Mobile is served directly
+// from public/. See assets-src/scroll-trigger/README.md.
 const OUTPUTS = [
-  { name: 'desktop', dir: 'public/images/scroll-trigger/desktop', count: 96, width: 2560, quality: 92 },
-  { name: 'tablet',  dir: 'public/images/scroll-trigger/tablet',  count: 80, width: 1600, quality: 90 },
+  { name: 'desktop', dir: 'assets-src/scroll-trigger/desktop', count: 96, width: 2560, quality: 92 },
+  { name: 'tablet',  dir: 'assets-src/scroll-trigger/tablet',  count: 80, width: 1600, quality: 90 },
   { name: 'mobile',  dir: 'public/images/scroll-trigger/mobile',  count: 64, width: 1200, quality: 90 },
 ];
 

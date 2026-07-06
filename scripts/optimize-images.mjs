@@ -11,8 +11,10 @@
  * Plus:
  *   founder portrait   — -w560.webp derivative
  *   favicon            — -512.png derivative (PNG for favicon compatibility)
- *   scroll frames      — desktop/tablet recompressed (same dimensions, q68)
- *                        into sibling *-optimized/ directories
+ *   scroll frames      — desktop/tablet source frames live in
+ *                        assets-src/scroll-trigger/ (NOT deployed); they are
+ *                        recompressed (same dimensions, q68) into the deployed
+ *                        public/images/scroll-trigger/*-optimized/ directories
  *
  * Usage: node scripts/optimize-images.mjs
  * Idempotent: skips outputs that already exist and are newer than the source.
@@ -120,9 +122,11 @@ async function run() {
   }
 
   // Scroll-trigger frames: recompress desktop + tablet at the same dimensions
-  // into sibling *-optimized directories. Mobile set (2.4MB) is left as-is.
+  // from the non-deployed source dirs into the deployed *-optimized dirs.
+  // Mobile is small enough (2.4MB) that its source is served directly from
+  // public/images/scroll-trigger/mobile/.
   for (const bp of ['desktop', 'tablet']) {
-    const srcDir = path.join(PUB, 'images/scroll-trigger', bp);
+    const srcDir = path.join(ROOT, 'assets-src/scroll-trigger', bp);
     const outDir = path.join(PUB, 'images/scroll-trigger', `${bp}-optimized`);
     mkdirSync(outDir, { recursive: true });
     let dirBefore = 0;
