@@ -46,7 +46,6 @@ type NavItem = {
 */
 
 const navItems: NavItem[] = [
-  { label: 'Home', path: '/' },
   {
     label: 'Services',
     path: '/services',
@@ -81,8 +80,9 @@ const navItems: NavItem[] = [
       ],
     },
   },
+  { label: 'Packages', path: '/packages' },
   {
-    label: 'The Studio',
+    label: 'Studio',
     path: '/studio',
     activePrefixes: ['/studio', '/journal', '/michael-vail'],
     dropdown: {
@@ -114,7 +114,6 @@ const navItems: NavItem[] = [
       ],
     },
   },
-  { label: 'Packages', path: '/packages' },
 ];
 
 /* Desktop dropdown animation */
@@ -469,7 +468,7 @@ export default function Navigation() {
               onClick={() => handleNavClick()}
               className="btn-primary shrink-0 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
             >
-              Free Website Review
+              Start a Website Project
             </Link>
           </div>
 
@@ -644,7 +643,7 @@ export default function Navigation() {
                     onClick={() => handleNavClick()}
                     className="btn-primary focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
                   >
-                    Free Website Review
+                    Start a Website Project
                   </Link>
                 </motion.div>
               </motion.div>

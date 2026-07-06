@@ -202,7 +202,7 @@ export default function Home() {
             <p className="st-cta-headline">Websites built to earn trust before the first call.</p>
             <div className="st-cta-row">
               <Link to="/contact" className="btn-primary st-cta-btn">
-                Start With a Free Website Review
+                Start a Website Project
               </Link>
               <Link to="/works" className="btn-secondary st-cta-btn">
                 View the Work
@@ -226,7 +226,7 @@ export default function Home() {
               maxWidth: 900,
             }}
           >
-            Premium Websites for Local Businesses in Port Orange, Daytona Beach, and Volusia County.
+            Premium websites for local businesses that need to look credible, get found, and turn visitors into real inquiries.
           </h1>
           <p
             className="font-sans"
@@ -238,19 +238,45 @@ export default function Home() {
               marginTop: 28,
             }}
           >
-            New Level Design Studio builds premium websites for local businesses that need to look credible, get found, and turn visitors into real inquiries.
+            New Level Design Studio builds clean, trust-focused websites for service businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida.
+          </p>
+          <p
+            className="font-sans"
+            style={{
+              fontSize: 'clamp(1rem, 1.2vw, 1.125rem)',
+              lineHeight: 1.65,
+              color: 'var(--muted-text)',
+              maxWidth: 720,
+              marginTop: 16,
+            }}
+          >
+            No bloated agency process. No generic template look. Just a sharper website built
+            around your services, your market, and the way real customers decide who to contact.
           </p>
           <div
             className="hero-cta-buttons flex flex-col sm:flex-row items-start sm:items-center"
             style={{ gap: 16, marginTop: 40 }}
           >
             <Link to="/contact" className="btn-primary w-full sm:w-auto">
-              Start With a Free Website Review
+              Start a Website Project
             </Link>
-            <Link to="/works" className="btn-secondary w-full sm:w-auto">
-              View the Work
+            <Link to="/packages" className="btn-secondary w-full sm:w-auto">
+              View Packages
             </Link>
           </div>
+          <p
+            className="font-sans"
+            style={{ fontSize: '0.875rem', color: 'var(--muted-text)', marginTop: 16 }}
+          >
+            Or start with a{' '}
+            <Link
+              to="/contact?service=free-website-review"
+              style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}
+            >
+              free website review
+            </Link>{' '}
+            — no commitment.
+          </p>
           <p
             className="font-sans"
             style={{
@@ -355,7 +381,7 @@ export default function Home() {
                 10+ Independent Concept Builds
               </p>
               <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                Built to show website strategy and design direction — not paid client work
+                Built by NLDS to show the strategy, structure, and design direction we bring to local businesses
               </p>
             </div>
             <div>
@@ -562,14 +588,14 @@ export default function Home() {
         </div>
       </section>
       {/* Why Local Businesses Work With NLDS */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow">WHY LOCAL BUSINESSES WORK WITH NLDS</p>
           <h2
             className="font-serif mt-4"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', maxWidth: 600, lineHeight: 1.15 }}
           >
-            A clearer website, a sharper presence, and one direct path to more inquiries.
+            A clearer website, a stronger first impression, and one direct path to more inquiries.
           </h2>
           <div className="mt-12">
             <SectionDivider />
@@ -651,7 +677,7 @@ export default function Home() {
       </section>
 
       {/* A Website Should Do More Than Exist */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow">WHAT A WEBSITE SHOULD DO</p>
           <h2
@@ -691,7 +717,7 @@ export default function Home() {
       </section>
 
       {/* What We Help Fix */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow">WHAT WE HELP FIX</p>
           <h2
@@ -704,7 +730,7 @@ export default function Home() {
             className="font-sans mt-5"
             style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 560 }}
           >
-            Most local businesses do not lose leads because they are bad at what they do. They lose trust when their online presence does not match the quality of their work.
+            Most local businesses do not lose leads because they are bad at what they do. They lose trust when their website does not match the quality of their work.
           </p>
           <div className="mt-12 flex flex-col" style={{ gap: 0 }}>
             {[
@@ -731,8 +757,8 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link to="/contact" className="btn-primary mt-10 inline-block">
-            Start With a Free Website Review
+          <Link to="/contact?service=free-website-review" className="btn-primary mt-10 inline-block">
+            Get a Free Website Review
           </Link>
         </div>
       </section>
@@ -751,7 +777,7 @@ export default function Home() {
       </section>
 
       {/* Core Services */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow">WHAT WE DO</p>
           <h2
@@ -801,7 +827,7 @@ export default function Home() {
       </section>
 
       {/* Why It Matters */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div ref={whyTextRef} className="flex flex-col justify-center">
@@ -839,7 +865,7 @@ export default function Home() {
                 ))}
               </ul>
               <Link to="/contact" className="btn-primary mt-8 inline-block self-start">
-                Start With a Free Website Review
+                Start a Website Project
               </Link>
             </div>
             <div className="relative">
@@ -857,7 +883,7 @@ export default function Home() {
       </section>
 
       {/* Founder-Led Trust Block */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '80px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(48px, 8vw, 80px) 0' }}>
         <div className="container-nlds">
           <div
             style={{
@@ -890,10 +916,11 @@ export default function Home() {
                     maxWidth: 560,
                   }}
                 >
-                  You work directly with Michael Vail, founder of New Level Design Studio in Port
-                  Orange, Florida — not an account manager or a handoff to someone else. The goal
-                  is to make your website clearer, more credible, and easier to trust before
-                  someone reaches out.
+                  New Level Design Studio is founder-led by Michael Vail. That means the
+                  strategy, design direction, and quality control do not get passed through
+                  layers of account managers. You work directly with someone focused on making
+                  your business look credible, clear, and ready for the customers already
+                  searching for you.
                 </p>
                 <Link to="/michael-vail" className="btn-primary mt-8 inline-block">
                   Meet Michael
@@ -925,14 +952,14 @@ export default function Home() {
       </section>
 
       {/* The NLDS Method */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow text-center">THE NLDS METHOD</p>
           <h2
             className="font-serif text-center mt-4"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
           >
-            A Clear Process for Building a Sharper Online Presence
+            A Clear Process for Building a Stronger Website
           </h2>
 
           <div className="mt-16 flex flex-col" style={{ gap: 0 }}>
@@ -983,6 +1010,87 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Package Preview — compact pricing transparency, full detail on /packages */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">PACKAGES</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 560 }}
+          >
+            Clear packages. Clear pricing. No guessing.
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            {[
+              {
+                name: 'Starter Website',
+                price: '$499',
+                note: 'Starting at',
+                fit: 'A clean one-page website for a new or small local business.',
+                popular: false,
+              },
+              {
+                name: 'Core Website',
+                price: '$899',
+                note: 'Starting at',
+                fit: 'The best fit for most local businesses that need clearer services and stronger trust.',
+                popular: true,
+              },
+              {
+                name: 'Pro Website',
+                price: '$1,499',
+                note: 'Starting at',
+                fit: 'A deeper website system for multi-service or higher-ticket businesses.',
+                popular: false,
+              },
+              {
+                name: 'Website Care',
+                price: '$99/mo',
+                note: 'From',
+                fit: 'Monthly updates and checks that keep the site sharp after launch.',
+                popular: false,
+              },
+            ].map((tier) => (
+              <div
+                key={tier.name}
+                style={{
+                  borderTop: tier.popular ? '2px solid var(--charcoal)' : '1px solid var(--silver-grey)',
+                  paddingTop: 20,
+                }}
+              >
+                {tier.popular && (
+                  <p
+                    className="font-sans uppercase"
+                    style={{ fontSize: '0.625rem', letterSpacing: '0.2em', color: 'var(--charcoal)', marginBottom: 8 }}
+                  >
+                    Most Popular
+                  </p>
+                )}
+                <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                  {tier.name}
+                </h3>
+                <p className="font-serif mt-2" style={{ fontSize: '1.75rem', color: 'var(--charcoal)', lineHeight: 1 }}>
+                  {tier.price}
+                  <span className="font-sans" style={{ fontSize: '0.6875rem', letterSpacing: '0.1em', color: 'var(--muted-text)', marginLeft: 8, textTransform: 'uppercase' }}>
+                    {tier.note}
+                  </span>
+                </p>
+                <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55 }}>
+                  {tier.fit}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link to="/packages" className="btn-primary">View All Packages</Link>
+            <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)' }}>
+              Every build includes launch support and First 90 Days check-ins.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Split Editorial */}
       <section ref={splitRef} className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -995,19 +1103,19 @@ export default function Home() {
               className="font-serif"
               style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--white)', lineHeight: 1.15 }}
             >
-              Built for Local Businesses Competing for Stronger Online Presence.
+              Built for Local Businesses That Need a More Credible Website.
             </h2>
             <p
               className="font-sans mt-6"
               style={{ fontSize: '1rem', color: 'var(--platinum-grey)', lineHeight: 1.6, maxWidth: 440 }}
             >
-              From contractors and restaurants to beauty studios and real estate — we help local businesses across Volusia County build a sharper, more credible online presence.
+              From contractors and restaurants to beauty studios and real estate — we help local businesses across Volusia County build websites that earn trust before the first call.
             </p>
             <Link
               to="/contact"
               className="btn-primary mt-10 inline-block self-start"
             >
-              Start With a Free Website Review
+              Start a Website Project
             </Link>
           </div>
 
@@ -1032,7 +1140,7 @@ export default function Home() {
       </section>
 
       {/* Capabilities Proof Strip */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '72px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(44px, 7vw, 72px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow">WHAT WE BUILD</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
@@ -1080,7 +1188,7 @@ export default function Home() {
       </section>
 
       {/* Selected Work Preview */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <div ref={workHeadingRef}>
             <p className="eyebrow">SELECTED WORK</p>
@@ -1094,7 +1202,7 @@ export default function Home() {
               className="font-sans mt-4"
               style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 520 }}
             >
-              Independent concept builds showing how NLDS structures stronger first impressions for service businesses, restaurants, contractors, law firms, real estate, wellness, and local brands.
+              Concept builds created by New Level Design Studio to show the strategy, structure, and design direction we would bring to this type of local business — and how a stronger website improves trust, clarity, and customer decision-making.
             </p>
           </div>
           <div ref={worksRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -1117,7 +1225,7 @@ export default function Home() {
       </section>
 
       {/* What Your Website Needs to Work */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <p className="eyebrow">WEBSITE SUCCESS CHECKLIST</p>
           <h2
@@ -1209,7 +1317,7 @@ export default function Home() {
       </section>
 
       {/* Launch Is Not the Finish Line */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -1288,7 +1396,7 @@ export default function Home() {
       </section>
 
       {/* Website Review CTA */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '80px 0' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(48px, 8vw, 80px) 0' }}>
         <div className="container-nlds">
           <div
             style={{
@@ -1314,8 +1422,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end">
-                <Link to="/contact" className="btn-primary">
-                  Start With a Free Website Review
+                <Link to="/contact?service=free-website-review" className="btn-primary">
+                  Get a Free Website Review
                 </Link>
                 <p
                   className="font-sans mt-3"
@@ -1330,7 +1438,11 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <FinalCTA buttonText="Start With a Free Website Review" />
+      <FinalCTA
+        heading="Ready to start your website project?"
+        body="A clear, credible website makes a stronger first impression — and makes it easier for customers to trust your business and reach out."
+        buttonText="Start a Website Project"
+      />
 
     </div>
   );

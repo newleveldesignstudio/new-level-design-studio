@@ -93,8 +93,8 @@ export default function Contact() {
   return (
     <div>
       <SEO
-        title="Free Website Review — Port Orange FL | NLDS"
-        description="Request a free website review from New Level Design Studio. We'll tell you what your site is communicating to new visitors — and what it would take to strengthen it."
+        title="Start Your Website Project — Port Orange FL | NLDS"
+        description="Start a website project with New Level Design Studio — or request a free website review of your current site. Websites, Website Care, and the Visual Starter Pack for local businesses."
         canonical="https://newlvlstudio.com/contact"
       />
       {/* Hero */}
@@ -112,14 +112,17 @@ export default function Contact() {
             style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--charcoal)' }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Get Your Free Website Review.
+            Start Your Website Project.
           </motion.h1>
           <motion.p
             className="font-sans mt-6"
             style={{ fontSize: '1rem', color: 'var(--muted-text)', maxWidth: 560, lineHeight: 1.6 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Tell us about your business and your current website. We'll review it and tell you what it's communicating to new visitors — and what it would take to strengthen it. No commitment required.
+            Tell us about your business and what you need — a new website, a redesign,
+            Website Care, or the Visual Starter Pack. Not sure yet? Choose a free website
+            review in the form and we'll tell you what your current site is communicating
+            to new visitors. No commitment required.
           </motion.p>
           <motion.div className="mt-20" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />
@@ -140,19 +143,19 @@ export default function Contact() {
                     className="font-sans uppercase"
                     style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)' }}
                   >
-                    Review Requested
+                    Inquiry Received
                   </p>
                   <h2
                     className="font-serif mt-4"
                     style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
                   >
-                    Your review request is in.
+                    Your inquiry is in.
                   </h2>
                   <p
                     className="font-sans mt-4"
                     style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 480 }}
                   >
-                    We'll review your website and follow up within one business day at the email address you provided.
+                    We'll read through what you sent and follow up within one business day at the email address you provided.
                   </p>
                   <button
                     onClick={() => setStatus('idle')}
@@ -305,7 +308,7 @@ export default function Contact() {
                       disabled={status === 'submitting'}
                       style={status === 'submitting' ? { opacity: 0.6, cursor: 'not-allowed' } : undefined}
                     >
-                      {status === 'submitting' ? 'Submitting…' : 'Request Free Review'}
+                      {status === 'submitting' ? 'Submitting…' : 'Send Inquiry'}
                     </button>
 
                     {status === 'error' && (
