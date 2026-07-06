@@ -92,7 +92,12 @@ export default function WorkLoveHandlesBbq() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0 0' }}>
         <div className="container-nlds">
           <img
-            src="/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png"
+            src="/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.webp"
+            srcSet="/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach-w768.webp 768w, /nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.webp 864w"
+            sizes="(max-width: 768px) 100vw, 864px"
+            width={864}
+            height={1821}
+            decoding="async"
             alt="Love Handles BBQ catering website concept"
             loading="lazy"
             style={{

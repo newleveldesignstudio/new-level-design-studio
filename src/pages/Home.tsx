@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    image: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png',
+    image: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds-w768.webp',
     alt: 'DH Luxury Roofing website concept',
     category: 'Roofing Contractor — Concept Build',
     title: 'DH Luxury Roofing',
@@ -27,7 +27,7 @@ const projects = [
     link: { text: 'View Concept', to: '/works/dh-luxury-roofing' },
   },
   {
-    image: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png',
+    image: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds-w768.webp',
     alt: 'Volusia Legal Group website concept',
     category: 'Law Firm — Concept Build',
     title: 'Volusia Legal Group',
@@ -35,7 +35,7 @@ const projects = [
     link: { text: 'View Concept', to: '/works/volusia-legal-group' },
   },
   {
-    image: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
+    image: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach-w768.webp',
     alt: 'Love Handles BBQ website concept',
     category: 'BBQ Catering & Food Truck — Concept Build',
     title: 'Love Handles BBQ',
@@ -631,7 +631,12 @@ export default function Home() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container-nlds">
           <img
-            src="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.png"
+            src="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.webp"
+            srcSet="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds-w768.webp 768w, /nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.webp 1536w"
+            sizes="(max-width: 768px) 100vw, 1200px"
+            width={1536}
+            height={1024}
+            decoding="async"
             alt="Website and brand visuals mockup"
             loading="lazy"
             className="img-muted"
@@ -838,7 +843,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="relative">
-              <FramedImage src="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.png" alt="Modern local business storefront" aspectRatio="4/3" />
+              <FramedImage
+                src="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.webp"
+                srcSet="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio-w768.webp 768w, /nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.webp 1672w"
+                sizes="(max-width: 1024px) 100vw, 600px"
+                alt="Modern local business storefront"
+                aspectRatio="4/3"
+              />
               <DiagonalLine direction="tl-br" className="absolute inset-0" />
             </div>
           </div>
@@ -891,6 +902,8 @@ export default function Home() {
               <div className="lg:col-span-5 flex justify-start lg:justify-end">
                 <img
                   src="/images/founder/michael-vail-founder-portrait-new-level-design-studio.webp"
+                  srcSet="/images/founder/michael-vail-founder-portrait-new-level-design-studio-w560.webp 560w, /images/founder/michael-vail-founder-portrait-new-level-design-studio.webp 1024w"
+                  sizes="280px"
                   alt="Michael Vail, founder and creative director of New Level Design Studio"
                   width={1024}
                   height={1536}
@@ -1002,7 +1015,12 @@ export default function Home() {
           <div className="relative overflow-hidden min-h-[280px] md:min-h-[400px] lg:min-h-[60vh]">
             <img
               ref={splitImageRef}
-              src="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.png"
+              src="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.webp"
+              srcSet="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio-w768.webp 768w, /nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.webp 1672w"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              width={1672}
+              height={941}
+              decoding="async"
               alt="Row of local business storefronts"
               className="img-muted absolute inset-0 w-full h-full object-cover"
               style={{ transform: 'scale(1.06)' }}

@@ -6,6 +6,10 @@ interface EditorialImageRevealProps {
   alt: string;
   className?: string;
   loading?: 'eager' | 'lazy';
+  srcSet?: string;
+  sizes?: string;
+  width?: number;
+  height?: number;
 }
 
 const editorialReveal: Variants = {
@@ -23,6 +27,10 @@ export default function EditorialImageReveal({
   alt,
   className = '',
   loading = 'eager',
+  srcSet,
+  sizes,
+  width,
+  height,
 }: EditorialImageRevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -61,8 +69,13 @@ export default function EditorialImageReveal({
       >
         <img
           src={src}
+          srcSet={srcSet}
+          sizes={sizes}
+          width={width}
+          height={height}
           alt={alt}
           loading={loading}
+          decoding="async"
           className="img-muted"
           style={{ display: 'block', width: '100%', height: 'auto' }}
         />

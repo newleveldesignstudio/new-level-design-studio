@@ -93,7 +93,12 @@ export default function WorkDhLuxuryRoofing() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0 0' }}>
         <div className="container-nlds">
           <img
-            src="/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png"
+            src="/nlds/images/dh-luxury-roofing-homepage-concept-nlds.webp"
+            srcSet="/nlds/images/dh-luxury-roofing-homepage-concept-nlds-w768.webp 768w, /nlds/images/dh-luxury-roofing-homepage-concept-nlds.webp 1672w"
+            sizes="(max-width: 768px) 100vw, 1200px"
+            width={1672}
+            height={941}
+            decoding="async"
             alt="DH Luxury Roofing website concept"
             loading="lazy"
             style={{

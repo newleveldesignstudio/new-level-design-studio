@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 export default function NotFound() {
   return (
     <div>
-      <SEO
-        title="Page Not Found | New Level Design Studio"
-        description="The page you're looking for doesn't exist. Return to New Level Design Studio."
-        canonical="https://newlvlstudio.com/404"
-      />
+      {/* Intentionally no canonical and no OG tags: unknown URLs must not
+          present themselves as an indexable page. */}
+      <Helmet>
+        <title>Page Not Found | New Level Design Studio</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 180, paddingBottom: 120 }}>
         <div className="container-nlds" style={{ maxWidth: 560 }}>
           <p className="eyebrow">404</p>

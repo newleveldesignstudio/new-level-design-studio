@@ -27,6 +27,7 @@ import WorkCoastalStandardRealty from '@/pages/WorkCoastalStandardRealty';
 import WorkAurelineEstates from '@/pages/WorkAurelineEstates';
 import WorkStoneTimberRemodeling from '@/pages/WorkStoneTimberRemodeling';
 import WorkLotusBeautyHouse from '@/pages/WorkLotusBeautyHouse';
+import WorkBlendHouseSmoothieBar from '@/pages/WorkBlendHouseSmoothieBar';
 import PortOrangeWebDesign from '@/pages/PortOrangeWebDesign';
 import DaytonaBeachWebDesign from '@/pages/DaytonaBeachWebDesign';
 import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
@@ -58,6 +59,9 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
+        {/* When adding a public route here, also add it to src/data/routes.ts
+            (the sitemap/prerender manifest). The prerender step fails if a
+            manifest route renders Page Not Found. */}
         {/* Private internal route — no Layout wrapper, no nav/footer */}
         <Route path="/ops" element={<Suspense fallback={null}><OpsDashboard /></Suspense>} />
         <Route element={<Layout />}>
@@ -86,6 +90,7 @@ export default function App() {
           <Route path="/works/aureline-estates" element={<WorkAurelineEstates />} />
           <Route path="/works/stone-timber-remodeling" element={<WorkStoneTimberRemodeling />} />
           <Route path="/works/lotus-beauty-house" element={<WorkLotusBeautyHouse />} />
+          <Route path="/works/blend-house-smoothie-bar" element={<WorkBlendHouseSmoothieBar />} />
           <Route path="/port-orange-website-design" element={<PortOrangeWebDesign />} />
           <Route path="/daytona-beach-website-design" element={<DaytonaBeachWebDesign />} />
           <Route path="/volusia-county-website-design" element={<VolusiaCountyWebDesign />} />

@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     q: 'Is this a monthly plan?',
-    a: 'No. The $129 Starter Pack is a one-time offer. No subscription is required.',
+    a: 'No. The $129 Visual Starter Pack is a one-time offer. No subscription is required.',
   },
   {
     q: 'How many revisions are included?',
@@ -204,7 +204,7 @@ export default function StarterPack() {
   return (
     <div ref={pageRef} className="starter-pack-page">
       <SEO
-        title="$129 Starter Pack for Local Businesses | NLDS"
+        title="$129 Visual Starter Pack for Local Businesses | NLDS"
         description="A focused starter offer for local businesses that need essential brand visuals and online presence assets."
         canonical="https://newlvlstudio.com/starter-pack"
       />
@@ -213,7 +213,7 @@ export default function StarterPack() {
         <div className="starter-hero-inner">
           <div className="starter-hero-content">
             <p className="starter-eyebrow">
-              NEW LEVEL DESIGN STUDIO / STARTER PACK
+              NEW LEVEL DESIGN STUDIO / VISUAL STARTER PACK
             </p>
             <h1 className="starter-hero-heading">
               <span className="word-animate" data-delay="0">A</span>{' '}
@@ -233,8 +233,8 @@ export default function StarterPack() {
               County, and Central Florida.
             </p>
             <div className="starter-hero-ctas">
-              <Link to="/contact" className="btn-primary">
-                Get the $129 Starter Pack
+              <Link to="/contact?service=visual-starter-pack" className="btn-primary">
+                Get the $129 Visual Starter Pack
               </Link>
               <a href="#included" className="btn-secondary">
                 See What&apos;s Included
@@ -245,8 +245,13 @@ export default function StarterPack() {
           {/* Hero image */}
           <div className="starter-hero-visual">
             <img
-              src="/nlds/images/starter-pack-branded-marketing-assets-local-business-new-level-design-studio.png"
-              alt="Four branded Starter Pack assets including a Facebook cover, Google Business Profile post, campaign flyer, and square social media post"
+              src="/nlds/images/starter-pack-branded-marketing-assets-local-business-new-level-design-studio.webp"
+              srcSet="/nlds/images/starter-pack-branded-marketing-assets-local-business-new-level-design-studio-w768.webp 768w, /nlds/images/starter-pack-branded-marketing-assets-local-business-new-level-design-studio.webp 1536w"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              width={1536}
+              height={1024}
+              decoding="async"
+              alt="Four branded Visual Starter Pack assets including a Facebook cover, Google Business Profile post, campaign flyer, and square social media post"
               className="img-muted starter-hero-image"
               loading="lazy"
             />
@@ -299,10 +304,10 @@ export default function StarterPack() {
             </div>
 
             <div className="starter-price-panel fade-in">
-              <p className="price-label">Business Starter Pack</p>
+              <p className="price-label">Visual Starter Pack</p>
               <p className="price-amount">$129</p>
               <p className="price-note">One-time offer. No subscription required.</p>
-              <Link to="/contact" className="btn-primary">
+              <Link to="/contact?service=visual-starter-pack" className="btn-primary">
                 Claim This Offer
               </Link>
             </div>
@@ -388,7 +393,7 @@ export default function StarterPack() {
               looks online. You need clear, professional visuals that make customers
               take you seriously.
             </p>
-            <Link to="/contact" className="btn-primary mt-8 inline-block">
+            <Link to="/contact?service=visual-starter-pack" className="btn-primary mt-8 inline-block">
               Get Started For $129
             </Link>
           </div>
@@ -438,11 +443,11 @@ export default function StarterPack() {
               Ready to make your business look more professional?
             </h2>
             <p className="starter-section-body">
-              Start with the $129 Business Starter Pack and get clean, branded
+              Start with the $129 Visual Starter Pack and get clean, branded
               content your business can actually use.
             </p>
-            <Link to="/contact" className="btn-primary mt-8 inline-block">
-              Get the $129 Starter Pack
+            <Link to="/contact?service=visual-starter-pack" className="btn-primary mt-8 inline-block">
+              Get the $129 Visual Starter Pack
             </Link>
           </div>
         </div>

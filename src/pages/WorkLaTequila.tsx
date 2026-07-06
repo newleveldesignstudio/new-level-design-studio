@@ -92,7 +92,12 @@ export default function WorkLaTequila() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0 0' }}>
         <div className="container-nlds">
           <img
-            src="/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.png"
+            src="/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.webp"
+            srcSet="/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds-w768.webp 768w, /files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.webp 1024w"
+            sizes="(max-width: 768px) 100vw, 1024px"
+            width={1024}
+            height={1536}
+            decoding="async"
             alt="La Tequila restaurant website concept"
             loading="lazy"
             style={{

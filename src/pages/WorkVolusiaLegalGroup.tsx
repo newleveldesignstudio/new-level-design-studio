@@ -102,7 +102,12 @@ export default function WorkVolusiaLegalGroup() {
             }}
           >
             <img
-              src="/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png"
+              src="/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.webp"
+              srcSet="/nlds/images/volusia-legal-group-law-firm-website-concept-nlds-w768.webp 768w, /nlds/images/volusia-legal-group-law-firm-website-concept-nlds.webp 941w"
+              sizes="(max-width: 768px) 100vw, 941px"
+              width={941}
+              height={1672}
+              decoding="async"
               alt="Volusia Legal Group law firm website concept"
               loading="lazy"
               style={{

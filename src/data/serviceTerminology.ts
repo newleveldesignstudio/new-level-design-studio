@@ -40,6 +40,7 @@ export const CONTACT_SERVICE_OPTIONS: readonly ContactServiceOption[] = [
   { value: 'pro-website', label: 'Pro Website' },
   { value: 'website-redesign', label: 'Website Redesign' },
   { value: 'website-maintenance', label: 'Website Care' },
+  { value: 'visual-starter-pack', label: 'Visual Starter Pack' },
   { value: 'brand-direction', label: 'Brand Direction for a Website Project' },
   { value: 'advanced-functionality', label: 'Advanced Website Functionality' },
   { value: 'not-sure', label: 'Not Sure Yet' },

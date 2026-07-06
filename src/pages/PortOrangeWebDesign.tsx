@@ -49,7 +49,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'How do I know which package I need?',
-      a: 'The best starting point is a quick conversation. Tell us about your business and what you are trying to fix or build, and we will point you toward the right fit — whether that is a Starter Pack, a full website build, or something in between.',
+      a: 'The best starting point is a quick conversation. Tell us about your business and what you are trying to fix or build, and we will point you toward the right fit — whether that is a Visual Starter Pack, a full website build, or something in between.',
     },
   ],
 };

@@ -41,14 +41,27 @@ export default function ArticleDetail() {
     '@type': 'Article',
     headline: article.title,
     description: article.excerpt,
+    // Author/publisher are inlined (not bare @id refs) because the business
+    // and person nodes are not rendered on article pages.
     author: {
+      '@type': 'Person',
       '@id': 'https://newlvlstudio.com/#michael-vail',
+      name: 'Michael Vail',
+      url: 'https://newlvlstudio.com/michael-vail/',
     },
     publisher: {
+      '@type': 'Organization',
       '@id': 'https://newlvlstudio.com/#business',
+      name: 'New Level Design Studio',
+      url: 'https://newlvlstudio.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://newlvlstudio.com/images/new-level-design-studio-logo-transparent-header.png',
+      },
     },
     datePublished: article.date,
-    url: `https://newlvlstudio.com/journal/${article.slug}`,
+    url: `https://newlvlstudio.com/journal/${article.slug}/`,
+    mainEntityOfPage: `https://newlvlstudio.com/journal/${article.slug}/`,
   };
 
   return (

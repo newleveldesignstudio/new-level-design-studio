@@ -199,6 +199,8 @@ export default function MichaelVail() {
             <div className="lg:col-span-5 flex items-start lg:items-center justify-center">
               <img
                 src={FOUNDER_PORTRAIT}
+                srcSet={`${FOUNDER_PORTRAIT.replace('.webp', '-w560.webp')} 560w, ${FOUNDER_PORTRAIT} 1024w`}
+                sizes="(max-width: 1024px) 100vw, 572px"
                 alt="Michael Vail, founder and creative director of New Level Design Studio"
                 width={1024}
                 height={1536}

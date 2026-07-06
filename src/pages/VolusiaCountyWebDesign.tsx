@@ -49,7 +49,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'How do I know which package is right for my business?',
-      a: 'Start with a quick conversation. Describe your business and what you need — we will point you toward the right fit, whether that is a Starter Pack, a full website, or a complete brand system.',
+      a: 'Start with a quick conversation. Describe your business and what you need — we will point you toward the right fit, whether that is a Visual Starter Pack, a full website, or a complete brand system.',
     },
   ],
 };

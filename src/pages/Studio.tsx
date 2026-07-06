@@ -185,7 +185,11 @@ export default function Studio() {
         <div className="container-nlds">
           <div style={{ maxWidth: 1000, marginLeft: 'auto', marginRight: 'auto' }}>
             <EditorialImageReveal
-              src="/nlds/images/new-level-design-studio-website-strategy-workspace-hero.png"
+              src="/nlds/images/new-level-design-studio-website-strategy-workspace-hero.webp"
+              srcSet="/nlds/images/new-level-design-studio-website-strategy-workspace-hero-w768.webp 768w, /nlds/images/new-level-design-studio-website-strategy-workspace-hero.webp 1672w"
+              sizes="(max-width: 1024px) 100vw, 1000px"
+              width={1672}
+              height={941}
               alt="Website strategy workspace"
               className="mt-8"
               loading="eager"
@@ -231,7 +235,9 @@ export default function Studio() {
             </div>
             <div className="relative">
               <FramedImage
-                src="/files/nlds/images/new-level-design-studio-website-brand-content-system-port-orange-fl.png"
+                src="/files/nlds/images/new-level-design-studio-website-brand-content-system-port-orange-fl.webp"
+                srcSet="/files/nlds/images/new-level-design-studio-website-brand-content-system-port-orange-fl-w768.webp 768w, /files/nlds/images/new-level-design-studio-website-brand-content-system-port-orange-fl.webp 1254w"
+                sizes="(max-width: 1024px) 100vw, 500px"
                 alt="Website and brand content system"
                 objectFit="contain"
                 parallax={false}
@@ -295,7 +301,12 @@ export default function Studio() {
           >
             <img
               ref={splitImageRef}
-              src="/nlds/images/new-level-design-studio-foundation-system-studio-page.png"
+              src="/nlds/images/new-level-design-studio-foundation-system-studio-page.webp"
+              srcSet="/nlds/images/new-level-design-studio-foundation-system-studio-page-w768.webp 768w, /nlds/images/new-level-design-studio-foundation-system-studio-page.webp 1672w"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              width={1672}
+              height={941}
+              decoding="async"
               alt="Foundation system overview"
               className="img-muted absolute inset-0 w-full h-full object-contain"
               style={{ objectPosition: 'center center' }}

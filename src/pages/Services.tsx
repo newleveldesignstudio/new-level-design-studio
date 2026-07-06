@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import FinalCTA from '@/components/FinalCTA';
 import SectionDivider from '@/components/SectionDivider';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import SEO from '@/components/SEO';
+import SEO, { localBusinessSchema } from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 
@@ -53,6 +53,39 @@ export default function Services() {
         title="Website Design & Brand Support Services | NLDS"
         description="Website Design, Website Redesign, Website Care, Brand Direction, and Website Copy & Visual Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/services"
+        jsonLd={[
+          localBusinessSchema(),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            '@id': 'https://newlvlstudio.com/services/#services',
+            name: 'Website & Brand Support Services',
+            itemListElement: [
+              'Website Design',
+              'Website Redesign',
+              'Website Care',
+              'Brand Direction',
+              'Website Copy & Visual Support',
+            ].map((name, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              item: {
+                '@type': 'Service',
+                name,
+                serviceType: name,
+                provider: { '@id': 'https://newlvlstudio.com/#business' },
+                areaServed: [
+                  'Port Orange',
+                  'Daytona Beach',
+                  'Ormond Beach',
+                  'New Smyrna Beach',
+                  'Volusia County',
+                  'Central Florida',
+                ],
+              },
+            })),
+          },
+        ]}
       />
       {/* Hero */}
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>

@@ -156,6 +156,24 @@ export default function Journal() {
         title="Notes on Local Business Web Design | New Level Design Studio"
         description="Articles on website strategy, local visibility, first impressions, and website trust for local businesses in Port Orange, Daytona Beach, and Volusia County."
         canonical="https://newlvlstudio.com/journal"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          '@id': 'https://newlvlstudio.com/journal/#blog',
+          name: 'The NLDS Journal',
+          url: 'https://newlvlstudio.com/journal/',
+          publisher: {
+            '@type': 'Organization',
+            name: 'New Level Design Studio',
+            url: 'https://newlvlstudio.com',
+          },
+          blogPost: allArticles.map((a) => ({
+            '@type': 'BlogPosting',
+            headline: a.title,
+            url: `https://newlvlstudio.com/journal/${a.slug}/`,
+            datePublished: a.date,
+          })),
+        }}
       />
 
       {/* Hero */}

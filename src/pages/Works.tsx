@@ -24,7 +24,7 @@ const filterCategories = [
 
 const projects: WorkProject[] = [
   {
-    imageSrc: '/nlds/images/stone-timber-remodeling-cinematic-contractor-website-concept-nlds.jpg',
+    imageSrc: '/nlds/images/stone-timber-remodeling-cinematic-contractor-website-concept-nlds.webp',
     imageAlt: 'Stone & Timber Remodeling cinematic contractor website concept by New Level Design Studio',
     imageTitle: 'Stone & Timber Remodeling — Cinematic Contractor Website Concept by New Level Design Studio',
     industry: 'Contractors',
@@ -39,7 +39,7 @@ const projects: WorkProject[] = [
     demoLabel: 'View Concept Website',
   },
   {
-    imageSrc: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.png',
+    imageSrc: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach.webp',
     imageAlt: 'Love Handles BBQ catering and food truck website concept by New Level Design Studio',
     imageTitle: 'Love Handles BBQ — BBQ Catering Website Concept by New Level Design Studio',
     industry: 'Restaurants',
@@ -69,7 +69,7 @@ const projects: WorkProject[] = [
     demoLabel: 'View Concept Website',
   },
   {
-    imageSrc: '/nlds/images/ember-oak-coffee-website-concept-nlds.png',
+    imageSrc: '/nlds/images/ember-oak-coffee-website-concept-nlds.webp',
     imageAlt: 'Ember & Oak Coffee Co. premium coffee shop website concept by New Level Design Studio',
     imageTitle: 'Ember & Oak Coffee Co. — Coffee Shop Website Concept by New Level Design Studio',
     industry: 'Coffee & Cafés',
@@ -84,7 +84,20 @@ const projects: WorkProject[] = [
     demoLabel: 'View Concept Website',
   },
   {
-    imageSrc: '/nlds/images/coastal-roofing-quote-ready-landing-page-case-study-new-level-design-studio.png',
+    imageSrc: '/nlds/images/blend-house-smoothie-bar-website-concept-nlds.webp',
+    imageAlt: 'Blend House Smoothie Bar website concept by New Level Design Studio',
+    imageTitle: 'Blend House Smoothie Bar — Smoothie Shop Website Concept by New Level Design Studio',
+    industry: 'Coffee & Cafés',
+    title: 'Blend House Smoothie Bar',
+    problem: 'Most local smoothie shops rely on Instagram, an outdated PDF menu, or a weak Google Business profile. Customers cannot quickly see menu options, pricing, hours, location, or how to order — so they move on.',
+    solution: 'A mobile-first concept built around the three things a smoothie shop customer needs most: what is on the menu, where the shop is, and how to order or visit.',
+    deliverables: ['Website concept', 'Menu structure', 'Featured product layout', 'Mobile ordering flow', 'Local SEO foundation'],
+    classification: 'Industry Demo',
+    demonstrates: 'Demonstrates what a local smoothie and juice bar website can look and perform like.',
+    slug: 'blend-house-smoothie-bar',
+  },
+  {
+    imageSrc: '/nlds/images/coastal-roofing-quote-ready-landing-page-case-study-new-level-design-studio.webp',
     imageAlt: 'Coastal Roofing quote-ready landing page case study by New Level Design Studio',
     industry: 'Contractors',
     title: 'Coastal Roofing',
@@ -96,7 +109,7 @@ const projects: WorkProject[] = [
     result: 'Quote-ready layout',
   },
   {
-    imageSrc: '/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.png',
+    imageSrc: '/files/nlds/images/la-tequila-port-orange-restaurant-website-design-case-study-nlds.webp',
     imageAlt: 'La Tequila 2026 restaurant website concept by New Level Design Studio',
     imageTitle: 'La Tequila 2026 — Restaurant Website Concept by New Level Design Studio',
     industry: 'Restaurants',
@@ -141,7 +154,7 @@ const projects: WorkProject[] = [
     demoLabel: 'View Concept Website',
   },
   {
-    imageSrc: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.png',
+    imageSrc: '/nlds/images/dh-luxury-roofing-homepage-concept-nlds.webp',
     imageAlt: 'Premium roofing website concept for DH Luxury Roofing by New Level Design Studio',
     imageTitle: 'DH Luxury Roofing — Roofing Website Concept by New Level Design Studio',
     industry: 'Contractors',
@@ -156,7 +169,7 @@ const projects: WorkProject[] = [
     demoLabel: 'View Concept Website',
   },
   {
-    imageSrc: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.png',
+    imageSrc: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds.webp',
     imageAlt: 'Volusia Legal Group law firm website demo concept by New Level Design Studio',
     imageTitle: 'Volusia Legal Group — Law Firm Website Demo by New Level Design Studio',
     industry: 'Law Firms',
@@ -182,7 +195,7 @@ const projects: WorkProject[] = [
     result: 'Stronger mobile experience',
   },
   {
-    imageSrc: '/nlds/images/new-level-design-studio-strand-salon-works-case-study-port-orange-web-design.png',
+    imageSrc: '/nlds/images/new-level-design-studio-strand-salon-works-case-study-port-orange-web-design.webp',
     imageAlt: 'Featured Works page case study for The Strand Salon website concept by New Level Design Studio in Port Orange.',
     imageTitle: 'The Strand Salon website case study by New Level Design Studio',
     industry: 'Salons & Barbers',
@@ -195,7 +208,7 @@ const projects: WorkProject[] = [
     result: 'Better service structure',
   },
   {
-    imageSrc: '/nlds/images/lotus-beauty-house-salon-website-concept-nlds.jpg',
+    imageSrc: '/nlds/images/lotus-beauty-house-salon-website-concept-nlds.webp',
     imageAlt: 'Lotus Beauty House hair and nail salon website concept by New Level Design Studio',
     imageTitle: 'Lotus Beauty House — Hair & Nail Salon Website Concept by New Level Design Studio',
     industry: 'Salons & Barbers',
@@ -211,7 +224,7 @@ const projects: WorkProject[] = [
     ctaLabel: 'View Case Study →',
   },
   {
-    imageSrc: '/nlds/images/aureline-estates-luxury-real-estate-website-concept-nlds.png',
+    imageSrc: '/nlds/images/aureline-estates-luxury-real-estate-website-concept-nlds.webp',
     imageAlt: 'Aureline Estates luxury coastal real estate website concept by New Level Design Studio',
     imageTitle: 'Aureline Estates — Luxury Coastal Real Estate Website Concept by New Level Design Studio',
     industry: 'Real Estate',
@@ -255,7 +268,7 @@ const projects: WorkProject[] = [
     demoLabel: 'View Concept Website',
   },
   {
-    imageSrc: '/nlds/images/harbor-homes-group-coastal-real-estate-listing-website-design-nlds.png',
+    imageSrc: '/nlds/images/harbor-homes-group-coastal-real-estate-listing-website-design-nlds.webp',
     imageAlt: 'Harbor Homes Group coastal real estate listing website design by New Level Design Studio',
     imageTitle: 'Harbor Homes Group coastal real estate listing website design by New Level Design Studio',
     industry: 'Real Estate',
@@ -268,7 +281,7 @@ const projects: WorkProject[] = [
     result: 'Clearer first impression',
   },
   {
-    imageSrc: '/files/nlds/images/iron-house-gym-class-schedule-membership-landing-page-case-study-nlds.png',
+    imageSrc: '/files/nlds/images/iron-house-gym-class-schedule-membership-landing-page-case-study-nlds.webp',
     imageAlt: 'Iron House Gym class schedule and membership landing page case study by New Level Design Studio',
     imageTitle: 'Iron House Gym Landing Page Case Study',
     industry: 'Fitness',

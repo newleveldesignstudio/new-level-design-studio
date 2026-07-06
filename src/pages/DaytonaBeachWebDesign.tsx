@@ -49,7 +49,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'How do I know which package is right for my business?',
-      a: 'The best first step is a quick conversation. Tell us about your business and what you need — we will match you to the right starting point, from a $129 Starter Pack to a full website and brand system.',
+      a: 'The best first step is a quick conversation. Tell us about your business and what you need — we will match you to the right starting point, from a $129 Visual Starter Pack to a full website and brand system.',
     },
   ],
 };

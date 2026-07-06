@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Helmet } from 'react-helmet-async';
+import { SOCIAL_LINKS } from '@/lib/socialLinks';
 
 interface SEOProps {
   title: string;
@@ -150,14 +151,21 @@ export function localBusinessSchema(): Record<string, unknown> {
       addressCountry: 'US',
     },
     priceRange: '$$',
+    image: 'https://newlvlstudio.com/social-preview.jpg',
+    logo: 'https://newlvlstudio.com/images/new-level-design-studio-logo-transparent-header.png',
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'michael@newlvlstudio.com',
       contactType: 'customer service',
       availableLanguage: 'English',
     },
-    sameAs: ['https://www.facebook.com/Newlvlstudio/'],
-    founder: { '@id': 'https://newlvlstudio.com/#michael-vail' },
+    sameAs: SOCIAL_LINKS.map((s) => s.url),
+    founder: {
+      '@type': 'Person',
+      '@id': 'https://newlvlstudio.com/#michael-vail',
+      name: 'Michael Vail',
+      url: 'https://newlvlstudio.com/michael-vail/',
+    },
   };
 }
 

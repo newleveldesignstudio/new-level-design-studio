@@ -7,78 +7,27 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const ROUTES = [
-  '/',
-  '/services',
-  '/works',
-  '/studio',
-  '/michael-vail',
-  '/journal',
-  '/contact',
-  '/starter-pack',
-  '/packages',
-  '/privacy',
-  '/terms',
-  '/port-orange-website-design',
-  '/daytona-beach-website-design',
-  '/volusia-county-website-design',
-  '/central-florida-website-design',
-  '/works/the-grass-guys',
-  '/works/dh-luxury-roofing',
-  '/works/volusia-legal-group',
-  '/works/ember-oak-coffee',
-  '/works/love-handles-bbq',
-  '/works/crescent-harbor',
-  '/works/coastal-standard-realty',
-  '/works/el-taller-2026',
-  '/works/la-tequila-2026',
-  '/works/the-best-landscape-2026',
-  '/works/aureline-estates',
-  '/works/stone-timber-remodeling',
-  '/works/lotus-beauty-house',
-  // Journal articles
-  '/journal/website-visuals-costing-customers',
-  '/journal/volusia-county-contractors-visual-content',
-  '/journal/port-orange-businesses-professional-visual-content',
-  '/journal/local-businesses-professional-marketing-images',
-  '/journal/contractors-better-visuals-win-jobs',
-  '/journal/short-form-video-future-local-marketing',
-  '/journal/professional-video-production-how-it-works',
-  '/journal/what-are-professional-marketing-visuals',
-  '/journal/small-business-consistent-social-media-visuals',
-  '/journal/best-video-content-restaurants-port-orange',
-  '/journal/volusia-county-businesses-compete-better-visuals',
-  '/journal/video-content-cost-breakdown',
-  '/journal/florida-restaurants-social-media-professional-visuals',
-  '/journal/car-dealerships-video-move-inventory-faster',
-  '/journal/short-form-video-changing-small-business-marketing',
-  '/journal/video-content-local-businesses-more-customers',
-  '/journal/professional-images-real-estate-volusia-county',
-  '/journal/modern-video-vs-traditional-production',
-  '/journal/video-content-pricing-explained',
-  '/journal/video-med-spas-concept-project-30-days',
-  '/journal/professional-visuals-med-spas-wellness-clinics',
-  '/journal/professional-images-florida-real-estate-agents',
-  '/journal/5-industries-professional-ad-creative',
-  '/journal/is-seo-worth-it-for-my-small-business',
-  '/journal/how-long-does-it-take-to-see-results-from-seo',
-  '/journal/website-first-impression',
-  '/journal/five-second-website-test',
-  '/journal/five-signs-website-costing-leads',
-  '/journal/what-is-website-first-impression-audit',
-  '/journal/local-seo-port-orange-businesses',
-  '/free-seo-tools',
-  '/local-visibility-insights',
-  '/local-visibility-insights/website-trust',
-  '/local-visibility-insights/customer-decision-path',
-  '/local-visibility-insights/google-profile-completeness',
-  '/local-visibility-insights/contact-information',
-  '/local-visibility-insights/review-recency',
-  '/local-visibility-insights/mobile-readiness',
-];
+/**
+ * Routes come from the sitemap that vite build just generated, which itself
+ * is driven by the single manifest in src/data/routes.ts. This guarantees
+ * the sitemap and the prerendered pages can never drift apart. A route that
+ * exists in the manifest but not in App.tsx renders the Page Not Found
+ * screen, which fails the build below.
+ */
+function loadRoutesFromSitemap(distDir) {
+  const xml = readFileSync(path.join(distDir, 'sitemap.xml'), 'utf8');
+  const locs = [...xml.matchAll(/<loc>https:\/\/newlvlstudio\.com([^<]*)<\/loc>/g)].map((m) => m[1]);
+  const routes = locs.map((u) => {
+    if (u === '' || u === '/') return '/';
+    return u.endsWith('/') ? u.slice(0, -1) : u;
+  });
+  return [...new Set(routes)];
+}
+
 const PORT = 4174;
 const BASE_URL = `http://localhost:${PORT}`;
 const DIST_DIR = path.join(ROOT, 'dist');
+const ROUTES = loadRoutesFromSitemap(DIST_DIR);
 const TIMEOUT = 60000;
 const MAX_RETRIES = 2;
 
@@ -93,8 +42,11 @@ const REQUIRED_ROUTES = new Set([
   '/packages',
 ]);
 
-const BASE_TITLE = 'New Level Design Studio — Premium Websites for Local Businesses | Port Orange, FL';
-const BASE_DESC = 'Premium websites, visuals, and short-form content for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida. Built for credibility, visibility, and conversion.';
+// These must match the static tags in index.html exactly — the cleanHead()
+// dedup logic uses them to recognize (and drop) the static base tags when a
+// page provides its own via React Helmet.
+const BASE_TITLE = 'Port Orange Web Design | New Level Design Studio';
+const BASE_DESC = 'Premium websites, Website Redesign, Website Care, Brand Direction, and Website Copy & Visual Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida.';
 const BASE_CANONICAL = 'https://newlvlstudio.com/';
 
 function wait(ms) {
@@ -266,6 +218,13 @@ async function prerender() {
           page.content(),
           page.title(),
         ]);
+
+        // A manifest route that has no matching App.tsx route renders the
+        // 404 screen. Never write that to disk — fail the route instead.
+        if (liveTitle && liveTitle.includes('Page Not Found')) {
+          throw new Error('rendered the Page Not Found screen — route missing from App.tsx?');
+        }
+
         const cleanedHtml = cleanHead(html, liveTitle);
 
         if (route === '/') {
@@ -304,9 +263,10 @@ async function prerender() {
   }
 
   const failedRequired = failed.filter(r => REQUIRED_ROUTES.has(r.route));
-  if (failedRequired.length > 0) {
-    console.error(`\n✗ BUILD FAILED — ${failedRequired.length} required route(s) did not prerender:`);
-    failedRequired.forEach(r => console.error(`   ${r.route}: ${r.error}`));
+  const failedNotFound = failed.filter(r => (r.error || '').includes('Page Not Found'));
+  if (failedRequired.length > 0 || failedNotFound.length > 0) {
+    console.error(`\n✗ BUILD FAILED — ${failedRequired.length} required route(s) and ${failedNotFound.length} manifest/App.tsx mismatch(es):`);
+    [...new Set([...failedRequired, ...failedNotFound])].forEach(r => console.error(`   ${r.route}: ${r.error}`));
     console.error('');
     server.kill('SIGTERM');
     process.exit(1);

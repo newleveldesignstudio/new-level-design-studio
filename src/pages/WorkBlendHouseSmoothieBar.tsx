@@ -96,7 +96,12 @@ export default function WorkBlendHouseSmoothieBar() {
             }}
           >
             <img
-              src="/nlds/images/blend-house-smoothie-bar-website-concept-nlds.jpg"
+              src="/nlds/images/blend-house-smoothie-bar-website-concept-nlds.webp"
+              srcSet="/nlds/images/blend-house-smoothie-bar-website-concept-nlds-w768.webp 768w, /nlds/images/blend-house-smoothie-bar-website-concept-nlds.webp 1600w"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              width={1600}
+              height={1000}
+              decoding="async"
               alt="Blend House Smoothie Bar website concept"
               loading="lazy"
               style={{

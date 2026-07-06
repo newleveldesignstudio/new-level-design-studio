@@ -44,8 +44,16 @@ export default function Packages() {
   const faqRef = useRef<HTMLDivElement>(null);
   const packagesRef = useRef<HTMLDivElement>(null);
 
-  // Word animation
+  // Word animation — words start at opacity 0 in CSS, so reduced-motion
+  // users must get them shown immediately instead of animated in.
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      pageRef.current?.querySelectorAll('.word-animate').forEach((el) => {
+        (el as HTMLElement).style.opacity = '1';
+      });
+      return;
+    }
     const timer = setTimeout(() => {
       pageRef.current?.querySelectorAll('.word-animate').forEach((el) => {
         const delay = parseInt((el as HTMLElement).dataset.delay || '0');

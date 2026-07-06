@@ -93,7 +93,12 @@ export default function WorkEmberOakCoffee() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0 0' }}>
         <div className="container-nlds">
           <img
-            src="/nlds/images/ember-oak-coffee-website-concept-nlds.png"
+            src="/nlds/images/ember-oak-coffee-website-concept-nlds.webp"
+            srcSet="/nlds/images/ember-oak-coffee-website-concept-nlds-w768.webp 768w, /nlds/images/ember-oak-coffee-website-concept-nlds.webp 1920w"
+            sizes="(max-width: 768px) 100vw, 1200px"
+            width={1920}
+            height={1200}
+            decoding="async"
             alt="Ember & Oak Coffee Co. website concept"
             loading="lazy"
             style={{

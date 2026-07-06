@@ -114,7 +114,12 @@ export default function WorkLotusBeautyHouse() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0 0' }}>
         <div className="container-nlds">
           <img
-            src="/nlds/images/lotus-beauty-house-salon-website-concept-nlds.jpg"
+            src="/nlds/images/lotus-beauty-house-salon-website-concept-nlds.webp"
+            srcSet="/nlds/images/lotus-beauty-house-salon-website-concept-nlds-w768.webp 768w, /nlds/images/lotus-beauty-house-salon-website-concept-nlds.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 1200px"
+            width={1600}
+            height={1000}
+            decoding="async"
             alt="Lotus Beauty House hair and nail salon website concept"
             loading="lazy"
             style={{

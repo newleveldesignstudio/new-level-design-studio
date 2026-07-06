@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import SectionDivider from '@/components/SectionDivider';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SEO from '@/components/SEO';
@@ -11,13 +12,19 @@ import { CONTACT_SERVICE_OPTIONS } from '@/data/serviceTerminology';
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  // Allow CTAs to preselect a service via ?service=<value>; ignore unknown values.
+  const requestedService = searchParams.get('service') ?? '';
+  const initialService = CONTACT_SERVICE_OPTIONS.some((opt) => opt.value === requestedService)
+    ? requestedService
+    : '';
   const [formData, setFormData] = useState({
     name: '',
     businessName: '',
     email: '',
     phone: '',
     website: '',
-    service: '',
+    service: initialService,
     message: '',
   });
   const [status, setStatus] = useState<FormStatus>('idle');
@@ -145,7 +152,7 @@ export default function Contact() {
                     className="font-sans mt-4"
                     style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 480 }}
                   >
-                    We'll review your website and follow up within 1–2 business days at the email address you provided.
+                    We'll review your website and follow up within one business day at the email address you provided.
                   </p>
                   <button
                     onClick={() => setStatus('idle')}

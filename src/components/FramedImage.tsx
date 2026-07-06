@@ -7,12 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
 interface FramedImageProps {
   src: string;
   alt: string;
+  srcSet?: string;
+  sizes?: string;
   aspectRatio?: string;
   parallax?: boolean;
   objectFit?: 'cover' | 'contain';
 }
 
-export default function FramedImage({ src, alt, aspectRatio = '4/3', parallax = true, objectFit = 'cover' }: FramedImageProps) {
+export default function FramedImage({ src, alt, srcSet, sizes, aspectRatio = '4/3', parallax = true, objectFit = 'cover' }: FramedImageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
 
@@ -57,6 +59,10 @@ export default function FramedImage({ src, alt, aspectRatio = '4/3', parallax = 
       <img
         ref={imageRef}
         src={src}
+        srcSet={srcSet}
+        sizes={sizes}
+        loading="lazy"
+        decoding="async"
         alt={alt}
         className={`img-muted w-full ${objectFit === 'cover' ? 'object-cover' : 'object-contain'}`}
         style={{
