@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import FinalCTA from '@/components/FinalCTA';
 import SectionDivider from '@/components/SectionDivider';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { getLenis } from '@/hooks/useLenis';
 import SEO, { localBusinessSchema } from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
@@ -46,6 +48,26 @@ export default function Services() {
   const whatWorksRef = useScrollReveal<HTMLDivElement>({ y: 30, duration: 0.6, stagger: 0.08, start: 'top 85%', childSelector: '.works-item' });
 
   const shouldReduceMotion = useReducedMotion();
+  const location = useLocation();
+
+  // Scroll to the service-group anchor from nav links like
+  // /services#website-care. Delayed slightly so it runs after the global
+  // scroll-to-top that fires on route change.
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const timer = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const lenis = getLenis();
+      if (lenis) {
+        lenis.scrollTo(el, { offset: -100, immediate: !!shouldReduceMotion });
+      } else {
+        el.scrollIntoView({ behavior: shouldReduceMotion ? 'auto' : 'smooth', block: 'start' });
+      }
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [location.hash, shouldReduceMotion]);
 
   return (
     <div>
@@ -115,7 +137,7 @@ export default function Services() {
         <div className="container-nlds">
           <div ref={coreRef} className="flex flex-col" style={{ gap: 64 }}>
             {/* Website Design */}
-            <div className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div id="website-design" className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12" style={{ scrollMarginTop: 100 }}>
               <div>
                 <p className="eyebrow">WEBSITE DESIGN</p>
                 <h2
@@ -165,7 +187,7 @@ export default function Services() {
             <div style={{ width: '100%', height: 1, backgroundColor: 'var(--silver-grey)' }} />
 
             {/* Website Care */}
-            <div className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div id="website-care" className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12" style={{ scrollMarginTop: 100 }}>
               <div>
                 <p className="eyebrow">WEBSITE CARE</p>
                 <h2
@@ -223,7 +245,7 @@ export default function Services() {
             <div style={{ width: '100%', height: 1, backgroundColor: 'var(--silver-grey)' }} />
 
             {/* Visual Content */}
-            <div className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div id="website-copy-visual-support" className="service-group grid grid-cols-1 lg:grid-cols-2 gap-12" style={{ scrollMarginTop: 100 }}>
               <div>
                 <p className="eyebrow">WEBSITE COPY & VISUAL SUPPORT</p>
                 <h2

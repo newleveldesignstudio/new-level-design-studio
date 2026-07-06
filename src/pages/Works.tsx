@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
@@ -21,6 +22,23 @@ const filterCategories = [
   'Local Services',
   'Law Firms',
 ];
+
+/* URL slug ↔ filter category, so nav links like /works?industry=contractors
+   can activate a filter. Mirrors the Journal ?category= pattern. */
+const SLUG_TO_INDUSTRY: Record<string, string> = {
+  contractors: 'Contractors',
+  restaurants: 'Restaurants',
+  'coffee-cafes': 'Coffee & Cafés',
+  'salons-barbers': 'Salons & Barbers',
+  'real-estate': 'Real Estate',
+  fitness: 'Fitness',
+  'medical-wellness': 'Medical / Wellness',
+  'local-services': 'Local Services',
+  'law-firms': 'Law Firms',
+};
+const INDUSTRY_TO_SLUG: Record<string, string> = Object.fromEntries(
+  Object.entries(SLUG_TO_INDUSTRY).map(([slug, cat]) => [cat, slug]),
+);
 
 const projects: WorkProject[] = [
   {
@@ -296,7 +314,9 @@ const projects: WorkProject[] = [
 ];
 
 export default function Works() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const industryParam = searchParams.get('industry') ?? '';
+  const activeFilter = SLUG_TO_INDUSTRY[industryParam] ?? 'All';
   const [lightboxProject, setLightboxProject] = useState<WorkProject | null>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
   const shouldReduceMotion = useReducedMotion();
@@ -387,7 +407,8 @@ export default function Works() {
                 key={cat}
                 onClick={() => {
                   setLightboxProject(null);
-                  setActiveFilter(cat);
+                  const slug = INDUSTRY_TO_SLUG[cat];
+                  setSearchParams(cat === 'All' || !slug ? {} : { industry: slug }, { replace: true });
                 }}
                 className="font-sans uppercase transition-colors duration-200"
                 style={{
