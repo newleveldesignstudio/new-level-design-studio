@@ -66,16 +66,11 @@ export default function WorkAurelineEstates() {
 
             <ConceptDisclosure />
 
+            {/* No public demo link: the concept site currently lives only on an
+                unbranded Netlify URL, which undercuts the premium positioning.
+                Re-add a demo CTA once a clean branded URL exists. */}
             <div className="flex flex-wrap items-center gap-4 mt-8">
-              <a
-                href="https://harmonious-sorbet-38230a.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                View Concept Website →
-              </a>
-              <a href="#case-study" className="btn-secondary">
+              <a href="#case-study" className="btn-primary">
                 View Case Study →
               </a>
             </div>
@@ -168,25 +163,6 @@ export default function WorkAurelineEstates() {
                       <li key={item} style={{ color: 'var(--muted-text)' }}>— {item}</li>
                     ))}
                   </ul>
-                </div>
-
-                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24, marginBottom: 32 }}>
-                  <p className="eyebrow" style={{ marginBottom: 8 }}>Concept Website</p>
-                  <a
-                    href="https://harmonious-sorbet-38230a.netlify.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-sans"
-                    style={{
-                      fontSize: '0.875rem',
-                      color: 'var(--charcoal)',
-                      textDecoration: 'none',
-                      borderBottom: '1px solid var(--border-color)',
-                      paddingBottom: 2,
-                    }}
-                  >
-                    aurelineestates.netlify.app →
-                  </a>
                 </div>
 
                 <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24 }}>
