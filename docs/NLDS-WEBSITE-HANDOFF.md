@@ -2,13 +2,14 @@
 
 > Reference documentation. `CLAUDE.md` at the repo root is the active source
 > of truth and wins on any conflict with this file. Last verified: 2026-07-06,
-> commit `57b4e6d`.
+> commit `8e75d28`. Companions: `docs/PROJECT_OVERVIEW.md` (architecture)
+> and `docs/GAPS_AND_WEAKNESSES.md` (honest audit).
 
 ## 1. Current production state
 
 - **Production URL:** https://newlvlstudio.com
-- **Latest deployed commit:** `57b4e6d` (homepage conversion pass) — verified
-  serving live
+- **Latest deployed commit:** `8e75d28` (schema privacy + automation status
+  docs; homepage conversion pass live since `57b4e6d`) — verified serving live
 - **Sitemap:** 67 URLs, all trailing-slashed, `/ops` excluded
 - **Prerender:** 67/67 routes render to static HTML in `dist/`
 - **Build command:** `npm run build:full` (tsc + vite build + Playwright
