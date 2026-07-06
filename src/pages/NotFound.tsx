@@ -1,7 +1,17 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 export default function NotFound() {
+  // The SPA fallback serves the prerendered homepage shell, whose static
+  // canonical tag is not managed by React Helmet and would otherwise remain
+  // in the head. An unknown URL must not claim any canonical, so remove
+  // whatever canonical is present while this page is shown. Valid pages
+  // re-create their own canonical via Helmet when navigated to.
+  useEffect(() => {
+    document.querySelectorAll('link[rel="canonical"]').forEach((el) => el.remove());
+  }, []);
+
   return (
     <div>
       {/* Intentionally no canonical and no OG tags: unknown URLs must not
