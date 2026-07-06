@@ -24,10 +24,13 @@ export const SOCIAL_LINKS = [
     url: 'https://x.com/newlvldesign',
     ariaLabel: 'Follow New Level Design Studio on X',
   },
-  // YouTube removed 2026-07-06: the previous URL (@newlvlstudio) is a dead
-  // 404. A live channel titled "New Level Design Studio" exists at
-  // https://www.youtube.com/@newlvlstudio1 (matches the TikTok handle) —
-  // re-add here once Michael confirms it is the official channel.
+  {
+    // Confirmed official channel (Michael, 2026-07-06). The old @newlvlstudio
+    // handle is a dead 404 — do not use it.
+    platform: 'YouTube',
+    url: 'https://www.youtube.com/@newlvlstudio1',
+    ariaLabel: 'Follow New Level Design Studio on YouTube',
+  },
   {
     platform: 'LinkedIn',
     url: 'https://www.linkedin.com/in/michael-vail-nlds',
