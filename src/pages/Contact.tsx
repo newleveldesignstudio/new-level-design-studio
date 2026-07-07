@@ -8,6 +8,7 @@ import { staggerContainer, fadeUp } from '@/lib/motion';
 import { EXTERNAL_LINKS } from '@/lib/links';
 import { SOCIAL_LINKS } from '@/lib/socialLinks';
 import { CONTACT_SERVICE_OPTIONS } from '@/data/serviceTerminology';
+import { trackEvent } from '@/lib/analytics';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -54,6 +55,7 @@ export default function Contact() {
       });
 
       if (response.ok) {
+        trackEvent('generate_lead', { form: 'contact', service: formData.service || 'not-selected' });
         setStatus('success');
         setFormData({ name: '', businessName: '', email: '', phone: '', website: '', service: '', message: '' });
       } else {
