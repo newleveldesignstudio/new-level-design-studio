@@ -1,17 +1,19 @@
 # NLDS Website Handoff
 
 > Reference documentation. `CLAUDE.md` at the repo root is the active source
-> of truth and wins on any conflict with this file. Last verified: 2026-07-06,
-> commit `8e75d28`. Companions: `docs/PROJECT_OVERVIEW.md` (architecture)
+> of truth and wins on any conflict with this file. Last verified: 2026-07-08.
+> Companions: `docs/PROJECT_OVERVIEW.md` (architecture)
 > and `docs/GAPS_AND_WEAKNESSES.md` (honest audit).
 
 ## 1. Current production state
 
 - **Production URL:** https://newlvlstudio.com
-- **Latest deployed commit:** `8e75d28` (schema privacy + automation status
-  docs; homepage conversion pass live since `57b4e6d`) — verified serving live
-- **Sitemap:** 67 URLs, all trailing-slashed, `/ops` excluded
-- **Prerender:** 67/67 routes render to static HTML in `dist/`
+- **Latest deployed commit:** `35d2666` (new journal article; GA4 + conversion
+  events live since `b5541e6`, 2026-07-06) — verified serving live 2026-07-07
+- **Sitemap:** all manifest routes (68 URLs as of 2026-07-07 — the count grows
+  with new articles/pages), all trailing-slashed, `/ops` excluded
+- **Prerender:** every sitemap route renders to static HTML in `dist/`; the
+  build fails if any manifest route renders Page Not Found
 - **Build command:** `npm run build:full` (tsc + vite build + Playwright
   prerender + sitemap trailing-slash fix). Plain `npm run build` produces an
   UN-prerendered dist — never deploy that.
@@ -27,7 +29,7 @@
 |---|---|
 | Pages (route-level) | `src/pages/` (Home, Services, Works, work case studies, local pages, journal, contact, local-visibility pages) |
 | Shared components | `src/components/` (SEO, Navigation, Footer, Layout, cards, ScrollTriggerSequence, etc.) |
-| Data | `src/data/` — `articles.ts` (30 journal articles), `routes.ts` (route manifest), `serviceTerminology.ts` (canonical service names + contact-form options) |
+| Data | `src/data/` — `articles.ts` (journal articles; count grows over time), `routes.ts` (route manifest), `serviceTerminology.ts` (canonical service names + contact-form options) |
 | Route control | `src/App.tsx` (React routes, manual) + `src/data/routes.ts` (sitemap/prerender manifest) |
 | Social links | `src/lib/socialLinks.ts` — single source for footer, Contact social nav, and LocalBusiness `sameAs` |
 | Runtime image assets | `public/nlds/images/`, `public/images/`, `public/files/nlds/images/` |
@@ -38,8 +40,9 @@
 ## 3. Critical source-of-truth files
 
 - `CLAUDE.md` — active project instructions (asset rules, edit scope, QA bar,
-  deploy gate). `AGENTS.md` is only a pointer to it (for Kimi and other
-  agents).
+  deploy gate). `AGENTS.md` is only a pointer to it. CC handles the
+  Facebook/Instagram/GBP content workflow; any other agents must follow
+  `CLAUDE.md`.
 - `src/data/routes.ts` — THE route manifest. Drives the sitemap
   (vite.config.ts) which drives the prerender (scripts/prerender.mjs reads
   dist/sitemap.xml). Add every new public route here AND in App.tsx; the
@@ -60,6 +63,11 @@
 
 ## 4. Do-not-break list
 
+The authoritative do-not-break rules live in `CLAUDE.md` (route-manifest
+coverage, contact-form Netlify fields + `?service=` preselect, schema privacy,
+`build:full`-only deploys, the deploy approval gate, fabrication bans, and
+locked-asset rules). Details this file adds beyond `CLAUDE.md`:
+
 - **`assets-src/scroll-trigger/` is load-bearing.** The upstream raw frames
   (`tmp/scroll-trigger-source-frames`) no longer exist; these are the ONLY
   source for regenerating runtime frames. Never delete.
@@ -67,33 +75,20 @@
   `public/images/scroll-trigger/*-optimized/` (and `mobile/`).
 - `SOCIAL_LINKS` feeds footer + Contact social nav + LocalBusiness `sameAs`.
   One edit changes all three — that is intentional; never fork them.
-- `src/data/routes.ts` controls sitemap + prerender coverage. A route missing
-  there silently disappears from Google.
-- Contact form must retain its Netlify fields: `method="POST"`,
-  `data-netlify="true"`, hidden `form-name=contact`, `bot-field` honeypot —
-  and the matching hidden form in `index.html` must keep the same field names.
-- `?service=` preselect on /contact must keep working
-  (`free-website-review`, `visual-starter-pack`, etc. — values from
-  `CONTACT_SERVICE_OPTIONS`).
 - Concept builds must never imply real client outcomes. Keep "Concept Build"
   / "Industry Demo" labels, ConceptDisclosure, and the Works-page disclosure.
   Never reintroduce "not paid client work" *phrasing* on prominent cards —
-  use the confident "built by NLDS to show…" framing instead.
-- Works chips must stay demonstration-framed ("Demo focus: …"), never
-  outcome-framed ("better/stronger/increased…"). The data field is named
-  `result` — don't let that invite outcome language.
-- Use `npm run build:full`, not plain `npm run build`, before any deploy.
-- **No deploy, push, or publish without Michael's explicit approval in the
-  current session.** Prior approvals do not carry forward.
-- Never fabricate testimonials, reviews, metrics, client results, or
-  guarantees. Never recreate logos/footers/brand marks from memory.
+  use the confident "built by NLDS to show…" framing instead. Works chips
+  stay demonstration-framed ("Demo focus: …"), never outcome-framed — the
+  data field is named `result`; don't let that invite outcome language.
 
 ## 5. Current validated systems (all live at 57b4e6d)
 
 - **Route manifest** — single source; sitemap/prerender structurally coupled;
   Page-Not-Found prerender guard active on every build.
-- **Sitemap/prerender** — 67 URLs / 67 routes; unique titles + one correct
-  self-referencing canonical per page (verified live across all 67).
+- **Sitemap/prerender** — all manifest routes (67 at that commit; the count
+  grows with new articles/pages); unique titles + one correct
+  self-referencing canonical per page (verified live across all of them).
 - **Image pipeline** — 35.5MB of originals serve as ~2.5MB WebP derivatives
   with srcset/dimensions; Home ~2.8MB mobile / ~4.5MB desktop images.
 - **Scroll-trigger frames** — runtime q68 sets (desktop 3.8MB / tablet 1.8MB /

@@ -20,8 +20,9 @@
 6. Validate every batch:
    - `npx tsc --noEmit`
    - `npm run build:full` (never plain `build` before a deploy)
-   - prerender count matches the manifest (67/67 as of 2026-07-06)
-   - sitemap count matches (67 as of 2026-07-06)
+   - route, prerender, and sitemap counts must be verified from the current
+     build output and route manifest (`src/data/routes.ts` + articles) — do
+     not rely on hardcoded historical counts; all three must match each other
    - exercise the change in the running app (vite preview + browser), at
      390 / 768 / desktop for anything layout-affecting
    - zero broken images, zero console errors
@@ -30,8 +31,14 @@
 8. Do not commit, push, or deploy without Michael's explicit approval in the
    current session. Report results faithfully — failures verbatim.
 
-## 2. Kimi
+## 2. Agent roster (CC, Kimi, and others)
 
+- **CC (Claude Code) now handles the Facebook, Instagram, and Google
+  Business Profile content workflow.** Kimi is no longer the default for
+  that workflow. Kimi is not globally retired unless Michael explicitly
+  says so — it may still be used for other work at Michael's direction.
+- **Every agent — Kimi, CC, Fable, Claude, or any other — must follow the
+  repo `CLAUDE.md` as the source of truth** before any work in this repo.
 - Kimi auto-loads `AGENTS.md` files, not `CLAUDE.md`. Project AGENTS.md files
   here are pointers; Kimi must follow them to the repo `CLAUDE.md` before any
   work. If a repo has no AGENTS.md, read its `CLAUDE.md` first anyway.
@@ -52,7 +59,9 @@
   `simulate_publish.py`, `run_daily.py` in dry-run mode) and the
   validate scripts.
 - Confirm platform routing before any scheduling/publishing action:
-  Instagram→Metricool, Facebook→Zernio, GBP→Zernio, LinkedIn disabled.
+  Instagram→Metricool, Facebook→Zernio, GBP→Zernio, LinkedIn disabled
+  (LinkedIn publishing is not active in automation). Instagram and GBP are
+  prepared/pending; live status requires Michael confirmation.
 - Keep approval gates, receipts, publishing locks, and validators intact.
 - Never expose secrets: no reading `.env*`, no printing tokens/webhooks/
   account IDs, credentials only via the n8n UI.
@@ -63,11 +72,13 @@
 
 **Safe website deploy**
 > Ship the validated <change> live. Confirm changed files are exactly
-> <list>. Run tsc --noEmit, npm run build:full; confirm 67/67 prerender and
-> 67 sitemap URLs; verify <change-specific checks> in the built app. If all
-> pass: commit, push, monitor the Netlify deploy, then spot-check
-> <affected pages> on https://newlvlstudio.com. Report commit hash, deploy
-> state, live results, remaining risks.
+> <list>. Run tsc --noEmit, npm run build:full; determine the current
+> expected route count from the route manifest (src/data/routes.ts +
+> articles) and confirm the prerender and sitemap counts both match it —
+> do not rely on hardcoded historical counts. Verify <change-specific
+> checks> in the built app. If all pass: commit, push, monitor the Netlify
+> deploy, then spot-check <affected pages> on https://newlvlstudio.com.
+> Report commit hash, deploy state, live results, remaining risks.
 
 **Post-deploy website QA**
 > Run a read-only post-deploy audit of https://newlvlstudio.com at commit

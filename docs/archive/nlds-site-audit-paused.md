@@ -1,5 +1,17 @@
 # NLDS Website Audit — PAUSED (Report Only)
 
+> **SUPERSEDED — ARCHIVED 2026-07-08. Do not resume this report literally.**
+>
+> - **GA4 has been resolved:** live in production since 2026-07-06 with six
+>   verified conversion events. Do not re-implement analytics.
+> - **Do NOT add `geo`, `openingHours`, or `streetAddress` to schema.** The
+>   2026-07-06 service-area privacy decision (see `CLAUDE.md`) supersedes the
+>   old schema-gap finding below — those fields are deliberately absent.
+> - Many other findings below are already fixed or outdated (soft-404
+>   noindex, image pipeline, `sameAs` coverage, Blog schema, contact-form
+>   options, response-time copy, and more). **Every item must be revalidated
+>   against the current codebase before acting on it.**
+
 > **REPORT-ONLY FILE. This is NOT an active instruction file.**
 > This file preserves in-progress audit findings from 2026-07-05. It must not
 > be treated as build rules, design rules, or agent instructions. No agent

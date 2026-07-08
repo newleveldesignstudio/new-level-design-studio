@@ -92,7 +92,7 @@ All prices are starting points. Final pricing depends on scope, page count, cont
 - Phone: (386) 846-5754
 - Email: michael@newlvlstudio.com
 - Contact page: https://newlvlstudio.com/contact
-- Response time: within 1–2 business days
+- Response time: within one business day
 - Inquiries reviewed personally by Michael Vail
 
 No automated booking, scheduling, or payment system is available.

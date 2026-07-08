@@ -31,9 +31,9 @@ The NLDS automation stack handles:
 
 | Platform | Service | Status |
 |---|---|---|
-| Instagram | **Metricool** | **PREPARED/PENDING — not live until Tuesday, Jul 7 2026** (Michael's call). Do not describe or treat as actively posting before then. |
+| Instagram | **Metricool** | **PREPARED/PENDING — live status requires Michael's confirmation.** Planned go-live was Jul 7 2026, but activation has not been confirmed. Do not describe or treat as actively posting until Michael confirms. |
 | Facebook | **Zernio** | LIVE daily pipeline (NLDS Facebook Page "Newlvlstudio" only) |
-| Google Business Profile | **Zernio** | **PREPARED/PENDING — not live until Tuesday, Jul 7 2026** (Michael's call). Do not describe or treat as actively posting before then. |
+| Google Business Profile | **Zernio** | **PREPARED/PENDING — live status requires Michael's confirmation.** Planned go-live was Jul 7 2026, but activation has not been confirmed. Do not describe or treat as actively posting until Michael confirms. |
 | LinkedIn | **DISABLED** | do not connect credentials or create publish nodes unless Michael explicitly enables it |
 
 Email service is **Gmail**. Zoho Mail is not active anywhere in the stack
@@ -117,12 +117,13 @@ Email service is **Gmail**. Zoho Mail is not active anywhere in the stack
 - **Draft/disabled:** the 33-workflow n8n pack is Level 0 draft-only — write
   actions disabled, credentials not wired; two live-read daily-ops variants
   exist. LinkedIn publishing is disabled by policy.
-- **Prepared/pending (confirmed by Michael, 2026-07-06):** Instagram
-  (Metricool) and Google Business Profile (Zernio) publishing go live
-  **Tuesday, Jul 7 2026** — not before. Scripts, specs, and validators exist;
-  neither platform is actively posting yet. All go-live activation still
-  requires Michael's explicit approval and must preserve approval gates,
-  routing validation, receipts, and dry-run safety.
+- **Prepared/pending:** Instagram (Metricool) and Google Business Profile
+  (Zernio) publishing were planned to go live Jul 7 2026, but **go-live has
+  not been confirmed — live status requires Michael's explicit confirmation.**
+  Scripts, specs, and validators exist; treat neither platform as actively
+  posting until Michael confirms. All go-live activation still requires
+  Michael's explicit approval and must preserve approval gates, routing
+  validation, receipts, and dry-run safety.
 - **Requires credentials:** any n8n workflow beyond placeholder mode
   (Gmail, Notion, Calendar, Zernio, Metricool, AI) — all configured only via
   the n8n credential UI.
@@ -152,9 +153,10 @@ Email service is **Gmail**. Zoho Mail is not active anywhere in the stack
 ## 7. Recommended future automation work
 
 **Safe documentation:**
-- After the Tuesday (Jul 7 2026) Instagram/GBP go-live, update the routing
-  table in this file from PREPARED/PENDING to live and record first-run
-  receipt results.
+- Once Michael explicitly confirms the Instagram/GBP go-live, update the
+  routing table in this file from PREPARED/PENDING to live and record
+  first-run receipt results. Do not mark either platform live on any other
+  basis.
 - Refresh `WORKFLOW_INDEX.md` if workflows changed since 2026-06-25.
 - Note: `SAFETY_RULES.md` is intentionally duplicated in n8n-modules and
   n8n-workflows — keep the two in sync when either changes.

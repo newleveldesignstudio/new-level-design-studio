@@ -7,7 +7,7 @@
 The production website for New Level Design Studio (NLDS) — Michael Vail's founder-led, website-first studio for local service businesses in Port Orange / Daytona Beach / Volusia County / Central Florida. The site's job: earn trust fast and convert visitors into project-intent inquiries via the contact form.
 
 - **Stack:** Vite 7 + React 19 + TypeScript + Tailwind 3, react-router-dom 7, react-helmet-async, GSAP + Lenis, Framer Motion. Custom Playwright prerender.
-- **Production:** https://newlvlstudio.com — Netlify, site ID in `.netlify/state.json`. 67 routes prerendered, 67-URL sitemap.
+- **Production:** https://newlvlstudio.com — Netlify, site ID in `.netlify/state.json`. Every route in the manifest is prerendered; the sitemap and prerender counts must always match the route manifest (`src/data/routes.ts` + articles) — verify with the build, don't trust hardcoded numbers.
 - **Build:** `npm run build:full` (build + prerender + sitemap fix). Plain `npm run build` produces an un-prerendered dist — never ship it.
 - **Deploy:** commit → push to `master` (GitHub) → Netlify CI builds and publishes `dist/`. **Never commit, push, or deploy without Michael's explicit instruction in the current session.**
 
@@ -52,16 +52,16 @@ The production website for New Level Design Studio (NLDS) — Michael Vail's fou
 ## QA checklist before any deploy
 
 1. `npx tsc --noEmit` passes.
-2. `npm run build:full` passes — **67/67 prerendered** (or the new expected count), sitemap count matches.
+2. `npm run build:full` passes — **all manifest routes prerender with zero failures**, and the sitemap count matches the manifest.
 3. The specific change exercised in the running app (vite preview + browser), at 390/768/desktop if layout-affecting.
 4. Zero broken images, zero console errors, zero failed image requests on affected pages.
 5. No banned phrases or invented proof introduced.
 6. `git status` surface = exactly the intended files (`capture.mjs` stays untracked).
 7. Michael's explicit deploy approval, then push → monitor Netlify to `ready` → live spot-check affected pages.
 
-## Known pending priorities
+## Backlog & analytics status
 
-See `docs/GAPS_AND_WEAKNESSES.md` for the full honest list. Headlines: GA4 is implemented but **inactive in production** (`VITE_GA4_ID` not set in Netlify); Aureline demo CTA awaits a branded Netlify rename; three Services dropdown items need real sections/pages; journal video-era articles await Michael's reframing decision; genuine testimonials when they exist.
+See `docs/GAPS_AND_WEAKNESSES.md` for the backlog — it is a **dated report**; verify each item against the current codebase before acting. **GA4 is live in production** (since 2026-07-06) with six verified conversion events: `phone_click`, `email_click`, `gbp_click`, `contact_cta_click`, `package_cta_click`, `generate_lead`. Never re-implement GA4 or add duplicate analytics events.
 
 ## How future agents make changes safely
 

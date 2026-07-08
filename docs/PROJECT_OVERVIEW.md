@@ -31,7 +31,10 @@ Contact (`Start Your Website Project.` H1; form with `?service=` preselect;
 Netlify Forms submission; "within one business day" promise). Local-intent
 visitors may enter via the four local landing pages or journal articles.
 
-## Route map (67 public routes)
+## Route map
+
+(Route count derives from `src/data/routes.ts` + `src/data/articles.ts` and grows
+with new articles/pages — verify with the build rather than trusting a number.)
 
 - `/` — Home (scroll-trigger hero, CTA hierarchy, package preview, founder
   block, concept-work preview)
@@ -45,7 +48,7 @@ visitors may enter via the four local landing pages or journal articles.
   `LocalLandingPage` component with per-city `LocalPageConfig`
 - Works case studies (14): `/works/<slug>` — all concept builds/industry
   demos, honestly labeled; Works grid also holds 5 lightbox-only projects
-- Journal (30): `/journal/<slug>` — derived from `src/data/articles.ts`
+- Journal: `/journal/<slug>` — derived automatically from `src/data/articles.ts`
 - Resources: `/free-seo-tools`, `/local-visibility-insights` + 6 children
 - Private: `/ops` (noindexed internal dashboard; excluded from sitemap)
 - Unknown URLs: SPA fallback serves shell → NotFound renders with
@@ -56,8 +59,8 @@ visitors may enter via the four local landing pages or journal articles.
 - `src/data/routes.ts` — route manifest; drives sitemap (vite.config.ts),
   which drives prerender (scripts/prerender.mjs reads dist/sitemap.xml).
   Journal routes derive from articles automatically.
-- `src/data/articles.ts` — 30 articles (title/meta/category/date/body);
-  category filter via `/journal?category=<slug>`.
+- `src/data/articles.ts` — the journal articles (title/meta/category/date/body;
+  count grows over time); category filter via `/journal?category=<slug>`.
 - `src/data/serviceTerminology.ts` — canonical service names, package names,
   and the contact form's service `<select>` options.
 - `src/lib/socialLinks.ts` — 7 verified profiles → footer, contact nav,
@@ -84,7 +87,7 @@ visitors may enter via the four local landing pages or journal articles.
 ## SEO architecture
 
 Per-page unique titles/descriptions/canonicals (trailing slash), prerendered
-to static HTML for all 67 routes; robots.txt allows AI crawlers + declares
+to static HTML for every manifest route; robots.txt allows AI crawlers + declares
 sitemap; `llms.txt` + `llms-full.txt` + `agents.json` +
 `.well-known/agent-skills` for answer engines; JSON-LD as listed in
 CLAUDE.md; one legacy 301 in `_redirects`; security headers in `_headers`.
@@ -104,9 +107,10 @@ its Netlify site gets a branded name. Chips are demonstration-framed.
 
 ## Journal / content strategy
 
-30 articles across website strategy / local growth / visual direction /
-content systems / brand presence. ~14 are legacy visual/video-era topics
-(honest but positioning-diluting) — reframing awaits Michael's decision.
+Articles span website strategy / local growth / visual direction /
+content systems / brand presence. ~14 (as counted 2026-07-06) are legacy
+visual/video-era topics (honest but positioning-diluting) — reframing
+awaits Michael's decision.
 Articles carry Article schema; the listing carries Blog schema.
 
 ## Contact form setup
@@ -121,14 +125,15 @@ no-JS fallback works natively (prerendered form POSTs, Netlify intercepts).
 `npm run build:full` = tsc + vite build (sitemap plugin) + Playwright
 prerender (reads sitemap, fails on Page-Not-Found renders, dedupes head
 tags, fixes trailing slashes). Netlify CI runs it on push to master
-(`netlify.toml`), publishes `dist/` (~64MB). GA4 wiring exists in
-`src/lib/analytics.ts` but activates only when `VITE_GA4_ID` is set at
-build time — **not currently set in production**.
+(`netlify.toml`), publishes `dist/` (~64MB). GA4 lives in
+`src/lib/analytics.ts` behind `VITE_GA4_ID` and is **live in production**
+(env var set in Netlify; activated and verified 2026-07-06, six conversion
+events live). Do not re-implement GA4 or duplicate analytics events.
 
 ## External services
 
-Netlify (hosting/CI/forms), GitHub (origin), Google Fonts, GA4 (dormant),
-Google Business Profile (linked), social platforms (7 profiles). The
+Netlify (hosting/CI/forms), GitHub (origin), Google Fonts, GA4 (live since
+2026-07-06), Google Business Profile (linked), social platforms (7 profiles). The
 separate n8n/social automation stack is documented in
 `docs/NLDS-AUTOMATION-HANDOFF.md` and never touches website builds.
 
