@@ -32,7 +32,7 @@ The NLDS automation stack handles:
 | Platform | Service | Status |
 |---|---|---|
 | Instagram | **Metricool** | **PREPARED/PENDING — live status requires Michael's confirmation.** Planned go-live was Jul 7 2026, but activation has not been confirmed. Do not describe or treat as actively posting until Michael confirms. |
-| Facebook | **Zernio** | LIVE daily pipeline (NLDS Facebook Page "Newlvlstudio" only) |
+| Facebook | **Zernio** | **Approval-gated interactive scheduling** (NLDS Facebook Page "Newlvlstudio" only) — posts are batch-scheduled in Zernio during Michael-approved sessions; a weekly gap check (NLDS-Queue-Maintenance, Fridays 9 AM) flags upcoming empty slots. No confirmed unattended daily runner. |
 | Google Business Profile | **Zernio** | **PREPARED/PENDING — live status requires Michael's confirmation.** Planned go-live was Jul 7 2026, but activation has not been confirmed. Do not describe or treat as actively posting until Michael confirms. |
 | LinkedIn | **DISABLED** | do not connect credentials or create publish nodes unless Michael explicitly enables it |
 
@@ -90,10 +90,16 @@ Email service is **Gmail**. Zoho Mail is not active anywhere in the stack
 ### `~/nlds/social-automation` — production social pipelines
 - `PUBLISHING-ROUTING-RULES.md` — pipeline-local reference (skill wins),
   `DEFAULT-SCHEDULE.md` — approved posting slots (America/New_York).
-- **`facebook-daily/`** — the LIVE pipeline: runs 12:00 PM ET via Windows
-  Task Scheduler → WSL → `claude -p` (`prompts/daily-run.md` is the runner
-  prompt). Flow: topic selection → Pillow render → automated QA → Zernio
-  upload (presigned S3) → publish to the NLDS Facebook Page only → receipt.
+- **`facebook-daily/`** — the Facebook pipeline (render/QA/receipts/Zernio
+  support). **Corrected 2026-07-09: there is no confirmed daily 12 PM
+  unattended runner in this environment.** The only registered Windows task
+  is **NLDS-Queue-Maintenance** (weekly, Fridays 9:00 AM → WSL →
+  `maintain_queue.py`), which detects upcoming Zernio queue gaps for manual
+  scheduling. The working model: topic/copy → Pillow render → automated QA
+  → Michael's approval → Zernio upload (presigned S3) → **scheduled** post
+  on the NLDS Facebook Page only → receipt. Zernio access depends on MCP
+  availability/configuration in the scheduling session (`prompts/
+  daily-run.md` documents the runner design for reference).
   - Entry points: `scripts/run_daily.py` (dry-run by default per README),
     `run_publishing.py`, `publish_facebook.py`, `publish_gbp.py`,
     `publish_instagram.py`.
@@ -110,8 +116,11 @@ Email service is **Gmail**. Zoho Mail is not active anywhere in the stack
 
 ## 5. Current known state
 
-- **Working (live):** facebook-daily Facebook pipeline via Zernio, with QA,
-  receipts, lock, and scheduled unattended runs.
+- **Working:** facebook-daily Facebook pipeline via Zernio — approval-gated
+  interactive scheduling with QA, receipts, and the publishing lock, plus
+  the weekly NLDS-Queue-Maintenance gap check (Fridays 9 AM). **Not
+  hands-off auto-publishing; no confirmed unattended daily runs.** Zernio
+  scheduling depends on MCP availability/configuration in the session.
 - **Working (local/support):** n8n instance (local-only Docker), backup and
   validation scripts, Pillow rendering + QA.
 - **Draft/disabled:** the 33-workflow n8n pack is Level 0 draft-only — write
