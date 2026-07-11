@@ -2409,6 +2409,327 @@ SEO is not instant, but when it is built on the right foundation, it can become 
 New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at whether your site gives SEO the right foundation to work with. [Request your free website review →](/contact)
     `.trim(),
   },
+  {
+    id: 34,
+    slug: 'get-more-phone-calls-local-seo',
+    title: 'How to Get More Phone Calls and Customers Through Local SEO',
+    metaTitle: 'How to Get More Phone Calls Through Local SEO | NLDS',
+    category: 'Local SEO',
+    date: 'July 14, 2026',
+    author: 'Michael Vail',
+    excerpt: 'Local SEO gets your business in front of people searching nearby. Whether they call depends on what they find when they look closer. Here is how the whole chain works.',
+    metaDescription: 'Local SEO can put your business in front of nearby customers — but calls come from what they find next. A practical guide for local service businesses.',
+    body: `
+Most local business owners do not actually want "SEO." They want the phone to ring.
+
+That distinction matters, because a lot of local SEO advice stops at visibility. Show up in the map pack, rank for your city, get more traffic. All useful. But showing up is only half the chain. A customer still has to look at what they found and decide you are the one to call.
+
+This article walks through the whole chain — from search to call — for local service businesses in Port Orange, Daytona Beach, and the rest of Volusia County.
+
+### How a Phone Call Actually Happens
+
+Before someone calls a plumber, a salon, a roofer, or a med spa, they usually take the same short path:
+
+- They search for the service, often with a city attached or "near me"
+- They scan the map results and the first few listings
+- They open two or three options that look legitimate
+- They compare quickly: reviews, photos, services, how professional everything feels
+- They call the one that feels safest
+
+Local SEO influences the first two steps. Your Google Business Profile and your website influence the rest.
+
+If you only work on rankings, you can win step one and still lose the call at step four. If your information is accurate, your reviews are real and recent, and your website clearly explains what you do and where you do it, every step supports the next.
+
+### Start With the Searches That Lead to Calls
+
+Not all searches are equal. "How to fix a water heater" is someone researching. "Water heater replacement Port Orange" is someone getting ready to hire.
+
+For a local service business, the searches worth building around usually look like:
+
+- service + city ("pool resurfacing Daytona Beach")
+- service + "near me"
+- problem + urgency ("emergency AC repair Volusia County")
+- comparison searches ("best pressure washing Port Orange")
+
+Your website should have real pages for the services people actually hire you for — not one generic services list. A dedicated page for each core service, written in plain language, with the areas you serve stated clearly, gives search engines something to rank and gives customers something worth reading.
+
+### Your Google Business Profile Is the Front Door
+
+For local searches, many customers never get past the map results. That makes your profile the first impression.
+
+The basics matter more than tricks:
+
+- Accurate name, phone number, hours, and service area
+- The right primary category
+- Services listed and described
+- Real photos of your work, updated over time
+- Reviews you actually respond to
+
+One thing worth checking today: call the number on your own profile. Business owners are sometimes surprised by an old number, a full voicemail box, or hours that no longer match reality. No SEO work can survive a phone number that does not answer.
+
+We covered what moves the needle locally in more depth in [Local SEO for Port Orange Businesses: What Actually Matters](/journal/local-seo-port-orange-businesses).
+
+### The Website Is Where the Decision Happens
+
+Here is the part that gets skipped. A customer who finds you on Google usually checks your website before calling — especially for bigger jobs.
+
+At that moment your website has a few seconds to answer three questions: What do you do? Do you work where I live? Can I trust you?
+
+The pieces that help turn a visit into a call are not complicated:
+
+- A headline that says what you do and where
+- Service pages that match what the customer searched for
+- Real photos or strong visual presentation, not obvious stock imagery
+- Proof: reviews, completed work, how long you have been at it
+- A phone number that is visible without hunting, tappable on mobile
+- A simple contact form for people who do not want to call yet
+
+A slow, outdated, or vague website quietly undoes good local SEO. The customer does not tell you this. They just call the next business on the list.
+
+If you are not sure how your Google profile and website divide the work, [Does a Google Business Profile Replace a Website?](/journal/google-business-profile-vs-website) breaks that down.
+
+### Make Calling Easy
+
+Small mechanical details change how many people actually reach you:
+
+- Put the phone number in the header of every page, as a tappable link
+- Repeat it near the bottom of every service page
+- State your response time and honor it
+- Keep your hours accurate everywhere — website, Google, social profiles
+- If you cannot answer live, say what happens when someone leaves a message
+
+None of this is glamorous. All of it is the difference between attention and an actual conversation.
+
+### What to Expect, Honestly
+
+Local SEO is not a switch. It usually builds over months, not days, and no honest provider can promise a specific ranking or a specific number of calls. Anyone who guarantees those things is guessing with your money.
+
+What you can do is stack the odds: accurate local signals, real reviews, service pages built around real searches, and a website that makes choosing you feel safe. Businesses that do that consistently tend to see the compounding effect — more of the right people finding them, and more of those people getting in touch.
+
+### The Bottom Line
+
+Phone calls come from a chain: found, checked, trusted, contacted. Local SEO handles the first link. Your Google Business Profile and your [website](/services) handle the rest.
+
+Work on the whole chain and the results reinforce each other. Work on rankings alone and you may win traffic that never calls.
+
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County — a straightforward look at whether your website is ready to turn local visibility into actual inquiries. [Request your free website review →](/contact)
+    `.trim(),
+  },
+  {
+    id: 35,
+    slug: 'local-seo-vs-regular-seo',
+    title: 'What\'s the Difference Between Local SEO and Regular SEO?',
+    metaTitle: 'Local SEO vs Regular SEO: What\'s the Difference? | NLDS',
+    category: 'SEO',
+    date: 'July 16, 2026',
+    author: 'Michael Vail',
+    excerpt: 'Local SEO and regular SEO overlap, but they answer different searches for different customers. Here is the difference in plain English, and which one a local service business actually needs.',
+    metaDescription: 'Local SEO and regular SEO share a foundation but play different games. A plain-English guide for local service businesses deciding where to focus.',
+    body: `
+If you have ever gotten a sales call about "SEO services," you may have wondered which kind they were even talking about. The term covers two related but genuinely different games — and local service businesses usually only need to win one of them.
+
+Here is the difference in plain English.
+
+### Regular SEO in One Paragraph
+
+Regular SEO — sometimes called traditional or organic SEO — is about ranking web pages in the standard search results, often without any geographic tie. A software company, a national retailer, or a blog competes this way. The main levers are content quality, site structure, technical health, and authority built through links and reputation. The audience can be anyone, anywhere.
+
+### Local SEO in One Paragraph
+
+Local SEO is about showing up when someone nearby searches for a service you offer — "roof repair Daytona Beach," "barber near me," "pool company Port Orange." It has an extra playing field regular SEO does not: the map pack, those three map results that sit above the normal listings. And it has levers regular SEO barely touches — your Google Business Profile, reviews, service-area signals, and consistency of your business information across the web.
+
+### The Three Big Differences
+
+**1. Where you appear.** Regular SEO competes for the standard result list. Local SEO competes for the map pack first, plus localized organic results. For many local searches, the map pack absorbs most of the clicks and calls — that real estate does not even exist in non-local searches.
+
+**2. Who you compete against.** Regular SEO can put you against every website in the country. Local SEO puts you against the businesses in your service area — in Volusia County, often a handful of real competitors rather than thousands. That is winnable for a small business in a way national rankings usually are not.
+
+**3. What moves the needle.** Regular SEO leans on content depth and authority. Local SEO leans on proximity, relevance, and prominence: a complete and active Google Business Profile, a steady flow of genuine reviews, correct categories, and a website that clearly confirms your services and area. Google is deciding whether you are a legitimate, nearby, trustworthy option — not whether you wrote the definitive essay on plumbing.
+
+### Where They Overlap
+
+The two are not enemies, and the foundation is shared. Both depend on a healthy, fast, mobile-friendly website. Both reward clear service pages, honest useful content, and titles and descriptions written for humans. Both get undermined by thin pages and vague copy.
+
+That shared foundation is why the website comes first either way. Local signals point people at your site; the site still has to hold up when they arrive. [Does a Google Business Profile Replace a Website?](/journal/google-business-profile-vs-website) covers why the profile alone is not enough.
+
+### Which One Does a Local Service Business Need?
+
+If your customers are within driving distance — contractors, salons, restaurants, med spas, repair services, studios — local SEO is your game. You do not need to outrank national websites. You need to be the obvious, credible choice when someone in your area searches.
+
+Regular SEO tactics still help you in a supporting role: useful articles answer the questions your customers ask, and well-structured pages rank for service searches in your area. But your budget and attention should follow your customer, and your customer is local.
+
+If you are still weighing whether SEO deserves a place in your budget at all, [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business) walks through that decision honestly.
+
+### A Note on Buying SEO Services
+
+This difference is also worth understanding before you hire anyone. A provider pitching a local business on national-style SEO — press mentions, mass content, link volume — may be selling the wrong game. Ask any provider which searches they intend to win for you and where those searches happen. For a local business, the answer should sound local.
+
+For what specifically matters in this area, see [Local SEO for Port Orange Businesses: What Actually Matters](/journal/local-seo-port-orange-businesses).
+
+### The Bottom Line
+
+Regular SEO competes for the whole internet. Local SEO competes for your neighborhood — the map pack, the "near me" search, the customer three miles away who needs what you do this week.
+
+For local service businesses in Port Orange, Daytona Beach, and across Central Florida, local SEO is usually the version worth investing in, built on top of a website that earns trust once people click.
+
+Not sure whether your website is helping or hurting the local side of the equation? New Level Design Studio offers a free website review for local businesses — plain answers, no obligation. [Request your free website review →](/contact)
+    `.trim(),
+  },
+  {
+    id: 36,
+    slug: 'how-to-check-seo-company-doing-work',
+    title: 'How to Check If Your SEO Company Is Actually Doing Work',
+    metaTitle: 'Is Your SEO Company Actually Doing Work? How to Check | NLDS',
+    category: 'SEO',
+    date: 'July 18, 2026',
+    author: 'Michael Vail',
+    excerpt: 'A monthly SEO invoice is easy to send. Real work is harder. Here is how a local business owner can verify what an SEO company is actually doing — without becoming an SEO expert.',
+    metaDescription: 'Paying for SEO every month but not sure what you\'re getting? Here\'s how to verify real SEO work, what reports should show, and the red flags to watch.',
+    body: `
+A lot of local business owners pay a monthly SEO bill and quietly wonder the same thing: is anyone actually doing anything?
+
+It is a fair question. SEO work is mostly invisible from the outside, results take time, and a vague monthly report can hide a lot. The good news is you do not need to become an SEO expert to check. You need to know what real work looks like and what access you are entitled to.
+
+### First: You Should Own Your Own Accounts
+
+Start here, because everything else depends on it.
+
+You — the business owner — should have owner-level access to your own Google Business Profile, Google Analytics, and Google Search Console. Your SEO company can be a manager on those accounts, but they should never be the sole owner.
+
+If you do not have access, request it this week. A legitimate company will hand it over without friction. Resistance, delay, or "it's easier if we keep it under our account" is the single biggest warning sign in this industry, because it means you cannot verify anything — and you lose your own data if you ever leave.
+
+### What Real SEO Work Looks Like
+
+SEO is work product, like any other service. Over a typical few months for a local business, real work leaves visible traces:
+
+- Pages on your website changed: new or rewritten service pages, improved titles and descriptions, fixed headings, faster load times
+- Content published: useful articles or location pages, written for your actual customers
+- Google Business Profile activity: updated services, new photos, posts, review responses
+- Technical fixes you can ask about by name: broken links repaired, redirects cleaned up, mobile issues resolved
+- Local consistency work: your name, address, and phone corrected across directories
+
+Ask one simple question each month: "What did you change, add, or fix this month — specifically?" The answer should be a plain list. Pages, titles, words, photos, fixes. If the answer is always "optimization" and "monitoring" with nothing you can point at, months of retainers can pass with the site untouched. You can check that yourself: if your website looks exactly the same as it did six months ago, something is off.
+
+### What a Useful Report Contains
+
+A monthly report should help you understand three things: what was done, what happened, and what is next.
+
+Look for:
+
+- The work list — specific changes made that month
+- Real metrics: search impressions and clicks from Search Console, calls and direction requests from your Business Profile, form submissions from your website
+- Honest movement in the searches that matter to you — not screenshots of obscure keywords nobody types
+- The plan for next month
+
+Be cautious with reports built entirely on rankings. Rankings jump around daily, differ by location and device, and can be cherry-picked. "You rank #1 for 'best affordable quality roofing contractor Port Orange FL'" means little if nobody searches that phrase. Impressions, clicks, calls, and inquiries are much harder to fake.
+
+If you want a second opinion on the basics, our [free SEO tools](/free-seo-tools) let you check some of this yourself in a few minutes.
+
+### Red Flags Worth Acting On
+
+Any one of these deserves a direct conversation. More than one deserves a decision:
+
+- **Guarantees.** Nobody controls Google. Guaranteed rankings, guaranteed leads, or "page one in 30 days" are sales tactics, not services.
+- **Secret methods.** "Proprietary techniques we can't share" usually means either nothing or something risky. Real SEO is not secret; it is just work.
+- **No access.** Covered above — and worth repeating.
+- **The same report every month.** Swap the logo and the dates and it could be anyone's.
+- **Zero questions about your business.** SEO that never asks which services you want more of, or which jobs are most profitable, is SEO pointed at nothing.
+- **Your website never changes.** SEO without website changes is a contradiction. The site is the product being optimized.
+
+One caution in fairness: slow results alone are not proof of a scam. Even good SEO takes months to show, especially in competitive areas — we wrote about realistic timelines in [How Long Does It Take to See Results from SEO?](/journal/how-long-does-it-take-to-see-results-from-seo). Judge the work, not just the wait.
+
+### How to Have the Conversation
+
+You do not need to be confrontational. Three questions, asked plainly, will tell you most of what you need to know:
+
+1. "Can you send me the list of specific changes made in the last 90 days?"
+2. "Can you confirm I have owner access to my Analytics, Search Console, and Business Profile?"
+3. "Which searches are we trying to win, and how are we measuring calls and inquiries — not just rankings?"
+
+A good company answers all three easily. They will probably be glad you asked, because engaged clients are easier to get results for.
+
+### The Bottom Line
+
+You do not need to audit algorithms to hold an SEO company accountable. Own your accounts, ask for the specific work list, judge reports by inquiries instead of vanity rankings, and treat guarantees and secrecy as the warnings they are.
+
+And remember what the work is ultimately for: a website that earns trust when local customers check you out. If the site itself has not improved, the SEO has not either — see [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business) for how the pieces fit together.
+
+If you would like an outside set of eyes, New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We will tell you plainly what looks solid and what does not. [Request your free website review →](/contact)
+    `.trim(),
+  },
+  {
+    id: 37,
+    slug: 'local-seo-vs-google-ads',
+    title: 'Local SEO vs. Paid Google Ads: Which Should I Choose?',
+    metaTitle: 'Local SEO vs Google Ads for Local Businesses | NLDS',
+    category: 'Local SEO',
+    date: 'July 21, 2026',
+    author: 'Michael Vail',
+    excerpt: 'One builds slowly and compounds. The other works immediately and stops when the budget does. Here is how a local service business should think about local SEO versus Google Ads.',
+    metaDescription: 'Local SEO builds over time. Google Ads work while you pay. A practical guide to choosing — or combining — them for a local service business.',
+    body: `
+At some point most local business owners face the same budget question: put money into local SEO, or put it into Google Ads?
+
+Both can work. Both can also waste money in the wrong situation. The honest answer is that they are different tools with different timelines, and the right choice depends on what your business needs right now — and on one thing they both depend on completely.
+
+### The Core Difference: Renting vs. Building
+
+Google Ads is renting attention. You bid on searches, your ad appears above the results, and you pay for each click. It can start producing visits the day you turn it on. It also stops the day you stop paying. Nothing accumulates.
+
+Local SEO is building an asset. Your Google Business Profile, your reviews, your service pages, your local reputation with Google — these take months to develop, and no one can honestly promise a specific position or timeline. But what you build keeps working without a per-click bill, and it tends to compound. We covered realistic timelines in [How Long Does It Take to See Results from SEO?](/journal/how-long-does-it-take-to-see-results-from-seo).
+
+Neither is "better." They answer different questions. Ads answer "how do I get in front of people this week?" Local SEO answers "how do I become the obvious local choice over time?"
+
+### When Google Ads Is the Right Move
+
+Ads earn their place in some specific situations:
+
+- **You need inquiries now.** A new business, a slow season, a new service line — ads can produce activity while slower channels build.
+- **You want to test.** Ads tell you quickly whether a service or offer gets clicked, and which wording works, before you invest months in it.
+- **The search results are stacked against you.** For some high-competition searches, page one is dominated by directories and established players. Ads can buy a spot while you build.
+- **Seasonal pushes.** Pool services in spring, tax prep in winter — concentrated spending during your season can make sense.
+
+The discipline ads require is math. Know roughly what a click costs in your market, how many clicks become inquiries, and what a customer is worth. Local service clicks can be expensive, and an unwatched campaign can quietly burn a month's budget on the wrong searches.
+
+### When Local SEO Is the Right Move
+
+Local SEO fits when you are playing a longer game:
+
+- **You plan to be in business for years.** The work you do this year keeps paying next year. Rented attention never does that.
+- **Your customers check credentials.** For bigger-ticket services, people research before calling. Reviews, photos, and a solid website do the convincing — and those are local SEO assets.
+- **Your competition is beatable.** In many Volusia County service categories, the businesses in the map pack are simply the ones that took their profile and website seriously. That is an open door.
+- **You are tired of paying for every single lead.** Ads costs scale with volume forever. SEO costs are front-loaded work.
+
+The trade-off is patience — and the discipline to keep at it when nothing seems to move in month two. If you are weighing that patience against your budget, [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business) goes deeper on the decision.
+
+### What They Both Depend On
+
+Here is the part that changes the whole question: both channels send people to the same place.
+
+An ad click lands on your website. A map-pack tap leads to your profile, and then usually to your website. If that website is outdated, slow, vague about services, or hard to contact, both channels leak. You will pay for clicks that bounce, or rank for searches that never turn into calls — we walked through that chain in [How to Get More Phone Calls and Customers Through Local SEO](/journal/get-more-phone-calls-local-seo).
+
+That is why the website is not a third option competing with these two. It is the foundation both of them stand on. Fixing a weak website usually improves the return on every marketing dollar that follows it, paid or organic.
+
+### A Practical Way to Decide
+
+If you can only fund one thing right now, a reasonable order for most local service businesses:
+
+1. **Make the website credible and clear.** Services, areas, proof, easy contact. Without this, skip the rest.
+2. **Do the free local basics.** Complete your Google Business Profile, keep information consistent, ask happy customers for reviews. This is local SEO's core and costs mostly attention.
+3. **Add ads if you need volume now.** With a solid site and profile, paid clicks convert far better.
+4. **Invest in deeper local SEO as revenue allows.** Service pages, local content, ongoing profile activity — the compounding layer.
+
+Plenty of established businesses run both: SEO as the long-term base, ads for immediate volume and seasonal pushes. That combination works precisely because each covers the other's weakness.
+
+### The Bottom Line
+
+Google Ads buys speed. Local SEO builds permanence. A weak website wastes both.
+
+Get the foundation right, do the free local basics, then choose based on how urgently you need volume and how long you plan to be here. For a business planted in Port Orange, Daytona Beach, or anywhere in Central Florida for the long haul, the building usually beats the renting — but there is no shame in renting while you build.
+
+If you want a starting point, New Level Design Studio offers a free website review for local businesses — an honest look at whether your site is ready to make either investment pay off. See our [website packages](/packages) or [request your free website review →](/contact)
+    `.trim(),
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
