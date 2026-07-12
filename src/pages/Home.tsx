@@ -198,8 +198,8 @@ export default function Home() {
       <ScrollTriggerSequence
         overlay={
           <div className="st-cta-panel">
-            <p className="st-cta-kicker">Port Orange, Florida</p>
-            <p className="st-cta-headline">Websites built to earn trust before the first call.</p>
+            <p className="st-cta-kicker" aria-hidden="true">Port Orange, Florida</p>
+            <p className="st-cta-headline" aria-hidden="true">Websites built to earn trust before the first call.</p>
             <div className="st-cta-row">
               <Link to="/contact" className="btn-primary st-cta-btn">
                 Start a Website Project
@@ -254,7 +254,7 @@ export default function Home() {
             around your services, your market, and the way real customers decide who to contact.
           </p>
           <div
-            className="hero-cta-buttons flex flex-col sm:flex-row items-start sm:items-center"
+            className="hero-cta-buttons flex flex-col sm:flex-row items-start sm:items-center md:hidden"
             style={{ gap: 16, marginTop: 40 }}
           >
             <Link to="/contact" className="btn-primary w-full sm:w-auto">
@@ -265,7 +265,7 @@ export default function Home() {
             </Link>
           </div>
           <p
-            className="font-sans"
+            className="font-sans md:hidden"
             style={{ fontSize: '0.875rem', color: 'var(--muted-text)', marginTop: 16 }}
           >
             Or start with a{' '}

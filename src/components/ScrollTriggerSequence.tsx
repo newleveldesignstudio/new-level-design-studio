@@ -80,6 +80,7 @@ export default function ScrollTriggerSequence({ overlay }: Props) {
   const pinRef       = useRef<HTMLDivElement>(null);
   const stickyRef    = useRef<HTMLDivElement>(null);
   const canvasRef    = useRef<HTMLCanvasElement>(null);
+  const labelRef     = useRef<HTMLParagraphElement>(null);
   const framesRef    = useRef<HTMLImageElement[]>([]);
   const frameIdxRef  = useRef(0);
   const bpRef        = useRef<string>(getBreakpoint());
@@ -151,6 +152,11 @@ export default function ScrollTriggerSequence({ overlay }: Props) {
       end: cfg.end,
       scrub: true,
       onUpdate: (self) => {
+        // Fade the "Scroll to explore" label over the first ~15% of the scrub.
+        // Computed before the frame early-return so it updates on every tick.
+        if (labelRef.current) {
+          labelRef.current.style.opacity = String(1 - Math.min(self.progress / 0.15, 1));
+        }
         const idx = Math.round(self.progress * total);
         if (idx === frameIdxRef.current) return;
         frameIdxRef.current = idx;
@@ -216,16 +222,18 @@ export default function ScrollTriggerSequence({ overlay }: Props) {
       <div ref={pinRef} className="st-pin-wrapper">
         <div ref={stickyRef} className="st-sticky">
           <canvas ref={canvasRef} className="st-canvas" aria-label="Animated sequence" />
-          {/* Decorative teaser only: the same headline and CTAs are the real,
-              focusable hero content in the section immediately below. Hiding
-              this copy from assistive tech and the tab order prevents a
-              duplicate accessible hero on breakpoints where it's visible. */}
+          {/* Active desktop/tablet (≥768px) CTA set: the overlay links are the
+              real, focusable hero CTAs at these widths. The duplicate lower CTA
+              row is hidden (md:hidden) so only one CTA set is visible and in the
+              a11y tree. The kicker/headline inside are decorative and marked
+              aria-hidden by the caller. Below 768px the overlay is display:none
+              and the lower CTA row takes over. */}
           {overlay && (
-            <div className="st-overlay" aria-hidden="true" inert>
+            <div className="st-overlay">
               {overlay}
             </div>
           )}
-          <p className="st-label">Scroll to explore</p>
+          <p className="st-label" ref={labelRef}>Scroll to explore</p>
         </div>
       </div>
     </section>
