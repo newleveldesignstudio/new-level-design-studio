@@ -210,6 +210,17 @@ async function prerender() {
       try {
         await page.goto(url, { waitUntil: 'load', timeout: TIMEOUT });
         await wait(3000); // let React render + Helmet flush
+        // Helmet can inject the JSON-LD script a beat after the meta tags on
+        // slow CI machines; without this, schema-bearing pages can lose their
+        // schema to a capture race (happened on Netlify, 2026-07-11). Pages
+        // that render no schema (works/, terms, privacy…) just spend the
+        // timeout and continue — non-fatal by design.
+        await page
+          .waitForFunction(
+            () => document.querySelector('script[type="application/ld+json"]'),
+            { timeout: 8000 },
+          )
+          .catch(() => {});
 
         // Capture live document.title (set by React Helmet) alongside the full DOM.
         // page.title() reads document.title directly from the browser context,

@@ -6,10 +6,12 @@ import sitemapPlugin from 'vite-plugin-sitemap'
 import { SITEMAP_ROUTES } from './src/data/routes'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   base: '/',
   plugins: [
-    inspectAttr(),
+    // Dev-only: kimi inspect attributes must never reach production HTML
+    // (they expose source paths and bloat every prerendered page).
+    ...(mode === 'development' ? [inspectAttr()] : []),
     react(),
     sitemapPlugin({
       hostname: 'https://newlvlstudio.com',
@@ -38,4 +40,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+}));
