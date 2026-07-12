@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import RelatedProjects from '@/components/RelatedProjects';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
 import WorkDemonstrates from '@/components/WorkDemonstrates';
 
@@ -372,6 +373,8 @@ export default function WorkCrescentHarbor() {
           </div>
         </div>
       </section>
+
+      <RelatedProjects currentSlug="crescent-harbor" />
 
       <FinalCTA />
     </div>

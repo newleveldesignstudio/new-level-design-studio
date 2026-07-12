@@ -2736,6 +2736,33 @@ export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
 }
 
+/**
+ * Pick up to `count` related articles for a given slug. Candidates are walked
+ * in cyclic order starting *after* this article, taking same-category posts
+ * first (topically relevant) then filling with the nearest others. Rotating
+ * the start point distributes incoming links evenly, so every post — including
+ * the last member of a large category — both links out to and receives links
+ * from a stable set of siblings, with no orphans and no build-to-build drift.
+ */
+export function getRelatedArticles(slug: string, count = 3): Article[] {
+  const idx = articles.findIndex((a) => a.slug === slug);
+  if (idx === -1) return [];
+  const self = articles[idx];
+  const n = articles.length;
+  const rotated = Array.from({ length: n - 1 }, (_, k) => articles[(idx + 1 + k) % n]);
+  const chosen: Article[] = [];
+
+  for (const a of rotated) {
+    if (chosen.length >= count) break;
+    if (a.category === self.category) chosen.push(a);
+  }
+  for (const a of rotated) {
+    if (chosen.length >= count) break;
+    if (!chosen.includes(a)) chosen.push(a);
+  }
+  return chosen;
+}
+
 export function getArticlesSortedByDate(): Article[] {
   const order: Record<number, number> = {};
   articles.forEach((a) => {

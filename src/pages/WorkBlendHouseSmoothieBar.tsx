@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
+import RelatedProjects from '@/components/RelatedProjects';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
 
 export default function WorkBlendHouseSmoothieBar() {
@@ -358,6 +359,8 @@ export default function WorkBlendHouseSmoothieBar() {
           </div>
         </div>
       </section>
+
+      <RelatedProjects currentSlug="blend-house-smoothie-bar" />
 
       <FinalCTA
         heading="Own a Food or Wellness Business?"

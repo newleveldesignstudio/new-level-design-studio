@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # AI crawlers — allowed to index public content
 User-agent: GPTBot
@@ -24,5 +25,3 @@ User-agent: Bytespider
 Allow: /
 
 Sitemap: https://newlvlstudio.com/sitemap.xml
-
-Content-Signal: search=yes, ai-input=yes, ai-train=no

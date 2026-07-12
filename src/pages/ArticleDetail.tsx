@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import { getArticleBySlug } from '@/data/articles';
+import { getArticleBySlug, getRelatedArticles } from '@/data/articles';
 import { markdownToHtml } from '@/lib/markdownToHtml';
 import { getCategoryDisplayLabel } from '@/lib/categoryDisplayLabels';
 import SEO from '@/components/SEO';
@@ -35,6 +35,7 @@ export default function ArticleDetail() {
   if (!article) return <Navigate to="/journal" replace />;
 
   const html = markdownToHtml(article.body);
+  const relatedArticles = getRelatedArticles(article.slug);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -132,6 +133,75 @@ export default function ArticleDetail() {
           />
         </div>
       </section>
+
+      {relatedArticles.length > 0 && (
+        <section
+          style={{
+            backgroundColor: 'var(--bg-soft)',
+            padding: 'clamp(48px, 6vw, 72px) 0',
+            borderTop: '1px solid var(--silver-grey)',
+            borderBottom: '1px solid var(--silver-grey)',
+          }}
+        >
+          <div className="container-nlds">
+            <p className="eyebrow">Related Reading</p>
+
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+              style={{ gap: 'clamp(12px, 2vw, 20px)', marginTop: 28 }}
+            >
+              {relatedArticles.map((related) => (
+                <Link
+                  key={related.slug}
+                  to={`/journal/${related.slug}`}
+                  style={{ textDecoration: 'none', display: 'block', height: '100%' }}
+                >
+                  <article
+                    style={{
+                      backgroundColor: 'var(--surface)',
+                      border: '1px solid var(--border-color)',
+                      padding: 'clamp(20px, 2.5vw, 28px)',
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      transition: 'border-color 0.2s',
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLElement).style.borderColor = 'var(--charcoal)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLElement).style.borderColor = 'var(--border-color)';
+                    }}
+                  >
+                    <span
+                      className="font-sans"
+                      style={{
+                        fontSize: '0.6875rem',
+                        letterSpacing: '0.18em',
+                        textTransform: 'uppercase',
+                        color: 'var(--muted-text)',
+                      }}
+                    >
+                      {getCategoryDisplayLabel(related.category)}
+                    </span>
+                    <span
+                      className="font-serif"
+                      style={{
+                        fontSize: '1.125rem',
+                        lineHeight: 1.25,
+                        color: 'var(--charcoal)',
+                        marginTop: 10,
+                      }}
+                    >
+                      {related.title}
+                    </span>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <FinalCTA
         heading="Start With a Free Website Review"
