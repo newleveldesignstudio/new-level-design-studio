@@ -1,17 +1,28 @@
 # NLDS Website Handoff
 
 > Reference documentation. `CLAUDE.md` at the repo root is the active source
-> of truth and wins on any conflict with this file. Last verified: 2026-07-08.
+> of truth and wins on any conflict with this file. Last verified: 2026-07-11.
 > Companions: `docs/PROJECT_OVERVIEW.md` (architecture)
 > and `docs/GAPS_AND_WEAKNESSES.md` (honest audit).
 
 ## 1. Current production state
 
 - **Production URL:** https://newlvlstudio.com
-- **Latest deployed commit:** `35d2666` (new journal article; GA4 + conversion
-  events live since `b5541e6`, 2026-07-06) — verified serving live 2026-07-07
-- **Sitemap:** all manifest routes (68 URLs as of 2026-07-07 — the count grows
+- **Latest deployed commit:** `8cdf24c` (production-audit P0 fixes; four
+  local-SEO journal articles ids 34–37 live since `d4ed7b4`; GA4 + conversion
+  events live since `b5541e6`, 2026-07-06) — full audit + live verification
+  2026-07-11
+- **Sitemap:** all manifest routes (72 URLs as of 2026-07-11 — the count grows
   with new articles/pages), all trailing-slashed, `/ops` excluded
+- **2026-07-11 audit result:** all 72 pages verified — unique titles and meta
+  descriptions, correct self-referencing canonicals, exactly one H1 per page,
+  complete OG/Twitter tags, zero broken internal links, robots.txt + sitemap
+  healthy, contact form + tel/mailto intact. Two P0s found and fixed in
+  `8cdf24c`: (1) `kimi-plugin-inspect-react` shipped `code-path` source-path
+  attributes on every production element — now dev-only; (2) the prerender's
+  blind 3s Helmet wait let slow CI capture pages before the JSON-LD script
+  landed (the four newest articles went live schema-less) — prerender now
+  waits for the ld+json node, bounded and non-fatal.
 - **Prerender:** every sitemap route renders to static HTML in `dist/`; the
   build fails if any manifest route renders Page Not Found
 - **Build command:** `npm run build:full` (tsc + vite build + Playwright
@@ -137,6 +148,14 @@ missing SEO defect. A guard comment sits on `localBusinessSchema()` in
 - Rename Works data field `result` → `demoFocus`.
 - Add Coffee & Cafés and Law Firms to the Works nav dropdown.
 - Per-article og:images (everything outside Works uses the default JPG).
+- From the 2026-07-11 audit (P2, copy approval needed): 29 meta descriptions
+  run 166–211 chars (truncated in SERPs, not a defect) and 2 titles exceed
+  65 chars (`google-business-profile-vs-website`, `stone-timber-remodeling`).
+- Optional: JSON-LD on `/contact`, `/studio`, and `/works/*` (schema is not
+  mandated there by CLAUDE.md; decide before adding).
+- Note: `cleanHead()`'s schema keep-filter had a `code-path` shortcut that is
+  now inert in production (attributes are dev-only); the old-base filter path
+  keeps all Helmet schemas correctly — verified 2026-07-11.
 
 **Content strategy:**
 - Real sections/pages for the three unmapped Services dropdown items
