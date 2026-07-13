@@ -29,6 +29,7 @@ export const workSummaries: WorkSummary[] = [
   { slug: 'coastal-standard-realty', title: 'Coastal Standard Realty', industry: 'Real Estate' },
   { slug: 'volusia-legal-group', title: 'Volusia Legal Group', industry: 'Law Firms' },
   { slug: 'lotus-beauty-house', title: 'Lotus Beauty House', industry: 'Salons & Barbers' },
+  { slug: 'liquid-legacy-pools', title: 'Liquid Legacy Pools', industry: 'Local Services' },
 ];
 
 /**

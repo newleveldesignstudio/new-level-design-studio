@@ -46,6 +46,7 @@ export const STATIC_PUBLIC_ROUTES = [
   '/works/stone-timber-remodeling',
   '/works/lotus-beauty-house',
   '/works/blend-house-smoothie-bar',
+  '/works/liquid-legacy-pools',
   '/free-seo-tools',
   '/local-visibility-insights',
   '/local-visibility-insights/website-trust',

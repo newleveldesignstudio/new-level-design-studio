@@ -49,6 +49,7 @@ const CONTENT_IMAGES = [
   '/nlds/images/stone-timber-remodeling-cinematic-contractor-website-concept-nlds.jpg',
   '/nlds/images/lotus-beauty-house-salon-website-concept-nlds.jpg',
   '/nlds/images/blend-house-smoothie-bar-website-concept-nlds.jpg',
+  '/nlds/images/liquid-legacy-pools-luxury-pool-website-concept-nlds.png',
 ];
 
 const FOUNDER = '/images/founder/michael-vail-founder-portrait-new-level-design-studio.webp';
