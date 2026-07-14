@@ -19,6 +19,9 @@ const SLUG_TO_CATEGORY: Record<string, string> = {
   'lead-generation': 'Lead Generation',
   'website-audits': 'Website Audits',
   'local-seo': 'Local SEO',
+  'website-design': 'Website Design',
+  'conversion': 'Conversion',
+  'website-care': 'Website Care',
 };
 
 const CATEGORY_TO_SLUG: Record<string, string> = {
@@ -32,6 +35,9 @@ const CATEGORY_TO_SLUG: Record<string, string> = {
   'Lead Generation': 'lead-generation',
   'Website Audits': 'website-audits',
   'Local SEO': 'local-seo',
+  'Website Design': 'website-design',
+  'Conversion': 'conversion',
+  'Website Care': 'website-care',
 };
 
 function ArticleCard({ article }: { article: Article }) {

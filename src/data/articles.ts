@@ -2835,6 +2835,702 @@ The honest answer to "how much does a small business website cost" is: it depend
 If you're ready to figure out the right scope for your business, [start a website project](/contact) and we'll walk through what your site actually needs before quoting anything. If you're not sure yet and just want an outside read on where your current site stands, a [free website review](/contact) is a no-commitment way to find out.
     `.trim(),
   },
+  {
+    id: 39,
+    slug: 'what-changes-small-business-website-cost',
+    title: 'What Changes the Cost of a Small Business Website?',
+    metaTitle: 'What Changes the Cost of a Small Business Website? | NLDS',
+    category: 'Website Design',
+    date: 'July 15, 2026',
+    author: 'Michael Vail',
+    excerpt: 'Learn what affects small business website pricing, including page count, copy, design, mobile quality, service pages, search setup, and post-launch support.',
+    metaDescription: 'Learn what affects small business website pricing, including page count, copy, design, mobile quality, service pages, search setup, and post-launch support.',
+    body: `
+Most small business owners do not ask about website cost because they are cheap. They ask because they have been burned by vague pricing, unfinished projects, or websites that looked fine but never helped the business.
+
+If you are looking for actual numbers and package ranges, we cover those in [how much a small business website costs](/journal/small-business-website-cost). This article is about the other half of the question: why one quote comes in at a few hundred dollars and another at a few thousand — and which of those differences actually matter for your business.
+
+For a local business in [Port Orange](/port-orange-website-design), Daytona Beach, or Volusia County, the right website is usually not the fanciest option. It is the one that makes the business look trustworthy, explains the services clearly, works well on mobile, and gives people a direct path to call, request a quote, or book. Every lever below either supports that job or pads the invoice — knowing which is which is how you read a quote.
+
+### Scope is the biggest lever
+
+The biggest cost driver is scope. A one-page website with clear sections is very different from a multi-page site with service pages, location pages, project galleries, custom copy, forms, analytics, and post-launch support.
+
+These are the pieces that usually affect price:
+
+- Number of pages
+- Quality of copywriting
+- Custom design level
+- Mobile layout quality
+- Service and location content
+- Contact forms or quote forms
+- Photo and visual direction
+- Search setup
+- Analytics setup
+- Launch support
+- Ongoing care
+
+A cheaper site usually removes several of those pieces. That can be fine if the business only needs a clean starting point. It becomes a problem when the site is expected to help bring in calls, explain services, support Google Business Profile traffic, and build trust before the first conversation.
+
+### What does a lower-cost website usually include?
+
+A lower-cost website usually covers the basics: a homepage, contact information, a few service sections, mobile responsiveness, and a simple contact flow.
+
+This can work for a newer business, a solo service provider, or someone who needs to stop relying only on Facebook, Instagram, or a Google Business Profile.
+
+The risk is when the site feels generic. If the copy could apply to any business in any city, it will not do much to help customers understand why they should contact you.
+
+### What does a stronger website include?
+
+A stronger small business website usually includes more strategy. It is not just prettier. It is clearer.
+
+It should answer the questions visitors are already asking:
+
+- What do you do?
+- Where do you work?
+- Can I trust you?
+- What should I do next?
+- Do you handle the exact thing I need?
+- Can I call, request a quote, or book easily?
+
+For local service businesses, the website also needs to work with the Google Business Profile. The profile can help someone find the business. The website still has to earn the call.
+
+### When is a more expensive website worth it?
+
+A higher-priced website makes sense when the business has more to explain, more competition, or more trust to build.
+
+That might include contractors, med spas, salons, restaurants, real estate teams, legal services, pool companies, landscapers, roofers, and any business where customers compare options before reaching out.
+
+If one new customer is worth a lot to the business, the website does not need to be massive to matter. It needs to make the business look credible enough for the visitor to take the next step.
+
+### What do cheap websites often miss?
+
+Cheap websites often miss the parts that make people comfortable enough to act.
+
+Common gaps include:
+
+- Weak service descriptions
+- No clear local positioning
+- Poor mobile spacing
+- Buried phone number
+- Generic stock images
+- No proof or reviews
+- No explanation of the process
+- No post-launch checks
+- No Search Console or Bing setup
+- No analytics review
+
+The site might technically exist, but it does not help the business show up with more trust.
+
+### How NLDS thinks about pricing
+
+New Level Design Studio keeps [website packages](/packages) structured around what the business actually needs.
+
+A smaller business may only need a clean Starter Website to get a professional presence online. A more established business may need a Core Website with stronger structure, service clarity, and local search basics. A business that needs a more complete website may need a Pro Website with multiple pages, stronger visuals, local SEO support, and a more refined conversion path.
+
+The goal is not to oversell the biggest option. The goal is to match the website to the business, the competition, and the trust gap customers see online.
+
+### The better question to ask
+
+Instead of only asking, "How much does a website cost?" ask:
+
+"What does this website need to do for my business?"
+
+If it only needs to make the business look more professional, the answer may be simple. If it needs to support calls, quote requests, local visibility, reviews, service pages, and post-launch tracking, the scope should reflect that.
+
+### Final thought
+
+A website is not automatically valuable because it is expensive. It is valuable when it helps customers understand the business faster, trust it sooner, and take action with less friction.
+
+For local businesses, that is the real cost question.
+
+If you are not sure what level your business needs, New Level Design Studio can [review your current site](/contact) and point out what is worth fixing first.
+    `.trim(),
+  },
+  {
+    id: 40,
+    slug: 'website-traffic-no-leads',
+    title: 'Website Getting Traffic But No Leads? Here\'s What\'s Usually Wrong',
+    metaTitle: 'Website Getting Traffic But No Leads? Here\'s What\'s Usually Wrong | NLDS',
+    category: 'Conversion',
+    date: 'July 16, 2026',
+    author: 'Michael Vail',
+    excerpt: 'If your website gets traffic but does not turn visitors into calls or inquiries, the problem is usually trust, clarity, mobile flow, or weak calls to action.',
+    metaDescription: 'If your website gets traffic but does not turn visitors into calls or inquiries, the problem is usually trust, clarity, mobile flow, or weak calls to action.',
+    body: `
+Getting traffic is not the same as getting business.
+
+A local business website can show up in search, get clicks from a Google Business Profile, and still fail to turn visitors into calls or quote requests. That does not always mean the traffic is bad. A lot of the time, the page is not doing enough to help the visitor feel clear, confident, and ready to reach out.
+
+For businesses in Port Orange, [Daytona Beach](/daytona-beach-website-design), and Volusia County, this is common. People compare several options quickly. If your website makes them work too hard, they move on.
+
+### The message is too vague
+
+Many websites say things like "quality service," "trusted team," or "we care about our customers."
+
+Those are not bad ideas, but they are not specific enough. Visitors need to know what you do, who you help, where you work, and why they should trust you.
+
+A better website answers the real questions:
+
+- What service do you provide?
+- What problem do you solve?
+- What areas do you serve?
+- What makes your process easier or more trustworthy?
+- What should someone do next?
+
+If the visitor has to guess, the website is leaking leads.
+
+### The phone number or form is buried
+
+Some websites hide the most important action.
+
+The phone number may be tiny, stuck only in the footer, or missing on mobile. The contact form may be too long. The call-to-action button may use weak language like "Submit" or "Learn More" when the visitor is ready to request help.
+
+Local business websites need obvious next steps. That does not mean yelling at people. It means making the path clear.
+
+Good calls to action include:
+
+- Call for a quote
+- Request a website review
+- Schedule a consultation
+- Ask about service
+- Get a project estimate
+
+The right CTA depends on the business, but it should never feel hidden.
+
+### The mobile version is weak
+
+Most local customers are not studying your website on a large desktop screen. They are checking it from a phone, often between errands, at work, or while comparing nearby businesses.
+
+If the mobile site has cramped text, hard-to-tap buttons, slow images, or awkward spacing, people may leave even if they were interested.
+
+Mobile problems that hurt leads include:
+
+- Buttons too small to tap
+- Text blocks that feel too long
+- Phone number not visible
+- Contact form hard to complete
+- Images pushing the important content too far down
+- Sticky bars covering content
+
+Mobile is not a smaller version of the desktop site. It is often the main version customers see.
+
+### There is not enough proof
+
+People want to know if the business is real, active, and trustworthy.
+
+Proof can come from reviews, project photos, before-and-after examples, service details, owner/founder notes, local context, and clear process information.
+
+You do not need to fake big-company polish. You need enough real trust signals for someone to feel safe taking the next step.
+
+For service businesses, proof matters because the customer is often inviting someone to their home, business, property, or personal space.
+
+### The service pages are too thin
+
+A lot of websites list services without explaining them.
+
+If a page only says "roof repair," "lawn care," "pool service," "website design," or "med spa treatments" without context, it may not answer enough for the visitor or search engine.
+
+Good service content explains:
+
+- What the service includes
+- Who it is for
+- Common problems it solves
+- What the process looks like
+- When someone should call
+- What areas the business serves
+
+This helps both visibility and conversion. It also helps customers feel like they are in the right place.
+
+### The page looks dated or generic
+
+Design is not just decoration. It affects trust.
+
+If the website looks old, crowded, random, or templated, visitors may assume the business is less organized than it really is.
+
+That is not always fair, but it is how people judge online. Before they call, they judge the business online.
+
+A stronger design does not have to be flashy. It should feel clean, intentional, readable, and aligned with the type of business.
+
+### The website does not match the Google Business Profile
+
+Your Google Business Profile can send people to your website, but the two need to line up.
+
+If your profile says one thing and your website says another, trust drops. If your GBP highlights services that your website barely mentions, visitors may wonder if they are in the right place.
+
+Your profile helps people find you. Your website helps them decide if they trust you.
+
+### What to fix first
+
+Start with the basics:
+
+1. Make the main service and location clear above the fold.
+2. Put the phone number or main CTA where people can find it.
+3. Tighten the mobile layout.
+4. Add proof near the top.
+5. Improve the service sections.
+6. Make the contact path easier.
+7. Check analytics and form tracking.
+
+You do not need to rebuild everything before making progress. Sometimes the first win is removing the friction that is already costing you calls.
+
+### Final thought
+
+Traffic without leads is a signal. It means people are arriving, but something is stopping them from acting.
+
+That "something" is usually not one magic trick. It is the combined effect of weak copy, unclear structure, poor mobile flow, missing proof, and soft calls to action.
+
+New Level Design Studio helps local businesses [find those gaps](/contact) and fix the parts of the website that weaken trust before the first call.
+    `.trim(),
+  },
+  {
+    id: 41,
+    slug: 'redesign-vs-new-website',
+    title: 'Website Redesign vs New Website: Which Does Your Business Need?',
+    metaTitle: 'Website Redesign vs New Website: Which Does Your Business Need? | NLDS',
+    category: 'Website Design',
+    date: 'July 17, 2026',
+    author: 'Michael Vail',
+    excerpt: 'A practical guide to deciding whether your local business should refresh its current website or start fresh with a new one.',
+    metaDescription: 'A practical guide to deciding whether your local business should refresh its current website or start fresh with a new one.',
+    body: `
+Not every bad website needs to be thrown away.
+
+Sometimes a local business only needs a smarter redesign: better copy, cleaner sections, stronger mobile layout, clearer calls to action, and a more trustworthy first impression. Other times, the site has so many technical, content, and ownership problems that starting fresh is the better move.
+
+The hard part is knowing which situation you are in.
+
+### Start with the real problem
+
+Before deciding between a redesign and a new website, identify what is actually wrong.
+
+Is the site outdated visually? Is it hard to use on mobile? Is the copy vague? Are the services unclear? Is it slow? Are forms broken? Do you lack access? Is the platform hard to update?
+
+Those are different problems. They should not all get the same answer.
+
+A redesign is usually best when the foundation is usable but the presentation and structure need work. A new website is usually best when the foundation itself is holding the business back.
+
+### When a redesign may be enough
+
+A redesign can make sense when the existing site has good bones.
+
+That usually means:
+
+- You still have access to the site
+- The platform is stable
+- The pages can be edited cleanly
+- The URL structure is not a mess
+- The business information is mostly correct
+- The site loads reasonably well
+- There are no major technical problems
+
+In this case, the work may be more about improving trust, clarity, layout, copy, and conversion flow.
+
+For example, a contractor may already have the right pages, but the service descriptions are thin. A salon may have good photos, but the booking path is confusing. A local service company may have reviews, but they are buried too far down the page.
+
+Those are redesign problems, not always full rebuild problems.
+
+### When a new website is the better move
+
+A new website makes more sense when the current site is working against the business at a deeper level.
+
+Common signs include:
+
+- You cannot access the site properly
+- The site was built on an outdated or limiting setup
+- It is slow or unstable
+- The mobile version is poor
+- The design is heavily templated or broken
+- The copy is too thin to support search or trust
+- The contact flow does not work
+- The site has old pages, duplicate pages, or redirect issues
+- The business has changed enough that the old site no longer fits
+
+At that point, trying to patch the old website can cost more time than it saves.
+
+### The trust test
+
+Ask this simple question:
+
+If a customer saw this website before calling, would it make them more confident or less confident?
+
+That is the first impression test.
+
+If the current site still has a good structure but needs polish, a redesign may be enough. If it creates doubt the moment someone lands on it, a new website may be the cleaner decision.
+
+### The mobile test
+
+Open the site on your phone and look at it like a customer.
+
+Can you understand the business in five seconds? Can you tap the phone number? Can you see the main service? Can you find the contact path without scrolling forever?
+
+If the answer is mostly yes, the site may be worth improving. If the answer is no across the board, rebuilding may be smarter.
+
+### The ownership test
+
+Ownership matters more than many business owners realize.
+
+If your old designer, agency, or platform controls the account, hosting, domain, content, or login access, a redesign may become messy fast.
+
+Before spending money on the current site, confirm:
+
+- Who controls the domain?
+- Who controls hosting?
+- Who can edit the website?
+- Can you access analytics?
+- Can you access Search Console?
+- Can you export content?
+- Can forms be tested and updated?
+
+If access is unclear, solve that before deciding the scope.
+
+### The conversion test
+
+A pretty redesign is not enough if the site still fails to turn visitors into action.
+
+The site should guide people toward a call, quote request, booking, or conversation. That means service clarity, proof, reviews, local context, mobile readability, and a direct CTA.
+
+If the existing website can support that with targeted improvements, redesign it. If it cannot, rebuild it.
+
+### Local business examples
+
+A Port Orange lawn company with a simple but editable site may only need a stronger homepage, clearer services, better calls, and local proof.
+
+A Daytona Beach restaurant with outdated menus, poor mobile layout, broken links, and no clear location information may need a deeper rebuild.
+
+A [Volusia County](/volusia-county-website-design) contractor with no access to the old website may need a new site simply because the old one cannot be safely managed.
+
+The right decision depends on the condition of the site and what the business needs it to do.
+
+### Final thought
+
+A redesign fixes a site that is still worth building on. A new website replaces a site that is too weak, too limited, or too messy to carry the business forward.
+
+The mistake is choosing based only on price. The smarter move is to choose based on trust, usability, access, and whether the site can support real business goals.
+
+New Level Design Studio can [review your current website](/contact) and help you decide what is worth saving and what should be rebuilt.
+    `.trim(),
+  },
+  {
+    id: 42,
+    slug: 'local-business-website-leads',
+    title: 'What Should Be on a Local Business Website That Actually Gets Leads?',
+    metaTitle: 'What Should Be on a Local Business Website That Actually Gets Leads? | NLDS',
+    category: 'Conversion',
+    date: 'July 18, 2026',
+    author: 'Michael Vail',
+    excerpt: 'The essential sections and trust signals every local business website needs if it is expected to turn visitors into calls, bookings, or quote requests.',
+    metaDescription: 'The essential sections and trust signals every local business website needs if it is expected to turn visitors into calls, bookings, or quote requests.',
+    body: `
+A local business website does not need every trendy feature on the internet.
+
+It needs to answer the right questions quickly, build trust, and make the next step easy.
+
+That sounds simple, but many small business websites miss the basics. They list a few services, add a contact page, and hope people figure out the rest. The problem is that customers compare fast. If your website feels unclear, thin, or hard to use, they may never call.
+
+Here is what a local business website should include if it is expected to generate real inquiries.
+
+### A clear headline
+
+The homepage should make the business obvious right away.
+
+People should not have to study the logo, scroll through vague copy, or guess what you do. A strong headline tells visitors the service, audience, or result in plain language.
+
+For example:
+
+- Website design for local businesses in Port Orange
+- Pool service and maintenance for Volusia County homeowners
+- Roofing repairs and replacements for Daytona Beach properties
+
+Clear beats clever.
+
+### Services people can understand
+
+Your service section should explain what you actually do.
+
+A bullet list is a start, but it is usually not enough. Each main service should give enough context for the customer to know whether it fits their need.
+
+Good service content answers:
+
+- What is included?
+- Who is it for?
+- What problems does it solve?
+- When should someone reach out?
+- What areas do you serve?
+
+This is also useful for local search because it gives search engines and customers clearer context.
+
+### Local context
+
+Local businesses should sound local.
+
+That does not mean stuffing city names into every paragraph. It means naturally showing where you work and who you serve.
+
+For NLDS, that might include [Port Orange](/port-orange-website-design), Daytona Beach, Volusia County, Ormond Beach, New Smyrna Beach, and Central Florida when relevant.
+
+For other local businesses, it may be neighborhoods, service areas, nearby cities, or specific customer situations.
+
+Local context helps people feel like they found the right business, not a random company from somewhere else.
+
+### Proof and trust signals
+
+Customers want proof before they reach out.
+
+Trust signals can include:
+
+- Google reviews
+- Project photos
+- Before-and-after examples
+- Case studies
+- Certifications
+- Years of experience
+- Founder or owner note
+- Clear process
+- Local service area
+- Real contact information
+
+You do not need every proof element at once. You need enough to reduce doubt.
+
+### A strong mobile experience
+
+Mobile layout can make or break leads.
+
+The phone number should be easy to tap. Buttons should be large enough. Text should be readable. Forms should be short enough to complete. Important content should not be buried under huge images or oversized intro sections.
+
+If a customer is checking your site from a phone and cannot quickly understand or contact you, the website is not doing its job.
+
+### Direct calls to action
+
+A lead-focused website needs clear next steps.
+
+Weak CTA:
+
+"Learn more"
+
+Stronger CTA:
+
+"Request a quote"
+
+"Book a consultation"
+
+"Get a free website review"
+
+"Call for service"
+
+The CTA should match what the customer is ready to do. Do not make every button sound like a sales pitch, but do make the next step obvious.
+
+### A simple contact path
+
+The contact page should not feel like a wall.
+
+At minimum, it should include:
+
+- Phone number
+- Email or contact form
+- Service area
+- Business name
+- Clear expectation of what happens next
+
+If the form asks too many questions too soon, people may leave. Ask for what you need to start the conversation, then collect deeper details later.
+
+### Frequently asked questions
+
+FAQs are useful when they answer real objections.
+
+Good FAQs may cover:
+
+- Pricing ranges
+- Timeline
+- Service area
+- Process
+- What happens after contact
+- What the customer needs to provide
+- Common concerns
+
+Do not use FAQs as filler. Use them to remove friction.
+
+### Tracking and post-launch checks
+
+A website that gets leads should be measured.
+
+At a basic level, the business should know whether people are clicking, calling, submitting forms, and visiting key pages.
+
+Post-launch checks can include:
+
+- Search Console verification
+- Bing verification
+- Sitemap monitoring
+- Form testing
+- Analytics review
+- Mobile QA
+- Conversion review
+
+These do not guarantee results. They help make sure the website is working and visible enough to evaluate.
+
+### Final thought
+
+A local business website should do more than exist. It should make the business easier to understand, easier to trust, and easier to contact.
+
+The best websites are not always the biggest. They are the clearest.
+
+New Level Design Studio builds [website-first systems](/services) for local businesses that need stronger trust, better clarity, and a cleaner path from visitor to inquiry.
+    `.trim(),
+  },
+  {
+    id: 43,
+    slug: 'after-website-launch',
+    title: 'What Happens After Your Website Launches?',
+    metaTitle: 'What Happens After Your Website Launches? | NLDS',
+    category: 'Website Care',
+    date: 'July 19, 2026',
+    author: 'Michael Vail',
+    excerpt: 'A practical look at what should happen after a website goes live, including indexing, forms, analytics, mobile QA, Google Business Profile alignment, and ongoing care.',
+    metaDescription: 'A practical look at what should happen after a website goes live, including indexing, forms, analytics, mobile QA, Google Business Profile alignment, and ongoing care.',
+    body: `
+Launch day is important, but it is not the finish line.
+
+A website can be designed well, built cleanly, and still need follow-up after it goes live. Search engines need to discover it. Forms need to be tested. Analytics need to be checked. The mobile experience needs to hold up in the real world. The Google Business Profile should point people to the right place.
+
+For a local business, the first few weeks after launch are where the website starts proving whether it is set up correctly.
+
+### Search engines need to find the site
+
+After launch, the site should be connected to the basic search tools.
+
+That usually includes Google Search Console and Bing Webmaster Tools. These tools help confirm that search engines can see the site, crawl the pages, read the sitemap, and report indexing issues.
+
+This does not mean every page will rank right away. It means the website is being monitored correctly.
+
+At minimum, post-launch search setup should include:
+
+- Search Console verification
+- Bing Webmaster Tools verification
+- Sitemap submission
+- Robots.txt check
+- Important page inspection
+- Indexing follow-up where appropriate
+
+For local businesses, this matters because the website and Google Business Profile should support each other. Visibility works better when the pieces line up.
+
+### Forms and contact paths need testing
+
+A contact form is only useful if it works.
+
+After launch, every important contact path should be tested:
+
+- Contact form submission
+- Quote request form
+- Phone links
+- Email links
+- Booking links
+- Mobile call buttons
+
+This sounds basic, but it is one of the easiest things to miss. A beautiful website with a broken form is quietly losing opportunities.
+
+### Analytics should be reviewed
+
+Analytics are not just for big companies.
+
+A local business should have some way to understand whether the website is getting visitors, which pages people use, and whether calls or forms are being triggered.
+
+You do not need to obsess over dashboards every day. You do need enough tracking to spot obvious issues.
+
+Useful questions include:
+
+- Are people visiting the homepage?
+- Are service pages being viewed?
+- Are visitors reaching the contact page?
+- Are calls or form actions being tracked?
+- Are people coming from Google Business Profile?
+- Are mobile users behaving differently?
+
+Good tracking helps you make better decisions instead of guessing.
+
+### The Google Business Profile should be aligned
+
+Your Google Business Profile can help people find the business, but the website needs to reinforce the same message.
+
+After launch, check that the profile and website match on:
+
+- Business name
+- Website link
+- Phone number
+- Service areas
+- Main services
+- Description
+- Photos or brand direction
+- Appointment or contact links
+
+If the profile sends visitors to a page that feels disconnected, trust drops. Your profile helps people find you. Your website helps them decide if they trust you.
+
+### The mobile site needs another look
+
+The mobile version should be checked after launch, not only during design.
+
+Real mobile QA should look at:
+
+- Text readability
+- Button size
+- Phone link behavior
+- Form usability
+- Spacing
+- Page speed
+- Sticky elements
+- Image cropping
+- Footer contact info
+
+Many local customers will only see the mobile site. If it feels awkward, they may not give the desktop version a second chance.
+
+### Content may need follow-up
+
+A website is stronger when it keeps answering real customer questions.
+
+That can include:
+
+- Journal posts
+- FAQs
+- Service page updates
+- Project examples
+- Review highlights
+- Local search content
+- Google Business Profile posts
+
+Content should not be added just to add content. It should support trust, visibility, and clarity.
+
+### Reviews and proof should keep growing
+
+After launch, a business should keep building trust signals.
+
+That might mean asking customers for reviews in a neutral, compliant way, adding project photos, updating testimonials, or showing recent work.
+
+Do not ask only happy customers. Do not offer incentives. Do not ask for 5-star reviews. Keep review requests honest and simple.
+
+### Why the first 90 days matter
+
+The first 90 days after launch are a good window for checking whether the website is settling in correctly.
+
+This is where you can review:
+
+- Indexing
+- Sitemap health
+- Form performance
+- Analytics
+- Mobile quality
+- Google Business Profile alignment
+- Content opportunities
+- Conversion weak spots
+
+That is why [post-launch support](/packages) matters. It turns the website from a finished file into a managed part of the business presence.
+
+### Final thought
+
+Launching a website is the start of the website doing its job.
+
+The follow-up is what catches the quiet problems: pages not indexed, forms not firing, calls not easy to make, mobile issues, unclear service paths, or missing trust signals.
+
+New Level Design Studio treats launch as part of a larger [website-first system](/services): strategy, build, search setup, testing, and ongoing care so local businesses can show up with more trust and clarity online.
+    `.trim(),
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
