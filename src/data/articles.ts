@@ -36,7 +36,7 @@ Bad website visuals don't just fail to help. They actively cost you business.
 
 Understanding how people actually use a small business website changes how you should think about visuals.
 
-Most visitors to a local business website arrive from one of two places: Google search or a direct referral. The Google searcher typed in a service term — "HVAC repair Port Orange" or "hair salon Daytona Beach" — and your site came up. They clicked, and now they have about eight seconds before they decide whether to keep reading.
+Most visitors to a local business website arrive from one of two places: Google search or a direct referral. The Google searcher typed in a service term — "HVAC repair Port Orange" or "hair salon Daytona Beach" — and your site came up. They clicked, and visitors often form an early impression of a website before they've read much of the copy at all.
 
 In those eight seconds, they're not reading your About page. They're scanning. They're looking at the main image, the general design quality, the headline, and the overall impression of what kind of business this is. If that impression says "professional, legitimate, and worth calling," they keep reading. If it says anything else, they're back on Google looking at the next result.
 
@@ -1838,7 +1838,7 @@ None of this is complicated in principle. But it requires intentional design —
 
 Every visitor who lands on your website and leaves without taking action is a lost opportunity. Some of those visitors were actively looking for exactly what you offer. Some of them would have become good, long-term customers. They're gone because your website didn't hold them long enough to make your case.
 
-That cost is real, and it compounds. A business that converts 3 out of 10 website visitors into inquiries is doing far better than a business that converts 1 out of 10 — not because the first business has better services or better pricing, but because its website does a better job in those first critical seconds.
+That cost is real, and it compounds. Stronger visual clarity, structure, mobile usability, and professional presentation can improve the likelihood that visitors continue exploring your site and reach out — even when the underlying business and services are the same.
 
 The businesses in Port Orange, Daytona Beach, and Volusia County that understand this are investing in websites built to earn trust before the first call. That investment pays off in the form of more inquiries, better-quality leads, and customers who already feel good about the business before they pick up the phone. You can see this approach applied to real local-business industries in our [selected work](/works).
 
