@@ -2730,6 +2730,111 @@ Get the foundation right, do the free local basics, then choose based on how urg
 If you want a starting point, New Level Design Studio offers a free website review for local businesses — an honest look at whether your site is ready to make either investment pay off. See our [website packages](/packages) or [request your free website review →](/contact)
     `.trim(),
   },
+  {
+    id: 38,
+    slug: 'small-business-website-cost',
+    title: 'How Much Does a Small Business Website Cost?',
+    metaTitle: 'How Much Does a Small Business Website Cost? | NLDS',
+    category: 'Website Strategy',
+    date: 'July 14, 2026',
+    author: 'Michael Vail',
+    excerpt: 'A small business website doesn\'t have one universal price — the real question is what the site needs to do for your business. Here\'s what actually drives cost, and how to know which option fits.',
+    metaDescription: 'A small business website doesn\'t have one universal price. Here\'s what actually drives cost — and how to know which option fits.',
+    body: `
+Ask five web designers "how much does a small business website cost?" and you'll get five different numbers — $500, $900, $1,500, sometimes a lot more. None of them are lying to you. They're just quoting different things.
+
+The real question isn't "what's the cheapest site I can get?" It's "what does this site actually need to do for my business?" A single-location business that mostly relies on word of mouth needs something different than a multi-service contractor competing for search traffic across three cities. Website cost for small business owners tracks scope, not luck of the draw.
+
+Here's a straight answer to how much a small business website cost usually breaks down, what drives the difference, and how to figure out what your business actually needs before you compare quotes.
+
+### Why Website Cost Varies So Much
+
+Two businesses in the same industry, same city, can get quotes that are $1,000 apart — and both quotes can be reasonable. The gap usually isn't about who's charging fair prices and who isn't. It's about what's actually included.
+
+A basic quote might cover a single page with your logo, contact info, and a few stock photos dropped into a template. A higher quote might cover real strategy work, several service-specific pages, original photography, and testing across phones and browsers before anything goes live. Same word — "website" — very different amounts of work behind it.
+
+Local business website pricing makes more sense once you stop thinking of a website as one product and start thinking of it as four separate layers, each with its own cost.
+
+### The Four Things That Actually Drive Cost
+
+**Foundation: Strategy and Structure**
+
+Before anything gets designed, someone has to answer a few questions: What does this business actually do? Who's the visitor, and what are they trying to figure out when they land here? What should happen on this page, and what should happen next?
+
+This step is invisible in the final product, which is exactly why it's the easiest thing to skip. A site built without it usually looks fine at first glance but doesn't quite land — the homepage doesn't say what the business does clearly, or the path from "browsing" to "contacting you" isn't obvious. Skipping this step is often how a lower-cost quote becomes possible. It's also usually the first thing you can feel missing on a site that isn't converting.
+
+**Pages: Services and Conversion Flow**
+
+A one-page site that lists three services in a paragraph costs less to build than a site with a dedicated page for each service, because it's less work — fewer pages, fewer decisions, less writing. That's not automatically wrong. It depends on the business.
+
+A roofer who does repair, replacement, and storm damage work might genuinely benefit from three separate pages, each written for the specific search and the specific worry behind it. A single-service business — one thing, one area, one clear offer — often doesn't need that structure at all. More pages usually cost more. Whether you need more pages is a different question than what a site "should" cost.
+
+**Content: Copy, Proof, and Visuals**
+
+This is where a lot of the price difference actually lives, and it's often the least visible part of a quote. Generic template copy and stock photography are fast and cheap. Copy written specifically for your business, real photos of your actual work, and reviews or project examples woven in where they matter — that takes real time, and it shows up in the price.
+
+It also tends to show up in how visitors respond to the site. A [website is often the first serious impression a potential customer has of your business](/journal/what-is-website-first-impression-audit), and generic content is one of the fastest ways to undercut that first impression without realizing it.
+
+**Polish: Mobile Experience, SEO Basics, and Launch QA**
+
+The last layer is the one nobody notices until it's missing. A site that's technically "mobile responsive" but still has a cramped navigation menu, tiny tap targets, or a contact form that's awkward to fill out on a phone is not the same as a site that's actually been checked on a phone by a real person.
+
+The same goes for local SEO basics — page titles, meta descriptions, image alt text, and service pages that match what people are actually searching for — and for basic launch QA: does every link work, does the form actually send, does it look right in the browsers people actually use. None of this is glamorous. All of it is worth checking before a site goes live, and all of it takes time that shows up in the final number.
+
+### When a Simple One-Page Website Is Enough
+
+A single, well-built page is a legitimate answer for a lot of small businesses — not a compromise. It tends to make sense when:
+
+- You offer one core service, or a tightly related set of services, in one area.
+- Most of your new business already comes from referrals or your Google Business Profile, and the website's main job is to confirm you're legitimate once someone looks you up.
+- You're newer and don't yet have a large body of work, reviews, or service variety to showcase.
+- You want something live quickly without a long build process.
+
+In these cases, a focused one-page site with clear service info, real contact options, and a professional look usually covers what the business needs. Paying for a much larger site here doesn't necessarily buy you more results — it can just mean more pages that don't get much traffic.
+
+### When a Business Needs a Stronger, Multi-Page Website
+
+A bigger, more structured site tends to earn its cost back when:
+
+- You offer multiple distinct services that each deserve their own explanation — [dedicated service pages are usually easier for both search engines and potential customers to understand](/journal/is-seo-worth-it-for-my-small-business) than one page trying to cover everything.
+- You're in a competitive local market where organic search is a real source of new customers, not just a nice-to-have.
+- You have a body of work worth showing — completed projects, before-and-afters, a range of services — and a one-page site doesn't have room for it.
+- Your services involve a higher price point or a longer decision process, where visitors usually want more information and more proof before they reach out.
+
+This is also where local SEO structure and stronger visual presentation tend to matter more, since there's simply more surface area for both search engines and visitors to evaluate.
+
+### What Cheap Website Quotes Often Leave Out
+
+A low quote isn't automatically a bad one — plenty of businesses genuinely only need a simple site. But it's worth knowing what a very low quote often doesn't include, so you're comparing like for like:
+
+- **Real strategy work.** Templates filled in with your logo and contact info, with no thought given to what a first-time visitor actually needs to see first.
+- **Original copy.** Placeholder or lightly-edited stock text instead of writing built around your actual services and area.
+- **Mobile testing beyond "it loads."** Responsive in theory, awkward in practice.
+- **Basic SEO setup.** No page titles, meta descriptions, or local keyword structure — meaning the site exists, but isn't set up to be found.
+- **Anything after launch.** A site that ships and is then left alone indefinitely, with no plan for updates, fixes, or the small things that break over time.
+
+None of this makes a low-cost option a scam. It just means the quote is for a smaller amount of work — which may or may not match what your business actually needs. [A quick way to check where your own site stands is this list of five warning signs](/journal/five-signs-website-costing-leads), which covers exactly these gaps.
+
+### How This Maps to Real Options
+
+In practice, these four layers usually land in a few recognizable tiers. For reference, here's roughly how it breaks down for a project like ours:
+
+- **Starter Website** (starting at $499) covers a focused, mobile-responsive one-page site — essential sections, a working contact flow, and basic SEO. A solid fit for the "simple site is enough" scenario above.
+- **Core Website** (starting at $899) is a stronger multi-section site with local SEO-friendly structure, a more refined visual system, and a clearer conversion flow.
+- **Pro Website** (starting at $1,499) is a larger, multi-page site with a premium editorial layout, full SEO-ready structure, and space to highlight reviews — built for the "needs a stronger, multi-page site" scenario above.
+- **Website Care** (starting at $99/mo) is what happens after launch — ongoing attention to quality, visibility, and trust, so the site doesn't quietly go stale the way a lot of "set it and forget it" websites do.
+
+Listed prices are starting points. Final cost still depends on scope, page count, content needs, and timeline — the same as it would with any website project.
+
+None of these is automatically the "right" one. The right one is whichever matches what your business actually needs to do right now — which is really the whole point of this article.
+
+### Getting an Actual Number for Your Business
+
+The honest answer to "how much does a small business website cost" is: it depends on what you need the site to do, and the only way to know that for your specific business is to talk through it.
+
+If you're ready to figure out the right scope for your business, [start a website project](/contact) and we'll walk through what your site actually needs before quoting anything. If you're not sure yet and just want an outside read on where your current site stands, a [free website review](/contact) is a no-commitment way to find out.
+    `.trim(),
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
