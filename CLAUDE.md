@@ -65,6 +65,10 @@ See `docs/GAPS_AND_WEAKNESSES.md` for the backlog — it is a **dated report**; 
 
 ## How future agents make changes safely
 
+Execution method, verification standards, and trap tests live in
+`~/nlds/agent-os/` (business rulebooks: `~/nlds/nlds-os/`); this file
+outranks both for anything in this repo.
+
 Work in small bounded batches; one scoped concern per batch. Vague language ("premium," "polish") is never license to redesign — smallest relevant change. Assess-vs-fix ambiguity → assess and report first. Multi-file/production changes → state a short plan before editing. Run the QA checklist; report failures verbatim; never claim done without verification. `AGENTS.md` is only a pointer here. Files under `reports/` and `docs/archive/` are report-only/historical, never active instructions.
 
 ## NLDS Canva Work
