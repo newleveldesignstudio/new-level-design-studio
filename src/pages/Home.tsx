@@ -658,10 +658,10 @@ export default function Home() {
         <div className="container-nlds">
           <img
             src="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.webp"
-            srcSet="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds-w768.webp 768w, /nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.webp 1536w"
+            srcSet="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds-w768.webp 768w, /nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.webp 1600w"
             sizes="(max-width: 768px) 100vw, 1200px"
-            width={1536}
-            height={1024}
+            width={1600}
+            height={1067}
             decoding="async"
             alt="Website and brand visuals mockup"
             loading="lazy"
