@@ -42,7 +42,7 @@ export default function NotFound() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/" className="btn-primary">Go Home</Link>
-            <Link to="/contact" className="btn-secondary">Contact Us</Link>
+            <Link to="/contact/" className="btn-secondary">Contact Us</Link>
           </div>
         </div>
       </section>

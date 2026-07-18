@@ -48,69 +48,69 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     label: 'Services',
-    path: '/services',
+    path: '/services/',
     dropdown: {
       title: 'Services',
       description: 'Core ways we help local businesses improve their online presence.',
       links: [
-        { label: PRIMARY_SERVICES[0], path: '/services#website-design', description: 'Professional websites built for clarity, trust, and action.' },
-        { label: PRIMARY_SERVICES[1], path: '/services', description: 'A structured rebuild for a site that no longer represents the business.' },
-        { label: PRIMARY_SERVICES[2], path: '/services#website-care', description: 'Ongoing website quality, visibility, and trust management.' },
-        { label: SUPPORTING_CAPABILITIES[0], path: '/services', description: 'Visual identity support for businesses that need a sharper presentation.' },
-        { label: SUPPORTING_CAPABILITIES[2], path: '/services', description: 'Location-targeted structure that helps local search understand your service area.' },
-        { label: SUPPORTING_CAPABILITIES[1], path: '/services#website-copy-visual-support', description: 'Branded graphics, launch assets, and supporting content that keep your business consistent.' },
+        { label: PRIMARY_SERVICES[0], path: '/services/#website-design', description: 'Professional websites built for clarity, trust, and action.' },
+        { label: PRIMARY_SERVICES[1], path: '/services/', description: 'A structured rebuild for a site that no longer represents the business.' },
+        { label: PRIMARY_SERVICES[2], path: '/services/#website-care', description: 'Ongoing website quality, visibility, and trust management.' },
+        { label: SUPPORTING_CAPABILITIES[0], path: '/services/', description: 'Visual identity support for businesses that need a sharper presentation.' },
+        { label: SUPPORTING_CAPABILITIES[2], path: '/services/', description: 'Location-targeted structure that helps local search understand your service area.' },
+        { label: SUPPORTING_CAPABILITIES[1], path: '/services/#website-copy-visual-support', description: 'Branded graphics, launch assets, and supporting content that keep your business consistent.' },
       ],
     },
   },
   {
     label: 'Works',
-    path: '/works',
+    path: '/works/',
     dropdown: {
       title: 'Works',
       description: 'Selected website, branding, and content direction for local businesses.',
       links: [
-        { label: 'All Work', path: '/works' },
-        { label: 'Contractors', path: '/works?industry=contractors' },
-        { label: 'Restaurants', path: '/works?industry=restaurants' },
-        { label: 'Salons & Barbers', path: '/works?industry=salons-barbers' },
-        { label: 'Real Estate', path: '/works?industry=real-estate' },
-        { label: 'Fitness', path: '/works?industry=fitness' },
-        { label: 'Medical / Wellness', path: '/works?industry=medical-wellness' },
-        { label: 'Local Services', path: '/works?industry=local-services' },
+        { label: 'All Work', path: '/works/' },
+        { label: 'Contractors', path: '/works/?industry=contractors' },
+        { label: 'Restaurants', path: '/works/?industry=restaurants' },
+        { label: 'Salons & Barbers', path: '/works/?industry=salons-barbers' },
+        { label: 'Real Estate', path: '/works/?industry=real-estate' },
+        { label: 'Fitness', path: '/works/?industry=fitness' },
+        { label: 'Medical / Wellness', path: '/works/?industry=medical-wellness' },
+        { label: 'Local Services', path: '/works/?industry=local-services' },
       ],
     },
   },
-  { label: 'Packages', path: '/packages' },
+  { label: 'Packages', path: '/packages/' },
   {
     label: 'Studio',
-    path: '/studio',
+    path: '/studio/',
     activePrefixes: ['/studio', '/journal', '/michael-vail'],
     dropdown: {
       title: 'THE STUDIO',
       description: 'Articles, notes, and practical guidance on websites, visuals, branding, and local business growth.',
       links: [
-        { label: 'Studio Overview', path: '/studio' },
-        { label: 'About the Founder', path: '/michael-vail' },
-        { label: 'All Articles', path: '/journal' },
-        { label: 'Website Strategy', path: '/journal?category=website-strategy' },
-        { label: 'Local Business Growth', path: '/journal?category=local-business-growth' },
-        { label: 'Visual Direction', path: '/journal?category=visual-direction' },
-        { label: 'Website Insights', path: '/journal?category=content-systems' },
-        { label: 'Brand Presence', path: '/journal?category=brand-presence' },
+        { label: 'Studio Overview', path: '/studio/' },
+        { label: 'About the Founder', path: '/michael-vail/' },
+        { label: 'All Articles', path: '/journal/' },
+        { label: 'Website Strategy', path: '/journal/?category=website-strategy' },
+        { label: 'Local Business Growth', path: '/journal/?category=local-business-growth' },
+        { label: 'Visual Direction', path: '/journal/?category=visual-direction' },
+        { label: 'Website Insights', path: '/journal/?category=content-systems' },
+        { label: 'Brand Presence', path: '/journal/?category=brand-presence' },
       ],
     },
   },
   {
     label: 'Resources',
-    path: '/journal',
+    path: '/journal/',
     activePrefixes: ['/journal', '/free-seo-tools', '/local-visibility-insights'],
     dropdown: {
       title: 'RESOURCES',
       description: 'Free tools and articles on websites, local SEO, and business visibility.',
       links: [
-        { label: 'Journal', path: '/journal', description: 'Practical articles on websites, visuals, and local business growth.' },
-        { label: 'Free SEO Tools', path: '/free-seo-tools', description: 'Check website speed, indexing, structured data, and local visibility.' },
-        { label: 'Local Visibility Insights', path: '/local-visibility-insights', description: 'Practical guidance on how customers find, evaluate, and contact local businesses.' },
+        { label: 'Journal', path: '/journal/', description: 'Practical articles on websites, visuals, and local business growth.' },
+        { label: 'Free SEO Tools', path: '/free-seo-tools/', description: 'Check website speed, indexing, structured data, and local visibility.' },
+        { label: 'Local Visibility Insights', path: '/local-visibility-insights/', description: 'Practical guidance on how customers find, evaluate, and contact local businesses.' },
       ],
     },
   },
@@ -464,7 +464,7 @@ export default function Navigation() {
             </div>
 
             <Link
-              to="/contact"
+              to="/contact/"
               onClick={() => handleNavClick()}
               className="btn-primary shrink-0 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
             >
@@ -639,7 +639,7 @@ export default function Navigation() {
                 })}
                 <motion.div variants={shouldReduceMotion ? undefined : menuItem} className="mt-6">
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     onClick={() => handleNavClick()}
                     className="btn-primary focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
                   >

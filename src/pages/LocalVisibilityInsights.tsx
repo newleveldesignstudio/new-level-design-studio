@@ -47,42 +47,42 @@ const publishedInsights = [
     title: 'What Makes a Local Business Website Feel Trustworthy?',
     description:
       'The website details that help customers understand who you are, what you offer, where you work, and what they should do next.',
-    href: '/local-visibility-insights/website-trust',
+    href: '/local-visibility-insights/website-trust/',
   },
   {
     num: 2,
     title: 'Where Do Local Customers Decide Which Business to Contact?',
     description:
       'The decision points between search results and first contact — and what businesses can do to improve them.',
-    href: '/local-visibility-insights/customer-decision-path',
+    href: '/local-visibility-insights/customer-decision-path/',
   },
   {
     num: 3,
     title: 'How Complete Is Your Google Business Profile?',
     description:
       'A review of the core profile details that help customers understand and contact a local business.',
-    href: '/local-visibility-insights/google-profile-completeness',
+    href: '/local-visibility-insights/google-profile-completeness/',
   },
   {
     num: 4,
     title: 'How Quickly Can Customers Find Your Contact Information?',
     description:
       'How phone numbers, forms, tap-to-call links, service areas, and clear next steps affect whether customers complete the path to contact.',
-    href: '/local-visibility-insights/contact-information',
+    href: '/local-visibility-insights/contact-information/',
   },
   {
     num: 5,
     title: 'How Recent Are Your Business Reviews?',
     description:
       'Why review recency, honest feedback, and professional responses influence how local customers evaluate a business.',
-    href: '/local-visibility-insights/review-recency',
+    href: '/local-visibility-insights/review-recency/',
   },
   {
     num: 6,
     title: 'Is Your Website Ready for Mobile Customers?',
     description:
       'What local businesses should check for mobile usability, including page speed, navigation, tap-to-call, forms, readable text, and clear contact paths.',
-    href: '/local-visibility-insights/mobile-readiness',
+    href: '/local-visibility-insights/mobile-readiness/',
   },
 ];
 
@@ -198,12 +198,12 @@ export default function LocalVisibilityInsights() {
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
             <Link
-              to="/local-visibility-insights/website-trust"
+              to="/local-visibility-insights/website-trust/"
               className="btn-primary"
             >
               Start With Insight No. 1
             </Link>
-            <Link to="/free-seo-tools" className="btn-secondary">
+            <Link to="/free-seo-tools/" className="btn-secondary">
               Use the Free SEO Tools
             </Link>
           </motion.div>
@@ -552,7 +552,7 @@ export default function LocalVisibilityInsights() {
                 see how your website measures up in practice.
               </motion.p>
               <motion.div variants={shouldReduceMotion ? undefined : fadeUp}>
-                <Link to="/free-seo-tools" className="btn-secondary">
+                <Link to="/free-seo-tools/" className="btn-secondary">
                   Explore Free SEO Tools
                 </Link>
               </motion.div>
@@ -654,10 +654,10 @@ export default function LocalVisibilityInsights() {
             style={{ gap: 12, marginTop: 36 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact/" className="btn-primary">
               Request a Free Website Review
             </Link>
-            <Link to="/services" className="btn-secondary">
+            <Link to="/services/" className="btn-secondary">
               View Website Services
             </Link>
           </motion.div>

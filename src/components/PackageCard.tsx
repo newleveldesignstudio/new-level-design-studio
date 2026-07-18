@@ -17,7 +17,7 @@ export default function PackageCard({
   description,
   features,
   ctaText = 'Get Started',
-  ctaTo = '/contact',
+  ctaTo = '/contact/',
 }: PackageCardProps) {
   return (
     <div

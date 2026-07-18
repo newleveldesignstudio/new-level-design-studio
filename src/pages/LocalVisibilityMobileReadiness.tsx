@@ -475,7 +475,7 @@ export default function LocalVisibilityMobileReadiness() {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to="/local-visibility-insights">Local Visibility Insights</Link>
+                    <Link to="/local-visibility-insights/">Local Visibility Insights</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -974,7 +974,7 @@ export default function LocalVisibilityMobileReadiness() {
 
               <div className="reveal-child" style={{ marginTop: 24 }}>
                 <Link
-                  to="/local-visibility-insights/contact-information"
+                  to="/local-visibility-insights/contact-information/"
                   className="font-sans text-link"
                   style={{ fontSize: '0.9375rem' }}
                 >
@@ -1073,7 +1073,7 @@ export default function LocalVisibilityMobileReadiness() {
               </div>
 
               <div className="reveal-child" style={{ marginTop: 24 }}>
-                <Link to="/free-seo-tools" className="btn-secondary">
+                <Link to="/free-seo-tools/" className="btn-secondary">
                   Check Mobile Performance with Free SEO Tools
                 </Link>
               </div>
@@ -1322,7 +1322,7 @@ export default function LocalVisibilityMobileReadiness() {
             <div style={{ borderTop: '1px solid var(--silver-grey)', marginBottom: 36 }} />
 
             <div className="reveal-child" style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-              <Link to="/free-seo-tools" className="btn-primary">
+              <Link to="/free-seo-tools/" className="btn-primary">
                 Use the Free SEO Tools
               </Link>
             </div>
@@ -1360,19 +1360,19 @@ export default function LocalVisibilityMobileReadiness() {
                 label: 'Local Visibility Insight',
                 title: 'How Quickly Can Customers Find Your Contact Information?',
                 desc: 'How phone numbers, forms, tap-to-call links, and clear next steps affect whether customers complete the path to contact.',
-                href: '/local-visibility-insights/contact-information',
+                href: '/local-visibility-insights/contact-information/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'What Makes a Local Business Website Feel Trustworthy?',
                 desc: 'The website details that help customers understand who you are, what you offer, and what to do next.',
-                href: '/local-visibility-insights/website-trust',
+                href: '/local-visibility-insights/website-trust/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'Where Do Local Customers Decide Which Business to Contact?',
                 desc: 'The decision points between search results and first contact — and what businesses can do to improve them.',
-                href: '/local-visibility-insights/customer-decision-path',
+                href: '/local-visibility-insights/customer-decision-path/',
               },
             ].map((item) => (
               <Link
@@ -1434,14 +1434,14 @@ export default function LocalVisibilityMobileReadiness() {
 
           <div style={{ marginTop: 28, display: 'flex', flexWrap: 'wrap', gap: 20 }}>
             <Link
-              to="/local-visibility-insights"
+              to="/local-visibility-insights/"
               className="font-sans text-link"
               style={{ fontSize: '0.9375rem' }}
             >
               &larr; Back to Local Visibility Insights
             </Link>
             <Link
-              to="/free-seo-tools"
+              to="/free-seo-tools/"
               className="font-sans text-link"
               style={{ fontSize: '0.9375rem' }}
             >
@@ -1490,10 +1490,10 @@ export default function LocalVisibilityMobileReadiness() {
             style={{ gap: 12, marginTop: 36 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact/" className="btn-primary">
               Request a Free Website Review
             </Link>
-            <Link to="/services" className="btn-secondary">
+            <Link to="/services/" className="btn-secondary">
               Explore Website Services
             </Link>
           </motion.div>

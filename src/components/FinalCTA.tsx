@@ -12,7 +12,7 @@ export default function FinalCTA({
   heading = 'Start With a Free Website Review',
   body = "A clear, credible website makes a stronger first impression — and makes it easier for customers to trust your business and reach out.",
   buttonText = 'Request a Free Website Review',
-  buttonTo = '/contact',
+  buttonTo = '/contact/',
 }: FinalCTAProps) {
   const ref = useScrollReveal<HTMLDivElement>({
     y: 30,

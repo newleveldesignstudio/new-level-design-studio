@@ -152,7 +152,7 @@ export default function Services() {
                 >
                   Built to help visitors understand your business fast, trust what they see, and take the next step without confusion.
                 </p>
-                <Link to="/contact" className="btn-primary mt-8 inline-block">
+                <Link to="/contact/" className="btn-primary mt-8 inline-block">
                   Get a Free Website Review
                 </Link>
               </div>
@@ -202,7 +202,7 @@ export default function Services() {
                 >
                   Keeps your site from feeling abandoned after launch — small updates, link checks, content swaps, and polish handled for you every month.
                 </p>
-                <Link to="/contact" className="btn-primary mt-8 inline-block">
+                <Link to="/contact/" className="btn-primary mt-8 inline-block">
                   Ask About Website Care
                 </Link>
               </div>
@@ -260,7 +260,7 @@ export default function Services() {
                 >
                   Professional visuals that make your business look consistent across your website, Google profile, and marketing posts — brand-aligned graphics, launch assets, and visual direction built to work alongside your website.
                 </p>
-                <Link to="/contact" className="btn-primary mt-8 inline-block">
+                <Link to="/contact/" className="btn-primary mt-8 inline-block">
                   Discuss Website Copy & Visual Support
                 </Link>
               </div>
@@ -460,8 +460,8 @@ export default function Services() {
       {/* Packages link */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '60px 0' }}>
         <div className="container-nlds flex flex-wrap items-center gap-4">
-          <Link to="/packages" className="btn-primary">View Packages</Link>
-          <Link to="/contact" className="btn-secondary">Discuss Your Website</Link>
+          <Link to="/packages/" className="btn-primary">View Packages</Link>
+          <Link to="/contact/" className="btn-secondary">Discuss Your Website</Link>
         </div>
       </section>
 

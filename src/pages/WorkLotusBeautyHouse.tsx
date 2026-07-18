@@ -46,7 +46,7 @@ export default function WorkLotusBeautyHouse() {
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
         <div className="container-nlds">
           <Link
-            to="/works"
+            to="/works/"
             className="font-sans"
             style={{
               fontSize: '0.75rem',
@@ -99,7 +99,7 @@ export default function WorkLotusBeautyHouse() {
               >
                 View Concept
               </a>
-              <Link to="/contact" className="btn-secondary">
+              <Link to="/contact/" className="btn-secondary">
                 Start a Website Project
               </Link>
             </div>
@@ -323,7 +323,7 @@ export default function WorkLotusBeautyHouse() {
         heading="Want This for Your Salon?"
         body="New Level Design Studio builds websites for local hair and nail salons across Port Orange, Daytona Beach, and Volusia County. Tell us what you need."
         buttonText="Start a Website Project"
-        buttonTo="/contact"
+        buttonTo="/contact/"
       />
     </div>
   );

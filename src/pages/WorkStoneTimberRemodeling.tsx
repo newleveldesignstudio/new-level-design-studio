@@ -23,7 +23,7 @@ export default function WorkStoneTimberRemodeling() {
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
         <div className="container-nlds">
           <Link
-            to="/works"
+            to="/works/"
             className="font-sans"
             style={{
               fontSize: '0.75rem',
@@ -78,7 +78,7 @@ export default function WorkStoneTimberRemodeling() {
               >
                 View Concept Website →
               </a>
-              <Link to="/contact" className="btn-secondary" style={{ minWidth: 0 }}>
+              <Link to="/contact/" className="btn-secondary" style={{ minWidth: 0 }}>
                 Discuss Your Website
               </Link>
             </div>
@@ -183,7 +183,7 @@ export default function WorkStoneTimberRemodeling() {
                     View Concept Website →
                   </a>
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="btn-secondary"
                     style={{ display: 'block', width: '100%', textAlign: 'center' }}
                   >
@@ -527,7 +527,7 @@ export default function WorkStoneTimberRemodeling() {
                   View Concept Website →
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="font-sans"
                   style={{
                     fontSize: '0.8125rem',

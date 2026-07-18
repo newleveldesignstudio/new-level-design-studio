@@ -241,7 +241,7 @@ export default function StarterPack() {
               County, and Central Florida.
             </p>
             <div className="starter-hero-ctas">
-              <Link to="/contact?service=visual-starter-pack" className="btn-primary">
+              <Link to="/contact/?service=visual-starter-pack" className="btn-primary">
                 Get the $129 Visual Starter Pack
               </Link>
               <a href="#included" className="btn-secondary">
@@ -315,7 +315,7 @@ export default function StarterPack() {
               <p className="price-label">Visual Starter Pack</p>
               <p className="price-amount">$129</p>
               <p className="price-note">One-time offer. No subscription required.</p>
-              <Link to="/contact?service=visual-starter-pack" className="btn-primary">
+              <Link to="/contact/?service=visual-starter-pack" className="btn-primary">
                 Claim This Offer
               </Link>
             </div>
@@ -401,7 +401,7 @@ export default function StarterPack() {
               looks online. You need clear, professional visuals that make customers
               take you seriously.
             </p>
-            <Link to="/contact?service=visual-starter-pack" className="btn-primary mt-8 inline-block">
+            <Link to="/contact/?service=visual-starter-pack" className="btn-primary mt-8 inline-block">
               Get Started For $129
             </Link>
           </div>
@@ -454,7 +454,7 @@ export default function StarterPack() {
               Start with the $129 Visual Starter Pack and get clean, branded
               content your business can actually use.
             </p>
-            <Link to="/contact?service=visual-starter-pack" className="btn-primary mt-8 inline-block">
+            <Link to="/contact/?service=visual-starter-pack" className="btn-primary mt-8 inline-block">
               Get the $129 Visual Starter Pack
             </Link>
           </div>

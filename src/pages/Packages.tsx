@@ -200,7 +200,7 @@ export default function Packages() {
           <p className="hero-local">Port Orange • Daytona Beach • Volusia County • Central Florida</p>
 
           <div className="hero-ctas">
-            <Link to="/contact" className="hero-cta-primary">
+            <Link to="/contact/" className="hero-cta-primary">
               Start With a Free Website Review
             </Link>
             <button onClick={scrollToPackages} className="hero-cta-secondary">
@@ -286,7 +286,7 @@ export default function Packages() {
               <li><span className="ck" />First 90 Days foundation check-ins</li>
             </ul>
             <p className="tcx">Not for large multi-page sites, or advanced booking, portals, memberships, and complex functionality. Copy and imagery may require your input.</p>
-            <Link to="/contact" className="cc outline">
+            <Link to="/contact/" className="cc outline">
               Start With Starter
             </Link>
           </div>
@@ -314,7 +314,7 @@ export default function Packages() {
               <li><span className="ck" />First 90 Days visibility and quality review</li>
             </ul>
             <p className="tcx">Our default recommendation for most local businesses. Complex integrations, large content libraries, and custom systems require a custom quote.</p>
-            <Link to="/contact" className="cc primary">
+            <Link to="/contact/" className="cc primary">
               Build a Core Site
             </Link>
           </div>
@@ -341,7 +341,7 @@ export default function Packages() {
               <li><span className="ck" />First 90 Days conversion and quality review</li>
             </ul>
             <p className="tcx">Advanced functionality, ecommerce, portals, dashboards, paid ads, or complex automation require a custom quote.</p>
-            <Link to="/contact" className="cc outline">
+            <Link to="/contact/" className="cc outline">
               Build a Pro Site
             </Link>
           </div>
@@ -411,7 +411,7 @@ export default function Packages() {
                 fits — even if that means starting smaller.
               </p>
             </div>
-            <Link to="/contact" className="decision-guidance-cta">
+            <Link to="/contact/" className="decision-guidance-cta">
               Start With a Free Website Review
             </Link>
           </div>
@@ -555,7 +555,7 @@ export default function Packages() {
                 development, or emergency support unless separately quoted.
               </p>
 
-              <Link to="/contact" className="rct">
+              <Link to="/contact/" className="rct">
                 Ask About Website Care
               </Link>
             </div>
@@ -690,7 +690,7 @@ export default function Packages() {
                 Designed to improve trust, clarity, and first impressions
               </li>
             </ul>
-            <Link to="/contact" className="pct">
+            <Link to="/contact/" className="pct">
               Help Me Choose a Package
             </Link>
           </div>
@@ -765,7 +765,7 @@ export default function Packages() {
           </div>
 
           <div style={{ marginTop: 48 }}>
-            <Link to="/contact" className="bottom-cta-link">
+            <Link to="/contact/" className="bottom-cta-link">
               Start With a Free Website Review
             </Link>
           </div>

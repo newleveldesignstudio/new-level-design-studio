@@ -21,7 +21,7 @@ export default function WorkAurelineEstates() {
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
         <div className="container-nlds">
           <Link
-            to="/works"
+            to="/works/"
             className="font-sans"
             style={{
               fontSize: '0.75rem',
@@ -167,7 +167,7 @@ export default function WorkAurelineEstates() {
                 </div>
 
                 <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24 }}>
-                  <Link to="/contact" className="btn-primary" style={{ display: 'inline-block' }}>
+                  <Link to="/contact/" className="btn-primary" style={{ display: 'inline-block' }}>
                     Discuss Your Website
                   </Link>
                 </div>
@@ -301,7 +301,7 @@ export default function WorkAurelineEstates() {
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32 }}>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="font-sans"
                   style={{
                     fontSize: '0.8125rem',
@@ -327,7 +327,7 @@ export default function WorkAurelineEstates() {
         heading="Need a Website That Feels More Established?"
         body="New Level Design Studio builds premium websites for real estate groups, professional services, and local businesses across Volusia County and the Florida coast."
         buttonText="Discuss Your Website"
-        buttonTo="/contact"
+        buttonTo="/contact/"
       />
     </div>
   );

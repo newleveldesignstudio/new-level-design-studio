@@ -327,7 +327,7 @@ export default function LocalVisibilityCustomerDecisionPath() {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to="/local-visibility-insights">Local Visibility Insights</Link>
+                    <Link to="/local-visibility-insights/">Local Visibility Insights</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -872,7 +872,7 @@ export default function LocalVisibilityCustomerDecisionPath() {
 
               <div className="reveal-child">
                 <Link
-                  to="/local-visibility-insights/website-trust"
+                  to="/local-visibility-insights/website-trust/"
                   className="font-sans text-link"
                   style={{ fontSize: '0.9375rem' }}
                 >
@@ -963,7 +963,7 @@ export default function LocalVisibilityCustomerDecisionPath() {
             <div style={{ borderTop: '1px solid var(--silver-grey)', marginBottom: 36 }} />
 
             <div className="reveal-child">
-              <Link to="/free-seo-tools" className="btn-secondary">
+              <Link to="/free-seo-tools/" className="btn-secondary">
                 Use the Free SEO Tools
               </Link>
             </div>
@@ -1001,19 +1001,19 @@ export default function LocalVisibilityCustomerDecisionPath() {
                 label: 'Local Visibility Insight',
                 title: 'What Makes a Local Business Website Trustworthy?',
                 desc: 'The website details that help customers understand who you are, what you offer, and what to do next.',
-                href: '/local-visibility-insights/website-trust',
+                href: '/local-visibility-insights/website-trust/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'How Complete Is Your Google Business Profile?',
                 desc: 'The profile fields that help customers understand, trust, and contact a local business.',
-                href: '/local-visibility-insights/google-profile-completeness',
+                href: '/local-visibility-insights/google-profile-completeness/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'How Quickly Can Customers Find Your Contact Information?',
                 desc: 'How phone numbers, forms, tap-to-call links, and clear next steps affect whether customers complete the path to contact.',
-                href: '/local-visibility-insights/contact-information',
+                href: '/local-visibility-insights/contact-information/',
               },
             ].map((item) => (
               <Link
@@ -1075,7 +1075,7 @@ export default function LocalVisibilityCustomerDecisionPath() {
 
           <div style={{ marginTop: 28 }}>
             <Link
-              to="/local-visibility-insights"
+              to="/local-visibility-insights/"
               className="font-sans text-link"
               style={{ fontSize: '0.9375rem' }}
             >
@@ -1124,10 +1124,10 @@ export default function LocalVisibilityCustomerDecisionPath() {
             style={{ gap: 12, marginTop: 36 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact/" className="btn-primary">
               Request a Free Website Review
             </Link>
-            <Link to="/services" className="btn-secondary">
+            <Link to="/services/" className="btn-secondary">
               Explore Website Services
             </Link>
           </motion.div>

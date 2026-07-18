@@ -793,7 +793,7 @@ export default function FreeSeoTools() {
             >
               Start Your Website Check
             </a>
-            <Link to="/contact" className="btn-secondary">
+            <Link to="/contact/" className="btn-secondary">
               Request a Free Review
             </Link>
           </motion.div>
@@ -1411,7 +1411,7 @@ export default function FreeSeoTools() {
                 style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 32 }}
                 variants={shouldReduceMotion ? undefined : fadeUp}
               >
-                <Link to="/contact" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
+                <Link to="/contact/" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
                   Request My Free Website Review
                 </Link>
                 <p
@@ -1618,10 +1618,10 @@ export default function FreeSeoTools() {
             style={{ gap: 12, marginTop: 36 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact/" className="btn-primary">
               Request a Free Review
             </Link>
-            <Link to="/services" className="btn-secondary">
+            <Link to="/services/" className="btn-secondary">
               View Website Services
             </Link>
           </motion.div>

@@ -355,7 +355,7 @@ export default function LocalVisibilityContactInformation() {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to="/local-visibility-insights">Local Visibility Insights</Link>
+                    <Link to="/local-visibility-insights/">Local Visibility Insights</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -1031,7 +1031,7 @@ export default function LocalVisibilityContactInformation() {
 
               <div className="reveal-child">
                 <Link
-                  to="/local-visibility-insights/google-profile-completeness"
+                  to="/local-visibility-insights/google-profile-completeness/"
                   className="font-sans text-link"
                   style={{ fontSize: '0.9375rem' }}
                 >
@@ -1122,7 +1122,7 @@ export default function LocalVisibilityContactInformation() {
             <div style={{ borderTop: '1px solid var(--silver-grey)', marginBottom: 36 }} />
 
             <div className="reveal-child">
-              <Link to="/free-seo-tools" className="btn-secondary">
+              <Link to="/free-seo-tools/" className="btn-secondary">
                 Use the Free SEO Tools
               </Link>
             </div>
@@ -1160,19 +1160,19 @@ export default function LocalVisibilityContactInformation() {
                 label: 'Local Visibility Insight',
                 title: 'How Complete Is Your Google Business Profile?',
                 desc: 'The profile fields that help customers understand, trust, and contact a local business.',
-                href: '/local-visibility-insights/google-profile-completeness',
+                href: '/local-visibility-insights/google-profile-completeness/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'Where Do Local Customers Decide Which Business to Contact?',
                 desc: 'The decision points between search results and first contact — and what businesses can do to improve them.',
-                href: '/local-visibility-insights/customer-decision-path',
+                href: '/local-visibility-insights/customer-decision-path/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'Is Your Website Ready for Mobile Customers?',
                 desc: 'What local businesses should check for mobile usability, including speed, navigation, tap-to-call, forms, and contact flow.',
-                href: '/local-visibility-insights/mobile-readiness',
+                href: '/local-visibility-insights/mobile-readiness/',
               },
             ].map((item) => (
               <Link
@@ -1234,7 +1234,7 @@ export default function LocalVisibilityContactInformation() {
 
           <div style={{ marginTop: 28 }}>
             <Link
-              to="/local-visibility-insights"
+              to="/local-visibility-insights/"
               className="font-sans text-link"
               style={{ fontSize: '0.9375rem' }}
             >
@@ -1283,10 +1283,10 @@ export default function LocalVisibilityContactInformation() {
             style={{ gap: 12, marginTop: 36 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact/" className="btn-primary">
               Request a Free Website Review
             </Link>
-            <Link to="/services" className="btn-secondary">
+            <Link to="/services/" className="btn-secondary">
               Explore Website Services
             </Link>
           </motion.div>

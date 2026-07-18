@@ -20,7 +20,7 @@ export default function WorkBlendHouseSmoothieBar() {
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
         <div className="container-nlds">
           <Link
-            to="/works"
+            to="/works/"
             className="font-sans"
             style={{
               fontSize: '0.75rem',
@@ -67,10 +67,10 @@ export default function WorkBlendHouseSmoothieBar() {
             <ConceptDisclosure />
 
             <div className="flex flex-wrap items-center gap-4 mt-8">
-              <Link to="/contact" className="btn-primary">
+              <Link to="/contact/" className="btn-primary">
                 Discuss Your Website
               </Link>
-              <Link to="/works" className="btn-secondary">
+              <Link to="/works/" className="btn-secondary">
                 View All Work
               </Link>
             </div>
@@ -204,7 +204,7 @@ export default function WorkBlendHouseSmoothieBar() {
 
                 <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 24 }}>
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="btn-primary"
                     style={{ display: 'inline-block' }}
                   >
@@ -340,7 +340,7 @@ export default function WorkBlendHouseSmoothieBar() {
 
               <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: 32 }}>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="font-sans"
                   style={{
                     fontSize: '0.8125rem',
@@ -366,7 +366,7 @@ export default function WorkBlendHouseSmoothieBar() {
         heading="Own a Food or Wellness Business?"
         body="New Level Design Studio builds mobile-first websites for local restaurants, cafés, smoothie bars, and wellness businesses across Volusia County. Let us show what your business can look like online."
         buttonText="Discuss Your Website"
-        buttonTo="/contact"
+        buttonTo="/contact/"
       />
     </div>
   );

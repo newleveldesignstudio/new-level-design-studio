@@ -34,7 +34,7 @@ export default function RelatedProjects({ currentSlug }: Props) {
           {related.map((project) => (
             <Link
               key={project.slug}
-              to={`/works/${project.slug}`}
+              to={`/works/${project.slug}/`}
               style={{ textDecoration: 'none', display: 'block', height: '100%' }}
             >
               <article

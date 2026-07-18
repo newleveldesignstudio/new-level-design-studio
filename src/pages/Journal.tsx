@@ -95,7 +95,7 @@ function ArticleCard({ article }: { article: Article }) {
             {article.excerpt}
           </p>
           <Link
-            to={`/journal/${article.slug}`}
+            to={`/journal/${article.slug}/`}
             className="font-sans"
             style={{
               display: 'inline-block',
@@ -264,7 +264,7 @@ export default function Journal() {
 
           {/* Back to studio */}
           <div className="mt-16 text-center">
-            <Link to="/studio" className="btn-secondary">
+            <Link to="/studio/" className="btn-secondary">
               Back to The Studio
             </Link>
           </div>

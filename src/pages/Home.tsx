@@ -24,7 +24,7 @@ const projects = [
     category: 'Roofing Contractor — Concept Build',
     title: 'DH Luxury Roofing',
     description: 'Most roofing sites look dated and aggressive. This concept shows the alternative — video-led hero, inspection CTA, and mobile-first lead capture.',
-    link: { text: 'View Concept', to: '/works/dh-luxury-roofing' },
+    link: { text: 'View Concept', to: '/works/dh-luxury-roofing/' },
   },
   {
     image: '/nlds/images/volusia-legal-group-law-firm-website-concept-nlds-w768.webp',
@@ -32,7 +32,7 @@ const projects = [
     category: 'Law Firm — Concept Build',
     title: 'Volusia Legal Group',
     description: 'A professional-services concept built around clear practice-area messaging, trust signals, and an easy consultation request path for local clients.',
-    link: { text: 'View Concept', to: '/works/volusia-legal-group' },
+    link: { text: 'View Concept', to: '/works/volusia-legal-group/' },
   },
   {
     image: '/nlds/images/love-handles-bbq-catering-website-demo-ormond-beach-w768.webp',
@@ -40,7 +40,7 @@ const projects = [
     category: 'BBQ Catering & Food Truck — Concept Build',
     title: 'Love Handles BBQ',
     description: 'Booking was buried and mobile flow was weak. Rebuilt around catering inquiries, a food truck events page, and direct contact paths.',
-    link: { text: 'View Concept', to: '/works/love-handles-bbq' },
+    link: { text: 'View Concept', to: '/works/love-handles-bbq/' },
   },
 ];
 
@@ -201,10 +201,10 @@ export default function Home() {
             <p className="st-cta-kicker" aria-hidden="true">Port Orange, Florida</p>
             <p className="st-cta-headline" aria-hidden="true">Websites built to earn trust before the first call.</p>
             <div className="st-cta-row">
-              <Link to="/contact" className="btn-primary st-cta-btn">
+              <Link to="/contact/" className="btn-primary st-cta-btn">
                 Start a Website Project
               </Link>
-              <Link to="/works" className="btn-secondary st-cta-btn">
+              <Link to="/works/" className="btn-secondary st-cta-btn">
                 View the Work
               </Link>
             </div>
@@ -257,10 +257,10 @@ export default function Home() {
             className="hero-cta-buttons flex flex-col sm:flex-row items-start sm:items-center md:hidden"
             style={{ gap: 16, marginTop: 40 }}
           >
-            <Link to="/contact" className="btn-primary w-full sm:w-auto">
+            <Link to="/contact/" className="btn-primary w-full sm:w-auto">
               Start a Website Project
             </Link>
-            <Link to="/packages" className="btn-secondary w-full sm:w-auto">
+            <Link to="/packages/" className="btn-secondary w-full sm:w-auto">
               View Packages
             </Link>
           </div>
@@ -270,7 +270,7 @@ export default function Home() {
           >
             Or start with a{' '}
             <Link
-              to="/contact?service=free-website-review"
+              to="/contact/?service=free-website-review"
               style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}
             >
               free website review
@@ -324,7 +324,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col items-start lg:items-end" style={{ gap: 10 }}>
-              <Link to="/free-seo-tools" className="btn-primary">
+              <Link to="/free-seo-tools/" className="btn-primary">
                 Check Your Website
               </Link>
               <p
@@ -757,7 +757,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link to="/contact?service=free-website-review" className="btn-primary mt-10 inline-block">
+          <Link to="/contact/?service=free-website-review" className="btn-primary mt-10 inline-block">
             Get a Free Website Review
           </Link>
         </div>
@@ -795,7 +795,7 @@ export default function Home() {
                 icon={<MonitorIcon />}
                 title="Website Design"
                 description="Custom-coded sites structured for your services, local area, and how customers search — built to turn visitors into direct inquiries."
-                link={{ text: 'See Services', to: '/services' }}
+                link={{ text: 'See Services', to: '/services/' }}
               />
             </div>
             <div className="service-card">
@@ -803,7 +803,7 @@ export default function Home() {
                 icon={<SupportIcon />}
                 title="Website Care"
                 description="Monthly updates, checks, and small fixes so the site stays credible after launch."
-                link={{ text: 'See Services', to: '/services' }}
+                link={{ text: 'See Services', to: '/services/' }}
               />
             </div>
             <div className="service-card">
@@ -811,7 +811,7 @@ export default function Home() {
                 icon={<FramesIcon />}
                 title="Brand Direction"
                 description="Visual identity, graphics, and web imagery that keep the business looking consistent and credible across platforms."
-                link={{ text: 'See Services', to: '/services' }}
+                link={{ text: 'See Services', to: '/services/' }}
               />
             </div>
             <div className="service-card">
@@ -819,7 +819,7 @@ export default function Home() {
                 icon={<PageIcon />}
                 title="Website Copy & Visual Support"
                 description="Branded graphics, launch assets, and supporting content that keep the website and the rest of the business looking consistent."
-                link={{ text: 'See Services', to: '/services' }}
+                link={{ text: 'See Services', to: '/services/' }}
               />
             </div>
           </div>
@@ -864,7 +864,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="btn-primary mt-8 inline-block self-start">
+              <Link to="/contact/" className="btn-primary mt-8 inline-block self-start">
                 Start a Website Project
               </Link>
             </div>
@@ -922,7 +922,7 @@ export default function Home() {
                   your business look credible, clear, and ready for the customers already
                   searching for you.
                 </p>
-                <Link to="/michael-vail" className="btn-primary mt-8 inline-block">
+                <Link to="/michael-vail/" className="btn-primary mt-8 inline-block">
                   Meet Michael
                 </Link>
               </div>
@@ -1083,7 +1083,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link to="/packages" className="btn-primary">View All Packages</Link>
+            <Link to="/packages/" className="btn-primary">View All Packages</Link>
             <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)' }}>
               Every build includes launch support and First 90 Days check-ins.
             </p>
@@ -1112,7 +1112,7 @@ export default function Home() {
               From contractors and restaurants to beauty studios and real estate — we help local businesses across Volusia County build websites that earn trust before the first call.
             </p>
             <Link
-              to="/contact"
+              to="/contact/"
               className="btn-primary mt-10 inline-block self-start"
             >
               Start a Website Project
@@ -1213,7 +1213,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link to="/works" className="btn-primary">View All Work</Link>
+            <Link to="/works/" className="btn-primary">View All Work</Link>
             <p
               className="font-sans"
               style={{ fontSize: '0.8125rem', color: 'var(--muted-text)' }}
@@ -1334,7 +1334,7 @@ export default function Home() {
               >
                 After your website goes live, it still needs small updates, checks, refinements, and support to stay sharp. Our Website Care plan helps local businesses keep their site maintained without needing a full redesign every time something changes.
               </p>
-              <Link to="/contact" className="btn-primary mt-8 inline-block">
+              <Link to="/contact/" className="btn-primary mt-8 inline-block">
                 Ask About Website Care
               </Link>
             </div>
@@ -1422,7 +1422,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end">
-                <Link to="/contact?service=free-website-review" className="btn-primary">
+                <Link to="/contact/?service=free-website-review" className="btn-primary">
                   Get a Free Website Review
                 </Link>
                 <p

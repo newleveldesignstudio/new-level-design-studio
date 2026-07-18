@@ -53,7 +53,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
       >
         {hasSlug ? (
           <Link
-            to={`/works/${project.slug}`}
+            to={`/works/${project.slug}/`}
             className="transition-transform duration-500 group-hover:scale-[1.02] focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
             style={{ ...imageStyle, textDecoration: 'none' }}
             aria-label={`View case study for ${project.title}`}
@@ -253,7 +253,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
 
           {project.slug && (
             <Link
-              to={`/works/${project.slug}`}
+              to={`/works/${project.slug}/`}
               className="font-sans"
               style={{
                 fontSize: '0.75rem',

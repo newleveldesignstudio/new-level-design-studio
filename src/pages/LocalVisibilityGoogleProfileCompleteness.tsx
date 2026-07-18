@@ -352,7 +352,7 @@ export default function LocalVisibilityGoogleProfileCompleteness() {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to="/local-visibility-insights">Local Visibility Insights</Link>
+                    <Link to="/local-visibility-insights/">Local Visibility Insights</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -874,7 +874,7 @@ export default function LocalVisibilityGoogleProfileCompleteness() {
 
               <div className="reveal-child">
                 <Link
-                  to="/local-visibility-insights/customer-decision-path"
+                  to="/local-visibility-insights/customer-decision-path/"
                   className="font-sans text-link"
                   style={{ fontSize: '0.9375rem' }}
                 >
@@ -1046,7 +1046,7 @@ export default function LocalVisibilityGoogleProfileCompleteness() {
               >
                 Manage Your Google Business Profile
               </a>
-              <Link to="/free-seo-tools" className="btn-secondary">
+              <Link to="/free-seo-tools/" className="btn-secondary">
                 Explore Free SEO Tools
               </Link>
             </div>
@@ -1084,19 +1084,19 @@ export default function LocalVisibilityGoogleProfileCompleteness() {
                 label: 'Local Visibility Insight',
                 title: 'Where Do Local Customers Decide Which Business to Contact?',
                 desc: 'The decision points between discovery and first contact — and what businesses can do to improve them.',
-                href: '/local-visibility-insights/customer-decision-path',
+                href: '/local-visibility-insights/customer-decision-path/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'What Makes a Local Business Website Trustworthy?',
                 desc: 'The website details that help customers understand who you are, what you offer, and what to do next.',
-                href: '/local-visibility-insights/website-trust',
+                href: '/local-visibility-insights/website-trust/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'How Recent Are Your Business Reviews?',
                 desc: 'Why review recency, honest feedback, and professional responses influence how local customers evaluate a business.',
-                href: '/local-visibility-insights/review-recency',
+                href: '/local-visibility-insights/review-recency/',
               },
             ].map((item) => (
               <Link
@@ -1158,7 +1158,7 @@ export default function LocalVisibilityGoogleProfileCompleteness() {
 
           <div style={{ marginTop: 28 }}>
             <Link
-              to="/local-visibility-insights"
+              to="/local-visibility-insights/"
               className="font-sans text-link"
               style={{ fontSize: '0.9375rem' }}
             >
@@ -1207,10 +1207,10 @@ export default function LocalVisibilityGoogleProfileCompleteness() {
             style={{ gap: 12, marginTop: 36 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact/" className="btn-primary">
               Request a Free Website Review
             </Link>
-            <Link to="/services" className="btn-secondary">
+            <Link to="/services/" className="btn-secondary">
               Explore Website Services
             </Link>
           </motion.div>

@@ -257,7 +257,7 @@ export default function LocalVisibilityWebsiteTrust() {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to="/local-visibility-insights">Local Visibility Insights</Link>
+                    <Link to="/local-visibility-insights/">Local Visibility Insights</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -1027,7 +1027,7 @@ export default function LocalVisibilityWebsiteTrust() {
             <div style={{ borderTop: '1px solid var(--silver-grey)', marginBottom: 36 }} />
 
             <div className="reveal-child">
-              <Link to="/free-seo-tools" className="btn-secondary">
+              <Link to="/free-seo-tools/" className="btn-secondary">
                 Check Your Website with Free Tools
               </Link>
             </div>
@@ -1065,19 +1065,19 @@ export default function LocalVisibilityWebsiteTrust() {
                 label: 'Local Visibility Insight',
                 title: 'Where Do Local Customers Decide Which Business to Contact?',
                 desc: 'The decision points between search results and first contact — and what businesses can do to improve them.',
-                href: '/local-visibility-insights/customer-decision-path',
+                href: '/local-visibility-insights/customer-decision-path/',
               },
               {
                 label: 'Local Visibility Insight',
                 title: 'Is Your Website Ready for Mobile Customers?',
                 desc: 'What local businesses should check for mobile usability, including speed, navigation, tap-to-call, and contact flow.',
-                href: '/local-visibility-insights/mobile-readiness',
+                href: '/local-visibility-insights/mobile-readiness/',
               },
               {
                 label: 'Free SEO Tools',
                 title: 'Check the Technical Side',
                 desc: 'Test your website speed, indexing, structured data, and local visibility with free tools.',
-                href: '/free-seo-tools',
+                href: '/free-seo-tools/',
               },
             ].map((item) => (
               <Link
@@ -1139,7 +1139,7 @@ export default function LocalVisibilityWebsiteTrust() {
 
           <div style={{ marginTop: 28 }}>
             <Link
-              to="/local-visibility-insights"
+              to="/local-visibility-insights/"
               className="font-sans text-link"
               style={{ fontSize: '0.9375rem' }}
             >
@@ -1195,10 +1195,10 @@ export default function LocalVisibilityWebsiteTrust() {
             style={{ gap: 12, marginTop: 36 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact/" className="btn-primary">
               Request a Free Website Review
             </Link>
-            <Link to="/services" className="btn-secondary">
+            <Link to="/services/" className="btn-secondary">
               Explore Website Services
             </Link>
           </motion.div>

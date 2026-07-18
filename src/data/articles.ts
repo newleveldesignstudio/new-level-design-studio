@@ -76,13 +76,13 @@ A full website visual upgrade doesn't require a redesign or a rebrand. In most c
 
 That means a compelling hero image that represents your service or business in its best light, service section images that are visually consistent and professionally styled, lifestyle imagery that speaks to the experience of working with you or visiting your business, and supporting imagery throughout the site that maintains quality and brand consistency.
 
-A stronger visual impression matters most when it's connected to the website itself. The goal isn't just better images — it's a clearer, more credible website that helps customers understand the business and feel comfortable reaching out. New Level Design Studio builds those websites directly — Starter, Core, and Pro Website packages, each built around a stronger first impression and a clearer path to contact. You can see this approach applied to real local-business industries in our [selected work](/works). The result is a website that looks like a business worth contacting — not one that looks like it was built in a weekend and forgotten.
+A stronger visual impression matters most when it's connected to the website itself. The goal isn't just better images — it's a clearer, more credible website that helps customers understand the business and feel comfortable reaching out. New Level Design Studio builds those websites directly — Starter, Core, and Pro Website packages, each built around a stronger first impression and a clearer path to contact. You can see this approach applied to real local-business industries in our [selected work](/works/). The result is a website that looks like a business worth contacting — not one that looks like it was built in a weekend and forgotten.
 
 For businesses in Port Orange, Daytona Beach, and across Volusia County and Central Florida, a website that converts better is one of the highest-return marketing investments available. The potential customer who lands on your site and calls you instead of going back to Google is revenue that was already on its way to you — it just needed your website to close the deal.
 
 ### Ready to See How Your Website Performs?
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at your site the way a new customer would and tell you exactly what's working and what isn't. See our [website packages](/packages) or [request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at your site the way a new customer would and tell you exactly what's working and what isn't. See our [website packages](/packages/) or [request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -141,7 +141,7 @@ Every package is delivered with no shoot fees, no equipment costs, and no multi-
 
 New Level Design Studio has worked with home service businesses and contractors across Port Orange, Daytona Beach, and Volusia County. If you're ready to build a marketing presence that matches the quality of your work, reach out and we'll show you exactly what's possible for your trade.
 
-[Start a Project →](/contact)
+[Start a Project →](/contact/)
     `.trim(),
   },
   {
@@ -224,7 +224,7 @@ New Level Design Studio is based in Port Orange, Florida, serving businesses nat
 
 You don't need a big budget to have strong, brand-consistent visuals. If you're a local business owner tired of blurry photos and expensive shoots, we'd love to show you what's possible.
 
-[Contact us for a free quote →](/contact)
+[Contact us for a free quote →](/contact/)
     `.trim(),
   },
   {
@@ -287,7 +287,7 @@ The images are delivered ready to use — formatted for social media, ads, your 
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -358,7 +358,7 @@ Better visuals don't replace great work, fair pricing, or strong reviews. But th
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -429,7 +429,7 @@ Not every business uses video the same way. Understanding where video delivers t
 
 ### Ready to See What Video Can Do for Your Business?
 
-New Level Design Studio produces professional visual content for local businesses across a wide range of industries. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio produces professional visual content for local businesses across a wide range of industries. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -505,7 +505,7 @@ The combination matters more than any single element. Studios that have tested a
 
 ### Ready to Use Professional Video for Your Business?
 
-New Level Design Studio uses a refined production pipeline to deliver commercial-quality video for businesses across a wide range of local business categories. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio uses a refined production pipeline to deliver commercial-quality video for businesses across a wide range of local business categories. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -572,7 +572,7 @@ The Visual Starter Pack ($129) is available for focused campaigns and website im
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -658,7 +658,7 @@ New Level Design Studio works with local businesses across a wide range of categ
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -719,7 +719,7 @@ Book a free content strategy call with New Level Design Studio. We'll talk throu
 
 No obligation. Just a 20-minute conversation about what's possible for your restaurant.
 
-[Book Your Free Content Strategy Call →](/contact)
+[Book Your Free Content Strategy Call →](/contact/)
     `.trim(),
   },
   {
@@ -782,7 +782,7 @@ The window where this kind of upgrade represents a genuine competitive edge is o
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -852,7 +852,7 @@ New Level Design Studio is based in Port Orange, Florida. We serve businesses na
 
 ### Ready to Get Started?
 
-The Visual Starter Pack ($129) is the right starting point for businesses that need professional imagery for a website, campaign, or Google Business Profile. Short-form video and custom visual projects are scoped individually. [Start a Project](/contact)
+The Visual Starter Pack ($129) is the right starting point for businesses that need professional imagery for a website, campaign, or Google Business Profile. Short-form video and custom visual projects are scoped individually. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -917,7 +917,7 @@ For Florida restaurants competing in the tourism market and the local dining mar
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -990,7 +990,7 @@ The cost is a fraction of a single traditional production day.
 
 ### Ready to Move Inventory Faster?
 
-New Level Design Studio produces video campaigns for dealerships that want per-vehicle advertising without per-vehicle production costs. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio produces video campaigns for dealerships that want per-vehicle advertising without per-vehicle production costs. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -1053,7 +1053,7 @@ From there, the creative team handles the direction, production, and delivery. Y
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -1112,7 +1112,7 @@ The common thread is that professional video content gives local businesses the 
 
 ### Frequently Asked Questions
 
-**Can small businesses really afford professional video content?** Yes. Video pricing puts professional content within reach of most local businesses. See current pricing on the [New Level Design Studio Packages page](/packages).
+**Can small businesses really afford professional video content?** Yes. Video pricing puts professional content within reach of most local businesses. See current pricing on the [New Level Design Studio Packages page](/packages/).
 
 **How many videos does a local business actually need?** Most local businesses see strong results from 8–12 pieces of video content per quarter, rotating across social, ads, and website use.
 
@@ -1124,7 +1124,7 @@ The common thread is that professional video content gives local businesses the 
 
 ### Ready to Make Your Business More Visible?
 
-New Level Design Studio builds visual content systems for local businesses that need to show up more often, in more places, with consistent quality. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio builds visual content systems for local businesses that need to show up more often, in more places, with consistent quality. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -1183,7 +1183,7 @@ Compare that to a full creative retainer with a designer and photographer — ty
 
 New Level Design Studio works with real estate agents and brokerages across Port Orange, Daytona Beach, Ormond Beach, and New Smyrna Beach. If you're ready to show up online with the professional standard your clients expect, book a free content strategy call and we'll walk you through exactly what's possible.
 
-[Book Your Free Content Strategy Call →](/contact)
+[Book Your Free Content Strategy Call →](/contact/)
     `.trim(),
   },
   {
@@ -1258,7 +1258,7 @@ The difference between amateur and professional output is as wide as the differe
 
 ### Ready to See Which Approach Fits Your Business?
 
-New Level Design Studio specializes in video production for businesses that need professional content at a sustainable cost. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio specializes in video production for businesses that need professional content at a sustainable cost. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -1271,7 +1271,7 @@ New Level Design Studio specializes in video production for businesses that need
     author: 'Michael Vail',
     excerpt: 'Video content pricing is driven by scene count, complexity, and consistency requirements — not crew, equipment, or location. Here\'s how to budget realistically.',
     body: `
-Video content costs a fraction of traditional video production, with pricing driven by scene count, complexity, and consistency requirements rather than crew, equipment, or location. Most professional video work falls into three buckets: short-form ads, multi-scene campaigns, and ongoing monthly content production. This guide explains what actually drives cost so businesses can budget realistically — for exact pricing, see the [New Level Design Studio Packages page](/packages).
+Video content costs a fraction of traditional video production, with pricing driven by scene count, complexity, and consistency requirements rather than crew, equipment, or location. Most professional video work falls into three buckets: short-form ads, multi-scene campaigns, and ongoing monthly content production. This guide explains what actually drives cost so businesses can budget realistically — for exact pricing, see the [New Level Design Studio Packages page](/packages/).
 
 ### What Drives Video Pricing
 
@@ -1314,7 +1314,7 @@ The cheapest providers typically deliver template-quality work that doesn't diff
 
 ### What New Level Design Studio Charges
 
-New Level Design Studio publishes pricing openly on the [Packages page](/packages). Packages cover Starter, Core, and Pro Website builds and Website Care plans, with support like Brand Direction, Local SEO Structure, and Website Copy & Visual Support scoped individually.
+New Level Design Studio publishes pricing openly on the [Packages page](/packages/). Packages cover Starter, Core, and Pro Website builds and Website Care plans, with support like Brand Direction, Local SEO Structure, and Website Copy & Visual Support scoped individually.
 
 Every package shows exactly what's included, no hidden fees, no quote-only pricing.
 
@@ -1326,13 +1326,13 @@ Every package shows exactly what's included, no hidden fees, no quote-only prici
 
 **Can I get video produced affordably?** Yes, especially for short single-scene work from professional studios. Multi-scene campaigns require larger budgets to produce well.
 
-**What should I budget for an ongoing video program?** Most local businesses budget for ongoing monthly video content scaled to how aggressively they're marketing. See the [Packages page](/packages) for current retainer options.
+**What should I budget for an ongoing video program?** Most local businesses budget for ongoing monthly video content scaled to how aggressively they're marketing. See the [Packages page](/packages/) for current retainer options.
 
 **Do studios negotiate on price?** Reputable studios with published pricing typically don't negotiate base rates but may bundle services or extend retainer terms.
 
 ### Ready for Transparent Video Pricing?
 
-New Level Design Studio publishes pricing openly because clients deserve to know what things cost upfront. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio publishes pricing openly because clients deserve to know what things cost upfront. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -1379,7 +1379,7 @@ Three structural decisions made the 30-day timeline possible.
 
 ### What This Approach Costs Compared to Traditional
 
-The Lumen concept demonstrates the scope possible through modern production. Equivalent traditional production for a real practice typically runs significantly higher in both cost and timeline through conventional agency channels. Modern production delivers comparable scope at a fraction of the cost — see the [Packages page](/packages) for current pricing on med spa brand builds.
+The Lumen concept demonstrates the scope possible through modern production. Equivalent traditional production for a real practice typically runs significantly higher in both cost and timeline through conventional agency channels. Modern production delivers comparable scope at a fraction of the cost — see the [Packages page](/packages/) for current pricing on med spa brand builds.
 
 The cost difference is what makes this approach realistic for independent and growing med spas — not just enterprise practice groups.
 
@@ -1399,7 +1399,7 @@ The practices that move first build a visual advantage their competitors can't e
 
 **Is Lumen Aesthetics a real practice?** No. Lumen Aesthetics is a concept project built by New Level Design Studio to demonstrate the scope and quality of a 30-day professional visual brand build. It is not a real medical practice and does not offer services to the public.
 
-**Can a smaller med spa do this at a lower budget?** Yes. Smaller-scope sprints covering 2–3 service lines and 15–20 assets are available. See the [Packages page](/packages) for current options.
+**Can a smaller med spa do this at a lower budget?** Yes. Smaller-scope sprints covering 2–3 service lines and 15–20 assets are available. See the [Packages page](/packages/) for current options.
 
 **How long does video content last as marketing material?** Properly produced video content typically delivers marketing value for 6–18 months before refresh.
 
@@ -1411,7 +1411,7 @@ The practices that move first build a visual advantage their competitors can't e
 
 ### Ready to Build Your Visual Brand?
 
-New Level Design Studio produces video and image campaigns for med spas and aesthetic practices that need professional visual content at sustainable cost. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio produces video and image campaigns for med spas and aesthetic practices that need professional visual content at sustainable cost. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -1470,7 +1470,7 @@ New Level Design Studio works with wellness businesses across Florida and nation
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -1535,7 +1535,7 @@ Professional marketing imagery is one of those tools. It levels the playing fiel
 
 ### Ready to Get Started?
 
-New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact)
+New Level Design Studio produces visual starter packs and custom visual work for local businesses. Custom visual work is quoted based on the project scope and the assets required. [Start a Project](/contact/)
     `.trim(),
   },
   {
@@ -1614,7 +1614,7 @@ Any business that fits these three patterns — and most local service businesse
 
 ### Ready to See What Professional Video Can Do for Your Industry?
 
-New Level Design Studio has produced video campaigns across a wide range of local business verticals. [See our packages →](/packages) or [get a free consultation →](/contact).
+New Level Design Studio has produced video campaigns across a wide range of local business verticals. [See our packages →](/packages/) or [get a free consultation →](/contact/).
     `.trim(),
   },
   {
@@ -1736,7 +1736,7 @@ Before worrying about advanced SEO tactics, most small businesses should focus o
 
 These pieces are not flashy, but they matter. They help customers understand the business quickly, and they help search engines understand where the business fits.
 
-For many small businesses, the biggest SEO opportunity is not complicated. It is simply building a better [website](/services) around the way customers already search.
+For many small businesses, the biggest SEO opportunity is not complicated. It is simply building a better [website](/services/) around the way customers already search.
 
 ### The Bottom Line
 
@@ -1752,7 +1752,7 @@ The goal is to look more credible when customers find you, answer their question
 
 That is when SEO becomes worth it.
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County — a good first step before deciding whether SEO is the right next investment. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County — a good first step before deciding whether SEO is the right next investment. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -1840,11 +1840,11 @@ Every visitor who lands on your website and leaves without taking action is a lo
 
 That cost is real, and it compounds. Stronger visual clarity, structure, mobile usability, and professional presentation can improve the likelihood that visitors continue exploring your site and reach out — even when the underlying business and services are the same.
 
-The businesses in Port Orange, Daytona Beach, and Volusia County that understand this are investing in websites built to earn trust before the first call. That investment pays off in the form of more inquiries, better-quality leads, and customers who already feel good about the business before they pick up the phone. You can see this approach applied to real local-business industries in our [selected work](/works).
+The businesses in Port Orange, Daytona Beach, and Volusia County that understand this are investing in websites built to earn trust before the first call. That investment pays off in the form of more inquiries, better-quality leads, and customers who already feel good about the business before they pick up the phone. You can see this approach applied to real local-business industries in our [selected work](/works/).
 
 ### Ready to See How Your Website Performs?
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and across Volusia County. We'll tell you what your site is communicating in the first five seconds — and what it would take to strengthen it. If you're ready to move forward, our [website packages](/packages) show exactly what's included. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and across Volusia County. We'll tell you what your site is communicating in the first five seconds — and what it would take to strengthen it. If you're ready to move forward, our [website packages](/packages/) show exactly what's included. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -1886,7 +1886,7 @@ There's too much competing for attention. Websites that cram the homepage with e
 
 The fix for a weak 5-second test result usually isn't adding more information. It's clarifying and prioritizing what's already there.
 
-**Start with the headline.** Your homepage headline should do one job: tell a potential customer what your business does and who it's for, in language they'd actually use. "[Port Orange Website Design](/port-orange-website-design) for Local Businesses" is clearer than "Helping You Succeed Online." "Daytona Beach Family Dentistry — Same-Day Appointments Available" is clearer than "Your Smile Is Our Priority."
+**Start with the headline.** Your homepage headline should do one job: tell a potential customer what your business does and who it's for, in language they'd actually use. "[Port Orange Website Design](/port-orange-website-design/) for Local Businesses" is clearer than "Helping You Succeed Online." "Daytona Beach Family Dentistry — Same-Day Appointments Available" is clearer than "Your Smile Is Our Priority."
 
 Specific beats vague. Location beats generic. Clear beats clever.
 
@@ -1916,7 +1916,7 @@ The businesses in Port Orange, Daytona Beach, and across Volusia County that are
 
 ### Get a Free Website Review
 
-New Level Design Studio offers a free website review for local businesses in the Port Orange and Daytona Beach area. We'll run the 5-second test, look at your conversion structure, and tell you exactly what's working and what isn't. No commitment required. See our [website packages](/packages) or [request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in the Port Orange and Daytona Beach area. We'll run the 5-second test, look at your conversion structure, and tell you exactly what's working and what isn't. No commitment required. See our [website packages](/packages/) or [request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -1952,7 +1952,7 @@ If you're getting consistent search traffic but very few contact form submission
 
 Visibility and conversion are two separate problems. SEO helps people find you. Your website is supposed to turn those visitors into leads. When traffic is decent but inquiries are low, the website is the weak link.
 
-The most common culprits here are a contact form that's too long or hard to find, a CTA (call to action) that's buried below the fold or unclear, no clear signal about what the visitor gets by contacting you ("fill out this form" is less compelling than "request a free estimate"), and a general lack of trust signals — no [examples of real work](/works), no reviews visible on the page, no sense of who is behind the business.
+The most common culprits here are a contact form that's too long or hard to find, a CTA (call to action) that's buried below the fold or unclear, no clear signal about what the visitor gets by contacting you ("fill out this form" is less compelling than "request a free estimate"), and a general lack of trust signals — no [examples of real work](/works/), no reviews visible on the page, no sense of who is behind the business.
 
 If you're showing up in searches but not getting calls, your website isn't closing the deal.
 
@@ -1984,7 +1984,7 @@ This sounds harsh, but it reflects how first impressions actually work. Visitors
 
 Signs a website looks out of date include overly small text, narrow layouts that don't fill a modern wide screen, generic stock photos, an overall design aesthetic that was common several years ago, outdated copyright dates in the footer, and content about services or products that no longer reflect the current business.
 
-Updating the visual design of a website doesn't have to mean a complete rebuild. Sometimes it means better images, cleaner typography, and a layout that feels current — the kind of work covered under [website design and care services](/services). But it does require attention.
+Updating the visual design of a website doesn't have to mean a complete rebuild. Sometimes it means better images, cleaner typography, and a layout that feels current — the kind of work covered under [website design and care services](/services/). But it does require attention.
 
 ### What to Do Next
 
@@ -1994,7 +1994,7 @@ The good news is that these problems are all fixable. A structured website revie
 
 ### Get a Free Website Review
 
-New Level Design Studio offers free website reviews for local businesses in the Port Orange and Daytona Beach area. We'll look at your site through the lens of a new potential customer and give you specific, honest feedback — no obligation. [Request your free website review →](/contact)
+New Level Design Studio offers free website reviews for local businesses in the Port Orange and Daytona Beach area. We'll look at your site through the lens of a new potential customer and give you specific, honest feedback — no obligation. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2028,7 +2028,7 @@ A website first impression audit evaluates your site from the perspective of a n
 
 **Local SEO foundation.** A first impression audit isn't a full SEO audit, but it does check the basic signals that connect your website to local searches: whether the service area is clearly stated, whether page titles and descriptions match what potential customers are searching for, and whether the content gives Google the signals it needs to surface your site for relevant local queries.
 
-**Trust signals.** What on the website helps a potential customer believe this is a legitimate, established business? Reviews, [examples of real work](/works), a physical location or service area, specific credentials, and a clear explanation of the process all contribute. An audit identifies what's missing and what's present.
+**Trust signals.** What on the website helps a potential customer believe this is a legitimate, established business? Reviews, [examples of real work](/works/), a physical location or service area, specific credentials, and a clear explanation of the process all contribute. An audit identifies what's missing and what's present.
 
 ### What the Audit Process Looks Like
 
@@ -2040,7 +2040,7 @@ Then we go deeper: the service pages, the contact flow, the page titles, the con
 
 At the end, we share what we found: what's working, what's costing you leads, and what specific improvements would have the biggest impact. That feedback is specific to your business and your market — Port Orange, Daytona Beach, Volusia County — not a generic checklist that applies to every website category.
 
-The review is free. There's no sales pitch attached to it, and no obligation to work with us afterward. But if you want to move forward with improvements, our [website packages](/packages) show exactly what that would involve.
+The review is free. There's no sales pitch attached to it, and no obligation to work with us afterward. But if you want to move forward with improvements, our [website packages](/packages/) show exactly what that would involve.
 
 ### What Local Businesses Usually Find
 
@@ -2070,7 +2070,7 @@ If you've been wondering what your website is actually communicating to new visi
 
 ### Request Your Free Website Review
 
-No commitment, no sales pressure. We'll look at your site, tell you what we see, and let you decide what to do with it. [Request a free website review →](/contact)
+No commitment, no sales pressure. We'll look at your site, tell you what we see, and let you decide what to do with it. [Request a free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2084,7 +2084,7 @@ No commitment, no sales pressure. We'll look at your site, tell you what we see,
     excerpt: 'Local SEO for Port Orange businesses doesn\'t require advanced tactics. It requires a clear website, a complete Google Business Profile, and consistent signals that tell Google exactly what you do and where you do it.',
     metaDescription: 'Local SEO for Port Orange businesses — what actually matters, what you can do today, and how your website supports local search visibility.',
     body: `
-If you run a [local business in Port Orange](/port-orange-website-design) — whether you're a contractor, a restaurant, a salon, a service provider, or a professional practice — local SEO is one of the most practical marketing investments you can make.
+If you run a [local business in Port Orange](/port-orange-website-design/) — whether you're a contractor, a restaurant, a salon, a service provider, or a professional practice — local SEO is one of the most practical marketing investments you can make.
 
 That's not a pitch. It's the logical outcome of how people find local businesses. When someone in Port Orange searches "electrician near me" or "best pizza Daytona Beach" or "family dentist 32127," they're already deciding to buy. They just need to find the right business. Local SEO is what puts your business in front of that search.
 
@@ -2136,7 +2136,7 @@ You don't need dozens of reviews. You need a consistent flow of them. Five new r
 
 Consistency matters in local SEO. If your business name, address, and phone number are different across different directories — Google, Yelp, the local Chamber of Commerce website, your Facebook page, your Instagram bio — that inconsistency can work against you.
 
-Take twenty minutes and search for your business name. Check the major places where your information appears. Make sure the name, address, and phone number are exactly consistent everywhere. Our [free website and SEO tools](/free-seo-tools) can help you check indexing, structured data, and local search presence yourself. It's a small thing, but it's one of the basic signals Google uses to verify that a local business is legitimate and established.
+Take twenty minutes and search for your business name. Check the major places where your information appears. Make sure the name, address, and phone number are exactly consistent everywhere. Our [free website and SEO tools](/free-seo-tools/) can help you check indexing, structured data, and local search presence yourself. It's a small thing, but it's one of the basic signals Google uses to verify that a local business is legitimate and established.
 
 ### The Local SEO Foundation Starts With the Website
 
@@ -2148,7 +2148,7 @@ If your website does those things, you're already ahead of most of your local co
 
 ### Start With a Free Website Review
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at your website's local SEO foundation — titles, service area signals, conversion structure, and mobile experience — and tell you specifically what's working and what needs attention. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at your website's local SEO foundation — titles, service area signals, conversion structure, and mobile experience — and tell you specifically what's working and what needs attention. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2215,13 +2215,13 @@ If your Google Business Profile is solid but your website is lagging, a few fixe
 
 Make sure your website and Google profile actually match. Business name, phone number, hours, and service area should be identical in both places — inconsistency quietly undermines trust with both customers and Google.
 
-Build out real [service pages](/services) instead of one crowded homepage section. Each service deserves its own space to explain what's included and who it's for.
+Build out real [service pages](/services/) instead of one crowded homepage section. Each service deserves its own space to explain what's included and who it's for.
 
-Add trust signals your Google profile can only hint at: review highlights, real project photos, and a bit about who runs the business. If you're not sure where to start, our [free website and SEO tools](/free-seo-tools) can help you check what's currently working and what's missing.
+Add trust signals your Google profile can only hint at: review highlights, real project photos, and a bit about who runs the business. If you're not sure where to start, our [free website and SEO tools](/free-seo-tools/) can help you check what's currently working and what's missing.
 
 Make calling or requesting a quote effortless on mobile — most local searches happen on a phone, and every extra tap between "interested" and "contacted" costs you leads.
 
-If you're in [Port Orange](/port-orange-website-design), [Daytona Beach](/daytona-beach-website-design), or [Volusia County](/volusia-county-website-design), make sure your website actually says so — clearly, in real sentences, not just in a footer address.
+If you're in [Port Orange](/port-orange-website-design/), [Daytona Beach](/daytona-beach-website-design/), or [Volusia County](/volusia-county-website-design/), make sure your website actually says so — clearly, in real sentences, not just in a footer address.
 
 ### The Bottom Line
 
@@ -2229,7 +2229,7 @@ No, a Google Business Profile does not replace a website. It helps people find y
 
 If your Google profile is bringing attention but your website isn't converting that attention into calls or quote requests, that's worth a closer look.
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at how your website and Google Business Profile are working together — and where the gaps are. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at how your website and Google Business Profile are working together — and where the gaps are. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2271,7 +2271,7 @@ If your website is clean, fast, mobile-friendly, and organized around your servi
 
 The first month of SEO is usually about setup and correction.
 
-This is where the foundation gets cleaned up. That may include improving page titles, rewriting unclear copy, adding service keywords naturally, fixing broken links, improving mobile layout, optimizing images, setting up analytics, connecting Search Console, and making sure the website can be properly crawled. Our [free website and SEO tools](/free-seo-tools) can help you check several of these yourself.
+This is where the foundation gets cleaned up. That may include improving page titles, rewriting unclear copy, adding service keywords naturally, fixing broken links, improving mobile layout, optimizing images, setting up analytics, connecting Search Console, and making sure the website can be properly crawled. Our [free website and SEO tools](/free-seo-tools/) can help you check several of these yourself.
 
 For local businesses, this stage may also include reviewing the Google Business Profile, checking business information consistency, clarifying service areas, and identifying which pages need to exist.
 
@@ -2406,7 +2406,7 @@ A better website gives SEO something to work with. Clear service pages help cust
 
 SEO is not instant, but when it is built on the right foundation, it can become one of the most useful long-term marketing assets a small business has.
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at whether your site gives SEO the right foundation to work with. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We'll look at whether your site gives SEO the right foundation to work with. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2467,7 +2467,7 @@ The basics matter more than tricks:
 
 One thing worth checking today: call the number on your own profile. Business owners are sometimes surprised by an old number, a full voicemail box, or hours that no longer match reality. No SEO work can survive a phone number that does not answer.
 
-We covered what moves the needle locally in more depth in [Local SEO for Port Orange Businesses: What Actually Matters](/journal/local-seo-port-orange-businesses).
+We covered what moves the needle locally in more depth in [Local SEO for Port Orange Businesses: What Actually Matters](/journal/local-seo-port-orange-businesses/).
 
 ### The Website Is Where the Decision Happens
 
@@ -2486,7 +2486,7 @@ The pieces that help turn a visit into a call are not complicated:
 
 A slow, outdated, or vague website quietly undoes good local SEO. The customer does not tell you this. They just call the next business on the list.
 
-If you are not sure how your Google profile and website divide the work, [Does a Google Business Profile Replace a Website?](/journal/google-business-profile-vs-website) breaks that down.
+If you are not sure how your Google profile and website divide the work, [Does a Google Business Profile Replace a Website?](/journal/google-business-profile-vs-website/) breaks that down.
 
 ### Make Calling Easy
 
@@ -2508,11 +2508,11 @@ What you can do is stack the odds: accurate local signals, real reviews, service
 
 ### The Bottom Line
 
-Phone calls come from a chain: found, checked, trusted, contacted. Local SEO handles the first link. Your Google Business Profile and your [website](/services) handle the rest.
+Phone calls come from a chain: found, checked, trusted, contacted. Local SEO handles the first link. Your Google Business Profile and your [website](/services/) handle the rest.
 
 Work on the whole chain and the results reinforce each other. Work on rankings alone and you may win traffic that never calls.
 
-New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County — a straightforward look at whether your website is ready to turn local visibility into actual inquiries. [Request your free website review →](/contact)
+New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County — a straightforward look at whether your website is ready to turn local visibility into actual inquiries. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2550,7 +2550,7 @@ Local SEO is about showing up when someone nearby searches for a service you off
 
 The two are not enemies, and the foundation is shared. Both depend on a healthy, fast, mobile-friendly website. Both reward clear service pages, honest useful content, and titles and descriptions written for humans. Both get undermined by thin pages and vague copy.
 
-That shared foundation is why the website comes first either way. Local signals point people at your site; the site still has to hold up when they arrive. [Does a Google Business Profile Replace a Website?](/journal/google-business-profile-vs-website) covers why the profile alone is not enough.
+That shared foundation is why the website comes first either way. Local signals point people at your site; the site still has to hold up when they arrive. [Does a Google Business Profile Replace a Website?](/journal/google-business-profile-vs-website/) covers why the profile alone is not enough.
 
 ### Which One Does a Local Service Business Need?
 
@@ -2558,13 +2558,13 @@ If your customers are within driving distance — contractors, salons, restauran
 
 Regular SEO tactics still help you in a supporting role: useful articles answer the questions your customers ask, and well-structured pages rank for service searches in your area. But your budget and attention should follow your customer, and your customer is local.
 
-If you are still weighing whether SEO deserves a place in your budget at all, [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business) walks through that decision honestly.
+If you are still weighing whether SEO deserves a place in your budget at all, [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business/) walks through that decision honestly.
 
 ### A Note on Buying SEO Services
 
 This difference is also worth understanding before you hire anyone. A provider pitching a local business on national-style SEO — press mentions, mass content, link volume — may be selling the wrong game. Ask any provider which searches they intend to win for you and where those searches happen. For a local business, the answer should sound local.
 
-For what specifically matters in this area, see [Local SEO for Port Orange Businesses: What Actually Matters](/journal/local-seo-port-orange-businesses).
+For what specifically matters in this area, see [Local SEO for Port Orange Businesses: What Actually Matters](/journal/local-seo-port-orange-businesses/).
 
 ### The Bottom Line
 
@@ -2572,7 +2572,7 @@ Regular SEO competes for the whole internet. Local SEO competes for your neighbo
 
 For local service businesses in Port Orange, Daytona Beach, and across Central Florida, local SEO is usually the version worth investing in, built on top of a website that earns trust once people click.
 
-Not sure whether your website is helping or hurting the local side of the equation? New Level Design Studio offers a free website review for local businesses — plain answers, no obligation. [Request your free website review →](/contact)
+Not sure whether your website is helping or hurting the local side of the equation? New Level Design Studio offers a free website review for local businesses — plain answers, no obligation. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2623,7 +2623,7 @@ Look for:
 
 Be cautious with reports built entirely on rankings. Rankings jump around daily, differ by location and device, and can be cherry-picked. "You rank #1 for 'best affordable quality roofing contractor Port Orange FL'" means little if nobody searches that phrase. Impressions, clicks, calls, and inquiries are much harder to fake.
 
-If you want a second opinion on the basics, our [free SEO tools](/free-seo-tools) let you check some of this yourself in a few minutes.
+If you want a second opinion on the basics, our [free SEO tools](/free-seo-tools/) let you check some of this yourself in a few minutes.
 
 ### Red Flags Worth Acting On
 
@@ -2636,7 +2636,7 @@ Any one of these deserves a direct conversation. More than one deserves a decisi
 - **Zero questions about your business.** SEO that never asks which services you want more of, or which jobs are most profitable, is SEO pointed at nothing.
 - **Your website never changes.** SEO without website changes is a contradiction. The site is the product being optimized.
 
-One caution in fairness: slow results alone are not proof of a scam. Even good SEO takes months to show, especially in competitive areas — we wrote about realistic timelines in [How Long Does It Take to See Results from SEO?](/journal/how-long-does-it-take-to-see-results-from-seo). Judge the work, not just the wait.
+One caution in fairness: slow results alone are not proof of a scam. Even good SEO takes months to show, especially in competitive areas — we wrote about realistic timelines in [How Long Does It Take to See Results from SEO?](/journal/how-long-does-it-take-to-see-results-from-seo/). Judge the work, not just the wait.
 
 ### How to Have the Conversation
 
@@ -2652,9 +2652,9 @@ A good company answers all three easily. They will probably be glad you asked, b
 
 You do not need to audit algorithms to hold an SEO company accountable. Own your accounts, ask for the specific work list, judge reports by inquiries instead of vanity rankings, and treat guarantees and secrecy as the warnings they are.
 
-And remember what the work is ultimately for: a website that earns trust when local customers check you out. If the site itself has not improved, the SEO has not either — see [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business) for how the pieces fit together.
+And remember what the work is ultimately for: a website that earns trust when local customers check you out. If the site itself has not improved, the SEO has not either — see [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business/) for how the pieces fit together.
 
-If you would like an outside set of eyes, New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We will tell you plainly what looks solid and what does not. [Request your free website review →](/contact)
+If you would like an outside set of eyes, New Level Design Studio offers a free website review for local businesses in Port Orange, Daytona Beach, and Volusia County. We will tell you plainly what looks solid and what does not. [Request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2676,7 +2676,7 @@ Both can work. Both can also waste money in the wrong situation. The honest answ
 
 Google Ads is renting attention. You bid on searches, your ad appears above the results, and you pay for each click. It can start producing visits the day you turn it on. It also stops the day you stop paying. Nothing accumulates.
 
-Local SEO is building an asset. Your Google Business Profile, your reviews, your service pages, your local reputation with Google — these take months to develop, and no one can honestly promise a specific position or timeline. But what you build keeps working without a per-click bill, and it tends to compound. We covered realistic timelines in [How Long Does It Take to See Results from SEO?](/journal/how-long-does-it-take-to-see-results-from-seo).
+Local SEO is building an asset. Your Google Business Profile, your reviews, your service pages, your local reputation with Google — these take months to develop, and no one can honestly promise a specific position or timeline. But what you build keeps working without a per-click bill, and it tends to compound. We covered realistic timelines in [How Long Does It Take to See Results from SEO?](/journal/how-long-does-it-take-to-see-results-from-seo/).
 
 Neither is "better." They answer different questions. Ads answer "how do I get in front of people this week?" Local SEO answers "how do I become the obvious local choice over time?"
 
@@ -2700,13 +2700,13 @@ Local SEO fits when you are playing a longer game:
 - **Your competition is beatable.** In many Volusia County service categories, the businesses in the map pack are simply the ones that took their profile and website seriously. That is an open door.
 - **You are tired of paying for every single lead.** Ads costs scale with volume forever. SEO costs are front-loaded work.
 
-The trade-off is patience — and the discipline to keep at it when nothing seems to move in month two. If you are weighing that patience against your budget, [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business) goes deeper on the decision.
+The trade-off is patience — and the discipline to keep at it when nothing seems to move in month two. If you are weighing that patience against your budget, [Is SEO Worth It for My Small Business?](/journal/is-seo-worth-it-for-my-small-business/) goes deeper on the decision.
 
 ### What They Both Depend On
 
 Here is the part that changes the whole question: both channels send people to the same place.
 
-An ad click lands on your website. A map-pack tap leads to your profile, and then usually to your website. If that website is outdated, slow, vague about services, or hard to contact, both channels leak. You will pay for clicks that bounce, or rank for searches that never turn into calls — we walked through that chain in [How to Get More Phone Calls and Customers Through Local SEO](/journal/get-more-phone-calls-local-seo).
+An ad click lands on your website. A map-pack tap leads to your profile, and then usually to your website. If that website is outdated, slow, vague about services, or hard to contact, both channels leak. You will pay for clicks that bounce, or rank for searches that never turn into calls — we walked through that chain in [How to Get More Phone Calls and Customers Through Local SEO](/journal/get-more-phone-calls-local-seo/).
 
 That is why the website is not a third option competing with these two. It is the foundation both of them stand on. Fixing a weak website usually improves the return on every marketing dollar that follows it, paid or organic.
 
@@ -2727,7 +2727,7 @@ Google Ads buys speed. Local SEO builds permanence. A weak website wastes both.
 
 Get the foundation right, do the free local basics, then choose based on how urgently you need volume and how long you plan to be here. For a business planted in Port Orange, Daytona Beach, or anywhere in Central Florida for the long haul, the building usually beats the renting — but there is no shame in renting while you build.
 
-If you want a starting point, New Level Design Studio offers a free website review for local businesses — an honest look at whether your site is ready to make either investment pay off. See our [website packages](/packages) or [request your free website review →](/contact)
+If you want a starting point, New Level Design Studio offers a free website review for local businesses — an honest look at whether your site is ready to make either investment pay off. See our [website packages](/packages/) or [request your free website review →](/contact/)
     `.trim(),
   },
   {
@@ -2773,7 +2773,7 @@ A roofer who does repair, replacement, and storm damage work might genuinely ben
 
 This is where a lot of the price difference actually lives, and it's often the least visible part of a quote. Generic template copy and stock photography are fast and cheap. Copy written specifically for your business, real photos of your actual work, and reviews or project examples woven in where they matter — that takes real time, and it shows up in the price.
 
-It also tends to show up in how visitors respond to the site. A [website is often the first serious impression a potential customer has of your business](/journal/what-is-website-first-impression-audit), and generic content is one of the fastest ways to undercut that first impression without realizing it.
+It also tends to show up in how visitors respond to the site. A [website is often the first serious impression a potential customer has of your business](/journal/what-is-website-first-impression-audit/), and generic content is one of the fastest ways to undercut that first impression without realizing it.
 
 **Polish: Mobile Experience, SEO Basics, and Launch QA**
 
@@ -2796,7 +2796,7 @@ In these cases, a focused one-page site with clear service info, real contact op
 
 A bigger, more structured site tends to earn its cost back when:
 
-- You offer multiple distinct services that each deserve their own explanation — [dedicated service pages are usually easier for both search engines and potential customers to understand](/journal/is-seo-worth-it-for-my-small-business) than one page trying to cover everything.
+- You offer multiple distinct services that each deserve their own explanation — [dedicated service pages are usually easier for both search engines and potential customers to understand](/journal/is-seo-worth-it-for-my-small-business/) than one page trying to cover everything.
 - You're in a competitive local market where organic search is a real source of new customers, not just a nice-to-have.
 - You have a body of work worth showing — completed projects, before-and-afters, a range of services — and a one-page site doesn't have room for it.
 - Your services involve a higher price point or a longer decision process, where visitors usually want more information and more proof before they reach out.
@@ -2813,7 +2813,7 @@ A low quote isn't automatically a bad one — plenty of businesses genuinely onl
 - **Basic SEO setup.** No page titles, meta descriptions, or local keyword structure — meaning the site exists, but isn't set up to be found.
 - **Anything after launch.** A site that ships and is then left alone indefinitely, with no plan for updates, fixes, or the small things that break over time.
 
-None of this makes a low-cost option a scam. It just means the quote is for a smaller amount of work — which may or may not match what your business actually needs. [A quick way to check where your own site stands is this list of five warning signs](/journal/five-signs-website-costing-leads), which covers exactly these gaps.
+None of this makes a low-cost option a scam. It just means the quote is for a smaller amount of work — which may or may not match what your business actually needs. [A quick way to check where your own site stands is this list of five warning signs](/journal/five-signs-website-costing-leads/), which covers exactly these gaps.
 
 ### How This Maps to Real Options
 
@@ -2832,7 +2832,7 @@ None of these is automatically the "right" one. The right one is whichever match
 
 The honest answer to "how much does a small business website cost" is: it depends on what you need the site to do, and the only way to know that for your specific business is to talk through it.
 
-If you're ready to figure out the right scope for your business, [start a website project](/contact) and we'll walk through what your site actually needs before quoting anything. If you're not sure yet and just want an outside read on where your current site stands, a [free website review](/contact) is a no-commitment way to find out.
+If you're ready to figure out the right scope for your business, [start a website project](/contact/) and we'll walk through what your site actually needs before quoting anything. If you're not sure yet and just want an outside read on where your current site stands, a [free website review](/contact/) is a no-commitment way to find out.
     `.trim(),
   },
   {
@@ -2848,9 +2848,9 @@ If you're ready to figure out the right scope for your business, [start a websit
     body: `
 Most small business owners do not ask about website cost because they are cheap. They ask because they have been burned by vague pricing, unfinished projects, or websites that looked fine but never helped the business.
 
-If you are looking for actual numbers and package ranges, we cover those in [how much a small business website costs](/journal/small-business-website-cost). This article is about the other half of the question: why one quote comes in at a few hundred dollars and another at a few thousand — and which of those differences actually matter for your business.
+If you are looking for actual numbers and package ranges, we cover those in [how much a small business website costs](/journal/small-business-website-cost/). This article is about the other half of the question: why one quote comes in at a few hundred dollars and another at a few thousand — and which of those differences actually matter for your business.
 
-For a local business in [Port Orange](/port-orange-website-design), Daytona Beach, or Volusia County, the right website is usually not the fanciest option. It is the one that makes the business look trustworthy, explains the services clearly, works well on mobile, and gives people a direct path to call, request a quote, or book. Every lever below either supports that job or pads the invoice — knowing which is which is how you read a quote.
+For a local business in [Port Orange](/port-orange-website-design/), Daytona Beach, or Volusia County, the right website is usually not the fanciest option. It is the one that makes the business look trustworthy, explains the services clearly, works well on mobile, and gives people a direct path to call, request a quote, or book. Every lever below either supports that job or pads the invoice — knowing which is which is how you read a quote.
 
 ### Scope is the biggest lever
 
@@ -2924,7 +2924,7 @@ The site might technically exist, but it does not help the business show up with
 
 ### How NLDS thinks about pricing
 
-New Level Design Studio keeps [website packages](/packages) structured around what the business actually needs.
+New Level Design Studio keeps [website packages](/packages/) structured around what the business actually needs.
 
 A smaller business may only need a clean Starter Website to get a professional presence online. A more established business may need a Core Website with stronger structure, service clarity, and local search basics. A business that needs a more complete website may need a Pro Website with multiple pages, stronger visuals, local SEO support, and a more refined conversion path.
 
@@ -2944,7 +2944,7 @@ A website is not automatically valuable because it is expensive. It is valuable 
 
 For local businesses, that is the real cost question.
 
-If you are not sure what level your business needs, New Level Design Studio can [review your current site](/contact) and point out what is worth fixing first.
+If you are not sure what level your business needs, New Level Design Studio can [review your current site](/contact/) and point out what is worth fixing first.
     `.trim(),
   },
   {
@@ -2962,7 +2962,7 @@ Getting traffic is not the same as getting business.
 
 A local business website can show up in search, get clicks from a Google Business Profile, and still fail to turn visitors into calls or quote requests. That does not always mean the traffic is bad. A lot of the time, the page is not doing enough to help the visitor feel clear, confident, and ready to reach out.
 
-For businesses in Port Orange, [Daytona Beach](/daytona-beach-website-design), and Volusia County, this is common. People compare several options quickly. If your website makes them work too hard, they move on.
+For businesses in Port Orange, [Daytona Beach](/daytona-beach-website-design/), and Volusia County, this is common. People compare several options quickly. If your website makes them work too hard, they move on.
 
 ### The message is too vague
 
@@ -3080,7 +3080,7 @@ Traffic without leads is a signal. It means people are arriving, but something i
 
 That "something" is usually not one magic trick. It is the combined effect of weak copy, unclear structure, poor mobile flow, missing proof, and soft calls to action.
 
-New Level Design Studio helps local businesses [find those gaps](/contact) and fix the parts of the website that weaken trust before the first call.
+New Level Design Studio helps local businesses [find those gaps](/contact/) and fix the parts of the website that weaken trust before the first call.
     `.trim(),
   },
   {
@@ -3198,7 +3198,7 @@ A Port Orange lawn company with a simple but editable site may only need a stron
 
 A Daytona Beach restaurant with outdated menus, poor mobile layout, broken links, and no clear location information may need a deeper rebuild.
 
-A [Volusia County](/volusia-county-website-design) contractor with no access to the old website may need a new site simply because the old one cannot be safely managed.
+A [Volusia County](/volusia-county-website-design/) contractor with no access to the old website may need a new site simply because the old one cannot be safely managed.
 
 The right decision depends on the condition of the site and what the business needs it to do.
 
@@ -3208,7 +3208,7 @@ A redesign fixes a site that is still worth building on. A new website replaces 
 
 The mistake is choosing based only on price. The smarter move is to choose based on trust, usability, access, and whether the site can support real business goals.
 
-New Level Design Studio can [review your current website](/contact) and help you decide what is worth saving and what should be rebuilt.
+New Level Design Studio can [review your current website](/contact/) and help you decide what is worth saving and what should be rebuilt.
     `.trim(),
   },
   {
@@ -3266,7 +3266,7 @@ Local businesses should sound local.
 
 That does not mean stuffing city names into every paragraph. It means naturally showing where you work and who you serve.
 
-For NLDS, that might include [Port Orange](/port-orange-website-design), Daytona Beach, Volusia County, Ormond Beach, New Smyrna Beach, and Central Florida when relevant.
+For NLDS, that might include [Port Orange](/port-orange-website-design/), Daytona Beach, Volusia County, Ormond Beach, New Smyrna Beach, and Central Florida when relevant.
 
 For other local businesses, it may be neighborhoods, service areas, nearby cities, or specific customer situations.
 
@@ -3373,7 +3373,7 @@ A local business website should do more than exist. It should make the business 
 
 The best websites are not always the biggest. They are the clearest.
 
-New Level Design Studio builds [website-first systems](/services) for local businesses that need stronger trust, better clarity, and a cleaner path from visitor to inquiry.
+New Level Design Studio builds [website-first systems](/services/) for local businesses that need stronger trust, better clarity, and a cleaner path from visitor to inquiry.
     `.trim(),
   },
   {
@@ -3520,7 +3520,7 @@ This is where you can review:
 - Content opportunities
 - Conversion weak spots
 
-That is why [post-launch support](/packages) matters. It turns the website from a finished file into a managed part of the business presence.
+That is why [post-launch support](/packages/) matters. It turns the website from a finished file into a managed part of the business presence.
 
 ### Final thought
 
@@ -3528,7 +3528,7 @@ Launching a website is the start of the website doing its job.
 
 The follow-up is what catches the quiet problems: pages not indexed, forms not firing, calls not easy to make, mobile issues, unclear service paths, or missing trust signals.
 
-New Level Design Studio treats launch as part of a larger [website-first system](/services): strategy, build, search setup, testing, and ongoing care so local businesses can show up with more trust and clarity online.
+New Level Design Studio treats launch as part of a larger [website-first system](/services/): strategy, build, search setup, testing, and ongoing care so local businesses can show up with more trust and clarity online.
     `.trim(),
   },
 ];

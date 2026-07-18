@@ -23,7 +23,7 @@ export default function WorkLoveHandlesBbq() {
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
         <div className="container-nlds">
           <Link
-            to="/works"
+            to="/works/"
             className="font-sans"
             style={{
               fontSize: '0.75rem',
@@ -77,7 +77,7 @@ export default function WorkLoveHandlesBbq() {
               >
                 View Concept Website
               </a>
-              <Link to="/contact" className="btn-secondary">
+              <Link to="/contact/" className="btn-secondary">
                 Discuss Your Website
               </Link>
             </div>
@@ -342,7 +342,7 @@ export default function WorkLoveHandlesBbq() {
         heading="Want This for Your Business?"
         body="New Level Design Studio builds websites for local food, catering, and service businesses across Volusia County. Tell us what you need."
         buttonText="Discuss Your Website"
-        buttonTo="/contact"
+        buttonTo="/contact/"
       />
     </div>
   );

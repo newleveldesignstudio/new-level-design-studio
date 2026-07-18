@@ -70,13 +70,13 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
             {config.intro}
           </p>
           <div className="flex flex-wrap items-center gap-4 mt-8">
-            <Link to="/contact" className="btn-primary">Get a Free Website Review</Link>
-            <Link to="/works" className="btn-secondary">View Our Work</Link>
+            <Link to="/contact/" className="btn-primary">Get a Free Website Review</Link>
+            <Link to="/works/" className="btn-secondary">View Our Work</Link>
           </div>
           <p className="font-sans mt-5" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
             Need brand assets before a full website?{' '}
             <Link
-              to="/starter-pack"
+              to="/starter-pack/"
               style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}
             >
               View the $129 Visual Starter Pack →
@@ -155,8 +155,8 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link to="/services" className="btn-secondary">See All Services</Link>
-            <Link to="/packages" className="btn-secondary">View Packages</Link>
+            <Link to="/services/" className="btn-secondary">See All Services</Link>
+            <Link to="/packages/" className="btn-secondary">View Packages</Link>
           </div>
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
               >
                 {config.trustBody}
               </p>
-              <Link to="/contact" className="btn-primary mt-8 inline-block">
+              <Link to="/contact/" className="btn-primary mt-8 inline-block">
                 Get a Free Website Review
               </Link>
             </div>
@@ -305,8 +305,8 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
               ))}
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/contact" className="btn-primary">Get a Free Website Review</Link>
-              <Link to="/packages" className="btn-secondary">View Packages</Link>
+              <Link to="/contact/" className="btn-primary">Get a Free Website Review</Link>
+              <Link to="/packages/" className="btn-secondary">View Packages</Link>
             </div>
           </div>
         </section>
@@ -316,7 +316,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
         heading={config.ctaHeading}
         body={config.ctaBody}
         buttonText="Get a Free Website Review"
-        buttonTo="/contact"
+        buttonTo="/contact/"
       />
     </div>
   );

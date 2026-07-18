@@ -61,7 +61,7 @@ function JournalSection() {
               Ideas on Design, Marketing,<br />and Local Business.
             </h2>
           </div>
-          <Link to="/journal" className="btn-secondary" style={{ whiteSpace: 'nowrap' }}>
+          <Link to="/journal/" className="btn-secondary" style={{ whiteSpace: 'nowrap' }}>
             All Articles
           </Link>
         </div>
@@ -70,7 +70,7 @@ function JournalSection() {
           {recentArticles.map((article) => (
             <Link
               key={article.id}
-              to={`/journal/${article.slug}`}
+              to={`/journal/${article.slug}/`}
               style={{
                 backgroundColor: 'var(--bg-soft)',
                 padding: '40px 36px',
@@ -219,11 +219,11 @@ export default function Studio() {
                 and visuals that earn trust from the first impression.
               </p>
               <div className="flex flex-wrap items-center mt-8" style={{ gap: '12px 24px' }}>
-                <Link to="/works" className="btn-secondary inline-block">
+                <Link to="/works/" className="btn-secondary inline-block">
                   See our work
                 </Link>
                 <Link
-                  to="/michael-vail"
+                  to="/michael-vail/"
                   className="font-sans no-underline transition-colors duration-200"
                   style={{ fontSize: '0.875rem', color: 'var(--muted-text)', letterSpacing: '0.02em' }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--charcoal)'; }}
@@ -288,7 +288,7 @@ export default function Studio() {
               ))}
             </div>
             <Link
-              to="/services"
+              to="/services/"
               className="btn-secondary mt-10 inline-block self-start"
               style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
             >
@@ -386,7 +386,7 @@ export default function Studio() {
                 looks online. We handle all of it, so your design, content, and presence work
                 together instead of pulling in different directions.
               </p>
-              <Link to="/services" className="btn-secondary mt-8 inline-block">
+              <Link to="/services/" className="btn-secondary mt-8 inline-block">
                 View website and content services
               </Link>
             </div>
@@ -508,7 +508,7 @@ export default function Studio() {
         heading="Ready to Build a Stronger Online Presence?"
         body="We work with local businesses across Port Orange, Daytona Beach, and Volusia County. Tell us what you are building and we will show you what is possible."
         buttonText="Request a Free Website Review"
-        buttonTo="/contact"
+        buttonTo="/contact/"
       />
     </div>
   );

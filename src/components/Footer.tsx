@@ -8,34 +8,34 @@ import { PRIMARY_SERVICES, SUPPORTING_CAPABILITIES } from '@/data/serviceTermino
 
 const studioLinks = [
   { text: 'Home', href: '/' },
-  { text: 'Works', href: '/works' },
-  { text: 'Services', href: '/services' },
-  { text: 'Packages', href: '/packages' },
-  { text: 'Studio', href: '/studio' },
-  { text: 'About the Founder', href: '/michael-vail' },
-  { text: 'Journal', href: '/journal' },
-  { text: 'Contact', href: '/contact' },
-  { text: 'Free SEO Tools', href: '/free-seo-tools' },
-  { text: 'Local Visibility Insights', href: '/local-visibility-insights' },
+  { text: 'Works', href: '/works/' },
+  { text: 'Services', href: '/services/' },
+  { text: 'Packages', href: '/packages/' },
+  { text: 'Studio', href: '/studio/' },
+  { text: 'About the Founder', href: '/michael-vail/' },
+  { text: 'Journal', href: '/journal/' },
+  { text: 'Contact', href: '/contact/' },
+  { text: 'Free SEO Tools', href: '/free-seo-tools/' },
+  { text: 'Local Visibility Insights', href: '/local-visibility-insights/' },
 ];
 
 const serviceLinks = [
-  { text: PRIMARY_SERVICES[0], href: '/services' },
-  { text: PRIMARY_SERVICES[1], href: '/services' },
-  { text: PRIMARY_SERVICES[2], href: '/services' },
-  { text: SUPPORTING_CAPABILITIES[2], href: '/services' },
+  { text: PRIMARY_SERVICES[0], href: '/services/' },
+  { text: PRIMARY_SERVICES[1], href: '/services/' },
+  { text: PRIMARY_SERVICES[2], href: '/services/' },
+  { text: SUPPORTING_CAPABILITIES[2], href: '/services/' },
 ];
 
 const localLinks = [
-  { text: 'Port Orange Website Design', href: '/port-orange-website-design' },
-  { text: 'Daytona Beach Website Design', href: '/daytona-beach-website-design' },
-  { text: 'Volusia County Web Design', href: '/volusia-county-website-design' },
-  { text: 'Central Florida Local Business Websites', href: '/central-florida-website-design' },
+  { text: 'Port Orange Website Design', href: '/port-orange-website-design/' },
+  { text: 'Daytona Beach Website Design', href: '/daytona-beach-website-design/' },
+  { text: 'Volusia County Web Design', href: '/volusia-county-website-design/' },
+  { text: 'Central Florida Local Business Websites', href: '/central-florida-website-design/' },
 ];
 
 const legalLinks = [
-  { text: 'Privacy Policy', href: '/privacy' },
-  { text: 'Terms & Conditions', href: '/terms' },
+  { text: 'Privacy Policy', href: '/privacy/' },
+  { text: 'Terms & Conditions', href: '/terms/' },
 ];
 
 function IconEmail() {

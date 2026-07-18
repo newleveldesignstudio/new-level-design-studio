@@ -32,7 +32,7 @@ export default function ArticleDetail() {
     return () => container.removeEventListener('click', handleClick);
   }, [navigate]);
 
-  if (!article) return <Navigate to="/journal" replace />;
+  if (!article) return <Navigate to="/journal/" replace />;
 
   const html = markdownToHtml(article.body);
   const relatedArticles = getRelatedArticles(article.slug);
@@ -79,7 +79,7 @@ export default function ArticleDetail() {
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
         <div className="container-nlds">
           <Link
-            to="/journal"
+            to="/journal/"
             className="font-sans"
             style={{
               fontSize: '0.75rem',
@@ -153,7 +153,7 @@ export default function ArticleDetail() {
               {relatedArticles.map((related) => (
                 <Link
                   key={related.slug}
-                  to={`/journal/${related.slug}`}
+                  to={`/journal/${related.slug}/`}
                   style={{ textDecoration: 'none', display: 'block', height: '100%' }}
                 >
                   <article
@@ -207,7 +207,7 @@ export default function ArticleDetail() {
         heading="Start With a Free Website Review"
         body="We'll help you understand whether your website is clear, credible, and easy to trust before someone reaches out."
         buttonText="Start With a Free Website Review"
-        buttonTo="/contact"
+        buttonTo="/contact/"
       />
     </div>
   );

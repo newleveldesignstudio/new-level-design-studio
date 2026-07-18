@@ -186,10 +186,10 @@ export default function MichaelVail() {
                 style={{ gap: 16 }}
                 variants={rm ? undefined : itemVar}
               >
-                <Link to="/contact" className="btn-primary w-full sm:w-auto text-center">
+                <Link to="/contact/" className="btn-primary w-full sm:w-auto text-center">
                   Get a Free Website Review
                 </Link>
-                <Link to="/works" className="btn-secondary w-full sm:w-auto text-center">
+                <Link to="/works/" className="btn-secondary w-full sm:w-auto text-center">
                   View the Work
                 </Link>
               </motion.div>
@@ -585,10 +585,10 @@ export default function MichaelVail() {
             stronger, and built around your goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center mt-10" style={{ gap: 16 }}>
-            <Link to="/contact" className="btn-primary w-full sm:w-auto text-center">
+            <Link to="/contact/" className="btn-primary w-full sm:w-auto text-center">
               Get a Free Website Review
             </Link>
-            <Link to="/works" className="btn-secondary w-full sm:w-auto text-center">
+            <Link to="/works/" className="btn-secondary w-full sm:w-auto text-center">
               View Our Work
             </Link>
           </div>
