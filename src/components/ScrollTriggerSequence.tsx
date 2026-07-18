@@ -35,8 +35,15 @@ function framePad(n: number): string {
   return String(n).padStart(4, '0');
 }
 
+// Mobile hero geometry: the image is scaled to the canvas width, so its height
+// tracks width, not viewport height. The sticky height is sized as
+// MOBILE_TOP_OFFSET + imageHeight + MOBILE_LABEL_ZONE (see the CSS + pin height),
+// and the image is top-aligned so the "Scroll to explore" label sits a constant
+// ~40px below the image on every mobile width, clear of the 80px fixed header.
+const MOBILE_TOP_OFFSET = 112;
+
 // Desktop/tablet: object-cover — fills canvas, crops edges
-// Mobile: fill-width — scales to canvas width, centers vertically, off-white bg fills remainder
+// Mobile: fill-width — scales to canvas width, top-aligned below the header
 function drawFrame(
   ctx: CanvasRenderingContext2D,
   img: HTMLImageElement,
@@ -48,11 +55,11 @@ function drawFrame(
     // Fill off-white bg first
     ctx.fillStyle = '#F7F7F3';
     ctx.fillRect(0, 0, cw, ch);
-    // Scale to fill canvas width; preserve aspect ratio; center vertically
+    // Scale to fill canvas width; preserve aspect ratio; top-align below header
     const scale = cw / img.naturalWidth;
     const sw = cw;
     const sh = img.naturalHeight * scale;
-    const sy = (ch - sh) / 2;
+    const sy = MOBILE_TOP_OFFSET;
     ctx.drawImage(img, 0, sy, sw, sh);
   } else if (breakpoint === 'tablet') {
     // Object-cover: fills the canvas, shifted right to preserve right-side content
@@ -175,7 +182,9 @@ export default function ScrollTriggerSequence({ overlay }: Props) {
     const bp = getBreakpoint();
     const cfg = CONFIG[bp];
     const endNum = parseInt(cfg.end.replace('+=', ''), 10);
-    const stickyH = bp === 'mobile' ? '60svh' : '100svh';
+    // Mobile: width-based height (top offset + image height + label zone) so the
+    // scroll label sits ~40px below the image; 1.7751 = mobile frame aspect ratio.
+    const stickyH = bp === 'mobile' ? 'calc(100vw / 1.7751 + 192px)' : '100svh';
     if (pinRef.current) {
       pinRef.current.style.height = `calc(${stickyH} + ${endNum}px)`;
     }

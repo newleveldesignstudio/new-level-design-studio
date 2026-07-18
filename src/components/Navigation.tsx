@@ -326,13 +326,27 @@ export default function Navigation() {
               </div>
             </div>
 
-            {/* Mobile: monogram only */}
-            <img
-              className="sm:hidden block"
-              src="/images/new-level-design-studio-logo-transparent-header.png"
-              alt="New Level Design Studio NL monogram"
-              style={{ height: 40, width: 'auto' }}
-            />
+            {/* Mobile: monogram + brand name (compact horizontal lockup) */}
+            <div className="sm:hidden flex items-center" style={{ gap: 10 }}>
+              <img
+                className="block"
+                src="/images/new-level-design-studio-logo-transparent-header.png"
+                alt="New Level Design Studio NL monogram"
+                style={{ height: 40, width: 'auto' }}
+              />
+              <span
+                className="font-serif"
+                style={{
+                  fontSize: 15,
+                  letterSpacing: '0.01em',
+                  lineHeight: 1.05,
+                  color: 'var(--charcoal)',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                New Level Design Studio
+              </span>
+            </div>
           </Link>
 
           <div className="flex-1 min-w-[24px]" />

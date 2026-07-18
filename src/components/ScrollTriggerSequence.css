@@ -157,7 +157,9 @@
   }
 
   .st-sticky {
-    height: 60svh;
+    /* Width-based: 112px top offset + image height (100vw / 1.7751) + 80px label
+       zone. Keeps the scroll label ~40px below the image on every mobile width. */
+    height: calc(100vw / 1.7751 + 192px);
     background-color: var(--bg-main);
   }
 
