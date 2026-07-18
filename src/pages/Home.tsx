@@ -663,7 +663,7 @@ export default function Home() {
             width={1600}
             height={1067}
             decoding="async"
-            alt="Website and brand visuals mockup"
+            alt="Website care after launch visual for local business website support"
             loading="lazy"
             className="img-muted"
             style={{
