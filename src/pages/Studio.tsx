@@ -185,12 +185,12 @@ export default function Studio() {
         <div className="container-nlds">
           <div style={{ maxWidth: 1000, marginLeft: 'auto', marginRight: 'auto' }}>
             <EditorialImageReveal
-              src="/nlds/images/new-level-design-studio-website-strategy-workspace-hero.webp"
-              srcSet="/nlds/images/new-level-design-studio-website-strategy-workspace-hero-w768.webp 768w, /nlds/images/new-level-design-studio-website-strategy-workspace-hero.webp 1672w"
+              src="/nlds/images/stone-timber-remodeling-website-design-showcase.webp"
+              srcSet="/nlds/images/stone-timber-remodeling-website-design-showcase-w768.webp 768w, /nlds/images/stone-timber-remodeling-website-design-showcase.webp 1536w"
               sizes="(max-width: 1024px) 100vw, 1000px"
-              width={1672}
-              height={941}
-              alt="Website strategy workspace"
+              width={1536}
+              height={1024}
+              alt="Stone & Timber Remodeling website design with modern remodeling services homepage"
               className="mt-8"
               loading="eager"
             />
@@ -301,13 +301,13 @@ export default function Studio() {
           >
             <img
               ref={splitImageRef}
-              src="/nlds/images/new-level-design-studio-foundation-system-studio-page.webp"
-              srcSet="/nlds/images/new-level-design-studio-foundation-system-studio-page-w768.webp 768w, /nlds/images/new-level-design-studio-foundation-system-studio-page.webp 1672w"
+              src="/nlds/images/dh-luxury-roofing-website-design-showcase.webp"
+              srcSet="/nlds/images/dh-luxury-roofing-website-design-showcase-w768.webp 768w, /nlds/images/dh-luxury-roofing-website-design-showcase.webp 1536w"
               sizes="(max-width: 768px) 100vw, 1200px"
-              width={1672}
-              height={941}
+              width={1536}
+              height={1024}
               decoding="async"
-              alt="Foundation system overview"
+              alt="DH Luxury Roofing website design with roof inspection call to action"
               className="img-muted absolute inset-0 w-full h-full object-contain"
               style={{ objectPosition: 'center center' }}
               loading="lazy"

@@ -124,5 +124,17 @@
     "w768": "/nlds/images/liquid-legacy-pools-luxury-pool-website-concept-nlds-w768.webp",
     "width": 1600,
     "height": 900
+  },
+  "/nlds/images/stone-timber-remodeling-website-design-showcase.png": {
+    "full": "/nlds/images/stone-timber-remodeling-website-design-showcase.webp",
+    "w768": "/nlds/images/stone-timber-remodeling-website-design-showcase-w768.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "/nlds/images/dh-luxury-roofing-website-design-showcase.png": {
+    "full": "/nlds/images/dh-luxury-roofing-website-design-showcase.webp",
+    "w768": "/nlds/images/dh-luxury-roofing-website-design-showcase-w768.webp",
+    "width": 1536,
+    "height": 1024
   }
 }
