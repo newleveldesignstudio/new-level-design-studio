@@ -1,9 +1,16 @@
 # Serve .well-known static files directly; do not SPA-fallback unknown .well-known paths
 /.well-known/* /.well-known/:splat 200
 
-# Ghost Central Florida URL — redirect to the correct route
+# Ghost Central Florida URL — redirect to the correct route (genuine equivalent)
 /central-florida-local-business-websites/ /central-florida-website-design/ 301!
 /central-florida-local-business-websites /central-florida-website-design/ 301!
 
-# React Router SPA fallback
-/* /index.html 200
+# /ops is a private client-only route (not prerendered, excluded from the sitemap).
+# Keep the SPA boot for it explicitly so it survives removal of the blanket fallback.
+/ops /index.html 200
+/ops/* /index.html 200
+
+# Every valid public route is prerendered to a static file, which Netlify serves
+# before applying redirects. Unknown URLs get the branded 404 page with a REAL
+# HTTP 404 (rewrite, not a redirect) instead of the old 200 homepage fallback.
+/* /404.html 404

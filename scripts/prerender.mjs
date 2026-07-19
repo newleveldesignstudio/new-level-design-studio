@@ -262,6 +262,39 @@ async function prerender() {
     }
   }
 
+  // Generate a real 404 page: render an unknown route (App path="*" -> NotFound),
+  // strip any canonical/OG (an unknown URL must claim none), keep noindex, and
+  // write dist/404.html. Netlify serves this with HTTP 404 for unmatched paths.
+  try {
+    process.stdout.write('  Rendering 404.html...');
+    const page = await browser.newPage();
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.route('**', (r) => {
+      const u = r.request().url();
+      if (u.includes('fonts.googleapis.com') || u.includes('fonts.gstatic.com') || /\.(png|jpg|jpeg|gif|webp|svg)(\?.*)?$/i.test(u)) r.abort();
+      else r.continue();
+    });
+    await page.goto(`${BASE_URL}/__nlds_not_found__`, { waitUntil: 'load', timeout: TIMEOUT });
+    await wait(3000);
+    const liveTitle = await page.title();
+    let html = await page.content();
+    await page.close();
+    if (!liveTitle.includes('Page Not Found')) {
+      throw new Error(`404 sentinel did not render NotFound (title: ${liveTitle})`);
+    }
+    html = cleanHead(html, liveTitle);
+    html = html.replace(/<link\b[^>]*rel=["']canonical["'][^>]*>\s*/gi, '');
+    html = html.replace(/<meta\b[^>]*(?:property=["']og:[^"']+["']|name=["']twitter:[^"']+["'])[^>]*>\s*/gi, '');
+    if (!/noindex/i.test(html)) throw new Error('404.html missing noindex meta');
+    writeFileSync(path.join(DIST_DIR, '404.html'), html, 'utf8');
+    process.stdout.write(' ✓\n');
+  } catch (err) {
+    console.error(`\n✗ BUILD FAILED — could not generate 404.html: ${err.message.split('\n')[0]}\n`);
+    server.kill('SIGTERM');
+    process.exit(1);
+  }
+
   await browser.close();
   server.kill('SIGTERM');
 

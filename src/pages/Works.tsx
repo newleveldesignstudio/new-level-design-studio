@@ -6,7 +6,7 @@ import FinalCTA from '@/components/FinalCTA';
 import WorkProjectCard from '@/components/WorkProjectCard';
 import type { WorkProject } from '@/components/WorkProjectCard';
 import ImageLightbox from '@/components/ImageLightbox';
-import SEO from '@/components/SEO';
+import SEO, { breadcrumbSchema } from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 
@@ -374,8 +374,9 @@ export default function Works() {
     <div>
       <SEO
         title="Selected Website Work | NLDS"
-        description="Independent concept builds and industry demonstrations showing website strategy, design direction, and conversion structure for local businesses in Port Orange, Daytona Beach, and Volusia County."
+        description="Concept builds and industry demos of website strategy, design, and conversion structure for local businesses in Port Orange, Daytona Beach, and Volusia County."
         canonical="https://newlvlstudio.com/works"
+        jsonLd={breadcrumbSchema([{ name: 'Home', url: 'https://newlvlstudio.com/' }, { name: 'Work', url: 'https://newlvlstudio.com/works/' }])}
       />
       {/* Hero */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '140px 0 0' }}>
@@ -469,25 +470,25 @@ export default function Works() {
           <p className="eyebrow">How to Read the Work</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6" style={{ maxWidth: 900 }}>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 16 }}>
-              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
                 Strategy
-              </h3>
+              </h2>
               <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
                 What the website needs to communicate and why.
               </p>
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 16 }}>
-              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
                 Structure
-              </h3>
+              </h2>
               <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
                 How the page guides visitors from first impression to inquiry.
               </p>
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 16 }}>
-              <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
                 Trust
-              </h3>
+              </h2>
               <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
                 How visuals, copy, proof, and calls-to-action make the business easier to choose.
               </p>

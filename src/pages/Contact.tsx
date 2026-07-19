@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SectionDivider from '@/components/SectionDivider';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import SEO from '@/components/SEO';
+import SEO, { breadcrumbSchema } from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 import { EXTERNAL_LINKS } from '@/lib/links';
@@ -96,8 +96,9 @@ export default function Contact() {
     <div>
       <SEO
         title="Start Your Website Project — Port Orange FL | NLDS"
-        description="Start a website project with New Level Design Studio — or request a free website review of your current site. Websites, Website Care, and the Visual Starter Pack for local businesses."
+        description="Start a website project or request a free website review from New Level Design Studio — websites, Website Care, and the Visual Starter Pack for local business."
         canonical="https://newlvlstudio.com/contact"
+        jsonLd={breadcrumbSchema([{ name: 'Home', url: 'https://newlvlstudio.com/' }, { name: 'Contact', url: 'https://newlvlstudio.com/contact/' }])}
       />
       {/* Hero */}
       <section style={{ backgroundColor: 'var(--bg-main)', paddingTop: 140, paddingBottom: 0 }}>
@@ -312,6 +313,14 @@ export default function Contact() {
                     >
                       {status === 'submitting' ? 'Submitting…' : 'Send Inquiry'}
                     </button>
+
+                    <p
+                      className="font-sans"
+                      style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 480 }}
+                    >
+                      After you send this, we read through what you shared and reply within one
+                      business day. Your details are used only to respond to your inquiry.
+                    </p>
 
                     {status === 'error' && (
                       <p

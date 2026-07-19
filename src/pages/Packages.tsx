@@ -158,8 +158,8 @@ export default function Packages() {
   return (
     <div className="packages-page" ref={pageRef}>
       <SEO
-        title="Website Packages for Local Businesses | New Level Design Studio"
-        description="Starter, Core, and Pro website packages for local businesses in Port Orange, Daytona Beach, and Volusia County, starting at $499 — with clear scope and Website Care support after launch."
+        title="Website Packages for Local Businesses | NLDS"
+        description="Starter, Core, and Pro website packages for local businesses in Port Orange, Daytona Beach, and Volusia County — from $499, with Website Care after launch."
         canonical="https://newlvlstudio.com/packages"
         jsonLd={{
           '@context': 'https://schema.org',

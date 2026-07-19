@@ -200,3 +200,22 @@ export function websiteSchema(): Record<string, unknown> {
     url: 'https://newlvlstudio.com',
   };
 }
+
+/**
+ * BreadcrumbList mirroring the site's real navigation hierarchy. Facts only —
+ * page names and their canonical URLs — nothing invented.
+ */
+export function breadcrumbSchema(
+  trail: { name: string; url: string }[],
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}

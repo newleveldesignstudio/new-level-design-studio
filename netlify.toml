@@ -2,7 +2,6 @@
   command = "npx playwright install chromium && npm run build:full"
   publish = "dist"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Redirect/404 rules are managed in public/_redirects (copied to dist/_redirects).
+# The former SPA catch-all (/* -> /index.html 200) was removed so unknown URLs
+# return a genuine HTTP 404 (dist/404.html) instead of a 200 homepage fallback.

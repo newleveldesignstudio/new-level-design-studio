@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import SEO from '@/components/SEO';
+import SEO, { breadcrumbSchema } from '@/components/SEO';
 import './StarterPack.css';
 
 const benefits = [
@@ -215,6 +215,7 @@ export default function StarterPack() {
         title="$129 Visual Starter Pack for Local Businesses | NLDS"
         description="A focused starter offer for local businesses that need essential brand visuals and online presence assets."
         canonical="https://newlvlstudio.com/starter-pack"
+        jsonLd={breadcrumbSchema([{ name: 'Home', url: 'https://newlvlstudio.com/' }, { name: 'Packages', url: 'https://newlvlstudio.com/packages/' }, { name: 'Visual Starter Pack', url: 'https://newlvlstudio.com/starter-pack/' }])}
       />
       {/* 1. Hero */}
       <section className="starter-hero">

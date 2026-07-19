@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SEO from '@/components/SEO';
+import SEO, { breadcrumbSchema } from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 import { getArticlesSortedByDate } from '@/data/articles';
@@ -152,6 +152,7 @@ export default function Studio() {
         title="About the Studio | New Level Design Studio"
         description="Learn how New Level Design Studio helps local businesses build credible websites, clear brand direction, and ongoing website care."
         canonical="https://newlvlstudio.com/studio"
+        jsonLd={breadcrumbSchema([{ name: 'Home', url: 'https://newlvlstudio.com/' }, { name: 'Studio', url: 'https://newlvlstudio.com/studio/' }])}
       />
 
       {/* 1. Hero — original centered layout */}
@@ -329,7 +330,7 @@ export default function Studio() {
           <div ref={principlesRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
             {principles.map((principle, i) => (
               <div key={i} className="principle-card text-center">
-                <span className="font-serif" style={{ fontSize: '2rem', color: 'var(--silver-grey)', opacity: 0.5 }}>
+                <span className="font-serif" style={{ fontSize: '2rem', color: '#82827d' }}>
                   {principle.number}
                 </span>
                 <div className="mt-4 mx-auto" style={{ width: 40, height: 1, backgroundColor: 'var(--silver-grey)' }} />
@@ -429,7 +430,7 @@ export default function Studio() {
           <div ref={processRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
             {processSteps.map((step, i) => (
               <div key={i} className="process-step text-center">
-                <span className="font-serif" style={{ fontSize: '2rem', color: 'var(--silver-grey)', opacity: 0.5 }}>
+                <span className="font-serif" style={{ fontSize: '2rem', color: '#82827d' }}>
                   {step.number}
                 </span>
                 <div className="mt-4 mx-auto" style={{ width: 40, height: 1, backgroundColor: 'var(--silver-grey)' }} />

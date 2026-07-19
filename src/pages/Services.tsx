@@ -73,7 +73,7 @@ export default function Services() {
     <div>
       <SEO
         title="Website Design & Brand Support Services | NLDS"
-        description="Website Design, Website Redesign, Website Care, Brand Direction, and Website Copy & Visual Support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
+        description="Website design, redesign, care, brand direction, and copy & visual support for local businesses in Port Orange, Daytona Beach, and Volusia County."
         canonical="https://newlvlstudio.com/services"
         jsonLd={[
           localBusinessSchema(),
