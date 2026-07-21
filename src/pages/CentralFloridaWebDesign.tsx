@@ -3,8 +3,12 @@ import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
   seoTitle: 'Central Florida Website Design | NLDS',
-  seoDescription: 'Premium website design for growing local businesses across Central Florida. Clean, well-crafted websites with clear brand direction and ongoing care — built for credibility, local visibility, and real inquiries.',
+  seoDescription: 'Website design for growing Central Florida businesses — clean, credible sites built for local visibility and real inquiries.',
   canonical: 'https://newlvlstudio.com/central-florida-website-design',
+  citySlug: 'central-florida',
+  breadcrumbName: 'Central Florida Local Business Websites',
+  cityName: 'Central Florida',
+  areaServed: ['Central Florida', 'Volusia County', 'Port Orange', 'Daytona Beach'],
   eyebrow: 'Central Florida',
   h1: 'Website Design for Central Florida Local Businesses',
   intro: 'Central Florida is home to thousands of growing local businesses — from service providers and contractors to restaurants, wellness studios, and specialty shops. We build premium websites and brand systems that help these businesses look more credible, get found online, and generate real customer inquiries.',
@@ -41,15 +45,15 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer ongoing website maintenance?',
-      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, link and form checks, image swaps, and a monthly review.',
+      a: 'Yes. At $99/month, Website Care covers the ongoing upkeep — content updates, image swaps, link and form checks, and a monthly review — so the site keeps working as your business grows.',
     },
     {
       q: 'Can you create visuals for Google Business Profile and Facebook?',
-      a: 'Yes. Brand visuals are part of our core services — including graphics for Google Business Profile, Facebook, social posts, and any other platform your business uses.',
+      a: 'Yes. We design the visual assets that keep your brand consistent everywhere customers look — Google Business Profile, Facebook, social posts, and beyond.',
     },
     {
       q: 'What is the best way to get started?',
-      a: 'The easiest first step is a quick conversation. Tell us about your business, your service area, and what you are trying to fix or build — we will match you to the right starting point.',
+      a: 'The easiest way to start is a short call about your business and service area — from there we will recommend the right package, from a Visual Starter Pack to a full site build.',
     },
   ],
 };

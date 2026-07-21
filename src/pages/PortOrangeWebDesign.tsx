@@ -3,8 +3,12 @@ import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
   seoTitle: 'Port Orange Website Design for Local Businesses | NLDS',
-  seoDescription: 'Premium website design for local businesses in Port Orange, Florida. Clean, mobile-first websites with clear brand direction and ongoing care — built to earn trust and drive real inquiries.',
+  seoDescription: 'Premium, mobile-first website design for Port Orange, FL businesses — built for local trust, clear branding, and real inquiries.',
   canonical: 'https://newlvlstudio.com/port-orange-website-design',
+  citySlug: 'port-orange',
+  breadcrumbName: 'Port Orange Website Design',
+  cityName: 'Port Orange',
+  areaServed: ['Port Orange', 'Daytona Beach', 'Ormond Beach', 'New Smyrna Beach', 'Volusia County'],
   eyebrow: 'Port Orange, Florida',
   h1: 'Website Design for Port Orange Businesses',
   intro: 'Port Orange is a growing community with strong local businesses across services, food, fitness, beauty, and home improvement. We build premium websites and brand systems that help Port Orange businesses look more established, get found locally, and turn website visitors into real inquiries.',
@@ -41,7 +45,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, image swaps, link and form checks, and a monthly review.',
+      a: 'Yes — Website Care is $99 a month and covers content updates, image swaps, link and form checks, and a monthly review, so your site stays polished long after launch.',
     },
     {
       q: 'Can you create visuals for Google Business Profile and Facebook?',

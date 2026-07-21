@@ -3,8 +3,12 @@ import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
   seoTitle: 'Volusia County Web Design for Local Businesses | NLDS',
-  seoDescription: 'Premium website design for local businesses across Volusia County, Florida — Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, DeLand, and surrounding areas.',
+  seoDescription: 'Website design for local businesses across Volusia County — Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, DeLand, and nearby areas.',
   canonical: 'https://newlvlstudio.com/volusia-county-website-design',
+  citySlug: 'volusia-county',
+  breadcrumbName: 'Volusia County Web Design',
+  cityName: 'Volusia County',
+  areaServed: ['Volusia County', 'Port Orange', 'Daytona Beach', 'Ormond Beach', 'New Smyrna Beach', 'DeLand'],
   eyebrow: 'Volusia County, Florida',
   h1: 'Volusia County Web Design for Local Businesses',
   intro: 'Volusia County stretches from Port Orange and Daytona Beach to Ormond Beach, New Smyrna Beach, DeLand, and beyond. We work with local businesses across the county to build websites, brand systems, and visual content that create a stronger, more credible online presence — wherever you operate.',
@@ -41,7 +45,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, link checks, image swaps, and a monthly review.',
+      a: 'Yes. Website Care runs $99/month and takes care of the maintenance side — content updates, image swaps, link and form checks, plus a monthly review — across however many locations you operate.',
     },
     {
       q: 'Can you create visuals for Google Business Profile and social media?',

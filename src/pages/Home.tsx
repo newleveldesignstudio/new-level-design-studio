@@ -190,7 +190,7 @@ export default function Home() {
     <div>
       <SEO
         title="Premium Websites for Local Businesses | NLDS"
-        description="Premium websites, redesign, care, brand direction, and copy & visual support for local businesses in Port Orange, Daytona Beach, and Volusia County."
+        description="Websites, redesign, care, brand direction, and copy & visual support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
         canonical="https://newlvlstudio.com/"
         jsonLd={[localBusinessSchema(), websiteSchema()]}
       />

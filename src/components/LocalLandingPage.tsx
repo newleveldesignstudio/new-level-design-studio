@@ -1,13 +1,17 @@
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO, { localBusinessSchema, localServiceSchema, breadcrumbSchema } from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
-import { localBusinessSchema } from '@/components/SEO';
+import { LOCATION_PAGES, type LocationSlug } from '@/data/locationPages';
 
 export interface LocalPageConfig {
   seoTitle: string;
   seoDescription: string;
   canonical: string;
+  citySlug: LocationSlug;
+  breadcrumbName: string;
+  cityName: string;
+  areaServed: string[];
   eyebrow: string;
   h1: string;
   intro: string;
@@ -20,7 +24,20 @@ export interface LocalPageConfig {
 }
 
 export default function LocalLandingPage({ config }: { config: LocalPageConfig }) {
-  const schemas: Record<string, unknown>[] = [localBusinessSchema()];
+  const canonicalWithSlash = config.canonical.endsWith('/') ? config.canonical : `${config.canonical}/`;
+
+  const schemas: Record<string, unknown>[] = [
+    localBusinessSchema(),
+    localServiceSchema({
+      cityName: config.cityName,
+      areaServed: config.areaServed,
+      canonical: config.canonical,
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: 'https://newlvlstudio.com/' },
+      { name: config.breadcrumbName, url: canonicalWithSlash },
+    ]),
+  ];
   if (config.faq && config.faq.length > 0) {
     schemas.push({
       '@context': 'https://schema.org',
@@ -32,6 +49,8 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
       })),
     });
   }
+
+  const otherLocations = LOCATION_PAGES.filter((p) => p.slug !== config.citySlug);
 
   return (
     <div>
@@ -264,6 +283,30 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other areas we serve — cross-links between the four local pages */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">OTHER AREAS WE SERVE</p>
+          <div className="flex flex-wrap gap-x-8 gap-y-3 mt-6">
+            {otherLocations.map((loc) => (
+              <Link
+                key={loc.slug}
+                to={loc.href}
+                className="font-sans"
+                style={{
+                  fontSize: '0.9375rem',
+                  color: 'var(--charcoal)',
+                  textDecorationLine: 'underline',
+                  textUnderlineOffset: 3,
+                }}
+              >
+                {loc.name} →
+              </Link>
+            ))}
           </div>
         </div>
       </section>

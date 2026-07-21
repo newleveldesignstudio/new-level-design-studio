@@ -176,6 +176,73 @@ export function localBusinessSchema(): Record<string, unknown> {
   };
 }
 
+/**
+ * Sitewide Organization schema — rendered once from Layout.tsx so every
+ * public page carries an Organization node, independent of whether that
+ * page also renders the fuller localBusinessSchema(). Shares the same @id
+ * as localBusinessSchema() ('#business') so search engines merge them as
+ * one entity rather than treating this as a second, competing node.
+ * Same privacy guard as localBusinessSchema(): no streetAddress, geo, or
+ * openingHours here either.
+ */
+export function organizationSchema(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://newlvlstudio.com/#business',
+    name: 'New Level Design Studio',
+    alternateName: 'NLDS',
+    url: 'https://newlvlstudio.com',
+    logo: 'https://newlvlstudio.com/images/new-level-design-studio-logo-transparent-header.png',
+    sameAs: SOCIAL_LINKS.map((s) => s.url),
+    founder: {
+      '@type': 'Person',
+      '@id': 'https://newlvlstudio.com/#michael-vail',
+      name: 'Michael Vail',
+      url: 'https://newlvlstudio.com/michael-vail/',
+    },
+  };
+}
+
+/**
+ * Per-location Service schema. hasOfferCatalog intentionally mirrors the
+ * exact four-item "What We Build" list rendered on every LocalLandingPage
+ * (Website Design / Brand Direction / Website Copy & Visual Support /
+ * Website Care) — grounded in what's actually on the page, nothing added.
+ * areaServed values are drawn only from area names already established in
+ * localBusinessSchema()/Services.tsx, reordered to lead with each page's
+ * own city.
+ */
+export function localServiceSchema(params: {
+  cityName: string;
+  areaServed: string[];
+  canonical: string;
+}): Record<string, unknown> {
+  const url = params.canonical.endsWith('/') ? params.canonical : `${params.canonical}/`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    name: `Website Design & Brand Support in ${params.cityName}`,
+    serviceType: 'Website Design',
+    provider: { '@id': 'https://newlvlstudio.com/#business' },
+    areaServed: params.areaServed,
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Services',
+      itemListElement: [
+        'Website Design',
+        'Brand Direction',
+        'Website Copy & Visual Support',
+        'Website Care',
+      ].map((name) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name, serviceType: name },
+      })),
+    },
+  };
+}
+
 export function personSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',

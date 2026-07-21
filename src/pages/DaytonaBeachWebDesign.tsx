@@ -3,8 +3,12 @@ import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
 const config: LocalPageConfig = {
   seoTitle: 'Daytona Beach Website Design | NLDS',
-  seoDescription: 'Premium website design for local businesses in Daytona Beach, Florida. Clean, mobile-first websites with clear brand direction and ongoing care — built to earn trust and drive real inquiries.',
+  seoDescription: 'Website design for Daytona Beach businesses that need to stand out fast — mobile-first, trust-building sites for a competitive market.',
   canonical: 'https://newlvlstudio.com/daytona-beach-website-design',
+  citySlug: 'daytona-beach',
+  breadcrumbName: 'Daytona Beach Website Design',
+  cityName: 'Daytona Beach',
+  areaServed: ['Daytona Beach', 'Port Orange', 'Ormond Beach', 'New Smyrna Beach', 'Volusia County'],
   eyebrow: 'Daytona Beach, Florida',
   h1: 'Website Design for Daytona Beach Local Businesses',
   intro: 'Daytona Beach is a competitive market with a mix of tourism, hospitality, restaurants, service providers, and local businesses all competing for the same attention. We build websites and visual systems that help Daytona Beach businesses stand out, build trust faster, and make it easier for customers to take action.',
@@ -41,7 +45,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. Our Website Care plan keeps your website current, polished, and working at $99/month — covering content updates, image swaps, link checks, and a monthly review.',
+      a: 'Yes. For $99/month, our Website Care plan handles ongoing updates — content changes, image swaps, link and form checks, and a monthly review — so your site never looks abandoned.',
     },
     {
       q: 'Can you create visuals for my Google Business Profile and social pages?',
@@ -49,7 +53,7 @@ const config: LocalPageConfig = {
     },
     {
       q: 'How do I know which package is right for my business?',
-      a: 'The best first step is a quick conversation. Tell us about your business and what you need — we will match you to the right starting point, from a $129 Visual Starter Pack to a full website and brand system.',
+      a: 'Start with a short conversation about your business — we will recommend the right starting point, whether that is the $129 Visual Starter Pack or a full website and brand system.',
     },
   ],
 };
