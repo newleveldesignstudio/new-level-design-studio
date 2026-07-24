@@ -36,24 +36,24 @@ const config: LocalPageConfig = {
   ctaBody: 'Tell us about your business and we will show you what a premium website and visual system can do for your local presence.',
   faq: [
     {
-      q: 'Do you work with businesses outside Port Orange?',
-      a: 'Yes. While we are based in Port Orange and focused on Volusia County, we work with local businesses across Daytona Beach, Ormond Beach, New Smyrna Beach, DeLand, and Central Florida.',
+      q: 'Is New Level Design Studio actually based in Port Orange?',
+      a: 'Yes — Port Orange is our home base, and it is where most of our client relationships start. We also work with businesses throughout Daytona Beach, Ormond Beach, New Smyrna Beach, and the wider Volusia County and Central Florida area.',
+    },
+    {
+      q: 'What kind of local businesses do you typically build for in Port Orange?',
+      a: 'Mostly service-based businesses — restaurants, salons, contractors, and home-improvement companies looking for a cleaner, more credible online presence than a generic template can offer.',
     },
     {
       q: 'Can you help if I already have a website?',
-      a: 'Absolutely. We can redesign your current site, refresh the visuals, improve the structure, or just fix the parts that are not working. You do not need to start from scratch.',
+      a: 'Yes. We can redesign your current site, refresh the visuals, restructure the layout, or fix specific problem areas — a full rebuild is not always necessary.',
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes — Website Care is $99 a month and covers content updates, image swaps, link and form checks, and a monthly review, so your site stays polished long after launch.',
-    },
-    {
-      q: 'Can you create visuals for Google Business Profile and Facebook?',
-      a: 'Yes. Brand visuals are a core part of what we offer — including graphics for your Google Business Profile, Facebook cover, social posts, and any other platform your business uses.',
+      a: 'Yes. Website Care starts at $99 a month and covers content updates, image swaps, link and form checks, and a monthly review, so your site stays current long after launch.',
     },
     {
       q: 'How do I know which package I need?',
-      a: 'The best starting point is a quick conversation. Tell us about your business and what you are trying to fix or build, and we will point you toward the right fit — whether that is a Visual Starter Pack, a full website build, or something in between.',
+      a: 'Tell us about your business and what is not working, and we will recommend the right starting point — whether that is the Visual Starter Pack, a full website build, or Website Care for an existing site.',
     },
   ],
 };

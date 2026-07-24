@@ -1,6 +1,15 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Helmet } from 'react-helmet-async';
 import { SOCIAL_LINKS } from '@/lib/socialLinks';
+import { EXTERNAL_LINKS } from '@/lib/links';
+
+/**
+ * Entity-consistency sameAs list for the #business node: verified social
+ * profiles (SOCIAL_LINKS, also used to render the footer's follow icons)
+ * plus the Google Business Profile URL. Kept separate from SOCIAL_LINKS so
+ * adding GBP here doesn't add a GBP icon to the footer's social row.
+ */
+const BUSINESS_SAME_AS = [...SOCIAL_LINKS.map((s) => s.url), EXTERNAL_LINKS.googleBusinessProfile];
 
 interface SEOProps {
   title: string;
@@ -166,7 +175,7 @@ export function localBusinessSchema(): Record<string, unknown> {
       contactType: 'customer service',
       availableLanguage: 'English',
     },
-    sameAs: SOCIAL_LINKS.map((s) => s.url),
+    sameAs: BUSINESS_SAME_AS,
     founder: {
       '@type': 'Person',
       '@id': 'https://newlvlstudio.com/#michael-vail',
@@ -194,7 +203,7 @@ export function organizationSchema(): Record<string, unknown> {
     alternateName: 'NLDS',
     url: 'https://newlvlstudio.com',
     logo: 'https://newlvlstudio.com/images/new-level-design-studio-logo-transparent-header.png',
-    sameAs: SOCIAL_LINKS.map((s) => s.url),
+    sameAs: BUSINESS_SAME_AS,
     founder: {
       '@type': 'Person',
       '@id': 'https://newlvlstudio.com/#michael-vail',

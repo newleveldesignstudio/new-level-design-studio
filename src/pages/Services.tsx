@@ -7,6 +7,7 @@ import { getLenis } from '@/hooks/useLenis';
 import SEO, { localBusinessSchema } from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
+import { WEBSITE_CARE_INCLUSIONS } from '@/data/serviceTerminology';
 
 const websiteBuildInclusions = [
   'Custom design tailored to your business',
@@ -14,15 +15,6 @@ const websiteBuildInclusions = [
   'Clear navigation and service pages',
   'Fast load times and clean code',
   'Contact forms and quote requests',
-];
-
-const websiteCareInclusions = [
-  'Small content updates and text changes',
-  'Image swaps and media updates',
-  'Broken link checks and fixes',
-  'Basic monthly site review',
-  'Priority email support',
-  'Light performance monitoring',
 ];
 
 const visualContentInclusions = [
@@ -202,9 +194,14 @@ export default function Services() {
                 >
                   Keeps your site from feeling abandoned after launch — small updates, link checks, content swaps, and polish handled for you every month.
                 </p>
-                <Link to="/contact/" className="btn-primary mt-8 inline-block">
-                  Ask About Website Care
-                </Link>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <Link to="/website-care/" className="btn-primary">
+                    See Website Care Details
+                  </Link>
+                  <Link to="/contact/?service=website-maintenance" className="btn-secondary">
+                    Ask About Website Care
+                  </Link>
+                </div>
               </div>
               <div
                 style={{
@@ -220,7 +217,7 @@ export default function Services() {
                   What Is Included
                 </p>
                 <ul className="mt-5 flex flex-col" style={{ gap: 12 }}>
-                  {websiteCareInclusions.map((item, i) => (
+                  {WEBSITE_CARE_INCLUSIONS.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="font-sans shrink-0" style={{ fontSize: '0.75rem', color: 'var(--silver-grey)', marginTop: 2 }}>
                         —

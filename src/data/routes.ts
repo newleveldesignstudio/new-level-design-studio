@@ -25,6 +25,7 @@ export const STATIC_PUBLIC_ROUTES = [
   '/journal',
   '/packages',
   '/starter-pack',
+  '/website-care',
   '/contact',
   '/privacy',
   '/terms',

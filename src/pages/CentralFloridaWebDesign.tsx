@@ -36,24 +36,24 @@ const config: LocalPageConfig = {
   ctaBody: 'Tell us about your business and service area — we will show you what a premium website and brand system can do for your growth.',
   faq: [
     {
-      q: 'Do you work with businesses across Central Florida?',
-      a: 'Yes. We work with local businesses throughout Central Florida — from the Space Coast and Orlando metro to the Volusia County coast and surrounding areas.',
+      q: 'Central Florida is a huge region — do you only work with businesses near Volusia County?',
+      a: 'Our home base is Port Orange, but we work with growing local businesses across the wider Central Florida area, from the Space Coast and Orlando metro to the Volusia County coast.',
+    },
+    {
+      q: 'My business is growing fast — can my website keep up?',
+      a: 'That is exactly what Website Care is built for. Instead of a site that goes stale after launch, ongoing updates and a monthly review keep it current as your business, services, or locations change.',
     },
     {
       q: 'Can you help if I already have a website?',
-      a: 'Yes. We can redesign, improve, or rebuild your existing site — whatever makes the most sense for where your business is right now.',
+      a: 'Yes. We can redesign, refresh, or rebuild your existing site — whatever fits where your business is right now.',
     },
     {
       q: 'Do you offer ongoing website maintenance?',
-      a: 'Yes. At $99/month, Website Care covers the ongoing upkeep — content updates, image swaps, link and form checks, and a monthly review — so the site keeps working as your business grows.',
-    },
-    {
-      q: 'Can you create visuals for Google Business Profile and Facebook?',
-      a: 'Yes. We design the visual assets that keep your brand consistent everywhere customers look — Google Business Profile, Facebook, social posts, and beyond.',
+      a: 'Yes. Website Care starts at $99 a month and covers content updates, image swaps, link and form checks, and a monthly review, so your site keeps working as your business grows.',
     },
     {
       q: 'What is the best way to get started?',
-      a: 'The easiest way to start is a short call about your business and service area — from there we will recommend the right package, from a Visual Starter Pack to a full site build.',
+      a: 'The easiest way to start is a short conversation about your business and service area — from there we will recommend the right package, from a Visual Starter Pack to a full website build.',
     },
   ],
 };

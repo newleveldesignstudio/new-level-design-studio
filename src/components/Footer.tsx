@@ -22,7 +22,7 @@ const studioLinks = [
 const serviceLinks = [
   { text: PRIMARY_SERVICES[0], href: '/services/' },
   { text: PRIMARY_SERVICES[1], href: '/services/' },
-  { text: PRIMARY_SERVICES[2], href: '/services/' },
+  { text: PRIMARY_SERVICES[2], href: '/website-care/' },
   { text: SUPPORTING_CAPABILITIES[2], href: '/services/' },
 ];
 

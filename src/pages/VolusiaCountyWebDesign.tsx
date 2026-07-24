@@ -36,24 +36,24 @@ const config: LocalPageConfig = {
   ctaBody: 'Tell us where you operate and what your business needs — we will put together the right plan for your market.',
   faq: [
     {
+      q: 'I operate in more than one Volusia County city — can you build one consistent system for all my locations?',
+      a: 'Yes. Keeping your website, Google Business Profile, and social visuals consistent across every location you serve is a core part of what we do — so your brand looks like one business, not several different ones.',
+    },
+    {
       q: 'Do you work with businesses across all of Volusia County?',
-      a: 'Yes. We work with businesses in Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, DeLand, Edgewater, and surrounding areas throughout the county.',
+      a: 'Yes — Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, DeLand, Edgewater, and the surrounding areas are all part of our regular service area.',
     },
     {
       q: 'Can you help if I already have a website?',
-      a: 'Yes. We can redesign, refresh, or improve what you already have — or rebuild from scratch if that makes more sense for your business.',
+      a: 'Yes. Depending on what is not working, that can mean a full redesign, a visual refresh, or targeted fixes to specific pages.',
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. Website Care runs $99/month and takes care of the maintenance side — content updates, image swaps, link and form checks, plus a monthly review — across however many locations you operate.',
-    },
-    {
-      q: 'Can you create visuals for Google Business Profile and social media?',
-      a: 'Yes. Brand visuals are part of our core offering — covers, banners, post graphics, and any assets your business needs to look consistent across every platform.',
+      a: 'Yes. Website Care runs $99 a month and covers content updates, image swaps, link and form checks, and a monthly review — across however many locations you operate.',
     },
     {
       q: 'How do I know which package is right for my business?',
-      a: 'Start with a quick conversation. Describe your business and what you need — we will point you toward the right fit, whether that is a Visual Starter Pack, a full website, or a complete brand system.',
+      a: 'Describe your business and where you operate, and we will point you toward the right fit — a single-location site, a multi-location structure, or ongoing Website Care for a site you already have.',
     },
   ],
 };

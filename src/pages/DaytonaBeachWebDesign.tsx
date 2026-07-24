@@ -36,24 +36,24 @@ const config: LocalPageConfig = {
   ctaBody: 'Tell us about your business and we will show you what a premium website and visual system can do for your local visibility and customer conversions.',
   faq: [
     {
-      q: 'Do you work with businesses outside Daytona Beach?',
-      a: 'Yes. We serve businesses across Port Orange, Ormond Beach, New Smyrna Beach, DeLand, and the wider Volusia County and Central Florida area.',
+      q: 'Why does a Daytona Beach business need a stronger website than businesses elsewhere?',
+      a: 'Daytona Beach mixes heavy tourism with local competition, so many visitors are making a one-time decision with no prior relationship to your business. An outdated or generic website costs you that first impression before you get a chance to make your case in person.',
+    },
+    {
+      q: 'Do you work with seasonal or tourism-driven businesses?',
+      a: 'Yes. Restaurants, hospitality, and service businesses that see seasonal swings in foot traffic are a big part of who we build for in Daytona Beach — fast-loading pages and one clear next step matter most when visitors decide in seconds.',
     },
     {
       q: 'Can you help if I already have a website?',
-      a: 'Yes. We can redesign your current site, improve the layout, refresh the visuals, or address specific problems — without requiring a full rebuild every time.',
+      a: 'Yes. We can redesign, restructure, or simply sharpen the visuals on your existing site — you do not need to start over to see a real improvement.',
     },
     {
       q: 'Do you offer website maintenance after launch?',
-      a: 'Yes. For $99/month, our Website Care plan handles ongoing updates — content changes, image swaps, link and form checks, and a monthly review — so your site never looks abandoned.',
-    },
-    {
-      q: 'Can you create visuals for my Google Business Profile and social pages?',
-      a: 'Yes. We build brand visuals that work across your website, Google Business Profile, Facebook, and any other platform where your business shows up.',
+      a: 'Yes. Website Care starts at $99 a month and covers ongoing updates — content changes, image swaps, link and form checks, and a monthly review — so your site does not quietly fall behind.',
     },
     {
       q: 'How do I know which package is right for my business?',
-      a: 'Start with a short conversation about your business — we will recommend the right starting point, whether that is the $129 Visual Starter Pack or a full website and brand system.',
+      a: 'Start with a short conversation about your business — we will recommend the right starting point, from the $129 Visual Starter Pack up to a full website build.',
     },
   ],
 };

@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { getArticleBySlug, getRelatedArticles } from '@/data/articles';
 import { markdownToHtml } from '@/lib/markdownToHtml';
 import { getCategoryDisplayLabel } from '@/lib/categoryDisplayLabels';
+import { toISODate } from '@/lib/utils';
 import SEO from '@/components/SEO';
 import FinalCTA from '@/components/FinalCTA';
 import SectionDivider from '@/components/SectionDivider';
@@ -60,7 +61,9 @@ export default function ArticleDetail() {
         url: 'https://newlvlstudio.com/images/new-level-design-studio-logo-transparent-header.png',
       },
     },
-    datePublished: article.date,
+    // article.date is the visible byline ("May 24, 2026") and stays as-is;
+    // datePublished must be ISO 8601 for Schema.org/Rich Results validity.
+    datePublished: toISODate(article.date),
     url: `https://newlvlstudio.com/journal/${article.slug}/`,
     mainEntityOfPage: `https://newlvlstudio.com/journal/${article.slug}/`,
   };

@@ -27,6 +27,16 @@ export const SUPPORTING_CAPABILITIES = [
 ] as const;
 export type SupportingCapability = (typeof SUPPORTING_CAPABILITIES)[number];
 
+/** Approved Website Care inclusions — shown on /services/#website-care and /website-care/. */
+export const WEBSITE_CARE_INCLUSIONS = [
+  'Small content updates and text changes',
+  'Image swaps and media updates',
+  'Broken link checks and fixes',
+  'Basic monthly site review',
+  'Priority email support',
+  'Light performance monitoring',
+] as const;
+
 export interface ContactServiceOption {
   value: string;
   label: string;

@@ -9,6 +9,7 @@ import Studio from '@/pages/Studio';
 import MichaelVail from '@/pages/MichaelVail';
 import Packages from '@/pages/Packages';
 import StarterPack from '@/pages/StarterPack';
+import WebsiteCare from '@/pages/WebsiteCare';
 import Contact from '@/pages/Contact';
 import Terms from '@/pages/Terms';
 import Privacy from '@/pages/Privacy';
@@ -73,6 +74,7 @@ export default function App() {
           <Route path="/michael-vail" element={<MichaelVail />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/starter-pack" element={<StarterPack />} />
+          <Route path="/website-care" element={<WebsiteCare />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
