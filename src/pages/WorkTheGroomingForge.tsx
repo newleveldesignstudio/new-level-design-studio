@@ -6,7 +6,7 @@ import RelatedProjects from '@/components/RelatedProjects';
 import ConceptDisclosure from '@/components/ConceptDisclosure';
 import WorkDemonstrates from '@/components/WorkDemonstrates';
 
-const DEMO_URL = 'https://id-preview--e74d8a2e-7086-4e0e-935c-61e0c7f383c5.lovable.app';
+const DEMO_URL = 'https://the-grooming-forge-nlds.netlify.app';
 
 const eyebrowStyle = { marginBottom: 16 } as const;
 const bodyStyle = {

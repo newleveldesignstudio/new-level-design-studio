@@ -94,6 +94,14 @@
 > src/data/routes.ts. Add a Works.tsx grid entry using only copy from the
 > page itself. Run the optimizer for its images. Validate with build:full
 > (prerender/sitemap counts increase by 1) and browser checks. No deploy.
+>
+> Demo link rule (see CLAUDE.md "Portfolio demo hosting"): Lovable is a
+> build/prototype environment only — never link a portfolio CTA to a
+> `lovable.app` / `lovable.dev` / `id-preview` URL. If the source project
+> lives on Lovable, deploy it to its own Netlify site first (name pattern
+> `<concept-name>-nlds`), then point the case study's demo CTA at that
+> Netlify URL. Before any portfolio deploy, grep the NLDS source for
+> `lovable.app`, `lovable.dev`, and `id-preview` and confirm zero matches.
 
 **New journal article**
 > Add an article to src/data/articles.ts with slug/title/metaTitle/category/

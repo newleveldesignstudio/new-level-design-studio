@@ -253,7 +253,7 @@ const projects: WorkProject[] = [
     classification: 'Concept Build',
     demonstrates: 'Demonstrates a cinematic, motion-driven website concept for a premium local barbershop.',
     slug: 'the-grooming-forge',
-    demoUrl: 'https://id-preview--e74d8a2e-7086-4e0e-935c-61e0c7f383c5.lovable.app',
+    demoUrl: 'https://the-grooming-forge-nlds.netlify.app',
     demoLabel: 'View Concept Website',
   },
   {

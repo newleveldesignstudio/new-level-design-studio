@@ -42,6 +42,23 @@ The production website for New Level Design Studio (NLDS) — Michael Vail's fou
 - New heavy images: add to `CONTENT_IMAGES` in `scripts/optimize-images.mjs`, run it, reference the `.webp` (+ `-w768.webp` srcset). Originals stay (they're og:image targets + pipeline sources).
 - **`assets-src/scroll-trigger/` is load-bearing** — the ONLY source for the hero frames (upstream tmp source is gone). Never delete. Runtime frames serve from `public/images/scroll-trigger/{desktop-optimized,tablet-optimized,mobile}/`.
 
+## Portfolio demo hosting (Lovable/Netlify rule)
+
+- Lovable is only the build/prototype environment. Public demos must be
+  hosted on Netlify.
+- NLDS portfolio pages must never link to Lovable preview URLs. Every
+  portfolio "View Live Site," "View Concept Website," or demo CTA must
+  point to a Netlify URL or a client-owned production domain.
+- Before deploying a portfolio entry, search the NLDS source for
+  `lovable.app`, `lovable.dev`, and `id-preview`. If any public NLDS page
+  contains those strings, replace them with the Netlify-hosted demo URL
+  before deployment.
+- For concept builds, create a separate Netlify site using a clear name
+  (e.g. `the-grooming-forge-nlds`, `client-or-concept-name-nlds`), then
+  update the NLDS case study to link to that Netlify demo.
+- Final QA before any portfolio deploy must confirm no Lovable URLs
+  remain in the public NLDS source or production HTML.
+
 ## Contact / GBP / social rules
 
 - Contact form must keep: `method="POST"`, `data-netlify="true"`, hidden `form-name=contact`, `bot-field` honeypot — matching field names in the hidden `index.html` form. `?service=` preselect must keep working.
