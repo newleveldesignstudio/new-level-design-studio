@@ -46,6 +46,7 @@ export const STATIC_PUBLIC_ROUTES = [
   '/works/aureline-estates',
   '/works/stone-timber-remodeling',
   '/works/lotus-beauty-house',
+  '/works/the-grooming-forge',
   '/works/blend-house-smoothie-bar',
   '/works/liquid-legacy-pools',
   '/free-seo-tools',

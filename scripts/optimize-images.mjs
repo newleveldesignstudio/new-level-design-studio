@@ -52,6 +52,7 @@ const CONTENT_IMAGES = [
   '/nlds/images/liquid-legacy-pools-luxury-pool-website-concept-nlds.png',
   '/nlds/images/stone-timber-remodeling-website-design-showcase.png',
   '/nlds/images/dh-luxury-roofing-website-design-showcase.png',
+  '/nlds/images/the-grooming-forge-barbershop-website-concept-nlds.jpg',
 ];
 
 const FOUNDER = '/images/founder/michael-vail-founder-portrait-new-level-design-studio.webp';

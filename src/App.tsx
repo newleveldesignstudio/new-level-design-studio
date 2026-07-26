@@ -28,6 +28,7 @@ import WorkCoastalStandardRealty from '@/pages/WorkCoastalStandardRealty';
 import WorkAurelineEstates from '@/pages/WorkAurelineEstates';
 import WorkStoneTimberRemodeling from '@/pages/WorkStoneTimberRemodeling';
 import WorkLotusBeautyHouse from '@/pages/WorkLotusBeautyHouse';
+import WorkTheGroomingForge from '@/pages/WorkTheGroomingForge';
 import WorkBlendHouseSmoothieBar from '@/pages/WorkBlendHouseSmoothieBar';
 import WorkLiquidLegacyPools from '@/pages/WorkLiquidLegacyPools';
 import PortOrangeWebDesign from '@/pages/PortOrangeWebDesign';
@@ -93,6 +94,7 @@ export default function App() {
           <Route path="/works/aureline-estates" element={<WorkAurelineEstates />} />
           <Route path="/works/stone-timber-remodeling" element={<WorkStoneTimberRemodeling />} />
           <Route path="/works/lotus-beauty-house" element={<WorkLotusBeautyHouse />} />
+          <Route path="/works/the-grooming-forge" element={<WorkTheGroomingForge />} />
           <Route path="/works/blend-house-smoothie-bar" element={<WorkBlendHouseSmoothieBar />} />
           <Route path="/works/liquid-legacy-pools" element={<WorkLiquidLegacyPools />} />
           <Route path="/port-orange-website-design" element={<PortOrangeWebDesign />} />
