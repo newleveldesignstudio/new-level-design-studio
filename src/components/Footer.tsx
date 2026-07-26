@@ -16,6 +16,7 @@ const studioLinks = [
   { text: 'Journal', href: '/journal/' },
   { text: 'Contact', href: '/contact/' },
   { text: 'Free SEO Tools', href: '/free-seo-tools/' },
+  { text: 'Free Local Visibility Check', href: '/free-local-visibility-check/' },
   { text: 'Local Visibility Insights', href: '/local-visibility-insights/' },
 ];
 
@@ -23,7 +24,7 @@ const serviceLinks = [
   { text: PRIMARY_SERVICES[0], href: '/services/' },
   { text: PRIMARY_SERVICES[1], href: '/services/' },
   { text: PRIMARY_SERVICES[2], href: '/website-care/' },
-  { text: SUPPORTING_CAPABILITIES[2], href: '/services/' },
+  { text: SUPPORTING_CAPABILITIES[2], href: '/local-visibility-setup/' },
 ];
 
 const localLinks = [

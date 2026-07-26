@@ -53,5 +53,7 @@ export const CONTACT_SERVICE_OPTIONS: readonly ContactServiceOption[] = [
   { value: 'visual-starter-pack', label: 'Visual Starter Pack' },
   { value: 'brand-direction', label: 'Brand Direction for a Website Project' },
   { value: 'advanced-functionality', label: 'Advanced Website Functionality' },
+  { value: 'local-visibility-setup', label: 'Local Visibility Setup' },
+  { value: 'local-visibility-check', label: 'Free Local Visibility Check' },
   { value: 'not-sure', label: 'Not Sure Yet' },
 ] as const;

@@ -12,9 +12,15 @@ interface Step {
 
 interface ProcessSectionProps {
   steps: Step[];
+  eyebrow?: string;
+  heading?: string;
 }
 
-export default function ProcessSection({ steps }: ProcessSectionProps) {
+export default function ProcessSection({
+  steps,
+  eyebrow = 'OUR PROCESS',
+  heading = 'A Smarter Way to Look Established Online',
+}: ProcessSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,12 +58,12 @@ export default function ProcessSection({ steps }: ProcessSectionProps) {
   return (
     <section ref={sectionRef} style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
       <div className="container-nlds">
-        <p className="eyebrow text-center">OUR PROCESS</p>
+        <p className="eyebrow text-center">{eyebrow}</p>
         <h2
           className="font-serif text-center mt-4"
           style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
         >
-          A Smarter Way to Look Established Online
+          {heading}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">

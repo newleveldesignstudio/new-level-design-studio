@@ -43,6 +43,7 @@ type NavItem = {
     Website Redesign→ '/services/website-redesign'
     Brand Direction → '/services/brand-direction'
   Website Care now has its own page (/website-care/) — done, not a TODO.
+  Local SEO Structure now has its own page (/local-visibility-setup/) — done, not a TODO.
 */
 
 const navItems: NavItem[] = [
@@ -57,7 +58,7 @@ const navItems: NavItem[] = [
         { label: PRIMARY_SERVICES[1], path: '/services/', description: 'A structured rebuild for a site that no longer represents the business.' },
         { label: PRIMARY_SERVICES[2], path: '/website-care/', description: 'Ongoing website quality, visibility, and trust management.' },
         { label: SUPPORTING_CAPABILITIES[0], path: '/services/', description: 'Visual identity support for businesses that need a sharper presentation.' },
-        { label: SUPPORTING_CAPABILITIES[2], path: '/services/', description: 'Location-targeted structure that helps local search understand your service area.' },
+        { label: SUPPORTING_CAPABILITIES[2], path: '/local-visibility-setup/', description: 'Location-targeted structure that helps local search understand your service area.' },
         { label: SUPPORTING_CAPABILITIES[1], path: '/services/#website-copy-visual-support', description: 'Branded graphics, launch assets, and supporting content that keep your business consistent.' },
       ],
     },
@@ -103,13 +104,14 @@ const navItems: NavItem[] = [
   {
     label: 'Resources',
     path: '/journal/',
-    activePrefixes: ['/journal', '/free-seo-tools', '/local-visibility-insights'],
+    activePrefixes: ['/journal', '/free-seo-tools', '/free-local-visibility-check', '/local-visibility-insights'],
     dropdown: {
       title: 'RESOURCES',
       description: 'Free tools and articles on websites, local SEO, and business visibility.',
       links: [
         { label: 'Journal', path: '/journal/', description: 'Practical articles on websites, visuals, and local business growth.' },
         { label: 'Free SEO Tools', path: '/free-seo-tools/', description: 'Check website speed, indexing, structured data, and local visibility.' },
+        { label: 'Free Local Visibility Check', path: '/free-local-visibility-check/', description: 'A free, human review of your website, Google profile, reviews, and listings.' },
         { label: 'Local Visibility Insights', path: '/local-visibility-insights/', description: 'Practical guidance on how customers find, evaluate, and contact local businesses.' },
       ],
     },

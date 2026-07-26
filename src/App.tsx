@@ -10,6 +10,7 @@ import MichaelVail from '@/pages/MichaelVail';
 import Packages from '@/pages/Packages';
 import StarterPack from '@/pages/StarterPack';
 import WebsiteCare from '@/pages/WebsiteCare';
+import LocalVisibilitySetup from '@/pages/LocalVisibilitySetup';
 import Contact from '@/pages/Contact';
 import Terms from '@/pages/Terms';
 import Privacy from '@/pages/Privacy';
@@ -36,6 +37,7 @@ import DaytonaBeachWebDesign from '@/pages/DaytonaBeachWebDesign';
 import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
 import CentralFloridaWebDesign from '@/pages/CentralFloridaWebDesign';
 import FreeSeoTools from '@/pages/FreeSeoTools';
+import FreeLocalVisibilityCheck from '@/pages/FreeLocalVisibilityCheck';
 import LocalVisibilityInsights from '@/pages/LocalVisibilityInsights';
 import LocalVisibilityWebsiteTrust from '@/pages/LocalVisibilityWebsiteTrust';
 import LocalVisibilityCustomerDecisionPath from '@/pages/LocalVisibilityCustomerDecisionPath';
@@ -76,6 +78,7 @@ export default function App() {
           <Route path="/packages" element={<Packages />} />
           <Route path="/starter-pack" element={<StarterPack />} />
           <Route path="/website-care" element={<WebsiteCare />} />
+          <Route path="/local-visibility-setup" element={<LocalVisibilitySetup />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
@@ -102,6 +105,7 @@ export default function App() {
           <Route path="/volusia-county-website-design" element={<VolusiaCountyWebDesign />} />
           <Route path="/central-florida-website-design" element={<CentralFloridaWebDesign />} />
           <Route path="/free-seo-tools" element={<FreeSeoTools />} />
+          <Route path="/free-local-visibility-check" element={<FreeLocalVisibilityCheck />} />
           <Route path="/local-visibility-insights" element={<LocalVisibilityInsights />} />
           <Route path="/local-visibility-insights/website-trust" element={<LocalVisibilityWebsiteTrust />} />
           <Route path="/local-visibility-insights/customer-decision-path" element={<LocalVisibilityCustomerDecisionPath />} />
