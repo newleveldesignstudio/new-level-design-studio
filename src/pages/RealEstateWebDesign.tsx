@@ -287,34 +287,32 @@ export default function RealEstateWebDesign() {
 
           {/* Anchor pricing card */}
           <div
-            className="mt-10"
+            className="mt-10 flex flex-col gap-8 md:grid md:grid-cols-[1fr_auto] md:grid-rows-[auto_auto] md:items-center"
             style={{
               backgroundColor: 'var(--charcoal)',
               padding: 'clamp(32px, 5vw, 48px)',
-              display: 'grid',
-              gridTemplateColumns: '1fr auto',
-              gap: 32,
-              alignItems: 'center',
             }}
           >
-            <div>
+            <div className="md:col-start-1 md:row-start-1">
               <p className="font-sans" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--silver-grey)' }}>
                 Initial Realtor Website Setup
               </p>
               <h3 className="font-serif mt-3" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', lineHeight: 1.1 }}>
                 Your realtor website, built and launched
               </h3>
-              <Link to="/contact/?service=realtor-website" className="btn-primary mt-6 inline-block">
-                Start a Realtor Website
-              </Link>
             </div>
-            <div style={{ textAlign: 'right' }}>
+            <div className="text-left md:text-right md:col-start-2 md:row-start-1 md:row-span-2 md:self-center">
               <div className="font-serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'var(--white)', lineHeight: 1 }}>
                 $1,500+
               </div>
               <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--silver-grey)' }}>
                 Starting at · per project
               </p>
+            </div>
+            <div className="md:col-start-1 md:row-start-2">
+              <Link to="/contact/?service=realtor-website" className="btn-primary inline-block">
+                Start a Realtor Website
+              </Link>
             </div>
           </div>
 
