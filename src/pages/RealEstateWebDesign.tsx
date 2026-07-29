@@ -434,6 +434,18 @@ export default function RealEstateWebDesign() {
         </div>
       </section>
 
+      {/* Subtle trust link to the proof page */}
+      <div style={{ backgroundColor: 'var(--bg-soft)', paddingTop: 48 }}>
+        <div className="container-nlds text-center">
+          <p className="font-sans" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
+            Every client site follows a build, backup, QA, and deployment process.{' '}
+            <Link to="/proof/" className="text-link">
+              See how I protect client websites
+            </Link>
+          </p>
+        </div>
+      </div>
+
       <FinalCTA
         heading="Request a Realtor Website Quote"
         body="Tell us about your brokerage, your listings, and your goals — we'll put together a clear scope and price before anything begins."
