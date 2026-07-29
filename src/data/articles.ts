@@ -1171,7 +1171,7 @@ The results are original, high-resolution images ready for Instagram, Facebook, 
 
 Volusia County has been one of the fastest-growing real estate markets in Florida over the past several years. The combination of beach access, lower cost of living relative to South Florida, and proximity to the I-4 corridor has drawn consistent buyer interest from Orlando, Tampa, and out-of-state markets — particularly Northeast transplants.
 
-That buyer profile is educated, digital-first, and doing extensive online research before they contact an agent. Your Instagram, your website, and your Google Business Profile are your first impression. Professional content ensures that impression is the right one.
+That buyer profile is educated, digital-first, and doing extensive online research before they contact an agent. Your Instagram, [your website](/real-estate-web-design/), and your Google Business Profile are your first impression. Professional content ensures that impression is the right one.
 
 ## What It Costs
 
@@ -1507,7 +1507,7 @@ It's worth being clear about what professional marketing images are and aren't i
 
 Florida real estate has some characteristics that make professional imagery especially valuable. The market draws buyers from all over the country — retirees from the Northeast, remote workers relocating from high-cost cities, investors looking at rental income properties. These buyers are doing their research almost entirely online before they engage with an agent.
 
-An agent in the Volusia County market who has a polished, consistent digital presence — professional images on every platform, compelling ad creative, a website that looks credible — will convert more of those online researchers into actual conversations.
+An agent in the Volusia County market who has a polished, consistent digital presence — professional images on every platform, compelling ad creative, [a website that looks credible](/real-estate-web-design/) — will convert more of those online researchers into actual conversations.
 
 The competition is also intensifying. Large regional teams and national brokerages have marketing departments and production budgets. An independent agent or small team competing against that has to be smart about how they allocate their marketing dollars. Professional imagery gives them access to the same visual quality without the same overhead.
 
@@ -2213,7 +2213,7 @@ Individually, none of these feel like a big deal. Together, they undo a lot of t
 
 If your Google Business Profile is solid but your website is lagging, a few fixes tend to matter more than the rest:
 
-Make sure your website and Google profile actually match. Business name, phone number, hours, and service area should be identical in both places — inconsistency quietly undermines trust with both customers and Google.
+[Make sure your website and Google profile actually match](/local-visibility-setup/). Business name, phone number, hours, and service area should be identical in both places — inconsistency quietly undermines trust with both customers and Google.
 
 Build out real [service pages](/services/) instead of one crowded homepage section. Each service deserves its own space to explain what's included and who it's for.
 
@@ -3461,7 +3461,7 @@ After launch, check that the profile and website match on:
 - Photos or brand direction
 - Appointment or contact links
 
-If the profile sends visitors to a page that feels disconnected, trust drops. Your profile helps people find you. Your website helps them decide if they trust you.
+If the profile sends visitors to a page that feels disconnected, trust drops. Your profile helps people find you. Your website helps them decide if they trust you. If you need help getting the two back in sync, that alignment work is exactly what [Local Visibility Setup](/local-visibility-setup/) covers.
 
 ## The mobile site needs another look
 
@@ -3520,7 +3520,7 @@ This is where you can review:
 - Content opportunities
 - Conversion weak spots
 
-That is why [post-launch support](/packages/) matters. It turns the website from a finished file into a managed part of the business presence.
+That is why [post-launch support](/website-care/) matters. It turns the website from a finished file into a managed part of the business presence.
 
 ## Final thought
 

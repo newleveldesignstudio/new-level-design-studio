@@ -90,7 +90,7 @@ export function localBusinessSchema(): Record<string, unknown> {
     '@id': 'https://newlvlstudio.com/#business',
     name: 'New Level Design Studio',
     alternateName: 'NLDS',
-    url: 'https://newlvlstudio.com',
+    url: 'https://newlvlstudio.com/',
     telephone: '+13868465754',
     email: 'michael@newlvlstudio.com',
     slogan: 'Raise the Standard.',
@@ -201,7 +201,7 @@ export function organizationSchema(): Record<string, unknown> {
     '@id': 'https://newlvlstudio.com/#business',
     name: 'New Level Design Studio',
     alternateName: 'NLDS',
-    url: 'https://newlvlstudio.com',
+    url: 'https://newlvlstudio.com/',
     logo: 'https://newlvlstudio.com/images/new-level-design-studio-logo-transparent-header.png',
     sameAs: BUSINESS_SAME_AS,
     founder: {
@@ -273,7 +273,7 @@ export function websiteSchema(): Record<string, unknown> {
     '@type': 'WebSite',
     '@id': 'https://newlvlstudio.com/#website',
     name: 'New Level Design Studio',
-    url: 'https://newlvlstudio.com',
+    url: 'https://newlvlstudio.com/',
   };
 }
 
