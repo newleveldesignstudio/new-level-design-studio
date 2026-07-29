@@ -55,5 +55,6 @@ export const CONTACT_SERVICE_OPTIONS: readonly ContactServiceOption[] = [
   { value: 'advanced-functionality', label: 'Advanced Website Functionality' },
   { value: 'local-visibility-setup', label: 'Local Visibility Setup' },
   { value: 'local-visibility-check', label: 'Free Local Visibility Check' },
+  { value: 'realtor-website', label: 'Real Estate Web Design' },
   { value: 'not-sure', label: 'Not Sure Yet' },
 ] as const;
