@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import { fadeUp } from '@/lib/motion';
 import { EXTERNAL_LINKS } from '@/lib/links';
-import { SOCIAL_LINKS } from '@/lib/socialLinks';
+import { FOOTER_SOCIAL_LINKS } from '@/lib/socialLinks';
 import { PRIMARY_SERVICES, SUPPORTING_CAPABILITIES } from '@/data/serviceTerminology';
 
 const studioLinks = [
@@ -263,7 +263,7 @@ export default function Footer() {
               </p>
               <nav aria-label="Follow NLDS on social media">
                 <div className="flex flex-wrap" style={{ gap: '2px 0' }}>
-                  {SOCIAL_LINKS.map((social, i) => (
+                  {FOOTER_SOCIAL_LINKS.map((social, i) => (
                     <span key={social.platform}>
                       <a
                         href={social.url}
@@ -277,7 +277,7 @@ export default function Footer() {
                       >
                         {social.platform}
                       </a>
-                      {i < SOCIAL_LINKS.length - 1 && (
+                      {i < FOOTER_SOCIAL_LINKS.length - 1 && (
                         <span
                           aria-hidden="true"
                           style={{ margin: '0 5px', color: 'var(--silver-grey)', fontSize: '0.8125rem' }}

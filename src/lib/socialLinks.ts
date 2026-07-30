@@ -39,3 +39,13 @@ export const SOCIAL_LINKS = [
 ] as const;
 
 export type SocialLink = (typeof SOCIAL_LINKS)[number];
+
+/**
+ * Footer-only subset. X, TikTok, Threads, and YouTube are no longer actively
+ * used (2026-07-30) but are kept in SOCIAL_LINKS itself since that list also
+ * feeds the schema.org sameAs array (SEO.tsx) and the social rows on Contact
+ * and Studio — none of which were part of this footer-cleanup request.
+ */
+export const FOOTER_SOCIAL_LINKS = SOCIAL_LINKS.filter(
+  (s) => !['X', 'TikTok', 'Threads', 'YouTube'].includes(s.platform),
+);

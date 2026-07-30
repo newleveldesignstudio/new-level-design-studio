@@ -528,7 +528,7 @@ export default function RealEstateWebDesign() {
           </p>
           <div className="mt-8">
             <a
-              href="https://wynne-iaconis-realty-nlds.netlify.app/listings"
+              href="https://jandehomesfl.com/listings/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"
@@ -536,8 +536,7 @@ export default function RealEstateWebDesign() {
               View Example Listing Pages
             </a>
             <p className="font-sans mt-4" style={{ fontSize: '0.8125rem', fontStyle: 'italic', color: 'var(--muted-text)', maxWidth: 560 }}>
-              This is a staging/example project used to demonstrate the listing page system — not a
-              final client domain.
+              View the live listing presentation system built for Wynne-Iaconis Realty.
             </p>
           </div>
         </div>
