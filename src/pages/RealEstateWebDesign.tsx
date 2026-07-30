@@ -66,6 +66,53 @@ const SUPPORTING_PRICING = [
   },
 ];
 
+const PACKAGE_OPTIONS = [
+  {
+    name: 'Agent Website',
+    price: '$1,500+',
+    bestFor: 'Best for: solo Realtors who need a clean, professional website that makes referrals feel confident.',
+    includes: [
+      'Mobile-first custom site',
+      'About/contact/listing-ready structure',
+      'Clear calls to call, email, or request help',
+      'Good fit before IDX is needed',
+    ],
+  },
+  {
+    name: 'Signature Realtor Website',
+    price: '$2,500+',
+    bestFor: 'Best for: agents who want stronger branding, better listing presentation, and a more premium first impression.',
+    includes: [
+      'More custom homepage direction',
+      'Featured listings or listing detail presentation',
+      'Buyer/seller path clarity',
+      'Stronger visual polish for referrals and social traffic',
+    ],
+  },
+  {
+    name: 'Team & Market Authority',
+    price: '$4,000+',
+    bestFor: 'Best for: teams or serious agents who want to build authority around areas, specialties, and long-term lead generation.',
+    includes: [
+      'Area/community pages',
+      'Team or specialty positioning',
+      'Listing/lead flow planning',
+      'Stronger local SEO foundation',
+    ],
+  },
+  {
+    name: 'Website Care',
+    price: '$99/mo',
+    bestFor: 'Best for: Realtors who want updates handled after launch.',
+    includes: [
+      'Simple listing/status updates',
+      'Site edits and maintenance',
+      'Technical checkups',
+      'Best for busy agents who do not want to manage the site themselves',
+    ],
+  },
+];
+
 const serviceSchema: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -89,10 +136,33 @@ const serviceSchema: Record<string, unknown> = {
     itemListElement: [
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Initial Realtor Website Setup' },
+        itemOffered: { '@type': 'Service', name: 'Agent Website' },
+        description: 'Starting price for a solo Realtor website; final scope quoted separately.',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '1500',
+          price: 1500,
+          priceCurrency: 'USD',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'Signature Realtor Website' },
+        description:
+          'Starting price for stronger branding and listing presentation; final scope quoted separately.',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: 2500,
+          priceCurrency: 'USD',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'Team & Market Authority' },
+        description:
+          'Starting price for team or market-authority sites with area pages; final scope quoted separately.',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: 4000,
           priceCurrency: 'USD',
         },
       },
@@ -101,7 +171,7 @@ const serviceSchema: Record<string, unknown> = {
         itemOffered: { '@type': 'Service', name: 'Website Care' },
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '99',
+          price: 99,
           priceCurrency: 'USD',
           unitText: 'MONTH',
         },
@@ -130,6 +200,12 @@ export default function RealEstateWebDesign() {
     childSelector: '[data-reveal-item]',
   });
   const pricingRef = useScrollReveal<HTMLDivElement>({
+    y: 24,
+    duration: 0.6,
+    stagger: 0.08,
+    childSelector: '[data-reveal-item]',
+  });
+  const packagesRef = useScrollReveal<HTMLDivElement>({
     y: 24,
     duration: 0.6,
     stagger: 0.08,
@@ -284,6 +360,14 @@ export default function RealEstateWebDesign() {
             form, brokerage/compliance placement, basic SEO setup, and the initial listing
             presentation structure.
           </p>
+          <p
+            className="font-sans mt-4"
+            style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            Larger builds — stronger listing presentation, area/community pages, or a full team and
+            market-authority site — are scoped and priced separately. See the package options below
+            for a sense of where those fit.
+          </p>
 
           {/* Anchor pricing card */}
           <div
@@ -295,7 +379,7 @@ export default function RealEstateWebDesign() {
           >
             <div className="md:col-start-1 md:row-start-1">
               <p className="font-sans" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--silver-grey)' }}>
-                Initial Realtor Website Setup
+                Agent Website
               </p>
               <h3 className="font-serif mt-3" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', lineHeight: 1.1 }}>
                 Your realtor website, built and launched
@@ -348,6 +432,78 @@ export default function RealEstateWebDesign() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Find the Right Realtor Website Package */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '0 0 100px' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">CHOOSING A PACKAGE</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+          >
+            Find the Right Realtor Website Package
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 640 }}
+          >
+            Not every Realtor needs the same website. Some need a clean professional presence, some
+            need stronger listing presentation, and some need a full market-authority system with area
+            pages and ongoing support.
+          </p>
+
+          <div ref={packagesRef} className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+            {PACKAGE_OPTIONS.map((pkg) => (
+              <div
+                key={pkg.name}
+                data-reveal-item
+                style={{
+                  border: '1px solid var(--border-color)',
+                  padding: 'clamp(24px, 3vw, 32px)',
+                }}
+              >
+                <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                  <h3 className="font-serif" style={{ fontSize: '1.25rem', color: 'var(--charcoal)' }}>
+                    {pkg.name}
+                  </h3>
+                  <span className="font-serif" style={{ fontSize: '1.25rem', color: 'var(--charcoal)' }}>
+                    {pkg.price}
+                  </span>
+                </div>
+                <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55 }}>
+                  {pkg.bestFor}
+                </p>
+                <ul className="mt-4" style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  {pkg.includes.map((line) => (
+                    <li key={line} className="flex items-start gap-2">
+                      <span className="font-sans shrink-0" style={{ fontSize: '0.75rem', color: 'var(--silver-grey)', marginTop: 4 }}>
+                        —
+                      </span>
+                      <span className="font-sans" style={{ fontSize: '0.875rem', color: 'var(--charcoal)', lineHeight: 1.55 }}>
+                        {line}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="font-sans mt-8"
+            style={{ fontSize: '0.875rem', fontStyle: 'italic', color: 'var(--muted-text)', maxWidth: 640 }}
+          >
+            IDX can be added or coordinated when the agent is ready. For many Realtors, it makes sense
+            to launch the brand site first, then add IDX once the site is ready to support it.
+          </p>
+
+          <div className="mt-8">
+            <Link to="/contact/?service=realtor-website" className="btn-primary">
+              Ask Which Package Fits
+            </Link>
           </div>
         </div>
       </section>
