@@ -12,7 +12,7 @@ import DiagonalLine from '@/components/DiagonalLine';
 import { MonitorIcon, FramesIcon, SupportIcon, PageIcon } from '@/components/icons';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
-import ScrollTriggerSequence from '@/components/ScrollTriggerSequence';
+import VideoHero from '@/components/VideoHero';
 import { EXTERNAL_LINKS } from '@/lib/links';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -194,103 +194,8 @@ export default function Home() {
         canonical="https://newlvlstudio.com/"
         jsonLd={[localBusinessSchema(), websiteSchema()]}
       />
-      {/* ScrollTrigger visual hero — with desktop CTA overlay */}
-      <ScrollTriggerSequence
-        overlay={
-          <div className="st-cta-panel">
-            <p className="st-cta-kicker" aria-hidden="true">Port Orange, Florida</p>
-            <p className="st-cta-headline" aria-hidden="true">Websites built to earn trust before the first call.</p>
-            <div className="st-cta-row">
-              <Link to="/contact/" className="btn-primary st-cta-btn">
-                Start a Website Project
-              </Link>
-              <Link to="/works/" className="btn-secondary st-cta-btn">
-                View the Work
-              </Link>
-            </div>
-          </div>
-        }
-      />
-
-      {/* Hero copy + CTA — full section below ST visual on all breakpoints */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(64px, 10vw, 120px) 0' }}>
-        <div className="container-nlds">
-          <p className="eyebrow" style={{ fontSize: '0.8125rem' }}>Port Orange, Florida</p>
-          <h1
-            className="font-serif"
-            style={{
-              fontSize: 'clamp(2.75rem, 6.5vw, 5rem)',
-              color: 'var(--charcoal)',
-              lineHeight: 1.05,
-              marginTop: 20,
-              maxWidth: 900,
-            }}
-          >
-            Premium websites for local businesses that need to look credible, get found, and turn visitors into real inquiries.
-          </h1>
-          <p
-            className="font-sans"
-            style={{
-              fontSize: 'clamp(1.0625rem, 1.4vw, 1.375rem)',
-              lineHeight: 1.65,
-              color: 'var(--body-text)',
-              maxWidth: 760,
-              marginTop: 28,
-            }}
-          >
-            New Level Design Studio builds clean, trust-focused websites for service businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida.
-          </p>
-          <p
-            className="font-sans"
-            style={{
-              fontSize: 'clamp(1rem, 1.2vw, 1.125rem)',
-              lineHeight: 1.65,
-              color: 'var(--muted-text)',
-              maxWidth: 720,
-              marginTop: 16,
-            }}
-          >
-            No bloated agency process. No generic template look. Just a sharper website built
-            around your services, your market, and the way real customers decide who to contact.
-          </p>
-          <div
-            className="hero-cta-buttons flex flex-col sm:flex-row items-start sm:items-center md:hidden"
-            style={{ gap: 16, marginTop: 40 }}
-          >
-            <Link to="/contact/" className="btn-primary w-full sm:w-auto">
-              Start a Website Project
-            </Link>
-            <Link to="/packages/" className="btn-secondary w-full sm:w-auto">
-              View Packages
-            </Link>
-          </div>
-          <p
-            className="font-sans md:hidden"
-            style={{ fontSize: '0.875rem', color: 'var(--muted-text)', marginTop: 16 }}
-          >
-            Or start with a{' '}
-            <Link
-              to="/contact/?service=free-website-review"
-              style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}
-            >
-              free website review
-            </Link>{' '}
-            — no commitment.
-          </p>
-          <p
-            className="font-sans"
-            style={{
-              fontSize: '0.8125rem',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: 'var(--muted-text)',
-              marginTop: 36,
-            }}
-          >
-            Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; New Smyrna Beach &nbsp;·&nbsp; Volusia County
-          </p>
-        </div>
-      </section>
+      {/* Video hero */}
+      <VideoHero />
 
       {/* Resource callout — secondary editorial strip */}
       <section style={{ backgroundColor: 'var(--bg-soft)', borderTop: '1px solid var(--silver-grey)', borderBottom: '1px solid var(--silver-grey)', padding: 'clamp(40px, 5vw, 56px) 0' }}>
