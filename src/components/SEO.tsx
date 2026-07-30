@@ -1,15 +1,15 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Helmet } from 'react-helmet-async';
-import { SOCIAL_LINKS } from '@/lib/socialLinks';
+import { FOOTER_SOCIAL_LINKS } from '@/lib/socialLinks';
 import { EXTERNAL_LINKS } from '@/lib/links';
 
 /**
- * Entity-consistency sameAs list for the #business node: verified social
- * profiles (SOCIAL_LINKS, also used to render the footer's follow icons)
- * plus the Google Business Profile URL. Kept separate from SOCIAL_LINKS so
- * adding GBP here doesn't add a GBP icon to the footer's social row.
+ * Entity-consistency sameAs list for the #business node: verified, actively
+ * promoted social profiles (FOOTER_SOCIAL_LINKS — Instagram, Facebook,
+ * LinkedIn) plus the Google Business Profile URL. Uses the same filtered
+ * list as the footer so schema and the visible footer never drift apart.
  */
-const BUSINESS_SAME_AS = [...SOCIAL_LINKS.map((s) => s.url), EXTERNAL_LINKS.googleBusinessProfile];
+const BUSINESS_SAME_AS = [...FOOTER_SOCIAL_LINKS.map((s) => s.url), EXTERNAL_LINKS.googleBusinessProfile];
 
 interface SEOProps {
   title: string;

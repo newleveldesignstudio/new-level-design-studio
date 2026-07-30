@@ -113,6 +113,37 @@ const PACKAGE_OPTIONS = [
   },
 ];
 
+const UPDATE_FORMAT_ITEMS = [
+  'MLS number or property address',
+  'Exact change needed',
+  'Replacement images or links, if applicable',
+  'Whether anything should stay the same',
+  'Deadline or urgency, if there is one',
+];
+
+const AI_SUPPORT_FAQS = [
+  {
+    q: 'Do you use AI to build the whole website?',
+    a: 'No. The website is still custom planned, designed, and reviewed. AI helps speed up parts of the process and organize information, but final design, structure, and publishing decisions are handled by Michael.',
+  },
+  {
+    q: 'Can AI update my listings?',
+    a: 'For custom listing sections, AI can help organize the request if you provide the MLS number or property address, the exact change, and any images. For IDX/MLS-fed listings, some data may be controlled directly by the MLS or IDX provider.',
+  },
+  {
+    q: 'Is AI making live changes automatically?',
+    a: 'No. AI works within guardrails — important website changes and client communication are reviewed before publishing, and unclear requests are paused for clarification.',
+  },
+  {
+    q: 'What should I send for listing updates?',
+    a: 'The MLS number or property address, the exact change needed, any new images or links, whether anything should stay the same, and the deadline or urgency if there is one.',
+  },
+  {
+    q: 'Can this help with promotion?',
+    a: 'Yes. A new listing, open house, price reduction, or neighborhood spotlight can be turned into content ideas for social posts, website updates, or emails — reviewed before anything goes out.',
+  },
+];
+
 const serviceSchema: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -206,6 +237,12 @@ export default function RealEstateWebDesign() {
     childSelector: '[data-reveal-item]',
   });
   const packagesRef = useScrollReveal<HTMLDivElement>({
+    y: 24,
+    duration: 0.6,
+    stagger: 0.08,
+    childSelector: '[data-reveal-item]',
+  });
+  const aiSupportRef = useScrollReveal<HTMLDivElement>({
     y: 24,
     duration: 0.6,
     stagger: 0.08,
@@ -595,6 +632,73 @@ export default function RealEstateWebDesign() {
               requirements, and MLS/brokerage rules. This is explored later as a separate integration,
               quoted once we know the exact provider/software and your MLS/brokerage requirements.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* AI-Assisted Support */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">AI-ASSISTED SUPPORT</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 660 }}
+          >
+            AI-Assisted Support, Still Reviewed by a Human
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            AI helps organize listing updates, support requests, content ideas, and follow-up
+            drafts. It does not make unchecked live changes. Important updates are reviewed before
+            publishing, and unclear requests are paused for clarification.
+          </p>
+          <p
+            className="font-sans mt-4"
+            style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            Website Care clients can send listing updates or support requests by email at any time.
+          </p>
+
+          {/* Recommended update format */}
+          <div
+            className="mt-8"
+            style={{ border: '1px solid var(--border-color)', backgroundColor: 'var(--bg-soft)', padding: 'clamp(24px, 4vw, 32px)', maxWidth: 620 }}
+          >
+            <p className="font-sans font-semibold" style={{ fontSize: '0.875rem', color: 'var(--charcoal)' }}>
+              Best format for a listing update
+            </p>
+            <ul className="mt-4" style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {UPDATE_FORMAT_ITEMS.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="font-sans shrink-0" style={{ fontSize: '0.75rem', color: 'var(--silver-grey)', marginTop: 4 }}>
+                    —
+                  </span>
+                  <span className="font-sans" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55 }}>
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Compact FAQ */}
+          <div ref={aiSupportRef} className="mt-12 flex flex-col" style={{ gap: 0 }}>
+            {AI_SUPPORT_FAQS.map((item) => (
+              <div
+                key={item.q}
+                data-reveal-item
+                style={{ borderBottom: '1px solid var(--silver-grey)', padding: '24px 0' }}
+              >
+                <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.4 }}>
+                  {item.q}
+                </h3>
+                <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 600 }}>
+                  {item.a}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
