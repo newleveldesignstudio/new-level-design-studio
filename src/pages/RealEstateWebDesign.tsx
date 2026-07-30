@@ -606,12 +606,22 @@ export default function RealEstateWebDesign() {
             className="font-sans"
             style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', maxWidth: 480, marginLeft: 'auto', marginRight: 'auto' }}
           >
-            See how a custom realtor website, listings, Website Care, and support workflow come
-            together.
+            See the live realtor website, then review how the build, Website Care, listing support,
+            and update process work behind it.
           </p>
-          <Link to="/proof/" className="btn-primary mt-6 inline-block">
-            View Realtor Website Example
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+            <a
+              href="https://jandehomesfl.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              View Live Realtor Website
+            </a>
+            <Link to="/proof/" className="btn-secondary">
+              See Website Care Process
+            </Link>
+          </div>
         </div>
       </div>
 
