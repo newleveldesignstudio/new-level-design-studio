@@ -657,13 +657,13 @@ export default function Home() {
       <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container-nlds">
           <img
-            src="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.webp"
-            srcSet="/nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds-w768.webp 768w, /nlds/images/port-orange-local-business-online-presence-system-websites-brand-visuals-video-nlds.webp 1600w"
+            src="/nlds/images/website-care-after-launch-proof-wynne-iaconis-realty-nlds.webp"
+            srcSet="/nlds/images/website-care-after-launch-proof-wynne-iaconis-realty-nlds-w768.webp 768w, /nlds/images/website-care-after-launch-proof-wynne-iaconis-realty-nlds.webp 1672w"
             sizes="(max-width: 768px) 100vw, 1200px"
-            width={1600}
-            height={1067}
+            width={1672}
+            height={941}
             decoding="async"
-            alt="Website care after launch visual for local business website support"
+            alt="Website Care proof graphic showing a custom realtor website by New Level Design Studio"
             loading="lazy"
             className="img-muted"
             style={{

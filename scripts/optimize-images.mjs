@@ -53,6 +53,7 @@ const CONTENT_IMAGES = [
   '/nlds/images/stone-timber-remodeling-website-design-showcase.png',
   '/nlds/images/dh-luxury-roofing-website-design-showcase.png',
   '/nlds/images/the-grooming-forge-barbershop-website-concept-nlds.jpg',
+  '/nlds/images/website-care-after-launch-proof-wynne-iaconis-realty-nlds.png',
 ];
 
 const FOUNDER = '/images/founder/michael-vail-founder-portrait-new-level-design-studio.webp';
