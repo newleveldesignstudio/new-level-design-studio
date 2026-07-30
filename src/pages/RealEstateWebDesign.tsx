@@ -599,15 +599,19 @@ export default function RealEstateWebDesign() {
         </div>
       </section>
 
-      {/* Subtle trust link to the proof page */}
+      {/* Proof-page CTA */}
       <div style={{ backgroundColor: 'var(--bg-soft)', paddingTop: 48 }}>
         <div className="container-nlds text-center">
-          <p className="font-sans" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
-            Every client site follows a build, backup, QA, and deployment process.{' '}
-            <Link to="/proof/" className="text-link">
-              See how I protect client websites
-            </Link>
+          <p
+            className="font-sans"
+            style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', maxWidth: 480, marginLeft: 'auto', marginRight: 'auto' }}
+          >
+            See how a custom realtor website, listings, Website Care, and support workflow come
+            together.
           </p>
+          <Link to="/proof/" className="btn-primary mt-6 inline-block">
+            View Realtor Website Example
+          </Link>
         </div>
       </div>
 
