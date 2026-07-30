@@ -49,8 +49,8 @@ const SUPPORTING_PRICING = [
   {
     label: 'Simple Listing / Status Updates',
     price: '$25–$75',
-    note: 'as needed',
-    desc: 'Smaller updates like changing a listing status, updating a price, swapping a photo, or light edits.',
+    note: 'per request',
+    desc: 'For clients not on Website Care, smaller updates like changing a listing status, updating a price, swapping a photo, or light edits can be handled as needed.',
   },
   {
     label: 'Premium Listing Page Add-On',
@@ -433,6 +433,16 @@ export default function RealEstateWebDesign() {
               </div>
             ))}
           </div>
+
+          <p
+            className="font-sans mt-6"
+            style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 620 }}
+          >
+            Website Care includes routine support for website issues, broken links, contact form
+            concerns, and reasonable small content updates. IDX/MLS troubleshooting is included for
+            Website Care or IDX-support clients, but third-party provider, MLS, hosting, plugin, or
+            platform fees are separate if applicable.
+          </p>
         </div>
       </section>
 

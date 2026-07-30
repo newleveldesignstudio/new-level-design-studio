@@ -60,11 +60,64 @@ const PROCESS_STEPS = [
   },
 ];
 
+const REALTOR_QUESTIONS = [
+  {
+    q: 'Do you use AI to build the whole website?',
+    a: 'No. AI helps with parts of the process — organizing, drafting, and prepping — but every site is designed, built, and reviewed by a person before it goes live.',
+  },
+  {
+    q: 'Can AI update my listings?',
+    a: "AI can help prepare a listing update from what you send, but a person reviews and applies the change before it's live on your site.",
+  },
+  {
+    q: 'What should I send for listing updates?',
+    a: "The MLS number (if available), the property address, the exact change needed, any new photos or links, and a deadline if it's time-sensitive.",
+  },
+  {
+    q: 'What happens if something breaks?',
+    a: 'It gets fixed. If the issue was something NLDS caused, correcting it is never billed to you.',
+  },
+  {
+    q: 'Is AI making live changes automatically?',
+    a: 'No. AI can flag and prepare things, but nothing goes live without a person reviewing it first.',
+  },
+  {
+    q: 'Can this help with promotion?',
+    a: "Yes — AI can help brainstorm content and promotion angles, which get refined before they're used. It's a starting point, not a replacement for your voice.",
+  },
+  {
+    q: 'How is this different from a template IDX site?',
+    a: 'A template site is built once and mostly left alone. This pairs a real, maintained website with ongoing, human-reviewed support — so small updates and fixes actually get handled.',
+  },
+  {
+    q: 'If I leave my brokerage, do I lose my website?',
+    a: 'No. Your website can be built around your own brand, domain, content, and local positioning instead of being locked inside a brokerage template. If brokerage details change, those can be updated as part of the support process.',
+  },
+  {
+    q: 'Is this only for IDX websites?',
+    a: "No. This applies to any realtor website NLDS builds, IDX or not. IDX/MLS integration is its own add-on for when you're ready for it.",
+  },
+  {
+    q: 'Do I have to pay separate IDX or MLS fees?',
+    a: 'Possibly. IDX providers, MLS boards, hosting platforms, or third-party tools may charge separate setup, access, or monthly fees depending on the provider and MLS. NLDS can help guide the setup and troubleshooting, but outside provider fees are separate.',
+  },
+  {
+    q: 'Can you help promote new listings or open houses?',
+    a: 'Yes. Listing details can be turned into website updates, social post ideas, open house promotion, email copy, landing pages, or premium listing pages depending on what the property needs.',
+  },
+];
+
 export default function Proof() {
   const stepsRef = useScrollReveal<HTMLDivElement>({
     y: 24,
     duration: 0.6,
     stagger: 0.1,
+    childSelector: '[data-reveal-item]',
+  });
+  const questionsRef = useScrollReveal<HTMLDivElement>({
+    y: 24,
+    duration: 0.6,
+    stagger: 0.08,
     childSelector: '[data-reveal-item]',
   });
 
@@ -178,6 +231,66 @@ export default function Proof() {
           </section>
         ))}
       </div>
+
+      {/* Questions Realtors May Ask */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">FOR REALTORS</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.1, maxWidth: 620 }}
+          >
+            Questions Realtors May Ask
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            Some of the day-to-day work is AI-assisted — organizing requests, drafting updates,
+            flagging issues. Here's how that actually works.
+          </p>
+          <p
+            className="font-sans mt-4"
+            style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            NLDS isn't trying to compete with cheap IDX templates. The goal is a custom realtor
+            website with real local authority, stronger listing presentation, lead capture, and an
+            organized Website Care process behind it.
+          </p>
+          <div ref={questionsRef} className="mt-12 flex flex-col" style={{ gap: 0 }}>
+            {REALTOR_QUESTIONS.map((item) => (
+              <div
+                key={item.q}
+                data-reveal-item
+                style={{ borderBottom: '1px solid var(--silver-grey)', padding: '28px 0' }}
+              >
+                <h3 className="font-sans font-semibold" style={{ fontSize: '1rem', color: 'var(--charcoal)', lineHeight: 1.4 }}>
+                  {item.q}
+                </h3>
+                <p className="font-sans mt-3" style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 640 }}>
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p
+            className="font-sans mt-8"
+            style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            Behind the scenes, Website Care requests can be organized through an internal support
+            workflow. That helps categorize urgent site issues, listing updates, IDX/MLS concerns,
+            image updates, and client questions so they can be reviewed, prioritized, and followed up
+            on without getting buried in normal messages.
+          </p>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            In short: AI speeds up the busywork, but a person reviews anything that goes live or goes
+            out to a client — and anything unclear gets a clarifying question first.
+          </p>
+        </div>
+      </section>
 
       <FinalCTA
         heading="Want This Kind of Process on Your Website?"
