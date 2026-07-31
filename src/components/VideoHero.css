@@ -84,6 +84,15 @@
    follows immediately below on solid black. */
 @media (max-width: 768px) and (orientation: portrait) {
   .vh-section {
+    /* The site header is position: fixed at 80px tall (Navigation.tsx) with
+       no compensating offset on <main> — it overlaps whatever renders at
+       the very top of the page on every page, sitewide. That's invisible
+       on the desktop/landscape hero (cover-cropped, no critical content
+       flush to the top edge), but here the video starts at true y:0 with
+       its top edge — signage/palm-tree-tops — right where the header
+       covers it. Push the whole hero down by the header's exact height so
+       nothing renders underneath it. */
+    padding-top: 80px;
     height: auto;
     min-height: 0;
     display: flex;
