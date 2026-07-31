@@ -92,9 +92,18 @@
   .vh-video {
     position: relative;
     inset: auto;
+    top: auto;
+    transform: none;
+    margin: 0;
     width: 100%;
     height: auto;
     aspect-ratio: 3836 / 2160;
+    /* object-fit: cover (the base rule) always scales up and crops to fill
+       its box exactly — any sub-pixel mismatch between this aspect-ratio
+       and the real encoded video (rounding differs by engine/DPR) gets
+       cropped, and on real devices that can land visibly at one edge.
+       contain guarantees the full frame is always shown, never cropped. */
+    object-fit: contain;
     flex-shrink: 0;
   }
 
