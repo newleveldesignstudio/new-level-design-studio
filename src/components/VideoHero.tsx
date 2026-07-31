@@ -22,17 +22,17 @@ export default function VideoHero() {
         loop
         playsInline
         preload="auto"
-        poster="/videos/homepage-hero-local-favorite-poster-nlds.jpg"
+        poster="/videos/homepage-hero-local-favorite-poster-nlds-v2.jpg"
         width={1920}
         height={1080}
         aria-hidden="true"
       >
         <source
-          src="/videos/homepage-hero-local-favorite-mobile-nlds.mp4"
+          src="/videos/homepage-hero-local-favorite-mobile-nlds-v2.mp4"
           media="(max-width: 768px)"
           type="video/mp4"
         />
-        <source src="/videos/homepage-hero-local-favorite-desktop-nlds.mp4" type="video/mp4" />
+        <source src="/videos/homepage-hero-local-favorite-desktop-nlds-v2.mp4" type="video/mp4" />
       </video>
       <div className="vh-overlay" />
       <div className="vh-content">
