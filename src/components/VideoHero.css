@@ -78,15 +78,12 @@
    phones) and desktop keep the base full-bleed object-fit: cover hero above,
    untouched. Portrait viewports are far taller than the 16:9 source footage,
    so filling the full section height with cover would crop most of the
-   frame width and cut off edge-to-edge signage. contain guarantees zero
-   crop, but a video sized to just its natural aspect ratio reads as a thin
-   strip. Instead: a generously tall dark media zone holds the fully-visible
-   contained video, with a blurred/darkened duplicate of the poster filling
-   the letterbox space so it reads as an intentional cinematic block rather
-   than empty bars. Copy/CTA flows below in the untouched solid-black zone. */
+   frame width and cut off edge-to-edge signage. The video box is sized to
+   its exact native aspect ratio — no taller "media zone" padding it out —
+   so there's no letterbox/backdrop gap between the video and the copy that
+   follows immediately below on solid black. */
 @media (max-width: 768px) and (orientation: portrait) {
   .vh-section {
-    --vh-media-h: 56vh;
     height: auto;
     min-height: 0;
     display: flex;
@@ -94,26 +91,8 @@
     position: relative;
   }
 
-  .vh-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--vh-media-h);
-    min-height: 340px;
-    z-index: 0;
-    background-image: url('/videos/homepage-hero-local-favorite-poster-nlds-v2.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(36px) brightness(0.42) saturate(1.15);
-    transform: scale(1.15);
-    pointer-events: none;
-  }
-
   /* Legibility scrim is only needed when copy overlays the video directly
-     (desktop). Here copy sits below on solid black, so it's not needed —
-     and left on, it would darken the now much-taller visible video area. */
+     (desktop). Here copy sits below on solid black, so it's not needed. */
   .vh-overlay {
     display: none;
   }
@@ -127,13 +106,15 @@
     z-index: 1;
     display: block;
     width: 100%;
-    height: var(--vh-media-h);
-    min-height: 340px;
-    aspect-ratio: auto;
+    height: auto;
+    aspect-ratio: 3836 / 2160;
     /* object-fit: cover (the base rule) always scales up and crops to fill
        its box exactly. contain guarantees the full frame is always shown,
-       never cropped, letterboxed within the taller media zone above. */
+       never cropped — object-position: top is a safety net for any
+       sub-pixel rounding between this aspect-ratio and the real encoded
+       video, so any negligible residual gap lands below, not above. */
     object-fit: contain;
+    object-position: top;
     flex-shrink: 0;
   }
 
@@ -142,13 +123,13 @@
     inset: auto;
     z-index: 3;
     max-width: 100%;
-    padding: 20px 20px clamp(32px, 8vw, 48px);
+    padding: 24px 20px clamp(20px, 5vw, 32px);
   }
 
   .vh-eyebrow {
     font-size: 0.6875rem;
     letter-spacing: 0.18em;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .vh-headline {
@@ -157,11 +138,11 @@
 
   .vh-body {
     font-size: 0.9375rem;
-    margin-top: 12px;
+    margin-top: 8px;
   }
 
   .vh-cta.btn-primary {
-    margin-top: 20px;
+    margin-top: 14px;
     width: 100%;
     text-align: center;
   }
