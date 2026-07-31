@@ -74,12 +74,33 @@
   margin-top: 32px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  /* Portrait phone viewports are far taller than the 16:9 source footage.
+     Filling the full section height with object-fit: cover would crop
+     roughly three-quarters of the frame width and cut off signage/text
+     that runs edge-to-edge in the clips. Instead, let the video sit in
+     normal flow at its native aspect ratio (zero crop) with the copy
+     flowing directly beneath it, rather than forcing a full-viewport
+     section height that leaves a dead gap between video and text. */
   .vh-section {
-    min-height: 520px;
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vh-video {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3836 / 2160;
+    flex-shrink: 0;
   }
 
   .vh-content {
+    position: relative;
+    inset: auto;
     max-width: 100%;
     padding: 20px 20px clamp(32px, 8vw, 48px);
   }

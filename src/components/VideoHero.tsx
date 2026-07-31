@@ -29,7 +29,7 @@ export default function VideoHero() {
       >
         <source
           src="/videos/homepage-hero-local-favorite-mobile-nlds.mp4"
-          media="(max-width: 767px)"
+          media="(max-width: 768px)"
           type="video/mp4"
         />
         <source src="/videos/homepage-hero-local-favorite-desktop-nlds.mp4" type="video/mp4" />
