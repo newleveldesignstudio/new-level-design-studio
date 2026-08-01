@@ -66,6 +66,33 @@ const SUPPORTING_PRICING = [
   },
 ];
 
+const LISTING_VIDEO_ADDONS = [
+  {
+    name: 'Simple Listing Reel',
+    price: '$99–$149',
+    desc: '10–20 second vertical reel from client-provided photos',
+    featured: false,
+  },
+  {
+    name: 'Premium Listing Reel',
+    price: '$199–$299',
+    desc: '20–45 second video with music, luxury text overlays, and motion',
+    featured: true,
+  },
+  {
+    name: 'Website + Social Add-On',
+    price: '$149–$249',
+    desc: 'Listing video added to the website and prepared for social channels',
+    featured: false,
+  },
+  {
+    name: 'Monthly Video Add-On',
+    price: '$199–$399/mo',
+    desc: '2–4 short videos per month for listings, open houses, and market updates',
+    featured: false,
+  },
+];
+
 const PACKAGE_OPTIONS = [
   {
     name: 'Agent Website',
@@ -645,6 +672,74 @@ export default function RealEstateWebDesign() {
               Ask About Listing Videos
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Listing Video Add-Ons */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">LISTING VIDEO ADD-ONS</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 640 }}
+          >
+            Starter pricing for client-provided listing visuals.
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 640 }}
+          >
+            When agents provide strong listing photos or short clips, NLDS can turn them into
+            vertical videos for social media, open houses, listing updates, and website
+            promotion.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+            {LISTING_VIDEO_ADDONS.map((item) => (
+              <div
+                key={item.name}
+                style={
+                  item.featured
+                    ? { backgroundColor: 'var(--charcoal)', padding: 'clamp(24px, 3vw, 32px)' }
+                    : { border: '1px solid var(--border-color)', padding: 'clamp(24px, 3vw, 32px)' }
+                }
+              >
+                <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                  <h3
+                    className="font-serif"
+                    style={{ fontSize: '1.25rem', color: item.featured ? 'var(--white)' : 'var(--charcoal)' }}
+                  >
+                    {item.name}
+                  </h3>
+                  <span
+                    className="font-serif"
+                    style={{ fontSize: '1.25rem', color: item.featured ? 'var(--white)' : 'var(--charcoal)' }}
+                  >
+                    {item.price}
+                  </span>
+                </div>
+                <p
+                  className="font-sans mt-3"
+                  style={{
+                    fontSize: '0.875rem',
+                    color: item.featured ? 'var(--silver-grey)' : 'var(--muted-text)',
+                    lineHeight: 1.55,
+                  }}
+                >
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="font-sans mt-8"
+            style={{ fontSize: '0.875rem', fontStyle: 'italic', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 640 }}
+          >
+            Price the result, not the tool. Final price depends on the number of visuals, edits
+            requested, turnaround time, and whether the video is used for social only or also
+            added to the website.
+          </p>
         </div>
       </section>
 
