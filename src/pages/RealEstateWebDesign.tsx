@@ -589,6 +589,65 @@ export default function RealEstateWebDesign() {
         </div>
       </section>
 
+      {/* Listing Video Sample */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">LISTING VIDEO SAMPLE</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 640 }}
+          >
+            Turn listing visuals into social media-ready videos.
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            When agents have strong listing photos or short clips, NLDS can turn them into
+            vertical promo videos with music, text overlays, motion, and branded finishing
+            touches.
+          </p>
+
+          <figure className="mt-10 mx-auto" style={{ maxWidth: 300 }}>
+            <div
+              className="aspect-[9/16] w-full overflow-hidden"
+              style={{ border: '1px solid var(--border-color)', backgroundColor: 'var(--charcoal)' }}
+            >
+              <video
+                controls
+                preload="metadata"
+                poster="/videos/nlds-listing-video-sample-poster.jpg"
+                className="h-full w-full object-cover"
+                aria-label="Sample vertical listing video showing text overlays, music, and motion built from property photos and video"
+              >
+                <source src="/videos/nlds-listing-video-sample.mp4" type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+            </div>
+            <figcaption
+              className="font-sans mt-3 text-center"
+              style={{ fontSize: '0.8125rem', color: 'var(--muted-text)' }}
+            >
+              Sample listing video — plays with sound
+            </figcaption>
+          </figure>
+
+          <p
+            className="font-sans mt-6"
+            style={{ fontSize: '0.8125rem', fontStyle: 'italic', color: 'var(--muted-text)', maxWidth: 560 }}
+          >
+            Sample shown for style only. Final videos are built around each agent's actual
+            listing photos, property details, and brand.
+          </p>
+
+          <div className="mt-8">
+            <Link to="/contact/?service=realtor-website" className="btn-secondary">
+              Ask About Listing Videos
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Done-For-You Website Care */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
         <div className="container-nlds">
