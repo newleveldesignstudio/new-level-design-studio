@@ -39,13 +39,14 @@ const WHATS_INCLUDED = [
   },
 ];
 
-const SUPPORTING_PRICING = [
-  {
-    label: 'Website Care',
-    price: '$99/mo',
-    note: 'after first 3 months free',
-    desc: 'Hosting support, small updates, form checks, and basic maintenance so the site stays current.',
-  },
+const WEBSITE_CARE = {
+  label: 'Website Care',
+  price: '$99/mo',
+  note: 'after first 3 months free',
+  desc: 'Website Care covers routine support, reasonable small edits, technical checkups, form checks, and simple listing or status updates when reasonable — so the site stays current without you managing it yourself.',
+};
+
+const LISTING_ADDONS = [
   {
     label: 'Simple Listing / Status Updates',
     price: '$25–$75',
@@ -54,15 +55,9 @@ const SUPPORTING_PRICING = [
   },
   {
     label: 'Premium Listing Page Add-On',
-    price: '$150–$200',
+    price: '$250–$500+',
     note: 'per property',
     desc: 'A dedicated property page with photo gallery, details, features/amenities, map/location, listing-specific contact buttons, SEO setup, image optimization, and mobile testing.',
-  },
-  {
-    label: 'Stellar MLS / IDX Integration',
-    price: 'Quoted separately',
-    note: '',
-    desc: 'Quoted once we know the exact provider/software and your MLS/brokerage requirements.',
   },
 ];
 
@@ -125,17 +120,6 @@ const PACKAGE_OPTIONS = [
       'Team or specialty positioning',
       'Listing/lead flow planning',
       'Stronger local SEO foundation',
-    ],
-  },
-  {
-    name: 'Website Care',
-    price: '$99/mo',
-    bestFor: 'Best for: Realtors who want updates handled after launch.',
-    includes: [
-      'Simple listing/status updates',
-      'Site edits and maintenance',
-      'Technical checkups',
-      'Best for busy agents who do not want to manage the site themselves',
     ],
   },
 ];
@@ -241,6 +225,12 @@ const serviceSchema: Record<string, unknown> = {
       {
         '@type': 'Offer',
         itemOffered: { '@type': 'Service', name: 'Premium Listing Page Add-On' },
+        description: 'Starting price for a dedicated listing page; final scope quoted separately.',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: 250,
+          priceCurrency: 'USD',
+        },
       },
       {
         '@type': 'Offer',
@@ -288,7 +278,7 @@ export default function RealEstateWebDesign() {
           breadcrumbSchema([
             { name: 'Home', url: 'https://newlvlstudio.com/' },
             { name: 'Services', url: 'https://newlvlstudio.com/services/' },
-            { name: 'Real Estate Web Design', url: 'https://newlvlstudio.com/real-estate-web-design/' },
+            { name: 'Real Estate Websites', url: 'https://newlvlstudio.com/real-estate-web-design/' },
           ]),
         ]}
       />
@@ -406,130 +396,27 @@ export default function RealEstateWebDesign() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Realtor Website Packages */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
         <div className="container-nlds">
-          <p className="eyebrow">PRICING</p>
+          <p className="eyebrow">REALTOR WEBSITE PACKAGES</p>
           <h2
             className="font-serif mt-4"
             style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
           >
-            Realtor Website Pricing
-          </h2>
-          <p
-            className="font-sans mt-5"
-            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
-          >
-            The initial setup includes the core website, mobile-friendly design, main pages, contact
-            form, brokerage/compliance placement, basic SEO setup, and the initial listing
-            presentation structure.
-          </p>
-          <p
-            className="font-sans mt-4"
-            style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
-          >
-            Larger builds — stronger listing presentation, area/community pages, or a full team and
-            market-authority site — are scoped and priced separately. See the package options below
-            for a sense of where those fit.
-          </p>
-
-          {/* Anchor pricing card */}
-          <div
-            className="mt-10 flex flex-col gap-8 md:grid md:grid-cols-[1fr_auto] md:grid-rows-[auto_auto] md:items-center"
-            style={{
-              backgroundColor: 'var(--charcoal)',
-              padding: 'clamp(32px, 5vw, 48px)',
-            }}
-          >
-            <div className="md:col-start-1 md:row-start-1">
-              <p className="font-sans" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--silver-grey)' }}>
-                Agent Website
-              </p>
-              <h3 className="font-serif mt-3" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', lineHeight: 1.1 }}>
-                Your realtor website, built and launched
-              </h3>
-            </div>
-            <div className="text-left md:text-right md:col-start-2 md:row-start-1 md:row-span-2 md:self-center">
-              <div className="font-serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'var(--white)', lineHeight: 1 }}>
-                $1,500+
-              </div>
-              <p className="font-sans mt-2" style={{ fontSize: '0.8125rem', color: 'var(--silver-grey)' }}>
-                Starting at · per project
-              </p>
-            </div>
-            <div className="md:col-start-1 md:row-start-2">
-              <Link to="/contact/?service=realtor-website" className="btn-primary inline-block">
-                Start a Realtor Website
-              </Link>
-            </div>
-          </div>
-
-          {/* Supporting pricing rows */}
-          <div ref={pricingRef} className="mt-6 flex flex-col" style={{ gap: 12 }}>
-            {SUPPORTING_PRICING.map((item) => (
-              <div
-                key={item.label}
-                data-reveal-item
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
-                style={{
-                  border: '1px solid var(--border-color)',
-                  padding: '20px 24px',
-                }}
-              >
-                <div>
-                  <div className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                    {item.label}
-                  </div>
-                  <div className="font-sans mt-1" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55, maxWidth: 560 }}>
-                    {item.desc}
-                  </div>
-                </div>
-                <div style={{ textAlign: 'left', flexShrink: 0 }}>
-                  <div className="font-serif" style={{ fontSize: '1.375rem', color: 'var(--charcoal)' }}>
-                    {item.price}
-                  </div>
-                  {item.note && (
-                    <p className="font-sans" style={{ fontSize: '0.75rem', color: 'var(--muted-text)' }}>
-                      {item.note}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p
-            className="font-sans mt-6"
-            style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 620 }}
-          >
-            Website Care includes routine support for website issues, broken links, contact form
-            concerns, and reasonable small content updates. IDX/MLS troubleshooting is included for
-            Website Care or IDX-support clients, but third-party provider, MLS, hosting, plugin, or
-            platform fees are separate if applicable.
-          </p>
-        </div>
-      </section>
-
-      {/* Find the Right Realtor Website Package */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '0 0 100px' }}>
-        <div className="container-nlds">
-          <p className="eyebrow">CHOOSING A PACKAGE</p>
-          <h2
-            className="font-serif mt-4"
-            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
-          >
-            Find the Right Realtor Website Package
+            Realtor Website Packages
           </h2>
           <p
             className="font-sans mt-5"
             style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 640 }}
           >
-            Not every Realtor needs the same website. Some need a clean professional presence, some
-            need stronger listing presentation, and some need a full market-authority system with area
-            pages and ongoing support.
+            The initial setup includes the core website, mobile-friendly design, main pages, contact
+            form, brokerage/compliance placement, basic SEO setup, and the initial listing
+            presentation structure. Larger builds — stronger listing presentation, area/community
+            pages, or a full team and market-authority site — are scoped and priced separately.
           </p>
 
-          <div ref={packagesRef} className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+          <div ref={packagesRef} className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
             {PACKAGE_OPTIONS.map((pkg) => (
               <div
                 key={pkg.name}
@@ -566,18 +453,101 @@ export default function RealEstateWebDesign() {
             ))}
           </div>
 
-          <p
-            className="font-sans mt-8"
-            style={{ fontSize: '0.875rem', fontStyle: 'italic', color: 'var(--muted-text)', maxWidth: 640 }}
-          >
-            IDX can be added or coordinated when the agent is ready. For many Realtors, it makes sense
-            to launch the brand site first, then add IDX once the site is ready to support it.
-          </p>
-
           <div className="mt-8">
             <Link to="/contact/?service=realtor-website" className="btn-primary">
               Ask Which Package Fits
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Website Care */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">WEBSITE CARE</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+          >
+            Done-For-You Website Care
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
+          >
+            Most agents don't have time to manage a website on top of client calls, showings, and
+            closings. Website Care handles the small updates, checks, and maintenance that keep a site
+            current — so you're not the one tracking it.
+          </p>
+
+          <div
+            className="mt-8"
+            style={{ border: '1px solid var(--border-color)', padding: 'clamp(24px, 4vw, 32px)', maxWidth: 620 }}
+          >
+            <div className="flex items-baseline justify-between gap-3 flex-wrap">
+              <h3 className="font-serif" style={{ fontSize: '1.25rem', color: 'var(--charcoal)' }}>
+                {WEBSITE_CARE.label}
+              </h3>
+              <span className="font-serif" style={{ fontSize: '1.25rem', color: 'var(--charcoal)' }}>
+                {WEBSITE_CARE.price}
+              </span>
+            </div>
+            <p className="font-sans mt-1" style={{ fontSize: '0.75rem', color: 'var(--muted-text)' }}>
+              {WEBSITE_CARE.note}
+            </p>
+            <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55 }}>
+              {WEBSITE_CARE.desc}
+            </p>
+          </div>
+
+          <Link to="/website-care/" className="text-link mt-6 inline-block">
+            Learn more about Website Care
+          </Link>
+        </div>
+      </section>
+
+      {/* Listing Add-Ons */}
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow">LISTING ADD-ONS</p>
+          <h2
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+          >
+            Listing Add-Ons
+          </h2>
+
+          <div ref={pricingRef} className="mt-8 flex flex-col" style={{ gap: 12 }}>
+            {LISTING_ADDONS.map((item) => (
+              <div
+                key={item.label}
+                data-reveal-item
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                style={{
+                  border: '1px solid var(--border-color)',
+                  padding: '20px 24px',
+                }}
+              >
+                <div>
+                  <div className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
+                    {item.label}
+                  </div>
+                  <div className="font-sans mt-1" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55, maxWidth: 560 }}>
+                    {item.desc}
+                  </div>
+                </div>
+                <div style={{ textAlign: 'left', flexShrink: 0 }}>
+                  <div className="font-serif" style={{ fontSize: '1.375rem', color: 'var(--charcoal)' }}>
+                    {item.price}
+                  </div>
+                  {item.note && (
+                    <p className="font-sans" style={{ fontSize: '0.75rem', color: 'var(--muted-text)' }}>
+                      {item.note}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -740,30 +710,6 @@ export default function RealEstateWebDesign() {
             requested, turnaround time, and whether the video is used for social only or also
             added to the website.
           </p>
-        </div>
-      </section>
-
-      {/* Done-For-You Website Care */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0' }}>
-        <div className="container-nlds">
-          <p className="eyebrow">DONE-FOR-YOU WEBSITE CARE</p>
-          <h2
-            className="font-serif mt-4"
-            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
-          >
-            Done-For-You Website Care
-          </h2>
-          <p
-            className="font-sans mt-5"
-            style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}
-          >
-            Most agents don't have time to manage a website on top of client calls, showings, and
-            closings. Website Care handles the small updates, checks, and maintenance that keep a site
-            current — so you're not the one tracking it.
-          </p>
-          <Link to="/website-care/" className="text-link mt-6 inline-block">
-            Learn more about Website Care
-          </Link>
         </div>
       </section>
 

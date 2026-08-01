@@ -57,6 +57,7 @@ const navItems: NavItem[] = [
         { label: PRIMARY_SERVICES[0], path: '/services/#website-design', description: 'Professional websites built for clarity, trust, and action.' },
         { label: PRIMARY_SERVICES[1], path: '/services/', description: 'A structured rebuild for a site that no longer represents the business.' },
         { label: PRIMARY_SERVICES[2], path: '/website-care/', description: 'Ongoing website quality, visibility, and trust management.' },
+        { label: 'Real Estate Websites', path: '/real-estate-web-design/', description: 'Realtor websites, listing presentation, and listing video for Florida agents.' },
         { label: SUPPORTING_CAPABILITIES[0], path: '/services/', description: 'Visual identity support for businesses that need a sharper presentation.' },
         { label: SUPPORTING_CAPABILITIES[2], path: '/local-visibility-setup/', description: 'Location-targeted structure that helps local search understand your service area.' },
         { label: SUPPORTING_CAPABILITIES[1], path: '/services/#website-copy-visual-support', description: 'Branded graphics, launch assets, and supporting content that keep your business consistent.' },
