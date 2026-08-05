@@ -321,6 +321,13 @@ export default function RealEstateWebDesign() {
               View Example Listing Pages
             </a>
           </div>
+          <p
+            className="font-sans mt-6"
+            style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 600 }}
+          >
+            Sites from $1,500 · Website Care from $99/mo · Realtor launch promo may include first
+            3 months of Website Care on qualifying realtor builds.
+          </p>
           <div className="mt-16">
             <SectionDivider />
           </div>
@@ -352,6 +359,9 @@ export default function RealEstateWebDesign() {
             A dedicated realtor website gives you one destination you control — your brand, your
             listings, your story, and a direct way for people to reach you.
           </p>
+          <Link to="/real-estate-marketing-website/" className="text-link mt-5 inline-block">
+            Why Our Realtor Websites Are Different
+          </Link>
         </div>
       </section>
 

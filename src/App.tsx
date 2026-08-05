@@ -11,6 +11,7 @@ import Packages from '@/pages/Packages';
 import StarterPack from '@/pages/StarterPack';
 import WebsiteCare from '@/pages/WebsiteCare';
 import RealEstateWebDesign from '@/pages/RealEstateWebDesign';
+import RealEstateMarketingWebsite from '@/pages/RealEstateMarketingWebsite';
 import Proof from '@/pages/Proof';
 import LocalVisibilitySetup from '@/pages/LocalVisibilitySetup';
 import Contact from '@/pages/Contact';
@@ -81,6 +82,7 @@ export default function App() {
           <Route path="/starter-pack" element={<StarterPack />} />
           <Route path="/website-care" element={<WebsiteCare />} />
           <Route path="/real-estate-web-design" element={<RealEstateWebDesign />} />
+          <Route path="/real-estate-marketing-website" element={<RealEstateMarketingWebsite />} />
           <Route path="/proof" element={<Proof />} />
           <Route path="/local-visibility-setup" element={<LocalVisibilitySetup />} />
           <Route path="/contact" element={<Contact />} />
