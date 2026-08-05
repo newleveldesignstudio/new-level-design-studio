@@ -42,6 +42,20 @@ const INDUSTRY_TO_SLUG: Record<string, string> = Object.fromEntries(
 
 const projects: WorkProject[] = [
   {
+    imageSrc: '/nlds/images/website-care-after-launch-proof-wynne-iaconis-realty-nlds.webp',
+    imageAlt: 'Wynne & Iaconis Realty real estate website built by New Level Design Studio',
+    imageTitle: 'Wynne & Iaconis Realty — Real Estate Website by New Level Design Studio',
+    industry: 'Real Estate',
+    title: 'Wynne & Iaconis Realty',
+    problem: 'Independent REALTORS® often rely on a brokerage profile page or third-party listing sites — pages they don\'t own, can\'t fully customize, and that don\'t build long-term authority for their own name and business.',
+    solution: 'A custom real estate website built for listing presentation, local authority, lead capture, and long-term growth, with dedicated listing pages, automated lead email routing, a built-in Resource Center with a Seller Readiness Score tool, Google Search Console setup, and Google Reviews/social integration.',
+    deliverables: ['Custom real estate website', 'Listing pages', 'Lead capture forms', 'Automated lead email routing', 'Resource Center', 'Seller Readiness Score', 'Google Search Console setup', 'Google Reviews/social integration', 'Mobile-first design'],
+    classification: 'Client Work',
+    demonstrates: 'Custom real estate website built for listing presentation, local authority, lead capture, and long-term growth.',
+    demoUrl: 'https://jandehomesfl.com',
+    demoLabel: 'View Live Site',
+  },
+  {
     imageSrc: '/nlds/images/stone-timber-remodeling-cinematic-contractor-website-concept-nlds.webp',
     imageAlt: 'Stone & Timber Remodeling cinematic contractor website concept by New Level Design Studio',
     imageTitle: 'Stone & Timber Remodeling — Cinematic Contractor Website Concept by New Level Design Studio',
@@ -389,7 +403,7 @@ export default function Works() {
     <div>
       <SEO
         title="Selected Website Work | NLDS"
-        description="Concept builds and industry demos of website strategy, design, and conversion structure for local businesses in Port Orange, Daytona Beach, and Volusia County."
+        description="Real client work, concept builds, and industry demos of website strategy, design, and conversion structure for local businesses in Port Orange, Daytona Beach, and Volusia County."
         canonical="https://newlvlstudio.com/works"
         jsonLd={breadcrumbSchema([{ name: 'Home', url: 'https://newlvlstudio.com/' }, { name: 'Work', url: 'https://newlvlstudio.com/works/' }])}
       />
