@@ -13,6 +13,7 @@ import { MonitorIcon, FramesIcon, SupportIcon, PageIcon } from '@/components/ico
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
 import VideoHero from '@/components/VideoHero';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 import { EXTERNAL_LINKS } from '@/lib/links';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,6 +58,7 @@ export default function Home() {
   const splitImageRef = useRef<HTMLImageElement>(null);
   const whyTextRef = useRef<HTMLDivElement>(null);
   const workHeadingRef = useRef<HTMLDivElement>(null);
+  const reviewsHeadingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = splitRef.current;
@@ -115,6 +117,36 @@ export default function Home() {
   // Selected Work heading reveal
   useEffect(() => {
     const el = workHeadingRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el.children,
+        { y: 24, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            once: true,
+          },
+        }
+      );
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Client Reviews heading reveal
+  useEffect(() => {
+    const el = reviewsHeadingRef.current;
     if (!el) return;
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1125,6 +1157,29 @@ export default function Home() {
             >
               Restaurants, contractors, law firms, real estate, fitness, and more.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What Clients Say */}
+      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
+        <div className="container-nlds">
+          <div ref={reviewsHeadingRef}>
+            <h2
+              className="font-serif"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
+            >
+              What Clients Say
+            </h2>
+            <p
+              className="font-sans mt-4"
+              style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 520 }}
+            >
+              Real feedback from businesses we&rsquo;ve worked with.
+            </p>
+            <div className="mt-12">
+              <TestimonialCarousel />
+            </div>
           </div>
         </div>
       </section>

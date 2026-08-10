@@ -4,10 +4,24 @@ import { Star } from 'lucide-react';
 import { testimonials as defaultTestimonials, testimonialsEnabled as defaultEnabled, type Testimonial } from '../data/testimonials';
 
 const LOOP_DURATION = 40; // seconds for one full loop
+// Below this count, an infinite marquee just loops the same 1-2 cards past the
+// viewport on repeat — reads as a glitch, not a review. Show a static featured
+// layout instead until there's enough real content to justify scrolling.
+const MARQUEE_MIN_ITEMS = 3;
 
 interface TestimonialCarouselProps {
   testimonials?: Testimonial[];
   enabled?: boolean;
+}
+
+function initials(name: string): string {
+  return name
+    .split(' ')
+    .filter(Boolean)
+    .map((part) => part[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
 }
 
 function StarRating({ rating }: { rating: number }) {
@@ -26,38 +40,67 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-function TestimonialCard({ testimonial, hidden }: { testimonial: Testimonial; hidden?: boolean }) {
+function TestimonialCard({
+  testimonial,
+  hidden,
+  featured,
+}: {
+  testimonial: Testimonial;
+  hidden?: boolean;
+  featured?: boolean;
+}) {
   return (
     <article
       aria-hidden={hidden || undefined}
-      className="flex w-[300px] shrink-0 flex-col rounded-xl border border-nlds-border bg-white px-6 py-7 shadow-sm sm:w-[360px] sm:px-8 sm:py-8"
+      className={
+        featured
+          ? 'flex w-full max-w-[560px] shrink-0 flex-col border border-nlds-border bg-white px-8 py-9 sm:px-10 sm:py-10'
+          : 'flex w-[300px] shrink-0 flex-col border border-nlds-border bg-white px-6 py-7 sm:w-[360px] sm:px-8 sm:py-8'
+      }
     >
-      <StarRating rating={testimonial.rating} />
-      <p className="font-sans mt-5 flex-1 text-[0.9375rem] leading-relaxed text-nlds-charcoal">
+      <div className="flex items-center justify-between gap-3">
+        <StarRating rating={testimonial.rating} />
+        <span className="font-sans shrink-0 whitespace-nowrap text-[0.6875rem] uppercase tracking-[0.14em] text-nlds-muted">
+          Google Review
+        </span>
+      </div>
+      <p
+        className={
+          featured
+            ? 'font-sans mt-6 flex-1 text-[1.0625rem] leading-relaxed text-nlds-charcoal'
+            : 'font-sans mt-5 flex-1 text-[0.9375rem] leading-relaxed text-nlds-charcoal'
+        }
+      >
         &ldquo;{testimonial.text}&rdquo;
       </p>
-      <div className="mt-6 flex items-center gap-3 border-t border-nlds-border pt-5">
-        {testimonial.photo && (
-          <img
-            src={testimonial.photo}
-            alt=""
-            className="h-11 w-11 shrink-0 rounded-full object-cover"
-          />
-        )}
-        <div className="flex min-w-0 flex-col">
-          <span className="font-serif truncate text-base text-nlds-charcoal">{testimonial.name}</span>
-          <span className="font-sans truncate text-xs uppercase tracking-[0.1em] text-nlds-muted">
-            {testimonial.business}
-          </span>
+      <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-3 border-t border-nlds-border pt-5">
+        <div className="flex w-full min-w-0 items-center gap-3 sm:w-auto sm:flex-1">
+          {testimonial.photo ? (
+            <img src={testimonial.photo} alt="" className="h-11 w-11 shrink-0 rounded-full object-cover" />
+          ) : (
+            <span
+              aria-hidden="true"
+              className="flex h-11 w-11 shrink-0 items-center justify-center bg-nlds-bg-soft font-serif text-sm text-nlds-charcoal"
+            >
+              {initials(testimonial.name)}
+            </span>
+          )}
+          <div className="flex min-w-0 flex-col">
+            <span className="font-serif text-base text-nlds-charcoal">{testimonial.name}</span>
+            <span className="font-sans text-xs uppercase tracking-[0.1em] text-nlds-muted">
+              {testimonial.business}
+            </span>
+          </div>
         </div>
         {testimonial.googleReviewUrl && (
           <a
             href={testimonial.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans ml-auto shrink-0 whitespace-nowrap text-xs uppercase tracking-[0.1em] text-nlds-muted underline-offset-4 hover:text-nlds-charcoal hover:underline"
+            aria-label={`View ${testimonial.name}'s review on Google (opens in a new tab)`}
+            className="font-sans shrink-0 whitespace-nowrap text-xs uppercase tracking-[0.1em] text-nlds-muted underline-offset-4 hover:text-nlds-charcoal hover:underline"
           >
-            View Review
+            View on Google
           </a>
         )}
       </div>
@@ -123,6 +166,23 @@ export default function TestimonialCarousel({
   }, [singleSetWidth, reducedMotion]);
 
   if (!enabled || items.length === 0) return null;
+
+  // Too few reviews to justify an infinite loop — show them as a static,
+  // centered row instead. Automatically switches to the marquee below once
+  // MARQUEE_MIN_ITEMS is reached, with no other code changes needed.
+  if (items.length < MARQUEE_MIN_ITEMS) {
+    return (
+      <div
+        className="flex flex-wrap justify-center gap-6 sm:gap-8"
+        role="region"
+        aria-label="Client testimonials"
+      >
+        {items.map((t) => (
+          <TestimonialCard key={t.id} testimonial={t} featured={items.length === 1} />
+        ))}
+      </div>
+    );
+  }
 
   const pause = () => controlsRef.current?.stop();
   const resume = () => startLoop(x.get());
