@@ -444,7 +444,7 @@ export default function Footer() {
             className="font-sans"
             style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted-text)', marginBottom: 4 }}
           >
-            © 2026 New Level Design Studio
+            © 2026 New Level Design Studio LLC. All rights reserved.
           </p>
           <p
             className="font-sans"

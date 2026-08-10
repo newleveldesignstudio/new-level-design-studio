@@ -155,6 +155,25 @@ const AI_SUPPORT_FAQS = [
   },
 ];
 
+const VELORA_CAPABILITIES = [
+  {
+    label: 'Market Authority',
+    desc: 'Dedicated market experiences and data-backed Miami Market Intelligence designed to build geographic and topical authority.',
+  },
+  {
+    label: 'Property Storytelling',
+    desc: 'Cinematic residence experiences built around architecture, lifestyle, location, and editorial presentation.',
+  },
+  {
+    label: 'Seller Marketing',
+    desc: 'The Velora Launch demonstrates a complete seller-marketing strategy from positioning and production through launch, amplification, and optimization.',
+  },
+  {
+    label: 'Editorial SEO',
+    desc: 'Market-specific Journal content and internal-link architecture designed to support long-term search authority rather than generic city-swapped pages.',
+  },
+];
+
 const serviceSchema: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -838,6 +857,83 @@ export default function RealEstateWebDesign() {
           </div>
         </div>
       </div>
+
+      {/* Velora Experience — Flagship Concept */}
+      <section aria-labelledby="velora-heading" style={{ backgroundColor: 'var(--charcoal)', padding: '100px 0' }}>
+        <div className="container-nlds">
+          <p className="eyebrow" style={{ color: 'var(--silver-grey)' }}>FLAGSHIP CONCEPT</p>
+          <h2
+            id="velora-heading"
+            className="font-serif mt-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--white)', lineHeight: 1.15, maxWidth: 640 }}
+          >
+            Velora Experience
+          </h2>
+          <p
+            className="font-sans mt-5"
+            style={{ fontSize: '1rem', color: 'var(--silver-grey)', lineHeight: 1.65, maxWidth: 640 }}
+          >
+            A national luxury real estate platform built to demonstrate what happens when brand,
+            property marketing, market intelligence, editorial content, and conversion strategy
+            operate as one system.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 mt-12">
+            {VELORA_CAPABILITIES.map((item) => (
+              <div key={item.label}>
+                <div
+                  className="font-sans font-semibold"
+                  style={{ fontSize: '0.8125rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--white)' }}
+                >
+                  {item.label}
+                </div>
+                <p className="font-sans mt-2" style={{ fontSize: '0.9375rem', color: 'var(--silver-grey)', lineHeight: 1.6 }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4 mt-12">
+            <a
+              href="https://veloraexperiencehq.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Explore Velora Experience
+            </a>
+            <a
+              href="https://veloraexperiencehq.com/miami-luxury-real-estate-market-intelligence"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans"
+              style={{
+                fontSize: '0.875rem',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'var(--white)',
+                padding: '18px 36px',
+                border: '1px solid var(--silver-grey)',
+                display: 'inline-block',
+                textDecoration: 'none',
+                lineHeight: 1,
+                minHeight: 48,
+              }}
+            >
+              View Miami Market Intelligence
+            </a>
+          </div>
+
+          <p
+            className="font-sans mt-8"
+            style={{ fontSize: '0.8125rem', fontStyle: 'italic', color: 'rgba(255, 255, 255, 0.55)', maxWidth: 580, lineHeight: 1.6 }}
+          >
+            Velora Experience is a fictional flagship concept created by New Level Design Studio to
+            demonstrate our real estate web design and marketing capabilities.
+          </p>
+        </div>
+      </section>
 
       <FinalCTA
         heading="Request a Realtor Website Quote"
