@@ -4,7 +4,7 @@
 
 ## Project
 
-The production website for New Level Design Studio (NLDS) — Michael Vail's founder-led, website-first studio for local service businesses in Port Orange / Daytona Beach / Volusia County / Central Florida. The site's job: earn trust fast and convert visitors into project-intent inquiries via the contact form.
+The production website for New Level Design Studio (NLDS) — Michael Vail's founder-led studio building websites, lead systems, and practical business workflows for local businesses in Port Orange / Daytona Beach / Volusia County / Central Florida. The site's job: earn trust fast and convert visitors into project-intent inquiries via the contact form.
 
 - **Stack:** Vite 7 + React 19 + TypeScript + Tailwind 3, react-router-dom 7, react-helmet-async, GSAP + Lenis, Framer Motion. Custom Playwright prerender.
 - **Production:** https://newlvlstudio.com — Netlify, site ID in `.netlify/state.json`. Every route in the manifest is prerendered; the sitemap and prerender counts must always match the route manifest (`src/data/routes.ts` + articles) — verify with the build, don't trust hardcoded numbers.
@@ -33,7 +33,10 @@ The production website for New Level Design Studio (NLDS) — Michael Vail's fou
 - Respect existing structure and the Motion/GSAP patterns already present; honor `prefers-reduced-motion` in all motion work; verify layouts mobile-first (375/390, 768, desktop).
 - Customer-facing copy is exact-wording-only: use text Michael approved or leave a placeholder. Never fabricate testimonials, reviews, metrics, client results, or guarantees.
 - Voice: direct, plainspoken, local-business focused. Avoid "look bigger online," "elevate," "unlock," "transform," "online presence" filler, "not just X, but Y."
-- **Positioning is project-first:** primary CTA "Start a Website Project"; "Get a Free Website Review" is the low-friction secondary. Do not revert to review-first messaging.
+- **Positioning (updated 2026-10-09):** NLDS improves the digital systems local businesses use to attract customers, respond to opportunities, and run more efficiently. That is the filter for every service and every piece of copy.
+  - Global/umbrella CTA: **"See What We Can Improve"** (nav, homepage, cross-service sections). Website-specific pages may still use website-specific CTAs (e.g. "Start a Website Project") where appropriate.
+  - Do not position NLDS as a generic AI automation agency. No "AI Automation" in the main navigation, no AI-agent language. Use practical, concrete language about websites, lead systems, and business workflows, and never claim integrations or capabilities that are not built and production-ready.
+  - LeadStrike CTA is "Ask About LeadStrike" → `/contact/?service=leadstrike` while the public LeadStrike site is not accessible; switch back to "Explore LeadStrike" once it is public.
 - Concept builds stay honestly labeled ("Concept Build" / "Industry Demo" + disclosures) but framed confidently — never reintroduce "not paid client work" phrasing; Works chips stay demonstration-framed ("Demo focus: …"), never outcome-framed.
 
 ## Image / asset rules

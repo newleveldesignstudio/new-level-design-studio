@@ -45,6 +45,8 @@ export interface ContactServiceOption {
 /** Exact order approved for the contact form's service <select>. */
 export const CONTACT_SERVICE_OPTIONS: readonly ContactServiceOption[] = [
   { value: 'free-website-review', label: 'Free Website Review' },
+  { value: 'leadstrike', label: 'LeadStrike / Lead Response' },
+  { value: 'business-workflows', label: 'Business Workflow or Process Problem' },
   { value: 'starter-website', label: 'Starter Website' },
   { value: 'core-website', label: 'Core Website' },
   { value: 'pro-website', label: 'Pro Website' },

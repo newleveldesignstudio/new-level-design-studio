@@ -540,7 +540,7 @@ export default function Home() {
                 Practical Before Complex
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                We start with the simplest fix that solves the problem and add tools only when they earn their place.
+                We solve the specific problem first instead of adding unnecessary technology.
               </p>
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
@@ -556,7 +556,7 @@ export default function Home() {
                 Built to Connect
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                Websites, forms, inboxes, and lead notifications set up to work together instead of as separate pieces.
+                Websites, forms, lead intake, notifications, and business tools can work together instead of operating separately.
               </p>
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
@@ -776,10 +776,10 @@ export default function Home() {
               LeadStrike helps local service businesses capture incoming inquiries, route them correctly, and make sure someone knows when a lead needs attention.
             </p>
             <Link
-              to="/contact/"
+              to="/contact/?service=leadstrike"
               className="btn-primary mt-10 inline-block self-start"
             >
-              Explore LeadStrike
+              Ask About LeadStrike
             </Link>
           </div>
 

@@ -77,6 +77,16 @@
   margin-top: 32px;
 }
 
+/* Desktop: the two CTAs sit side by side. Their combined width is wider than the
+   text column, so the row is allowed to extend past it (over the video, where the
+   left-weighted scrim keeps contrast). Below 1024px they wrap/stack as before. */
+@media (min-width: 1024px) {
+  .vh-ctas {
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+}
+
 /* Light outline variant of .btn-secondary for the dark video scrim. */
 .vh-cta-secondary.btn-secondary {
   color: var(--white);

@@ -8,7 +8,7 @@ import { PRIMARY_SERVICES, SUPPORTING_CAPABILITIES } from '@/data/serviceTermino
 
 const studioLinks = [
   { text: 'Home', href: '/' },
-  { text: 'Works', href: '/works/' },
+  { text: 'Work', href: '/works/' },
   { text: 'Services', href: '/services/' },
   { text: 'Packages', href: '/packages/' },
   { text: 'Studio', href: '/studio/' },

@@ -95,8 +95,8 @@ export default function Contact() {
   return (
     <div>
       <SEO
-        title="Start Your Website Project — Port Orange FL | NLDS"
-        description="Start a website project or request a free website review from New Level Design Studio — websites, Website Care, and the Visual Starter Pack for local business."
+        title="See What We Can Improve — Contact NLDS, Port Orange FL"
+        description="Tell New Level Design Studio what feels slow, disconnected, or outdated: your website, how leads are handled, or a process your team repeats every day."
         canonical="https://newlvlstudio.com/contact"
         jsonLd={breadcrumbSchema([{ name: 'Home', url: 'https://newlvlstudio.com/' }, { name: 'Contact', url: 'https://newlvlstudio.com/contact/' }])}
       />
@@ -115,17 +115,16 @@ export default function Contact() {
             style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--charcoal)' }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Start Your Website Project.
+            See What We Can Improve
           </motion.h1>
           <motion.p
             className="font-sans mt-6"
             style={{ fontSize: '1rem', color: 'var(--muted-text)', maxWidth: 560, lineHeight: 1.6 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Tell us about your business and what you need — a new website, a redesign,
-            Website Care, or the Visual Starter Pack. Not sure yet? Choose a free website
-            review in the form and we'll tell you what your current site is communicating
-            to new visitors. No commitment required.
+            Tell us what feels slow, disconnected, outdated or overly manual. It may be your
+            website, how leads are handled, or a process your team repeats every day. We&rsquo;ll
+            look at the problem and tell you where we&rsquo;d start.
           </motion.p>
           <motion.div className="mt-20" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />
@@ -412,7 +411,7 @@ export default function Contact() {
                   New Level Design Studio
                 </p>
                 <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                  Websites, brand direction, local SEO structure, and website care for local businesses across Volusia County.
+                  Websites, lead-response systems, and practical workflows for local businesses across Volusia County.
                 </p>
                 <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}>
                   You'll receive a response within one business day.
