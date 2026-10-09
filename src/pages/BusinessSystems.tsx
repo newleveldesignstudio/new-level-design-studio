@@ -295,9 +295,9 @@ export default function BusinessSystems() {
                 Only Need Incoming Lead Response?
               </h2>
               <p className="font-sans mt-4" style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 480 }}>
-                LeadStrike is our separate, ready-made lead-response product for local service
-                businesses. Business Systems is the custom service for workflows shaped around your
-                own tools and process.
+                LeadStrike is our separate lead-response product being built specifically for local
+                service businesses. Business Systems is the custom service for workflows shaped around
+                your own tools and process.
               </p>
             </div>
             <div className="flex lg:justify-end">

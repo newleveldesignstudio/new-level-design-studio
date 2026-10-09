@@ -8,8 +8,9 @@ Design rules that apply to every stage:
 - Every run gets an ID so one lead can be traced end to end.
 - The same input processed twice must not produce duplicate actions (idempotency).
 - Failures are recorded and surfaced to a person. Nothing fails silently.
-- Anything that reaches a customer or changes money/schedule data needs an approval point unless the
-  client signs off otherwise.
+- Customer-facing messages, financial actions, and scheduling changes default to human approval.
+  Removing approval requires an explicitly defined use case, bounded permissions, tested failure
+  handling, and client authorization.
 
 | Stage | Purpose | Input | Output | On failure | Human approval? |
 |---|---|---|---|---|---|
@@ -17,7 +18,7 @@ Design rules that apply to every stage:
 | **Intake** | Capture the raw event safely before doing anything else | Raw event | Stored copy of the original data | Store the raw event in a dead-letter/holding place so it can be replayed | No |
 | **Normalize** | Turn messy input into one consistent record | Raw data | Clean record (name, contact, request, source, timestamps), with problems flagged | Keep the record, flag invalid fields, route to a person instead of guessing | No |
 | **Decide** | Apply the agreed rules | Clean record + rules | Category, owner, priority, next action | Unknown cases go to the default owner, never dropped | Sometimes (when rules are uncertain) |
-| **Act** | Do the work | Decision | Draft reply, task, calendar hold, or record update | Retry safely where duplicates are impossible; otherwise stop and alert | Yes for anything customer-facing, money, or scheduling, unless signed off |
+| **Act** | Do the work | Decision | Draft reply, task, calendar hold, or record update | Retry safely where duplicates are impossible; otherwise stop and alert | Yes by default for customer-facing messages, financial actions, and scheduling changes (see rule above) |
 | **Notify** | Tell the right person | Decision + action result | Message to owner via agreed channel | Fall back to a second channel or the backup person | No |
 | **Log** | Record what happened | Every stage's result | One log entry per run: what, who, when, status | Logging failure is itself an alert; the run is not marked done | No |
 | **Escalate** | Catch what nobody handled | Log + time limits | Alert to the backup person or owner | If escalation can't send, it shows up in the next review | No (the escalation is to a human) |
