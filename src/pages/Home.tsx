@@ -1,11 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ServiceCard from '@/components/ServiceCard';
 import ProjectCard from '@/components/ProjectCard';
 import ValueCard from '@/components/ValueCard';
-import FramedImage from '@/components/FramedImage';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
 import DiagonalLine from '@/components/DiagonalLine';
@@ -15,6 +14,7 @@ import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
 import VideoHero from '@/components/VideoHero';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import { EXTERNAL_LINKS } from '@/lib/links';
+import { getLenis } from '@/hooks/useLenis';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,7 +56,6 @@ export default function Home() {
   // Split editorial parallax
   const splitRef = useRef<HTMLDivElement>(null);
   const splitImageRef = useRef<HTMLImageElement>(null);
-  const whyTextRef = useRef<HTMLDivElement>(null);
   const workHeadingRef = useRef<HTMLDivElement>(null);
   const reviewsHeadingRef = useRef<HTMLDivElement>(null);
 
@@ -84,35 +83,22 @@ export default function Home() {
   }, []);
 
 
-  // Why It Matters reveal
+  // Hash links (/#what-we-build, /#leadstrike, nav Systems items) scroll to their section.
+  // Delayed so it runs after the global scroll-to-top on route change (same pattern as Services).
+  const location = useLocation();
   useEffect(() => {
-    const el = whyTextRef.current;
-    if (!el) return;
-
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
-
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        el.children,
-        { y: 28, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.12,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 80%',
-            once: true,
-          },
-        }
-      );
-    }, el);
-
-    return () => ctx.revert();
-  }, []);
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const timer = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const lenis = getLenis();
+      if (lenis) lenis.scrollTo(el, { offset: -100, immediate: reduce });
+      else el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [location.hash]);
 
   // Selected Work heading reveal
   useEffect(() => {
@@ -174,7 +160,7 @@ export default function Home() {
     return () => ctx.revert();
   }, []);
 
-  // "A Better First Impression" simple fade-up reveal
+  // "Where Local Businesses Lose Opportunities" simple fade-up reveal
   useEffect(() => {
     const section = impressionRef.current;
     const textBlock = impressionTextRef.current;
@@ -237,7 +223,7 @@ export default function Home() {
             style={{ gap: 'clamp(24px, 4vw, 48px)', alignItems: 'center' }}
           >
             <div>
-              <p className="eyebrow" style={{ fontSize: '0.6875rem' }}>FREE WEBSITE + SEO RESOURCES</p>
+              <p className="eyebrow" style={{ fontSize: '0.6875rem' }}>FREE BUSINESS VISIBILITY TOOLS</p>
               <h2
                 className="font-serif mt-4"
                 style={{
@@ -301,10 +287,10 @@ export default function Home() {
                 What We Build
               </p>
               <p className="font-serif" style={{ fontSize: '1.05rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
-                Website-First Structure
+                Built Around Real Business Problems
               </p>
               <p className="font-sans" style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', marginTop: 4, lineHeight: 1.5 }}>
-                Website design, redesign, and care — built for local businesses
+                Websites, lead systems, and workflows designed around how local businesses actually operate.
               </p>
             </div>
             <div>
@@ -345,7 +331,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* A Better First Impression */}
+      {/* Where Local Businesses Lose Opportunities */}
       <section
         ref={impressionRef}
         className="hero-next-section"
@@ -353,20 +339,10 @@ export default function Home() {
       >
         <div className="container-nlds">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Left: editorial text */}
+            {/* Left: heading */}
             <div ref={impressionTextRef} className="flex flex-col justify-center">
-              <p
-                className="font-sans uppercase"
-                style={{
-                  fontSize: '0.75rem',
-                  letterSpacing: '0.25em',
-                  color: 'var(--muted-text)',
-                }}
-              >
-                First Impressions
-              </p>
               <h2
-                className="font-serif mt-5"
+                className="font-serif"
                 style={{
                   fontSize: 'clamp(2rem, 4vw, 3.25rem)',
                   color: 'var(--charcoal)',
@@ -374,24 +350,12 @@ export default function Home() {
                   maxWidth: 460,
                 }}
               >
-                Your first impression is already happening.
+                Where Local Businesses Lose Opportunities
               </h2>
-              <p
-                className="font-sans mt-6"
-                style={{
-                  fontSize: '1.05rem',
-                  lineHeight: 1.65,
-                  color: 'var(--body-text)',
-                  maxWidth: 420,
-                }}
-              >
-                Most people form an opinion in seconds. We help businesses own that moment — with a website that feels considered, a brand that feels confident, and visuals that feel like someone who cares made them.
-              </p>
             </div>
 
-            {/* Right: 3 clean stacked panels */}
+            {/* Right: 3 stacked panels */}
             <div ref={impressionPanelsRef} className="flex flex-col" style={{ gap: 0 }}>
-              {/* Panel 01 */}
               <div
                 style={{
                   borderBottom: '1px solid var(--silver-grey)',
@@ -419,8 +383,14 @@ export default function Home() {
                         lineHeight: 1.2,
                       }}
                     >
-                      Website Design
+                      Get Found
                     </h3>
+                    <p
+                      className="font-sans uppercase mt-1"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.18em', color: 'var(--muted-text)' }}
+                    >
+                      Website &amp; Visibility
+                    </p>
                     <p
                       className="font-sans mt-2"
                       style={{
@@ -430,13 +400,11 @@ export default function Home() {
                         maxWidth: 320,
                       }}
                     >
-                      Most visitors decide whether to call or scroll past within seconds. A professionally structured website is the clearest signal your business is worth contacting.
+                      Make it easy for customers to understand the business, trust it, and contact it.
                     </p>
                   </div>
                 </div>
               </div>
-
-              {/* Panel 02 */}
               <div
                 style={{
                   borderBottom: '1px solid var(--silver-grey)',
@@ -464,8 +432,14 @@ export default function Home() {
                         lineHeight: 1.2,
                       }}
                     >
-                      Brand Direction
+                      Respond
                     </h3>
+                    <p
+                      className="font-sans uppercase mt-1"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.18em', color: 'var(--muted-text)' }}
+                    >
+                      Lead Response
+                    </p>
                     <p
                       className="font-sans mt-2"
                       style={{
@@ -475,14 +449,16 @@ export default function Home() {
                         maxWidth: 320,
                       }}
                     >
-                      Scattered graphics and mismatched imagery quietly signal that no one is in charge. A unified visual system makes every touchpoint feel intentional.
+                      Capture new inquiries and make sure hot leads don&rsquo;t sit unanswered.
                     </p>
                   </div>
                 </div>
               </div>
-
-              {/* Panel 03 */}
-              <div style={{ padding: '36px 0 0' }}>
+              <div
+                style={{
+                  padding: '36px 0 0',
+                }}
+              >
                 <div className="flex items-baseline gap-5">
                   <span
                     className="font-sans shrink-0"
@@ -504,8 +480,14 @@ export default function Home() {
                         lineHeight: 1.2,
                       }}
                     >
-                      Website Copy & Visual Support
+                      Operate
                     </h3>
+                    <p
+                      className="font-sans uppercase mt-1"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.18em', color: 'var(--muted-text)' }}
+                    >
+                      Business Workflows
+                    </p>
                     <p
                       className="font-sans mt-2"
                       style={{
@@ -515,7 +497,7 @@ export default function Home() {
                         maxWidth: 320,
                       }}
                     >
-                      Branded graphics, launch assets, and supporting content keep the website and the rest of the business looking consistent wherever customers encounter it.
+                      Reduce repetitive tasks and connect processes that currently depend on manual work.
                     </p>
                   </div>
                 </div>
@@ -527,12 +509,11 @@ export default function Home() {
       {/* Why Local Businesses Work With NLDS */}
       <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
-          <p className="eyebrow">WHY LOCAL BUSINESSES WORK WITH NLDS</p>
           <h2
-            className="font-serif mt-4"
+            className="font-serif"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', maxWidth: 600, lineHeight: 1.15 }}
           >
-            A clearer website, a stronger first impression, and one direct path to more inquiries.
+            Why Local Businesses Work With NLDS
           </h2>
           <div className="mt-12">
             <SectionDivider />
@@ -548,7 +529,7 @@ export default function Home() {
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
               <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                Built for Local Search
+                Built for Local Businesses
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
                 Structured around services, locations, calls, quote requests, and the way customers actually browse.
@@ -556,15 +537,15 @@ export default function Home() {
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
               <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                Website-First, Not Add-Ons
+                Practical Before Complex
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                Strategy, copy, layout, visuals, launch support, and ongoing care handled as one connected presence.
+                We start with the simplest fix that solves the problem and add tools only when they earn their place.
               </p>
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
               <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                Clear Package Structure
+                Clear Scope &amp; Pricing
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
                 Starter, Core, and Pro Website packages make it clear what you're getting and what it costs.
@@ -572,18 +553,18 @@ export default function Home() {
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
               <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                First 90 Days Support
+                Built to Connect
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                Every launch includes 90 days of review and fine-tuning once the site is live.
+                Websites, forms, inboxes, and lead notifications set up to work together instead of as separate pieces.
               </p>
             </div>
             <div style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 24 }}>
               <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                Website Care After Launch
+                Ongoing Support
               </h3>
               <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.6 }}>
-                Ongoing monthly care keeps the site current after the First 90 Days end.
+                Every launch includes 90 days of review and fine-tuning, with Website Care available after that.
               </p>
             </div>
           </div>
@@ -667,15 +648,17 @@ export default function Home() {
             className="font-sans mt-5"
             style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 560 }}
           >
-            Most local businesses do not lose leads because they are bad at what they do. They lose trust when their website does not match the quality of their work.
+            Most local businesses do not lose leads because they are bad at what they do.
           </p>
           <div className="mt-12 flex flex-col" style={{ gap: 0 }}>
             {[
-              'Outdated websites that weaken trust before the first call',
-              'Weak first impressions before customers call',
-              'Inconsistent branding across website, Google, Facebook, and social posts',
-              'No clear path from visitor to quote, booking, or contact',
-              'Local competitors looking more credible online',
+              'Website does not reflect the quality of the business',
+              'Customers cannot quickly understand what the company offers',
+              'New inquiries sit too long before someone responds',
+              'Staff repeatedly copy information between tools',
+              'Important follow-ups depend on someone remembering',
+              'Website, forms, inbox, calendar, and other tools operate separately',
+              'No clear view of what needs attention',
             ].map((item, i) => (
               <div
                 key={i}
@@ -694,8 +677,8 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link to="/contact/?service=free-website-review" className="btn-primary mt-10 inline-block">
-            Get a Free Website Review
+          <Link to="/contact/" className="btn-primary mt-10 inline-block">
+            See What We Can Improve
           </Link>
         </div>
       </section>
@@ -710,18 +693,23 @@ export default function Home() {
           >
             Serving Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, Volusia County &amp; Central Florida
           </p>
+          <p
+            className="font-sans text-center mt-2 uppercase"
+            style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)', lineHeight: 1.7 }}
+          >
+            Built for contractors, restaurants, coffee shops, salons, real estate, fitness, and local service providers
+          </p>
         </div>
       </section>
 
-      {/* Core Services */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
+      {/* What We Build */}
+      <section id="what-we-build" style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
-          <p className="eyebrow">WHAT WE DO</p>
           <h2
-            className="font-serif mt-4"
+            className="font-serif"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', maxWidth: 600, lineHeight: 1.15 }}
           >
-            Clean design, sharp content, and a direct path to more inquiries.
+            What We Build
           </h2>
           <div className="mt-12">
             <SectionDivider />
@@ -730,91 +718,87 @@ export default function Home() {
             <div className="service-card">
               <ServiceCard
                 icon={<MonitorIcon />}
-                title="Website Design"
-                description="Custom-coded sites structured for your services, local area, and how customers search — built to turn visitors into direct inquiries."
+                title="Websites"
+                description="Custom websites designed around trust, local visibility, and conversion."
                 link={{ text: 'See Services', to: '/services/' }}
+              />
+            </div>
+            <div id="lead-systems" className="service-card">
+              <ServiceCard
+                icon={<FramesIcon />}
+                title="Lead Systems"
+                description="Systems that capture, route, notify, and help businesses respond to incoming leads faster."
+              />
+            </div>
+            <div id="business-workflows" className="service-card">
+              <ServiceCard
+                icon={<PageIcon />}
+                title="Business Workflows"
+                description="Practical automations for repetitive processes, follow-up, reporting, and information movement."
               />
             </div>
             <div className="service-card">
               <ServiceCard
                 icon={<SupportIcon />}
-                title="Website Care"
-                description="Monthly updates, checks, and small fixes so the site stays credible after launch."
-                link={{ text: 'See Services', to: '/services/' }}
-              />
-            </div>
-            <div className="service-card">
-              <ServiceCard
-                icon={<FramesIcon />}
-                title="Brand Direction"
-                description="Visual identity, graphics, and web imagery that keep the business looking consistent and credible across platforms."
-                link={{ text: 'See Services', to: '/services/' }}
-              />
-            </div>
-            <div className="service-card">
-              <ServiceCard
-                icon={<PageIcon />}
-                title="Website Copy & Visual Support"
-                description="Branded graphics, launch assets, and supporting content that keep the website and the rest of the business looking consistent."
-                link={{ text: 'See Services', to: '/services/' }}
+                title="Website & System Care"
+                description="Ongoing checks, maintenance, improvements, and support."
+                link={{ text: 'See Website Care', to: '/website-care/' }}
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why It Matters */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
-        <div className="container-nlds">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div ref={whyTextRef} className="flex flex-col justify-center">
-              <p className="eyebrow">WHY IT MATTERS</p>
-              <h2
-                className="font-serif mt-4"
-                style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
-              >
-                Your website has to earn trust before the first call.
-              </h2>
-              <p
-                className="font-sans mt-6"
-                style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6 }}
-              >
-                Most people decide how they feel about a business within seconds of landing on its website. A few things make that first impression work in your favor:
-              </p>
-              <ul className="mt-5 flex flex-col" style={{ gap: 12 }}>
-                {[
-                  'Clear services reduce hesitation before someone reaches out.',
-                  'Better structure makes it easier to understand what you actually do.',
-                  'Trust signals help people feel safer picking up the phone or sending a message.',
-                  'Mobile clarity matters — most people are checking you out quickly, on their phone.',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span
-                      className="font-sans shrink-0"
-                      style={{ fontSize: '0.75rem', color: 'var(--silver-grey)', marginTop: 2 }}
-                    >
-                      —
-                    </span>
-                    <span className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--body-text)', lineHeight: 1.55 }}>
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/contact/" className="btn-primary mt-8 inline-block self-start">
-                Start a Website Project
-              </Link>
-            </div>
-            <div className="relative">
-              <FramedImage
-                src="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.webp"
-                srcSet="/nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio-w768.webp 768w, /nlds/images/port-orange-local-business-storefront-first-impression-trust-new-level-design-studio.webp 1672w"
-                sizes="(max-width: 1024px) 100vw, 600px"
-                alt="Modern local business storefront"
-                aspectRatio="4/3"
-              />
-              <DiagonalLine direction="tl-br" className="absolute inset-0" />
-            </div>
+      {/* LeadStrike */}
+      <section id="leadstrike" ref={splitRef} className="w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Dark Panel */}
+          <div
+            className="flex flex-col justify-center"
+            style={{ backgroundColor: 'var(--black-metal)', padding: 'clamp(60px, 8vw, 120px) clamp(40px, 5vw, 80px)' }}
+          >
+            <p
+              className="font-sans uppercase"
+              style={{ fontSize: '0.6875rem', letterSpacing: '0.25em', color: 'var(--platinum-grey)', marginBottom: 16 }}
+            >
+              LeadStrike
+            </p>
+            <h2
+              className="font-serif"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--white)', lineHeight: 1.15 }}
+            >
+              A Hot Lead Shouldn&rsquo;t Wait for Somebody to Notice It.
+            </h2>
+            <p
+              className="font-sans mt-6"
+              style={{ fontSize: '1rem', color: 'var(--platinum-grey)', lineHeight: 1.6, maxWidth: 440 }}
+            >
+              LeadStrike helps local service businesses capture incoming inquiries, route them correctly, and make sure someone knows when a lead needs attention.
+            </p>
+            <Link
+              to="/contact/"
+              className="btn-primary mt-10 inline-block self-start"
+            >
+              Explore LeadStrike
+            </Link>
+          </div>
+
+          {/* Photography */}
+          <div className="relative overflow-hidden min-h-[280px] md:min-h-[400px] lg:min-h-[60vh]">
+            <img
+              ref={splitImageRef}
+              src="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.webp"
+              srcSet="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio-w768.webp 768w, /nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.webp 1672w"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              width={1672}
+              height={941}
+              decoding="async"
+              alt="Row of local business storefronts"
+              className="img-muted absolute inset-0 w-full h-full object-cover"
+              style={{ transform: 'scale(1.06)' }}
+              loading="lazy"
+            />
+            <DiagonalLine direction="bl-tr" className="absolute inset-0" />
           </div>
         </div>
       </section>
@@ -841,7 +825,7 @@ export default function Home() {
                     maxWidth: 580,
                   }}
                 >
-                  Work directly with the person responsible for the strategy, design, and final
+                  Work directly with the person responsible for the strategy, build, and final
                   result.
                 </h2>
                 <p
@@ -856,8 +840,8 @@ export default function Home() {
                   New Level Design Studio is founder-led by Michael Vail. That means the
                   strategy, design direction, and quality control do not get passed through
                   layers of account managers. You work directly with someone focused on making
-                  your business look credible, clear, and ready for the customers already
-                  searching for you.
+                  your business clearer to customers and easier to run — from the website to
+                  how new inquiries are handled.
                 </p>
                 <Link to="/michael-vail/" className="btn-primary mt-8 inline-block">
                   Meet Michael
@@ -896,17 +880,17 @@ export default function Home() {
             className="font-serif text-center mt-4"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
           >
-            A Clear Process for Building a Stronger Website
+            Find the Bottleneck. Build the Fix. Measure What Changed.
           </h2>
 
           <div className="mt-16 flex flex-col" style={{ gap: 0 }}>
             {[
-              { number: '01', title: 'Audit the Current Presence', description: 'We review what you have, what is working, and where the gaps are.' },
-              { number: '02', title: 'Clarify the Offer', description: 'We define what you do, who you serve, and what makes your business the right choice.' },
-              { number: '03', title: 'Structure the Website', description: 'We map pages, navigation, and content so visitors can find what they need without confusion.' },
-              { number: '04', title: 'Design the Visual System', description: 'We build a clean, consistent look that feels sharp across every page and platform.' },
-              { number: '05', title: 'Build and Launch', description: 'We code, test, refine, and launch a site that performs well and loads fast.' },
-              { number: '06', title: 'Maintain and Improve', description: 'We keep the site updated, monitored, and ready to grow with your business.' },
+              { number: '01', title: 'Understand', description: 'We learn how the business runs today: how customers find you, how inquiries arrive, and who handles what.' },
+              { number: '02', title: 'Identify', description: 'We pinpoint the bottleneck that costs the most, whether that is the website, lead response, or repeated manual work.' },
+              { number: '03', title: 'Simplify', description: 'We narrow the fix to the smallest change that solves the problem.' },
+              { number: '04', title: 'Build', description: 'We build the website, lead system, or workflow around how your team already works.' },
+              { number: '05', title: 'Test', description: 'We test it with realistic scenarios before it goes live.' },
+              { number: '06', title: 'Improve', description: 'After launch, we look at what changed and keep refining.' },
             ].map((step, i) => (
               <div
                 key={i}
@@ -951,12 +935,11 @@ export default function Home() {
       {/* Package Preview — compact pricing transparency, full detail on /packages */}
       <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
         <div className="container-nlds">
-          <p className="eyebrow">PACKAGES</p>
           <h2
-            className="font-serif mt-4"
+            className="font-serif"
             style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 560 }}
           >
-            Clear packages. Clear pricing. No guessing.
+            Website Packages
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {[
@@ -1025,102 +1008,15 @@ export default function Home() {
               Every build includes launch support and First 90 Days check-ins.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Split Editorial */}
-      <section ref={splitRef} className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Dark Panel */}
           <div
-            className="flex flex-col justify-center"
-            style={{ backgroundColor: 'var(--black-metal)', padding: 'clamp(60px, 8vw, 120px) clamp(40px, 5vw, 80px)' }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+            style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 28 }}
           >
-            <h2
-              className="font-serif"
-              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--white)', lineHeight: 1.15 }}
-            >
-              Built for Local Businesses That Need a More Credible Website.
-            </h2>
-            <p
-              className="font-sans mt-6"
-              style={{ fontSize: '1rem', color: 'var(--platinum-grey)', lineHeight: 1.6, maxWidth: 440 }}
-            >
-              From contractors and restaurants to beauty studios and real estate — we help local businesses across Volusia County build websites that earn trust before the first call.
+            <p className="font-serif" style={{ fontSize: '1.25rem', color: 'var(--charcoal)', lineHeight: 1.3 }}>
+              Looking for LeadStrike or a custom business system?
             </p>
-            <Link
-              to="/contact/"
-              className="btn-primary mt-10 inline-block self-start"
-            >
-              Start a Website Project
-            </Link>
+            <Link to="/contact/" className="btn-secondary">See What We Can Improve</Link>
           </div>
-
-          {/* Photography */}
-          <div className="relative overflow-hidden min-h-[280px] md:min-h-[400px] lg:min-h-[60vh]">
-            <img
-              ref={splitImageRef}
-              src="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.webp"
-              srcSet="/nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio-w768.webp 768w, /nlds/images/port-orange-local-businesses-established-online-presence-new-level-design-studio.webp 1672w"
-              sizes="(max-width: 768px) 100vw, 1200px"
-              width={1672}
-              height={941}
-              decoding="async"
-              alt="Row of local business storefronts"
-              className="img-muted absolute inset-0 w-full h-full object-cover"
-              style={{ transform: 'scale(1.06)' }}
-              loading="lazy"
-            />
-            <DiagonalLine direction="bl-tr" className="absolute inset-0" />
-          </div>
-        </div>
-      </section>
-
-      {/* Capabilities Proof Strip */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(44px, 7vw, 72px) 0' }}>
-        <div className="container-nlds">
-          <p className="eyebrow">WHAT WE BUILD</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-            {[
-              {
-                label: 'Mobile-First Websites',
-                desc: 'Structured for how local customers actually search and browse — fast, clean, and built around a clear inquiry path.',
-              },
-              {
-                label: 'Local SEO Structure',
-                desc: 'On-page foundations, location pages, and schema markup that give your local market a real chance to find you.',
-              },
-              {
-                label: 'Clear Inquiry Paths',
-                desc: 'Quote requests, contact flows, and booking CTAs designed to reduce friction and generate real calls and messages.',
-              },
-              {
-                label: 'Branded Visual Systems',
-                desc: 'Logos, graphics, and imagery that stay consistent across your website, Google Business Profile, and social platforms.',
-              },
-            ].map((item, i) => (
-              <div key={i} style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 20 }}>
-                <h3 className="font-sans font-semibold" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)' }}>
-                  {item.label}
-                </h3>
-                <p className="font-sans mt-2" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.55 }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p
-            className="font-sans mt-10 uppercase"
-            style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)', lineHeight: 1.7 }}
-          >
-            Built for contractors, restaurants, coffee shops, salons, real estate, fitness, and local service providers
-          </p>
-          <p
-            className="font-sans mt-2 uppercase"
-            style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)', lineHeight: 1.7 }}
-          >
-            Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Ormond Beach &nbsp;·&nbsp; New Smyrna Beach &nbsp;·&nbsp; Volusia County
-          </p>
         </div>
       </section>
 
@@ -1181,98 +1077,6 @@ export default function Home() {
               <TestimonialCarousel />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* What Your Website Needs to Work */}
-      <section style={{ backgroundColor: 'var(--bg-soft)', padding: 'clamp(56px, 9vw, 100px) 0' }}>
-        <div className="container-nlds">
-          <p className="eyebrow">WEBSITE SUCCESS CHECKLIST</p>
-          <h2
-            className="font-serif mt-4"
-            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}
-          >
-            What Your Website Needs to Work
-          </h2>
-          <div className="mt-12">
-            <SectionDivider />
-          </div>
-
-          {/* 4 key pillars — always visible */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 mt-12">
-            {[
-              { num: '01', title: 'Clear First Impression', desc: 'Visitors should understand who you are and why you matter within seconds of landing.' },
-              { num: '04', title: 'Mobile-First Layout', desc: 'Built for the screen most of your customers are actually using to find you.' },
-              { num: '06', title: 'Trust Signals', desc: 'Proof that builds confidence before the first conversation — concept work, credentials, and social presence.' },
-              { num: '09', title: 'Local SEO Foundation', desc: 'A properly structured site gives your local market a real chance to find you.' },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-5"
-                style={{
-                  borderBottom: '1px solid var(--silver-grey)',
-                  padding: '24px 0',
-                }}
-              >
-                <span
-                  className="font-sans shrink-0"
-                  style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', minWidth: 24 }}
-                >
-                  {item.num}
-                </span>
-                <div>
-                  <h3 className="font-sans font-semibold" style={{ fontSize: '1rem', color: 'var(--charcoal)' }}>
-                    {item.title}
-                  </h3>
-                  <p className="font-sans mt-1" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Full checklist — collapsed by default, preserved for SEO */}
-          <details className="mt-6">
-            <summary
-              className="font-sans uppercase"
-              style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', cursor: 'pointer', userSelect: 'none', listStyle: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
-            >
-              <span>See full checklist</span>
-              <span style={{ fontSize: '0.625rem' }}>▼</span>
-            </summary>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 mt-4">
-              {[
-                { num: '02', title: 'Strong Headline', desc: 'Simple. Specific. Direct.' },
-                { num: '03', title: 'Premium Brand Presentation', desc: 'Look established before people compare.' },
-                { num: '05', title: 'Clear Service Structure', desc: 'Make the offer easy to understand.' },
-                { num: '07', title: 'Clear Call to Action', desc: 'Give visitors one clear next step.' },
-                { num: '08', title: 'Fast Load Speed', desc: 'Performance shapes perception.' },
-                { num: '10', title: 'Ongoing Maintenance', desc: 'Keep the site sharp after launch.' },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-5"
-                  style={{ borderBottom: '1px solid var(--silver-grey)', padding: '24px 0' }}
-                >
-                  <span
-                    className="font-sans shrink-0"
-                    style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', minWidth: 24 }}
-                  >
-                    {item.num}
-                  </span>
-                  <div>
-                    <h3 className="font-sans font-semibold" style={{ fontSize: '1rem', color: 'var(--charcoal)' }}>
-                      {item.title}
-                    </h3>
-                    <p className="font-sans mt-1" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </details>
         </div>
       </section>
 
@@ -1355,7 +1159,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Website Review CTA */}
+      {/* Universal CTA */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: 'clamp(48px, 8vw, 80px) 0' }}>
         <div className="container-nlds">
           <div
@@ -1367,23 +1171,22 @@ export default function Home() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
-                <p className="eyebrow">FREE WEBSITE REVIEW</p>
                 <h2
-                  className="font-serif mt-4"
+                  className="font-serif"
                   style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--charcoal)', lineHeight: 1.15, maxWidth: 440 }}
                 >
-                  Not sure what your site needs?
+                  Not Sure What Needs Fixing First?
                 </h2>
                 <p
                   className="font-sans mt-4"
                   style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 440 }}
                 >
-                  Send your current website and I'll review the first impression, mobile layout, CTA path, and local SEO foundation — and let you know what I'd change.
+                  Tell us where the business feels slow, disconnected, outdated, or overly manual. We&rsquo;ll look at the problem and tell you what we&rsquo;d improve first.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end">
-                <Link to="/contact/?service=free-website-review" className="btn-primary">
-                  Get a Free Website Review
+                <Link to="/contact/" className="btn-primary">
+                  See What We Can Improve
                 </Link>
                 <p
                   className="font-sans mt-3"
@@ -1399,9 +1202,9 @@ export default function Home() {
 
       {/* Final CTA */}
       <FinalCTA
-        heading="Ready to start your website project?"
-        body="A clear, credible website makes a stronger first impression — and makes it easier for customers to trust your business and reach out."
-        buttonText="Start a Website Project"
+        heading="Something in Your Business Could Work Better."
+        body="It might be your website. It might be how leads are handled. It might be a process your team repeats every day. Start with the problem — we'll figure out whether there's a practical way to improve it."
+        buttonText="See What We Can Improve"
       />
 
     </div>

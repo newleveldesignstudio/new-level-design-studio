@@ -37,13 +37,18 @@ export default function VideoHero() {
       <div className="vh-overlay" />
       <div className="vh-content">
         <p className="vh-eyebrow">Port Orange &nbsp;·&nbsp; Daytona Beach &nbsp;·&nbsp; Volusia County</p>
-        <h1 className="vh-headline">Make Your Business Look Like the Local Favorite</h1>
+        <h1 className="vh-headline">Better Systems for Winning Local Business.</h1>
         <p className="vh-body">
-          Clean, modern websites for restaurants, service businesses, realtors, and local brands.
+          NLDS builds websites, lead-response systems, and practical workflows that help local businesses attract customers, respond faster, and reduce repetitive work.
         </p>
-        <Link to="/contact/" className="btn-primary vh-cta">
-          Start Your Website
-        </Link>
+        <div className="vh-ctas">
+          <Link to="/contact/" className="btn-primary vh-cta">
+            See What We Can Improve
+          </Link>
+          <Link to="/#what-we-build" className="btn-secondary vh-cta vh-cta-secondary">
+            Explore What We Build
+          </Link>
+        </div>
       </div>
     </section>
   );

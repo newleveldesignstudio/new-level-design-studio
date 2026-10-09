@@ -177,7 +177,7 @@ export default function Footer() {
                 margin: '0 0 12px',
               }}
             >
-              WEBSITE DESIGN · WEBSITE REDESIGN · WEBSITE CARE
+              WEBSITES · LEAD SYSTEMS · BUSINESS WORKFLOWS
             </p>
 
             {/* Thin horizontal rule */}
@@ -219,7 +219,7 @@ export default function Footer() {
               className="font-sans"
               style={{ fontSize: '0.875rem', lineHeight: 1.65, color: 'var(--muted-text)', marginBottom: 18, maxWidth: 300 }}
             >
-              Premium websites, strategic redesigns, and ongoing website care for local businesses that need a stronger first impression and a clearer path to inquiry.
+              Websites, lead-response systems, and practical workflows for local businesses that want stronger customer experiences and smoother operations.
             </p>
 
             <div className="flex flex-col" style={{ gap: 10, marginBottom: 20 }}>

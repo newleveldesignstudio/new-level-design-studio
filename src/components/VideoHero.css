@@ -70,8 +70,22 @@
   max-width: 480px;
 }
 
-.vh-cta.btn-primary {
+.vh-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 32px;
+}
+
+/* Light outline variant of .btn-secondary for the dark video scrim. */
+.vh-cta-secondary.btn-secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.vh-cta-secondary.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--charcoal);
 }
 
 /* Portrait phones/tablets only — landscape (including small-width landscape
@@ -150,8 +164,12 @@
     margin-top: 8px;
   }
 
-  .vh-cta.btn-primary {
+  .vh-ctas {
     margin-top: 14px;
+    gap: 10px;
+  }
+
+  .vh-cta {
     width: 100%;
     text-align: center;
   }
