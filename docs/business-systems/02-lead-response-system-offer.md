@@ -40,7 +40,7 @@ with any of:
 | Lead categorization | Sort by service, location, urgency using approved rules | — |
 | Routing rules | Each request type goes to the right person or team | Client defines owners |
 | Notifications | Owner is told when a lead needs attention | Email by default; other channels depend on the client's tools |
-| Follow-up drafting | First reply prepared for a person to review and send | Never sent without approval unless the client explicitly signs off on a fixed template |
+| Follow-up drafting | First reply prepared for a person to review and send | Customer-facing drafts require human approval by default. Removing approval requires a defined use case, bounded permissions, tested failure handling, and client authorization. |
 | Task creation | Follow-up task so the next step is not forgotten | A task/job tool that accepts tasks from outside |
 | Basic lead logging | Every lead and its status in one place | A tool the client uses, or a simple log we set up |
 | Escalation rules | Unhandled leads flagged to a second person after a set time | Client defines the time and the backup person |
