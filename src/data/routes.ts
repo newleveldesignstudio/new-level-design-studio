@@ -26,6 +26,7 @@ export const STATIC_PUBLIC_ROUTES = [
   '/packages',
   '/starter-pack',
   '/website-care',
+  '/business-systems',
   '/real-estate-web-design',
   '/real-estate-marketing-website',
   '/proof',

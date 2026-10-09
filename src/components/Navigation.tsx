@@ -63,14 +63,15 @@ const navItems: NavItem[] = [
   },
   {
     label: 'Systems',
-    path: '/#what-we-build',
+    path: '/business-systems/',
+    activePrefixes: ['/business-systems'],
     dropdown: {
       title: 'Systems',
       description: 'Lead response and workflow systems for local businesses.',
       links: [
-        { label: 'LeadStrike', path: '/#leadstrike' },
-        { label: 'Business Workflows', path: '/#business-workflows' },
-        { label: 'Lead Response Systems', path: '/#lead-systems' },
+        { label: 'Business Workflows', path: '/business-systems/', description: 'Practical workflows built around real business bottlenecks.' },
+        { label: 'Lead Response Systems', path: '/business-systems/#lead-response-system', description: 'Get every new inquiry seen, owned, and answered.' },
+        { label: 'LeadStrike', path: '/#leadstrike', description: 'Our separate, productized lead-response system.' },
       ],
     },
   },

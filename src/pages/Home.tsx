@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ServiceCard from '@/components/ServiceCard';
@@ -14,7 +14,7 @@ import SEO, { localBusinessSchema, websiteSchema } from '@/components/SEO';
 import VideoHero from '@/components/VideoHero';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import { EXTERNAL_LINKS } from '@/lib/links';
-import { getLenis } from '@/hooks/useLenis';
+import { useHashScroll } from '@/hooks/useHashScroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,21 +84,7 @@ export default function Home() {
 
 
   // Hash links (/#what-we-build, /#leadstrike, nav Systems items) scroll to their section.
-  // Delayed so it runs after the global scroll-to-top on route change (same pattern as Services).
-  const location = useLocation();
-  useEffect(() => {
-    if (!location.hash) return;
-    const id = location.hash.slice(1);
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const timer = setTimeout(() => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const lenis = getLenis();
-      if (lenis) lenis.scrollTo(el, { offset: -100, immediate: reduce });
-      else el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-    }, 150);
-    return () => clearTimeout(timer);
-  }, [location.hash]);
+  useHashScroll();
 
   // Selected Work heading reveal
   useEffect(() => {
@@ -728,6 +714,7 @@ export default function Home() {
                 icon={<FramesIcon />}
                 title="Lead Systems"
                 description="Systems that capture, route, notify, and help businesses respond to incoming leads faster."
+                link={{ text: 'See the Lead Response System', to: '/business-systems/#lead-response-system' }}
               />
             </div>
             <div id="business-workflows" className="service-card">
@@ -735,6 +722,7 @@ export default function Home() {
                 icon={<PageIcon />}
                 title="Business Workflows"
                 description="Practical automations for repetitive processes, follow-up, reporting, and information movement."
+                link={{ text: 'See Business Systems', to: '/business-systems/' }}
               />
             </div>
             <div className="service-card">
