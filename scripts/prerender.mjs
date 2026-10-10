@@ -53,33 +53,63 @@ function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+const VITE_BIN = path.join(ROOT, 'node_modules', 'vite', 'bin', 'vite.js');
+let previewServer = null;
+
+// Stop the preview server on every exit path (success, build failure, crash, Ctrl-C) so no
+// orphan keeps port 4174 and poisons the next build.
+function stopPreviewServer() {
+  if (previewServer && previewServer.exitCode === null && previewServer.signalCode === null) previewServer.kill('SIGTERM');
+}
+process.on('exit', stopPreviewServer);
+for (const sig of ['SIGINT', 'SIGTERM']) process.on(sig, () => { stopPreviewServer(); process.exit(1); });
+
+/**
+ * Starts `vite preview` on PORT and resolves only once it reports it is listening there.
+ * Runs vite directly (not via npx) so the kill reaches the server process itself, and uses
+ * --strictPort so an occupied port is a hard failure instead of a silent move to another port.
+ */
 function startPreviewServer() {
   return new Promise((resolve, reject) => {
-    const server = spawn('npx', ['vite', 'preview', '--port', String(PORT)], {
+    const server = spawn(process.execPath, [VITE_BIN, 'preview', '--port', String(PORT), '--strictPort'], {
       cwd: ROOT,
       stdio: ['ignore', 'pipe', 'pipe'],
-      shell: false,
     });
-
-    let started = false;
-
-    const tryResolve = (data) => {
-      const text = data.toString();
-      if (!started && (text.includes('localhost') || text.includes('Local:') || text.includes('ready'))) {
-        started = true;
+    previewServer = server;
+    let output = '';
+    let settled = false;
+    const fail = (msg) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      stopPreviewServer();
+      reject(new Error(`${msg}\n${output.trim()}`));
+    };
+    const timer = setTimeout(() => fail(`preview server did not report ready on port ${PORT} within 30s`), 30000);
+    const ready = new RegExp(`Local:\\s+http://localhost:${PORT}/`);
+    const onData = (data) => {
+      output += data.toString().replace(/\x1b\[[0-9;]*m/g, '');
+      if (!settled && ready.test(output)) {
+        settled = true;
+        clearTimeout(timer);
         resolve(server);
       }
     };
-
-    server.stdout.on('data', tryResolve);
-    server.stderr.on('data', tryResolve);
-    server.on('error', reject);
-
-    // Fallback: always resolve after 5s
-    setTimeout(() => {
-      if (!started) { started = true; resolve(server); }
-    }, 5000);
+    server.stdout.on('data', onData);
+    server.stderr.on('data', onData);
+    server.on('error', (err) => fail(`could not start preview server: ${err.message}`));
+    server.on('exit', (code, signal) =>
+      fail(`preview server exited before it was ready (code ${code}, signal ${signal}); is port ${PORT} already in use?`));
   });
+}
+
+// Guards against prerendering some other site: the server on PORT must serve this dist's index.html.
+async function assertServesThisDist() {
+  const res = await fetch(`${BASE_URL}/`);
+  const served = await res.text();
+  if (!res.ok || served !== readFileSync(path.join(DIST_DIR, 'index.html'), 'utf8')) {
+    throw new Error(`${BASE_URL}/ is not serving ${DIST_DIR}/index.html (HTTP ${res.status}); refusing to prerender from another server`);
+  }
 }
 
 /**
@@ -172,7 +202,7 @@ async function prerender() {
   console.log('\n🔄 Starting prerender...\n');
 
   const server = await startPreviewServer();
-  await wait(3000); // buffer for server readiness
+  await assertServesThisDist();
 
   const browser = await chromium.launch();
   const results = [];
