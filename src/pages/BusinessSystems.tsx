@@ -50,6 +50,9 @@ const components = [
   { title: 'Simple reporting', desc: 'A plain summary of leads received, how quickly they were answered, and what is still open.' },
 ];
 
+const beforeSteps = ['Lead comes in', 'Sits in inbox', 'Manual handoff', 'Delayed reply', 'Missed follow-up'];
+const afterSteps = ['Lead comes in', 'Identify request', 'Route', 'Notify team', 'Draft response', 'Record activity', 'Escalate if needed'];
+
 const notThis = [
   'Not a full CRM replacement.',
   'Not autonomous selling without human oversight.',
@@ -88,6 +91,46 @@ const serviceSchema: Record<string, unknown> = {
   provider: { '@id': 'https://newlvlstudio.com/#business' },
   areaServed: ['Port Orange', 'Daytona Beach', 'Ormond Beach', 'New Smyrna Beach', 'Volusia County', 'Central Florida'],
 };
+
+// Before/after lead flow: stacked step boxes joined by a thin connector. Static on purpose (no animation).
+function FlowColumn({ label, steps, dark }: { label: string; steps: string[]; dark?: boolean }) {
+  const line = dark ? 'rgba(255, 255, 255, 0.25)' : 'var(--silver-grey)';
+  return (
+    <div
+      style={{
+        backgroundColor: dark ? 'var(--charcoal)' : 'var(--surface)',
+        border: dark ? '1px solid var(--charcoal)' : '1px solid var(--border-color)',
+        padding: 'clamp(24px, 4vw, 36px)',
+      }}
+    >
+      <p className="font-sans uppercase" style={{ fontSize: '0.6875rem', letterSpacing: '0.25em', color: dark ? 'var(--platinum-grey)' : 'var(--muted-text)' }}>
+        {label}
+      </p>
+      <ol className="mt-6 flex flex-col" aria-label={label}>
+        {steps.map((step, i) => (
+          <li key={step} className="flex flex-col items-start">
+            {i > 0 && <span aria-hidden="true" style={{ width: 1, height: 18, marginLeft: 20, backgroundColor: line }} />}
+            <span
+              className="font-sans"
+              style={{
+                display: 'block',
+                width: '100%',
+                padding: '11px 16px',
+                fontSize: '0.9375rem',
+                lineHeight: 1.4,
+                color: dark ? 'var(--white)' : 'var(--body-text)',
+                border: `1px solid ${dark ? 'rgba(255, 255, 255, 0.18)' : 'var(--silver-grey)'}`,
+                backgroundColor: dark ? 'rgba(255, 255, 255, 0.04)' : 'transparent',
+              }}
+            >
+              {step}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
 
 const h2Style = { fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.1 } as const;
 const leadStyle = { fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 580 } as const;
@@ -163,6 +206,10 @@ export default function BusinessSystems() {
             A lead response workflow designed around your existing tools and the way your team already
             works. The goal is simple: every new inquiry gets seen, owned, and answered.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            <FlowColumn label="Before" steps={beforeSteps} />
+            <FlowColumn label="After" steps={afterSteps} dark />
+          </div>
           <ol className="mt-12 flex flex-col" style={{ gap: 0 }}>
             {flow.map((step, i) => (
               <li
@@ -282,26 +329,50 @@ export default function BusinessSystems() {
         </div>
       </section>
 
-      {/* LeadStrike — separate product */}
+      {/* LeadStrike vs. Business Systems */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '0 0 100px' }}>
         <div className="container-nlds">
-          <div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
-            style={{ borderTop: '1px solid var(--silver-grey)', borderBottom: '1px solid var(--silver-grey)', padding: '48px 0' }}
-          >
-            <div>
-              <p className="eyebrow">A SEPARATE OPTION</p>
-              <h2 className="font-serif mt-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}>
-                Only Need Incoming Lead Response?
-              </h2>
-              <p className="font-sans mt-4" style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 480 }}>
-                LeadStrike is our separate lead-response product being built specifically for local
-                service businesses. Business Systems is the custom service for workflows shaped around
-                your own tools and process.
+          <div style={{ backgroundColor: 'var(--charcoal)', padding: 'clamp(24px, 6vw, 64px)' }}>
+            <p className="font-sans uppercase" style={{ fontSize: '0.6875rem', letterSpacing: '0.25em', color: 'var(--platinum-grey)' }}>
+              Understanding the Difference
+            </p>
+            <h2 className="font-serif mt-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--white)', lineHeight: 1.15 }}>
+              LeadStrike vs. Business Systems
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+              <p className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--platinum-grey)', lineHeight: 1.65, borderTop: '1px solid rgba(255, 255, 255, 0.18)', paddingTop: 20 }}>
+                <strong style={{ color: 'var(--white)', fontWeight: 600 }}>LeadStrike</strong> is our productized lead-response
+                system for local service businesses that need a focused way to capture, route, and follow up
+                with new inquiries.
+              </p>
+              <p className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--platinum-grey)', lineHeight: 1.65, borderTop: '1px solid rgba(255, 255, 255, 0.18)', paddingTop: 20 }}>
+                <strong style={{ color: 'var(--white)', fontWeight: 600 }}>Business Systems</strong> is our custom service for
+                businesses with specific workflow bottlenecks, tool handoffs, routing rules, or internal
+                processes that need to work better.
               </p>
             </div>
-            <div className="flex lg:justify-end">
-              <Link to="/contact/?service=leadstrike" className="btn-secondary">Ask About LeadStrike</Link>
+            <div className="mt-10" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.18)', paddingTop: 20 }}>
+              <p className="font-sans uppercase" style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', color: 'var(--platinum-grey)' }}>
+                Rule of thumb
+              </p>
+              <ul className="mt-4 flex flex-col" style={{ gap: 8 }}>
+                <li className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--white)', lineHeight: 1.55 }}>
+                  If your problem is lead response, LeadStrike may be the better fit.
+                </li>
+                <li className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--white)', lineHeight: 1.55 }}>
+                  If the problem involves your specific tools, workflow, or internal process, Business Systems is the better fit.
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-wrap items-center gap-4 mt-10">
+              <Link to={CTA_TO} className="btn-primary btn-light w-full sm:w-auto text-center">See What We Can Improve</Link>
+              <Link
+                to="/#leadstrike"
+                className="btn-secondary w-full sm:w-auto text-center"
+                style={{ color: 'var(--white)', borderColor: 'rgba(255, 255, 255, 0.7)' }}
+              >
+                Explore LeadStrike
+              </Link>
             </div>
           </div>
         </div>

@@ -138,9 +138,8 @@ export default function Contact() {
             style={{ fontSize: '1rem', color: 'var(--muted-text)', maxWidth: 560, lineHeight: 1.6 }}
             variants={shouldReduceMotion ? undefined : fadeUp}
           >
-            Tell us what feels slow, disconnected, outdated or overly manual. It may be your
-            website, how leads are handled, or a process your team repeats every day. We&rsquo;ll
-            look at the problem and tell you where we&rsquo;d start.
+            Tell us what feels slow, disconnected, outdated, or easy to miss. We&rsquo;ll review it
+            and let you know what we think is worth improving.
           </motion.p>
           <motion.div className="mt-20" variants={shouldReduceMotion ? undefined : fadeUp}>
             <SectionDivider />

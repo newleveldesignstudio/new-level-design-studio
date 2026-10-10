@@ -797,6 +797,12 @@ export default function Home() {
             >
               LeadStrike helps local service businesses capture incoming inquiries, route them correctly, and make sure someone knows when a lead needs attention.
             </p>
+            <p
+              className="font-sans mt-4"
+              style={{ fontSize: '0.8125rem', color: 'var(--platinum-grey)', lineHeight: 1.6, maxWidth: 440, opacity: 0.85 }}
+            >
+              LeadStrike handles a focused lead-response problem. Business Systems is custom work built around your existing tools and processes.
+            </p>
             <Link
               to="/contact/?service=leadstrike"
               className="btn-primary mt-10 inline-block self-start"

@@ -159,6 +159,16 @@
     color: var(--white);
   }
 
+  /* Primary action on a dark panel: light fill keeps it the dominant button there. */
+  .btn-primary.btn-light {
+    background-color: var(--white);
+    color: var(--charcoal);
+  }
+
+  .btn-primary.btn-light:hover {
+    background-color: var(--platinum-grey);
+  }
+
   .text-link {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.75rem;
