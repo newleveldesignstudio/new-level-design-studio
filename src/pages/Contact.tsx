@@ -27,7 +27,14 @@ export default function Contact() {
     website: '',
     service: initialService,
     message: '',
+    brokerage: '',
+    serviceArea: '',
+    propertyAddress: '',
+    mlsNumber: '',
+    mlsIdxProvider: '',
+    listingDetails: '',
   });
+  const isRealtorService = formData.service === 'realtor-website' || formData.service === 'listing-mls-support';
   const [status, setStatus] = useState<FormStatus>('idle');
   const shouldReduceMotion = useReducedMotion();
 
@@ -49,15 +56,24 @@ export default function Contact() {
           email: formData.email,
           phone: formData.phone,
           website: formData.website,
-          service: formData.service,
+          requestType: formData.service,
           message: formData.message,
+          brokerage: formData.brokerage,
+          serviceArea: formData.serviceArea,
+          propertyAddress: formData.propertyAddress,
+          mlsNumber: formData.mlsNumber,
+          idxProvider: formData.mlsIdxProvider,
+          realtorRequestDetails: formData.listingDetails,
         }).toString(),
       });
 
       if (response.ok) {
         trackEvent('generate_lead', { form: 'contact', service: formData.service || 'not-selected' });
         setStatus('success');
-        setFormData({ name: '', businessName: '', email: '', phone: '', website: '', service: '', message: '' });
+        setFormData({
+          name: '', businessName: '', email: '', phone: '', website: '', service: '', message: '',
+          brokerage: '', serviceArea: '', propertyAddress: '', mlsNumber: '', mlsIdxProvider: '', listingDetails: '',
+        });
       } else {
         console.error(`Netlify Forms submission failed: HTTP ${response.status}`, await response.text().catch(() => ''));
         setStatus('error');
@@ -269,7 +285,7 @@ export default function Contact() {
                     <label style={labelStyle} htmlFor="contact-service">What do you need help with?</label>
                     <select
                       id="contact-service"
-                      name="service"
+                      name="requestType"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       style={{ ...inputStyle, appearance: 'auto', cursor: 'pointer' }}
@@ -288,6 +304,119 @@ export default function Contact() {
                       </p>
                     )}
                   </div>
+
+                  {isRealtorService && (
+                    <div
+                      className="form-field"
+                      style={{ padding: 20, backgroundColor: 'var(--bg-soft)', border: '1px solid var(--border-color)' }}
+                    >
+                      <p
+                        className="font-sans uppercase"
+                        style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', marginBottom: 16 }}
+                      >
+                        For realtor or listing requests
+                      </p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label style={labelStyle} htmlFor="contact-brokerage">Brokerage</label>
+                          <input
+                            id="contact-brokerage"
+                            type="text"
+                            name="brokerage"
+                            value={formData.brokerage}
+                            onChange={(e) => setFormData({ ...formData, brokerage: e.target.value })}
+                            style={inputStyle}
+                            placeholder="Your brokerage"
+                          />
+                        </div>
+                        <div>
+                          <label style={labelStyle} htmlFor="contact-service-area">Service Area</label>
+                          <input
+                            id="contact-service-area"
+                            type="text"
+                            name="serviceArea"
+                            value={formData.serviceArea}
+                            onChange={(e) => setFormData({ ...formData, serviceArea: e.target.value })}
+                            style={inputStyle}
+                            placeholder="Cities or areas you serve"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="mt-6">
+                        <label style={labelStyle} htmlFor="contact-property-address">
+                          Property Address <span style={{ textTransform: 'none', letterSpacing: 0, fontSize: '0.7rem' }}>(if this is about a listing)</span>
+                        </label>
+                        <input
+                          id="contact-property-address"
+                          type="text"
+                          name="propertyAddress"
+                          value={formData.propertyAddress}
+                          onChange={(e) => setFormData({ ...formData, propertyAddress: e.target.value })}
+                          style={inputStyle}
+                          placeholder="123 Main St, Port Orange, FL"
+                        />
+                      </div>
+
+                      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label style={labelStyle} htmlFor="contact-mls-number">MLS Number</label>
+                          <input
+                            id="contact-mls-number"
+                            type="text"
+                            name="mlsNumber"
+                            value={formData.mlsNumber}
+                            onChange={(e) => setFormData({ ...formData, mlsNumber: e.target.value })}
+                            style={inputStyle}
+                            placeholder="If applicable"
+                          />
+                          <p
+                            className="font-sans mt-2"
+                            style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.55 }}
+                          >
+                            Only needed if this request is about a specific property listing.
+                          </p>
+                        </div>
+                        <div>
+                          <label style={labelStyle} htmlFor="contact-mls-idx-provider">
+                            MLS/IDX Provider <span style={{ textTransform: 'none', letterSpacing: 0, fontSize: '0.7rem' }}>(if known)</span>
+                          </label>
+                          <input
+                            id="contact-mls-idx-provider"
+                            type="text"
+                            name="idxProvider"
+                            value={formData.mlsIdxProvider}
+                            onChange={(e) => setFormData({ ...formData, mlsIdxProvider: e.target.value })}
+                            style={inputStyle}
+                            placeholder="e.g. Stellar MLS"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="mt-6">
+                        <label style={labelStyle} htmlFor="contact-listing-details">
+                          What do you need help with for this listing or real estate site?
+                        </label>
+                        <textarea
+                          id="contact-listing-details"
+                          name="realtorRequestDetails"
+                          value={formData.listingDetails}
+                          onChange={(e) => setFormData({ ...formData, listingDetails: e.target.value })}
+                          style={{ ...inputStyle, minHeight: 100, resize: 'vertical' }}
+                          placeholder="Describe the listing or realtor site need..."
+                          rows={4}
+                        />
+                      </div>
+
+                      <p
+                        className="font-sans mt-4"
+                        style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.55 }}
+                      >
+                        Please do not enter passwords here. New Level Design Studio will provide a secure way to share access if needed.
+                      </p>
+                    </div>
+                  )}
 
                   <div className="form-field">
                     <label style={labelStyle} htmlFor="contact-message">Tell us about your project</label>

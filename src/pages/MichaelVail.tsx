@@ -16,7 +16,7 @@ const founderLabels = [
 const standardPrinciples = [
   { letter: 'S', title: 'Strategy', description: 'We start with clear goals, the right message, and a plan built to deliver results.' },
   { letter: 'T', title: 'Thoughtfulness', description: 'We design with purpose through intentional layouts, strong visuals, and decisions that support the business.' },
-  { letter: 'A', title: 'Authenticity', description: 'We keep it honest. No fluff and no empty trends—just work that accurately represents the business.' },
+  { letter: 'A', title: 'Authenticity', description: 'We keep it honest. No filler and no empty trends—just work that accurately represents the business.' },
   { letter: 'N', title: 'No Shortcuts', description: 'We take the time to do the work correctly because lasting quality cannot be rushed.' },
   { letter: 'D', title: 'Detail', description: 'We focus on the details others overlook. Precision elevates the entire experience.' },
   { letter: 'A', title: 'Accountability', description: 'We do what we say, communicate clearly, and take ownership from start to finish.' },

@@ -231,6 +231,25 @@ export default function Home() {
               >
                 Use 12 free tools to check website speed, Google indexing, structured data, local search presence, visitor behavior, and technical performance.
               </p>
+              <p
+                className="font-sans mt-4"
+                style={{
+                  fontSize: '0.8125rem',
+                  lineHeight: 1.6,
+                  color: 'var(--muted-text)',
+                  maxWidth: 480,
+                }}
+              >
+                Prefer a second opinion instead of self-serve tools?{' '}
+                <Link to="/contact/?service=free-website-review" style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                  Get a Free Website Review
+                </Link>{' '}
+                or a{' '}
+                <Link to="/free-local-visibility-check/" style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                  Free Local Visibility Check
+                </Link>
+                .
+              </p>
             </div>
             <div className="flex flex-col items-start lg:items-end" style={{ gap: 10 }}>
               <Link to="/free-seo-tools/" className="btn-primary">
@@ -577,6 +596,21 @@ export default function Home() {
               objectFit: 'contain',
             }}
           />
+          <p
+            className="font-sans mt-4"
+            style={{ fontSize: '0.8125rem', fontStyle: 'italic', color: 'var(--muted-text)' }}
+          >
+            Real launch example —{' '}
+            <a
+              href="https://jandehomesfl.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}
+            >
+              live website built for Wynne-Iaconis Realty
+            </a>
+            .
+          </p>
         </div>
       </section>
 

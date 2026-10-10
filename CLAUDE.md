@@ -94,3 +94,80 @@ Work in small bounded batches; one scoped concern per batch. Vague language ("pr
 ## NLDS Canva Work
 
 For any NLDS Canva graphics task, use the nlds-canva skill (`.claude/skills/nlds-canva/SKILL.md`). Mode 1 (Website Portfolio Visuals) is the active default; Mode 2 (Social Media Graphics) activates only when explicitly requested. Do not load the skill for unrelated coding or SEO work.
+
+## NLDS Social Graphic Rules
+
+For NLDS social graphics, technical QA is not enough. A graphic must pass visual composition QA before it is shown.
+
+### Current Workflow Standard (approved 2026-07-21)
+
+Reference exemplar: `brand-assets/reference/nlds-social-graphic-standard-website-audit-v1.png`. Default workflow for any "website/device visual" NLDS social graphic:
+
+- Higgsfield generates the device/environment photo only — blank screen, no invented UI.
+- A real NLDS-owned screenshot (own site or a labeled Concept Build/portfolio project) is composited into the screen manually.
+- One main monitor/device by default. No phone/tablet/secondary device unless there's a strong, specific reason — see Device And Spacing Rules.
+- No generic gray placeholder UI, no fake dashboards.
+- No pasted footer image on a mismatched background (see Footer Rules) — the dark-editorial-layout + real-text-footer approach is the default going forward, not just one of three options.
+- Unified dark editorial layout; real-text footer, not a raster logo lockup.
+- Run visual composition QA (below) before showing any result, every time.
+
+### Hard Rejection Rules
+
+Reject and revise before presenting if:
+
+- The footer/logo area looks pasted on or disconnected from the main layout.
+- The post has a dark top and unrelated light bottom unless the transition is intentionally designed.
+- A monitor, phone, laptop, product, face, or main subject is cut off awkwardly.
+- The generated asset touches the frame edge without intentional cropping.
+- The footer uses a different paper texture, color temperature, or lighting style than the rest of the graphic.
+- The design feels like a brand board instead of a finished social post.
+- The AI-generated asset looks generic, stock-like, or dashboard-placeholder-like.
+- QA only proves pixel size, palette, or logo accuracy but does not evaluate overall design fit.
+
+### Footer Rules
+
+Do not slap the approved footer image onto a separate white rectangle under a dark layout.
+
+Use one of these approaches only:
+
+1. Full dark editorial layout with small text footer lockup rebuilt in real text.
+2. Full ivory editorial layout where the approved footer asset naturally matches the page.
+3. Create a dedicated dark-compatible NLDS footer/logo variant once, then reuse it.
+
+If no approved dark footer variant exists, do not force the light footer asset into a dark design.
+
+### Composition QA
+
+Before final delivery, zoom out and answer:
+
+- Does this look like one designed piece?
+- Does the footer belong to the same visual system?
+- Is the main subject fully framed?
+- Is there enough breathing room around all devices?
+- Would this look intentional on Instagram without explanation?
+
+If any answer is no, revise before showing.
+
+### No Generic Website Mockups
+
+For NLDS social graphics, do not use AI-generated blank website screens, gray placeholder UI bars, fake dashboards, or generic homepage mockups as the main visual.
+
+If a website is shown, it should come from:
+- a real NLDS site screenshot,
+- a real portfolio/project screenshot,
+- or a manually designed page with intentional content blocks.
+
+AI may generate the device/environment, but the website screen content should be composited manually whenever possible.
+
+### Device And Spacing Rules
+
+For NLDS social graphics, avoid unnecessary secondary devices. Do not add a phone, tablet, laptop, or extra prop unless it clearly improves the concept.
+
+Reject and revise if:
+- A secondary device distracts from the main subject.
+- The phone/tablet crop looks awkward, tiny, blurry, or hard to read.
+- The image panel has visible accidental letterbox bars.
+- There is excessive dead space between the image panel and footer.
+- The footer feels stranded at the bottom instead of connected to the composition.
+
+Default to one strong main subject over multiple devices.

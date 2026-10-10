@@ -352,6 +352,21 @@ export default function Packages() {
           <strong>Pro</strong> gives your business a sharper web presence built around trust, clarity,
           and action.
         </div>
+        <p
+          className="fade-in"
+          style={{ fontSize: '0.8125rem', fontStyle: 'italic', color: 'var(--muted-text)', marginTop: 16 }}
+        >
+          See a live client site —{' '}
+          <a
+            href="https://jandehomesfl.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}
+          >
+            Wynne-Iaconis Realty
+          </a>
+          , built by New Level Design Studio.
+        </p>
       </div>
 
       {/* Which Package Fits — Decision Guide */}
@@ -565,6 +580,9 @@ export default function Packages() {
                 <span className="retainer-psy">$</span>99
               </div>
               <p className="rpd">per month</p>
+              <p className="rpd" style={{ fontSize: '0.75rem', marginTop: 6 }}>
+                Realtor launch promos may include an initial free period on qualifying realtor builds.
+              </p>
             </div>
           </div>
         </div>

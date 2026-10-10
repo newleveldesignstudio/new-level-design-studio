@@ -179,6 +179,13 @@ export default function WebsiteCare() {
                   $99/mo
                 </span>
               </div>
+              <p
+                className="font-sans mt-2"
+                style={{ fontSize: '0.75rem', color: 'var(--muted-text)', lineHeight: 1.5 }}
+              >
+                Standard Website Care pricing. Realtor launch promos may include an initial free
+                period on qualifying realtor builds.
+              </p>
             </div>
           </div>
         </div>
