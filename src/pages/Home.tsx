@@ -193,8 +193,8 @@ export default function Home() {
   return (
     <div>
       <SEO
-        title="Premium Websites for Local Businesses | NLDS"
-        description="Websites, redesign, care, brand direction, and copy & visual support for local businesses in Port Orange, Daytona Beach, Volusia County, and Central Florida."
+        title="New Level Design Studio | Websites, Lead Systems & Business Workflows"
+        description="New Level Design Studio helps local businesses improve their websites, lead response, and everyday workflows with practical systems built around real business problems."
         canonical="https://newlvlstudio.com/"
         jsonLd={[localBusinessSchema(), websiteSchema()]}
       />
