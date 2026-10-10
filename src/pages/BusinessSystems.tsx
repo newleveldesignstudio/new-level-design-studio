@@ -53,6 +53,16 @@ const components = [
 const beforeSteps = ['Lead comes in', 'Sits in inbox', 'Manual handoff', 'Delayed reply', 'Missed follow-up'];
 const afterSteps = ['Lead comes in', 'Identify request', 'Route', 'Notify team', 'Draft response', 'Record activity', 'Escalate if needed'];
 
+const jobIntakeSteps = [
+  'New request arrives',
+  'Capture job details',
+  'Assign owner',
+  'Prepare quote handoff',
+  'Track status',
+  'Flag missing information',
+  'Escalate when action is needed',
+];
+
 const notThis = [
   'Not a full CRM replacement.',
   'Not autonomous selling without human oversight.',
@@ -256,6 +266,39 @@ export default function BusinessSystems() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Example beyond lead response: job intake to quote handoff */}
+      <section id="job-intake-example" style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0 0' }}>
+        <div className="container-nlds">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <p className="eyebrow">EXAMPLE: OPERATIONAL WORKFLOW</p>
+              <h2 className="font-serif mt-4" style={h2Style}>Job Intake to Quote Handoff</h2>
+              <p className="font-sans mt-5" style={leadStyle}>
+                New job details are captured once, routed to the right person, and carried into the
+                quoting process without repeatedly copying the same information between tools.
+              </p>
+              <p className="font-sans mt-4" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 580 }}>
+                This is an example of the kind of workflow we design, not a fixed package. Which steps
+                can run on their own depends on the tools you already use.
+              </p>
+            </div>
+            <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-8" aria-label="Job intake to quote handoff steps">
+              {jobIntakeSteps.map((step, i) => (
+                <li key={step} className="flex items-start gap-4" style={{ borderTop: '1px solid var(--silver-grey)', padding: '16px 0' }}>
+                  <span className="font-sans shrink-0" style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--muted-text)', minWidth: 24, paddingTop: 3 }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--charcoal)', lineHeight: 1.5 }}>{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="mt-16">
+            <SectionDivider />
           </div>
         </div>
       </section>

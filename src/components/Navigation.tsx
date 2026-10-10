@@ -70,7 +70,6 @@ const navItems: NavItem[] = [
       description: 'Lead response and workflow systems for local businesses.',
       links: [
         { label: 'Business Workflows', path: '/business-systems/', description: 'Practical workflows built around real business bottlenecks.' },
-        { label: 'Lead Response Systems', path: '/business-systems/#lead-response-system', description: 'Get every new inquiry seen, owned, and answered.' },
         { label: 'LeadStrike', path: '/#leadstrike', description: 'Our separate, productized lead-response system.' },
       ],
     },
