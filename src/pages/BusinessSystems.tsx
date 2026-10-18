@@ -385,8 +385,8 @@ export default function BusinessSystems() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
               <p className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--platinum-grey)', lineHeight: 1.65, borderTop: '1px solid rgba(255, 255, 255, 0.18)', paddingTop: 20 }}>
                 <strong style={{ color: 'var(--white)', fontWeight: 600 }}>LeadStrike</strong> is our productized lead-response
-                system for local service businesses that need a focused way to capture, route, and follow up
-                with new inquiries.
+                system for roofing, HVAC, and plumbing companies that need a focused way to capture website
+                inquiries and get the details to the team right away.
               </p>
               <p className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--platinum-grey)', lineHeight: 1.65, borderTop: '1px solid rgba(255, 255, 255, 0.18)', paddingTop: 20 }}>
                 <strong style={{ color: 'var(--white)', fontWeight: 600 }}>Business Systems</strong> is our custom service for
@@ -400,7 +400,7 @@ export default function BusinessSystems() {
               </p>
               <ul className="mt-4 flex flex-col" style={{ gap: 8 }}>
                 <li className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--white)', lineHeight: 1.55 }}>
-                  If your problem is lead response, LeadStrike may be the better fit.
+                  If your problem is getting new website leads to your team right away, LeadStrike may be the better fit.
                 </li>
                 <li className="font-sans" style={{ fontSize: '0.9375rem', color: 'var(--white)', lineHeight: 1.55 }}>
                   If the problem involves your specific tools, workflow, or internal process, Business Systems is the better fit.
@@ -409,13 +409,13 @@ export default function BusinessSystems() {
             </div>
             <div className="flex flex-wrap items-center gap-4 mt-10">
               <Link to={CTA_TO} className="btn-primary btn-light w-full sm:w-auto text-center">See What We Can Improve</Link>
-              <Link
-                to="/#leadstrike"
+              <a
+                href="https://leadstrikenow.com/"
                 className="btn-secondary w-full sm:w-auto text-center"
                 style={{ color: 'var(--white)', borderColor: 'rgba(255, 255, 255, 0.7)' }}
               >
                 Explore LeadStrike
-              </Link>
+              </a>
             </div>
           </div>
         </div>

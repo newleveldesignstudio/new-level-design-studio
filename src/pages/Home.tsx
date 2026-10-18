@@ -795,7 +795,7 @@ export default function Home() {
               className="font-sans mt-6"
               style={{ fontSize: '1rem', color: 'var(--platinum-grey)', lineHeight: 1.6, maxWidth: 440 }}
             >
-              LeadStrike helps local service businesses capture incoming inquiries, route them correctly, and make sure someone knows when a lead needs attention.
+              LeadStrike helps roofing, HVAC, and plumbing companies capture website inquiries and get the lead details to the team right away.
             </p>
             <p
               className="font-sans mt-4"
@@ -803,12 +803,12 @@ export default function Home() {
             >
               LeadStrike handles a focused lead-response problem. Business Systems is custom work built around your existing tools and processes.
             </p>
-            <Link
-              to="/contact/?service=leadstrike"
+            <a
+              href="https://leadstrikenow.com/"
               className="btn-primary mt-10 inline-block self-start"
             >
-              Ask About LeadStrike
-            </Link>
+              Explore LeadStrike
+            </a>
           </div>
 
           {/* Photography */}
