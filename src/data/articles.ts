@@ -2455,7 +2455,7 @@ Your website should have real pages for the services people actually hire you fo
 
 ## Your Google Business Profile Is the Front Door
 
-For local searches, many customers never get past the map results. That makes your profile the first impression.
+For many local searches, the map results are the first thing customers see. That makes your profile the first impression.
 
 The basics matter more than tricks:
 
@@ -2471,7 +2471,7 @@ We covered what moves the needle locally in more depth in [Local SEO for Port Or
 
 ## The Website Is Where the Decision Happens
 
-Here is the part that gets skipped. A customer who finds you on Google usually checks your website before calling — especially for bigger jobs.
+Here is the part that gets skipped. A customer who finds you on Google will often check your website before calling — especially for bigger jobs.
 
 At that moment your website has a few seconds to answer three questions: What do you do? Do you work where I live? Can I trust you?
 
@@ -2500,11 +2500,25 @@ Small mechanical details change how many people actually reach you:
 
 None of this is glamorous. All of it is the difference between attention and an actual conversation.
 
+## How to Tell Whether It Is Working
+
+Calls are easier to improve once you can see them. A few imperfect signals are enough to start:
+
+- Your Google Business Profile Performance report can show Calls. That number counts taps on the call button on your profile, not completed or answered calls, and it only works if your profile has a phone number
+- If your website analytics track clicks on your phone number, those show visitors reaching for the phone
+- Ask every new caller how they found you. The answers are informal, but they add a signal the other two cannot
+
+None of these is exact on its own, and each can be off in its own way. A few months of data tells you far more than a handful of days or weeks.
+
 ## What to Expect, Honestly
 
-Local SEO is not a switch. It usually builds over months, not days, and no honest provider can promise a specific ranking or a specific number of calls. Anyone who guarantees those things is guessing with your money.
+Local SEO is not a switch. It [usually builds over months](/journal/how-long-does-it-take-to-see-results-from-seo/), not days, and no honest provider can promise a specific ranking or a specific number of calls. Anyone who guarantees those things is guessing with your money.
 
 What you can do is stack the odds: accurate local signals, real reviews, service pages built around real searches, and a website that makes choosing you feel safe. Businesses that do that consistently tend to see the compounding effect — more of the right people finding them, and more of those people getting in touch.
+
+## Does Ranking Higher in the Map Results Always Mean More Calls?
+
+No. Ranking creates visibility, and visibility is all it creates. Whether people actually call still depends on the rest of the chain: a profile with accurate details, reviews that look real and recent, a website that explains what you do and where, and a business that actually answers when the phone rings.
 
 ## The Bottom Line
 
