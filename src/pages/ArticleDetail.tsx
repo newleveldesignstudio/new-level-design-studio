@@ -115,7 +115,14 @@ export default function ArticleDetail() {
               className="font-sans mt-6"
               style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', letterSpacing: '0.05em' }}
             >
-              {article.author} &nbsp;·&nbsp; {article.date}
+              {article.author === 'Michael Vail' ? (
+                <Link to="/michael-vail/" rel="author" className="underline decoration-1 underline-offset-4 hover:decoration-2" style={{ color: 'inherit' }}>
+                  {article.author}
+                </Link>
+              ) : (
+                article.author
+              )}{' '}
+              &nbsp;·&nbsp; {article.date}
             </div>
           </div>
 

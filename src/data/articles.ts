@@ -1948,7 +1948,7 @@ None of these are hard to fix once you know which one is the issue. But most bus
 
 ## 2. You Get Traffic But Almost No Inquiries
 
-If you're getting consistent search traffic but very few contact form submissions or calls from the website, the problem isn't visibility — it's conversion.
+If you're getting consistent [search traffic but very few contact form submissions](/journal/website-traffic-no-leads/) or calls from the website, the problem isn't visibility — it's conversion.
 
 Visibility and conversion are two separate problems. SEO helps people find you. Your website is supposed to turn those visitors into leads. When traffic is decent but inquiries are low, the website is the weak link.
 
@@ -3355,7 +3355,7 @@ A website that gets leads should be measured.
 
 At a basic level, the business should know whether people are clicking, calling, submitting forms, and visiting key pages.
 
-Post-launch checks can include:
+[Post-launch checks](/journal/after-website-launch/) can include:
 
 - Search Console verification
 - Bing verification
