@@ -33,3 +33,6 @@ tmp/
 
 # Local Netlify folder
 .netlify
+
+# Private SEO Intelligence data/reports (raw GSC pulls, proposals, baselines) live outside the repo: ~/nlds/research/seo-intelligence/
+reports/seo-intelligence/
