@@ -347,6 +347,13 @@ export default function RealEstateWebDesign() {
             Sites from $1,500 · Website Care from $99/mo · Realtor launch promo may include first
             3 months of Website Care on qualifying realtor builds.
           </p>
+          <p
+            className="font-sans mt-3"
+            style={{ fontSize: '0.8125rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 600 }}
+          >
+            Based in Port Orange, working with agents across Daytona Beach, Ormond Beach, New Smyrna
+            Beach, Volusia County, and Central Florida.
+          </p>
           <div className="mt-16">
             <SectionDivider />
           </div>

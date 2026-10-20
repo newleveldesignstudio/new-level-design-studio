@@ -2469,6 +2469,8 @@ One thing worth checking today: call the number on your own profile. Business ow
 
 We covered what moves the needle locally in more depth in [Local SEO for Port Orange Businesses: What Actually Matters](/journal/local-seo-port-orange-businesses/).
 
+If your profile, website, and service areas do not say the same thing, our [local visibility setup](/local-visibility-setup/) service lines them up.
+
 ## The Website Is Where the Decision Happens
 
 Here is the part that gets skipped. A customer who finds you on Google will often check your website before calling — especially for bigger jobs.

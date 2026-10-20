@@ -306,7 +306,7 @@ export default function Services() {
             {industries.map((industry, i) => (
               <div
                 key={i}
-                className="industry-cell flex items-center justify-center"
+                className="industry-cell relative flex items-center justify-center"
                 style={{
                   backgroundColor: 'var(--surface)',
                   border: '1px solid var(--border-color)',
@@ -317,7 +317,16 @@ export default function Services() {
                   className="font-sans font-semibold uppercase text-center"
                   style={{ fontSize: '0.875rem', letterSpacing: '0.1em', color: 'var(--charcoal)' }}
                 >
-                  {industry}
+                  {industry === 'Real Estate' ? (
+                    <Link
+                      to="/real-estate-web-design/"
+                      className="after:absolute after:inset-0 hover:underline underline-offset-4 focus-visible:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--charcoal)]"
+                    >
+                      {industry}
+                    </Link>
+                  ) : (
+                    industry
+                  )}
                 </span>
               </div>
             ))}

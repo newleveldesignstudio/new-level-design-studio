@@ -711,13 +711,27 @@ export default function Home() {
             className="font-sans text-center mt-6 uppercase"
             style={{ fontSize: '0.75rem', letterSpacing: '0.25em', color: 'var(--muted-text)' }}
           >
-            Serving Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach, Volusia County &amp; Central Florida
+            Serving Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach,{' '}
+            <Link
+              to="/volusia-county-website-design/"
+              className="py-2 underline decoration-1 underline-offset-4 hover:text-[var(--charcoal)] focus-visible:text-[var(--charcoal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--charcoal)]"
+            >
+              Volusia County
+            </Link>{' '}
+            &amp; Central Florida
           </p>
           <p
             className="font-sans text-center mt-2 uppercase"
             style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--muted-text)', lineHeight: 1.7 }}
           >
-            Built for contractors, restaurants, coffee shops, salons, real estate, fitness, and local service providers
+            Built for contractors, restaurants, coffee shops, salons,{' '}
+            <Link
+              to="/real-estate-web-design/"
+              className="py-2 underline decoration-1 underline-offset-4 hover:text-[var(--charcoal)] focus-visible:text-[var(--charcoal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--charcoal)]"
+            >
+              real estate
+            </Link>
+            , fitness, and local service providers
           </p>
         </div>
       </section>
