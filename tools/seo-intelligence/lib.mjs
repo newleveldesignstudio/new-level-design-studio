@@ -186,12 +186,12 @@ export function detectInternalLinks(target, queries, catalog, { max = 5 } = {}) 
 /** G: themes with traction and what supports them. */
 export const THEME_HUB = { "local web design (Volusia area)": "/volusia-county-website-design/", "local SEO / more calls": "/local-visibility-setup/", "business systems / lead response": "/business-systems/", "real estate websites": "/real-estate-web-design/", "website cost / strategy": "/packages/" };
 export const THEMES = [
+  ["video content", /video|photograph/],
+  ["real estate websites", /real estate|realtor|listing/],
   ["local web design (Volusia area)", /port orange|daytona|volusia|central florida|ormond|deland/],
   ["local SEO / more calls", /local seo|google business|local search|phone call|get more (call|lead)|local visibility|map pack/],
-  ["website cost / strategy", /website cost|how much|price|pricing|cost of|redesign|first impression|website (launch|care)/],
   ["business systems / lead response", /business system|workflow|lead (response|follow|intake)|missed (call|lead)|follow.?up|automation/],
-  ["real estate websites", /real estate|realtor|listing/],
-  ["video content", /video|photograph/],
+  ["website cost / strategy", /website (cost|price|pricing|redesign|launch|care)|cost of (a )?(web|website)|web design (cost|price)|first impression/],
   ["SEO company vetting", /seo (company|agency|work)|check seo/],
 ];
 export function themeOf(q) { for (const [n, re] of THEMES) if (re.test(q.toLowerCase())) return n; return null; }
