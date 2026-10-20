@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // NLDS SEO Intelligence, Phase 1: SEO Opportunity Scanner. READ-ONLY analysis: reads raw GSC pulls + site source, writes reports. Edits no page.
-//   node --experimental-strip-types tools/seo-intelligence/scan.mjs reports/seo-intelligence/<date>
+//   node --experimental-strip-types tools/seo-intelligence/scan.mjs ~/nlds/research/seo-intelligence/<date>
+// Raw GSC pulls, reports and proposals are PRIVATE: keep them under ~/nlds/research/seo-intelligence/, never in this public repo.
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { articles } from "../../src/data/articles.ts";
