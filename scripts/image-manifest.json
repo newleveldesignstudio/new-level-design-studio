@@ -148,5 +148,17 @@
     "w768": "/nlds/images/website-care-after-launch-proof-wynne-iaconis-realty-nlds-w768.webp",
     "width": 1672,
     "height": 941
+  },
+  "/nlds/images/precision-line-roofing-industry-demo-website-concept-nlds.jpg": {
+    "full": "/nlds/images/precision-line-roofing-industry-demo-website-concept-nlds.webp",
+    "w768": "/nlds/images/precision-line-roofing-industry-demo-website-concept-nlds-w768.webp",
+    "width": 1440,
+    "height": 900
+  },
+  "/nlds/images/precision-line-roofing-industry-demo-mobile-site-nlds.jpg": {
+    "full": "/nlds/images/precision-line-roofing-industry-demo-mobile-site-nlds.webp",
+    "w768": "/nlds/images/precision-line-roofing-industry-demo-mobile-site-nlds-w768.webp",
+    "width": 780,
+    "height": 1688
   }
 }

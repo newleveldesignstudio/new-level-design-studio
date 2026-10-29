@@ -11,6 +11,9 @@ export interface WorkProject {
   problem: string;
   solution: string;
   deliverables: string[];
+  tags?: string[];
+  /** Darker classification chip text (4.5:1+) for cards that must clearly read as concept work. Default chip style is unchanged. */
+  chipStrong?: boolean;
   classification: WorkClassification;
   demonstrates?: string;
   result?: string;
@@ -95,7 +98,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
             style={{
               fontSize: '0.625rem',
               letterSpacing: '0.15em',
-              color: 'var(--platinum-grey)',
+              color: project.chipStrong ? 'var(--muted-text)' : 'var(--platinum-grey)',
               border: '1px solid var(--silver-grey)',
               padding: '2px 8px',
             }}
@@ -114,6 +117,15 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
         >
           {project.title}
         </h3>
+
+        {project.tags && (
+          <p
+            className="font-sans uppercase mt-2"
+            style={{ fontSize: '0.625rem', letterSpacing: '0.15em', color: 'var(--muted-text)', lineHeight: 1.7 }}
+          >
+            {project.tags.join(' · ')}
+          </p>
+        )}
 
         {project.demonstrates && (
           <p

@@ -1,0 +1,47 @@
+/* Homepage "Latest Build" feature: browser frame (video preview on tablet/desktop), phone frame, NLDS ivory/charcoal chrome. */
+.lb-stage { position: relative; }
+.lb-browser {
+  border: 1px solid var(--silver-grey);
+  border-radius: 6px;
+  background: var(--surface, #fff);
+  box-shadow: 0 30px 60px -32px rgba(30, 31, 32, 0.35);
+  overflow: hidden;
+}
+.lb-bar { display: flex; align-items: center; gap: 14px; height: 36px; padding: 0 14px; border-bottom: 1px solid var(--silver-grey); background: var(--bg-soft); }
+.lb-dots { display: flex; gap: 6px; }
+.lb-dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--platinum-grey); display: block; }
+.lb-url { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.6875rem; letter-spacing: 0.04em; color: var(--muted-text); background: var(--bg-main); border: 1px solid var(--silver-grey); border-radius: 3px; padding: 3px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lb-screen { position: relative; aspect-ratio: 16 / 10; background: #1b2126; overflow: hidden; }
+.lb-screen img, .lb-screen video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.lb-screen video { opacity: 0; transition: opacity 500ms ease; }
+.lb-screen.is-playing video { opacity: 1; }
+
+.lb-phone {
+  width: 100%;
+  aspect-ratio: 780 / 1688;
+  border-radius: 30px;
+  padding: 8px;
+  background: var(--charcoal);
+  box-shadow: 0 28px 50px -24px rgba(30, 31, 32, 0.55);
+}
+.lb-phone img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 23px; }
+
+/* phones: one strong phone visual, no overlap */
+.lb-browser-wrap { display: none; }
+.lb-phone-solo { width: min(62vw, 270px); margin: 0 auto; }
+.lb-phone-over { display: none; }
+
+@media (min-width: 768px) {
+  .lb-browser-wrap { display: block; }
+  .lb-phone-solo { display: none; }
+  .lb-phone-over { display: block; position: absolute; left: 2%; bottom: -9%; width: clamp(120px, 17%, 190px); }
+}
+@media (min-width: 1024px) {
+  .lb-phone-over { left: -7%; bottom: -8%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lb-screen video { display: none; }
+}
+@media (max-width: 359px) {
+  .lb-cta { padding-left: 20px; padding-right: 20px; letter-spacing: 0.14em; font-size: 0.8125rem; white-space: nowrap; }
+}
