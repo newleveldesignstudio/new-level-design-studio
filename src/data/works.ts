@@ -31,6 +31,8 @@ export const workSummaries: WorkSummary[] = [
   { slug: 'lotus-beauty-house', title: 'Lotus Beauty House', industry: 'Salons & Barbers' },
   { slug: 'the-grooming-forge', title: 'The Grooming Forge', industry: 'Salons & Barbers' },
   { slug: 'liquid-legacy-pools', title: 'Liquid Legacy Pools', industry: 'Local Services' },
+  { slug: 'precision-line-roofing', title: 'Precision Line Roofing', industry: 'Contractors' },
+  { slug: 'arctic-airworks', title: 'Arctic Airworks', industry: 'Local Services' },
 ];
 
 /**

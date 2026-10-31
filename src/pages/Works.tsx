@@ -12,6 +12,7 @@ import { staggerContainer, fadeUp } from '@/lib/motion';
 
 const filterCategories = [
   'All',
+  'Home Services',
   'Contractors',
   'Restaurants',
   'Coffee & Cafés',
@@ -26,6 +27,7 @@ const filterCategories = [
 /* URL slug ↔ filter category, so nav links like /works?industry=contractors
    can activate a filter. Mirrors the Journal ?category= pattern. */
 const SLUG_TO_INDUSTRY: Record<string, string> = {
+  'home-services': 'Home Services',
   contractors: 'Contractors',
   restaurants: 'Restaurants',
   'coffee-cafes': 'Coffee & Cafés',
@@ -61,16 +63,47 @@ const projects: WorkProject[] = [
     imageTitle: 'Precision Line Roofing — Roofing Website Industry Demo by New Level Design Studio',
     industry: 'Contractors',
     title: 'Precision Line Roofing',
-    problem: 'A concept exploring how a roofing website can show what an inspection looks for, rather than lean on stock imagery and a generic quote form.',
-    solution: 'A premium roofing website concept built around scroll-driven storytelling, mobile-first interaction and a conversion-focused inspection journey.',
+    problem: 'Roofing customers are evaluating urgency, trust and risk before contacting a contractor.',
+    solution: 'A premium inspection-first experience that makes the next action obvious: scroll-driven storytelling, mobile-first interaction and a clear path to requesting service.',
     deliverables: ['Scroll-driven inspection hero', 'Mobile-first navigation', 'Service-path section', 'Before/after project comparison', 'Inspection request flow (demo)', 'Storm-to-calm footer video', 'Responsive build'],
     tags: ['Web Design', 'Roofing / Contractor', 'Interactive Experience', 'Motion Design', 'Conversion UX'],
     classification: 'Industry Demo',
     chipStrong: true,
+    chipLabel: 'Industry Demo / Concept Build',
     demonstrates: 'Demonstrates scroll-driven inspection storytelling and a mobile-first quote path for a roofing contractor website.',
     result: 'Demo focus: scroll-driven inspection journey',
     demoUrl: 'https://precision-line-roofing-demo.netlify.app',
-    demoLabel: 'View Interactive Demo',
+    demoLabel: 'View Concept',
+    slug: 'precision-line-roofing',
+    compact: true,
+    positioning: 'A premium Florida roofing concept built around homeowner trust, roof inspections and a clear path to requesting service.',
+    strengths: ['Inspection-first conversion path', 'Premium charcoal and copper visual system', 'Trust-driven service structure'],
+    group: 'Home Services',
+    ctaLabel: 'Case Study →',
+  },
+  {
+    imageSrc: '/nlds/images/arctic-airworks-hvac-industry-demo-whole-home-nlds.webp',
+    imageAlt: 'Arctic Airworks HVAC industry demo website concept by New Level Design Studio, showing the Whole-Home Comfort Network airflow section',
+    imageTitle: 'Arctic Airworks — HVAC Website Industry Demo by New Level Design Studio',
+    industry: 'Local Services',
+    title: 'Arctic Airworks',
+    problem: 'Many HVAC sites rely on generic stock photography and service lists without showing how comfort is actually delivered.',
+    solution: 'Turn the HVAC system itself into the visual story: a condenser that opens up as you scroll, then a whole-home airflow sequence.',
+    deliverables: ['Condenser transformation scroll hero', 'Florida Heat. Engineered Out. section', 'Whole-Home Comfort Network sequence', 'Mobile-first pinned scroll', 'Reduced-motion fallback', 'Responsive AVIF/WebP image delivery'],
+    tags: ['Web Design', 'HVAC / Home Services', 'Interactive Experience', 'Motion Design', 'Mobile-First'],
+    classification: 'Industry Demo',
+    chipStrong: true,
+    chipLabel: 'Industry Demo / Concept Build',
+    demonstrates: 'Demonstrates a mechanical-transformation hero and whole-home airflow storytelling for an HVAC contractor website.',
+    result: 'Demo focus: whole-home airflow storytelling',
+    demoUrl: 'https://arctic-airworks-demo.netlify.app',
+    demoLabel: 'View Concept',
+    slug: 'arctic-airworks',
+    compact: true,
+    positioning: 'An interactive HVAC concept built around Florida heat, whole-home comfort and system clarity.',
+    strengths: ['Condenser transformation scroll hero', 'Whole-Home Comfort Network sequence', 'Mobile-first motion with reduced-motion fallback'],
+    group: 'Home Services',
+    ctaLabel: 'Case Study →',
   },
   {
     imageSrc: '/nlds/images/stone-timber-remodeling-cinematic-contractor-website-concept-nlds.webp',
@@ -382,9 +415,15 @@ export default function Works() {
   const triggerRef = useRef<HTMLElement | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
+  // Home Services is a curated lead group (Precision Line Roofing, Arctic Airworks). Under All it leads the page in its own band
+  // and is left out of the general grid; under the Home Services chip it is the whole page; other chips filter by industry as before.
+  const homeServices = projects.filter((p) => p.group === 'Home Services');
+  const showLead = activeFilter === 'All' || activeFilter === 'Home Services';
   const filteredProjects = activeFilter === 'All'
-    ? projects
-    : projects.filter((p) => p.industry === activeFilter);
+    ? projects.filter((p) => p.group !== 'Home Services')
+    : activeFilter === 'Home Services'
+      ? []
+      : projects.filter((p) => p.industry === activeFilter);
 
   const worksRef = useScrollReveal<HTMLDivElement>({
     y: 40,
@@ -543,9 +582,35 @@ export default function Works() {
         </div>
       </section>
 
+      {/* Home Services — curated lead group */}
+      {showLead && (
+        <section aria-labelledby="home-services-works-heading" style={{ backgroundColor: 'var(--bg-main)', padding: '56px 0 0' }}>
+          <div className="container-nlds">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+              <p className="eyebrow">HOME SERVICES</p>
+              <p className="font-sans uppercase" style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', color: 'var(--muted-text)' }}>Industry Demos · Concept Builds</p>
+            </div>
+            <h2 id="home-services-works-heading" className="font-serif mt-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.15 }}>
+              Built for local service businesses
+            </h2>
+            <p className="font-sans mt-3" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', maxWidth: 560, lineHeight: 1.65 }}>
+              Different industries need different customer journeys. These concepts show how strategy, design and motion change with the business.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 mt-10">
+              {homeServices.map((project) => (
+                <div key={project.title}>
+                  <WorkProjectCard project={project} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Project Grid */}
-      <section style={{ backgroundColor: 'var(--bg-main)', padding: '60px 0 100px' }}>
+      <section style={{ backgroundColor: 'var(--bg-main)', padding: showLead ? '72px 0 100px' : '60px 0 100px' }}>
         <div className="container-nlds">
+          {showLead && activeFilter === 'All' && <p className="eyebrow mb-8">ALL WORK</p>}
           <div ref={worksRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {filteredProjects.map((project, i) => (
               <div key={i} className="work-card">
@@ -557,7 +622,7 @@ export default function Works() {
             ))}
           </div>
 
-          {filteredProjects.length === 0 && (
+          {filteredProjects.length === 0 && !showLead && (
             <p
               className="font-sans text-center mt-16"
               style={{ fontSize: '1rem', color: 'var(--muted-text)' }}

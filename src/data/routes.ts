@@ -54,6 +54,8 @@ export const STATIC_PUBLIC_ROUTES = [
   '/works/the-grooming-forge',
   '/works/blend-house-smoothie-bar',
   '/works/liquid-legacy-pools',
+  '/works/precision-line-roofing',
+  '/works/arctic-airworks',
   '/free-seo-tools',
   '/free-local-visibility-check',
   '/local-visibility-insights',

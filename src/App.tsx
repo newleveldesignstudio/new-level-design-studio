@@ -36,6 +36,8 @@ import WorkLotusBeautyHouse from '@/pages/WorkLotusBeautyHouse';
 import WorkTheGroomingForge from '@/pages/WorkTheGroomingForge';
 import WorkBlendHouseSmoothieBar from '@/pages/WorkBlendHouseSmoothieBar';
 import WorkLiquidLegacyPools from '@/pages/WorkLiquidLegacyPools';
+import WorkPrecisionLineRoofing from '@/pages/WorkPrecisionLineRoofing';
+import WorkArcticAirworks from '@/pages/WorkArcticAirworks';
 import PortOrangeWebDesign from '@/pages/PortOrangeWebDesign';
 import DaytonaBeachWebDesign from '@/pages/DaytonaBeachWebDesign';
 import VolusiaCountyWebDesign from '@/pages/VolusiaCountyWebDesign';
@@ -108,6 +110,8 @@ export default function App() {
           <Route path="/works/the-grooming-forge" element={<WorkTheGroomingForge />} />
           <Route path="/works/blend-house-smoothie-bar" element={<WorkBlendHouseSmoothieBar />} />
           <Route path="/works/liquid-legacy-pools" element={<WorkLiquidLegacyPools />} />
+          <Route path="/works/precision-line-roofing" element={<WorkPrecisionLineRoofing />} />
+          <Route path="/works/arctic-airworks" element={<WorkArcticAirworks />} />
           <Route path="/port-orange-website-design" element={<PortOrangeWebDesign />} />
           <Route path="/daytona-beach-website-design" element={<DaytonaBeachWebDesign />} />
           <Route path="/volusia-county-website-design" element={<VolusiaCountyWebDesign />} />

@@ -7,7 +7,7 @@ import ProjectCard from '@/components/ProjectCard';
 import ValueCard from '@/components/ValueCard';
 import SectionDivider from '@/components/SectionDivider';
 import FinalCTA from '@/components/FinalCTA';
-import LatestBuild from '@/components/LatestBuild';
+import HomeServicesFeatured from '@/components/HomeServicesFeatured';
 import DiagonalLine from '@/components/DiagonalLine';
 import { MonitorIcon, FramesIcon, SupportIcon, PageIcon } from '@/components/icons';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
@@ -786,8 +786,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Build — featured industry demo */}
-      <LatestBuild />
+      {/* Featured pair — Precision Line Roofing + Arctic Airworks industry demos */}
+      <HomeServicesFeatured />
 
       {/* LeadStrike */}
       <section id="leadstrike" ref={splitRef} className="w-full">

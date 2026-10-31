@@ -56,6 +56,9 @@ const CONTENT_IMAGES = [
   '/nlds/images/website-care-after-launch-proof-wynne-iaconis-realty-nlds.png',
   '/nlds/images/precision-line-roofing-industry-demo-website-concept-nlds.jpg',
   '/nlds/images/precision-line-roofing-industry-demo-mobile-site-nlds.jpg',
+  '/nlds/images/arctic-airworks-hvac-industry-demo-website-concept-nlds.jpg',
+  '/nlds/images/arctic-airworks-hvac-industry-demo-whole-home-nlds.jpg',
+  '/nlds/images/arctic-airworks-hvac-industry-demo-mobile-site-nlds.jpg',
 ];
 
 const FOUNDER = '/images/founder/michael-vail-founder-portrait-new-level-design-studio.webp';

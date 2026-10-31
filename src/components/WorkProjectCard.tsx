@@ -14,10 +14,18 @@ export interface WorkProject {
   tags?: string[];
   /** Darker classification chip text (4.5:1+) for cards that must clearly read as concept work. Default chip style is unchanged. */
   chipStrong?: boolean;
+  /** Overrides the classification text on the chip (e.g. 'Industry Demo / Concept Build'). */
+  chipLabel?: string;
   classification: WorkClassification;
   demonstrates?: string;
   result?: string;
   slug?: string;
+  /** Curated lead group on /works (e.g. 'Home Services'); shown first when the filter is All. */
+  group?: string;
+  /** Compact portfolio-index card (image, label, title, one paragraph, three strengths, two CTAs). Used for the Home Services lead group. */
+  compact?: boolean;
+  positioning?: string;
+  strengths?: string[];
   ctaLabel?: string;
   demoUrl?: string;
   demoLabel?: string;
@@ -42,6 +50,50 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
     display: 'block',
     width: '100%',
   };
+
+  if (project.compact && project.slug) {
+    return (
+      <article className="group wk-compact">
+        <div className="overflow-hidden" style={{ padding: 10, backgroundColor: 'var(--silver-grey)', borderRadius: 4 }}>
+          <Link
+            to={`/works/${project.slug}/`}
+            className="transition-transform duration-500 group-hover:scale-[1.02] focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
+            style={{ ...imageStyle, textDecoration: 'none' }}
+            aria-label={`View case study for ${project.title}`}
+          />
+        </div>
+        <div className="mt-5" style={{ borderTop: '1px solid var(--silver-grey)', paddingTop: 16 }}>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="font-sans uppercase" style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', color: 'var(--muted-text)' }}>{project.industry}</span>
+            <span className="font-sans uppercase" style={{ fontSize: '0.625rem', letterSpacing: '0.15em', color: 'var(--muted-text)', border: '1px solid var(--silver-grey)', padding: '2px 8px' }}>{project.chipLabel ?? project.classification}</span>
+          </div>
+          <h3 className="font-serif mt-3" style={{ fontSize: '1.5rem', lineHeight: 1.2, color: 'var(--charcoal)' }}>{project.title}</h3>
+          {project.positioning && <p className="font-sans mt-2" style={{ fontSize: '0.9375rem', lineHeight: 1.6, color: 'var(--body-text)' }}>{project.positioning}</p>}
+          {project.strengths && (
+            <ul className="font-sans mt-4" style={{ listStyle: 'none', padding: 0, margin: 0, borderTop: '1px solid var(--silver-grey)' }}>
+              {project.strengths.map((t) => (
+                <li key={t} style={{ fontSize: '0.875rem', color: 'var(--charcoal)', padding: '8px 0', borderBottom: '1px solid var(--silver-grey)' }}>{t}</li>
+              ))}
+            </ul>
+          )}
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            {project.demoUrl && (
+              <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '14px 22px', fontSize: '0.75rem', letterSpacing: '0.16em', minHeight: 48, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                View Concept <span aria-hidden="true">↗</span>
+                <span className="sr-only"> ({project.title} industry demo, opens in a new tab)</span>
+              </a>
+            )}
+            <Link to={`/works/${project.slug}/`} className="btn-secondary wk-secondary" style={{ padding: '14px 22px', fontSize: '0.75rem', letterSpacing: '0.16em', minHeight: 48, display: 'inline-flex', alignItems: 'center', borderColor: 'var(--silver-grey)' }}>
+              Case Study<span className="sr-only">: {project.title}</span>
+            </Link>
+          </div>
+          <p className="font-sans" style={{ marginTop: 14, fontSize: '0.6875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
+            Industry Demo &middot; Concept build by NLDS &middot; Not a client project.
+          </p>
+        </div>
+      </article>
+    );
+  }
 
   return (
     <article className="group">
@@ -103,7 +155,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
               padding: '2px 8px',
             }}
           >
-            {project.classification}
+            {project.chipLabel ?? project.classification}
           </span>
         </div>
 

@@ -160,5 +160,23 @@
     "w768": "/nlds/images/precision-line-roofing-industry-demo-mobile-site-nlds-w768.webp",
     "width": 780,
     "height": 1688
+  },
+  "/nlds/images/arctic-airworks-hvac-industry-demo-website-concept-nlds.jpg": {
+    "full": "/nlds/images/arctic-airworks-hvac-industry-demo-website-concept-nlds.webp",
+    "w768": "/nlds/images/arctic-airworks-hvac-industry-demo-website-concept-nlds-w768.webp",
+    "width": 1440,
+    "height": 900
+  },
+  "/nlds/images/arctic-airworks-hvac-industry-demo-whole-home-nlds.jpg": {
+    "full": "/nlds/images/arctic-airworks-hvac-industry-demo-whole-home-nlds.webp",
+    "w768": "/nlds/images/arctic-airworks-hvac-industry-demo-whole-home-nlds-w768.webp",
+    "width": 1440,
+    "height": 900
+  },
+  "/nlds/images/arctic-airworks-hvac-industry-demo-mobile-site-nlds.jpg": {
+    "full": "/nlds/images/arctic-airworks-hvac-industry-demo-mobile-site-nlds.webp",
+    "w768": "/nlds/images/arctic-airworks-hvac-industry-demo-mobile-site-nlds-w768.webp",
+    "width": 780,
+    "height": 1688
   }
 }
