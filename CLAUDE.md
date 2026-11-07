@@ -81,7 +81,7 @@ The production website for New Level Design Studio (NLDS) — Michael Vail's fou
 
 ## Backlog & analytics status
 
-See `docs/GAPS_AND_WEAKNESSES.md` for the backlog — it is a **dated report**; verify each item against the current codebase before acting. **GA4 is live in production** (since 2026-07-06) with six verified conversion events: `phone_click`, `email_click`, `gbp_click`, `contact_cta_click`, `package_cta_click`, `generate_lead`. Never re-implement GA4 or add duplicate analytics events.
+See `docs/GAPS_AND_WEAKNESSES.md` for the backlog — it is a **dated report**; verify each item against the current codebase before acting. **GA4 is live in production** (since 2026-07-06; measurement ID comes from `VITE_GA4_ID`). Analytics is consent-gated and lives only in `src/lib/consent.ts`, `src/lib/analytics.ts` and `src/components/ConsentBanner.tsx` (proposed 2026-11-07, pending release approval). Extend that module; never add a second GA4/gtag/GTM install, a competing tracker, or an event that duplicates an existing one (one `page_view` per navigation; clicks and form starts are never leads). `generate_lead` fires only after the Netlify Forms POST confirms success (`response.ok`). Events: `page_view`, `service_page_view`, `portfolio_view`, `phone_click`, `email_click`, `gbp_click`, `contact_cta_click`, `package_cta_click`, `contact_form_start`, `generate_lead`. No names, emails, phones, message text or arbitrary URL query strings may reach GA4.
 
 ## How future agents make changes safely
 

@@ -36,6 +36,8 @@ const localLinks = [
   { text: 'Central Florida Local Business Websites', href: '/central-florida-website-design/' },
 ];
 
+const ANALYTICS_ENABLED = !!(import.meta.env.VITE_GA4_ID as string | undefined)?.startsWith('G-');
+
 const legalLinks = [
   { text: 'Privacy Policy', href: '/privacy/' },
   { text: 'Terms & Conditions', href: '/terms/' },
@@ -377,6 +379,16 @@ export default function Footer() {
                           {link.text}
                         </Link>
                       ))}
+                      {ANALYTICS_ENABLED && (
+                        <button
+                          type="button"
+                          className="font-sans transition-colors duration-200"
+                          style={{ ...mutedLink, background: 'none', border: 0, padding: 0, textAlign: 'left', cursor: 'pointer' }}
+                          onClick={() => window.dispatchEvent(new Event('nlds:open-consent'))}
+                        >
+                          Cookie Settings
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

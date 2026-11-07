@@ -150,7 +150,7 @@ export default function WorkProjectCard({ project, onImageClick }: WorkProjectCa
             style={{
               fontSize: '0.625rem',
               letterSpacing: '0.15em',
-              color: project.chipStrong ? 'var(--muted-text)' : 'var(--platinum-grey)',
+              color: 'var(--muted-text)', // was --platinum-grey (1.75:1) for non-strong chips; AA needs 4.5:1
               border: '1px solid var(--silver-grey)',
               padding: '2px 8px',
             }}

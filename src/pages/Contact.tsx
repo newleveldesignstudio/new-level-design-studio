@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SectionDivider from '@/components/SectionDivider';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
@@ -8,7 +8,7 @@ import { staggerContainer, fadeUp } from '@/lib/motion';
 import { EXTERNAL_LINKS } from '@/lib/links';
 import { SOCIAL_LINKS } from '@/lib/socialLinks';
 import { CONTACT_SERVICE_OPTIONS } from '@/data/serviceTerminology';
-import { trackEvent } from '@/lib/analytics';
+import { trackFormStart, trackLead } from '@/lib/analytics';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -36,6 +36,7 @@ export default function Contact() {
   });
   const isRealtorService = formData.service === 'realtor-website' || formData.service === 'listing-mls-support';
   const [status, setStatus] = useState<FormStatus>('idle');
+  const inFlight = useRef(false); // blocks a second submit before React re-renders the disabled button
   const shouldReduceMotion = useReducedMotion();
 
   const formRef = useScrollReveal<HTMLDivElement>({ y: 30, duration: 0.6, stagger: 0.08, start: 'top 80%', childSelector: '.form-field' });
@@ -43,6 +44,8 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (inFlight.current) return;
+    inFlight.current = true;
     setStatus('submitting');
 
     try {
@@ -68,7 +71,7 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        trackEvent('generate_lead', { form: 'contact', service: formData.service || 'not-selected' });
+        trackLead(formData.service);
         setStatus('success');
         setFormData({
           name: '', businessName: '', email: '', phone: '', website: '', service: '', message: '',
@@ -81,6 +84,8 @@ export default function Contact() {
     } catch (err) {
       console.error('Netlify Forms submission error:', err);
       setStatus('error');
+    } finally {
+      inFlight.current = false;
     }
   };
 
@@ -189,6 +194,7 @@ export default function Contact() {
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
+                  onInput={trackFormStart}
                   className="flex flex-col"
                   style={{ gap: 24 }}
                 >

@@ -4,6 +4,9 @@ import SEO from '@/components/SEO';
 import { motion, useReducedMotion } from 'framer-motion';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 
+// RELEASE STEP: set to the actual production release date (America/New_York) when the revised policy goes live.
+const LAST_UPDATED = 'November 7, 2026';
+
 const sections = [
   {
     title: 'Information We Collect',
@@ -19,7 +22,7 @@ const sections = [
   },
   {
     title: 'Cookies',
-    body: 'Our website may use cookies to enhance your browsing experience and analyze site traffic. You can choose to disable cookies through your browser settings, though this may affect the functionality of certain features.',
+    body: 'With your permission, we use Google Analytics to measure which pages are visited. If you accept, Google Analytics sets cookies in your browser, and Google receives page paths together with your IP address and browser and device information. We do not send form details such as names, email addresses, phone numbers or message text. Until you accept, no analytics cookies are set and nothing is sent to Google. Declining, or withdrawing later with Cookie Settings in the footer, stops further collection and removes the analytics cookies from this site; data already sent stays with Google under the retention settings of our Google Analytics property. You can also disable cookies through your browser settings.',
   },
   {
     title: 'Data Security',
@@ -66,7 +69,7 @@ export default function Privacy() {
               style={{ fontSize: '0.875rem', color: 'var(--muted-text)' }}
               variants={shouldReduceMotion ? undefined : fadeUp}
             >
-              Last updated: May 20, 2026
+              Last updated: {LAST_UPDATED}
             </motion.p>
             <motion.div className="mt-12" variants={shouldReduceMotion ? undefined : fadeUp}>
               <SectionDivider />
@@ -75,7 +78,7 @@ export default function Privacy() {
 
           <div ref={contentRef} className="mt-12 flex flex-col" style={{ gap: 48 }}>
             {sections.map((section, i) => (
-              <div key={i} className="privacy-section">
+              <div key={i} id={section.title === 'Cookies' ? 'cookies' : undefined} className="privacy-section">
                 <h2
                   className="font-sans font-semibold uppercase"
                   style={{ fontSize: '1rem', letterSpacing: '0.1em', color: 'var(--charcoal)' }}

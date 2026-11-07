@@ -65,7 +65,7 @@ function ArticleCard({ article }: { article: Article }) {
           </p>
           <p
             className="font-sans mt-2"
-            style={{ fontSize: '0.75rem', color: 'var(--silver-grey)', letterSpacing: '0.04em' }}
+            style={{ fontSize: '0.75rem', color: 'var(--muted-text)', letterSpacing: '0.04em' }}
           >
             {article.date}
           </p>

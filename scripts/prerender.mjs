@@ -220,6 +220,8 @@ async function prerender() {
       }
 
       const page = await browser.newPage();
+    await page.addInitScript(() => { window.__NLDS_PRERENDER = true; });
+      await page.addInitScript(() => { window.__NLDS_PRERENDER = true; }); // consent banner must not be baked into static HTML
       await page.setViewportSize({ width: 1280, height: 800 });
       await page.emulateMedia({ reducedMotion: 'reduce' });
       // Abort images AND external font CDN — both block waitUntil:'load'

@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, lazy, Suspense } from 'react';
 import { useLenis } from '@/hooks/useLenis';
 import Layout from '@/components/Layout';
+import ConsentBanner from '@/components/ConsentBanner';
 import Home from '@/pages/Home';
 import Services from '@/pages/Services';
 import Works from '@/pages/Works';
@@ -69,6 +70,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <ConsentBanner />
       <Routes>
         {/* When adding a public route here, also add it to src/data/routes.ts
             (the sitemap/prerender manifest). The prerender step fails if a

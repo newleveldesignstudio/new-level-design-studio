@@ -1,5 +1,5 @@
 /* Homepage featured pair (Precision Line Roofing + Arctic Airworks). Reuses the .lb-* browser/phone frame from LatestBuild.css. */
-.hs-pair { display: grid; grid-template-columns: 1fr; gap: 56px; }
+.hs-pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 56px; }
 .hs-item { position: relative; }
 .hs-mat { padding: clamp(14px, 2.2vw, 26px); border-radius: 4px; position: relative; }
 .hs-pl .hs-mat { background: #2a2624; }                                  /* warm charcoal ground */
