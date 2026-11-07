@@ -3,6 +3,7 @@ import { spawn } from 'child_process';
 import { writeFileSync, mkdirSync, readFileSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { buildLastmodMap, applyLastmod } from './sitemap-lastmod.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -357,6 +358,9 @@ async function prerender() {
     let sitemap = readFileSync(sitemapPath, 'utf8');
     // Add trailing slash to any loc URL that doesn't already end with /
     sitemap = sitemap.replace(/(https:\/\/newlvlstudio\.com\/[^<]*[^/])<\/loc>/g, '$1/</loc>');
+    // Replace the plugin's single build-time <lastmod> (identical for every URL) with evidence-based per-URL dates, or none.
+    const locs = [...sitemap.matchAll(/<loc>https:\/\/newlvlstudio\.com([^<]*)<\/loc>/g)].map((m) => m[1]);
+    sitemap = applyLastmod(sitemap, buildLastmodMap(locs));
     writeFileSync(sitemapPath, sitemap, 'utf8');
     const urlCount = (sitemap.match(/<loc>/g) || []).length;
     console.log(`✅ Sitemap trailing slashes fixed — ${urlCount} URLs.\n`);
