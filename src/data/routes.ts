@@ -28,6 +28,7 @@ export const STATIC_PUBLIC_ROUTES = [
   '/website-care',
   '/business-systems',
   '/real-estate-web-design',
+  '/contractor-website-design',
   '/real-estate-marketing-website',
   '/proof',
   '/local-visibility-setup',

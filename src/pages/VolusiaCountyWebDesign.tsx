@@ -41,7 +41,7 @@ const config: LocalPageConfig = {
     body: (
     <>
       <p>Contractors, cleaners and other service businesses often cover more than one town. A common mistake is a separate thin page for every town. A stronger approach is one clear site that names the areas you really serve, shows the work you do, and makes the estimate request easy — with your Google profile service area set to match.</p>
-      <p>NLDS is based in Port Orange and works with businesses across Volusia County. If you serve homes and businesses in several cities, start with the <Link to="/packages/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>website packages</Link> or <Link to="/contact/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>tell us about your service area</Link>.</p>
+      <p>NLDS is based in Port Orange and works with businesses across Volusia County. Contractors can start with <Link to="/contractor-website-design/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>contractor website design</Link>. If you serve homes and businesses in several cities, start with the <Link to="/packages/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>website packages</Link> or <Link to="/contact/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>tell us about your service area</Link>.</p>
     </>
     ),
   },
