@@ -260,6 +260,12 @@ export default function Services() {
                 <Link to="/contact/" className="btn-primary mt-8 inline-block">
                   Discuss Website Copy & Visual Support
                 </Link>
+                <p className="font-sans mt-5" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', lineHeight: 1.5 }}>
+                  Need brand assets before a full website?{' '}
+                  <Link to="/starter-pack/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>
+                    View the $129 Visual Starter Pack →
+                  </Link>
+                </p>
               </div>
               <div
                 style={{
@@ -331,6 +337,12 @@ export default function Services() {
               </div>
             ))}
           </div>
+          <p className="font-sans mt-10" style={{ fontSize: '0.9375rem', color: 'var(--muted-text)', lineHeight: 1.6, maxWidth: 620 }}>
+            NLDS is based in Port Orange. See how we work with businesses in{' '}
+            <Link to="/port-orange-website-design/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>Port Orange</Link>,{' '}
+            <Link to="/daytona-beach-website-design/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>Daytona Beach</Link> and{' '}
+            <Link to="/volusia-county-website-design/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>across Volusia County</Link>.
+          </p>
         </div>
       </section>
 

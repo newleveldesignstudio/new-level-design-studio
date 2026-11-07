@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
@@ -34,6 +35,25 @@ const config: LocalPageConfig = {
   trustBody: 'We work with local businesses across Central Florida who need a more credible, better-organized online presence. Whether you are just starting or ready to upgrade, we help you look the part and make it easier for customers to choose you.',
   ctaHeading: 'Ready to Build a Stronger Online Presence Across Central Florida?',
   ctaBody: 'Tell us about your business and service area — we will show you what a premium website and brand system can do for your growth.',
+  localNotes: {
+    eyebrow: 'CENTRAL FLORIDA',
+    heading: 'Beyond Volusia County',
+    body: (
+    <>
+      <p>Most NLDS work is in Port Orange and Volusia County, but the website basics do not change by county: clear services, an obvious next step, mobile-first pages and honest proof. If your business is outside Volusia County, <Link to="/contact/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>send a short note about the project</Link> and we will tell you whether it is a fit.</p>
+      <p>For a real-estate website, see <Link to="/real-estate-web-design/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>Real Estate Web Design</Link>; for ongoing updates after launch, <Link to="/website-care/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>Website Care</Link>.</p>
+    </>
+    ),
+  },
+  examples: {
+    heading: 'Work beyond local-service businesses',
+    intro: 'One live client website and two real-estate demos from the NLDS portfolio, labelled as on the Work page.',
+    items: [
+      { title: 'Wynne & Iaconis Realty', label: 'Client Work', industry: 'Real Estate', href: 'https://jandehomesfl.com', external: true },
+      { title: 'Aureline Estates', label: 'Concept Build', industry: 'Real Estate', href: '/works/aureline-estates/' },
+      { title: 'Coastal Standard Realty', label: 'Industry Demo', industry: 'Real Estate', href: '/works/coastal-standard-realty/' },
+    ],
+  },
   faq: [
     {
       q: 'Central Florida is a huge region — do you only work with businesses near Volusia County?',

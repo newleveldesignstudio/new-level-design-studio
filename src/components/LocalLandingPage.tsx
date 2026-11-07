@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import SEO, { localBusinessSchema, localServiceSchema, breadcrumbSchema } from '@/components/SEO';
 import SectionDivider from '@/components/SectionDivider';
@@ -21,6 +22,10 @@ export interface LocalPageConfig {
   ctaHeading: string;
   ctaBody: string;
   faq?: Array<{ q: string; a: string }>;
+  /** Page-specific practical guidance (distinguishes this page from the other local pages). */
+  localNotes?: { eyebrow: string; heading: string; body: ReactNode };
+  /** Real portfolio entries relevant to this market, labelled exactly as on /works/. href may be internal or external. */
+  examples?: { heading: string; intro: string; items: Array<{ title: string; label: string; industry: string; href: string; external?: boolean }> };
 }
 
 export default function LocalLandingPage({ config }: { config: LocalPageConfig }) {
@@ -152,7 +157,7 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
               >
                 <span
                   className="font-serif shrink-0"
-                  style={{ fontSize: '1.5rem', color: 'var(--silver-grey)', lineHeight: 1, minWidth: 40 }}
+                  style={{ fontSize: '1.5rem', color: 'var(--muted-text)', lineHeight: 1, minWidth: 40 }}
                 >
                   {item.num}
                 </span>
@@ -286,6 +291,70 @@ export default function LocalLandingPage({ config }: { config: LocalPageConfig }
           </div>
         </div>
       </section>
+
+      {/* Page-specific guidance */}
+      {config.localNotes && (
+        <section style={{ backgroundColor: 'var(--bg-soft)', padding: '100px 0' }}>
+          <div className="container-nlds">
+            <p className="eyebrow">{config.localNotes.eyebrow}</p>
+            <h2
+              className="font-serif mt-4"
+              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.1, maxWidth: 620 }}
+            >
+              {config.localNotes.heading}
+            </h2>
+            <div className="font-sans mt-6 flex flex-col" style={{ gap: 16, fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 640 }}>
+              {config.localNotes.body}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Relevant portfolio examples */}
+      {config.examples && (
+        <section style={{ backgroundColor: 'var(--bg-main)', padding: '100px 0 40px' }}>
+          <div className="container-nlds">
+            <p className="eyebrow">RELEVANT EXAMPLES</p>
+            <h2
+              className="font-serif mt-4"
+              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--charcoal)', lineHeight: 1.1, maxWidth: 620 }}
+            >
+              {config.examples.heading}
+            </h2>
+            <p className="font-sans mt-5" style={{ fontSize: '1rem', color: 'var(--muted-text)', lineHeight: 1.65, maxWidth: 620 }}>
+              {config.examples.intro}
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 mt-10" style={{ listStyle: 'none', padding: 0, margin: '40px 0 0' }}>
+              {config.examples.items.map((item) => (
+                <li key={item.href} style={{ borderTop: '1px solid var(--silver-grey)', padding: '20px 0' }}>
+                  <p className="font-sans uppercase" style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', color: 'var(--muted-text)' }}>
+                    {item.label} · {item.industry}
+                  </p>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-serif mt-2 inline-block underline decoration-1 underline-offset-4"
+                      style={{ fontSize: '1.25rem', color: 'var(--charcoal)' }}
+                    >
+                      {item.title}<span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="font-serif mt-2 inline-block underline decoration-1 underline-offset-4"
+                      style={{ fontSize: '1.25rem', color: 'var(--charcoal)' }}
+                    >
+                      {item.title}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Other areas we serve — cross-links between the four local pages */}
       <section style={{ backgroundColor: 'var(--bg-main)', padding: '64px 0' }}>

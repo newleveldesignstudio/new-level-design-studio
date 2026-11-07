@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
@@ -34,6 +35,26 @@ const config: LocalPageConfig = {
   trustBody: 'From restaurants and salons to contractors and service providers serving 32127 and surrounding neighborhoods — we help Port Orange businesses build a sharper, more credible online presence without the enterprise price tag.',
   ctaHeading: 'Ready to Build a Stronger Online Presence in Port Orange?',
   ctaBody: 'Tell us about your business and we will show you what a premium website and visual system can do for your local presence.',
+  localNotes: {
+    eyebrow: 'PORT ORANGE',
+    heading: 'A website that matches your Google profile',
+    body: (
+    <>
+      <p>When a customer in Port Orange finds you on Google Maps, the next tap is your website. It should agree with the profile: the same business name, phone number, services and service area. It should also answer the first question quickly — do you do what I need, and do you work where I am?</p>
+      <p>NLDS is based in Port Orange. We start with your services, the neighborhoods you cover and the one action you want visitors to take, then build the site around those. Website packages start at $499 — the <Link to="/packages/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>Packages page</Link> lays out what each one includes, and <Link to="/website-care/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>Website Care</Link> keeps the site current after launch.</p>
+    </>
+    ),
+  },
+  examples: {
+    heading: 'Recent concept builds for local service businesses',
+    intro: 'NLDS concept builds, labelled as on the Work page. They show how we structure a local business site.',
+    items: [
+      { title: 'Liquid Legacy Pools', label: 'Concept Build', industry: 'Local Services', href: '/works/liquid-legacy-pools/' },
+      { title: 'Stone & Timber Remodeling', label: 'Concept Build', industry: 'Contractors', href: '/works/stone-timber-remodeling/' },
+      { title: 'Lotus Beauty House', label: 'Concept Build', industry: 'Salons & Barbers', href: '/works/lotus-beauty-house/' },
+      { title: 'The Grooming Forge', label: 'Concept Build', industry: 'Salons & Barbers', href: '/works/the-grooming-forge/' },
+    ],
+  },
   faq: [
     {
       q: 'Is New Level Design Studio actually based in Port Orange?',

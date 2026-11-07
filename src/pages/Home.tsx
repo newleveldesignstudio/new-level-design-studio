@@ -712,7 +712,15 @@ export default function Home() {
             className="font-sans text-center mt-6 uppercase"
             style={{ fontSize: '0.75rem', letterSpacing: '0.25em', color: 'var(--muted-text)' }}
           >
-            Serving Port Orange, Daytona Beach, Ormond Beach, New Smyrna Beach,{' '}
+            Serving{' '}
+            <Link to="/port-orange-website-design/" className="py-2 underline decoration-1 underline-offset-4 hover:text-[var(--charcoal)] focus-visible:text-[var(--charcoal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--charcoal)]">
+              Port Orange
+            </Link>
+            ,{' '}
+            <Link to="/daytona-beach-website-design/" className="py-2 underline decoration-1 underline-offset-4 hover:text-[var(--charcoal)] focus-visible:text-[var(--charcoal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--charcoal)]">
+              Daytona Beach
+            </Link>
+            , Ormond Beach, New Smyrna Beach,{' '}
             <Link
               to="/volusia-county-website-design/"
               className="py-2 underline decoration-1 underline-offset-4 hover:text-[var(--charcoal)] focus-visible:text-[var(--charcoal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--charcoal)]"

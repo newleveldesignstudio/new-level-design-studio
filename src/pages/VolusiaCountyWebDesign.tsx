@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
@@ -34,6 +35,26 @@ const config: LocalPageConfig = {
   trustBody: 'From Port Orange and Daytona Beach to Ormond Beach, New Smyrna Beach, DeLand, and beyond — we build websites and brand systems for Volusia County businesses that need to look more established, rank better locally, and make it easier for customers to reach them.',
   ctaHeading: 'Ready to Build a Stronger Presence Across Volusia County?',
   ctaBody: 'Tell us where you operate and what your business needs — we will put together the right plan for your market.',
+  localNotes: {
+    eyebrow: 'VOLUSIA COUNTY',
+    heading: 'One business, several towns',
+    body: (
+    <>
+      <p>Contractors, cleaners and other service businesses often cover more than one town. A common mistake is a separate thin page for every town. A stronger approach is one clear site that names the areas you really serve, shows the work you do, and makes the estimate request easy — with your Google profile service area set to match.</p>
+      <p>NLDS is based in Port Orange and works with businesses across Volusia County. If you serve homes and businesses in several cities, start with the <Link to="/packages/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>website packages</Link> or <Link to="/contact/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>tell us about your service area</Link>.</p>
+    </>
+    ),
+  },
+  examples: {
+    heading: 'Contractor and service-business demos',
+    intro: 'Industry demos and concept builds for service businesses, labelled as on the Work page.',
+    items: [
+      { title: 'Precision Line Roofing', label: 'Industry Demo / Concept Build', industry: 'Contractors', href: '/works/precision-line-roofing/' },
+      { title: 'Arctic Airworks', label: 'Industry Demo / Concept Build', industry: 'Local Services', href: '/works/arctic-airworks/' },
+      { title: 'Volusia Legal Group', label: 'Industry Demo', industry: 'Law Firms', href: '/works/volusia-legal-group/' },
+      { title: 'The Best Landscape 2026', label: 'Concept Build', industry: 'Local Services', href: '/works/the-best-landscape-2026/' },
+    ],
+  },
   faq: [
     {
       q: 'I operate in more than one Volusia County city — can you build one consistent system for all my locations?',

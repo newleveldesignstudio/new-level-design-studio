@@ -352,6 +352,13 @@ export default function Packages() {
           <strong>Pro</strong> gives your business a sharper web presence built around trust, clarity,
           and action.
         </div>
+        <p className="fade-in" style={{ fontSize: '0.875rem', color: 'var(--muted-text)', marginTop: 16 }}>
+          Need brand visuals before a full website?{' '}
+          <Link to="/starter-pack/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>
+            See the $129 Visual Starter Pack
+          </Link>
+          .
+        </p>
         <p
           className="fade-in"
           style={{ fontSize: '0.8125rem', fontStyle: 'italic', color: 'var(--muted-text)', marginTop: 16 }}

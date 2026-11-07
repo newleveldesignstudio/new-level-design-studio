@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LocalLandingPage from '@/components/LocalLandingPage';
 import type { LocalPageConfig } from '@/components/LocalLandingPage';
 
@@ -34,6 +35,26 @@ const config: LocalPageConfig = {
   trustBody: 'Whether you are running a restaurant near the strip, a service business serving beachside neighborhoods, or a local brand trying to stand out — we help Daytona Beach businesses look sharper and convert more attention into real customers.',
   ctaHeading: 'Ready to Stand Out in Daytona Beach?',
   ctaBody: 'Tell us about your business and we will show you what a premium website and visual system can do for your local visibility and customer conversions.',
+  localNotes: {
+    eyebrow: 'DAYTONA BEACH',
+    heading: 'Built for visitors who decide fast',
+    body: (
+    <>
+      <p>People searching in Daytona Beach often do not know the business yet: a visitor looking for a place to eat, a resident comparing service companies. On a phone, they decide in seconds. Tap-to-call, hours, directions and a menu or services list should be reachable without hunting.</p>
+      <p>NLDS is based in Port Orange, in the same Volusia County market. If you already have a site, we can start with what is getting in the way of inquiries — see <Link to="/services/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>our services</Link> — or you can begin smaller with the <Link to="/starter-pack/" style={{ color: 'var(--charcoal)', textDecorationLine: 'underline', textUnderlineOffset: 3 }}>$129 Visual Starter Pack</Link> for brand visuals.</p>
+    </>
+    ),
+  },
+  examples: {
+    heading: 'Restaurant and hospitality concept builds',
+    intro: 'Concept builds from the NLDS portfolio for businesses that depend on walk-in and tourist attention. Labelled as on the Work page.',
+    items: [
+      { title: 'Love Handles BBQ', label: 'Concept Build', industry: 'Restaurants', href: '/works/love-handles-bbq/' },
+      { title: 'El Taller 2026', label: 'Concept Build', industry: 'Restaurants', href: '/works/el-taller-2026/' },
+      { title: 'La Tequila 2026', label: 'Concept Build', industry: 'Restaurants', href: '/works/la-tequila-2026/' },
+      { title: 'Blend House Smoothie Bar', label: 'Industry Demo', industry: 'Coffee & Cafés', href: '/works/blend-house-smoothie-bar/' },
+    ],
+  },
   faq: [
     {
       q: 'Why does a Daytona Beach business need a stronger website than businesses elsewhere?',
