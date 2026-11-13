@@ -33,13 +33,20 @@
     <script type="module" src="/src/main.tsx"></script>
     <!-- Hidden form for Netlify Forms crawler — must match React form field names exactly -->
     <form name="contact" netlify data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="name" autocomplete="name" />
       <input type="text" name="business-name" autocomplete="organization" />
       <input type="email" name="email" autocomplete="email" />
       <input type="tel" name="phone" autocomplete="tel" />
       <input type="url" name="website" autocomplete="url" />
-      <select name="service"></select>
+      <select name="requestType"></select>
       <textarea name="message"></textarea>
+      <input type="text" name="brokerage" />
+      <input type="text" name="serviceArea" />
+      <input type="text" name="propertyAddress" />
+      <input type="text" name="mlsNumber" />
+      <input type="text" name="idxProvider" />
+      <textarea name="realtorRequestDetails"></textarea>
       <input type="text" name="bot-field" autocomplete="off" />
     </form>
   </body>

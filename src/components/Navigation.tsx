@@ -189,16 +189,19 @@ export default function Navigation() {
       const panelFocusable = Array.from(
         panel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')
       ).filter((el) => el.offsetParent !== null);
-      const focusable = [toggle, ...panelFocusable];
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+      // The fixed analytics-consent card sits outside the menu panel; keep its buttons in the Tab cycle so keyboard users can answer it.
+      const consentFocusable = Array.from(
+        document.querySelectorAll<HTMLElement>('.nlds-consent a[href], .nlds-consent button:not([disabled])')
+      ).filter((el) => el.offsetParent !== null);
+      const focusable = [toggle, ...panelFocusable, ...consentFocusable];
+      // Drive the cycle explicitly (toggle → menu → consent card → toggle): the consent card is far from the menu in DOM order,
+      // so relying on native order at the ends would leak focus into the page behind the overlay.
+      e.preventDefault();
+      const idx = focusable.indexOf(document.activeElement as HTMLElement);
+      const next = e.shiftKey
+        ? (idx <= 0 ? focusable.length - 1 : idx - 1)
+        : (idx === -1 || idx === focusable.length - 1 ? 0 : idx + 1);
+      focusable[next].focus();
     };
     document.addEventListener('keydown', handleTrap);
     return () => document.removeEventListener('keydown', handleTrap);
@@ -208,6 +211,9 @@ export default function Navigation() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        // Closing unmounts the panel; if focus is inside it, hand focus back to the menu button first so it isn't lost to <body>.
+        const panel = mobileMenuRef.current;
+        if (panel && panel.contains(document.activeElement)) menuToggleRef.current?.focus();
         setOpenDropdown(null);
         setMenuOpen(false);
       }
@@ -503,7 +509,7 @@ export default function Navigation() {
           <button
             ref={menuToggleRef}
             className="xl:hidden flex flex-col justify-center items-center focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-nlds-charcoal"
-            style={{ width: 32, height: 32, gap: 6 }}
+            style={{ width: 44, height: 44, margin: -6, gap: 6 }} /* 44px hit target; -6px margin keeps the bars where the 32px box put them */
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -551,7 +557,11 @@ export default function Navigation() {
             animate={shouldReduceMotion ? undefined : 'visible'}
             exit={shouldReduceMotion ? undefined : 'exit'}
           >
-            <div className="min-h-screen flex flex-col items-center justify-center pt-28 pb-16 px-6">
+            <div
+              className="min-h-screen flex flex-col items-center justify-center pt-28 pb-16 px-6"
+              /* keep the last menu items scrollable above the fixed analytics-consent card (height published by ConsentBanner) */
+              style={{ paddingBottom: 'max(4rem, calc(var(--nlds-consent-h, 0px) + 1.5rem))' }}
+            >
               <motion.div
                 className="flex flex-col items-center w-full max-w-sm"
                 style={{ gap: 8 }}

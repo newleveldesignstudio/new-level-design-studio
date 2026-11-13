@@ -25,6 +25,7 @@ function RouteTracker() {
 export default function ConsentBanner() {
   const [open, setOpen] = useState(false);
   const acceptRef = useRef<HTMLButtonElement>(null);
+  const cardRef = useRef<HTMLElement>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -38,6 +39,18 @@ export default function ConsentBanner() {
 
   useEffect(() => { if (open && returnFocus.current) acceptRef.current?.focus(); }, [open]);
 
+  // Publish the card's height so the mobile menu can pad its scroll area and never hide links behind the card.
+  useEffect(() => {
+    const root = document.documentElement;
+    const el = cardRef.current;
+    if (!open || !el) { root.style.removeProperty('--nlds-consent-h'); return; }
+    const set = () => root.style.setProperty('--nlds-consent-h', `${Math.ceil(el.getBoundingClientRect().height) + 16}px`);
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(el);
+    return () => { ro.disconnect(); root.style.removeProperty('--nlds-consent-h'); };
+  }, [open]);
+
   if (!enabled) return null;
   const choose = (c: 'granted' | 'denied') => {
     setAnalyticsConsent(c);
@@ -49,7 +62,7 @@ export default function ConsentBanner() {
     <>
       <RouteTracker />
       {open && (
-        <section className="nlds-consent" role="region" aria-label="Analytics cookies" style={{ position: 'fixed', left: 16, right: 16, bottom: 16, zIndex: 1000, maxWidth: 560, marginInline: 'auto', background: 'var(--surface)', color: 'var(--charcoal)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }}>
+        <section ref={cardRef} className="nlds-consent" role="region" aria-label="Analytics cookies" style={{ position: 'fixed', left: 16, right: 16, bottom: 16, zIndex: 1000, maxWidth: 560, marginInline: 'auto', background: 'var(--surface)', color: 'var(--charcoal)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }}>
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.55 }}>
             With your permission, we use Google Analytics to measure which pages are visited. It sets cookies and sends page paths, your IP address and basic device information to Google. No form details are sent. You can change this any time with Cookie Settings in the footer. <a href="/privacy/#cookies" style={{ textDecoration: 'underline' }}>Privacy Policy</a>
           </p>
